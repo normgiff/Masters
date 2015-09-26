@@ -1,0 +1,9 @@
+//psf/Home/Desktop/Masters/clock_cont/clock.v {1 {vlog -work work -stats=none //psf/Home/Desktop/Masters/clock_cont/clock.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module test
+-- Compiling module clock
+
+Top level modules:
+	test
+
+} {} {}}
