@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="FF_REG_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/FF_REG_TB/OUT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OUT</obj_property>
+      <obj_property name="ObjectShortName">OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/CLK_ENABLE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK_ENABLE</obj_property>
+      <obj_property name="ObjectShortName">CLK_ENABLE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/DATA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DATA</obj_property>
+      <obj_property name="ObjectShortName">DATA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/FF" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">FF[1:0]</obj_property>
+      <obj_property name="ObjectShortName">FF[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/uut/OUT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OUT</obj_property>
+      <obj_property name="ObjectShortName">OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/uut/DATA_POS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DATA_POS</obj_property>
+      <obj_property name="ObjectShortName">DATA_POS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/uut/DATA_NEG" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DATA_NEG</obj_property>
+      <obj_property name="ObjectShortName">DATA_NEG</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/uut/D1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D1</obj_property>
+      <obj_property name="ObjectShortName">D1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FF_REG_TB/uut/D2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D2</obj_property>
+      <obj_property name="ObjectShortName">D2</obj_property>
+   </wvobject>
+</wave_config>

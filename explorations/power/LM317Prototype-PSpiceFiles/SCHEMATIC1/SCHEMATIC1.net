@@ -1,0 +1,11 @@
+* source LM317PROTOTYPE
+X_U1         N00123 N00191 N00339 LM317
+C_Cin         0 N00123  100n  TC=0,0 
+C_C2         0 N00191  10u  TC=0,0 
+V_V1         N00123 0 9Vdc
+R_R2         N00191 N00339  500 TC=0,0 
+D_D1         N00191 N00339 D1N4002 
+C_Co         0 N00339  1u  TC=0,0 
+D_D2         N00339 N00123 D1N4002 
+R_R3         0 N00191 {RVAR*1+.001}
+.PARAM  rvar=1000

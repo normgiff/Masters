@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FF_REG.ucf -p xc7a100t-csg324-3 FF_REG.ngc FF_REG.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o FF_REG_map.ncd FF_REG.ngd FF_REG.pcf 
+par -w -intstyle ise -ol high -mt off FF_REG_map.ncd FF_REG.ncd FF_REG.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FF_REG.twx FF_REG.ncd -o FF_REG.twr FF_REG.pcf -ucf FF_REG.ucf 
+bitgen -intstyle ise -f FF_REG.ut FF_REG.ncd 

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\dkhoury\OneDrive\Documents\FPGAPrototypeProjects\Force_Format_Register\impact.xsl
+OUTFILE=C:\Users\dkhoury\OneDrive\Documents\FPGAPrototypeProjects\Force_Format_Register\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\dkhoury\OneDrive\Documents\FPGAPrototypeProjects\Force_Format_Register
+LICENSE=iMPACT
+USER_INFO=iMPACT

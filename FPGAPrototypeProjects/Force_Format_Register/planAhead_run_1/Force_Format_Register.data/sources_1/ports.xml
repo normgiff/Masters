@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="FF">
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Port Id="RST" Dir="IN"/>
+		<Port Id="CLK" Dir="IN"/>
+		<Port Id="CLK_ENABLE" Dir="IN"/>
+		<Port Id="DATA" Dir="IN"/>
+		<Port Id="OUT" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

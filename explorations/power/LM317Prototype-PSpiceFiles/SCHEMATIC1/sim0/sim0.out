@@ -1,0 +1,151 @@
+
+**** 09/20/15 12:20:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim0"  [ C:\Users\dkhoury\Desktop\power_ideas\LM317Prototype-PSpiceFiles\SCHEMATIC1\sim0.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim0.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/opamp.lib" 
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/diode.lib" 
+* From [PSPICE NETLIST] section of C:\Users\dkhoury\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM RVAR 0 2k 100 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LM317PROTOTYPE
+X_U1         N00123 N00191 N00339 LM317
+C_Cin         0 N00123  100n  TC=0,0 
+C_C2         0 N00191  10u  TC=0,0 
+V_V1         N00123 0 9Vdc
+R_R2         N00191 N00339  500 TC=0,0 
+D_D1         N00191 N00339 D1N4002 
+C_Co         0 N00339  1u  TC=0,0 
+D_D2         N00339 N00123 D1N4002 
+R_R3         0 N00191 {RVAR*1+.001}
+.PARAM  rvar=1000
+
+**** RESUMING sim0.cir ****
+.END
+
+**** 09/20/15 12:20:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim0"  [ C:\Users\dkhoury\Desktop\power_ideas\LM317Prototype-PSpiceFiles\SCHEMATIC1\sim0.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         X_U1.DMOD       
+          IS   14.110000E-09   30.000000E-15 
+           N    1.984           1.701        
+         ISR  100.000000E-12                 
+         IKF   94.81                         
+          BV  100.1                          
+         IBV   10                            
+          RS     .03389                      
+          TT    4.761000E-06                 
+         CJO   51.170000E-12                 
+          VJ     .3905                       
+           M     .2762                       
+
+
+**** 09/20/15 12:20:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim0"  [ C:\Users\dkhoury\Desktop\power_ideas\LM317Prototype-PSpiceFiles\SCHEMATIC1\sim0.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.QPASSMOD   
+               NPN             
+       LEVEL    1            
+          IS   30.000000E-15 
+          BF   50            
+          NF    1.701        
+         VAF    1.5          
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 09/20/15 12:20:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim0"  [ C:\Users\dkhoury\Desktop\power_ideas\LM317Prototype-PSpiceFiles\SCHEMATIC1\sim0.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.JADJMOD    
+               NJF             
+         VTO   -1            
+        BETA   50.000000E-06 
+
+
+
+          JOB CONCLUDED
+
+**** 09/20/15 12:20:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim0"  [ C:\Users\dkhoury\Desktop\power_ideas\LM317Prototype-PSpiceFiles\SCHEMATIC1\sim0.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

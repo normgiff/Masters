@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Sep 08 15:37:24 2015
+# Process ID: 6768
+# Log file: C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS33 [get_ports [list {FF[1]} {FF[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list CLK]]
+set_property iostandard LVCMOS33 [get_ports [list CLK_ENABLE]]
+set_property iostandard LVCMOS33 [get_ports [list DATA]]
+set_property iostandard LVCMOS33 [get_ports [list OUT]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list RST]]
+set_property package_pin "" [get_ports [list  {FF[1]}]]
+set_property package_pin "" [get_ports [list  {FF[1]}]]
+startgroup
+set_property package_pin E16 [get_ports RST]
+endgroup
+set_property package_pin "" [get_ports [list  OUT]]
+startgroup
+set_property package_pin U9 [get_ports DATA]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports CLK_ENABLE]
+endgroup
+startgroup
+set_property package_pin E3 [get_ports CLK]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports {FF[1]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {FF[0]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin U9 [get_ports DATA]
+endgroup
+startgroup
+set_property package_pin K2 [get_ports OUT]
+endgroup
+save_constraints

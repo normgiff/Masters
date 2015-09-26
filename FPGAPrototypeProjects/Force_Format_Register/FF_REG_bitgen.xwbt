@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\dkhoury\OneDrive\Documents\FPGAPrototypeProjects\Force_Format_Register\FF_REG.ncd
+OUTFILE=C:\Users\dkhoury\OneDrive\Documents\FPGAPrototypeProjects\Force_Format_Register\FF_REG.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\dkhoury\OneDrive\Documents\FPGAPrototypeProjects\Force_Format_Register
+LICENSE=WebPack
+USER_INFO=210721438_0_0_800
