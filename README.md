@@ -4,8 +4,7 @@ u0723476
 This is my main Page
 -->
 
-<!DOCTYPE html>
-<html>
+
 <head>
 <title>University of Utah Masters</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
