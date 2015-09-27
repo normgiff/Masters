@@ -1,0 +1,157 @@
+/*
+Norman Gifford
+u0723476
+*/
+
+#header {
+	background: #404040;
+    color: #F8F8F8;
+    text-align: center;
+    /*padding: 50px 50px 50px 50px;*/
+    height: 200px;
+    width: 100%;
+    border-bottom-width: 4px;
+    border-style: solid;
+    background-image: url("utah.gif");
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+    background-position: right; 
+}
+
+#menu {
+	line-height:30px;
+    /*background-color:#909090;*/
+    height:6000px;
+    width:250px;
+    background-image: url("fa.png");
+    float:left;
+    padding:5px;
+}
+
+#main_body {
+	line-height:30px;
+	
+	font-size: 150%;
+    background-color:#E8E8E8;
+    height:600px;
+    width:80%;
+    float:right;
+    padding:5px;
+}
+
+.center_text {
+    padding: 0px 200px 0px 50px;
+}
+
+
+/* Set background color and picture in the corner */
+body {
+      background: #E8E8E8;
+      
+     }
+h1 {
+     text-align: center;
+     text-shadow: 1px 1px 1px white;
+     color: #CC0000;
+     }
+     
+/* This menu Is for the orginazation of the TA application */
+#top_menu {
+	position: absolute;
+	padding: 0px 10px 0px 10px;
+	text-align: center;
+	left: 30px;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+
+
+.menu_item {
+		float: left;
+}
+.menu_link {
+	display: block;
+	padding: 0px 10px 0px 10px;
+    background-color: white;
+}
+/* End of menu */
+
+/* The next two  menu is for displaying the name and other
+	information of the applicant including the chacked courses */
+.app_table {
+	position: absolute;
+    left: 100px;
+    top: 150px;
+    border: 1px solid red;
+    background-color: white;
+}
+
+.app_row {
+	border: 1px solid red;
+	background-color: white;
+
+}
+
+.app_col {
+	border: 1px solid red;
+	background-color: white;
+}
+
+.classes_table {
+	position: absolute;
+    left: 100px;
+    top: 300px;
+    border: 1px solid red;
+    background-color: white;
+}
+
+.classes_row {
+	border: 1px solid red;
+	background-color: white;
+
+}
+
+.classes_col {
+	border: 1px solid red;
+	background-color: white;
+}
+/* End of the two table classes */
+/* Button obtaned from button maker */
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   
+   width: 50px;
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+/* End of button */
