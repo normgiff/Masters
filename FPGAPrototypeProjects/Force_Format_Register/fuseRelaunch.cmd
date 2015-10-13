@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG_TB_isim_beh.exe" -prj "C:/Users/dkhoury/OneDrive/Documents/FPGAPrototypeProjects/Force_Format_Register/FF_REG_TB_beh.prj" "work.FF_REG_TB" "work.glbl" 

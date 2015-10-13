@@ -1,0 +1,13 @@
+Using a value of R1 = 490 ohms and this equation:
+
+R2 = R1*((Vout/Vref) - 1)
+
+Where Vref = 1.25V (equation taken from the datasheet).
+
+R2 should be 1470 ohms to get an output of 5V.
+Setting R2 to that value produces an output of 5.03V.
+
+R2 should be 1274 ohms to get an output of 4.5V.
+Setting R2 to that value produces an output of 4.49V.
+
+So far, things are looking good! 
