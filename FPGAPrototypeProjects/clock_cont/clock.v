@@ -11,6 +11,18 @@ module clock(clk, period, clk_out, duty);
 	reg [3:0] din;
 	reg [12:0] counter;
 	initial counter <= 0;
+	ODDR#(.DDR_CLK_EDGE("OPPOSITE_EDGE"),//"OPPOSITE_EDGE"or"SAME_EDGE"
+			.INIT(1'b0),//Initial valu of Q: 1'b0 or 1'b1
+			.SRTYPE("SYNC")// Set/Reset type: "SYNC" or "ASYNC")
+	)ODDR_inst (.Q(Q), // 1-bit DDR output
+				  .C(C), // 1-bit clock input
+				  .CE(CE), // 1-bit clock enable input
+				.D1(D1), // 1-bit data input (positive edge) 
+				  .D2(D2), // 1-bit data input (negative edge)
+				  .R(R), // 1-bit reset 
+				  .S(S)); // 1-bit set
+	
+	
 	
 	always @(posedge clk)
 	begin

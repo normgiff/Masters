@@ -10,13 +10,13 @@
          <ClosedNode>/test Y:|Desktop|Masters|FPGAPrototypeProjects|clock_cont|clock|testbench.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>clocks.ucf (Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.ucf)</SelectedItem>
+         <SelectedItem>clk0 - clocks (Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e6000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e60000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>clocks.ucf (Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.ucf)</CurrentItem>
+      <CurrentItem>clk0 - clocks (Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -64,13 +64,13 @@
          <ClosedNode>Implement Design/Translate</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Configure Target Device</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000175000000010000000100000000000000000000000064ffffffff000000810000000000000001000001750000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Configure Target Device</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
