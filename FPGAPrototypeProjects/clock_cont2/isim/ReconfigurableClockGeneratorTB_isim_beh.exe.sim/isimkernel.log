@@ -1,0 +1,10 @@
+Command line:
+   ReconfigurableClockGeneratorTB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60957
+
+Wed Oct 14 10:37:55 2015
+
+
+ Elaboration Time: 0.0312 sec

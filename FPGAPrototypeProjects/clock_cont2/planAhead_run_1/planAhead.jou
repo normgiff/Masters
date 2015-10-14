@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Oct 13 17:10:17 2015
+# Process ID: 6296
+# Log file: C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property package_pin "" [get_ports [list  {DUTY[0]}]]
+startgroup
+set_property package_pin P4 [get_ports {DUTY[1]}]
+endgroup
+startgroup
+set_property package_pin P3 [get_ports {DUTY[0]}]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list {DUTY[1]} {DUTY[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {PERIOD[3]} {PERIOD[2]} {PERIOD[1]} {PERIOD[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list CLK_IN]]
+set_property iostandard LVCMOS33 [get_ports [list CLK_OUT]]
+set_property iostandard LVCMOS33 [get_ports [list RST]]
+save_constraints
+startgroup
+set_property package_pin R3 [get_ports {PERIOD[3]}]
+endgroup
+startgroup
+set_property package_pin T1 [get_ports {PERIOD[2]}]
+endgroup
+startgroup
+set_property package_pin T3 [get_ports {PERIOD[1]}]
+endgroup
+startgroup
+set_property package_pin U2 [get_ports {PERIOD[0]}]
+endgroup
+startgroup
+set_property package_pin E3 [get_ports CLK_IN]
+endgroup
+set_property package_pin "" [get_ports [list  CLK_OUT]]
+startgroup
+set_property package_pin E16 [get_ports RST]
+endgroup
+set_property package_pin "" [get_ports [list  CLK_OUT]]
+startgroup
+set_property package_pin B13 [get_ports CLK_OUT]
+endgroup
+save_constraints

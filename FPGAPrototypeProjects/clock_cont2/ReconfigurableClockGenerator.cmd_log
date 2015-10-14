@@ -1,0 +1,48 @@
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/Masters/FPGAPrototypeProjects/clock_cont2/ReconfigurableClockGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ReconfigurableClockGenerator.ucf -p xc7a100t-csg324-3 ReconfigurableClockGenerator.ngc ReconfigurableClockGenerator.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ngd ReconfigurableClockGenerator.pcf 
+par -w -intstyle ise -ol high -mt off ReconfigurableClockGenerator_map.ncd ReconfigurableClockGenerator.ncd ReconfigurableClockGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ReconfigurableClockGenerator.twx ReconfigurableClockGenerator.ncd -o ReconfigurableClockGenerator.twr ReconfigurableClockGenerator.pcf -ucf ReconfigurableClockGenerator.ucf 
+bitgen -intstyle ise -f ReconfigurableClockGenerator.ut ReconfigurableClockGenerator.ncd 
