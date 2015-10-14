@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Oct 10 16:47:57 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "period<9>" LOCATE = SITE "U8" LEVEL 1;
+COMP "period<10>" LOCATE = SITE "R16" LEVEL 1;
+COMP "period<11>" LOCATE = SITE "T13" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "duty<0>" LOCATE = SITE "H6" LEVEL 1;
+COMP "duty<1>" LOCATE = SITE "U12" LEVEL 1;
+COMP "clk_out" LOCATE = SITE "C17" LEVEL 1;
+COMP "duty<2>" LOCATE = SITE "U11" LEVEL 1;
+COMP "duty<3>" LOCATE = SITE "V10" LEVEL 1;
+COMP "period<0>" LOCATE = SITE "J15" LEVEL 1;
+COMP "period<1>" LOCATE = SITE "L16" LEVEL 1;
+COMP "period<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "period<3>" LOCATE = SITE "R15" LEVEL 1;
+COMP "period<4>" LOCATE = SITE "R17" LEVEL 1;
+COMP "period<5>" LOCATE = SITE "T18" LEVEL 1;
+COMP "period<6>" LOCATE = SITE "U18" LEVEL 1;
+COMP "period<7>" LOCATE = SITE "R13" LEVEL 1;
+COMP "period<8>" LOCATE = SITE "T8" LEVEL 1;
+SCHEMATIC END;
+

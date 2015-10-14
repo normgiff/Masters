@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Y:\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock\clocks.ncd
+OUTFILE=Y:\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock\clocks.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=Y:\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock
+LICENSE=WebPack
+USER_INFO=210720322_0_0_236

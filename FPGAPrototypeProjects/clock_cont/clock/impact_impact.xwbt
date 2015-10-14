@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Y:\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock\impact.xsl
+OUTFILE=Y:\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=Y:\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock
+LICENSE=iMPACT
+USER_INFO=iMPACT

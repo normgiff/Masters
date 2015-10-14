@@ -1,0 +1,68 @@
+
+
+NET "clk" LOC = E3;
+NET "clk0" LOC = C17;
+NET "clk1" LOC = E18;
+NET "clk2" LOC = D17;
+NET "clk3" LOC = F18;
+
+NET "period[0]" LOC = J15;
+NET "period[1]" LOC = L16;
+NET "period[2]" LOC = M13;
+NET "period[3]" LOC = R15;
+
+NET "period1[0]" LOC = R17;
+NET "period1[1]" LOC = T18;
+NET "period1[2]" LOC = U18;
+NET "period1[3]" LOC = R13;
+
+NET "period2[0]" LOC = T8;
+NET "period2[1]" LOC = U8;
+NET "period2[2]" LOC = R16;
+NET "period2[3]" LOC = T13;
+
+NET "period3[0]" LOC = H6;
+NET "period3[1]" LOC = U12;
+NET "period3[2]" LOC = U11;
+NET "period3[3]" LOC = V10;
+
+
+NET "duty[0]" LOC = M17;
+NET "duty1[0]" LOC = M18;
+NET "duty2[0]" LOC = N17;
+NET "duty3[0]" LOC = P18;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" IOSTANDARD = LVCMOS18;
+NET "clk0" IOSTANDARD = LVCMOS18;
+NET "clk1" IOSTANDARD = LVCMOS18;
+NET "clk2" IOSTANDARD = LVCMOS18;
+NET "clk3" IOSTANDARD = LVCMOS18;
+NET "period[0]" IOSTANDARD = LVCMOS18;
+NET "period[1]" IOSTANDARD = LVCMOS18;
+NET "period[2]" IOSTANDARD = LVCMOS18;
+NET "period[3]" IOSTANDARD = LVCMOS18;
+
+NET "period1[0]" IOSTANDARD = LVCMOS18;
+NET "period1[1]" IOSTANDARD = LVCMOS18;
+NET "period1[2]" IOSTANDARD = LVCMOS18;
+NET "period1[3]" IOSTANDARD = LVCMOS18;
+
+NET "period2[0]" IOSTANDARD = LVCMOS18;
+NET "period2[1]" IOSTANDARD = LVCMOS18;
+NET "period2[2]" IOSTANDARD = LVCMOS18;
+NET "period2[3]" IOSTANDARD = LVCMOS18;
+
+NET "period3[0]" IOSTANDARD = LVCMOS18;
+NET "period3[1]" IOSTANDARD = LVCMOS18;
+NET "period3[2]" IOSTANDARD = LVCMOS18;
+NET "period3[3]" IOSTANDARD = LVCMOS18;
+
+
+NET "duty[0]" IOSTANDARD = LVCMOS18;
+NET "duty1[0]" IOSTANDARD = LVCMOS18;
+NET "duty2[0]" IOSTANDARD = LVCMOS18;
+NET "duty3[0]" IOSTANDARD = LVCMOS18;
+
+

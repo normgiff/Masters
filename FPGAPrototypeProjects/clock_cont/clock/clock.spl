@@ -1,0 +1,10 @@
+[Inputs]
+clk
+=period[7:0]=
+=duty[7:0]=
+[Outputs]
+clk_out
+[BiDir]
+[ATTRIBUTES]
+VeriModel clock
+

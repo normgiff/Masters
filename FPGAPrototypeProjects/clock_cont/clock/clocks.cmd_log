@@ -1,0 +1,116 @@
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clock.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clock.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 
+xst -intstyle ise -ifn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.xst" -ofn "Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/clocks.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clocks.ucf -p xc7a100t-csg324-3 clocks.ngc clocks.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o clocks_map.ncd clocks.ngd clocks.pcf 
+par -w -intstyle ise -ol high -mt off clocks_map.ncd clocks.ncd clocks.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml clocks.twx clocks.ncd -o clocks.twr clocks.pcf -ucf clocks.ucf 
+bitgen -intstyle ise -f clocks.ut clocks.ncd 

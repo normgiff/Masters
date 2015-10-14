@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Oct 12 17:40:36 2015
+# Process ID: 2988
+# Log file: Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/planAhead_run_4/planAhead.log
+# Journal file: Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/pa.fromNetlist.tcl
+set_property iostandard LVCMOS18 [get_ports [list {duty[1]}]]
+set_property iostandard LVCMOS18 [get_ports [list {duty1[1]}]]
+set_property iostandard LVCMOS18 [get_ports [list {duty2[1]}]]
+set_property iostandard LVCMOS18 [get_ports [list {duty3[1]}]]
+startgroup
+set_property package_pin D18 [get_ports {duty[1]}]
+endgroup
+startgroup
+set_property package_pin G17 [get_ports {duty1[1]}]
+endgroup
+startgroup
+set_property package_pin E17 [get_ports {duty2[1]}]
+endgroup
+startgroup
+set_property package_pin G18 [get_ports {duty3[1]}]
+endgroup
+refresh_design
+startgroup
+set_property package_pin D18 [get_ports {duty[1]}]
+endgroup
+startgroup
+set_property package_pin G17 [get_ports {duty1[1]}]
+endgroup
+startgroup
+set_property package_pin E17 [get_ports {duty2[1]}]
+endgroup
+startgroup
+set_property package_pin G18 [get_ports {duty3[1]}]
+endgroup
+save_constraints
