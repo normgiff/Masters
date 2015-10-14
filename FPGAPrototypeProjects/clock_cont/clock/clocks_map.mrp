@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Oct 13 09:25:06 2015
+Mapped Date    : Wed Oct 14 08:38:42 2015
 
 Design Summary
 --------------
@@ -92,7 +92,7 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                4.80
 
 Peak Memory Usage:  786 MB
-Total REAL time to MAP completion:  28 secs 
+Total REAL time to MAP completion:  30 secs 
 Total CPU time to MAP completion:   28 secs 
 
 Table of Contents
@@ -132,10 +132,26 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+   4 block(s) removed
    2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "clock0/ODDR_inst" (ODDR) removed.
+Loadless block "clock1/ODDR_inst" (ODDR) removed.
+Loadless block "clock2/ODDR_inst" (ODDR) removed.
+Loadless block "clock3/ODDR_inst" (ODDR) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK

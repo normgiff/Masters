@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: clocks.prj
 
@@ -118,6 +118,15 @@ Elaborating module <clocks>.
 
 Elaborating module <clock>.
 
+Elaborating module <ODDR(DDR_CLK_EDGE="OPPOSITE_EDGE",INIT=1'b0,SRTYPE="SYNC")>.
+WARNING:HDLCompiler:1127 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 17: Assignment to Q ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 18: Net <C> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 19: Net <CE> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 20: Net <D1> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 21: Net <D2> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 22: Net <R> does not have a driver.
+WARNING:HDLCompiler:634 - "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v" Line 23: Net <S> does not have a driver.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
@@ -130,18 +139,24 @@ Unit <clocks> synthesized.
 
 Synthesizing Unit <clock>.
     Related source file is "\\psf\home\Desktop\Masters\FPGAPrototypeProjects\clock_cont\clock.v".
+WARNING:Xst:653 - Signal <C> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <CE> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <D1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <D2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <R> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 4-bit register for signal <din>.
     Found 1-bit register for signal <clk_out>.
     Found 13-bit register for signal <counter>.
     Found 4-bit register for signal <div>.
-    Found 13-bit adder for signal <counter[12]_GND_2_o_add_10_OUT> created at line 52.
-    Found 4x4-bit multiplier for signal <period[3]_div[3]_MuLt_3_OUT> created at line 44.
-    Found 8x7-bit multiplier for signal <period[3]_PWR_2_o_MuLt_4_OUT> created at line 44.
-    Found 4x4-bit multiplier for signal <period[3]_din[3]_MuLt_7_OUT> created at line 49.
-    Found 8x7-bit multiplier for signal <period[3]_PWR_2_o_MuLt_8_OUT> created at line 49.
+    Found 13-bit adder for signal <counter[12]_GND_2_o_add_10_OUT> created at line 64.
+    Found 4x4-bit multiplier for signal <period[3]_div[3]_MuLt_3_OUT> created at line 56.
+    Found 8x7-bit multiplier for signal <period[3]_PWR_2_o_MuLt_4_OUT> created at line 56.
+    Found 4x4-bit multiplier for signal <period[3]_din[3]_MuLt_7_OUT> created at line 61.
+    Found 8x7-bit multiplier for signal <period[3]_PWR_2_o_MuLt_8_OUT> created at line 61.
     Found 4x8-bit Read Only RAM for signal <_n0042>
-    Found 15-bit comparator greater for signal <n0004> created at line 44
-    Found 15-bit comparator greater for signal <n0008> created at line 49
+    Found 15-bit comparator greater for signal <n0004> created at line 56
+    Found 15-bit comparator greater for signal <n0008> created at line 61
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Multiplier(s).
@@ -269,9 +284,10 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 27
 #      VCC                         : 1
 #      XORCY                       : 116
-# FlipFlops/Latches                : 73
+# FlipFlops/Latches                : 77
 #      FD                          : 69
 #      FDR                         : 4
+#      ODDR                        : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 28
@@ -285,15 +301,15 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              73  out of  126800     0%  
+ Number of Slice Registers:              77  out of  126800     0%  
  Number of Slice LUTs:                  632  out of  63400     0%  
     Number used as Logic:               632  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    645
-   Number with an unused Flip Flop:     572  out of    645    88%  
-   Number with an unused LUT:            13  out of    645     2%  
-   Number of fully used LUT-FF pairs:    60  out of    645     9%  
+ Number of LUT Flip Flop pairs used:    649
+   Number with an unused Flip Flop:     572  out of    649    88%  
+   Number with an unused LUT:            17  out of    649     2%  
+   Number of fully used LUT-FF pairs:    60  out of    649     9%  
    Number of unique control sets:         5
 
 IO Utilization: 
@@ -324,8 +340,10 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
+N0                                 | NONE(clock3/ODDR_inst) | 4     |
 clk                                | BUFGP                  | 73    |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -440,14 +458,14 @@ clk            |    5.494|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.14 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.52 secs
  
 --> 
 
-Total memory usage is 447940 kilobytes
+Total memory usage is 425840 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

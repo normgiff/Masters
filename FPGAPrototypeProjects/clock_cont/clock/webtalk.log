@@ -3,7 +3,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=0c743a6efbf848c388b0c77a1b23b5e1
+ProjectID=74230ad8794f4f75ac4ff80976a57c5c
 ProjectIteration=1
 
 WebTalk Summary
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:5 - Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - Y:/Desktop/Masters/FPGAPrototypeProjects/clock_cont/clock/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2015-10-14T08:42:11.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
