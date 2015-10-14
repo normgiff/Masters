@@ -1,0 +1,18 @@
+Things to investigate:
+
+Norm/Daniel:
+1) Generating clocks from FPGA code. [In progress]
+	- ODDRs and phase differences.
+	- 555 timer and external PLL as contigency plan.
+
+Norm:
+1) Investigate scripts for communication.
+- Write files.
+- Copy files.
+- Delete files.ive
+- SSH login/exit.
+- Calling executables.
+
+Daniel:
+1) Basic client/server model using computer, BBB, and copying files between each other.
+2) Think about building a power circuit PCB.
