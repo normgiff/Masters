@@ -1,0 +1,8 @@
+verilog work "SYNCHRONIZER.v"
+verilog work "RECONF_PULSE_GEN.v"
+verilog work "ODDR_WRAPPER.v"
+verilog work "ipcore_dir/CLK_MULTIPLIER.v"
+verilog work "CLOCK_MUX.v"
+verilog work "CLOCK_GEN.v"
+verilog work "CLOCK_GEN_TB.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,324 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: LIMIT_GEN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LIMIT_GEN.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LIMIT_GEN"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : LIMIT_GEN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 0
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\LIMIT_GEN.v" into library work
+Parsing module <LIMIT_GEN>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <LIMIT_GEN>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <LIMIT_GEN>.
+    Related source file is "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\LIMIT_GEN.v".
+        CLKSPEED = 27'b101111101011110000100000000
+    Found 8-bit subtractor for signal <n0009> created at line 18.
+    Found 32-bit shifter logical right for signal <GND_1_o_SCALE[6]_shift_right_0_OUT> created at line 17
+    Found 32x1-bit multiplier for signal <n0006> created at line 17.
+    Found 32x26-bit multiplier for signal <n0007> created at line 18.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <LIMIT_GEN> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 32x1-bit multiplier                                   : 1
+ 32x26-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 32x1-bit multiplier                                   : 1
+ 32x26-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mmult_n00073> of sequential type is unconnected in block <LIMIT_GEN>.
+
+Optimizing unit <LIMIT_GEN> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LIMIT_GEN, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : LIMIT_GEN.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 60
+#      GND                         : 1
+#      LUT2                        : 27
+#      LUT5                        : 3
+#      LUT6                        : 28
+#      VCC                         : 1
+# IO Buffers                       : 78
+#      IBUF                        : 14
+#      OBUF                        : 64
+# DSPs                             : 3
+#      DSP48E1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   58  out of  63400     0%  
+    Number used as Logic:                58  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     58
+   Number with an unused Flip Flop:      58  out of     58   100%  
+   Number with an unused LUT:             0  out of     58     0%  
+   Number of fully used LUT-FF pairs:     0  out of     58     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          78
+ Number of bonded IOBs:                  78  out of    210    37%  
+
+Specific Feature Utilization:
+ Number of DSP48E1s:                      3  out of    240     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 7.268ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8332317 / 59
+-------------------------------------------------------------------------
+Delay:               7.268ns (Levels of Logic = 7)
+  Source:            DUTY<0> (PAD)
+  Destination:       LOW_LEVEL_LIMIT<31> (PAD)
+
+  Data Path: DUTY<0> to LOW_LEVEL_LIMIT<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.693  DUTY_0_IBUF (DUTY_0_IBUF)
+     LUT6:I0->O            2   0.097   0.384  Msub_n0009_cy<5>11 (Msub_n0009_cy<5>)
+     LUT2:I0->O           25   0.097   0.385  Msub_n0009_xor<7>11 (n0009<7>)
+     DSP48E1:A1->PCOUT47    1   2.970   0.000  Mmult_n0007 (Mmult_n0007_PCOUT_to_Mmult_n00071_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  Mmult_n00071 (Mmult_n00071_PCOUT_to_Mmult_n00072_PCIN_47)
+     DSP48E1:PCIN47->P14    1   1.107   0.279  Mmult_n00072 (LOW_LEVEL_LIMIT_31_OBUF)
+     OBUF:I->O                 0.000          LOW_LEVEL_LIMIT_31_OBUF (LOW_LEVEL_LIMIT<31>)
+    ----------------------------------------
+    Total                      7.268ns (5.527ns logic, 1.741ns route)
+                                       (76.0% logic, 24.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.47 secs
+ 
+--> 
+
+Total memory usage is 449600 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,87 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf
+-ucf CLOCK_GEN.ucf
+
+Design file:              CLOCK_GEN.ncd
+Physical constraint file: CLOCK_GEN.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "clk2_sel" MAXSKEW = 0.15 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   0.081ns.
+--------------------------------------------------------------------------------
+Slack:     0.069ns clk2_sel
+Report:    0.081ns skew meets   0.150ns timing constraint by 0.069ns
+From                         To                           Delay(ns)  Skew(ns)
+SLICE_X59Y87.A               BUFGCTRL_X0Y0.CE1                0.601  0.081
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "clk1_sel" MAXSKEW = 0.15 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   0.097ns.
+--------------------------------------------------------------------------------
+Slack:     0.053ns clk1_sel
+Report:    0.097ns skew meets   0.150ns timing constraint by 0.053ns
+From                         To                           Delay(ns)  Skew(ns)
+SLICE_X58Y86.B               BUFGCTRL_X0Y1.CE1                0.700  0.097
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 0 paths, 2 nets, and 2 connections
+
+Design statistics:
+   Maximum net skew:   0.097ns
+
+
+Analysis completed Wed Nov 04 21:55:07 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 614 MB
+
+
+

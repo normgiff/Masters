@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: CLOCK_MUX.prj
 
@@ -81,7 +81,7 @@ Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Effort                : 0
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -114,7 +114,7 @@ Parsing module <CLOCK_MUX>.
 
 Elaborating module <CLOCK_MUX>.
 
-Elaborating module <BUFGMUX>.
+Elaborating module <BUFGMUX(CLK_SEL_TYPE="ASYNC")>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -260,12 +260,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.30 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.62 secs
  
 --> 
 
-Total memory usage is 420288 kilobytes
+Total memory usage is 446792 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

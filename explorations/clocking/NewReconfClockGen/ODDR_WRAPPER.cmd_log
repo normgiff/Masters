@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ODDR_WRAPPER.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ODDR_WRAPPER.syr" 
