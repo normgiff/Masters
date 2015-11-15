@@ -56,11 +56,6 @@ For modulating high voltages sent to a chip, we believe a LM317 op-amp, some dis
 </p>
 
 <p>
-<b>Schmooing</b><br>
-For modulating high voltages sent to a chip, we believe a LM317 op-amp, some discrete components, and a digital potentiometer (likely to be controlled by the BeagleBone Black) will be sufficient for our project. This circuit (proposed by the LM317 datasheet) has been simulated in PSpice (you can see our PSpice project <a href="LM317Prototype-PSpiceFiles.zip">here</a>) and tested on a breadboard; it appears to work very well. We have not yet investigated how to modulate low voltage signals sent to a chip but are leaving it as a stretch goal for the time being.
-</p>
-
-<p>
 <b>Real-Time Testing</b><br>
 We believe real-time testing can be implemented using the Spartan-6 FPGA's block RAM to hold input test vectors and individual SRAM chips and counters to hold output signals sampled during every test cycle. Please see <a href="images/real_time_testing.png">this</a> image to understand our idea of using SRAM chips and counters.
 </p>
@@ -68,6 +63,11 @@ We believe real-time testing can be implemented using the Spartan-6 FPGA's block
 <p>
 <b>Conditional Input Test Vectors</b><br>
 The LV500 allows users to provide conditional input test vectors. The idea is that you can run a test vector (e.g. a test vector that just clocks a circuit) until some <i>done</i> bit changes state, at which point you execute the next few test vectors. Right now, Norm and Daniel plan to allow test vectors to be addressed (to provide the ability to jump to previous test vectors) and combined with a number indicating how often a test vector is to be run.
+</p>
+
+<p>
+<b>Timing Characteristics</b><br>
+Using Altium Designer, we will create a 4-layer PCB with traces of as equal length as we can. We will be taking advantage of Advanced Circuits' student promotion of a 4-layer PCB board (maximum 30 square inches) for $66.
 </p>
 
 <p>
