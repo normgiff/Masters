@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Master's Project</title>
+  </head>
+  
+  <body>
+    <header>
+      <div class="inner">
+        <h1>LV600</h1>
+        <h2>where the devil lies in the details</h2>
+        <a href="https://github.com/normgiff/Masters" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="-masters-" class="anchor" href="#-masters-" aria-hidden="true"><span class="octicon octicon-link"></span></a> Current Investigations </h1>
+
+<p>
+<b>High Level Diagram of Project (Tentative)</b><br>
+<IMG SRC="images/high_level_diagram.png" />
+</p>
+
+<p>
+<b>Wireless Communication and File Uploading</b><br>
+Norm was the first to suggest using a BeagleBone Black (which runs Linux) within the project. Eventually, Daniel and Norm conceptualized and settled on the idea of using the BeagleBone Black as a server that accepts test files from clients. Norman is currently investigating use of the BeagleBone Black in greater detail.
+</p>
+
+<p>
+<b>Using an FPGA</b><br>
+In our senior project, we used a Numato Spartan-6 FPGA Saturn board (with 150 available I/O pins) to house all of our testing circuitry. After much deliberation, we have decided to use the newest Saturn board for this project. (The other idea we debated on was using MOSIS-fabricated chips to house our older testing logic. However, we decided with time that we didn't want to be constrainted by MOSIS' fabrication deadlines and unconfigurable hardware.)
+</p>
+
+<p>
+<b>Force Formats</b><br>
+In order to implement force formats (R0, R1, DNRZ_L, DNRZ_T), we have proposed using <a href="images/force_formats.png">this</a> Verilog design. Daniel has tested this design and it appears to work as we want it to.
+</p>
+
+<p>
+<b>Schmooing</b><br>
+For modulating high voltages sent to a chip, we believe a LM317 op-amp, some discrete components, and a digital potentiometer (likely to be controlled by the BeagleBone Black) will be sufficient for our project. This circuit (proposed by the LM317 datasheet) has been simulated in PSpice and tested on a breadboard; it appears to work very well. We have not yet investigated how to modulate low voltage signals sent to a chip but are leaving it as a stretch goal for the time being.
+</p>
+
+<p>
+<b>Schmooing</b><br>
+For modulating high voltages sent to a chip, we believe a LM317 op-amp, some discrete components, and a digital potentiometer (likely to be controlled by the BeagleBone Black) will be sufficient for our project. This circuit (proposed by the LM317 datasheet) has been simulated in PSpice (you can see our PSpice project <a href="LM317Prototype-PSpiceFiles.zip">here</a>) and tested on a breadboard; it appears to work very well. We have not yet investigated how to modulate low voltage signals sent to a chip but are leaving it as a stretch goal for the time being.
+</p>
+
+<p>
+<b>Real-Time Testing</b><br>
+We believe real-time testing can be implemented using the Spartan-6 FPGA's block RAM to hold input test vectors and individual SRAM chips and counters to hold output signals sampled during every test cycle. Please see <a href="images/real_time_testing.png">this</a> image to understand our idea of using SRAM chips and counters.
+</p>
+
+<p>
+<b>Conditional Input Test Vectors</b><br>
+The LV500 allows users to provide conditional input test vectors. The idea is that you can run a test vector (e.g. a test vector that just clocks a circuit) until some <i>done</i> bit changes state, at which point you execute the next few test vectors. Right now, Norm and Daniel plan to allow test vectors to be addressed (to provide the ability to jump to previous test vectors) and combined with a number indicating how often a test vector is to be run.
+</p>
+
+<p>
+<a href="index.html">Click here</a> to return to the home page.
+</p>
+</p>
+        </section>
+        <aside id="sidebar">
+          <a href="https://github.com/normgiff/Masters/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/normgiff/Masters/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+          <p class="repo-owner"><a href="https://github.com/normgiff/Masters"></a> is maintained by <a href="https://github.com/normgiff">normgiff</a>.</p>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

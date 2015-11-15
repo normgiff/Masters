@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Master's Project</title>
+  </head>
+  
+  <body>
+    <header>
+      <div class="inner">
+        <h1>LV600</h1>
+        <h2>where the devil lies in the details</h2>
+        <a href="https://github.com/normgiff/Masters" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="-masters-" class="anchor" href="#-masters-" aria-hidden="true"><span class="octicon octicon-link"></span></a> Project Description and Goals </h1>
+
+<p>
+Our project is to construct a relatively low-cost logic verifier, also known as an ASIC tester.
+</p>
+
+<p>
+An ASIC tester is a device that is used to verify the functionality of digital chips. The core idea behind such a device is conceptually simple:
+<ul>
+<li>The user provides the machine a chip (the <i>device under test</i>, or DUT) and tells the machine four things: what inputs to apply to the chip, when to apply those inputs to the chip, what outputs to expect from the chip in response to the applied inputs, and when to sample the outputs from the chip after the inputs have been applied.</li>
+<li>The machine applies the inputs, samples the outputs, compares the outputs expected by the user to the sampled outputs, and reports to the user whether the chip meets its expected functionality or not.</li>
+</ul>
+Creating a low-cost device that performs just these core functions is certainly doable, as evidenced by our <a href="previous.html">previous work</a>.
+ However, ASIC testers today and from decades ago generally provide far more features. For instance, the Tektronix LV500 provides the following functionality:
+<ul>
+	<li><b>Schmooing</b>: In a digital chip, a binary 1 may be encoded as 5V and a binary 0 is usually encoded as 0V. Ideally, a chip operating on 5V will only receive 5V and 0V as input signals. Digital signals are, however, fundamentally analog, and the input voltages to a chip may not be ideal. The LV500 allows the user to see if their chip will still respond correctly to high voltages like 4V, and low voltages like 1V. Testing a chip over a variety of different high voltages and low voltages is described by the LV500 as <i>schmooing.</i></li>
+	<li><b>Real-time testing</b>: The LV500 allows the user to specify how often inputs should be applied to the chip. This paradigm contrasts with the logic verifier simply applying a set of inputs and then readying the next set of inputs for some arbitrary about of time. Real-time testing, along with timing characteristics, are important in understanding the maximum switching speed of a chip.</li>
+	<li><b>Timing characteristics</b>: Electrical energy is generally fast, but in a digital chip there is always delay between applied inputs and outputs primarily due to RC delay in the wires and time required for transistors to switch. Often, chip manufacturers are curious about how fast they can clock their chips (i.e. change the inputs to the chip and read correct outputs). The LV500 allows users to indirectly measure the delay between input and output signals, as users can shorten the time between applying input signals and sampling output signals until the output signals are no longer correct.</li>
+	<li><b>File support</b>: If testing several chips, it'd be highly impractical to have to specify the inputs and expected outputs every time the machine is to be operated. The LV500 allows users to send over FTP a file that contains all of the information needed for the LV500 to test the user's corresponding chip.</li>
+</ul>
+</p>
+<p>
+Our project is, informally, to create a low-cost (defined as less than $1000) ASIC tester that mimics the LV500's functionality as largely as possible. We are not, however, too concerned about how the LV500 implements some certain functionality (e.g. the file templates that the LV500 uses, or how schmooing is performed).
+</p>
+<p>
+<a href="index.html">Click here</a> to return to the home page.
+</p>
+</p>
+        </section>
+        <aside id="sidebar">
+          <a href="https://github.com/normgiff/Masters/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/normgiff/Masters/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+          <p class="repo-owner"><a href="https://github.com/normgiff/Masters"></a> is maintained by <a href="https://github.com/normgiff">normgiff</a>.</p>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
