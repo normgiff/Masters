@@ -46,7 +46,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "CLOCK_GEN"
 Output Format                      : NGC
-Target Device                      : xc7a100t-3-csg324
+Target Device                      : xc6slx16-3-csg324
 
 ---- Source Options
 Top Module Name                    : CLOCK_GEN
@@ -70,7 +70,7 @@ LUT Combining                      : Auto
 Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
-Add Generic Clock Buffer(BUFG)     : 32
+Add Generic Clock Buffer(BUFG)     : 16
 Register Duplication               : YES
 Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Auto
@@ -81,7 +81,7 @@ Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
-Optimization Effort                : 0
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -121,7 +121,6 @@ Parsing module <CLOCK_GEN>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v" Line 31: Port LOCKED is not connected to this instance
 
 Elaborating module <CLOCK_GEN>.
 
@@ -129,29 +128,21 @@ Elaborating module <CLK_MULTIPLIER>.
 
 Elaborating module <IBUFG>.
 
-Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=10.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=2.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 127: Assignment to clkfboutb_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 129: Assignment to clkout0b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 130: Assignment to clkout1_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 131: Assignment to clkout1b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 132: Assignment to clkout2_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 133: Assignment to clkout2b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 134: Assignment to clkout3_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 135: Assignment to clkout3b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 136: Assignment to clkout4_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 137: Assignment to clkout5_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 138: Assignment to clkout6_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 150: Assignment to do_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 151: Assignment to drdy_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 157: Assignment to psdone_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 160: Assignment to clkinstopped_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 161: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=4,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=1,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 116: Assignment to clkout1_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 117: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 118: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 119: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 120: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\ipcore_dir\CLK_MULTIPLIER.v" Line 122: Assignment to locked_unused ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
 
 Elaborating module <SYNCHRONIZER>.
 
 Elaborating module <RECONF_PULSE_GEN>.
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v" Line 72: Assignment to clk3_ready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v" Line 82: Assignment to clk4_ready ignored, since the identifier is never used
 
 Elaborating module <CLOCK_MUX>.
 
@@ -159,7 +150,7 @@ Elaborating module <BUFGMUX(CLK_SEL_TYPE="ASYNC")>.
 
 Elaborating module <ODDR_WRAPPER>.
 
-Elaborating module <ODDR(DDR_CLK_EDGE="OPPOSITE_EDGE",INIT=1'b0,SRTYPE="SYNC")>.
+Elaborating module <ODDR2(INIT=1'b0,SRTYPE="SYNC")>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -167,7 +158,8 @@ Elaborating module <ODDR(DDR_CLK_EDGE="OPPOSITE_EDGE",INIT=1'b0,SRTYPE="SYNC")>.
 
 Synthesizing Unit <CLOCK_GEN>.
     Related source file is "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v".
-INFO:Xst:3210 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v" line 31: Output port <LOCKED> of the instance <CLK_MULTIPLIER_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v" line 65: Output port <READY> of the instance <RECONF_PULSE_GEN_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\CLOCK_GEN.v" line 75: Output port <READY> of the instance <RECONF_PULSE_GEN_3> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <CLOCK_GEN> synthesized.
@@ -180,8 +172,14 @@ Unit <CLK_MULTIPLIER> synthesized.
 
 Synthesizing Unit <SYNCHRONIZER>.
     Related source file is "C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\clocking\NewReconfClockGen\SYNCHRONIZER.v".
+    Found 10-bit register for signal <counter>.
+    Found 1-bit register for signal <PROCEED>.
+    Found 10-bit adder for signal <counter[9]_GND_6_o_add_2_OUT> created at line 22.
+    Found 10-bit comparator greater for signal <counter[9]_PWR_6_o_LessThan_2_o> created at line 21
     Summary:
-	no macro.
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 Unit <SYNCHRONIZER> synthesized.
 
 Synthesizing Unit <RECONF_PULSE_GEN>.
@@ -208,14 +206,17 @@ Synthesizing Unit <RECONF_PULSE_GEN>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <HIGH_COUNTER[6]_GND_7_o_add_5_OUT> created at line 79.
-    Found 7-bit adder for signal <LOW_COUNTER[6]_GND_7_o_add_8_OUT> created at line 87.
-    Found 7-bit adder for signal <DELAY_COUNTER[6]_GND_7_o_add_11_OUT> created at line 95.
-    Found 7-bit comparator equal for signal <HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o> created at line 75
-    Found 7-bit comparator equal for signal <LOW_COUNTER[6]_LOW_LEVEL_LIMIT[6]_equal_8_o> created at line 83
-    Found 7-bit comparator equal for signal <DELAY_COUNTER[6]_DELAY_LIMIT[6]_equal_11_o> created at line 91
+    Found 8-bit subtractor for signal <GND_7_o_GND_7_o_sub_5_OUT> created at line 73.
+    Found 8-bit subtractor for signal <GND_7_o_GND_7_o_sub_9_OUT> created at line 81.
+    Found 8-bit subtractor for signal <GND_7_o_GND_7_o_sub_13_OUT> created at line 89.
+    Found 7-bit adder for signal <HIGH_COUNTER[6]_GND_7_o_add_6_OUT> created at line 77.
+    Found 7-bit adder for signal <LOW_COUNTER[6]_GND_7_o_add_10_OUT> created at line 85.
+    Found 7-bit adder for signal <DELAY_COUNTER[6]_GND_7_o_add_14_OUT> created at line 93.
+    Found 32-bit comparator equal for signal <GND_7_o_GND_7_o_equal_6_o> created at line 73
+    Found 32-bit comparator equal for signal <GND_7_o_GND_7_o_equal_10_o> created at line 81
+    Found 32-bit comparator equal for signal <GND_7_o_GND_7_o_equal_14_o> created at line 89
     Summary:
-	inferred   3 Adder/Subtractor(s).
+	inferred   6 Adder/Subtractor(s).
 	inferred  21 D-type flip-flop(s).
 	inferred   3 Comparator(s).
 	inferred   3 Multiplexer(s).
@@ -238,15 +239,20 @@ Unit <ODDR_WRAPPER> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 6
- 7-bit adder                                           : 6
-# Registers                                            : 6
- 7-bit register                                        : 6
-# Comparators                                          : 6
- 7-bit comparator equal                                : 6
-# Multiplexers                                         : 6
- 7-bit 2-to-1 multiplexer                              : 6
-# FSMs                                                 : 2
+# Adders/Subtractors                                   : 25
+ 10-bit adder                                          : 1
+ 7-bit adder                                           : 12
+ 8-bit subtractor                                      : 12
+# Registers                                            : 14
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 7-bit register                                        : 12
+# Comparators                                          : 13
+ 10-bit comparator greater                             : 1
+ 32-bit comparator equal                               : 12
+# Multiplexers                                         : 12
+ 7-bit 2-to-1 multiplexer                              : 12
+# FSMs                                                 : 4
 
 =========================================================================
 
@@ -256,20 +262,30 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <RECONF_PULSE_GEN>.
-The following registers are absorbed into counter <LOW_COUNTER>: 1 register on signal <LOW_COUNTER>.
 The following registers are absorbed into counter <HIGH_COUNTER>: 1 register on signal <HIGH_COUNTER>.
+The following registers are absorbed into counter <LOW_COUNTER>: 1 register on signal <LOW_COUNTER>.
 The following registers are absorbed into counter <DELAY_COUNTER>: 1 register on signal <DELAY_COUNTER>.
 Unit <RECONF_PULSE_GEN> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SYNCHRONIZER>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <SYNCHRONIZER> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 6
- 7-bit up counter                                      : 6
-# Comparators                                          : 6
- 7-bit comparator equal                                : 6
-# FSMs                                                 : 2
+# Adders/Subtractors                                   : 12
+ 8-bit subtractor                                      : 12
+# Counters                                             : 13
+ 10-bit up counter                                     : 1
+ 7-bit up counter                                      : 12
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 13
+ 10-bit comparator greater                             : 1
+ 32-bit comparator equal                               : 12
+# FSMs                                                 : 4
 
 =========================================================================
 
@@ -277,8 +293,10 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <RECONF_PULSE_GEN_0/FSM_0> on signal <PS[1:3]> with gray encoding.
-Optimizing FSM <RECONF_PULSE_GEN_1/FSM_0> on signal <PS[1:3]> with gray encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:3]> with gray encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:3]> with gray encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:3]> with gray encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:3]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
@@ -288,24 +306,37 @@ Optimizing FSM <RECONF_PULSE_GEN_1/FSM_0> on signal <PS[1:3]> with gray encoding
  011   | 010
  100   | 110
 -------------------
-INFO:Xst:1901 - Instance CLOCK_MUX_1/BUFGMUX_inst in unit CLOCK_GEN of type BUFGMUX has been replaced by BUFGCTRL
-INFO:Xst:1901 - Instance CLOCK_MUX_0/BUFGMUX_inst in unit CLOCK_GEN of type BUFGMUX has been replaced by BUFGCTRL
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_0> of sequential type is unconnected in block <CLOCK_GEN>.
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_1> of sequential type is unconnected in block <CLOCK_GEN>.
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_2> of sequential type is unconnected in block <CLOCK_GEN>.
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_3> of sequential type is unconnected in block <CLOCK_GEN>.
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_4> of sequential type is unconnected in block <CLOCK_GEN>.
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_5> of sequential type is unconnected in block <CLOCK_GEN>.
+WARNING:Xst:2677 - Node <RECONF_PULSE_GEN_0/DELAY_COUNTER_6> of sequential type is unconnected in block <CLOCK_GEN>.
+INFO:Xst:1901 - Instance CLK_MULTIPLIER_0/pll_base_inst in unit CLK_MULTIPLIER_0/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <CLOCK_GEN> ...
-
-Optimizing unit <RECONF_PULSE_GEN> ...
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_6> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_5> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_4> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_2> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_1> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_3> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_0/DELAY_COUNTER_0> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <RECONF_PULSE_GEN_1/PS_FSM_FFd2> in Unit <CLOCK_GEN> is equivalent to the following FF/Latch, which will be removed : <RECONF_PULSE_GEN_0/PS_FSM_FFd2> 
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_3/DELAY_COUNTER_2> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_3/DELAY_COUNTER_3> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_3/DELAY_COUNTER_4> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_3/DELAY_COUNTER_5> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_3/DELAY_COUNTER_6> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_2/DELAY_COUNTER_1> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_2/DELAY_COUNTER_2> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_2/DELAY_COUNTER_3> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_2/DELAY_COUNTER_4> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_2/DELAY_COUNTER_5> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_2/DELAY_COUNTER_6> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_1/DELAY_COUNTER_3> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_1/DELAY_COUNTER_4> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_1/DELAY_COUNTER_5> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <RECONF_PULSE_GEN_1/DELAY_COUNTER_6> (without init value) has a constant value of 0 in block <CLOCK_GEN>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <RECONF_PULSE_GEN_3/PS_FSM_FFd2> in Unit <CLOCK_GEN> is equivalent to the following 3 FFs/Latches, which will be removed : <RECONF_PULSE_GEN_2/PS_FSM_FFd2> <RECONF_PULSE_GEN_1/PS_FSM_FFd2> <RECONF_PULSE_GEN_0/PS_FSM_FFd2> 
+INFO:Xst:2261 - The FF/Latch <RECONF_PULSE_GEN_3/DELAY_COUNTER_0> in Unit <CLOCK_GEN> is equivalent to the following FF/Latch, which will be removed : <RECONF_PULSE_GEN_2/DELAY_COUNTER_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block CLOCK_GEN, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block CLOCK_GEN, actual ratio is 2.
 
 Final Macro Processing ...
 
@@ -313,8 +344,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 40
- Flip-Flops                                            : 40
+# Registers                                            : 81
+ Flip-Flops                                            : 81
 
 =========================================================================
 
@@ -337,52 +368,58 @@ Top Level Output File Name         : CLOCK_GEN.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 86
+# BELS                             : 240
 #      GND                         : 1
-#      LUT2                        : 7
-#      LUT3                        : 17
-#      LUT4                        : 15
-#      LUT5                        : 10
-#      LUT6                        : 33
-#      MUXF7                       : 2
+#      INV                         : 5
+#      LUT1                        : 9
+#      LUT2                        : 19
+#      LUT3                        : 26
+#      LUT4                        : 25
+#      LUT5                        : 39
+#      LUT6                        : 96
+#      MUXCY                       : 9
 #      VCC                         : 1
-# FlipFlops/Latches                : 42
-#      FDR                         : 40
-#      ODDR                        : 2
-# Clock Buffers                    : 4
+#      XORCY                       : 10
+# FlipFlops/Latches                : 85
+#      FD                          : 1
+#      FDR                         : 70
+#      FDRE                        : 10
+#      ODDR2                       : 4
+# Clock Buffers                    : 6
 #      BUFG                        : 2
-#      BUFGCTRL                    : 2
-# IO Buffers                       : 19
+#      BUFGMUX                     : 4
+# IO Buffers                       : 21
 #      IBUF                        : 16
 #      IBUFG                       : 1
-#      OBUF                        : 2
+#      OBUF                        : 4
 # Others                           : 1
-#      MMCME2_ADV                  : 1
+#      PLL_ADV                     : 1
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 7a100tcsg324-3 
+Selected Device : 6slx16csg324-3 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              42  out of  126800     0%  
- Number of Slice LUTs:                   82  out of  63400     0%  
-    Number used as Logic:                82  out of  63400     0%  
+ Number of Slice Registers:              85  out of  18224     0%  
+ Number of Slice LUTs:                  219  out of   9112     2%  
+    Number used as Logic:               219  out of   9112     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     84
-   Number with an unused Flip Flop:      42  out of     84    50%  
-   Number with an unused LUT:             2  out of     84     2%  
-   Number of fully used LUT-FF pairs:    40  out of     84    47%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    223
+   Number with an unused Flip Flop:     138  out of    223    61%  
+   Number with an unused LUT:             4  out of    223     1%  
+   Number of fully used LUT-FF pairs:    81  out of    223    36%  
+   Number of unique control sets:        13
 
 IO Utilization: 
- Number of IOs:                          19
- Number of bonded IOBs:                  19  out of    210     9%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                4  out of     32    12%  
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -402,12 +439,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-RECONF_PULSE_GEN_0/DELAY_COUNTER<0>| BUFGCTRL               | 2     |
-CLK_MULTIPLIER_0/clkout0           | BUFG                   | 40    |
------------------------------------+------------------------+-------+
+--------------------------------------+------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)  | Load  |
+--------------------------------------+------------------------+-------+
+CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0| BUFG                   | 81    |
+RECONF_PULSE_GEN_1/DELAY_COUNTER<3>   | BUFGMUX                | 8     |
+--------------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -417,141 +454,125 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 1.966ns (Maximum Frequency: 508.569MHz)
-   Minimum input arrival time before clock: 1.788ns
-   Maximum output required time after clock: 0.876ns
-   Maximum combinational path delay: 0.331ns
+   Minimum period: 3.643ns (Maximum Frequency: 274.480MHz)
+   Minimum input arrival time before clock: 6.552ns
+   Maximum output required time after clock: 2.426ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CLK_MULTIPLIER_0/clkout0'
-  Clock period: 1.966ns (frequency: 508.569MHz)
-  Total number of paths / destination ports: 452 / 75
+Timing constraint: Default period analysis for Clock 'CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0'
+  Clock period: 3.643ns (frequency: 274.480MHz)
+  Total number of paths / destination ports: 1046 / 152
 -------------------------------------------------------------------------
-Delay:               1.966ns (Levels of Logic = 3)
-  Source:            RECONF_PULSE_GEN_1/HIGH_COUNTER_6 (FF)
-  Destination:       RECONF_PULSE_GEN_1/PS_FSM_FFd1 (FF)
-  Source Clock:      CLK_MULTIPLIER_0/clkout0 rising
-  Destination Clock: CLK_MULTIPLIER_0/clkout0 rising
+Delay:               3.643ns (Levels of Logic = 3)
+  Source:            RECONF_PULSE_GEN_3/HIGH_COUNTER_5 (FF)
+  Destination:       RECONF_PULSE_GEN_3/PS_FSM_FFd1 (FF)
+  Source Clock:      CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0 rising
+  Destination Clock: CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0 rising
 
-  Data Path: RECONF_PULSE_GEN_1/HIGH_COUNTER_6 to RECONF_PULSE_GEN_1/PS_FSM_FFd1
+  Data Path: RECONF_PULSE_GEN_3/HIGH_COUNTER_5 to RECONF_PULSE_GEN_3/PS_FSM_FFd1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.361   0.515  RECONF_PULSE_GEN_1/HIGH_COUNTER_6 (RECONF_PULSE_GEN_1/HIGH_COUNTER_6)
-     LUT6:I3->O            7   0.097   0.407  RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o71 (RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o7)
-     LUT4:I2->O            2   0.097   0.383  RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o73 (RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o)
-     LUT5:I3->O            1   0.097   0.000  RECONF_PULSE_GEN_1/PS_FSM_FFd1-In2 (RECONF_PULSE_GEN_1/PS_FSM_FFd1-In)
-     FDR:D                     0.008          RECONF_PULSE_GEN_1/PS_FSM_FFd1
+     FDR:C->Q              3   0.447   0.879  RECONF_PULSE_GEN_3/HIGH_COUNTER_5 (RECONF_PULSE_GEN_3/HIGH_COUNTER_5)
+     LUT6:I3->O            6   0.205   0.849  RECONF_PULSE_GEN_3/GND_7_o_GND_7_o_equal_6_o81 (RECONF_PULSE_GEN_3/GND_7_o_GND_7_o_equal_6_o8)
+     LUT6:I4->O            3   0.203   0.755  RECONF_PULSE_GEN_3/GND_7_o_GND_7_o_equal_6_o84 (RECONF_PULSE_GEN_3/GND_7_o_GND_7_o_equal_6_o)
+     LUT5:I3->O            1   0.203   0.000  RECONF_PULSE_GEN_3/PS_FSM_FFd1-In1 (RECONF_PULSE_GEN_3/PS_FSM_FFd1-In)
+     FDR:D                     0.102          RECONF_PULSE_GEN_3/PS_FSM_FFd1
     ----------------------------------------
-    Total                      1.966ns (0.660ns logic, 1.306ns route)
-                                       (33.6% logic, 66.4% route)
+    Total                      3.643ns (1.160ns logic, 2.483ns route)
+                                       (31.8% logic, 68.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'RECONF_PULSE_GEN_0/DELAY_COUNTER<0>'
-  Total number of paths / destination ports: 2 / 2
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 2261 / 145
 -------------------------------------------------------------------------
-Offset:              0.331ns (Levels of Logic = 1)
+Offset:              6.552ns (Levels of Logic = 5)
+  Source:            HIGH_LEVEL_LIMIT<1> (PAD)
+  Destination:       RECONF_PULSE_GEN_3/PS_FSM_FFd1 (FF)
+  Destination Clock: CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: HIGH_LEVEL_LIMIT<1> to RECONF_PULSE_GEN_3/PS_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.392  HIGH_LEVEL_LIMIT_1_IBUF (HIGH_LEVEL_LIMIT_1_IBUF)
+     LUT6:I0->O            9   0.203   0.830  RECONF_PULSE_GEN_0/Msub_GND_7_o_GND_7_o_sub_5_OUT_cy<5>1 (RECONF_PULSE_GEN_0/Msub_GND_7_o_GND_7_o_sub_5_OUT_cy<5>)
+     LUT2:I1->O           20   0.205   1.437  RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_sub_5_OUT<6>1 (RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_sub_5_OUT<6>)
+     LUT6:I1->O            3   0.203   0.755  RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84 (RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o)
+     LUT5:I3->O            1   0.203   0.000  RECONF_PULSE_GEN_2/PS_FSM_FFd1-In1 (RECONF_PULSE_GEN_2/PS_FSM_FFd1-In)
+     FDR:D                     0.102          RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    ----------------------------------------
+    Total                      6.552ns (2.138ns logic, 4.414ns route)
+                                       (32.6% logic, 67.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RECONF_PULSE_GEN_1/DELAY_COUNTER<3>'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              2.542ns (Levels of Logic = 1)
   Source:            RST (PAD)
-  Destination:       ODDR_WRAPPER_1/ODDR_inst (FF)
-  Destination Clock: RECONF_PULSE_GEN_0/DELAY_COUNTER<0> rising
+  Destination:       ODDR_WRAPPER_3/ODDR_inst (FF)
+  Destination Clock: RECONF_PULSE_GEN_1/DELAY_COUNTER<3> falling
 
-  Data Path: RST to ODDR_WRAPPER_1/ODDR_inst
+  Data Path: RST to ODDR_WRAPPER_3/ODDR_inst
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   0.001   0.330  RST_IBUF (RST_IBUF)
-     ODDR:R                    0.000          ODDR_WRAPPER_1/ODDR_inst
+     IBUF:I->O            34   1.222   1.320  RST_IBUF (RST_IBUF)
+     ODDR2:R                   0.000          ODDR_WRAPPER_3/ODDR_inst
     ----------------------------------------
-    Total                      0.331ns (0.001ns logic, 0.330ns route)
-                                       (0.3% logic, 99.7% route)
+    Total                      2.542ns (1.222ns logic, 1.320ns route)
+                                       (48.1% logic, 51.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_MULTIPLIER_0/clkout0'
-  Total number of paths / destination ports: 266 / 72
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 12 / 4
 -------------------------------------------------------------------------
-Offset:              1.788ns (Levels of Logic = 4)
-  Source:            HIGH_LEVEL_LIMIT<6> (PAD)
-  Destination:       RECONF_PULSE_GEN_1/PS_FSM_FFd1 (FF)
-  Destination Clock: CLK_MULTIPLIER_0/clkout0 rising
+Offset:              2.426ns (Levels of Logic = 1)
+  Source:            RECONF_PULSE_GEN_3/PS_FSM_FFd2 (FF)
+  Destination:       CLOCK_MUX_3/BUFGMUX_inst:S (PAD)
+  Source Clock:      CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0 rising
 
-  Data Path: HIGH_LEVEL_LIMIT<6> to RECONF_PULSE_GEN_1/PS_FSM_FFd1
+  Data Path: RECONF_PULSE_GEN_3/PS_FSM_FFd2 to CLOCK_MUX_3/BUFGMUX_inst:S
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.697  HIGH_LEVEL_LIMIT_6_IBUF (HIGH_LEVEL_LIMIT_6_IBUF)
-     LUT6:I0->O            7   0.097   0.407  RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o71 (RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o7)
-     LUT4:I2->O            2   0.097   0.383  RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o73 (RECONF_PULSE_GEN_1/HIGH_COUNTER[6]_HIGH_LEVEL_LIMIT[6]_equal_5_o)
-     LUT5:I3->O            1   0.097   0.000  RECONF_PULSE_GEN_1/PS_FSM_FFd1-In2 (RECONF_PULSE_GEN_1/PS_FSM_FFd1-In)
-     FDR:D                     0.008          RECONF_PULSE_GEN_1/PS_FSM_FFd1
+     FDR:C->Q             20   0.447   1.197  RECONF_PULSE_GEN_3/PS_FSM_FFd2 (RECONF_PULSE_GEN_3/PS_FSM_FFd2)
+     LUT3:I1->O            1   0.203   0.579  RECONF_PULSE_GEN_3/PS_FSM_FFd1-In11 (RECONF_PULSE_GEN_3/PS_FSM_FFd1-In1)
+    BUFGMUX:S                  0.000          CLOCK_MUX_3/BUFGMUX_inst
     ----------------------------------------
-    Total                      1.788ns (0.300ns logic, 1.488ns route)
-                                       (16.8% logic, 83.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'RECONF_PULSE_GEN_0/DELAY_COUNTER<0>'
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Offset:              0.876ns (Levels of Logic = 1)
-  Source:            ODDR_WRAPPER_0/ODDR_inst (FF)
-  Destination:       OUT1 (PAD)
-  Source Clock:      RECONF_PULSE_GEN_0/DELAY_COUNTER<0> rising
-
-  Data Path: ODDR_WRAPPER_0/ODDR_inst to OUT1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     ODDR:C->Q             1   0.597   0.279  ODDR_WRAPPER_0/ODDR_inst (OUT1_OBUF)
-     OBUF:I->O                 0.000          OUT1_OBUF (OUT1)
-    ----------------------------------------
-    Total                      0.876ns (0.597ns logic, 0.279ns route)
-                                       (68.1% logic, 31.9% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Delay:               0.331ns (Levels of Logic = 1)
-  Source:            RST (PAD)
-  Destination:       CLK_MULTIPLIER_0/mmcm_adv_inst:RST (PAD)
-
-  Data Path: RST to CLK_MULTIPLIER_0/mmcm_adv_inst:RST
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            12   0.001   0.330  RST_IBUF (RST_IBUF)
-    MMCME2_ADV:RST             0.000          CLK_MULTIPLIER_0/mmcm_adv_inst
-    ----------------------------------------
-    Total                      0.331ns (0.001ns logic, 0.330ns route)
-                                       (0.3% logic, 99.7% route)
+    Total                      2.426ns (0.650ns logic, 1.776ns route)
+                                       (26.8% logic, 73.2% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock CLK_MULTIPLIER_0/clkout0
-------------------------+---------+---------+---------+---------+
-                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------+---------+---------+---------+---------+
-CLK_MULTIPLIER_0/clkout0|    1.966|         |         |         |
-------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+CLK_MULTIPLIER_0/pll_base_inst/CLKOUT0|    3.643|         |         |         |
+--------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.87 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.72 secs
  
 --> 
 
-Total memory usage is 446792 kilobytes
+Total memory usage is 330924 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   24 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   30 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

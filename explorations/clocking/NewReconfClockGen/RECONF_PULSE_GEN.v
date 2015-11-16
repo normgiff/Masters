@@ -20,8 +20,6 @@ input [6:0] HIGH_LEVEL_LIMIT;
 input [6:0] LOW_LEVEL_LIMIT;
 
 // The SEL signal for the BUFGMUX.
-// TODO: Figure out how to specify a constraint in ISE. (Probably PlanAhead.)
-//       We need to minimize the skew for all of the SEL signals!
 output reg SEL;
 
 //////////////////
@@ -72,7 +70,7 @@ always@(posedge CLK) begin
 		DELAY_COUNTER <= 7'd0;
 		case(PS)
 			COUNT_UP: begin
-				if (HIGH_COUNTER == HIGH_LEVEL_LIMIT) begin
+				if (HIGH_COUNTER == (HIGH_LEVEL_LIMIT - 1)) begin
 					HIGH_COUNTER <= 7'd0;
 				end
 				else begin
@@ -80,7 +78,7 @@ always@(posedge CLK) begin
 				end
 			end
 			COUNT_DOWN: begin
-				if (LOW_COUNTER == LOW_LEVEL_LIMIT) begin
+				if (LOW_COUNTER == (LOW_LEVEL_LIMIT - 1)) begin
 					LOW_COUNTER <= 7'd0;
 				end
 				else begin
@@ -88,7 +86,7 @@ always@(posedge CLK) begin
 				end
 			end
 			DELAY: begin
-				if (DELAY_COUNTER == DELAY_LIMIT) begin
+				if (DELAY_COUNTER == (DELAY_LIMIT - 1)) begin
 					DELAY_COUNTER <= 7'd0;
 				end
 				else begin
@@ -123,7 +121,7 @@ always@(*) begin
 			end	
 		end
 		DELAY: begin
-			if (DELAY_COUNTER == DELAY_LIMIT) begin
+			if (DELAY_COUNTER == (DELAY_LIMIT - 1)) begin
 				NS = COUNT_UP;
 			end
 			else begin 
@@ -131,7 +129,7 @@ always@(*) begin
 			end
 		end
 		COUNT_UP: begin
-			if (HIGH_COUNTER == HIGH_LEVEL_LIMIT) begin
+			if (HIGH_COUNTER == (HIGH_LEVEL_LIMIT - 1)) begin
 				NS = COUNT_DOWN;
 			end
 			else begin
@@ -139,7 +137,7 @@ always@(*) begin
 			end
 		end
 		COUNT_DOWN: begin
-			if (LOW_COUNTER == LOW_LEVEL_LIMIT) begin
+			if (LOW_COUNTER == (LOW_LEVEL_LIMIT - 1)) begin
 				NS = COUNT_UP;
 			end
 			else begin

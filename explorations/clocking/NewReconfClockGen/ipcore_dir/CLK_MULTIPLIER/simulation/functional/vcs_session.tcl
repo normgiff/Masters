@@ -10,7 +10,6 @@ gui_sg_addsignal -group CLK_MULTIPLIER_group {CLK_MULTIPLIER_tb.dut.clk}
 gui_list_expand -id Wave.1 CLK_MULTIPLIER_tb.dut.clk
 gui_sg_addsignal -group CLK_MULTIPLIER_group {{Status_control}} -divider
 gui_sg_addsignal -group CLK_MULTIPLIER_group {CLK_MULTIPLIER_tb.RESET}
-gui_sg_addsignal -group CLK_MULTIPLIER_group {CLK_MULTIPLIER_tb.LOCKED}
 gui_sg_addsignal -group CLK_MULTIPLIER_group {{Counters}} -divider
 gui_sg_addsignal -group CLK_MULTIPLIER_group {CLK_MULTIPLIER_tb.COUNT}
 gui_sg_addsignal -group CLK_MULTIPLIER_group {CLK_MULTIPLIER_tb.dut.counter}

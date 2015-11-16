@@ -105,8 +105,7 @@ group set -comment {}
 group clear 0 end
 
 group insert \
-   {nc::CLK_MULTIPLIER_tb.RESET}    {nc::CLK_MULTIPLIER_tb.LOCKED}
-
+   {nc::CLK_MULTIPLIER_tb.RESET}  \ 
 
 set id [waveform add -signals [list {nc::CLK_MULTIPLIER_tb.COUNT} ]]
 

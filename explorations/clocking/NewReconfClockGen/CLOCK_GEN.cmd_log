@@ -83,3 +83,267 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
 bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc7a100t-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 
+xst -intstyle ise -ifn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.xst" -ofn "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CLOCK_GEN.ucf -p xc6slx16-csg324-3 CLOCK_GEN.ngc CLOCK_GEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o CLOCK_GEN_map.ncd CLOCK_GEN.ngd CLOCK_GEN.pcf 
+par -w -intstyle ise -ol high -mt off CLOCK_GEN_map.ncd CLOCK_GEN.ncd CLOCK_GEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml CLOCK_GEN.twx CLOCK_GEN.ncd -o CLOCK_GEN.twr CLOCK_GEN.pcf -ucf CLOCK_GEN.ucf 
+bitgen -intstyle ise -f CLOCK_GEN.ut CLOCK_GEN.ncd 

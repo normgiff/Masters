@@ -51,7 +51,6 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /CLK_MULTIPLIER_tb/CLK_IN1
 add wave -noupdate /CLK_MULTIPLIER_tb/COUNT
-add wave -noupdate /CLK_MULTIPLIER_tb/LOCKED
 add wave -noupdate /CLK_MULTIPLIER_tb/RESET
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {3223025 ps} 0}

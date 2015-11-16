@@ -5,5 +5,9 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">CLK</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">PLL_ADV</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_CLK_MULTIPLIER_0_clkout0 = PERIOD &quot;CLK_MULTIPLIER_0_clkout0&quot; TS_CLK / 4 HIGH 50% INPUT_JITTER 100 ps&gt;</arg>
+</msg>
+
 </messages>
 

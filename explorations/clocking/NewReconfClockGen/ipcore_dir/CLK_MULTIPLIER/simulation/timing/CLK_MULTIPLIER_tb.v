@@ -57,7 +57,6 @@
 
 `timescale 1ps/1ps
 
-`define wait_lock @(posedge LOCKED)
 
 module CLK_MULTIPLIER_tb ();
 
@@ -71,7 +70,7 @@ module CLK_MULTIPLIER_tb ();
   // how many cycles to run
   localparam  COUNT_PHASE = 1024;
   // we'll be using the period in many locations
-  localparam time PER1    = 10.000*ONE_NS;
+  localparam time PER1    = 10.0*ONE_NS;
   localparam time PER1_1  = PER1/2;
   localparam time PER1_2  = PER1 - PER1/2;
 
@@ -82,14 +81,9 @@ module CLK_MULTIPLIER_tb ();
   wire        COUNT;
   // Status and control signals
   reg         RESET      = 0;
-  wire        LOCKED;
   reg         COUNTER_RESET = 0;
 wire [1:1] CLK_OUT;
 //Freq Check using the M & D values setting and actual Frequency generated 
-real period1;
-real ref_period1;
-localparam  ref_period1_clkin1 = (10.000*1*2.000*1000/10.000);
-time prev_rise1;
 
   reg [13:0]  timeout_counter = 14'b00000000000000;
 
@@ -112,7 +106,7 @@ time prev_rise1;
     #(PER1*6);
     RESET = 0;
     test_phase = "wait lock";
-    `wait_lock;
+    #(PER1*50);
     #(PER1*6);
     COUNTER_RESET = 1;
     #(PER1*19.5)
@@ -121,10 +115,6 @@ time prev_rise1;
     $display ("Timing checks are valid");
     test_phase = "counting";
     #(PER1*COUNT_PHASE);
-    if ((period1 -ref_period1_clkin1) <= 100 && (period1 -ref_period1_clkin1) >= -100) begin
-    $display("Freq of CLK_OUT[1] ( in MHz ) : %0f\n", 1000000/period1);
-    end else 
-    $display("ERROR: Freq of CLK_OUT[1] is not correct"); 
 
     $display("SIMULATION PASSED");
     $display("SYSTEM_CLOCK_COUNTER : %0d\n",$time/PER1);
@@ -132,16 +122,6 @@ time prev_rise1;
   end
 
 
-   always@(posedge CLK_IN1) begin
-      timeout_counter <= timeout_counter + 1'b1;
-      if (timeout_counter == 14'b10000000000000) begin
-         if (LOCKED != 1'b1) begin
-            $display("ERROR : NO LOCK signal");
-            $display("SYSTEM_CLOCK_COUNTER : %0d\n",$time/PER1);
-            $finish;
-         end
-      end
-   end
 
   // Instantiation of the example design containing the clock
   //    network and sampling counters
@@ -156,19 +136,9 @@ time prev_rise1;
     // High bits of the counters
     .COUNT              (COUNT),
     // Status and control signals
-    .RESET              (RESET),
-    .LOCKED             (LOCKED));
+    .RESET              (RESET));
 
 
 // Freq Check 
-initial
-  prev_rise1 = 0;
-
-always @(posedge CLK_OUT[1])
-begin
-  if (prev_rise1 != 0)
-    period1 = $time - prev_rise1;
-  prev_rise1 = $time;
-end
 
 endmodule

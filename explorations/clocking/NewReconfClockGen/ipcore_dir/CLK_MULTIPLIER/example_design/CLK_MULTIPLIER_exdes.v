@@ -68,16 +68,15 @@ module CLK_MULTIPLIER_exdes
   // High bits of counters driven by clocks
   output        COUNT,
   // Status and control signals
-  input         RESET,
-  output        LOCKED
+  input         RESET
  );
 
   // Parameters for the counters
   //-------------------------------
   // Counter width
   localparam    C_W       = 16;
-  // When the clock goes out of lock, reset the counters
-  wire          reset_int = !LOCKED || RESET || COUNTER_RESET;
+  // Create reset for the counters
+  wire          reset_int = RESET || COUNTER_RESET;
 
    reg rst_sync;
    reg rst_sync_int;
@@ -88,6 +87,7 @@ module CLK_MULTIPLIER_exdes
 
   // Declare the clocks and counter
   wire           clk_int;
+  wire           clk_n;
   wire           clk;
   reg  [C_W-1:0] counter;
 
@@ -99,16 +99,17 @@ module CLK_MULTIPLIER_exdes
     // Clock out ports
     .CLK_OUT           (clk_int),
     // Status and control signals
-    .RESET              (RESET),
-    .LOCKED             (LOCKED));
+    .RESET              (RESET));
 
+  assign clk_n = ~clk;
 
-  ODDR clk_out_oddr
+  ODDR2 clkout_oddr
    (.Q  (CLK_OUT[1]),
-    .C  (clk),
+    .C0 (clk),
+    .C1 (clk_n),
     .CE (1'b1),
-    .D1 (1'b1),
-    .D2 (1'b0),
+    .D0 (1'b1),
+    .D1 (1'b0),
     .R  (1'b0),
     .S  (1'b0));
 

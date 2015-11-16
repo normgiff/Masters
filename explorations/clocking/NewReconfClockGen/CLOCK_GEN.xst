@@ -4,10 +4,10 @@ run
 -ifn CLOCK_GEN.prj
 -ofn CLOCK_GEN
 -ofmt NGC
--p xc7a100t-3-csg324
+-p xc6slx16-3-csg324
 -top CLOCK_GEN
 -opt_mode Speed
--opt_level 0
+-opt_level 2
 -power NO
 -iuc NO
 -keep_hierarchy No
@@ -40,7 +40,7 @@ run
 -use_dsp48 Auto
 -iobuf YES
 -max_fanout 100000
--bufg 32
+-bufg 16
 -register_duplication YES
 -register_balancing No
 -optimize_primitives NO

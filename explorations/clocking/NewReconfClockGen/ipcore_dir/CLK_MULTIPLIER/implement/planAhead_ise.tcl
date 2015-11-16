@@ -50,7 +50,7 @@
 set projDir [file dirname [info script]]
 set projName CLK_MULTIPLIER
 set topName CLK_MULTIPLIER_exdes
-set device xc7a100tcsg324-3
+set device xc6slx16csg324-3
 
 create_project $projName $projDir/results/$projName -part $device
 

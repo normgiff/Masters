@@ -8,7 +8,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
 
 Design file:              CLOCK_GEN.ncd
 Physical constraint file: CLOCK_GEN.pcf
-Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -26,62 +26,629 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
-Timing constraint: NET "clk2_sel" MAXSKEW = 0.15 ns;
+Timing constraint: NET "clk4_mux_out" MAXSKEW = 0.3 ns;
 
  1 net analyzed, 0 failing nets detected.
  0 timing errors detected.
- Maximum net skew is   0.081ns.
+ Maximum net skew is   0.211ns.
 --------------------------------------------------------------------------------
-Slack:     0.069ns clk2_sel
-Report:    0.081ns skew meets   0.150ns timing constraint by 0.069ns
+Slack:     0.089ns clk4_mux_out
+Report:    0.211ns skew meets   0.300ns timing constraint by 0.089ns
 From                         To                           Delay(ns)  Skew(ns)
-SLICE_X59Y87.A               BUFGCTRL_X0Y0.CE1                0.601  0.081
+BUFGMUX_X3Y13.O              OLOGIC_X5Y2.CLK0                 1.358  0.112
+BUFGMUX_X3Y13.O              OLOGIC_X5Y2.CLK1                 1.358  0.112
 
 --------------------------------------------------------------------------------
 
 ================================================================================
-Timing constraint: NET "clk1_sel" MAXSKEW = 0.15 ns;
+Timing constraint: NET "clk3_mux_out" MAXSKEW = 0.3 ns;
 
  1 net analyzed, 0 failing nets detected.
  0 timing errors detected.
- Maximum net skew is   0.097ns.
+ Maximum net skew is   0.285ns.
 --------------------------------------------------------------------------------
-Slack:     0.053ns clk1_sel
-Report:    0.097ns skew meets   0.150ns timing constraint by 0.053ns
+Slack:     0.015ns clk3_mux_out
+Report:    0.285ns skew meets   0.300ns timing constraint by 0.015ns
 From                         To                           Delay(ns)  Skew(ns)
-SLICE_X58Y86.B               BUFGCTRL_X0Y1.CE1                0.700  0.097
+BUFGMUX_X2Y2.O               OLOGIC_X5Y3.CLK0                 1.353  0.116
+BUFGMUX_X2Y2.O               OLOGIC_X5Y3.CLK1                 1.349  0.112
 
 --------------------------------------------------------------------------------
 
+================================================================================
+Timing constraint: NET "clk2_mux_out" MAXSKEW = 0.3 ns;
 
-All constraints were met.
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   0.211ns.
+--------------------------------------------------------------------------------
+Slack:     0.089ns clk2_mux_out
+Report:    0.211ns skew meets   0.300ns timing constraint by 0.089ns
+From                         To                           Delay(ns)  Skew(ns)
+BUFGMUX_X2Y12.O              OLOGIC_X1Y0.CLK0                 1.384  0.112
+BUFGMUX_X2Y12.O              OLOGIC_X1Y0.CLK1                 1.384  0.112
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "clk1_mux_out" MAXSKEW = 0.3 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   0.211ns.
+--------------------------------------------------------------------------------
+Slack:     0.089ns clk1_mux_out
+Report:    0.211ns skew meets   0.300ns timing constraint by 0.089ns
+From                         To                           Delay(ns)  Skew(ns)
+BUFGMUX_X2Y10.O              OLOGIC_X1Y1.CLK0                 1.384  0.112
+BUFGMUX_X2Y10.O              OLOGIC_X1Y1.CLK1                 1.384  0.112
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "SYNCHRONIZER_0/PROCEED" MAXSKEW = 0.3 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   0.139ns.
+--------------------------------------------------------------------------------
+Slack:     0.161ns SYNCHRONIZER_0/PROCEED
+Report:    0.139ns skew meets   0.300ns timing constraint by 0.161ns
+From                         To                           Delay(ns)  Skew(ns)
+SLICE_X27Y52.AQ              SLICE_X24Y55.D3                  0.682  0.037
+SLICE_X27Y52.AQ              SLICE_X25Y57.B6                  0.784  0.139
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_CLK = PERIOD TIMEGRP "CLK" 10 ns HIGH 50% INPUT_JITTER 
+0.1 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK = PERIOD TIMEGRP "CLK" 10 ns HIGH 50% INPUT_JITTER 0.1 ns;
+--------------------------------------------------------------------------------
+Slack: 1.575ns (period - min period limit)
+  Period: 2.500ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV/CLKOUT0
+  Logical resource: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV/CLKOUT0
+  Location pin: PLL_ADV_X0Y0.CLKOUT0
+  Clock network: CLK_MULTIPLIER_0/clkout0
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN1
+  Clock network: CLK_MULTIPLIER_0/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_CLK_MULTIPLIER_0_clkout0 = PERIOD TIMEGRP 
+"CLK_MULTIPLIER_0_clkout0" TS_CLK         / 4 HIGH 50% INPUT_JITTER 0.1 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1046 paths analyzed, 453 endpoints analyzed, 9 failing endpoints
+ 9 timing errors detected. (9 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.855ns.
+--------------------------------------------------------------------------------
+
+Paths for end point RECONF_PULSE_GEN_2/PS_FSM_FFd1 (SLICE_X24Y55.B5), 7 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.355ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_2/HIGH_COUNTER_3 (FF)
+  Destination:          RECONF_PULSE_GEN_2/PS_FSM_FFd1 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.760ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.020ns (0.248 - 0.268)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_2/HIGH_COUNTER_3 to RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y55.AQ      Tcko                  0.447   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_3
+    SLICE_X27Y55.A1      net (fanout=6)        0.629   RECONF_PULSE_GEN_2/HIGH_COUNTER<3>
+    SLICE_X27Y55.A       Tilo                  0.259   N130
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o81
+    SLICE_X29Y55.A5      net (fanout=6)        0.397   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o8
+    SLICE_X29Y55.A       Tilo                  0.259   RECONF_PULSE_GEN_2/HIGH_COUNTER<6>
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84
+    SLICE_X24Y55.B5      net (fanout=3)        0.428   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o
+    SLICE_X24Y55.CLK     Tas                   0.341   RECONF_PULSE_GEN_3/PS_FSM_FFd2
+                                                       RECONF_PULSE_GEN_2/PS_FSM_FFd1-In1
+                                                       RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.760ns (1.306ns logic, 1.454ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.093ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_2/HIGH_COUNTER_4 (FF)
+  Destination:          RECONF_PULSE_GEN_2/PS_FSM_FFd1 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.492ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.026ns (0.248 - 0.274)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_2/HIGH_COUNTER_4 to RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y55.CQ      Tcko                  0.408   RECONF_PULSE_GEN_2/HIGH_COUNTER<4>
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_4
+    SLICE_X27Y55.A5      net (fanout=5)        0.400   RECONF_PULSE_GEN_2/HIGH_COUNTER<4>
+    SLICE_X27Y55.A       Tilo                  0.259   N130
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o81
+    SLICE_X29Y55.A5      net (fanout=6)        0.397   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o8
+    SLICE_X29Y55.A       Tilo                  0.259   RECONF_PULSE_GEN_2/HIGH_COUNTER<6>
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84
+    SLICE_X24Y55.B5      net (fanout=3)        0.428   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o
+    SLICE_X24Y55.CLK     Tas                   0.341   RECONF_PULSE_GEN_3/PS_FSM_FFd2
+                                                       RECONF_PULSE_GEN_2/PS_FSM_FFd1-In1
+                                                       RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.492ns (1.267ns logic, 1.225ns route)
+                                                       (50.8% logic, 49.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.016ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_2/HIGH_COUNTER_5 (FF)
+  Destination:          RECONF_PULSE_GEN_2/PS_FSM_FFd1 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.421ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.020ns (0.248 - 0.268)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_2/HIGH_COUNTER_5 to RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y55.CQ      Tcko                  0.447   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    SLICE_X27Y55.A6      net (fanout=3)        0.290   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+    SLICE_X27Y55.A       Tilo                  0.259   N130
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o81
+    SLICE_X29Y55.A5      net (fanout=6)        0.397   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o8
+    SLICE_X29Y55.A       Tilo                  0.259   RECONF_PULSE_GEN_2/HIGH_COUNTER<6>
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84
+    SLICE_X24Y55.B5      net (fanout=3)        0.428   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o
+    SLICE_X24Y55.CLK     Tas                   0.341   RECONF_PULSE_GEN_3/PS_FSM_FFd2
+                                                       RECONF_PULSE_GEN_2/PS_FSM_FFd1-In1
+                                                       RECONF_PULSE_GEN_2/PS_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.421ns (1.306ns logic, 1.115ns route)
+                                                       (53.9% logic, 46.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RECONF_PULSE_GEN_0/PS_FSM_FFd1 (SLICE_X25Y57.A6), 7 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.274ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_0/LOW_COUNTER_1 (FF)
+  Destination:          RECONF_PULSE_GEN_0/PS_FSM_FFd1 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.691ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.249 - 0.257)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_0/LOW_COUNTER_1 to RECONF_PULSE_GEN_0/PS_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y56.BQ      Tcko                  0.447   RECONF_PULSE_GEN_0/LOW_COUNTER<1>
+                                                       RECONF_PULSE_GEN_0/LOW_COUNTER_1
+    SLICE_X20Y57.D4      net (fanout=8)        0.469   RECONF_PULSE_GEN_0/LOW_COUNTER<1>
+    SLICE_X20Y57.D       Tilo                  0.205   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o84_SW0
+    SLICE_X20Y57.B1      net (fanout=6)        0.471   N44
+    SLICE_X20Y57.B       Tilo                  0.205   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o84
+    SLICE_X25Y57.A6      net (fanout=3)        0.572   RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o
+    SLICE_X25Y57.CLK     Tas                   0.322   RECONF_PULSE_GEN_0/PS_FSM_FFd3
+                                                       RECONF_PULSE_GEN_0/PS_FSM_FFd1-In1
+                                                       RECONF_PULSE_GEN_0/PS_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.691ns (1.179ns logic, 1.512ns route)
+                                                       (43.8% logic, 56.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.134ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_0/LOW_COUNTER_4 (FF)
+  Destination:          RECONF_PULSE_GEN_0/PS_FSM_FFd1 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.549ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.010ns (0.249 - 0.259)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_0/LOW_COUNTER_4 to RECONF_PULSE_GEN_0/PS_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y57.CQ      Tcko                  0.447   RECONF_PULSE_GEN_0/LOW_COUNTER<4>
+                                                       RECONF_PULSE_GEN_0/LOW_COUNTER_4
+    SLICE_X22Y57.D3      net (fanout=5)        0.474   RECONF_PULSE_GEN_0/LOW_COUNTER<4>
+    SLICE_X22Y57.D       Tilo                  0.203   RECONF_PULSE_GEN_0/LOW_COUNTER<4>
+                                                       RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o81
+    SLICE_X20Y57.B6      net (fanout=6)        0.326   RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o81
+    SLICE_X20Y57.B       Tilo                  0.205   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o84
+    SLICE_X25Y57.A6      net (fanout=3)        0.572   RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o
+    SLICE_X25Y57.CLK     Tas                   0.322   RECONF_PULSE_GEN_0/PS_FSM_FFd3
+                                                       RECONF_PULSE_GEN_0/PS_FSM_FFd1-In1
+                                                       RECONF_PULSE_GEN_0/PS_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.549ns (1.177ns logic, 1.372ns route)
+                                                       (46.2% logic, 53.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.080ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_0/LOW_COUNTER_0 (FF)
+  Destination:          RECONF_PULSE_GEN_0/PS_FSM_FFd1 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.495ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.010ns (0.249 - 0.259)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_0/LOW_COUNTER_0 to RECONF_PULSE_GEN_0/PS_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y57.DQ      Tcko                  0.391   RECONF_PULSE_GEN_0/LOW_COUNTER<0>
+                                                       RECONF_PULSE_GEN_0/LOW_COUNTER_0
+    SLICE_X20Y57.D6      net (fanout=8)        0.329   RECONF_PULSE_GEN_0/LOW_COUNTER<0>
+    SLICE_X20Y57.D       Tilo                  0.205   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o84_SW0
+    SLICE_X20Y57.B1      net (fanout=6)        0.471   N44
+    SLICE_X20Y57.B       Tilo                  0.205   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o84
+    SLICE_X25Y57.A6      net (fanout=3)        0.572   RECONF_PULSE_GEN_0/GND_7_o_GND_7_o_equal_10_o
+    SLICE_X25Y57.CLK     Tas                   0.322   RECONF_PULSE_GEN_0/PS_FSM_FFd3
+                                                       RECONF_PULSE_GEN_0/PS_FSM_FFd1-In1
+                                                       RECONF_PULSE_GEN_0/PS_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      2.495ns (1.123ns logic, 1.372ns route)
+                                                       (45.0% logic, 55.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RECONF_PULSE_GEN_2/HIGH_COUNTER_5 (SLICE_X26Y55.C6), 7 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.196ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_2/HIGH_COUNTER_3 (FF)
+  Destination:          RECONF_PULSE_GEN_2/HIGH_COUNTER_5 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.621ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_2/HIGH_COUNTER_3 to RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y55.AQ      Tcko                  0.447   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_3
+    SLICE_X27Y55.A1      net (fanout=6)        0.629   RECONF_PULSE_GEN_2/HIGH_COUNTER<3>
+    SLICE_X27Y55.A       Tilo                  0.259   N130
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o81
+    SLICE_X29Y55.A5      net (fanout=6)        0.397   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o8
+    SLICE_X29Y55.A       Tilo                  0.259   RECONF_PULSE_GEN_2/HIGH_COUNTER<6>
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84
+    SLICE_X26Y55.C6      net (fanout=3)        0.341   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o
+    SLICE_X26Y55.CLK     Tas                   0.289   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/Mcount_HIGH_COUNTER_xor<5>11
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    -------------------------------------------------  ---------------------------
+    Total                                      2.621ns (1.254ns logic, 1.367ns route)
+                                                       (47.8% logic, 52.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.052ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_2/HIGH_COUNTER_4 (FF)
+  Destination:          RECONF_PULSE_GEN_2/HIGH_COUNTER_5 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.353ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.020ns (0.254 - 0.274)
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_2/HIGH_COUNTER_4 to RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y55.CQ      Tcko                  0.408   RECONF_PULSE_GEN_2/HIGH_COUNTER<4>
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_4
+    SLICE_X27Y55.A5      net (fanout=5)        0.400   RECONF_PULSE_GEN_2/HIGH_COUNTER<4>
+    SLICE_X27Y55.A       Tilo                  0.259   N130
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o81
+    SLICE_X29Y55.A5      net (fanout=6)        0.397   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o8
+    SLICE_X29Y55.A       Tilo                  0.259   RECONF_PULSE_GEN_2/HIGH_COUNTER<6>
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84
+    SLICE_X26Y55.C6      net (fanout=3)        0.341   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o
+    SLICE_X26Y55.CLK     Tas                   0.289   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/Mcount_HIGH_COUNTER_xor<5>11
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    -------------------------------------------------  ---------------------------
+    Total                                      2.353ns (1.215ns logic, 1.138ns route)
+                                                       (51.6% logic, 48.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.143ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               RECONF_PULSE_GEN_2/HIGH_COUNTER_5 (FF)
+  Destination:          RECONF_PULSE_GEN_2/HIGH_COUNTER_5 (FF)
+  Requirement:          2.500ns
+  Data Path Delay:      2.282ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         global_clk rising at 0.000ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.075ns
+
+  Clock Uncertainty:          0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.132ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: RECONF_PULSE_GEN_2/HIGH_COUNTER_5 to RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y55.CQ      Tcko                  0.447   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    SLICE_X27Y55.A6      net (fanout=3)        0.290   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+    SLICE_X27Y55.A       Tilo                  0.259   N130
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o81
+    SLICE_X29Y55.A5      net (fanout=6)        0.397   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o8
+    SLICE_X29Y55.A       Tilo                  0.259   RECONF_PULSE_GEN_2/HIGH_COUNTER<6>
+                                                       RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o84
+    SLICE_X26Y55.C6      net (fanout=3)        0.341   RECONF_PULSE_GEN_2/GND_7_o_GND_7_o_equal_6_o
+    SLICE_X26Y55.CLK     Tas                   0.289   RECONF_PULSE_GEN_2/HIGH_COUNTER<5>
+                                                       RECONF_PULSE_GEN_2/Mcount_HIGH_COUNTER_xor<5>11
+                                                       RECONF_PULSE_GEN_2/HIGH_COUNTER_5
+    -------------------------------------------------  ---------------------------
+    Total                                      2.282ns (1.254ns logic, 1.028ns route)
+                                                       (55.0% logic, 45.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLK_MULTIPLIER_0_clkout0 = PERIOD TIMEGRP "CLK_MULTIPLIER_0_clkout0" TS_CLK
+        / 4 HIGH 50% INPUT_JITTER 0.1 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point RECONF_PULSE_GEN_0/LOW_COUNTER_5 (SLICE_X20Y57.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.419ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               RECONF_PULSE_GEN_0/LOW_COUNTER_5 (FF)
+  Destination:          RECONF_PULSE_GEN_0/LOW_COUNTER_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.419ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         global_clk rising at 2.500ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: RECONF_PULSE_GEN_0/LOW_COUNTER_5 to RECONF_PULSE_GEN_0/LOW_COUNTER_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y57.AQ      Tcko                  0.200   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/LOW_COUNTER_5
+    SLICE_X20Y57.A6      net (fanout=3)        0.029   RECONF_PULSE_GEN_0/LOW_COUNTER<5>
+    SLICE_X20Y57.CLK     Tah         (-Th)    -0.190   RECONF_PULSE_GEN_0/LOW_COUNTER<6>
+                                                       RECONF_PULSE_GEN_0/Mcount_LOW_COUNTER_xor<5>11
+                                                       RECONF_PULSE_GEN_0/LOW_COUNTER_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.419ns (0.390ns logic, 0.029ns route)
+                                                       (93.1% logic, 6.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RECONF_PULSE_GEN_3/LOW_COUNTER_1 (SLICE_X20Y53.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.432ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               RECONF_PULSE_GEN_3/LOW_COUNTER_1 (FF)
+  Destination:          RECONF_PULSE_GEN_3/LOW_COUNTER_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.432ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         global_clk rising at 2.500ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: RECONF_PULSE_GEN_3/LOW_COUNTER_1 to RECONF_PULSE_GEN_3/LOW_COUNTER_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y53.DQ      Tcko                  0.200   RECONF_PULSE_GEN_3/LOW_COUNTER<1>
+                                                       RECONF_PULSE_GEN_3/LOW_COUNTER_1
+    SLICE_X20Y53.D6      net (fanout=8)        0.042   RECONF_PULSE_GEN_3/LOW_COUNTER<1>
+    SLICE_X20Y53.CLK     Tah         (-Th)    -0.190   RECONF_PULSE_GEN_3/LOW_COUNTER<1>
+                                                       RECONF_PULSE_GEN_3/Mcount_LOW_COUNTER_xor<1>11
+                                                       RECONF_PULSE_GEN_3/LOW_COUNTER_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.432ns (0.390ns logic, 0.042ns route)
+                                                       (90.3% logic, 9.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point RECONF_PULSE_GEN_1/HIGH_COUNTER_0 (SLICE_X24Y50.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.435ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               RECONF_PULSE_GEN_1/HIGH_COUNTER_0 (FF)
+  Destination:          RECONF_PULSE_GEN_1/HIGH_COUNTER_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.435ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         global_clk rising at 2.500ns
+  Destination Clock:    global_clk rising at 2.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: RECONF_PULSE_GEN_1/HIGH_COUNTER_0 to RECONF_PULSE_GEN_1/HIGH_COUNTER_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y50.AQ      Tcko                  0.200   RECONF_PULSE_GEN_1/HIGH_COUNTER<2>
+                                                       RECONF_PULSE_GEN_1/HIGH_COUNTER_0
+    SLICE_X24Y50.A6      net (fanout=8)        0.045   RECONF_PULSE_GEN_1/HIGH_COUNTER<0>
+    SLICE_X24Y50.CLK     Tah         (-Th)    -0.190   RECONF_PULSE_GEN_1/HIGH_COUNTER<2>
+                                                       RECONF_PULSE_GEN_1/Mcount_HIGH_COUNTER_xor<0>11
+                                                       RECONF_PULSE_GEN_1/HIGH_COUNTER_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.435ns (0.390ns logic, 0.045ns route)
+                                                       (89.7% logic, 10.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK_MULTIPLIER_0_clkout0 = PERIOD TIMEGRP "CLK_MULTIPLIER_0_clkout0" TS_CLK
+        / 4 HIGH 50% INPUT_JITTER 0.1 ns;
+--------------------------------------------------------------------------------
+Slack: 0.770ns (period - min period limit)
+  Period: 2.500ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: CLK_MULTIPLIER_0/clkout1_buf/I0
+  Logical resource: CLK_MULTIPLIER_0/clkout1_buf/I0
+  Location pin: BUFGMUX_X2Y4.I0
+  Clock network: CLK_MULTIPLIER_0/clkout0
+--------------------------------------------------------------------------------
+Slack: 2.070ns (period - min period limit)
+  Period: 2.500ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: RECONF_PULSE_GEN_1/LOW_COUNTER<5>/CLK
+  Logical resource: RECONF_PULSE_GEN_1/LOW_COUNTER_3/CK
+  Location pin: SLICE_X20Y51.CLK
+  Clock network: global_clk
+--------------------------------------------------------------------------------
+Slack: 2.070ns (period - min period limit)
+  Period: 2.500ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: RECONF_PULSE_GEN_1/LOW_COUNTER<5>/CLK
+  Logical resource: RECONF_PULSE_GEN_1/LOW_COUNTER_4/CK
+  Location pin: SLICE_X20Y51.CLK
+  Clock network: global_clk
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLK                         |     10.000ns|      3.334ns|     11.420ns|            0|            9|            0|         1046|
+| TS_CLK_MULTIPLIER_0_clkout0   |      2.500ns|      2.855ns|          N/A|            9|            0|         1046|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
 
 
 Data Sheet report:
 -----------------
-No constraints were found to generate data for the Data Sheet Report section.
-Use the Advanced Analysis (-a) option or generate global constraints for each
-clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.855|         |         |         |
+---------------+---------+---------+---------+---------+
+
 
 Timing summary:
 ---------------
 
-Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+Timing errors: 9  Score: 1321  (Setup/Max: 1321, Hold: 0)
 
-Constraints cover 0 paths, 2 nets, and 2 connections
+Constraints cover 1046 paths, 5 nets, and 737 connections
 
 Design statistics:
-   Maximum net skew:   0.097ns
+   Minimum period:   3.334ns{1}   (Maximum frequency: 299.940MHz)
+   Maximum net skew:   0.285ns
 
 
-Analysis completed Wed Nov 04 21:55:07 2015 
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Nov 15 23:26:08 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 614 MB
+Peak Memory Usage: 216 MB
 
 
 

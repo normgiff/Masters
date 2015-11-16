@@ -1,0 +1,8 @@
+verilog isim_temp "SYNCHRONIZER.v"
+verilog isim_temp "RECONF_PULSE_GEN.v"
+verilog isim_temp "ODDR_WRAPPER.v"
+verilog isim_temp "ipcore_dir/CLK_MULTIPLIER.v"
+verilog isim_temp "CLOCK_MUX.v"
+verilog isim_temp "CLOCK_GEN.v"
+verilog isim_temp "CLOCK_GEN_TB.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

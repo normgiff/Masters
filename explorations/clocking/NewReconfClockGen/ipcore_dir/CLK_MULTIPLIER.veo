@@ -54,7 +54,7 @@
 // "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
-// CLK_OUT1___500.000______0.000______50.0_______97.082_____98.575
+// CLK_OUT1___400.000______0.000______50.0______132.266____235.738
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -73,6 +73,5 @@
     // Clock out ports
     .CLK_OUT(CLK_OUT),     // OUT
     // Status and control signals
-    .RESET(RESET),// IN
-    .LOCKED(LOCKED));      // OUT
+    .RESET(RESET));       // IN
 // INST_TAG_END ------ End INSTANTIATION Template ---------

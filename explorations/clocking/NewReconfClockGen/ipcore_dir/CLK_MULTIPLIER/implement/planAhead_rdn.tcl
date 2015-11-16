@@ -47,7 +47,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 # 
 
-set device xc7a100tcsg324-3
+set device xc6slx16csg324-3
 set projName CLK_MULTIPLIER
 set design CLK_MULTIPLIER
 set projDir [file dirname [info script]]
