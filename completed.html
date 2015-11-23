@@ -52,7 +52,7 @@ In order to implement force formats (R0, R1, DNRZ_L, DNRZ_T), we have proposed u
 
 <p>
 <b>Schmooing</b><br>
-For modulating high voltages sent to a chip, we believe a LM317 op-amp, some discrete components, and a digital potentiometer (likely to be controlled by the BeagleBone Black) will be sufficient for our project. This circuit (proposed by the LM317 datasheet) has been simulated in PSpice and tested on a breadboard; it appears to work very well. We have not yet investigated how to modulate low voltage signals sent to a chip but are leaving it as a stretch goal for the time being.
+For modulating high voltages sent to a chip, we believe a LM317 op-amp, an op-amp configured as a buffer, some discrete components, and a digital potentiometer (likely to be controlled by the BeagleBone Black) will be sufficient for our project. This circuit (proposed by the LM317 datasheet) has been simulated in PSpice and tested on a breadboard; it appears to work very well and allows us to create a variable voltage between 0V and 5V. The circuit is inspired by the design described <a href="http://www.eleccircuit.com/0-60-volt-dc-variable-power-supply-using-lm317lm337/">here</a>. PSpice files will be available soon!
 </p>
 
 <p>
