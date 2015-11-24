@@ -103,10 +103,11 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -9 -37 62 1462 62 401")
-        (Scroll "0 137")
+        (Scroll "-181 137")
         (Zoom "116")
         (Occurrence "/"))
       (Path
          "C:\USERS\DKHOURY\DESKTOP\SOURCETREE-MASTERS\EXPLORATIONS\POWER\ADJUSTABLEVOLTAGEREGULATOR.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+      (Page "PAGE1")))
+  (MPSSessionName "dkhoury"))
