@@ -1,0 +1,421 @@
+
+**** 12/02/15 20:09:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "radj_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/diode.lib" 
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/opamp.lib" 
+* From [PSPICE NETLIST] section of C:\Users\dkhoury\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1u 0 1ns 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ADJUSTABLEVOLTAGEREGULATOR2
+V_V2         0 N15128 DC 5V AC 0 0
+V_V1         N15010 0 DC 9 AC 0 0
+R_R6         N15138 N15128  30k TC=0,0 
+R_R5         0 N15138  10k TC=0,0 
+X_U2         N15138 N15076 N15010 N15128 N15076 LM675
+X_U1         N15010 N15455 N15483 LM317
+D_D1         N15483 N15010 D1N4001 
+D_D6         N15455 N15483 D1N4001 
+R_R7         N15455 N15483  252 TC=0,0 
+C_C2         N15076 N15483  1u  TC=0,0 
+C_C1         N15076 N15455  1u  TC=0,0 
+R_R8         N15076 N15455  1k TC=0,0 
+
+**** RESUMING radj_sweep.cir ****
+.END
+
+**** 12/02/15 20:09:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4001         X_U2.dx         X_U2.dy         X_U1.DMOD       
+          IS   14.110000E-09  800.000000E-18  800.000000E-18   30.000000E-15 
+           N    1.984                                           1.701        
+         IKF   94.81                                                         
+          BV   75                                                            
+         IBV   10.000000E-06                                                 
+          RS     .03389                         1.000000E-03                 
+          TT    5.700000E-06                                                 
+         CJO   25.890000E-12                   10.000000E-12                 
+          VJ     .3245                                                       
+           M     .44                                                         
+
+
+**** 12/02/15 20:09:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.qx         X_U1.QPASSMOD   
+               PNP             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18   30.000000E-15 
+          BF  300              50            
+          NF    1               1.701        
+         VAF                    1.5          
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+**** 12/02/15 20:09:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.JADJMOD    
+               NJF             
+         VTO   -1            
+        BETA   50.000000E-06 
+
+
+**** 12/02/15 20:09:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N15010)    9.0000 (N15076)   -1.2484 (N15128)   -5.0000 (N15138)   -1.2485     
+
+(N15455)    3.7556 (N15483)    5.0040 (X_U1.4)    5.0056 (X_U1.5)    6.1063     
+
+(X_U1.6)    6.1121 (X_U1.7)    6.1122 (X_U1.8)    5.1637 (X_U1.9)    5.1637     
+
+(X_U2.6) 842.9E-06 (X_U2.7)   -1.2486 (X_U2.8)   -1.2486 (X_U2.9)    0.0000     
+
+(X_U1.10)    5.1637                   (X_U1.11)   10.6860                       
+
+(X_U1.12)   13.1280                   (X_U1.13)    7.8636                       
+
+(X_U1.15)    6.1063                   (X_U2.10)    -.5094                       
+
+(X_U2.11)   -4.8829                   (X_U2.12)   -4.8828                       
+
+(X_U2.13)    -.6004                   (X_U2.14)    -.6005                       
+
+(X_U2.53)    5.0000                   (X_U2.54)   -1.0000                       
+
+(X_U2.90)   -5.0042                   (X_U2.91) 3000.0000                       
+
+(X_U2.92)-3000.0000                   (X_U2.99)    2.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -5.254E-03
+    V_V1        -1.013E-02
+    X_U2.vb      8.429E-09
+    X_U2.vc      6.249E-12
+    X_U2.ve     -1.229E-11
+    X_U2.vlim   -5.004E-03
+    X_U2.vlp    -3.005E-09
+    X_U2.vln    -2.995E-09
+    X_U1.VREF   -1.597E-11
+
+    TOTAL POWER DISSIPATION   1.17E-01  WATTS
+
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  10.01E-12.
+         Time step =  298.0E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U2.6)                 =   848.41uV  \   846.55uV
+    V(X_U2.90)                =    -4.890V  \    -4.929V
+
+  These supply currents failed to converge:
+
+    I(X_U2.egnd)              =    4.889mA  \    4.927mA
+    I(X_U1.ESC)               =         0A  \  -976.56uA
+    I(V_V2)                   =   -5.042mA  \   -5.114mA
+    I(V_V1)                   =   -10.35mA  \   -10.28mA
+    I(X_U2.vb)                =    8.484nA  \    8.466nA
+    I(X_U2.vc)                =   214.23uA  \   142.42uA
+    I(X_U2.ve)                =  -211.43uA  \  -139.53uA
+    I(X_U2.vlim)              =   -4.890mA  \   -4.929mA
+    I(X_U1.VREF)              =  -233.11uA  \  -479.37uA
+
+  These devices failed to converge:
+    D_D6      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N15010)    9.0000 (N15076)   -1.2484 (N15128)   -5.0000 (N15138)   -1.2485     
+
+(N15455)    3.7556 (N15483)    5.0040 (X_U1.4)    5.0056 (X_U1.5)    6.1063     
+
+(X_U1.6)    6.1121 (X_U1.7)    6.1122 (X_U1.8)    5.1637 (X_U1.9)    5.1637     
+
+(X_U2.6) 848.4E-06 (X_U2.7)   -1.2486 (X_U2.8)   -1.2486 (X_U2.9)    0.0000     
+
+(X_U1.10)    5.1637                   (X_U1.11)   10.6430                       
+
+(X_U1.12)   13.1280                   (X_U1.13)    7.8636                       
+
+(X_U1.15)    6.1063                   (X_U2.10)    -.5094                       
+
+(X_U2.11)   -4.8829                   (X_U2.12)   -4.8828                       
+
+(X_U2.13)    -.6004                   (X_U2.14)    -.6005                       
+
+(X_U2.53)    5.0000                   (X_U2.54)   -1.0000                       
+
+(X_U2.90)   -4.8902                   (X_U2.91) 3000.0000                       
+
+(X_U2.92)-3000.0000                   (X_U2.99)    2.0000                   
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-006
+**** Param: TMAX = 1e-009
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  10.01E-12.
+         Time step =  298.0E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U2.6)                 =   848.41uV  \   846.55uV
+    V(X_U2.90)                =    -4.890V  \    -4.929V
+
+  These supply currents failed to converge:
+
+    I(X_U2.egnd)              =    4.889mA  \    4.927mA
+    I(X_U1.ESC)               =         0A  \  -976.56uA
+    I(V_V2)                   =   -5.042mA  \   -5.114mA
+    I(V_V1)                   =   -10.35mA  \   -10.28mA
+    I(X_U2.vb)                =    8.484nA  \    8.466nA
+    I(X_U2.vc)                =   214.23uA  \   142.42uA
+    I(X_U2.ve)                =  -211.43uA  \  -139.53uA
+    I(X_U2.vlim)              =   -4.890mA  \   -4.929mA
+    I(X_U1.VREF)              =  -233.11uA  \  -479.37uA
+
+  These devices failed to converge:
+    D_D6      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N15010)    9.0000 (N15076)   -1.2484 (N15128)   -5.0000 (N15138)   -1.2485     
+
+(N15455)    3.7556 (N15483)    5.0040 (X_U1.4)    5.0056 (X_U1.5)    6.1063     
+
+(X_U1.6)    6.1121 (X_U1.7)    6.1122 (X_U1.8)    5.1637 (X_U1.9)    5.1637     
+
+(X_U2.6) 848.4E-06 (X_U2.7)   -1.2486 (X_U2.8)   -1.2486 (X_U2.9)    0.0000     
+
+(X_U1.10)    5.1637                   (X_U1.11)   10.6430                       
+
+(X_U1.12)   13.1280                   (X_U1.13)    7.8636                       
+
+(X_U1.15)    6.1063                   (X_U2.10)    -.5094                       
+
+(X_U2.11)   -4.8829                   (X_U2.12)   -4.8828                       
+
+(X_U2.13)    -.6004                   (X_U2.14)    -.6005                       
+
+(X_U2.53)    5.0000                   (X_U2.54)   -1.0000                       
+
+(X_U2.90)   -4.8902                   (X_U2.91) 3000.0000                       
+
+(X_U2.92)-3000.0000                   (X_U2.99)    2.0000                   
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 1e-006
+**** Param: TMAX = 1e-009
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  10.01E-12.
+         Time step =  298.0E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U2.6)                 =   848.41uV  \   846.55uV
+    V(X_U2.90)                =    -4.890V  \    -4.929V
+
+  These supply currents failed to converge:
+
+    I(X_U2.egnd)              =    4.889mA  \    4.927mA
+    I(X_U1.ESC)               =         0A  \  -976.56uA
+    I(V_V2)                   =   -5.042mA  \   -5.114mA
+    I(V_V1)                   =   -10.35mA  \   -10.28mA
+    I(X_U2.vb)                =    8.484nA  \    8.466nA
+    I(X_U2.vc)                =   214.23uA  \   142.42uA
+    I(X_U2.ve)                =  -211.43uA  \  -139.53uA
+    I(X_U2.vlim)              =   -4.890mA  \   -4.929mA
+    I(X_U1.VREF)              =  -233.11uA  \  -479.37uA
+
+  These devices failed to converge:
+    D_D6      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N15010)    9.0000 (N15076)   -1.2484 (N15128)   -5.0000 (N15138)   -1.2485     
+
+(N15455)    3.7556 (N15483)    5.0040 (X_U1.4)    5.0056 (X_U1.5)    6.1063     
+
+(X_U1.6)    6.1121 (X_U1.7)    6.1122 (X_U1.8)    5.1637 (X_U1.9)    5.1637     
+
+(X_U2.6) 848.4E-06 (X_U2.7)   -1.2486 (X_U2.8)   -1.2486 (X_U2.9)    0.0000     
+
+(X_U1.10)    5.1637                   (X_U1.11)   10.6430                       
+
+(X_U1.12)   13.1280                   (X_U1.13)    7.8636                       
+
+(X_U1.15)    6.1063                   (X_U2.10)    -.5094                       
+
+(X_U2.11)   -4.8829                   (X_U2.12)   -4.8828                       
+
+(X_U2.13)    -.6004                   (X_U2.14)    -.6005                       
+
+(X_U2.53)    5.0000                   (X_U2.54)   -1.0000                       
+
+(X_U2.90)   -4.8902                   (X_U2.91) 3000.0000                       
+
+(X_U2.92)-3000.0000                   (X_U2.99)    2.0000                   
+
+
+**** Interrupt ****
