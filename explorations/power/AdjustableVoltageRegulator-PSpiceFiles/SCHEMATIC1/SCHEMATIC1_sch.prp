@@ -1,12 +1,10 @@
 ("FILE_TYPE"	"PMAP File"
     ("devices"
         ("VSRC")
-        ("LM317T")
         ("D1N4001")
-        ("R_var")
         ("C")
-        ("LM675")
         ("R")
+        ("Param")
     )
     ("instances"
         ("V1"
@@ -26,21 +24,6 @@
                     ("value"	"0")
                     ("pspice_param"	"ACPHASE")
                 )
-                ("BiasValue Power"
-                    ("value"	"-91.19mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
-            )
-        )
-        ("U1"
-            ("device_name"	"LM317T")
-            ("pspice_path"	"X_U1")
-            ("level"	"0")
-            ("model_params"
-                ("BiasValue Power"
-                    ("value"	"32.58mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
             )
         )
         ("D1"
@@ -48,10 +31,6 @@
             ("pspice_path"	"D_D1")
             ("level"	"0")
             ("model_params"
-                ("BiasValue Power"
-                    ("value"	"91.73nW")
-                    ("pspice_param"	"BiasValue Power")
-                )
                 ("COMPONENT"
                     ("value"	"1N4001")
                     ("pspice_param"	"COMPONENT")
@@ -59,25 +38,6 @@
                 ("AREA"
                     ("value"	"")
                     ("pspice_param"	"AREA")
-                )
-            )
-        )
-        ("R3"
-            ("device_name"	"R_var")
-            ("pspice_path"	"R_R3")
-            ("level"	"0")
-            ("model_params"
-                ("VALUE"
-                    ("value"	"2k")
-                    ("pspice_param"	"VALUE")
-                )
-                ("BiasValue Power"
-                    ("value"	"12.52mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
-                ("SET"
-                    ("value"	"0.5")
-                    ("pspice_param"	"SET")
                 )
             )
         )
@@ -145,10 +105,6 @@
             ("pspice_path"	"D_D6")
             ("level"	"0")
             ("model_params"
-                ("BiasValue Power"
-                    ("value"	"17.62nW")
-                    ("pspice_param"	"BiasValue Power")
-                )
                 ("COMPONENT"
                     ("value"	"1N4001")
                     ("pspice_param"	"COMPONENT")
@@ -156,17 +112,6 @@
                 ("AREA"
                     ("value"	"")
                     ("pspice_param"	"AREA")
-                )
-            )
-        )
-        ("U2"
-            ("device_name"	"LM675")
-            ("pspice_path"	"X_U2")
-            ("level"	"0")
-            ("model_params"
-                ("BiasValue Power"
-                    ("value"	"65.54mW")
-                    ("pspice_param"	"BiasValue Power")
                 )
             )
         )
@@ -178,10 +123,6 @@
                 ("VALUE"
                     ("value"	"10k")
                     ("pspice_param"	"VALUE")
-                )
-                ("BiasValue Power"
-                    ("value"	"155.9uW")
-                    ("pspice_param"	"BiasValue Power")
                 )
                 ("TC2"
                     ("value"	"0")
@@ -225,10 +166,6 @@
                 ("VALUE"
                     ("value"	"30k")
                     ("pspice_param"	"VALUE")
-                )
-                ("BiasValue Power"
-                    ("value"	"469.1uW")
-                    ("pspice_param"	"BiasValue Power")
                 )
                 ("TC2"
                     ("value"	"0")
@@ -281,10 +218,6 @@
                     ("value"	"0")
                     ("pspice_param"	"ACPHASE")
                 )
-                ("BiasValue Power"
-                    ("value"	"-26.27mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
             )
         )
         ("R7"
@@ -295,10 +228,6 @@
                 ("VALUE"
                     ("value"	"252")
                     ("pspice_param"	"VALUE")
-                )
-                ("BiasValue Power"
-                    ("value"	"6.185mW")
-                    ("pspice_param"	"BiasValue Power")
                 )
                 ("TC2"
                     ("value"	"0")
@@ -390,6 +319,60 @@
                 ("VC2"
                     ("value"	"0")
                     ("pspice_param"	"VC2")
+                )
+            )
+        )
+        ("R8"
+            ("device_name"	"R")
+            ("pspice_path"	"R_R8")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"{R_ADJ}")
+                    ("pspice_param"	"VALUE")
+                )
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
+                )
+                ("TC1"
+                    ("value"	"0")
+                    ("pspice_param"	"TC1")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
+                )
+            )
+        )
+        ("PARAM"
+            ("device_name"	"Param")
+            ("pspice_path"	"")
+            ("level"	"0")
+            ("model_params"
+                ("rval"
+                    ("value"	"2k")
+                    ("pspice_param"	"rval")
                 )
             )
         )

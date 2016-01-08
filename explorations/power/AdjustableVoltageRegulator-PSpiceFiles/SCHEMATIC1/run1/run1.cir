@@ -1,4 +1,4 @@
-** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFiles\SCHEMATIC1\run1.sim ] 
+** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\adjustablevoltageregulator-pspicefiles\schematic1\run1.sim ] 
 
 ** Creating circuit file "run1.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
@@ -12,7 +12,8 @@
 .lib "nomd.lib" 
 
 *Analysis directives: 
-.TRAN  0 1ms 0 
+.DC LIN PARAM RVAL 100 2k 100 
+.STEP LIN PARAM RVAL 0 2k 100 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 

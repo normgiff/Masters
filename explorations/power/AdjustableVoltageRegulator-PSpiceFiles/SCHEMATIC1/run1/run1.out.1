@@ -1,7 +1,7 @@
 
-**** 11/22/15 16:04:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 12/02/15 19:37:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
+ ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\adjustablevoltageregulator-pspicefil
 
 
  ****     CIRCUIT DESCRIPTION
@@ -24,7 +24,8 @@
 .lib "nomd.lib" 
 
 *Analysis directives: 
-.TRAN  0 1ms 0 
+.DC LIN PARAM RVAL 100 2k 100 
+.STEP LIN PARAM RVAL 0 2k 100 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -33,129 +34,22 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source ADJUSTABLEVOLTAGEREGULATOR
-D_D1         N00098 N00091 D1N4001 
-R_R3         N00345 N00311 {10k*0.5+.001}
-C_C1         N00345 N00311  10u  TC=0,0 
-D_D4         N00311 N00098 D1N4001 
-R_R4         N00311 N00524  120 TC=0,0 
-C_C2         0 N00524  0.1u  TC=0,0 
-D_D5         0 N00524 D1N4001 
-V_V1         N00091 0 DC 10 AC 0 0
-D_D6         N00091 N01712 D1N4001 
-D_D7         N01712 N00345 D1N4001 
-R_R2         0 N00345  2.2k TC=0,0 
-X_U1         N00091 N00311 N00098 LM317
+V_V1         N00107 0 DC 9 AC 0 0
+X_U1         N00107 N04014 N03179 LM317
+D_D1         N03179 N00107 D1N4001 
+R_R3         N03967 N04014 {{RVAL}*1+.001}
+C_C1         N03967 N04014  1u  TC=0,0 
+D_D6         N04014 N03179 D1N4001 
+X_U2         N11052 N03967 N00107 N10981 N03967 LM675
+R_R5         0 N11052  10k TC=0,0 
+R_R6         N11052 N10981  30k TC=0,0 
+V_V2         0 N10981 DC 5V AC 0 0
+R_R7         N04014 N03179  252 TC=0,0 
+C_C2         N03967 N03179  1u  TC=0,0 
+.PARAM  name1=rval value1=100
+--------------$
+ERROR(ORPSIM-16152): Invalid number
 
 **** RESUMING run1.cir ****
 .END
 
-**** 11/22/15 16:04:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     Diode MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               D1N4001         X_U1.DMOD       
-          IS   14.110000E-09   30.000000E-15 
-           N    1.984           1.701        
-         IKF   94.81                         
-          BV   75                            
-         IBV   10.000000E-06                 
-          RS     .03389                      
-          TT    5.700000E-06                 
-         CJO   25.890000E-12                 
-          VJ     .3245                       
-           M     .44                         
-
-
-**** 11/22/15 16:04:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     BJT MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               X_U1.QPASSMOD   
-               NPN             
-       LEVEL    1            
-          IS   30.000000E-15 
-          BF   50            
-          NF    1.701        
-         VAF    1.5          
-          BR    1            
-          NR    1            
-         ISS    0            
-          RE    0            
-          RC    0            
-         CJE    0            
-         VJE     .75         
-         CJC    0            
-         VJC     .75         
-         MJC     .33         
-        XCJC    1            
-         CJS    0            
-         VJS     .75         
-          KF    0            
-          AF    1            
-          CN    2.42         
-           D     .87         
-
-
-**** 11/22/15 16:04:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     Junction FET MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               X_U1.JADJMOD    
-               NJF             
-         VTO   -1            
-        BETA   50.000000E-06 
-
-
-ERROR -- Convergence problem in transient bias point calculation
-
-
-  Last node voltages tried were:
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00091)   10.0000 (N00098)    9.9195 (N00311)    8.9635 (N00345)    8.7135     
-
-(N00524)    8.9635 (N01712)    9.3568 (X_U1.4)   10.2140 (X_U1.5)    9.9195     
-
-(X_U1.6)    9.9195 (X_U1.7)    9.9195 (X_U1.8)    9.9313 (X_U1.9)    9.9313     
-
-(X_U1.10)    9.9313                   (X_U1.11)   15.5660                       
-
-(X_U1.12)   18.7230                   (X_U1.13)    9.9646                       
-
-(X_U1.15)    9.9195                   
-
-
-  These supply currents failed to converge:
-
-    I(X_U1.EP)                =   133.39pA  \   -1.903pA
-
-**** Interrupt ****

@@ -1,7 +1,7 @@
 
-**** 11/22/15 17:15:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 12/02/15 19:37:41 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
+ ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\adjustablevoltageregulator-pspicefil
 
 
  ****     CIRCUIT DESCRIPTION
@@ -24,7 +24,8 @@
 .lib "nomd.lib" 
 
 *Analysis directives: 
-.TRAN  0 1ms 0 
+.DC LIN PARAM RVAL 100 2k 100 
+.STEP LIN PARAM RVAL 0 2k 100 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -36,7 +37,7 @@
 V_V1         N00107 0 DC 9 AC 0 0
 X_U1         N00107 N04014 N03179 LM317
 D_D1         N03179 N00107 D1N4001 
-R_R3         N03967 N04014 {2k*0.5+.001}
+R_R3         N03967 N04014 {{RVAL}*1+.001}
 C_C1         N03967 N04014  1u  TC=0,0 
 D_D6         N04014 N03179 D1N4001 
 X_U2         N11052 N03967 N00107 N10981 N03967 LM675
@@ -45,166 +46,10 @@ R_R6         N11052 N10981  30k TC=0,0
 V_V2         0 N10981 DC 5V AC 0 0
 R_R7         N04014 N03179  252 TC=0,0 
 C_C2         N03967 N03179  1u  TC=0,0 
+.PARAM  name1=rval value1=100
+--------------$
+ERROR(ORPSIM-16152): Invalid number
 
 **** RESUMING run1.cir ****
 .END
-
-**** 11/22/15 17:15:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     Diode MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               D1N4001         X_U1.DMOD       X_U2.dx         X_U2.dy         
-          IS   14.110000E-09   30.000000E-15  800.000000E-18  800.000000E-18 
-           N    1.984           1.701                                        
-         IKF   94.81                                                         
-          BV   75                                                            
-         IBV   10.000000E-06                                                 
-          RS     .03389                                         1.000000E-03 
-          TT    5.700000E-06                                                 
-         CJO   25.890000E-12                                   10.000000E-12 
-          VJ     .3245                                                       
-           M     .44                                                         
-
-
-**** 11/22/15 17:15:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     BJT MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               X_U1.QPASSMOD   X_U2.qx         
-               NPN             PNP             
-       LEVEL    1               1            
-          IS   30.000000E-15  800.000000E-18 
-          BF   50             300            
-          NF    1.701           1            
-         VAF    1.5                          
-          BR    1               1            
-          NR    1               1            
-         ISS    0               0            
-          RE    0               0            
-          RC    0               0            
-         CJE    0               0            
-         VJE     .75             .75         
-         CJC    0               0            
-         VJC     .75             .75         
-         MJC     .33             .33         
-        XCJC    1               1            
-         CJS    0               0            
-         VJS     .75             .75         
-          KF    0               0            
-          AF    1               1            
-          CN    2.42            2.2          
-           D     .87             .52         
-
-
-**** 11/22/15 17:15:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     Junction FET MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               X_U1.JADJMOD    
-               NJF             
-         VTO   -1            
-        BETA   50.000000E-06 
-
-
-**** 11/22/15 17:15:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-(N00107)    9.0000 (N03179)    5.0040 (N03967)   -1.2484 (N04014)    3.7556     
-
-(N10981)   -5.0000 (N11052)   -1.2485 (X_U1.4)    5.0056 (X_U1.5)    6.1063     
-
-(X_U1.6)    6.1121 (X_U1.7)    6.1122 (X_U1.8)    5.1637 (X_U1.9)    5.1637     
-
-(X_U2.6) 842.9E-06 (X_U2.7)   -1.2486 (X_U2.8)   -1.2486 (X_U2.9)    0.0000     
-
-(X_U1.10)    5.1637                   (X_U1.11)   10.6430                       
-
-(X_U1.12)   13.1280                   (X_U1.13)    7.8636                       
-
-(X_U1.15)    6.1063                   (X_U2.10)    -.5094                       
-
-(X_U2.11)   -4.8829                   (X_U2.12)   -4.8828                       
-
-(X_U2.13)    -.6004                   (X_U2.14)    -.6005                       
-
-(X_U2.53)    5.0000                   (X_U2.54)   -1.0000                       
-
-(X_U2.90)   -5.0042                   (X_U2.91) 3000.0000                       
-
-(X_U2.92)-3000.0000                   (X_U2.99)    2.0000                   
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1        -1.013E-02
-    V_V2        -5.254E-03
-    X_U1.VREF   -1.597E-11
-    X_U2.vb      8.429E-09
-    X_U2.vc      6.249E-12
-    X_U2.ve     -1.218E-11
-    X_U2.vlim   -5.004E-03
-    X_U2.vlp    -3.005E-09
-    X_U2.vln    -2.995E-09
-
-    TOTAL POWER DISSIPATION   1.17E-01  WATTS
-
-
-
-          JOB CONCLUDED
-
-**** 11/22/15 17:15:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
-
- ** Profile: "SCHEMATIC1-run1"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator-PSpiceFil
-
-
- ****     JOB STATISTICS SUMMARY
-
-
-******************************************************************************
-
-
-
-  Total job time (using Solver 1)   =         .03
 
