@@ -1,9 +1,9 @@
 Protel Design System Design Rule Check
 PCB File : X:\Masters\NumatoShield\NumatoShield.PcbDoc
 Date     : 1/10/2016
-Time     : 9:01:02 AM
+Time     : 6:29:22 PM
 
-Processing Rule : Matched Net Lengths(Tolerance=5.08mm) (All)
+Processing Rule : Matched Net Lengths(Tolerance=200mil) (All)
    Violation between Matched Net Lengths: Net VCCIN
    Violation between Matched Net Lengths: Net V16
    Violation between Matched Net Lengths: Net V15
@@ -77,38 +77,21 @@ Processing Rule : Matched Net Lengths(Tolerance=5.08mm) (All)
    Violation between Matched Net Lengths: Net K13
    Violation between Matched Net Lengths: Net K12
    Violation between Matched Net Lengths: Net INITB
-   Violation between Matched Net Lengths: Net H16
-   Violation between Matched Net Lengths: Net H15
-   Violation between Matched Net Lengths: Net H12
    Violation between Matched Net Lengths: Net GND
-   Violation between Matched Net Lengths: Net G14
-   Violation between Matched Net Lengths: Net G13
    Violation between Matched Net Lengths: Net G11
    Violation between Matched Net Lengths: Net G8
-   Violation between Matched Net Lengths: Net F16
-   Violation between Matched Net Lengths: Net F15
-   Violation between Matched Net Lengths: Net F14
    Violation between Matched Net Lengths: Net F11
-   Violation between Matched Net Lengths: Net F10
    Violation between Matched Net Lengths: Net F8
    Violation between Matched Net Lengths: Net F7
-   Violation between Matched Net Lengths: Net E18
-   Violation between Matched Net Lengths: Net E16
-   Violation between Matched Net Lengths: Net E11
    Violation between Matched Net Lengths: Net E6
    Violation between Matched Net Lengths: Net D12
    Violation between Matched Net Lengths: Net D9
    Violation between Matched Net Lengths: Net D8
-   Violation between Matched Net Lengths: Net C18
-   Violation between Matched Net Lengths: Net C17
-   Violation between Matched Net Lengths: Net C15
    Violation between Matched Net Lengths: Net C13
-   Violation between Matched Net Lengths: Net C12
    Violation between Matched Net Lengths: Net C10
    Violation between Matched Net Lengths: Net C9
    Violation between Matched Net Lengths: Net C8
    Violation between Matched Net Lengths: Net C5
-   Violation between Matched Net Lengths: Net B14
    Violation between Matched Net Lengths: Net B6
    Violation between Matched Net Lengths: Net B3
    Violation between Matched Net Lengths: Net ACBUS7
@@ -119,16 +102,13 @@ Processing Rule : Matched Net Lengths(Tolerance=5.08mm) (All)
    Violation between Matched Net Lengths: Net ACBUS2
    Violation between Matched Net Lengths: Net ACBUS1
    Violation between Matched Net Lengths: Net ACBUS0
-   Violation between Matched Net Lengths: Net A15
-   Violation between Matched Net Lengths: Net A14
-   Violation between Matched Net Lengths: Net A13
    Violation between Matched Net Lengths: Net A10
    Violation between Matched Net Lengths: Net A6
    Violation between Matched Net Lengths: Net A5
    Violation between Matched Net Lengths: Net A3
    Violation between Matched Net Lengths: Net 3V3
-Rule Violations :123
+Rule Violations :103
 
 
-Violations Detected : 123
-Time Elapsed        : 00:00:01
+Violations Detected : 103
+Time Elapsed        : 00:00:00
