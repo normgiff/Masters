@@ -111,6 +111,10 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for NumatoShield\Design Rule Check - NumatoShieldPreRoute.html
 DItemRevisionGUID=
 
+[GeneratedDocument4]
+DocumentPath=Project Outputs for NumatoShield\Design Rule Check - NumatoShieldWithVias.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
