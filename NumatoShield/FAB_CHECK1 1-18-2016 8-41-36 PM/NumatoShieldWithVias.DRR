@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: NumatoShieldWithVias.PcbDoc   1/18/2016  8:41:40 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : NumatoShieldWithVias.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        28mil (0.7112mm)         Round          31               5.65 Inch (143.44 mm)
+T2        43.31mil (1.10007mm)     Round          352              53.85 Inch (1367.73 mm)
+---------------------------------------------------------------------------
+Totals                                            383              59.50 Inch (1511.17 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00
