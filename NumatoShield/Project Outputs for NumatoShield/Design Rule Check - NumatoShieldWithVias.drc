@@ -1,11 +1,10 @@
 Protel Design System Design Rule Check
 PCB File : X:\Masters\NumatoShield\NumatoShieldWithVias.PcbDoc
-Date     : 1/20/2016
-Time     : 2:58:12 PM
+Date     : 1/22/2016
+Time     : 11:52:00 PM
 
 Processing Rule : Matched Net Lengths(Tolerance=200mil) (All)
    Violation between Matched Net Lengths: Net 3V3
-   Violation between Matched Net Lengths: Net A11
    Violation between Matched Net Lengths: Net ACBUS0
    Violation between Matched Net Lengths: Net ACBUS1
    Violation between Matched Net Lengths: Net ACBUS2
@@ -14,118 +13,28 @@ Processing Rule : Matched Net Lengths(Tolerance=200mil) (All)
    Violation between Matched Net Lengths: Net ACBUS5
    Violation between Matched Net Lengths: Net ACBUS6
    Violation between Matched Net Lengths: Net ACBUS7
-   Violation between Matched Net Lengths: Net B2
-   Violation between Matched Net Lengths: Net B12
-   Violation between Matched Net Lengths: Net C7
-   Violation between Matched Net Lengths: Net E7
    Violation between Matched Net Lengths: Net GND
    Violation between Matched Net Lengths: Net INITB
-   Violation between Matched Net Lengths: Net M8
-   Violation between Matched Net Lengths: Net M10
-   Violation between Matched Net Lengths: Net N5
-   Violation between Matched Net Lengths: Net N6
-   Violation between Matched Net Lengths: Net N7
-   Violation between Matched Net Lengths: Net N8
-   Violation between Matched Net Lengths: Net N9
-   Violation between Matched Net Lengths: Net P6
-   Violation between Matched Net Lengths: Net P7
    Violation between Matched Net Lengths: Net PROGB
-   Violation between Matched Net Lengths: Net R3
-   Violation between Matched Net Lengths: Net R5
-   Violation between Matched Net Lengths: Net R7
-   Violation between Matched Net Lengths: Net R8
-   Violation between Matched Net Lengths: Net T3
-   Violation between Matched Net Lengths: Net T4
-   Violation between Matched Net Lengths: Net T5
-   Violation between Matched Net Lengths: Net T6
-   Violation between Matched Net Lengths: Net T7
-   Violation between Matched Net Lengths: Net T8
-   Violation between Matched Net Lengths: Net U5
-   Violation between Matched Net Lengths: Net U7
-   Violation between Matched Net Lengths: Net U8
-   Violation between Matched Net Lengths: Net U11
-   Violation between Matched Net Lengths: Net V4
-   Violation between Matched Net Lengths: Net V5
-   Violation between Matched Net Lengths: Net V6
-   Violation between Matched Net Lengths: Net V7
-   Violation between Matched Net Lengths: Net V8
-   Violation between Matched Net Lengths: Net V11
    Violation between Matched Net Lengths: Net VCCIN
-Rule Violations :47
+Rule Violations :13
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-1 (1550,1350mil) And Pad H2-2 (1650,1350mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H2-2 (1650,1350mil) And Pad H2-1 (1750,1350mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-2 (1450,1350mil) And Pad H1-1 (1550,1350mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H3-3 (3350,1450mil) And Pad H4-3 (3550,1450mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-47 (1550,3650mil) And Pad H4-48 (3450,3650mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H2-1 (1750,1350mil) And Pad H3-3 (3350,1450mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-1 (1550,1350mil) And Pad H1-47 (1550,3650mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-4 (1450,1450mil) And Pad H1-3 (1550,1450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H2-4 (1650,1450mil) And Pad H2-3 (1750,1450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-1 (3350,1350mil) And Pad H4-2 (3450,1350mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-2 (3450,1350mil) And Pad H4-1 (3550,1350mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-24 (3250,2450mil) And Pad H3-23 (3350,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-18 (3300,499.165mil) And Pad HWL3-19 (3400,499.165mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-2 (3250,1350mil) And Pad H3-1 (3350,1350mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-21 (3300,600mil) And Pad HWL3-20 (3400,600mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL4-10 (4400,2450mil) And Pad HWL4-29 (4500,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-26 (3450,2550mil) And Pad H4-25 (3550,2550mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-24 (3450,2450mil) And Pad H4-23 (3550,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-26 (3250,2550mil) And Pad H3-25 (3350,2550mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-24 (1450,2450mil) And Pad H1-23 (1550,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-16 (3100,499.165mil) And Pad HWL3-17 (3200,499.165mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-23 (1550,2450mil) And Pad H2-24 (1650,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-23 (3100,600mil) And Pad HWL3-22 (3200,600mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H2-24 (1650,2450mil) And Pad H2-23 (1750,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-48 (1450,3650mil) And Pad H2-47 (1750,3650mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-25 (3550,2550mil) And Pad H4-47 (3550,3650mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-24 (3250,2450mil) And Pad H3-26 (3250,2550mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-23 (3350,2450mil) And Pad H4-24 (3450,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-22 (3200,600mil) And Pad HWL3-21 (3300,600mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-17 (3200,499.165mil) And Pad HWL3-18 (3300,499.165mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-24 (3450,2450mil) And Pad H4-26 (3450,2550mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-3 (1550,1450mil) And Pad H2-4 (1650,1450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-22 (3200,600mil) And Pad H3-2 (3250,1350mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-23 (3550,2450mil) And Pad HWL4-10 (4400,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-3 (1550,1450mil) And Pad H1-23 (1550,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-24 (1450,2450mil) And Pad H1-48 (1450,3650mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad HWL3-16 (3100,499.165mil) And Pad HWL3-23 (3100,600mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H3-2 (3250,1350mil) And Pad H3-24 (3250,2450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H2-23 (1750,2450mil) And Pad H3-24 (3250,2450mil)
-   Violation between Un-Routed Net Constraint: Net M8 Between Pad H4-16 (3450,2050mil) And Pad HWL4-25 (4500,2050mil)
-   Violation between Un-Routed Net Constraint: Net M10 Between Pad H4-20 (3450,2250mil) And Pad HWL4-27 (4500,2250mil)
-   Violation between Un-Routed Net Constraint: Net N5 Between Pad HWL3-26 (2800,600mil) And Pad H3-10 (3250,1750mil)
-   Violation between Un-Routed Net Constraint: Net N6 Between Pad H4-12 (3450,1850mil) And Pad HWL4-23 (4500,1850mil)
-   Violation between Un-Routed Net Constraint: Net N7 Between Pad HWL3-29 (2500,600mil) And Pad H3-16 (3250,2050mil)
-   Violation between Un-Routed Net Constraint: Net N8 Between Pad H4-15 (3550,2050mil) And Pad HWL4-14 (4400,2050mil)
-   Violation between Un-Routed Net Constraint: Net N9 Between Pad H4-19 (3550,2250mil) And Pad HWL4-12 (4400,2250mil)
-   Violation between Un-Routed Net Constraint: Net P6 Between Pad HWL3-13 (2800,500mil) And Pad H3-9 (3350,1750mil)
-   Violation between Un-Routed Net Constraint: Net P7 Between Pad H4-11 (3550,1850mil) And Pad HWL4-16 (4399.165,1850mil)
-   Violation between Un-Routed Net Constraint: Net R3 Between Pad HWL3-24 (3000,600mil) And Pad H3-6 (3250,1550mil)
-   Violation between Un-Routed Net Constraint: Net R5 Between Pad HWL3-25 (2900,600mil) And Pad H3-8 (3250,1650mil)
-   Violation between Un-Routed Net Constraint: Net R7 Between Pad HWL3-27 (2700,600mil) And Pad H3-12 (3250,1850mil)
-   Violation between Un-Routed Net Constraint: Net R8 Between Pad H4-18 (3450,2150mil) And Pad HWL4-26 (4500,2150mil)
-   Violation between Un-Routed Net Constraint: Net T3 Between Pad HWL3-15 (3000,500mil) And Pad H3-5 (3350,1550mil)
-   Violation between Un-Routed Net Constraint: Net T4 Between Pad H4-6 (3450,1550mil) And Pad HWL4-20 (4500,1550mil)
-   Violation between Un-Routed Net Constraint: Net T5 Between Pad HWL3-14 (2900,500mil) And Pad H3-7 (3350,1650mil)
-   Violation between Un-Routed Net Constraint: Net T6 Between Pad H4-10 (3450,1750mil) And Pad HWL4-22 (4500,1750mil)
-   Violation between Un-Routed Net Constraint: Net T7 Between Pad HWL3-12 (2700,500mil) And Pad H3-11 (3350,1850mil)
-   Violation between Un-Routed Net Constraint: Net T8 Between Pad H4-17 (3550,2150mil) And Pad HWL4-13 (4400,2150mil)
-   Violation between Un-Routed Net Constraint: Net U5 Between Pad H4-8 (3450,1650mil) And Pad HWL4-21 (4500,1650mil)
-   Violation between Un-Routed Net Constraint: Net U7 Between Pad HWL3-28 (2600,600mil) And Pad H3-14 (3250,1950mil)
-   Violation between Un-Routed Net Constraint: Net U8 Between Pad H4-14 (3450,1950mil) And Pad HWL4-24 (4500,1950mil)
-   Violation between Un-Routed Net Constraint: Net U11 Between Pad H4-22 (3450,2350mil) And Pad HWL4-28 (4500,2350mil)
-   Violation between Un-Routed Net Constraint: Net V4 Between Pad H4-5 (3550,1550mil) And Pad HWL4-19 (4399.165,1550mil)
-   Violation between Un-Routed Net Constraint: Net V5 Between Pad H4-7 (3550,1650mil) And Pad HWL4-18 (4399.165,1650mil)
-   Violation between Un-Routed Net Constraint: Net V6 Between Pad H4-9 (3550,1750mil) And Pad HWL4-17 (4399.165,1750mil)
-   Violation between Un-Routed Net Constraint: Net V7 Between Pad HWL3-11 (2600,500mil) And Pad H3-13 (3350,1950mil)
-   Violation between Un-Routed Net Constraint: Net V8 Between Pad H4-13 (3550,1950mil) And Pad HWL4-15 (4400,1950mil)
-   Violation between Un-Routed Net Constraint: Net V11 Between Pad H4-21 (3550,2350mil) And Pad HWL4-11 (4400,2350mil)
-Rule Violations :68
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-1 (1525,1350mil) And Pad H2-2 (1625,1350mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H2-2 (1625,1350mil) And Pad H2-1 (1725,1350mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-2 (1425,1350mil) And Pad H1-1 (1525,1350mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H3-3 (3375,1450mil) And Pad H4-3 (3575,1450mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-47 (1525,3650mil) And Pad H4-48 (3475,3650mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H2-1 (1725,1350mil) And Pad H3-3 (3375,1450mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-1 (1525,1350mil) And Pad H1-47 (1525,3650mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-4 (1425,1450mil) And Pad H1-3 (1525,1450mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-3 (1525,1450mil) And Pad H2-4 (1625,1450mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-48 (1425,3650mil) And Pad H2-47 (1725,3650mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-25 (3575,2550mil) And Pad H4-47 (3575,3650mil)
+Rule Violations :11
 
 Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
 Rule Violations :0
@@ -164,5 +73,5 @@ Processing Rule : Minimum Annular Ring (Minimum=10mil) (All)
 Rule Violations :0
 
 
-Violations Detected : 115
-Time Elapsed        : 00:00:08
+Violations Detected : 24
+Time Elapsed        : 00:00:11
