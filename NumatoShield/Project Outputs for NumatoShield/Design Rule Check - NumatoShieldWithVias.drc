@@ -1,77 +1,77 @@
 Protel Design System Design Rule Check
 PCB File : X:\Masters\NumatoShield\NumatoShieldWithVias.PcbDoc
-Date     : 1/22/2016
-Time     : 11:52:00 PM
+Date     : 1/23/2016
+Time     : 5:16:32 PM
 
-Processing Rule : Matched Net Lengths(Tolerance=200mil) (All)
-   Violation between Matched Net Lengths: Net 3V3
-   Violation between Matched Net Lengths: Net ACBUS0
-   Violation between Matched Net Lengths: Net ACBUS1
-   Violation between Matched Net Lengths: Net ACBUS2
-   Violation between Matched Net Lengths: Net ACBUS3
-   Violation between Matched Net Lengths: Net ACBUS4
-   Violation between Matched Net Lengths: Net ACBUS5
-   Violation between Matched Net Lengths: Net ACBUS6
-   Violation between Matched Net Lengths: Net ACBUS7
-   Violation between Matched Net Lengths: Net GND
-   Violation between Matched Net Lengths: Net INITB
-   Violation between Matched Net Lengths: Net PROGB
-   Violation between Matched Net Lengths: Net VCCIN
-Rule Violations :13
-
-Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
-Rule Violations :0
-
-Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-1 (1525,1350mil) And Pad H2-2 (1625,1350mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H2-2 (1625,1350mil) And Pad H2-1 (1725,1350mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-2 (1425,1350mil) And Pad H1-1 (1525,1350mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H3-3 (3375,1450mil) And Pad H4-3 (3575,1450mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-47 (1525,3650mil) And Pad H4-48 (3475,3650mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H2-1 (1725,1350mil) And Pad H3-3 (3375,1450mil)
-   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad H1-1 (1525,1350mil) And Pad H1-47 (1525,3650mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-4 (1425,1450mil) And Pad H1-3 (1525,1450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-3 (1525,1450mil) And Pad H2-4 (1625,1450mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H1-48 (1425,3650mil) And Pad H2-47 (1725,3650mil)
-   Violation between Un-Routed Net Constraint: Net GND Between Pad H4-25 (3575,2550mil) And Pad H4-47 (3575,3650mil)
-Rule Violations :11
-
-Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
-Rule Violations :0
-
-Processing Rule : Hole Size Constraint (Min=10mil) (Max=100mil) (All)
-Rule Violations :0
-
-Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
-Rule Violations :0
-
-Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
-Rule Violations :0
-
-Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
-Rule Violations :0
-
-Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
-Rule Violations :0
-
-Processing Rule : Silk primitive without silk layer
-Rule Violations :0
-
-Processing Rule : Net Antennae (Tolerance=0mil) (All)
-Rule Violations :0
-
-Processing Rule : Width Constraint (Min=7mil) (Max=20mil) (Preferred=7mil) (All)
-Rule Violations :0
-
-Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+Processing Rule : Minimum Annular Ring (Minimum=10mil) (All)
 Rule Violations :0
 
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Annular Ring (Minimum=10mil) (All)
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
 Rule Violations :0
+
+Processing Rule : Width Constraint (Min=7mil) (Max=20mil) (Preferred=7mil) (All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=10mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad P3-4 (1425,1450mil) And Pad P3-3 (1525,1450mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad P3-3 (1525,1450mil) And Pad -4 (1625,1450mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad P3-48 (1425,3650mil) And Pad -47 (1725,3650mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad -25 (3575,2550mil) And Pad -47 (3575,3650mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P3-1 (1525,1350mil) And Pad -2 (1625,1350mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad -2 (1625,1350mil) And Pad -1 (1725,1350mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P3-2 (1425,1350mil) And Pad P3-1 (1525,1350mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P2-3 (3375,1450mil) And Pad -3 (3575,1450mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P3-47 (1525,3650mil) And Pad -48 (3475,3650mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad -1 (1725,1350mil) And Pad P2-3 (3375,1450mil)
+   Violation between Un-Routed Net Constraint: Net 3V3 Between Pad P3-1 (1525,1350mil) And Pad P3-47 (1525,3650mil)
+Rule Violations :11
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=200mil) (All)
+   Violation between Matched Net Lengths: Net VCCIN
+   Violation between Matched Net Lengths: Net PROGB
+   Violation between Matched Net Lengths: Net INITB
+   Violation between Matched Net Lengths: Net GND
+   Violation between Matched Net Lengths: Net ACBUS7
+   Violation between Matched Net Lengths: Net ACBUS6
+   Violation between Matched Net Lengths: Net ACBUS5
+   Violation between Matched Net Lengths: Net ACBUS4
+   Violation between Matched Net Lengths: Net ACBUS3
+   Violation between Matched Net Lengths: Net ACBUS2
+   Violation between Matched Net Lengths: Net ACBUS1
+   Violation between Matched Net Lengths: Net ACBUS0
+   Violation between Matched Net Lengths: Net 3V3
+Rule Violations :13
 
 
 Violations Detected : 24
-Time Elapsed        : 00:00:11
+Time Elapsed        : 00:00:04

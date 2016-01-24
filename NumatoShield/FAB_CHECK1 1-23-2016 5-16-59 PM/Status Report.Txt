@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [NumatoShieldWithVias.PcbDoc]
+   Generated File[NumatoShieldWithVias.TXT]
+   Generated File[NumatoShieldWithVias.LDP]
+   Generated File[NumatoShieldWithVias.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 5:17:06 PM On 1/23/2016
