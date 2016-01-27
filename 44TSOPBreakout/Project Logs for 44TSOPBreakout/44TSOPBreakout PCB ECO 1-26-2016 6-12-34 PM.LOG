@@ -1,0 +1,6 @@
+Added Component: Designator=P1(HDR1X11)
+Added Component: Designator=P2(HDR1X11)
+Added Component: Designator=P3(TSOP80P1180X119-44N)
+Added Component: Designator=P4(HDR1X11)
+Added Component: Designator=P5(HDR1X11)
+Added Class: Name=44TSOPBreakout
