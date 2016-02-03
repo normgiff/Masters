@@ -33,8 +33,10 @@
 <b>Numato Shield</b><br>
 <embed src="documents/NumatoShield.pdf" width="500" height="550" type='application/pdf'>
 <p>
-Daniel designed this board over the course of two weeks, routing about 20 pins a day. (Initially, he routed about 60 percent of the board before realizing that his header footprints were incorrect, requiring him to redo all of his rerouting). The traces on this four-layer board are all approximately seven inches, with a verified tolerance of 200 mils, meaning that all traces are between 6.8 and 7.2 inches. The reason for this <b>equilibrium</b> tracing is to minimize the difference in the voltage propagation delay between any two traces on the board.
+Daniel designed this board over the course of two weeks, routing about 20 pins a day. (Initially, he routed about 60 percent of the board before realizing that his header footprints were incorrect, requiring him to redo all of his rerouting). The traces on this four-layer board are all approximately seven inches, with a verified tolerance of 200 mils, meaning that all traces are between 6.8 and 7.2 inches. The reason for this <b>equilibrium</b> tracing is to minimize the difference in the voltage propagation delay between any two traces on the board. A picture of the actual, soldered board is below.
 </p>
+
+<IMG SRC="images/SaturnShield.jpg" />
 
 <p>
 It is important to note that the trace lengths on the Numato board are not equilibrated. <a href="documents/SaturnV3LengthMatchedIODetails.pdf">This document</a> shows the lengths of the length-matched pins on the FPGA. The tolerance of the trace lengths on the Numato board is at least a number of inches. When the shield arrives, we will perform experiments to determine the maximum discrepency in voltage propagation delay between any two FPGA pins. If this discrepency exceeds 1 nanosecond, we will attempt to fix the lengths on the "main PCB".
