@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP.syr" 

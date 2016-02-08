@@ -1,0 +1,3 @@
+verilog work "RANDOM_GEN.v"
+verilog work "PULSE_GEN.v"
+verilog work "TOP.v"

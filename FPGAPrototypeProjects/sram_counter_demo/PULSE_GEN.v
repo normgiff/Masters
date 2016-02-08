@@ -14,12 +14,12 @@ module PULSE_GEN(CLK, RST, PULSE);
 	reg [6:0] counter;
 	
 	always@(posedge CLK) begin
-		if (RST) begin
+		if(RST) begin
 			counter <= 7'd0;
 			PULSE <= 1'b0;
 		end
 		else begin
-			if (counter == 7'd100) begin
+			if(counter == 7'd100) begin
 				counter <= 7'd0;
 				PULSE <= 1'b1;
 			end
