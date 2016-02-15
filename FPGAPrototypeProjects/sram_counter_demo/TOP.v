@@ -36,22 +36,39 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 	input [7:0] SEED;
 	
 	// Counter
-	output COUNTER_CLK;
+	output reg COUNTER_CLK;
 	output reg COUNTER_RST;
 	
-	// TODO: Better logic :)
-	assign COUNTER_CLK = pulse; 
+	// Counter clock.
+	reg [8:0] counter_clk_counter;
+	always@(posedge CLK) begin
+		if (RST) begin
+			COUNTER_CLK <= 1'b1;
+			counter_clk_counter <= 9'b0;
+		end
+		else if (pulse && (PS == WRITE || PS == READ)) begin
+			// Lower the counter's clock and hold it for 64 clock cycles.
+			COUNTER_CLK <= 1'b0;
+		end
+		else if (COUNTER_CLK == 1'b0) begin
+			counter_clk_counter <= counter_clk_counter + 9'd1;
+			if (counter_clk_counter == 9'd500) begin
+				COUNTER_CLK <= 1'b1;
+				counter_clk_counter <= 9'd0;
+			end
+		end
+	end
 	
 	// SRAM
 	output reg WE_BAR;
-	inout reg [3:0] CHIP1_DATA;
-	inout reg [3:0] CHIP2_DATA;
+	inout [3:0] CHIP1_DATA;
+	inout [3:0] CHIP2_DATA;
 	
 	// LEDs
 	output reg [15:0] LED_OUT;
 	
-	reg [3:0] CHIP1_ACTUAL_DATA [3:0];
-	reg [3:0] CHIP2_ACTUAL_DATA [3:0];
+	reg [3:0] CHIP1_ACTUAL_DATA [15:0];
+	reg [3:0] CHIP2_ACTUAL_DATA [15:0];
 
 	// FSM 
 	parameter IDLE = 3'd0;
@@ -60,21 +77,23 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 	parameter SWITCH = 3'd3;
 	parameter READ = 3'd4;
 	parameter VERIFY = 3'd5;
+	parameter WAIT = 3'd6;
 	
 	reg [2:0] PS;
 	reg [2:0] NS;
 	
 	// GENERATE, WRITE, and READ states (internal progression)
-	reg [4:0] state_counter;
+	reg [3:0] state_counter;
 	
 	// Module instantiations
-	reg pulse;
+	wire pulse;
 	PULSE_GEN pg0(.CLK(CLK), .RST(RST), .PULSE(pulse));
 	
+	reg load_seed;
 	reg get_next;
-	reg [7:0] random_val;
-	reg [3:0] random_val_arr [7:0];
-	RANDOM_GEN rg0(.CLK(CLK), .RST(RST), .GET_NEXT(get_next), .SEED(SEED), .VAL(random_val));
+	wire [7:0] random_val;
+	reg [7:0] random_val_arr [15:0];
+	RANDOM_GEN rg0(.CLK(CLK), .RST(RST), .LOAD_SEED(load_seed), .GET_NEXT(get_next), .SEED(SEED), .VAL(random_val));
 	
 	// Present-state block
 	always@(posedge CLK) begin
@@ -92,33 +111,41 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 	// Sequential logic
 	always@(posedge CLK) begin
 		if (RST) begin
-			state_counter <= 5'd0;
+			state_counter <= 4'd0;
 		end
 		else if (pulse) begin
-			state_counter <= 5'd0;
+			state_counter <= 4'd0;
 			case(PS)
 				GENERATE: begin
-					if (state_counter == 5'd16) begin
-						state_counter <= 5'd0;
+					if (state_counter == 4'd15) begin
+						state_counter <= 4'd0;
 					end
 					else begin
-						state_counter <= state_counter + 5'd1;
+						state_counter <= state_counter + 4'd1;
 					end
 				end
 				WRITE: begin
-					if (state_counter == 5'd16) begin
-						state_counter <= 5'd0;
+					if (state_counter == 4'd15) begin
+						state_counter <= state_counter;
 					end
 					else begin
-						state_counter <= state_counter + 5'd1;
+						state_counter <= state_counter + 4'd1;
+					end
+				end
+				WAIT: begin
+					if (state_counter == 4'd0) begin
+						state_counter <= state_counter;
+					end
+					else begin
+						state_counter <= state_counter - 4'd1;
 					end
 				end
 				READ: begin
-					if (state_counter == 5'd16) begin
-						state_counter <= 5'd0;
+					if (state_counter == 4'd15) begin
+						state_counter <= 4'd0;
 					end
 					else begin
-						state_counter <= state_counter + 5'd1;
+						state_counter <= state_counter + 4'd1;
 					end
 				end
 			endcase
@@ -141,7 +168,7 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 			
 			// Generate 16 random values
 			GENERATE: begin
-				if (state_counter == 5'd16) begin
+				if (state_counter == 4'd15) begin
 					NS = WRITE;
 				end
 				else begin
@@ -151,7 +178,7 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 			
 			// Write the 16 values
 			WRITE: begin
-				if (state_counter == 5'd16) begin
+				if (state_counter == 4'd15) begin
 					NS = SWITCH;
 				end
 				else begin
@@ -161,16 +188,25 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 			
 			// Switch from write to read (reset the counter)
 			SWITCH: begin
-				NS = READ;
+				NS = WAIT;
+			end
+			
+			WAIT: begin
+				if (state_counter == 4'd0) begin
+					NS = READ;
+				end
+				else begin
+					NS = WAIT;
+				end
 			end
 			
 			// Read the 16 values
 			READ: begin
-				if (state_counter == 5'd16) begin
-					NS = SWITCH;
+				if (state_counter == 4'd15) begin
+					NS = VERIFY;
 				end
 				else begin
-					NS = WRITE;
+					NS = READ;
 				end
 			end
 			
@@ -181,37 +217,65 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 		endcase
 	end
 	
+	// CHIP1 and CHIP2 data drivers
+	assign CHIP1_DATA = (PS == WRITE && WE_BAR == 0) ? random_val_arr[state_counter][7:4] : 4'bz;
+	assign CHIP2_DATA = (PS == WRITE && WE_BAR == 0) ? random_val_arr[state_counter][3:0] : 4'bz;
+	
+	// For values that must be latched onto
+	integer i;
+	always@(posedge CLK) begin
+		if (RST) begin
+			for (i = 0; i < 16; i = i + 1) begin
+				CHIP1_ACTUAL_DATA[i] <= 4'b0;
+				CHIP2_ACTUAL_DATA[i] <= 4'b0;
+				random_val_arr[i] <= 8'b0;
+			end
+		end
+		else if (PS == READ) begin
+			CHIP1_ACTUAL_DATA[state_counter] <= CHIP1_DATA;
+			CHIP2_ACTUAL_DATA[state_counter] <= CHIP2_DATA;
+		end
+		else if (PS == GENERATE) begin
+			random_val_arr[state_counter] <= random_val;
+		end
+	end
+	
 	// General logic
 	always@(*) begin
 		get_next = 1'b0;
+		load_seed = 1'b0;
 		COUNTER_RST = 1'b0;
 		WE_BAR = 1'b0; // By default, set to write to avoid multiple-driver issues
 		LED_OUT = 16'd0;
-		CHIP1_DATA = 4'bz;
-		CHIP2_DATA = 4'bz;
 		case(PS)
 			IDLE: begin
-				// Nothing to do
+				load_seed = 1'b1;
 			end
 			
 			GENERATE: begin
 				get_next = 1'b1;
-				random_val_arr[state_counter] = random_val;
 			end
 			
 			WRITE: begin
-				CHIP1_DATA = random_val_arr[state_counter][7:4];
-				CHIP2_DATA = random_val_arr[state_counter][3:0];
+				// After the counter changes, we must give the address time to settle.
+				// Transitioning address bits while keeping WE_BAR low is problematic!
+				if (COUNTER_CLK == 1'b0) begin
+					WE_BAR = 1'b1;
+				end
 			end
 			
 			SWITCH: begin
 				COUNTER_RST = 1'b1;
 			end
 			
+			// Set to read-mode to stop writing.
+			// CHIPX_DATA will be high-z.
+			WAIT: begin
+				WE_BAR = 1'b1;
+			end
+			
 			READ: begin
 				WE_BAR = 1'b1;
-				CHIP1_ACTUAL_DATA[state_counter] = CHIP1_DATA;
-				CHIP2_ACTUAL_DATA[state_counter] = CHIP2_DATA;
 			end
 			
 			VERIFY: begin

@@ -1,0 +1,4 @@
+verilog work "MUX21.v"
+verilog work "DFF.v"
+verilog work "LFSR.v"
+verilog work "RANDOM_GEN.v"

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: TOP.prj
 
@@ -105,21 +105,459 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\MUX21.v" into library work
+Parsing module <MUX21>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\DFF.v" into library work
+Parsing module <DFF>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\LFSR.v" into library work
+Parsing module <LFSR>.
 Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\RANDOM_GEN.v" into library work
 Parsing module <RANDOM_GEN>.
 Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\PULSE_GEN.v" into library work
 Parsing module <PULSE_GEN>.
 Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.v" into library work
 Parsing module <TOP>.
-ERROR:HDLCompiler:661 - "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.v" Line 47: Non-net port CHIP1_DATA cannot be of mode inout
-ERROR:HDLCompiler:661 - "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.v" Line 48: Non-net port CHIP2_DATA cannot be of mode inout
-ERROR:HDLCompiler:598 - "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.v" Line 32: Module <TOP> ignored due to previous errors.
-Verilog file C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.v ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TOP>.
+
+Elaborating module <PULSE_GEN>.
+
+Elaborating module <RANDOM_GEN>.
+
+Elaborating module <LFSR>.
+
+Elaborating module <DFF>.
+
+Elaborating module <MUX21>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.v".
+        IDLE = 3'b000
+        GENERATE = 3'b001
+        WRITE = 3'b010
+        SWITCH = 3'b011
+        READ = 3'b100
+        VERIFY = 3'b101
+        WAIT = 3'b110
+    Found 9-bit register for signal <counter_clk_counter>.
+    Found 3-bit register for signal <PS>.
+    Found 4-bit register for signal <state_counter>.
+    Found 64-bit register for signal <n0136[63:0]>.
+    Found 64-bit register for signal <n0137[63:0]>.
+    Found 128-bit register for signal <n0142[127:0]>.
+    Found 1-bit register for signal <COUNTER_CLK>.
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 11                                             |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit subtractor for signal <state_counter[3]_GND_1_o_sub_24_OUT> created at line 140.
+    Found 9-bit adder for signal <counter_clk_counter[8]_GND_1_o_add_4_OUT> created at line 54.
+    Found 4-bit adder for signal <state_counter[3]_GND_1_o_add_17_OUT> created at line 124.
+    Found 4-bit 16-to-1 multiplexer for signal <state_counter[3]_random_val_arr[15][7]_wide_mux_49_OUT> created at line 221.
+    Found 4-bit 16-to-1 multiplexer for signal <state_counter[3]_random_val_arr[15][3]_wide_mux_53_OUT> created at line 222.
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<3>> created at line 221
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<2>> created at line 221
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<1>> created at line 221
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<0>> created at line 221
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<3>> created at line 222
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<2>> created at line 222
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<1>> created at line 222
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<0>> created at line 222
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[0][3]_random_val_arr[0][7]_equal_121_o> created at line 282
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[1][3]_random_val_arr[1][7]_equal_122_o> created at line 283
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[2][3]_random_val_arr[2][7]_equal_123_o> created at line 284
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[3][3]_random_val_arr[3][7]_equal_124_o> created at line 285
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[4][3]_random_val_arr[4][7]_equal_125_o> created at line 286
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[5][3]_random_val_arr[5][7]_equal_126_o> created at line 287
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[6][3]_random_val_arr[6][7]_equal_127_o> created at line 288
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[7][3]_random_val_arr[7][7]_equal_128_o> created at line 289
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[8][3]_random_val_arr[8][7]_equal_129_o> created at line 290
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[9][3]_random_val_arr[9][7]_equal_130_o> created at line 291
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[10][3]_random_val_arr[10][7]_equal_131_o> created at line 292
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[11][3]_random_val_arr[11][7]_equal_132_o> created at line 293
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[12][3]_random_val_arr[12][7]_equal_133_o> created at line 294
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[13][3]_random_val_arr[13][7]_equal_134_o> created at line 295
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[14][3]_random_val_arr[14][7]_equal_135_o> created at line 296
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[15][3]_random_val_arr[15][7]_equal_136_o> created at line 297
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 270 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred  57 Multiplexer(s).
+	inferred   8 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <TOP> synthesized.
+
+Synthesizing Unit <PULSE_GEN>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\PULSE_GEN.v".
+    Found 1-bit register for signal <PULSE>.
+    Found 10-bit register for signal <counter>.
+    Found 10-bit adder for signal <counter[9]_GND_2_o_add_2_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <PULSE_GEN> synthesized.
+
+Synthesizing Unit <RANDOM_GEN>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\RANDOM_GEN.v".
+    Summary:
+	no macro.
+Unit <RANDOM_GEN> synthesized.
+
+Synthesizing Unit <LFSR>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\LFSR.v".
+    Summary:
+Unit <LFSR> synthesized.
+
+Synthesizing Unit <DFF>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\DFF.v".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <DFF> synthesized.
+
+Synthesizing Unit <MUX21>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\MUX21.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <MUX21> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 40
+ 1-bit register                                        : 34
+ 10-bit register                                       : 1
+ 128-bit register                                      : 1
+ 4-bit register                                        : 1
+ 64-bit register                                       : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 16
+ 8-bit comparator equal                                : 16
+# Multiplexers                                         : 90
+ 1-bit 2-to-1 multiplexer                              : 35
+ 10-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 4-bit 16-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 35
+ 8-bit 2-to-1 multiplexer                              : 16
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 1
+# Xors                                                 : 8
+ 1-bit xor4                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <PULSE_GEN>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <PULSE_GEN> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TOP>.
+The following registers are absorbed into counter <counter_clk_counter>: 1 register on signal <counter_clk_counter>.
+Unit <TOP> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 294
+ Flip-Flops                                            : 294
+# Comparators                                          : 16
+ 8-bit comparator equal                                : 16
+# Multiplexers                                         : 185
+ 1-bit 2-to-1 multiplexer                              : 163
+ 16-bit 2-to-1 multiplexer                             : 1
+ 4-bit 16-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 16
+# FSMs                                                 : 1
+# Xors                                                 : 8
+ 1-bit xor4                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 110   | 110
+ 100   | 100
+ 101   | 101
+-------------------
+
+Optimizing unit <RANDOM_GEN> ...
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <LFSR> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 316
+ Flip-Flops                                            : 316
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 507
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 9
+#      LUT2                        : 20
+#      LUT3                        : 3
+#      LUT4                        : 14
+#      LUT5                        : 36
+#      LUT6                        : 360
+#      MUXCY                       : 17
+#      MUXF7                       : 18
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 19
+# FlipFlops/Latches                : 316
+#      FDR                         : 14
+#      FDRE                        : 301
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 37
+#      IBUF                        : 10
+#      IOBUF                       : 8
+#      OBUF                        : 19
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             316  out of  126800     0%  
+ Number of Slice LUTs:                  443  out of  63400     0%  
+    Number used as Logic:               443  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    443
+   Number with an unused Flip Flop:     127  out of    443    28%  
+   Number with an unused LUT:             0  out of    443     0%  
+   Number of fully used LUT-FF pairs:   316  out of    443    71%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          38
+ Number of bonded IOBs:                  38  out of    210    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 316   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.499ns (Maximum Frequency: 400.160MHz)
+   Minimum input arrival time before clock: 1.596ns
+   Maximum output required time after clock: 2.215ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.499ns (frequency: 400.160MHz)
+  Total number of paths / destination ports: 3705 / 626
+-------------------------------------------------------------------------
+Delay:               2.499ns (Levels of Logic = 12)
+  Source:            pg0/counter_5 (FF)
+  Destination:       pg0/counter_9 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: pg0/counter_5 to pg0/counter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.361   0.688  pg0/counter_5 (pg0/counter_5)
+     LUT5:I0->O           11   0.097   0.342  pg0/counter[9]_PWR_2_o_equal_2_o<9>_SW0 (N5)
+     LUT6:I5->O            1   0.097   0.000  pg0/Mcount_counter_lut<0> (pg0/Mcount_counter_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  pg0/Mcount_counter_cy<0> (pg0/Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<1> (pg0/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<2> (pg0/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<3> (pg0/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<4> (pg0/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<5> (pg0/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<6> (pg0/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<7> (pg0/Mcount_counter_cy<7>)
+     MUXCY:CI->O           0   0.023   0.000  pg0/Mcount_counter_cy<8> (pg0/Mcount_counter_cy<8>)
+     XORCY:CI->O           1   0.370   0.000  pg0/Mcount_counter_xor<9> (pg0/Mcount_counter9)
+     FDR:D                     0.008          pg0/counter_9
+    ----------------------------------------
+    Total                      2.499ns (1.470ns logic, 1.029ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 478 / 478
+-------------------------------------------------------------------------
+Offset:              1.596ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       counter_clk_counter_1 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to counter_clk_counter_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           309   0.001   0.833  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            9   0.097   0.316  Mcount_counter_clk_counter_val3 (Mcount_counter_clk_counter_val)
+     FDRE:R                    0.349          counter_clk_counter_0
+    ----------------------------------------
+    Total                      1.596ns (0.447ns logic, 1.149ns route)
+                                       (28.0% logic, 72.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 559 / 27
+-------------------------------------------------------------------------
+Offset:              2.215ns (Levels of Logic = 3)
+  Source:            CHIP1_ACTUAL_DATA_0_62 (FF)
+  Destination:       LED_OUT<15> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: CHIP1_ACTUAL_DATA_0_62 to LED_OUT<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.361   0.697  CHIP1_ACTUAL_DATA_0_62 (CHIP1_ACTUAL_DATA_0_62)
+     LUT6:I0->O            1   0.097   0.683  Mmux_LED_OUT72 (Mmux_LED_OUT71)
+     LUT6:I1->O            1   0.097   0.279  Mmux_LED_OUT74 (LED_OUT_15_OBUF)
+     OBUF:I->O                 0.000          LED_OUT_15_OBUF (LED_OUT<15>)
+    ----------------------------------------
+    Total                      2.215ns (0.555ns logic, 1.660ns route)
+                                       (25.1% logic, 74.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.499|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.50 secs
+ 
 --> 
 
-Total memory usage is 235340 kilobytes
+Total memory usage is 452308 kilobytes
 
-Number of errors   :    3 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

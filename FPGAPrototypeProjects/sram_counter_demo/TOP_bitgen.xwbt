@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.ncd
+OUTFILE=C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\TOP.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo
+LICENSE=WebPack
+USER_INFO=210721438_0_0_800

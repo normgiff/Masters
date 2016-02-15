@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-02-07T21:20:46</DateModified>
+  <DateModified>2016-02-15T00:10:51</DateModified>
   <ModuleName>TOP</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-02-15T00:00:35</SummaryTimeStamp>
   <SavedFilePath>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/iseconfig/TOP.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo\</ImplementationReportsDirectory>
   <DateInitialized>2016-02-07T21:20:46</DateInitialized>

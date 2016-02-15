@@ -3,30 +3,24 @@
 /* 
  * Author: Daniel Khoury
  *
- * Generates random values from a seed.
+ * Generates random values from a seed using a LFSR (linear feedback shift register) circuit.
  */
-module RANDOM_GEN(CLK, RST, GET_NEXT, SEED, VAL);
+module RANDOM_GEN(CLK, RST, LOAD_SEED, GET_NEXT, SEED, VAL);
 	input CLK;
 	input RST;
+	input LOAD_SEED;
 	input GET_NEXT;
 	input [7:0] SEED;
 	
-	output reg [7:0] VAL;
+	output [7:0] VAL;
 	
-	// Prime number
-	parameter A = 7'd101;
-	parameter MODULUS = 8'd128;
+	LFSR LFSR_ARR0 (.CLK(CLK), .RST(RST), .SEED(SEED[3:0]), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[0]));
+	LFSR LFSR_ARR1 (.CLK(CLK), .RST(RST), .SEED(SEED[4:1]), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[1]));
+	LFSR LFSR_ARR2 (.CLK(CLK), .RST(RST), .SEED(SEED[5:2]), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[2]));
+	LFSR LFSR_ARR3 (.CLK(CLK), .RST(RST), .SEED(SEED[6:3]), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[3]));
+	LFSR LFSR_ARR4 (.CLK(CLK), .RST(RST), .SEED(SEED[7:4]), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[4]));
+	LFSR LFSR_ARR5 (.CLK(CLK), .RST(RST), .SEED({SEED[2], SEED[0], SEED[5], SEED[1]}), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[5]));
+	LFSR LFSR_ARR6 (.CLK(CLK), .RST(RST), .SEED({SEED[5], SEED[3], SEED[7], SEED[6]}), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[6]));
+	LFSR LFSR_ARR7 (.CLK(CLK), .RST(RST), .SEED({SEED[0], SEED[3], SEED[4], SEED[7]}), .LOAD(LOAD_SEED), .GET_NEXT(GET_NEXT), .OUT(VAL[7]));
 	
-	always@(posedge CLK) begin
-		if(RST) begin
-			VAL <= SEED;
-		end
-		else if(GET_NEXT) begin
-			VAL <= (VAL * A) & MODULUS;
-		end
-		else begin
-			VAL <= VAL;
-		end
-	end
-
 endmodule

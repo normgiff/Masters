@@ -1,0 +1,5 @@
+verilog isim_temp "RANDOM_GEN.v"
+verilog isim_temp "PULSE_GEN.v"
+verilog isim_temp "TOP.v"
+verilog isim_temp "TOP_TB.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

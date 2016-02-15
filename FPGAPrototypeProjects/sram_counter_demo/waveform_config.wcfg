@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TOP_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="36" />
+   <wvobject fp_name="/TOP_TB/SEED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SEED[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/INIT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INIT</obj_property>
+      <obj_property name="ObjectShortName">INIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/COUNTER_CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">COUNTER_CLK</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/COUNTER_RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">COUNTER_RST</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/WE_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WE_BAR</obj_property>
+      <obj_property name="ObjectShortName">WE_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/LED_OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LED_OUT[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/CHIP1_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CHIP1_DATA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CHIP1_DATA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/CHIP2_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CHIP2_DATA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CHIP2_DATA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/INIT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INIT</obj_property>
+      <obj_property name="ObjectShortName">INIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/SEED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SEED[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/COUNTER_CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">COUNTER_CLK</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/CHIP1_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CHIP1_DATA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CHIP1_DATA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/CHIP2_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CHIP2_DATA[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CHIP2_DATA[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/pulse" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/random_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">random_val[7:0]</obj_property>
+      <obj_property name="ObjectShortName">random_val[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/COUNTER_RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">COUNTER_RST</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/WE_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WE_BAR</obj_property>
+      <obj_property name="ObjectShortName">WE_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/LED_OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LED_OUT[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/CHIP1_ACTUAL_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CHIP1_ACTUAL_DATA[15:0,3:0]</obj_property>
+      <obj_property name="ObjectShortName">CHIP1_ACTUAL_DATA[15:0,3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/CHIP2_ACTUAL_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CHIP2_ACTUAL_DATA[15:0,3:0]</obj_property>
+      <obj_property name="ObjectShortName">CHIP2_ACTUAL_DATA[15:0,3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/PS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PS[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/NS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NS[2:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/state_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state_counter[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state_counter[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/load_seed" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">load_seed</obj_property>
+      <obj_property name="ObjectShortName">load_seed</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/get_next" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">get_next</obj_property>
+      <obj_property name="ObjectShortName">get_next</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/random_val_arr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">random_val_arr[15:0,7:0]</obj_property>
+      <obj_property name="ObjectShortName">random_val_arr[15:0,7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/IDLE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/GENERATE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">GENERATE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">GENERATE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/WRITE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WRITE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WRITE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/SWITCH" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SWITCH[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SWITCH[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/READ" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">READ[2:0]</obj_property>
+      <obj_property name="ObjectShortName">READ[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_TB/uut/VERIFY" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VERIFY[2:0]</obj_property>
+      <obj_property name="ObjectShortName">VERIFY[2:0]</obj_property>
+   </wvobject>
+</wave_config>

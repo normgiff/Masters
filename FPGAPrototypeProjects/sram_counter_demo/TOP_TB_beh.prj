@@ -1,0 +1,8 @@
+verilog work "MUX21.v"
+verilog work "DFF.v"
+verilog work "LFSR.v"
+verilog work "RANDOM_GEN.v"
+verilog work "PULSE_GEN.v"
+verilog work "TOP.v"
+verilog work "TOP_TB.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

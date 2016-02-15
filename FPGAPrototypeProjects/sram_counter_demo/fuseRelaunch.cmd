@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP_TB_isim_beh.exe" -prj "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/FPGAPrototypeProjects/sram_counter_demo/TOP_TB_beh.prj" "work.TOP_TB" "work.glbl" 
