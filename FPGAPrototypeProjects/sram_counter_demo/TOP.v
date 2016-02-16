@@ -40,21 +40,36 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 	output reg COUNTER_RST;
 	
 	// Counter clock.
-	reg [8:0] counter_clk_counter;
+	// Generate a 500 Hz clock for the counter using PULSE_GEN.
+	reg [9:0] counter_clk_counter;
+	reg write_ok; // Used to ensure WE_BAR is lowered after the counter address is stable.
+	reg read_ok;  // Used to ensure that we only read from SRAM during one clock cycle.
 	always@(posedge CLK) begin
+		read_ok <= 1'b0; // By default, do not read anything.
 		if (RST) begin
-			COUNTER_CLK <= 1'b1;
-			counter_clk_counter <= 9'b0;
+			COUNTER_CLK <= 1'b1; // Counter is negative-edge triggered.
+			counter_clk_counter <= 10'b0;
+			write_ok <= 1'b0;
 		end
-		else if (pulse && (PS == WRITE || PS == READ)) begin
-			// Lower the counter's clock and hold it for 64 clock cycles.
+		// If we receive a 1 MHz pulse, then we should lower the counter's clock
+		// only if we are reading/writing and are not ready to switch states or verify read results.
+		else if (pulse && NS != SWITCH && NS != VERIFY && (PS == WRITE || PS == READ)) begin
+			// Lower the counter's clock and hold it for 5 microseconds.
 			COUNTER_CLK <= 1'b0;
 		end
 		else if (COUNTER_CLK == 1'b0) begin
-			counter_clk_counter <= counter_clk_counter + 9'd1;
-			if (counter_clk_counter == 9'd500) begin
+			counter_clk_counter <= counter_clk_counter + 10'd1;
+			if (counter_clk_counter == 10'd500) begin
+				// After 5 microseconds, the address should be stable. Lower WE_BAR.
+				write_ok <= 1'b1;
+			end
+			else if (counter_clk_counter == 10'd1000) begin
+				// After 10 microseconds, stop writing. If we are reading, it's OK to do so for this
+				// one clockl cycle.
 				COUNTER_CLK <= 1'b1;
-				counter_clk_counter <= 9'd0;
+				counter_clk_counter <= 10'd0;
+				write_ok <= 1'b0;
+				read_ok <= 1'b1;
 			end
 		end
 	end
@@ -218,8 +233,8 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 	end
 	
 	// CHIP1 and CHIP2 data drivers
-	assign CHIP1_DATA = (PS == WRITE && WE_BAR == 0) ? random_val_arr[state_counter][7:4] : 4'bz;
-	assign CHIP2_DATA = (PS == WRITE && WE_BAR == 0) ? random_val_arr[state_counter][3:0] : 4'bz;
+	assign CHIP1_DATA = (WE_BAR == 0) ? random_val_arr[state_counter][7:4] : 4'bz;
+	assign CHIP2_DATA = (WE_BAR == 0) ? random_val_arr[state_counter][3:0] : 4'bz;
 	
 	// For values that must be latched onto
 	integer i;
@@ -231,7 +246,7 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 				random_val_arr[i] <= 8'b0;
 			end
 		end
-		else if (PS == READ) begin
+		else if (PS == READ && (read_ok || state_counter == 4'd0)) begin
 			CHIP1_ACTUAL_DATA[state_counter] <= CHIP1_DATA;
 			CHIP2_ACTUAL_DATA[state_counter] <= CHIP2_DATA;
 		end
@@ -245,11 +260,12 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 		get_next = 1'b0;
 		load_seed = 1'b0;
 		COUNTER_RST = 1'b0;
-		WE_BAR = 1'b0; // By default, set to write to avoid multiple-driver issues
+		WE_BAR = 1'b1; // By default, set to read to avoid overwriting data.
 		LED_OUT = 16'd0;
 		case(PS)
 			IDLE: begin
 				load_seed = 1'b1;
+				COUNTER_RST = 1'b1;
 			end
 			
 			GENERATE: begin
@@ -259,8 +275,12 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 			WRITE: begin
 				// After the counter changes, we must give the address time to settle.
 				// Transitioning address bits while keeping WE_BAR low is problematic!
-				if (COUNTER_CLK == 1'b0) begin
-					WE_BAR = 1'b1;
+				// Special case to ensure DATA[0] is written.
+				if (state_counter == 4'd0 && ~pulse) begin
+					WE_BAR = 1'b0;
+				end
+				else begin
+					WE_BAR = ~write_ok;
 				end
 			end
 			
@@ -268,17 +288,16 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 				COUNTER_RST = 1'b1;
 			end
 			
-			// Set to read-mode to stop writing.
-			// CHIPX_DATA will be high-z.
 			WAIT: begin
-				WE_BAR = 1'b1;
+				// Do nothing
 			end
 			
 			READ: begin
-				WE_BAR = 1'b1;
+				// Handled by default assignments
 			end
 			
 			VERIFY: begin
+				
 				LED_OUT[0] = ({CHIP1_ACTUAL_DATA[0], CHIP2_ACTUAL_DATA[0]} == random_val_arr[0]);
 				LED_OUT[1] = ({CHIP1_ACTUAL_DATA[1], CHIP2_ACTUAL_DATA[1]} == random_val_arr[1]);
 				LED_OUT[2] = ({CHIP1_ACTUAL_DATA[2], CHIP2_ACTUAL_DATA[2]} == random_val_arr[2]);
@@ -295,6 +314,25 @@ module TOP(CLK, RST, INIT, SEED, COUNTER_CLK, COUNTER_RST, WE_BAR, CHIP1_DATA, C
 				LED_OUT[13] = ({CHIP1_ACTUAL_DATA[13], CHIP2_ACTUAL_DATA[13]} == random_val_arr[13]);
 				LED_OUT[14] = ({CHIP1_ACTUAL_DATA[14], CHIP2_ACTUAL_DATA[14]} == random_val_arr[14]);
 				LED_OUT[15] = ({CHIP1_ACTUAL_DATA[15], CHIP2_ACTUAL_DATA[15]} == random_val_arr[15]);
+				
+				/* Just one chip.
+				LED_OUT[0] = ({CHIP1_ACTUAL_DATA[0], 4'b0000} == {random_val_arr[0] & 8'b11110000});
+				LED_OUT[1] = ({CHIP1_ACTUAL_DATA[1], 4'b0000} == {random_val_arr[1] & 8'b11110000});
+				LED_OUT[2] = ({CHIP1_ACTUAL_DATA[2], 4'b0000} == {random_val_arr[2] & 8'b11110000});
+				LED_OUT[3] = ({CHIP1_ACTUAL_DATA[3], 4'b0000} == {random_val_arr[3] & 8'b11110000});
+				LED_OUT[4] = ({CHIP1_ACTUAL_DATA[4], 4'b0000} == {random_val_arr[4] & 8'b11110000});
+				LED_OUT[5] = ({CHIP1_ACTUAL_DATA[5], 4'b0000} == {random_val_arr[5] & 8'b11110000});
+				LED_OUT[6] = ({CHIP1_ACTUAL_DATA[6], 4'b0000} == {random_val_arr[6] & 8'b11110000});
+				LED_OUT[7] = ({CHIP1_ACTUAL_DATA[7], 4'b0000} == {random_val_arr[7] & 8'b11110000});
+				LED_OUT[8] = ({CHIP1_ACTUAL_DATA[8], 4'b0000} == {random_val_arr[8] & 8'b11110000});
+				LED_OUT[9] = ({CHIP1_ACTUAL_DATA[9], 4'b0000} == {random_val_arr[9] & 8'b11110000});
+				LED_OUT[10] = ({CHIP1_ACTUAL_DATA[10], 4'b0000} == {random_val_arr[10] & 8'b11110000});
+				LED_OUT[11] = ({CHIP1_ACTUAL_DATA[11], 4'b0000} == {random_val_arr[11] & 8'b11110000});
+				LED_OUT[12] = ({CHIP1_ACTUAL_DATA[12], 4'b0000} == {random_val_arr[12] & 8'b11110000});
+				LED_OUT[13] = ({CHIP1_ACTUAL_DATA[13], 4'b0000} == {random_val_arr[13] & 8'b11110000});
+				LED_OUT[14] = ({CHIP1_ACTUAL_DATA[14], 4'b0000} == {random_val_arr[14] & 8'b11110000});
+				LED_OUT[15] = ({CHIP1_ACTUAL_DATA[15], 4'b0000} == {random_val_arr[15] & 8'b11110000});
+				*/
 			end
 		endcase
 	end

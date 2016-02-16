@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: TOP.prj
 
@@ -147,19 +147,21 @@ Synthesizing Unit <TOP>.
         READ = 3'b100
         VERIFY = 3'b101
         WAIT = 3'b110
-    Found 9-bit register for signal <counter_clk_counter>.
+    Found 1-bit register for signal <COUNTER_CLK>.
+    Found 10-bit register for signal <counter_clk_counter>.
+    Found 1-bit register for signal <write_ok>.
     Found 3-bit register for signal <PS>.
     Found 4-bit register for signal <state_counter>.
-    Found 64-bit register for signal <n0136[63:0]>.
-    Found 64-bit register for signal <n0137[63:0]>.
-    Found 128-bit register for signal <n0142[127:0]>.
-    Found 1-bit register for signal <COUNTER_CLK>.
+    Found 64-bit register for signal <n0161[63:0]>.
+    Found 64-bit register for signal <n0162[63:0]>.
+    Found 128-bit register for signal <n0167[127:0]>.
+    Found 1-bit register for signal <read_ok>.
     Found finite state machine <FSM_0> for signal <PS>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
     | Transitions        | 18                                             |
     | Inputs             | 4                                              |
-    | Outputs            | 11                                             |
+    | Outputs            | 10                                             |
     | Clock              | CLK (rising_edge)                              |
     | Reset              | RST (positive)                                 |
     | Reset type         | synchronous                                    |
@@ -167,40 +169,41 @@ Synthesizing Unit <TOP>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit subtractor for signal <state_counter[3]_GND_1_o_sub_24_OUT> created at line 140.
-    Found 9-bit adder for signal <counter_clk_counter[8]_GND_1_o_add_4_OUT> created at line 54.
-    Found 4-bit adder for signal <state_counter[3]_GND_1_o_add_17_OUT> created at line 124.
-    Found 4-bit 16-to-1 multiplexer for signal <state_counter[3]_random_val_arr[15][7]_wide_mux_49_OUT> created at line 221.
-    Found 4-bit 16-to-1 multiplexer for signal <state_counter[3]_random_val_arr[15][3]_wide_mux_53_OUT> created at line 222.
-    Found 1-bit tristate buffer for signal <CHIP1_DATA<3>> created at line 221
-    Found 1-bit tristate buffer for signal <CHIP1_DATA<2>> created at line 221
-    Found 1-bit tristate buffer for signal <CHIP1_DATA<1>> created at line 221
-    Found 1-bit tristate buffer for signal <CHIP1_DATA<0>> created at line 221
-    Found 1-bit tristate buffer for signal <CHIP2_DATA<3>> created at line 222
-    Found 1-bit tristate buffer for signal <CHIP2_DATA<2>> created at line 222
-    Found 1-bit tristate buffer for signal <CHIP2_DATA<1>> created at line 222
-    Found 1-bit tristate buffer for signal <CHIP2_DATA<0>> created at line 222
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[0][3]_random_val_arr[0][7]_equal_121_o> created at line 282
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[1][3]_random_val_arr[1][7]_equal_122_o> created at line 283
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[2][3]_random_val_arr[2][7]_equal_123_o> created at line 284
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[3][3]_random_val_arr[3][7]_equal_124_o> created at line 285
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[4][3]_random_val_arr[4][7]_equal_125_o> created at line 286
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[5][3]_random_val_arr[5][7]_equal_126_o> created at line 287
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[6][3]_random_val_arr[6][7]_equal_127_o> created at line 288
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[7][3]_random_val_arr[7][7]_equal_128_o> created at line 289
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[8][3]_random_val_arr[8][7]_equal_129_o> created at line 290
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[9][3]_random_val_arr[9][7]_equal_130_o> created at line 291
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[10][3]_random_val_arr[10][7]_equal_131_o> created at line 292
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[11][3]_random_val_arr[11][7]_equal_132_o> created at line 293
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[12][3]_random_val_arr[12][7]_equal_133_o> created at line 294
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[13][3]_random_val_arr[13][7]_equal_134_o> created at line 295
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[14][3]_random_val_arr[14][7]_equal_135_o> created at line 296
-    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[15][3]_random_val_arr[15][7]_equal_136_o> created at line 297
+    Found 4-bit subtractor for signal <state_counter[3]_GND_1_o_sub_28_OUT> created at line 155.
+    Found 10-bit adder for signal <counter_clk_counter[9]_GND_1_o_add_6_OUT> created at line 61.
+    Found 4-bit adder for signal <state_counter[3]_GND_1_o_add_21_OUT> created at line 139.
+    Found 3-bit 8-to-1 multiplexer for signal <NS> created at line 173.
+    Found 4-bit 16-to-1 multiplexer for signal <state_counter[3]_random_val_arr[15][7]_wide_mux_52_OUT> created at line 236.
+    Found 4-bit 16-to-1 multiplexer for signal <state_counter[3]_random_val_arr[15][3]_wide_mux_55_OUT> created at line 237.
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<3>> created at line 236
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<2>> created at line 236
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<1>> created at line 236
+    Found 1-bit tristate buffer for signal <CHIP1_DATA<0>> created at line 236
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<3>> created at line 237
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<2>> created at line 237
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<1>> created at line 237
+    Found 1-bit tristate buffer for signal <CHIP2_DATA<0>> created at line 237
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[0][3]_random_val_arr[0][7]_equal_124_o> created at line 301
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[1][3]_random_val_arr[1][7]_equal_125_o> created at line 302
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[2][3]_random_val_arr[2][7]_equal_126_o> created at line 303
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[3][3]_random_val_arr[3][7]_equal_127_o> created at line 304
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[4][3]_random_val_arr[4][7]_equal_128_o> created at line 305
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[5][3]_random_val_arr[5][7]_equal_129_o> created at line 306
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[6][3]_random_val_arr[6][7]_equal_130_o> created at line 307
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[7][3]_random_val_arr[7][7]_equal_131_o> created at line 308
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[8][3]_random_val_arr[8][7]_equal_132_o> created at line 309
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[9][3]_random_val_arr[9][7]_equal_133_o> created at line 310
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[10][3]_random_val_arr[10][7]_equal_134_o> created at line 311
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[11][3]_random_val_arr[11][7]_equal_135_o> created at line 312
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[12][3]_random_val_arr[12][7]_equal_136_o> created at line 313
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[13][3]_random_val_arr[13][7]_equal_137_o> created at line 314
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[14][3]_random_val_arr[14][7]_equal_138_o> created at line 315
+    Found 8-bit comparator equal for signal <CHIP1_ACTUAL_DATA[15][3]_random_val_arr[15][7]_equal_139_o> created at line 316
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred 270 D-type flip-flop(s).
+	inferred 273 D-type flip-flop(s).
 	inferred  16 Comparator(s).
-	inferred  57 Multiplexer(s).
+	inferred  59 Multiplexer(s).
 	inferred   8 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <TOP> synthesized.
@@ -208,12 +211,11 @@ Unit <TOP> synthesized.
 Synthesizing Unit <PULSE_GEN>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\FPGAPrototypeProjects\sram_counter_demo\PULSE_GEN.v".
     Found 1-bit register for signal <PULSE>.
-    Found 10-bit register for signal <counter>.
-    Found 10-bit adder for signal <counter[9]_GND_2_o_add_2_OUT> created at line 27.
+    Found 17-bit register for signal <counter>.
+    Found 17-bit adder for signal <counter[16]_GND_2_o_add_2_OUT> created at line 27.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  11 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred  18 D-type flip-flop(s).
 Unit <PULSE_GEN> synthesized.
 
 Synthesizing Unit <RANDOM_GEN>.
@@ -246,22 +248,22 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 4
  10-bit adder                                          : 1
+ 17-bit adder                                          : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 1
- 9-bit adder                                           : 1
-# Registers                                            : 40
- 1-bit register                                        : 34
+# Registers                                            : 42
+ 1-bit register                                        : 36
  10-bit register                                       : 1
  128-bit register                                      : 1
+ 17-bit register                                       : 1
  4-bit register                                        : 1
  64-bit register                                       : 2
- 9-bit register                                        : 1
 # Comparators                                          : 16
  8-bit comparator equal                                : 16
-# Multiplexers                                         : 90
- 1-bit 2-to-1 multiplexer                              : 35
- 10-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 91
+ 1-bit 2-to-1 multiplexer                              : 36
  16-bit 2-to-1 multiplexer                             : 1
+ 3-bit 8-to-1 multiplexer                              : 1
  4-bit 16-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 35
  8-bit 2-to-1 multiplexer                              : 16
@@ -295,14 +297,15 @@ Macro Statistics
  4-bit subtractor                                      : 1
 # Counters                                             : 2
  10-bit up counter                                     : 1
- 9-bit up counter                                      : 1
-# Registers                                            : 294
- Flip-Flops                                            : 294
+ 17-bit up counter                                     : 1
+# Registers                                            : 296
+ Flip-Flops                                            : 296
 # Comparators                                          : 16
  8-bit comparator equal                                : 16
-# Multiplexers                                         : 185
- 1-bit 2-to-1 multiplexer                              : 163
+# Multiplexers                                         : 187
+ 1-bit 2-to-1 multiplexer                              : 164
  16-bit 2-to-1 multiplexer                             : 1
+ 3-bit 8-to-1 multiplexer                              : 1
  4-bit 16-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 3
  8-bit 2-to-1 multiplexer                              : 16
@@ -338,6 +341,10 @@ Optimizing unit <LFSR> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 1.
+FlipFlop PS_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop PS_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop state_counter_0 has been replicated 1 time(s)
+FlipFlop state_counter_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -345,8 +352,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 316
- Flip-Flops                                            : 316
+# Registers                                            : 330
+ Flip-Flops                                            : 330
 
 =========================================================================
 
@@ -369,23 +376,24 @@ Top Level Output File Name         : TOP.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 507
+# BELS                             : 558
 #      GND                         : 1
-#      INV                         : 1
-#      LUT1                        : 9
+#      INV                         : 2
+#      LUT1                        : 25
 #      LUT2                        : 20
-#      LUT3                        : 3
-#      LUT4                        : 14
-#      LUT5                        : 36
-#      LUT6                        : 360
-#      MUXCY                       : 17
-#      MUXF7                       : 18
+#      LUT3                        : 5
+#      LUT4                        : 18
+#      LUT5                        : 44
+#      LUT6                        : 363
+#      MUXCY                       : 25
+#      MUXF7                       : 19
 #      MUXF8                       : 8
 #      VCC                         : 1
-#      XORCY                       : 19
-# FlipFlops/Latches                : 316
-#      FDR                         : 14
-#      FDRE                        : 301
+#      XORCY                       : 27
+# FlipFlops/Latches                : 330
+#      FD                          : 14
+#      FDR                         : 19
+#      FDRE                        : 296
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -401,16 +409,16 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             316  out of  126800     0%  
- Number of Slice LUTs:                  443  out of  63400     0%  
-    Number used as Logic:               443  out of  63400     0%  
+ Number of Slice Registers:             330  out of  126800     0%  
+ Number of Slice LUTs:                  477  out of  63400     0%  
+    Number used as Logic:               477  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    443
-   Number with an unused Flip Flop:     127  out of    443    28%  
-   Number with an unused LUT:             0  out of    443     0%  
-   Number of fully used LUT-FF pairs:   316  out of    443    71%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    481
+   Number with an unused Flip Flop:     151  out of    481    31%  
+   Number with an unused LUT:             4  out of    481     0%  
+   Number of fully used LUT-FF pairs:   326  out of    481    67%  
+   Number of unique control sets:         8
 
 IO Utilization: 
  Number of IOs:                          38
@@ -440,7 +448,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 316   |
+CLK                                | BUFGP                  | 330   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -451,8 +459,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.499ns (Maximum Frequency: 400.160MHz)
-   Minimum input arrival time before clock: 1.596ns
+   Minimum period: 2.530ns (Maximum Frequency: 395.257MHz)
+   Minimum input arrival time before clock: 1.597ns
    Maximum output required time after clock: 2.215ns
    Maximum combinational path delay: No path found
 
@@ -462,60 +470,51 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 2.499ns (frequency: 400.160MHz)
-  Total number of paths / destination ports: 3705 / 626
+  Clock period: 2.530ns (frequency: 395.257MHz)
+  Total number of paths / destination ports: 4644 / 640
 -------------------------------------------------------------------------
-Delay:               2.499ns (Levels of Logic = 12)
-  Source:            pg0/counter_5 (FF)
-  Destination:       pg0/counter_9 (FF)
+Delay:               2.530ns (Levels of Logic = 3)
+  Source:            counter_clk_counter_3 (FF)
+  Destination:       counter_clk_counter_9 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: pg0/counter_5 to pg0/counter_9
+  Data Path: counter_clk_counter_3 to counter_clk_counter_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.361   0.688  pg0/counter_5 (pg0/counter_5)
-     LUT5:I0->O           11   0.097   0.342  pg0/counter[9]_PWR_2_o_equal_2_o<9>_SW0 (N5)
-     LUT6:I5->O            1   0.097   0.000  pg0/Mcount_counter_lut<0> (pg0/Mcount_counter_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  pg0/Mcount_counter_cy<0> (pg0/Mcount_counter_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<1> (pg0/Mcount_counter_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<2> (pg0/Mcount_counter_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<3> (pg0/Mcount_counter_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<4> (pg0/Mcount_counter_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<5> (pg0/Mcount_counter_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<6> (pg0/Mcount_counter_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  pg0/Mcount_counter_cy<7> (pg0/Mcount_counter_cy<7>)
-     MUXCY:CI->O           0   0.023   0.000  pg0/Mcount_counter_cy<8> (pg0/Mcount_counter_cy<8>)
-     XORCY:CI->O           1   0.370   0.000  pg0/Mcount_counter_xor<9> (pg0/Mcount_counter9)
-     FDR:D                     0.008          pg0/counter_9
+     FD:C->Q               8   0.361   0.726  counter_clk_counter_3 (counter_clk_counter_3)
+     LUT6:I0->O            1   0.097   0.000  _n09381_SW0_SW1_G (N47)
+     MUXF7:I1->O           5   0.279   0.314  _n09381_SW0_SW1 (N27)
+     LUT6:I5->O            7   0.097   0.307  Mcount_counter_clk_counter_val1 (Mcount_counter_clk_counter_val)
+     FDRE:R                    0.349          counter_clk_counter_9
     ----------------------------------------
-    Total                      2.499ns (1.470ns logic, 1.029ns route)
-                                       (58.8% logic, 41.2% route)
+    Total                      2.530ns (1.183ns logic, 1.347ns route)
+                                       (46.8% logic, 53.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 478 / 478
+  Total number of paths / destination ports: 496 / 493
 -------------------------------------------------------------------------
-Offset:              1.596ns (Levels of Logic = 2)
+Offset:              1.597ns (Levels of Logic = 2)
   Source:            RST (PAD)
-  Destination:       counter_clk_counter_1 (FF)
+  Destination:       counter_clk_counter_9 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST to counter_clk_counter_1
+  Data Path: RST to counter_clk_counter_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           309   0.001   0.833  RST_IBUF (RST_IBUF)
-     LUT5:I0->O            9   0.097   0.316  Mcount_counter_clk_counter_val3 (Mcount_counter_clk_counter_val)
-     FDRE:R                    0.349          counter_clk_counter_0
+     IBUF:I->O           313   0.001   0.843  RST_IBUF (RST_IBUF)
+     LUT6:I0->O            7   0.097   0.307  Mcount_counter_clk_counter_val1 (Mcount_counter_clk_counter_val)
+     FDRE:R                    0.349          counter_clk_counter_9
     ----------------------------------------
-    Total                      1.596ns (0.447ns logic, 1.149ns route)
+    Total                      1.597ns (0.447ns logic, 1.150ns route)
                                        (28.0% logic, 72.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 559 / 27
+  Total number of paths / destination ports: 605 / 27
 -------------------------------------------------------------------------
 Offset:              2.215ns (Levels of Logic = 3)
   Source:            CHIP1_ACTUAL_DATA_0_62 (FF)
@@ -544,18 +543,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    2.499|         |         |         |
+CLK            |    2.530|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.50 secs
+Total CPU time to Xst completion: 9.24 secs
  
 --> 
 
-Total memory usage is 452308 kilobytes
+Total memory usage is 437332 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

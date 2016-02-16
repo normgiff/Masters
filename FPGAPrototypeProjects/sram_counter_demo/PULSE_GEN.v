@@ -11,20 +11,20 @@ module PULSE_GEN(CLK, RST, PULSE);
 	
 	output reg PULSE;
 	
-	reg [9:0] counter;
+	reg [16:0] counter;
 	
 	always@(posedge CLK) begin
 		if(RST) begin
-			counter <= 10'd0;
+			counter <= 17'd0;
 			PULSE <= 1'b0;
 		end
 		else begin
-			if(counter == 10'd1000) begin
-				counter <= 10'd0;
+			if(counter == 17'd100000) begin
+				counter <= 17'd0;
 				PULSE <= 1'b1;
 			end
 			else begin
-				counter <= counter + 10'd1;
+				counter <= counter + 17'd1;
 				PULSE <= 1'b0;
 			end
 		end
