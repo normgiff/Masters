@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+** Profile: "SCHEMATIC1-radj_sweep"  [ \\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\adjustablevoltageregulator2-pspicefiles\schematic1\radj_sweep.sim ] 
+=======
+** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltageregulator2-pspicefiles\schematic1\radj_sweep.sim ] 
+>>>>>>> 8fea2fa4b105c6ae90690b2f46131729f261ea6a
+
+** Creating circuit file "radj_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/diode.lib" 
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/opamp.lib" 
+* From [PSPICE NETLIST] section of X:\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM RVAL 0.1 2k 20 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

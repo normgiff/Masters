@@ -1,0 +1,27 @@
+Headers: 
+BBB Shield: 2 SMD Male Headers
+Numato Shield: 4 SMD Female Headers (already purchased)
+DUT Board: 4 SMD Female Headers
+
+Power circuitry: 
+LM385 OPAMP x2
+1u CAP x4
+D1N4004 DIODE x4
+LM317K OPAMP x2
+DIGITAL POTENTIOMETER x2
+30k resistor x2
+15k resistor x2
+
+Template registers: 
+SN75AHCT594 x16
+
+Tristates: 
+74LVC1G125GW,125 x124
+
+Translators: 
+MAX3008EUP+ x32
+
+Shift Registers: 
+74HC597PW,118 x16
+Counter (need to get part number) x1 (or x4)
+71V016SA15PHG8 x8

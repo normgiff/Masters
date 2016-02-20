@@ -1,7 +1,7 @@
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:19:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-transient1"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRe
 
 
  ****     CIRCUIT DESCRIPTION
@@ -12,7 +12,7 @@
 
 
 
-** Creating circuit file "radj_sweep.cir" 
+** Creating circuit file "transient1.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
 
 *Libraries: 
@@ -24,7 +24,7 @@
 .lib "nomd.lib" 
 
 *Analysis directives: 
-.DC LIN PARAM RVAL 0.001 1.5k 100 
+.TRAN  0 1000ns 0 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -34,7 +34,7 @@
 **** INCLUDING SCHEMATIC1.net ****
 * source ADJUSTABLEVOLTAGEREGULATOR2
 V_V2         0 N15128 DC 5V AC 0 0
-V_V1         N15010 0 DC 9 AC 0 0
+V_V1         N15010 0 DC 7.5 AC 0 0
 R_R6         N15138 N15128  30k TC=0,0 
 R_R5         0 N15138  10k TC=0,0 
 X_U2         N15138 N15076 N15010 N15128 N15076 LM675
@@ -44,15 +44,14 @@ D_D6         N15455 N15483 D1N4001
 R_R7         N15455 N15483  250 TC=0,0 
 C_C2         N15076 N15483  1u  TC=0,0 
 C_C1         N15076 N15455  1u  TC=0,0 
-R_R8         N15076 N15455  {RVAL} TC=0,0 
-.PARAM  rval=2k
+R_R8         N15076 N15455  1k TC=0,0 
 
-**** RESUMING radj_sweep.cir ****
+**** RESUMING transient1.cir ****
 .END
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:19:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-transient1"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRe
 
 
  ****     Diode MODEL PARAMETERS
@@ -76,9 +75,9 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
            M     .44                                                         
 
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:19:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-transient1"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRe
 
 
  ****     BJT MODEL PARAMETERS
@@ -115,9 +114,9 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
            D     .52             .87         
 
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:19:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-transient1"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRe
 
 
  ****     Junction FET MODEL PARAMETERS
@@ -133,13 +132,71 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
          VTO   -1            
         BETA   50.000000E-06 
 
+
+**** 02/20/16 14:19:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-transient1"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRe
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N15010)    7.5000 (N15076)   -1.2484 (N15128)   -5.0000 (N15138)   -1.2485     
+
+(N15455)    3.7950 (N15483)    5.0434 (X_U1.4)    5.0450 (X_U1.5)    6.1749     
+
+(X_U1.6)    6.1863 (X_U1.7)    6.1864 (X_U1.8)    5.2081 (X_U1.9)    5.2081     
+
+(X_U2.6) 648.6E-06 (X_U2.7)   -1.2487 (X_U2.8)   -1.2487 (X_U2.9)    0.0000     
+
+(X_U1.10)    5.2081                   (X_U1.11)   10.6470                       
+
+(X_U1.12)   13.7880                   (X_U1.13)    6.3633                       
+
+(X_U1.15)    6.1749                   (X_U2.10)    -.5099                       
+
+(X_U2.11)   -4.8833                   (X_U2.12)   -4.8832                       
+
+(X_U2.13)    -.6005                   (X_U2.14)    -.6006                       
+
+(X_U2.53)    3.5000                   (X_U2.54)   -1.0000                       
+
+(X_U2.90)   -5.0436                   (X_U2.91) 3000.0000                       
+
+(X_U2.92)-3000.0000                   (X_U2.99)    1.2500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -4.717E-03
+    V_V1        -9.635E-03
+    X_U2.vb      6.486E-09
+    X_U2.vc      4.749E-12
+    X_U2.ve     -1.190E-11
+    X_U2.vlim   -5.044E-03
+    X_U2.vlp    -3.005E-09
+    X_U2.vln    -2.995E-09
+    X_U1.VREF   -1.647E-11
+
+    TOTAL POWER DISSIPATION   9.59E-02  WATTS
+
 
 
           JOB CONCLUDED
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:19:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-transient1"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRe
 
 
  ****     JOB STATISTICS SUMMARY
@@ -149,5 +206,5 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .05
+  Total job time (using Solver 1)   =         .02
 
