@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-whatever"  [ \\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\AdjustableVoltageRegulator2-PSpiceFiles\SCHEMATIC1\whatever.sim ] 
+
+** Creating circuit file "whatever.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/diode.lib" 
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/opamp.lib" 
+* From [PSPICE NETLIST] section of X:\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

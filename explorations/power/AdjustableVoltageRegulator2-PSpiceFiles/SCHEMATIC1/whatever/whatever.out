@@ -1,0 +1,55 @@
+
+**** 02/20/16 13:42:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-whatever"  [ \\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\AdjustableVoltageRegu
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "whatever.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/diode.lib" 
+----------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/opamp.lib" 
+* From [PSPICE NETLIST] section of X:\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+----------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ADJUSTABLEVOLTAGEREGULATOR2
+V_V2         0 N15128 DC 5V AC 0 0
+V_V1         N15010 0 DC 9 AC 0 0
+R_R6         N15138 N15128  30k TC=0,0 
+R_R5         0 N15138  10k TC=0,0 
+X_U2         N15138 N15076 N15010 N15128 N15076 LM675
+X_U1         N15010 N15455 N15483 LM317
+D_D1         N15483 N15010 D1N4001 
+D_D6         N15455 N15483 D1N4001 
+R_R7         N15455 N15483  250 TC=0,0 
+C_C2         N15076 N15483  1u  TC=0,0 
+C_C1         N15076 N15455  1u  TC=0,0 
+R_R8         N15076 N15455  2k TC=0,0 
+
+**** RESUMING whatever.cir ****
+.END
+

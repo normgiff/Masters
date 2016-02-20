@@ -1,23 +1,23 @@
 @OrCAD Simulation Server Version: 1.0
 
-@Settings: 1 1
+@Settings: 0 1
 @General:
-ProfileName= "radj_sweep" 
-ProfileFile= "radj_sweep.sim" 
+ProfileName= "whatever" 
+ProfileFile= "whatever.sim" 
 Connectivity= "SCHEMATIC1.net" 
-NetlistFile= "radj_sweep.cir" 
-DataFile= "radj_sweep.dat" 
-OutFile= "radj_sweep.out" 
+NetlistFile= "whatever.cir" 
+DataFile= "whatever.dat" 
+OutFile= "whatever.out" 
 Notes=
 @#$BEGINNOTES
 @#$ENDNOTES
 @End General
-@Analysis: 0 0
+@Analysis: 0 1
 +0 0 0 0 
-+0 "100n" 
++0 "1000ns" 
 +1 "" 
 +2 "0" 
-+3 "1ns" 
++3 "" 
 +4 "" 
 +5 "" 
 +6 "" 
@@ -31,15 +31,15 @@ Notes=
 +4 "" 
 +5 "" 
 @End Analysis
-@Analysis: 2 1
-+0 2
+@Analysis: 2 0
++0 0
 +0 "" 
-+1 "RVAL" 
++1 "" 
 +2 "" 
 +3 "" 
-+4 "0.1" 
-+5 "2k" 
-+6 "20" 
++4 "" 
++5 "" 
++6 "" 
 +7 "" 
 @End Analysis
 @Analysis: 3 0
@@ -49,7 +49,7 @@ Notes=
 +2 "" 
 @End Analysis
 @Analysis: 4 0
-+0 0 1 0 0 0 1 0 0 0 1
++0 0 1 0 0 0 0 0 0 0 1
 +0 "" 
 +1 "" 
 +2 "" 
@@ -109,7 +109,7 @@ SaveFile 0 ""
 +7 "" 
 @End Analysis
 @Analysis: 11 1
-+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
++ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
 + 0 0 0 0 0 0 0 0 0
 @End Analysis
 @Analysis: 12 0
@@ -130,7 +130,7 @@ SaveFile 0 ""
 @End Analysis
 @Analysis: 17 0
 +0 "-1" 
-+1 "-1" 
++1 "" 
 +2 "-1" 
 +3 "-1" 
 +4 "1" 

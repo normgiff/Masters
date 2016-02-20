@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-transient"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PSpiceFiles\SCHEMATIC1\TRANSIENT.sim ] 
+
+** Creating circuit file "TRANSIENT.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/diode.lib" 
+.LIB "C:/Users/dkhoury/OneDrive/Documents/pspice_libraries/opamp.lib" 
+* From [PSPICE NETLIST] section of C:\Users\dkhoury\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
