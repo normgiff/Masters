@@ -1,7 +1,7 @@
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:41:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltagere
 
 
  ****     CIRCUIT DESCRIPTION
@@ -24,7 +24,7 @@
 .lib "nomd.lib" 
 
 *Analysis directives: 
-.DC LIN PARAM RVAL 0.001 1.5k 100 
+.DC LIN PARAM RVAL 0.1 2k 20 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -34,25 +34,28 @@
 **** INCLUDING SCHEMATIC1.net ****
 * source ADJUSTABLEVOLTAGEREGULATOR2
 V_V2         0 N15128 DC 5V AC 0 0
-V_V1         N15010 0 DC 9 AC 0 0
+V_V1         N17510 0 DC 12 AC 0 0
 R_R6         N15138 N15128  30k TC=0,0 
 R_R5         0 N15138  10k TC=0,0 
-X_U2         N15138 N15076 N15010 N15128 N15076 LM675
-X_U1         N15010 N15455 N15483 LM317
-D_D1         N15483 N15010 D1N4001 
+X_U2         N15138 N15076 N15048 N15128 N15076 LM675
+X_U1         N15048 N15455 N15483 LM317
+D_D1         N15483 N15048 D1N4001 
 D_D6         N15455 N15483 D1N4001 
 R_R7         N15455 N15483  250 TC=0,0 
 C_C2         N15076 N15483  1u  TC=0,0 
 C_C1         N15076 N15455  1u  TC=0,0 
 R_R8         N15076 N15455  {RVAL} TC=0,0 
+R_R9         0 N17517  7Meg TC=0,0 
+R_R10         N17510 N17517  5Meg TC=0,0 
+X_U4         N17517 N15048 N17510 0 N15048 LM675
 .PARAM  rval=2k
 
 **** RESUMING radj_sweep.cir ****
 .END
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:41:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltagere
 
 
  ****     Diode MODEL PARAMETERS
@@ -75,10 +78,16 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
           VJ     .3245                                                       
            M     .44                                                         
 
-
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+               X_U4.dx         X_U4.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 02/20/16 14:41:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltagere
 
 
  ****     BJT MODEL PARAMETERS
@@ -89,35 +98,35 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
 
 
 
-               X_U2.qx         X_U1.QPASSMOD   
-               PNP             NPN             
-       LEVEL    1               1            
-          IS  800.000000E-18   30.000000E-15 
-          BF  300              50            
-          NF    1               1.701        
-         VAF                    1.5          
-          BR    1               1            
-          NR    1               1            
-         ISS    0               0            
-          RE    0               0            
-          RC    0               0            
-         CJE    0               0            
-         VJE     .75             .75         
-         CJC    0               0            
-         VJC     .75             .75         
-         MJC     .33             .33         
-        XCJC    1               1            
-         CJS    0               0            
-         VJS     .75             .75         
-          KF    0               0            
-          AF    1               1            
-          CN    2.2             2.42         
-           D     .52             .87         
+               X_U2.qx         X_U1.QPASSMOD   X_U4.qx         
+               PNP             NPN             PNP             
+       LEVEL    1               1               1            
+          IS  800.000000E-18   30.000000E-15  800.000000E-18 
+          BF  300              50             300            
+          NF    1               1.701           1            
+         VAF                    1.5                          
+          BR    1               1               1            
+          NR    1               1               1            
+         ISS    0               0               0            
+          RE    0               0               0            
+          RC    0               0               0            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.2             2.42            2.2          
+           D     .52             .87             .52         
 
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:41:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltagere
 
 
  ****     Junction FET MODEL PARAMETERS
@@ -137,9 +146,9 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
 
           JOB CONCLUDED
 
-**** 12/02/15 20:28:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 02/20/16 14:41:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
- ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\Desktop\SourceTree-Masters\explorations\power\AdjustableVoltageRegulator2-PS
+ ** Profile: "SCHEMATIC1-radj_sweep"  [ C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltagere
 
 
  ****     JOB STATISTICS SUMMARY
@@ -149,5 +158,5 @@ R_R8         N15076 N15455  {RVAL} TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .05
+  Total job time (using Solver 1)   =         .03
 
