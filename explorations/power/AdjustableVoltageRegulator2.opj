@@ -36,15 +36,20 @@
       (Sort User)))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (PartMRUSelector
-    (PARAM
-      (FullPartName "PARAM.Normal")
+    (LM675
+      (FullPartName "LM675.Normal")
       (LibraryName
-         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+         "C:\USERS\DKHOURY\ONEDRIVE\DOCUMENTS\PSPICE_LIBRARIES\OPAMP.OLB")
       (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
       (LibraryName
          "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
       (DeviceIndex "0")))
   (GlobalState
     (FileView
@@ -68,8 +73,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -9 -38 64 1460 64 396")
-        (Scroll "-258 0")
-        (Zoom "100")
+        (Scroll "-180 44")
+        (Zoom "116")
         (Occurrence "/"))
       (Path
          "C:\USERS\DKHOURY\ONEDRIVE\DOCUMENTS\SOURCETREE-MASTERS\EXPLORATIONS\POWER\ADJUSTABLEVOLTAGEREGULATOR2.DSN")
