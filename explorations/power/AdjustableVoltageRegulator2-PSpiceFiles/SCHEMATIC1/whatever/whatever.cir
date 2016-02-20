@@ -1,6 +1,6 @@
-** Profile: "SCHEMATIC1-radj_sweep"  [ \\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\adjustablevoltageregulator2-pspicefiles\schematic1\radj_sweep.sim ] 
+** Profile: "SCHEMATIC1-whatever"  [ \\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\AdjustableVoltageRegulator2-PSpiceFiles\SCHEMATIC1\whatever.sim ] 
 
-** Creating circuit file "radj_sweep.cir" 
+** Creating circuit file "whatever.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
 
 *Libraries: 
@@ -12,7 +12,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.DC LIN PARAM RVAL 0.001 1.5k 100 
+.TRAN  0 1000ns 0 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
