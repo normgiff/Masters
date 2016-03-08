@@ -1,0 +1,32 @@
+Added Component: Designator=VT1_U_VT_WRP1(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP2(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP3(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP4(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP5(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP6(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP7(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP8(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP9(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP10(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP11(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP12(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP13(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP14(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP15(VT_TSSOP20)
+Added Component: Designator=VT1_U_VT_WRP16(VT_TSSOP20)
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component VT1_U_VT_WRP1 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component VT1_U_VT_WRP2 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component VT1_U_VT_WRP3 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component VT1_U_VT_WRP4 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component VT1_U_VT_WRP5 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component VT1_U_VT_WRP6 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component VT1_U_VT_WRP7 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP8 Member=Component VT1_U_VT_WRP8 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP9 Member=Component VT1_U_VT_WRP9 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP10 Member=Component VT1_U_VT_WRP10 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP11 Member=Component VT1_U_VT_WRP11 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP12 Member=Component VT1_U_VT_WRP12 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP13 Member=Component VT1_U_VT_WRP13 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP14 Member=Component VT1_U_VT_WRP14 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP15 Member=Component VT1_U_VT_WRP15 (VT1) MAX3012EUP+
+Added Member To Class: ClassName=U_VT_WRP16 Member=Component VT1_U_VT_WRP16 (VT1) MAX3012EUP+
