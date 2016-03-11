@@ -101,7 +101,7 @@ GenerateClassCluster=0
 
 [Document5]
 DocumentPath=Tri_Btate_Bank.SchDoc
-AnnotationEnabled=0
+AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -117,7 +117,7 @@ GenerateClassCluster=0
 
 [Document6]
 DocumentPath=MEM.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
