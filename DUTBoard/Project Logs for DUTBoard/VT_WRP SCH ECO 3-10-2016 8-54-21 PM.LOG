@@ -1,0 +1,3 @@
+Replace Part 0.1uF_1 0.1uF_0603 in X:\Masters\DUTBoard\VT_WRP.SchDoc with 0.1uF_0603 from DUTBoard.SchLib
+Replace Part 0.1uF_2 0.1uF_0603 in X:\Masters\DUTBoard\VT_WRP.SchDoc with 0.1uF_0603 from DUTBoard.SchLib
+Replace Part VT1 MAX3012EUP+ in X:\Masters\DUTBoard\VT_WRP.SchDoc with MAX3012EUP+ from DUTBoard.SchLib
