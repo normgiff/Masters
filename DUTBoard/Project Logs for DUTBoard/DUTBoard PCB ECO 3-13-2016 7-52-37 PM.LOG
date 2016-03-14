@@ -1,0 +1,17 @@
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP1-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP1-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP2-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP2-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP3-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP3-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP4-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP4-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP5-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP5-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP6-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP6-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP7-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP7-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP8-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP8-VDD
+Added Member To Class: ClassName=U_SRAM_WRP4 Member=Component SRAM1_U_SRAM_WRP4 (SRAM1) 71V016SA10PHG
