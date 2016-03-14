@@ -1,2 +1,3 @@
+Record=SheetSymbol|SourceDocument=BBB_Board.SchDoc|Designator=U_MEM|SchDesignator=U_MEM|FileName=MEM.SchDoc|SymbolType=Normal|RawFileName=MEM.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
 Record=SheetSymbol|SourceDocument=BBB_Board.SchDoc|Designator=U_Tri_Btate_Bank|SchDesignator=U_Tri_Btate_Bank|FileName=Tri_Btate_Bank.SchDoc|SymbolType=Normal|RawFileName=Tri_Btate_Bank.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
 Record=TopLevelDocument|FileName=BBB_Board.SchDoc
