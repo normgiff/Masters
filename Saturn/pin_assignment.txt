@@ -1,0 +1,18 @@
+Header P3 on Numato Saturn: 
+Pins 5 - 48, 53 - 88 (80 pins total)
+These pins go to the ZIF socket. 
+
+Header P2 on Numato Saturn: 
+Pins 7 - 8, 11 - 12, 15 - 44, 53 - 64 (46 pins total)
+These pins go to the ZIF socket.
+
+Remaining pins on Header P2: 
+65 - 88 (24 pins)
+
+Pins 65 - 66: RX/TX lines for BBB communication
+Pins 67 - 71: Four clocks for counter ICs, one reset
+Pins 72 - 76: Five output buffer signals
+Pins 77:      Enable pin for voltage translators
+Pins 78 - 86: One output enable pin (all SRAM ICs), four ~CS signals (one per two ICs), four ~WE signals (one per two ICs)
+Pins 87 - 88: Not used
+
