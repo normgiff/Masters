@@ -1,0 +1,112 @@
+Added Component: Designator=0.1uF_1_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP8(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP9(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP10(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP11(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP12(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP13(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP14(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP15(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP16(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP8(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP9(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP10(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP11(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP12(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP13(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP14(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP15(0.1uF_0603)
+Added Component: Designator=0.1uF_2_U_VT_WRP16(0.1uF_0603)
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP1-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP2-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP3-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP4-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP5-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP6-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP7-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP8-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP9-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP10-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP11-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP12-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP13-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP14-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP15-1
+Added Pin To Net: NetName=3V3 Pin=0.1uF_1_U_VT_WRP16-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP1-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP3-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP4-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP5-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP8-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP9-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP10-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP11-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP12-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP13-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP14-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP15-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER_U_HEADER_BANK1 Pin=0.1uF_2_U_VT_WRP16-1
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP1 Pin=SRAM1_U_SRAM_WRP1-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP1 Pin=SRAM1_U_SRAM_WRP1-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP2 Pin=SRAM1_U_SRAM_WRP2-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP2 Pin=SRAM1_U_SRAM_WRP2-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP3 Pin=SRAM1_U_SRAM_WRP3-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP3 Pin=SRAM1_U_SRAM_WRP3-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP4 Pin=SRAM1_U_SRAM_WRP4-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP4 Pin=SRAM1_U_SRAM_WRP4-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP5 Pin=SRAM1_U_SRAM_WRP5-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP5 Pin=SRAM1_U_SRAM_WRP5-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP6 Pin=SRAM1_U_SRAM_WRP6-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP6 Pin=SRAM1_U_SRAM_WRP6-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP7 Pin=SRAM1_U_SRAM_WRP7-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP7 Pin=SRAM1_U_SRAM_WRP7-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP8 Pin=SRAM1_U_SRAM_WRP8-VDD
+Added Pin To Net: NetName=SRAM_3V3_W_U_SRAM_WRP8 Pin=SRAM1_U_SRAM_WRP8-VDD
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component 0.1uF_1_U_VT_WRP1 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_1_U_VT_WRP2 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_1_U_VT_WRP3 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_1_U_VT_WRP4 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component 0.1uF_1_U_VT_WRP5 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_1_U_VT_WRP6 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component 0.1uF_1_U_VT_WRP7 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP8 Member=Component 0.1uF_1_U_VT_WRP8 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP9 Member=Component 0.1uF_1_U_VT_WRP9 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP10 Member=Component 0.1uF_1_U_VT_WRP10 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP11 Member=Component 0.1uF_1_U_VT_WRP11 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP12 Member=Component 0.1uF_1_U_VT_WRP12 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP13 Member=Component 0.1uF_1_U_VT_WRP13 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP14 Member=Component 0.1uF_1_U_VT_WRP14 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP15 Member=Component 0.1uF_1_U_VT_WRP15 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP16 Member=Component 0.1uF_1_U_VT_WRP16 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component 0.1uF_2_U_VT_WRP1 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_2_U_VT_WRP2 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_2_U_VT_WRP3 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_2_U_VT_WRP4 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component 0.1uF_2_U_VT_WRP5 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_2_U_VT_WRP6 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component 0.1uF_2_U_VT_WRP7 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP8 Member=Component 0.1uF_2_U_VT_WRP8 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP9 Member=Component 0.1uF_2_U_VT_WRP9 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP10 Member=Component 0.1uF_2_U_VT_WRP10 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP11 Member=Component 0.1uF_2_U_VT_WRP11 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP12 Member=Component 0.1uF_2_U_VT_WRP12 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP13 Member=Component 0.1uF_2_U_VT_WRP13 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP14 Member=Component 0.1uF_2_U_VT_WRP14 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP15 Member=Component 0.1uF_2_U_VT_WRP15 (0.1uF_2) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP16 Member=Component 0.1uF_2_U_VT_WRP16 (0.1uF_2) 0.1uF_0603

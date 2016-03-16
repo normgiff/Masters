@@ -1,0 +1,106 @@
+Added Component: Designator=OB1_U_OB_WRP1(OB_TSSOP16)
+Added Component: Designator=OB1_U_OB_WRP2(OB_TSSOP16)
+Added Component: Designator=OB1_U_OB_WRP5(OB_TSSOP16)
+Added Component: Designator=OB1_U_OB_WRP9(OB_TSSOP16)
+Added Component: Designator=OB1_U_OB_WRP11(OB_TSSOP16)
+Added Pin To Net: NetName=OB_D_B120 Pin=OB1_U_OB_WRP1-D0
+Added Pin To Net: NetName=OB_D_B121 Pin=OB1_U_OB_WRP1-D1
+Added Pin To Net: NetName=OB_D_B122 Pin=OB1_U_OB_WRP1-D2
+Added Pin To Net: NetName=OB_D_B123 Pin=OB1_U_OB_WRP1-D3
+Added Pin To Net: NetName=OB_D_B124 Pin=OB1_U_OB_WRP1-D4
+Added Pin To Net: NetName=OB_D_B125 Pin=OB1_U_OB_WRP1-D5
+Added Pin To Net: NetName=OB_D_B126 Pin=OB1_U_OB_WRP1-D6
+Added Pin To Net: NetName=OB_D_B127 Pin=OB1_U_OB_WRP1-D7
+Added Pin To Net: NetName=SER14 Pin=OB1_U_OB_WRP1-DS
+Added Pin To Net: NetName=GND Pin=OB1_U_OB_WRP1-GND
+Added Pin To Net: NetName=FPGA_Q_U_HEADER_BANK1 Pin=OB1_U_OB_WRP1-Q
+Added Pin To Net: NetName=FPGA_SHCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP1-SHCP
+Added Pin To Net: NetName=FPGA_STCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP1-STCP
+Added Pin To Net: NetName=3V3 Pin=OB1_U_OB_WRP1-VCC
+Added Pin To Net: NetName=FPGA_~MR_U_HEADER_BANK1 Pin=OB1_U_OB_WRP1-~MR
+Added Pin To Net: NetName=FPGA_~PL_U_HEADER_BANK1 Pin=OB1_U_OB_WRP1-~PL
+Added Pin To Net: NetName=OB_D_B112 Pin=OB1_U_OB_WRP2-D0
+Added Pin To Net: NetName=OB_D_B113 Pin=OB1_U_OB_WRP2-D1
+Added Pin To Net: NetName=OB_D_B114 Pin=OB1_U_OB_WRP2-D2
+Added Pin To Net: NetName=OB_D_B115 Pin=OB1_U_OB_WRP2-D3
+Added Pin To Net: NetName=OB_D_B116 Pin=OB1_U_OB_WRP2-D4
+Added Pin To Net: NetName=OB_D_B117 Pin=OB1_U_OB_WRP2-D5
+Added Pin To Net: NetName=OB_D_B118 Pin=OB1_U_OB_WRP2-D6
+Added Pin To Net: NetName=OB_D_B119 Pin=OB1_U_OB_WRP2-D7
+Added Pin To Net: NetName=SER13 Pin=OB1_U_OB_WRP2-DS
+Added Pin To Net: NetName=GND Pin=OB1_U_OB_WRP2-GND
+Added Pin To Net: NetName=SER14 Pin=OB1_U_OB_WRP2-Q
+Added Pin To Net: NetName=FPGA_SHCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP2-SHCP
+Added Pin To Net: NetName=FPGA_STCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP2-STCP
+Added Pin To Net: NetName=3V3 Pin=OB1_U_OB_WRP2-VCC
+Added Pin To Net: NetName=FPGA_~MR_U_HEADER_BANK1 Pin=OB1_U_OB_WRP2-~MR
+Added Pin To Net: NetName=FPGA_~PL_U_HEADER_BANK1 Pin=OB1_U_OB_WRP2-~PL
+Added Pin To Net: NetName=OB_D_B88 Pin=OB1_U_OB_WRP5-D0
+Added Pin To Net: NetName=OB_D_B89 Pin=OB1_U_OB_WRP5-D1
+Added Pin To Net: NetName=OB_D_B90 Pin=OB1_U_OB_WRP5-D2
+Added Pin To Net: NetName=OB_D_B91 Pin=OB1_U_OB_WRP5-D3
+Added Pin To Net: NetName=OB_D_B92 Pin=OB1_U_OB_WRP5-D4
+Added Pin To Net: NetName=OB_D_B93 Pin=OB1_U_OB_WRP5-D5
+Added Pin To Net: NetName=OB_D_B94 Pin=OB1_U_OB_WRP5-D6
+Added Pin To Net: NetName=OB_D_B95 Pin=OB1_U_OB_WRP5-D7
+Added Pin To Net: NetName=SER10 Pin=OB1_U_OB_WRP5-DS
+Added Pin To Net: NetName=GND Pin=OB1_U_OB_WRP5-GND
+Added Pin To Net: NetName=SER11 Pin=OB1_U_OB_WRP5-Q
+Added Pin To Net: NetName=FPGA_SHCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP5-SHCP
+Added Pin To Net: NetName=FPGA_STCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP5-STCP
+Added Pin To Net: NetName=3V3 Pin=OB1_U_OB_WRP5-VCC
+Added Pin To Net: NetName=FPGA_~MR_U_HEADER_BANK1 Pin=OB1_U_OB_WRP5-~MR
+Added Pin To Net: NetName=FPGA_~PL_U_HEADER_BANK1 Pin=OB1_U_OB_WRP5-~PL
+Added Pin To Net: NetName=OB_D_B56 Pin=OB1_U_OB_WRP9-D0
+Added Pin To Net: NetName=OB_D_B57 Pin=OB1_U_OB_WRP9-D1
+Added Pin To Net: NetName=OB_D_B58 Pin=OB1_U_OB_WRP9-D2
+Added Pin To Net: NetName=OB_D_B59 Pin=OB1_U_OB_WRP9-D3
+Added Pin To Net: NetName=OB_D_B60 Pin=OB1_U_OB_WRP9-D4
+Added Pin To Net: NetName=OB_D_B61 Pin=OB1_U_OB_WRP9-D5
+Added Pin To Net: NetName=OB_D_B62 Pin=OB1_U_OB_WRP9-D6
+Added Pin To Net: NetName=OB_D_B63 Pin=OB1_U_OB_WRP9-D7
+Added Pin To Net: NetName=SER6 Pin=OB1_U_OB_WRP9-DS
+Added Pin To Net: NetName=GND Pin=OB1_U_OB_WRP9-GND
+Added Pin To Net: NetName=SER7 Pin=OB1_U_OB_WRP9-Q
+Added Pin To Net: NetName=FPGA_SHCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP9-SHCP
+Added Pin To Net: NetName=FPGA_STCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP9-STCP
+Added Pin To Net: NetName=3V3 Pin=OB1_U_OB_WRP9-VCC
+Added Pin To Net: NetName=FPGA_~MR_U_HEADER_BANK1 Pin=OB1_U_OB_WRP9-~MR
+Added Pin To Net: NetName=FPGA_~PL_U_HEADER_BANK1 Pin=OB1_U_OB_WRP9-~PL
+Added Pin To Net: NetName=OB_D_B40 Pin=OB1_U_OB_WRP11-D0
+Added Pin To Net: NetName=OB_D_B41 Pin=OB1_U_OB_WRP11-D1
+Added Pin To Net: NetName=OB_D_B42 Pin=OB1_U_OB_WRP11-D2
+Added Pin To Net: NetName=OB_D_B43 Pin=OB1_U_OB_WRP11-D3
+Added Pin To Net: NetName=OB_D_B44 Pin=OB1_U_OB_WRP11-D4
+Added Pin To Net: NetName=OB_D_B45 Pin=OB1_U_OB_WRP11-D5
+Added Pin To Net: NetName=OB_D_B46 Pin=OB1_U_OB_WRP11-D6
+Added Pin To Net: NetName=OB_D_B47 Pin=OB1_U_OB_WRP11-D7
+Added Pin To Net: NetName=SER4 Pin=OB1_U_OB_WRP11-DS
+Added Pin To Net: NetName=GND Pin=OB1_U_OB_WRP11-GND
+Added Pin To Net: NetName=SER5 Pin=OB1_U_OB_WRP11-Q
+Added Pin To Net: NetName=FPGA_SHCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP11-SHCP
+Added Pin To Net: NetName=FPGA_STCP_U_HEADER_BANK1 Pin=OB1_U_OB_WRP11-STCP
+Added Pin To Net: NetName=3V3 Pin=OB1_U_OB_WRP11-VCC
+Added Pin To Net: NetName=FPGA_~MR_U_HEADER_BANK1 Pin=OB1_U_OB_WRP11-~MR
+Added Pin To Net: NetName=FPGA_~PL_U_HEADER_BANK1 Pin=OB1_U_OB_WRP11-~PL
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP1-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP1-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP2-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP2-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP3-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP3-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP4-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP4-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP5-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP5-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP6-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP6-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP7-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP7-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP8-VDD
+Added Pin To Net: NetName=3V3 Pin=SRAM1_U_SRAM_WRP8-VDD
+Added Member To Class: ClassName=U_OB_WRP1 Member=Component OB1_U_OB_WRP1 (OB1) 74HC597PW,118
+Added Member To Class: ClassName=U_OB_WRP2 Member=Component OB1_U_OB_WRP2 (OB1) 74HC597PW,118
+Added Member To Class: ClassName=U_OB_WRP5 Member=Component OB1_U_OB_WRP5 (OB1) 74HC597PW,118
+Added Member To Class: ClassName=U_OB_WRP9 Member=Component OB1_U_OB_WRP9 (OB1) 74HC597PW,118
+Added Member To Class: ClassName=U_OB_WRP11 Member=Component OB1_U_OB_WRP11 (OB1) 74HC597PW,118
