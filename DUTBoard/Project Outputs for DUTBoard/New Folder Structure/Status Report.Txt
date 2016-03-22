@@ -1,0 +1,27 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:06:26 PM On 3/19/2016
+
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of PCB Document [DUTBoard.PcbDoc]
+   Generated File[DUTBoard.GTL]
+   Generated File[DUTBoard.G1]
+   Generated File[DUTBoard.G2]
+   Generated File[DUTBoard.GBL]
+   Generated File[DUTBoard.GTO]
+   Generated File[DUTBoard.GTP]
+   Generated File[DUTBoard.GTS]
+   Generated File[DUTBoard.GBS]
+   Generated File[DUTBoard.GBP]
+   Generated File[DUTBoard.GBO]
+   Generated File[DUTBoard.GM3]
+   Generated File[DUTBoard.RUL]
+   Generated File[DUTBoard.EXTREP]
+   Generated File[DUTBoard.REP]
+
+
+Files Generated   : 14
+Documents Printed : 0
+
+Finished Output Generation At 11:06:29 PM On 3/19/2016
