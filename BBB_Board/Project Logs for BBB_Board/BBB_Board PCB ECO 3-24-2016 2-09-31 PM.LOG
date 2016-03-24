@@ -1,0 +1,102 @@
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER1-19
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER1-20
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER1-21
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER1-22
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER1-23
+Removed Pin From Net: NetName=LEFT7 Pin=DUT1_U_DUT_HEADER1-24
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER2-20
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER2-21
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER2-22
+Removed Pin From Net: NetName=LEFT6 Pin=DUT1_U_DUT_HEADER2-23
+Removed Pin From Net: NetName=BOTTOM2 Pin=DUT1_U_DUT_HEADER3-19
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER4-20
+Removed Pin From Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER4-21
+Removed Pin From Net: NetName=TOP5 Pin=DUT1_U_DUT_HEADER4-22
+Removed Pin From Net: NetName=BOTTOM7 Pin=DUT1_U_DUT_HEADER4-24
+Removed Pin From Net: NetName=BOTTOM3 Pin=ETH4-18
+Removed Pin From Net: NetName=RIGHT2 Pin=ETH4-23
+Removed Pin From Net: NetName=RIGHT1 Pin=ETH4-24
+Removed Pin From Net: NetName=LEFT7 Pin=ETH4-25
+Removed Pin From Net: NetName=LEFT1 Pin=ETH4-26
+Removed Pin From Net: NetName=LEFT0 Pin=ETH4-27
+Removed Pin From Net: NetName=BOTTOM6 Pin=ETH4-28
+Removed Pin From Net: NetName=BOTTOM5 Pin=ETH4-29
+Removed Pin From Net: NetName=BOTTOM4 Pin=ETH4-31
+Removed Pin From Net: NetName=BOTTOM1 Pin=ETH4-33
+Removed Pin From Net: NetName=BOTTOM0 Pin=ETH4-34
+Removed Pin From Net: NetName=BOTTOM7 Pin=ETH4-35
+Removed Pin From Net: NetName=TOP6 Pin=ETH4-36
+Removed Pin From Net: NetName=TOP2 Pin=ETH4-38
+Removed Pin From Net: NetName=TOP1 Pin=ETH4-39
+Removed Pin From Net: NetName=TOP0 Pin=ETH4-40
+Removed Pin From Net: NetName=LEFT2 Pin=S1-1
+Change Net Name : Old Net Name=BOTTOM2 New Net Name=FPGA_~MR
+Change Net Name : Old Net Name=LEFT5 New Net Name=GND
+Change Net Name : Old Net Name=LEFT6 New Net Name=GLOBAL_HIGH_POWER
+Change Net Name : Old Net Name=TOP5 New Net Name=EN
+Added Pin To Net: NetName=3V3 Pin=S1-1
+Added Net: Name=3V3
+Added Pin To Net: NetName=BOTTOM2 Pin=DUT1_U_DUT_HEADER3-19
+Added Net: Name=BOTTOM2
+Added Pin To Net: NetName=COUNTER_CLK1 Pin=ETH4-35
+Added Net: Name=COUNTER_CLK1
+Added Pin To Net: NetName=COUNTER_CLK2 Pin=ETH4-25
+Added Net: Name=COUNTER_CLK2
+Added Pin To Net: NetName=COUNTER_CLR Pin=ETH4-36
+Added Net: Name=COUNTER_CLR
+Added Pin To Net: NetName=FPGA_Q Pin=ETH4-18
+Added Net: Name=FPGA_Q
+Added Pin To Net: NetName=FPGA_SHCP Pin=ETH4-29
+Added Net: Name=FPGA_SHCP
+Added Pin To Net: NetName=FPGA_STCP Pin=ETH4-28
+Added Net: Name=FPGA_STCP
+Added Pin To Net: NetName=FPGA_~CS1 Pin=ETH4-40
+Added Net: Name=FPGA_~CS1
+Added Pin To Net: NetName=FPGA_~CS2 Pin=ETH4-27
+Added Net: Name=FPGA_~CS2
+Added Pin To Net: NetName=FPGA_~CS3 Pin=ETH4-24
+Added Net: Name=FPGA_~CS3
+Added Pin To Net: NetName=FPGA_~CS4 Pin=ETH4-34
+Added Net: Name=FPGA_~CS4
+Added Pin To Net: NetName=FPGA_~OE Pin=ETH4-39
+Added Net: Name=FPGA_~OE
+Added Pin To Net: NetName=FPGA_~PL Pin=ETH4-31
+Added Net: Name=FPGA_~PL
+Added Pin To Net: NetName=FPGA_~WE1 Pin=ETH4-38
+Added Net: Name=FPGA_~WE1
+Added Pin To Net: NetName=FPGA_~WE2 Pin=ETH4-26
+Added Net: Name=FPGA_~WE2
+Added Pin To Net: NetName=FPGA_~WE3 Pin=ETH4-23
+Added Net: Name=FPGA_~WE3
+Added Pin To Net: NetName=FPGA_~WE4 Pin=ETH4-33
+Added Net: Name=FPGA_~WE4
+Added Pin To Net: NetName=LEFT3 Pin=DUT1_U_DUT_HEADER2-20
+Added Net: Name=LEFT3
+Added Pin To Net: NetName=LEFT4 Pin=DUT1_U_DUT_HEADER2-21
+Added Net: Name=LEFT4
+Added Pin To Net: NetName=LEFT5 Pin=DUT1_U_DUT_HEADER2-22
+Added Net: Name=LEFT5
+Added Pin To Net: NetName=LEFT6 Pin=DUT1_U_DUT_HEADER2-23
+Added Net: Name=LEFT6
+Added Pin To Net: NetName=RIGHT3 Pin=DUT1_U_DUT_HEADER1-19
+Added Net: Name=RIGHT3
+Added Pin To Net: NetName=RIGHT4 Pin=DUT1_U_DUT_HEADER1-20
+Added Net: Name=RIGHT4
+Added Pin To Net: NetName=RIGHT5 Pin=DUT1_U_DUT_HEADER1-21
+Added Net: Name=RIGHT5
+Added Pin To Net: NetName=RIGHT6 Pin=DUT1_U_DUT_HEADER1-22
+Added Net: Name=RIGHT6
+Added Pin To Net: NetName=RIGHT7 Pin=DUT1_U_DUT_HEADER1-23
+Added Net: Name=RIGHT7
+Added Pin To Net: NetName=RIGHT8 Pin=DUT1_U_DUT_HEADER1-24
+Added Net: Name=RIGHT8
+Added Pin To Net: NetName=TOP3 Pin=DUT1_U_DUT_HEADER4-20
+Added Net: Name=TOP3
+Added Pin To Net: NetName=TOP4 Pin=DUT1_U_DUT_HEADER4-21
+Added Net: Name=TOP4
+Added Pin To Net: NetName=TOP5 Pin=DUT1_U_DUT_HEADER4-22
+Added Net: Name=TOP5
+Added Pin To Net: NetName=TOP7 Pin=DUT1_U_DUT_HEADER4-24
+Added Net: Name=TOP7
+Added Member To Class: ClassName=LEFT[7..0] Member=Element[3]: LEFT
+Added Member To Class: ClassName=LEFT[7..0] Member=Element[4]: LEFT

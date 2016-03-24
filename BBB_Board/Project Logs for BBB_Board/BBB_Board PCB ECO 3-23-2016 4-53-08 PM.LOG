@@ -1,0 +1,591 @@
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP1-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP2-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP3-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP4-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP5-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP6-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP7-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_0_U_VT_WRP8-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP1-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP2-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP3-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP4-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP5-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP6-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP7-1
+Removed Pin From Net: NetName=3V3_W Pin=0.1uF_1_U_VT_WRP8-1
+Removed Pin From Net: NetName=L_H5 Pin=3_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=3_U_Power_Control2-1
+Removed Pin From Net: NetName=3V3_W Pin=3V3-2
+Removed Pin From Net: NetName=3V3_W Pin=3V3-3
+Removed Pin From Net: NetName=L_H5 Pin=4_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=4_U_Power_Control2-1
+Removed Pin From Net: NetName=L_H5 Pin=5_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=5_U_Power_Control2-1
+Removed Pin From Net: NetName=L_H5 Pin=6_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=6_U_Power_Control2-1
+Removed Pin From Net: NetName=FPGA_RX Pin=ETH4-16
+Removed Pin From Net: NetName=FPGA_TX Pin=ETH4-17
+Removed Pin From Net: NetName=FPGA_SRCLK Pin=ETH4-21
+Removed Pin From Net: NetName=FPGA_RCLK Pin=ETH4-22
+Removed Pin From Net: NetName=B_H2 Pin=ETH4-32
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER1-19
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER1-20
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER1-21
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER1-22
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER1-23
+Removed Pin From Net: NetName=L_H2 Pin=ETH_U_DUT_HEADER2-19
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER2-20
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER2-21
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER2-22
+Removed Pin From Net: NetName=B_H2 Pin=ETH_U_DUT_HEADER3-19
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER4-20
+Removed Pin From Net: NetName=L_H5 Pin=ETH_U_DUT_HEADER4-21
+Removed Pin From Net: NetName=L_H5 Pin=LM2_U_Power_Control1-2
+Removed Pin From Net: NetName=L_H5 Pin=LM2_U_Power_Control2-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP1-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP2-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP3-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP4-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP5-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP6-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP7-2
+Removed Pin From Net: NetName=3V3_W Pin=LT1_U_VT_WRP8-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP1-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP2-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP3-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP4-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP5-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP6-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP7-2
+Removed Pin From Net: NetName=3V3_W Pin=LT2_U_VT_WRP8-2
+Removed Pin From Net: NetName=V_RST Pin=POT_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=POT_U_Power_Control1-2
+Removed Pin From Net: NetName=3V3_W Pin=POT_U_Power_Control1-8
+Removed Pin From Net: NetName=L_H5 Pin=POT_U_Power_Control1-9
+Removed Pin From Net: NetName=DIN1 Pin=POT_U_Power_Control1-10
+Removed Pin From Net: NetName=SPICS0 Pin=POT_U_Power_Control1-12
+Removed Pin From Net: NetName=RDY1 Pin=POT_U_Power_Control1-14
+Removed Pin From Net: NetName=V_RST Pin=POT_U_Power_Control2-1
+Removed Pin From Net: NetName=L_H5 Pin=POT_U_Power_Control2-2
+Removed Pin From Net: NetName=3V3_W Pin=POT_U_Power_Control2-8
+Removed Pin From Net: NetName=L_H5 Pin=POT_U_Power_Control2-9
+Removed Pin From Net: NetName=DIN0 Pin=POT_U_Power_Control2-10
+Removed Pin From Net: NetName=SPICS0 Pin=POT_U_Power_Control2-12
+Removed Pin From Net: NetName=RDY0 Pin=POT_U_Power_Control2-14
+Removed Pin From Net: NetName=OTHER_W21 Pin=R1-2
+Removed Pin From Net: NetName=L_H5 Pin=R5_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=R5_U_Power_Control2-1
+Removed Pin From Net: NetName=L_H5 Pin=R9_U_Power_Control1-1
+Removed Pin From Net: NetName=L_H5 Pin=R9_U_Power_Control2-1
+Removed Pin From Net: NetName=OTHER_W21 Pin=S1-2
+Removed Pin From Net: NetName=B_H2 Pin=SR1-13
+Removed Pin From Net: NetName=3V3_W Pin=SR1-16
+Removed Pin From Net: NetName=B_H2 Pin=SR2-13
+Removed Pin From Net: NetName=3V3_W Pin=SR2-16
+Removed Pin From Net: NetName=B_H2 Pin=SR3-13
+Removed Pin From Net: NetName=3V3_W Pin=SR3-16
+Removed Pin From Net: NetName=B_H2 Pin=SR4-13
+Removed Pin From Net: NetName=3V3_W Pin=SR4-16
+Removed Pin From Net: NetName=B_H2 Pin=SR5-13
+Removed Pin From Net: NetName=3V3_W Pin=SR5-16
+Removed Pin From Net: NetName=B_H2 Pin=SR6-13
+Removed Pin From Net: NetName=3V3_W Pin=SR6-16
+Removed Pin From Net: NetName=B_H2 Pin=SR7-13
+Removed Pin From Net: NetName=3V3_W Pin=SR7-16
+Removed Pin From Net: NetName=B_H2 Pin=SR8-13
+Removed Pin From Net: NetName=3V3_W Pin=SR8-16
+Removed Pin From Net: NetName=B_H2 Pin=SR9-13
+Removed Pin From Net: NetName=3V3_W Pin=SR9-16
+Removed Pin From Net: NetName=B_H2 Pin=SR10-13
+Removed Pin From Net: NetName=3V3_W Pin=SR10-16
+Removed Pin From Net: NetName=B_H2 Pin=SR11-13
+Removed Pin From Net: NetName=3V3_W Pin=SR11-16
+Removed Pin From Net: NetName=B_H2 Pin=SR12-13
+Removed Pin From Net: NetName=3V3_W Pin=SR12-16
+Removed Pin From Net: NetName=B_H2 Pin=SR13-13
+Removed Pin From Net: NetName=3V3_W Pin=SR13-16
+Removed Pin From Net: NetName=B_H2 Pin=SR14-13
+Removed Pin From Net: NetName=3V3_W Pin=SR14-16
+Removed Pin From Net: NetName=B_H2 Pin=SR15-13
+Removed Pin From Net: NetName=3V3_W Pin=SR15-16
+Removed Pin From Net: NetName=B_H2 Pin=SR16-13
+Removed Pin From Net: NetName=3V3_W Pin=SR16-16
+Added Component: Designator=0.1uF_0(0.1uF_0603)
+Added Component: Designator=0.1uF_1(0.1uF_0603)
+Added Component: Designator=0.1uF_3(0.1uF_0603)
+Added Component: Designator=0.1uF_4(0.1uF_0603)
+Added Component: Designator=1(0.1uF_0603)
+Added Component: Designator=2(0.1uF_0603)
+Added Component: Designator=3(0.1uF_0603)
+Added Component: Designator=4(0.1uF_0603)
+Added Component: Designator=5(0.1uF_0603)
+Added Component: Designator=6(0.1uF_0603)
+Added Component: Designator=D1(DO-41)
+Added Component: Designator=D2(DO-41)
+Added Component: Designator=ETH(FEMALE_HEADER_SMD)
+Added Component: Designator=LM1(op_amp)
+Added Component: Designator=LM2(op_amp)
+Added Component: Designator=LT1(8-bit_level)
+Added Component: Designator=LT2(8-bit_level)
+Added Component: Designator=POT(Dig_Pot)
+Added Component: Designator=R2(0.1uF_0603)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=R9(J1-0603)
+Added Component: Designator=R10(J1-0603)
+Added Component: Designator=VR1(volt_reg)
+Added Pin To Net: NetName=L_H5 Pin=3-1
+Added Pin To Net: NetName=L_H5 Pin=4-1
+Added Pin To Net: NetName=L_H5 Pin=5-1
+Added Pin To Net: NetName=L_H5 Pin=6-1
+Added Pin To Net: NetName=L_H5 Pin=LM2-2
+Added Pin To Net: NetName=L_H5 Pin=POT-2
+Added Pin To Net: NetName=L_H5 Pin=POT-9
+Added Pin To Net: NetName=L_H5 Pin=R5-1
+Added Pin To Net: NetName=L_H5 Pin=R9-1
+Change Net Name : Old Net Name=3V3_W New Net Name=TSB_VCC_B
+Change Net Name : Old Net Name=A_B0 New Net Name=SIGNAL_W0
+Change Net Name : Old Net Name=A_B1 New Net Name=SIGNAL_W1
+Change Net Name : Old Net Name=A_B2 New Net Name=SIGNAL_W2
+Change Net Name : Old Net Name=A_B3 New Net Name=SIGNAL_W3
+Change Net Name : Old Net Name=A_B4 New Net Name=SIGNAL_W4
+Change Net Name : Old Net Name=A_B5 New Net Name=SIGNAL_W5
+Change Net Name : Old Net Name=A_B6 New Net Name=SIGNAL_W6
+Change Net Name : Old Net Name=A_B7 New Net Name=SIGNAL_W7
+Change Net Name : Old Net Name=A_B8 New Net Name=SIGNAL_W8
+Change Net Name : Old Net Name=A_B9 New Net Name=SIGNAL_W9
+Change Net Name : Old Net Name=A_B10 New Net Name=SIGNAL_W10
+Change Net Name : Old Net Name=A_B11 New Net Name=SIGNAL_W11
+Change Net Name : Old Net Name=A_B12 New Net Name=SIGNAL_W12
+Change Net Name : Old Net Name=A_B13 New Net Name=SIGNAL_W13
+Change Net Name : Old Net Name=A_B14 New Net Name=SIGNAL_W14
+Change Net Name : Old Net Name=A_B15 New Net Name=SIGNAL_W15
+Change Net Name : Old Net Name=A_B16 New Net Name=SIGNAL_W16
+Change Net Name : Old Net Name=A_B17 New Net Name=SIGNAL_W17
+Change Net Name : Old Net Name=A_B18 New Net Name=SIGNAL_W18
+Change Net Name : Old Net Name=A_B19 New Net Name=SIGNAL_W19
+Change Net Name : Old Net Name=A_B20 New Net Name=SIGNAL_W20
+Change Net Name : Old Net Name=A_B21 New Net Name=SIGNAL_W21
+Change Net Name : Old Net Name=A_B22 New Net Name=SIGNAL_W22
+Change Net Name : Old Net Name=A_B23 New Net Name=SIGNAL_W23
+Change Net Name : Old Net Name=A_B24 New Net Name=SIGNAL_W24
+Change Net Name : Old Net Name=A_B25 New Net Name=SIGNAL_W25
+Change Net Name : Old Net Name=A_B26 New Net Name=SIGNAL_W26
+Change Net Name : Old Net Name=A_B27 New Net Name=SIGNAL_W27
+Change Net Name : Old Net Name=A_B28 New Net Name=SIGNAL_W28
+Change Net Name : Old Net Name=A_B29 New Net Name=SIGNAL_W29
+Change Net Name : Old Net Name=A_B30 New Net Name=SIGNAL_W30
+Change Net Name : Old Net Name=A_B31 New Net Name=SIGNAL_W31
+Change Net Name : Old Net Name=A_B32 New Net Name=SIGNAL_W32
+Change Net Name : Old Net Name=A_B33 New Net Name=SIGNAL_W33
+Change Net Name : Old Net Name=A_B34 New Net Name=SIGNAL_W34
+Change Net Name : Old Net Name=A_B35 New Net Name=SIGNAL_W35
+Change Net Name : Old Net Name=A_B36 New Net Name=SIGNAL_W36
+Change Net Name : Old Net Name=A_B37 New Net Name=SIGNAL_W37
+Change Net Name : Old Net Name=A_B38 New Net Name=SIGNAL_W38
+Change Net Name : Old Net Name=A_B39 New Net Name=SIGNAL_W39
+Change Net Name : Old Net Name=A_B40 New Net Name=SIGNAL_W40
+Change Net Name : Old Net Name=A_B41 New Net Name=SIGNAL_W41
+Change Net Name : Old Net Name=A_B42 New Net Name=SIGNAL_W42
+Change Net Name : Old Net Name=A_B43 New Net Name=SIGNAL_W43
+Change Net Name : Old Net Name=A_B44 New Net Name=SIGNAL_W44
+Change Net Name : Old Net Name=A_B45 New Net Name=SIGNAL_W45
+Change Net Name : Old Net Name=A_B46 New Net Name=SIGNAL_W46
+Change Net Name : Old Net Name=A_B47 New Net Name=SIGNAL_W47
+Change Net Name : Old Net Name=A_B64 New Net Name=SIGNAL_W64
+Change Net Name : Old Net Name=A_B65 New Net Name=SIGNAL_W65
+Change Net Name : Old Net Name=A_B66 New Net Name=SIGNAL_W66
+Change Net Name : Old Net Name=A_B67 New Net Name=SIGNAL_W67
+Change Net Name : Old Net Name=A_B68 New Net Name=SIGNAL_W68
+Change Net Name : Old Net Name=A_B69 New Net Name=SIGNAL_W69
+Change Net Name : Old Net Name=A_B70 New Net Name=SIGNAL_W70
+Change Net Name : Old Net Name=A_B71 New Net Name=SIGNAL_W71
+Change Net Name : Old Net Name=A_B72 New Net Name=SIGNAL_W72
+Change Net Name : Old Net Name=A_B73 New Net Name=SIGNAL_W73
+Change Net Name : Old Net Name=A_B74 New Net Name=SIGNAL_W74
+Change Net Name : Old Net Name=A_B75 New Net Name=SIGNAL_W75
+Change Net Name : Old Net Name=A_B76 New Net Name=SIGNAL_W76
+Change Net Name : Old Net Name=A_B77 New Net Name=SIGNAL_W77
+Change Net Name : Old Net Name=A_B78 New Net Name=SIGNAL_W78
+Change Net Name : Old Net Name=A_B79 New Net Name=SIGNAL_W79
+Change Net Name : Old Net Name=A_B80 New Net Name=SIGNAL_W80
+Change Net Name : Old Net Name=A_B81 New Net Name=SIGNAL_W81
+Change Net Name : Old Net Name=A_B82 New Net Name=SIGNAL_W82
+Change Net Name : Old Net Name=A_B83 New Net Name=SIGNAL_W83
+Change Net Name : Old Net Name=A_B84 New Net Name=SIGNAL_W84
+Change Net Name : Old Net Name=A_B85 New Net Name=SIGNAL_W85
+Change Net Name : Old Net Name=A_B86 New Net Name=SIGNAL_W86
+Change Net Name : Old Net Name=A_B87 New Net Name=SIGNAL_W87
+Change Net Name : Old Net Name=A_B88 New Net Name=SIGNAL_W88
+Change Net Name : Old Net Name=A_B89 New Net Name=SIGNAL_W89
+Change Net Name : Old Net Name=A_B90 New Net Name=SIGNAL_W90
+Change Net Name : Old Net Name=A_B91 New Net Name=SIGNAL_W91
+Change Net Name : Old Net Name=A_B92 New Net Name=SIGNAL_W92
+Change Net Name : Old Net Name=A_B93 New Net Name=SIGNAL_W93
+Change Net Name : Old Net Name=A_B94 New Net Name=SIGNAL_W94
+Change Net Name : Old Net Name=A_B95 New Net Name=SIGNAL_W95
+Change Net Name : Old Net Name=A_B96 New Net Name=SIGNAL_W96
+Change Net Name : Old Net Name=A_B97 New Net Name=SIGNAL_W97
+Change Net Name : Old Net Name=A_B98 New Net Name=SIGNAL_W98
+Change Net Name : Old Net Name=A_B99 New Net Name=SIGNAL_W99
+Change Net Name : Old Net Name=A_B100 New Net Name=SIGNAL_W100
+Change Net Name : Old Net Name=A_B101 New Net Name=SIGNAL_W101
+Change Net Name : Old Net Name=A_B102 New Net Name=SIGNAL_W102
+Change Net Name : Old Net Name=A_B103 New Net Name=SIGNAL_W103
+Change Net Name : Old Net Name=A_B104 New Net Name=SIGNAL_W104
+Change Net Name : Old Net Name=A_B105 New Net Name=SIGNAL_W105
+Change Net Name : Old Net Name=A_B106 New Net Name=SIGNAL_W106
+Change Net Name : Old Net Name=A_B107 New Net Name=SIGNAL_W107
+Change Net Name : Old Net Name=A_B108 New Net Name=SIGNAL_W108
+Change Net Name : Old Net Name=A_B109 New Net Name=SIGNAL_W109
+Change Net Name : Old Net Name=A_B110 New Net Name=SIGNAL_W110
+Change Net Name : Old Net Name=A_B111 New Net Name=SIGNAL_W111
+Change Net Name : Old Net Name=A_B112 New Net Name=SIGNAL_W112
+Change Net Name : Old Net Name=A_B113 New Net Name=SIGNAL_W113
+Change Net Name : Old Net Name=A_B114 New Net Name=SIGNAL_W114
+Change Net Name : Old Net Name=A_B115 New Net Name=SIGNAL_W115
+Change Net Name : Old Net Name=A_B116 New Net Name=SIGNAL_W116
+Change Net Name : Old Net Name=A_B117 New Net Name=SIGNAL_W117
+Change Net Name : Old Net Name=A_B118 New Net Name=SIGNAL_W118
+Change Net Name : Old Net Name=A_B119 New Net Name=SIGNAL_W119
+Change Net Name : Old Net Name=A_B120 New Net Name=SIGNAL_W120
+Change Net Name : Old Net Name=A_B121 New Net Name=SIGNAL_W121
+Change Net Name : Old Net Name=A_B122 New Net Name=SIGNAL_W122
+Change Net Name : Old Net Name=A_B124 New Net Name=SIGNAL_W124
+Change Net Name : Old Net Name=A_B125 New Net Name=SIGNAL_W125
+Change Net Name : Old Net Name=B_H2 New Net Name=~SRCLR
+Change Net Name : Old Net Name=FPGA_RCLK New Net Name=RCLK
+Change Net Name : Old Net Name=FPGA_SRCLK New Net Name=SRCLK
+Added Pin To Net: NetName=-5V_W Pin=LM1-2
+Added Pin To Net: NetName=-5V_W Pin=R6-1
+Added Net: Name=-5V_W
+Added Pin To Net: NetName=3V3_WRP Pin=POT-8
+Added Net: Name=3V3_WRP
+Added Pin To Net: NetName=3V3_W Pin=SR1-16
+Added Pin To Net: NetName=3V3_W Pin=SR2-16
+Added Pin To Net: NetName=3V3_W Pin=SR3-16
+Added Pin To Net: NetName=3V3_W Pin=SR4-16
+Added Pin To Net: NetName=3V3_W Pin=SR5-16
+Added Pin To Net: NetName=3V3_W Pin=SR6-16
+Added Pin To Net: NetName=3V3_W Pin=SR7-16
+Added Pin To Net: NetName=3V3_W Pin=SR8-16
+Added Pin To Net: NetName=3V3_W Pin=SR9-16
+Added Pin To Net: NetName=3V3_W Pin=SR10-16
+Added Pin To Net: NetName=3V3_W Pin=SR11-16
+Added Pin To Net: NetName=3V3_W Pin=SR12-16
+Added Pin To Net: NetName=3V3_W Pin=SR13-16
+Added Pin To Net: NetName=3V3_W Pin=SR14-16
+Added Pin To Net: NetName=3V3_W Pin=SR15-16
+Added Pin To Net: NetName=3V3_W Pin=SR16-16
+Added Net: Name=3V3_W
+Added Pin To Net: NetName=12V_W Pin=LM2-5
+Added Pin To Net: NetName=12V_W Pin=POT-6
+Added Pin To Net: NetName=12V_W Pin=R10-2
+Added Net: Name=12V_W
+Added Pin To Net: NetName=DIN_W Pin=POT-10
+Added Net: Name=DIN_W
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=3V3-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=3V3-3
+Added Net: Name=GLOBAL_3V3
+Added Pin To Net: NetName=GLOBAL_12V Pin=12V.-2
+Added Pin To Net: NetName=GLOBAL_12V Pin=12V.-3
+Added Net: Name=GLOBAL_12V
+Added Pin To Net: NetName=GLOBAL_-5V Pin=-5V-1
+Added Pin To Net: NetName=GLOBAL_-5V Pin=-5V-1
+Added Net: Name=GLOBAL_-5V
+Added Pin To Net: NetName=GND_W Pin=LT1-11
+Added Pin To Net: NetName=GND_W Pin=LT2-11
+Added Net: Name=GND_W
+Added Pin To Net: NetName=IVL_W0 Pin=LT1-1
+Added Net: Name=IVL_W0
+Added Pin To Net: NetName=IVL_W1 Pin=LT1-3
+Added Net: Name=IVL_W1
+Added Pin To Net: NetName=IVL_W2 Pin=LT1-4
+Added Net: Name=IVL_W2
+Added Pin To Net: NetName=IVL_W3 Pin=LT1-5
+Added Net: Name=IVL_W3
+Added Pin To Net: NetName=IVL_W4 Pin=LT1-6
+Added Net: Name=IVL_W4
+Added Pin To Net: NetName=IVL_W5 Pin=LT1-7
+Added Net: Name=IVL_W5
+Added Pin To Net: NetName=IVL_W6 Pin=LT1-8
+Added Net: Name=IVL_W6
+Added Pin To Net: NetName=IVL_W7 Pin=LT1-9
+Added Net: Name=IVL_W7
+Added Pin To Net: NetName=IVL_W8 Pin=LT2-1
+Added Net: Name=IVL_W8
+Added Pin To Net: NetName=IVL_W9 Pin=LT2-3
+Added Net: Name=IVL_W9
+Added Pin To Net: NetName=IVL_W10 Pin=LT2-4
+Added Net: Name=IVL_W10
+Added Pin To Net: NetName=IVL_W11 Pin=LT2-5
+Added Net: Name=IVL_W11
+Added Pin To Net: NetName=IVL_W12 Pin=LT2-6
+Added Net: Name=IVL_W12
+Added Pin To Net: NetName=IVL_W13 Pin=LT2-7
+Added Net: Name=IVL_W13
+Added Pin To Net: NetName=IVL_W14 Pin=LT2-8
+Added Net: Name=IVL_W14
+Added Pin To Net: NetName=IVL_W15 Pin=LT2-9
+Added Net: Name=IVL_W15
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=POT-4
+Added Pin To Net: NetName=NetD2_1 Pin=R2-1
+Added Pin To Net: NetName=NetD2_1 Pin=VR1-1
+Added Net: Name=NetD2_1
+Added Pin To Net: NetName=NetLM1_1 Pin=LM1-1
+Added Pin To Net: NetName=NetLM1_1 Pin=R5-2
+Added Pin To Net: NetName=NetLM1_1 Pin=R6-2
+Added Net: Name=NetLM1_1
+Added Pin To Net: NetName=NetLM2_1 Pin=LM2-1
+Added Pin To Net: NetName=NetLM2_1 Pin=R9-2
+Added Pin To Net: NetName=NetLM2_1 Pin=R10-1
+Added Net: Name=NetLM2_1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=S1-2
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=OTH_W0 Pin=ETH-17
+Added Net: Name=OTH_W0
+Added Pin To Net: NetName=OTH_W1 Pin=ETH-18
+Added Net: Name=OTH_W1
+Added Pin To Net: NetName=OTH_W2 Pin=ETH-19
+Added Net: Name=OTH_W2
+Added Pin To Net: NetName=OTH_W3 Pin=ETH-20
+Added Net: Name=OTH_W3
+Added Pin To Net: NetName=OTH_W4 Pin=ETH-21
+Added Net: Name=OTH_W4
+Added Pin To Net: NetName=OTH_W5 Pin=ETH-22
+Added Net: Name=OTH_W5
+Added Pin To Net: NetName=OTH_W6 Pin=ETH-23
+Added Net: Name=OTH_W6
+Added Pin To Net: NetName=OTH_W7 Pin=ETH-24
+Added Net: Name=OTH_W7
+Added Pin To Net: NetName=OTHER_W1 Pin=ETH4-40
+Added Net: Name=OTHER_W1
+Added Pin To Net: NetName=OTHER_W2 Pin=ETH4-39
+Added Net: Name=OTHER_W2
+Added Pin To Net: NetName=OTHER_W3 Pin=ETH4-38
+Added Net: Name=OTHER_W3
+Added Pin To Net: NetName=OTHER_W4 Pin=ETH4-37
+Added Net: Name=OTHER_W4
+Added Pin To Net: NetName=OTHER_W5 Pin=ETH4-36
+Added Net: Name=OTHER_W5
+Added Pin To Net: NetName=OTHER_W6 Pin=ETH4-35
+Added Net: Name=OTHER_W6
+Added Pin To Net: NetName=OTHER_W7 Pin=ETH4-34
+Added Net: Name=OTHER_W7
+Added Pin To Net: NetName=OTHER_W8 Pin=ETH4-33
+Added Net: Name=OTHER_W8
+Added Pin To Net: NetName=OTHER_W9 Pin=ETH4-32
+Added Net: Name=OTHER_W9
+Added Pin To Net: NetName=OTHER_W10 Pin=ETH4-31
+Added Net: Name=OTHER_W10
+Added Pin To Net: NetName=OTHER_W11 Pin=ETH4-29
+Added Net: Name=OTHER_W11
+Added Pin To Net: NetName=OTHER_W12 Pin=ETH4-28
+Added Net: Name=OTHER_W12
+Added Pin To Net: NetName=OTHER_W13 Pin=ETH4-27
+Added Net: Name=OTHER_W13
+Added Pin To Net: NetName=OTHER_W14 Pin=ETH4-26
+Added Net: Name=OTHER_W14
+Added Pin To Net: NetName=OTHER_W15 Pin=ETH4-25
+Added Net: Name=OTHER_W15
+Added Pin To Net: NetName=OTHER_W16 Pin=ETH4-24
+Added Net: Name=OTHER_W16
+Added Pin To Net: NetName=OTHER_W17 Pin=ETH4-23
+Added Net: Name=OTHER_W17
+Added Pin To Net: NetName=OTHER_W18 Pin=ETH4-22
+Added Net: Name=OTHER_W18
+Added Pin To Net: NetName=OTHER_W19 Pin=ETH4-21
+Added Net: Name=OTHER_W19
+Added Pin To Net: NetName=OTHER_W20 Pin=ETH4-20
+Added Net: Name=OTHER_W20
+Added Pin To Net: NetName=OTHER_W22 Pin=ETH4-18
+Added Net: Name=OTHER_W22
+Added Pin To Net: NetName=OUT1 Pin=1-1
+Added Pin To Net: NetName=OUT1 Pin=2-1
+Added Pin To Net: NetName=OUT1 Pin=LM1-3
+Added Pin To Net: NetName=OUT1 Pin=LM1-4
+Added Pin To Net: NetName=OUT1 Pin=POT-3
+Added Net: Name=OUT1
+Added Pin To Net: NetName=OUT2 Pin=D1-2
+Added Pin To Net: NetName=OUT2 Pin=LM1-5
+Added Pin To Net: NetName=OUT2 Pin=LM2-3
+Added Pin To Net: NetName=OUT2 Pin=LM2-4
+Added Pin To Net: NetName=OUT2 Pin=VR1-3
+Added Net: Name=OUT2
+Added Pin To Net: NetName=OVCC_W0 Pin=LT1-20
+Added Net: Name=OVCC_W0
+Added Pin To Net: NetName=OVCC_W1 Pin=LT1-18
+Added Net: Name=OVCC_W1
+Added Pin To Net: NetName=OVCC_W2 Pin=LT1-17
+Added Net: Name=OVCC_W2
+Added Pin To Net: NetName=OVCC_W3 Pin=LT1-16
+Added Net: Name=OVCC_W3
+Added Pin To Net: NetName=OVCC_W4 Pin=LT1-15
+Added Net: Name=OVCC_W4
+Added Pin To Net: NetName=OVCC_W5 Pin=LT1-14
+Added Net: Name=OVCC_W5
+Added Pin To Net: NetName=OVCC_W6 Pin=LT1-13
+Added Net: Name=OVCC_W6
+Added Pin To Net: NetName=OVCC_W7 Pin=LT1-12
+Added Net: Name=OVCC_W7
+Added Pin To Net: NetName=OVCC_W8 Pin=LT2-20
+Added Net: Name=OVCC_W8
+Added Pin To Net: NetName=OVCC_W9 Pin=LT2-18
+Added Net: Name=OVCC_W9
+Added Pin To Net: NetName=OVCC_W10 Pin=LT2-17
+Added Net: Name=OVCC_W10
+Added Pin To Net: NetName=OVCC_W11 Pin=LT2-16
+Added Net: Name=OVCC_W11
+Added Pin To Net: NetName=OVCC_W12 Pin=LT2-15
+Added Net: Name=OVCC_W12
+Added Pin To Net: NetName=OVCC_W13 Pin=LT2-14
+Added Net: Name=OVCC_W13
+Added Pin To Net: NetName=OVCC_W14 Pin=LT2-13
+Added Net: Name=OVCC_W14
+Added Pin To Net: NetName=OVCC_W15 Pin=LT2-12
+Added Net: Name=OVCC_W15
+Added Pin To Net: NetName=RDY_W Pin=POT-14
+Added Net: Name=RDY_W
+Added Pin To Net: NetName=RX_W Pin=ETH4-16
+Added Net: Name=RX_W
+Added Pin To Net: NetName=SCLK_W Pin=POT-11
+Added Net: Name=SCLK_W
+Added Pin To Net: NetName=SDO_W Pin=POT-13
+Added Net: Name=SDO_W
+Added Pin To Net: NetName=SER Pin=SR1-14
+Added Net: Name=SER
+Added Pin To Net: NetName=SIG_W0 Pin=ETH-1
+Added Net: Name=SIG_W0
+Added Pin To Net: NetName=SIG_W1 Pin=ETH-2
+Added Net: Name=SIG_W1
+Added Pin To Net: NetName=SIG_W2 Pin=ETH-3
+Added Net: Name=SIG_W2
+Added Pin To Net: NetName=SIG_W3 Pin=ETH-4
+Added Net: Name=SIG_W3
+Added Pin To Net: NetName=SIG_W4 Pin=ETH-5
+Added Net: Name=SIG_W4
+Added Pin To Net: NetName=SIG_W5 Pin=ETH-6
+Added Net: Name=SIG_W5
+Added Pin To Net: NetName=SIG_W6 Pin=ETH-7
+Added Net: Name=SIG_W6
+Added Pin To Net: NetName=SIG_W7 Pin=ETH-8
+Added Net: Name=SIG_W7
+Added Pin To Net: NetName=SIG_W8 Pin=ETH-9
+Added Net: Name=SIG_W8
+Added Pin To Net: NetName=SIG_W9 Pin=ETH-10
+Added Net: Name=SIG_W9
+Added Pin To Net: NetName=SIG_W10 Pin=ETH-11
+Added Net: Name=SIG_W10
+Added Pin To Net: NetName=SIG_W11 Pin=ETH-12
+Added Net: Name=SIG_W11
+Added Pin To Net: NetName=SIG_W12 Pin=ETH-13
+Added Net: Name=SIG_W12
+Added Pin To Net: NetName=SIG_W13 Pin=ETH-14
+Added Net: Name=SIG_W13
+Added Pin To Net: NetName=SIG_W14 Pin=ETH-15
+Added Net: Name=SIG_W14
+Added Pin To Net: NetName=SIG_W15 Pin=ETH-16
+Added Net: Name=SIG_W15
+Added Pin To Net: NetName=SIG_W16 Pin=ETH-25
+Added Net: Name=SIG_W16
+Added Pin To Net: NetName=SIG_W17 Pin=ETH-26
+Added Net: Name=SIG_W17
+Added Pin To Net: NetName=SIG_W18 Pin=ETH-27
+Added Net: Name=SIG_W18
+Added Pin To Net: NetName=SIG_W19 Pin=ETH-28
+Added Net: Name=SIG_W19
+Added Pin To Net: NetName=SIG_W20 Pin=ETH-29
+Added Net: Name=SIG_W20
+Added Pin To Net: NetName=SIG_W21 Pin=ETH-30
+Added Net: Name=SIG_W21
+Added Pin To Net: NetName=SIG_W22 Pin=ETH-31
+Added Net: Name=SIG_W22
+Added Pin To Net: NetName=SIG_W23 Pin=ETH-32
+Added Net: Name=SIG_W23
+Added Pin To Net: NetName=SIG_W24 Pin=ETH-33
+Added Net: Name=SIG_W24
+Added Pin To Net: NetName=SIG_W25 Pin=ETH-34
+Added Net: Name=SIG_W25
+Added Pin To Net: NetName=SIG_W26 Pin=ETH-35
+Added Net: Name=SIG_W26
+Added Pin To Net: NetName=SIG_W27 Pin=ETH-36
+Added Net: Name=SIG_W27
+Added Pin To Net: NetName=SIG_W28 Pin=ETH-37
+Added Net: Name=SIG_W28
+Added Pin To Net: NetName=SIG_W29 Pin=ETH-38
+Added Net: Name=SIG_W29
+Added Pin To Net: NetName=SIG_W30 Pin=ETH-39
+Added Net: Name=SIG_W30
+Added Pin To Net: NetName=SIG_W31 Pin=ETH-40
+Added Net: Name=SIG_W31
+Added Pin To Net: NetName=SPI1D1 Pin=BBB-18
+Added Pin To Net: NetName=SPI1D1 Pin=BBB-30
+Added Net: Name=SPI1D1
+Added Pin To Net: NetName=SPICLK0 Pin=BBB-22
+Added Net: Name=SPICLK0
+Added Pin To Net: NetName=SPICLK1 Pin=BBB-32
+Added Net: Name=SPICLK1
+Added Pin To Net: NetName=TX_W Pin=ETH4-17
+Added Net: Name=TX_W
+Added Pin To Net: NetName=VOUT_W Pin=D1-1
+Added Pin To Net: NetName=VOUT_W Pin=D2-2
+Added Pin To Net: NetName=VOUT_W Pin=R2-2
+Added Pin To Net: NetName=VOUT_W Pin=VR1-2
+Added Pin To Net: NetName=VOUT_W Pin=VR1-4
+Added Net: Name=VOUT_W
+Added Pin To Net: NetName=VT_3V3_W Pin=0.1uF_0-1
+Added Pin To Net: NetName=VT_3V3_W Pin=0.1uF_1-1
+Added Pin To Net: NetName=VT_3V3_W Pin=LT1-2
+Added Pin To Net: NetName=VT_3V3_W Pin=LT2-2
+Added Net: Name=VT_3V3_W
+Added Pin To Net: NetName=VT_EN_W Pin=LT1-10
+Added Pin To Net: NetName=VT_EN_W Pin=LT2-10
+Added Net: Name=VT_EN_W
+Added Pin To Net: NetName=VT_VCC_W Pin=0.1uF_3-1
+Added Pin To Net: NetName=VT_VCC_W Pin=0.1uF_4-1
+Added Pin To Net: NetName=VT_VCC_W Pin=LT1-19
+Added Pin To Net: NetName=VT_VCC_W Pin=LT2-19
+Added Net: Name=VT_VCC_W
+Added Pin To Net: NetName=~RCLR Pin=SR1-13
+Added Pin To Net: NetName=~RCLR Pin=SR2-13
+Added Pin To Net: NetName=~RCLR Pin=SR3-13
+Added Pin To Net: NetName=~RCLR Pin=SR4-13
+Added Pin To Net: NetName=~RCLR Pin=SR5-13
+Added Pin To Net: NetName=~RCLR Pin=SR6-13
+Added Pin To Net: NetName=~RCLR Pin=SR7-13
+Added Pin To Net: NetName=~RCLR Pin=SR8-13
+Added Pin To Net: NetName=~RCLR Pin=SR9-13
+Added Pin To Net: NetName=~RCLR Pin=SR10-13
+Added Pin To Net: NetName=~RCLR Pin=SR11-13
+Added Pin To Net: NetName=~RCLR Pin=SR12-13
+Added Pin To Net: NetName=~RCLR Pin=SR13-13
+Added Pin To Net: NetName=~RCLR Pin=SR14-13
+Added Pin To Net: NetName=~RCLR Pin=SR15-13
+Added Pin To Net: NetName=~RCLR Pin=SR16-13
+Added Net: Name=~RCLR
+Added Pin To Net: NetName=~RESET_W Pin=POT-1
+Added Net: Name=~RESET_W
+Added Pin To Net: NetName=~SYNC_W Pin=POT-12
+Added Net: Name=~SYNC_W
+Change Class Name : Old Net Name=U_NumatoConnection New Net Name=NUMATO_HDR
+Change Class Name : Old Net Name=U_TEMPLATE_REG New Net Name=TEMPLATE_REG
+Change Class Name : Old Net Name=U_Tri_Btate_Bank New Net Name=TRISTATE_BANK
+Added Class: Name=DUT_HEADER
+Added Class: Name=POW_CONT
+Added Class: Name=VT_WRP
+Added Class: Name=IVL_W[15..0]
+Added Class: Name=NO[125..0]
+Added Class: Name=OTH_W[7..0]
+Added Class: Name=OVCC_W[15..0]
+Added Class: Name=R_H[7..0]
+Added Class: Name=SIG_W[31..0]
+Added Class: Name=SIGNAL[63..48]
+Added Class: Name=SIGNAL_W[125..0]
+Added Class: Name=T_H[7..0]
+Added Class: Name=TRO[127..0]
+Added Class: Name=TSBO[127..0]
+Added Class: Name=VTO[127..0]
+Added Class: Name=Y_B[127..0]

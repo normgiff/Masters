@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=BOTTOM[7..0] Member=FPGA_~MR
+Removed Member From Class: ClassName=LEFT[7..0] Member=GLOBAL_HIGH_POWER
+Removed Member From Class: ClassName=LEFT[7..0] Member=GND
+Added Member To Class: ClassName=BOTTOM[7..0] Member=Element[2]: BOTTOM
+Added Member To Class: ClassName=LEFT[7..0] Member=Element[5]: LEFT
+Added Member To Class: ClassName=LEFT[7..0] Member=Element[6]: LEFT

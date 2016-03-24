@@ -1,0 +1,956 @@
+Added Component: Designator=-5V(CP-002BHPJCT-ND)
+Added Component: Designator=0.1uF_0(0.1uF_0603)
+Added Component: Designator=0.1uF_1(0.1uF_0603)
+Added Component: Designator=0.1uF_3(0.1uF_0603)
+Added Component: Designator=0.1uF_4(0.1uF_0603)
+Added Component: Designator=3V3(CP-002BHPJCT-ND)
+Added Component: Designator=12V.(CP-002BHPJCT-ND)
+Added Component: Designator=C1(C1206)
+Added Component: Designator=C2(C1206)
+Added Component: Designator=C3(C1206)
+Added Component: Designator=C4(C1206)
+Added Component: Designator=C5(C1206)
+Added Component: Designator=C6(C1206)
+Added Component: Designator=C7(C1206)
+Added Component: Designator=D1(DO-41)
+Added Component: Designator=D2(DO-41)
+Added Component: Designator=ETH1(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH2(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH3(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH4(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH(FEMALE_HEADER_SMD)
+Added Component: Designator=R1(RESC1610X05N)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=R7(J1-0603)
+Added Component: Designator=R9(J1-0603)
+Added Component: Designator=R10(J1-0603)
+Added Component: Designator=S1(SPST-2)
+Added Component: Designator=VR1(volt_reg)
+Added Component: Designator=VT1(8-bit_level)
+Added Component: Designator=VT2(8-bit_level)
+Added Pin To Net: NetName=-5V Pin=-5V-1
+Added Pin To Net: NetName=-5V Pin=-5V-1
+Added Net: Name=-5V
+Added Pin To Net: NetName=12V Pin=12V.-2
+Added Pin To Net: NetName=12V Pin=12V.-3
+Added Net: Name=12V
+Added Net: Name=A0
+Added Net: Name=A1
+Added Net: Name=A2
+Added Net: Name=A3
+Added Net: Name=A4
+Added Net: Name=A5
+Added Net: Name=A6
+Added Net: Name=A7
+Added Net: Name=A8
+Added Net: Name=A9
+Added Net: Name=A10
+Added Net: Name=A11
+Added Net: Name=A12
+Added Net: Name=A13
+Added Net: Name=A14
+Added Net: Name=A15
+Added Net: Name=A16
+Added Net: Name=A17
+Added Net: Name=A18
+Added Net: Name=A19
+Added Net: Name=A20
+Added Net: Name=A21
+Added Net: Name=A22
+Added Net: Name=A23
+Added Net: Name=A24
+Added Net: Name=A25
+Added Net: Name=A26
+Added Net: Name=A27
+Added Net: Name=A28
+Added Net: Name=A29
+Added Net: Name=A30
+Added Net: Name=A31
+Added Net: Name=A32
+Added Net: Name=A33
+Added Net: Name=A34
+Added Net: Name=A35
+Added Net: Name=A36
+Added Net: Name=A37
+Added Net: Name=A38
+Added Net: Name=A39
+Added Net: Name=A40
+Added Net: Name=A41
+Added Net: Name=A42
+Added Net: Name=A43
+Added Net: Name=A44
+Added Net: Name=A45
+Added Net: Name=A46
+Added Net: Name=A47
+Added Net: Name=A48
+Added Net: Name=A49
+Added Net: Name=A50
+Added Net: Name=A51
+Added Net: Name=A52
+Added Net: Name=A53
+Added Net: Name=A54
+Added Net: Name=A55
+Added Net: Name=A56
+Added Net: Name=A57
+Added Net: Name=A58
+Added Net: Name=A59
+Added Net: Name=A60
+Added Net: Name=A61
+Added Net: Name=A62
+Added Net: Name=A63
+Added Net: Name=A64
+Added Net: Name=A65
+Added Net: Name=A66
+Added Net: Name=A67
+Added Net: Name=A68
+Added Net: Name=A69
+Added Net: Name=A70
+Added Net: Name=A71
+Added Net: Name=A72
+Added Net: Name=A73
+Added Net: Name=A74
+Added Net: Name=A75
+Added Net: Name=A76
+Added Net: Name=A77
+Added Net: Name=A78
+Added Net: Name=A79
+Added Net: Name=A80
+Added Net: Name=A81
+Added Net: Name=A82
+Added Net: Name=A83
+Added Net: Name=A84
+Added Net: Name=A85
+Added Net: Name=A86
+Added Net: Name=A87
+Added Net: Name=A88
+Added Net: Name=A89
+Added Net: Name=A90
+Added Net: Name=A91
+Added Net: Name=A92
+Added Net: Name=A93
+Added Net: Name=A94
+Added Net: Name=A95
+Added Net: Name=A96
+Added Net: Name=A97
+Added Net: Name=A98
+Added Net: Name=A99
+Added Net: Name=A100
+Added Net: Name=A101
+Added Net: Name=A102
+Added Net: Name=A103
+Added Net: Name=A104
+Added Net: Name=A105
+Added Net: Name=A106
+Added Net: Name=A107
+Added Net: Name=A108
+Added Net: Name=A109
+Added Net: Name=A110
+Added Net: Name=A111
+Added Net: Name=A112
+Added Net: Name=A113
+Added Net: Name=A114
+Added Net: Name=A115
+Added Net: Name=A116
+Added Net: Name=A117
+Added Net: Name=A118
+Added Net: Name=A119
+Added Net: Name=A120
+Added Net: Name=A121
+Added Net: Name=A122
+Added Net: Name=A123
+Added Net: Name=DIN0
+Added Net: Name=DIN1
+Added Net: Name=DOUT0
+Added Net: Name=DOUT1
+Added Net: Name=DOUT2
+Added Net: Name=DOUT3
+Added Net: Name=DOUT4
+Added Net: Name=DOUT5
+Added Net: Name=DOUT6
+Added Net: Name=DOUT7
+Added Net: Name=DOUT8
+Added Net: Name=DOUT9
+Added Net: Name=DOUT10
+Added Net: Name=DOUT11
+Added Net: Name=DOUT12
+Added Net: Name=DOUT13
+Added Net: Name=DOUT14
+Added Net: Name=DOUT15
+Added Net: Name=DOUT16
+Added Net: Name=DOUT17
+Added Net: Name=DOUT18
+Added Net: Name=DOUT19
+Added Net: Name=DOUT20
+Added Net: Name=DOUT21
+Added Net: Name=DOUT22
+Added Net: Name=DOUT23
+Added Net: Name=DOUT24
+Added Net: Name=DOUT25
+Added Net: Name=DOUT26
+Added Net: Name=DOUT27
+Added Net: Name=DOUT28
+Added Net: Name=DOUT29
+Added Net: Name=DOUT30
+Added Net: Name=DOUT31
+Added Net: Name=DOUT32
+Added Net: Name=DOUT33
+Added Net: Name=DOUT34
+Added Net: Name=DOUT35
+Added Net: Name=DOUT36
+Added Net: Name=DOUT37
+Added Net: Name=DOUT38
+Added Net: Name=DOUT39
+Added Net: Name=DOUT40
+Added Net: Name=DOUT41
+Added Net: Name=DOUT42
+Added Net: Name=DOUT43
+Added Net: Name=DOUT44
+Added Net: Name=DOUT45
+Added Net: Name=DOUT46
+Added Net: Name=DOUT47
+Added Net: Name=DOUT48
+Added Net: Name=DOUT49
+Added Net: Name=DOUT50
+Added Net: Name=DOUT51
+Added Net: Name=DOUT52
+Added Net: Name=DOUT53
+Added Net: Name=DOUT54
+Added Net: Name=DOUT55
+Added Net: Name=DOUT56
+Added Net: Name=DOUT57
+Added Net: Name=DOUT58
+Added Net: Name=DOUT59
+Added Net: Name=DOUT60
+Added Net: Name=DOUT61
+Added Net: Name=DOUT62
+Added Net: Name=DOUT63
+Added Net: Name=DOUT64
+Added Net: Name=DOUT65
+Added Net: Name=DOUT66
+Added Net: Name=DOUT67
+Added Net: Name=DOUT68
+Added Net: Name=DOUT69
+Added Net: Name=DOUT70
+Added Net: Name=DOUT71
+Added Net: Name=DOUT72
+Added Net: Name=DOUT73
+Added Net: Name=DOUT74
+Added Net: Name=DOUT75
+Added Net: Name=DOUT76
+Added Net: Name=DOUT77
+Added Net: Name=DOUT78
+Added Net: Name=DOUT79
+Added Net: Name=DOUT80
+Added Net: Name=DOUT81
+Added Net: Name=DOUT82
+Added Net: Name=DOUT83
+Added Net: Name=DOUT84
+Added Net: Name=DOUT85
+Added Net: Name=DOUT86
+Added Net: Name=DOUT87
+Added Net: Name=DOUT88
+Added Net: Name=DOUT89
+Added Net: Name=DOUT90
+Added Net: Name=DOUT91
+Added Net: Name=DOUT92
+Added Net: Name=DOUT93
+Added Net: Name=DOUT94
+Added Net: Name=DOUT95
+Added Net: Name=DOUT96
+Added Net: Name=DOUT97
+Added Net: Name=DOUT98
+Added Net: Name=DOUT99
+Added Net: Name=DOUT100
+Added Net: Name=DOUT101
+Added Net: Name=DOUT102
+Added Net: Name=DOUT103
+Added Net: Name=DOUT104
+Added Net: Name=DOUT105
+Added Net: Name=DOUT106
+Added Net: Name=DOUT107
+Added Net: Name=DOUT108
+Added Net: Name=DOUT109
+Added Net: Name=DOUT110
+Added Net: Name=DOUT111
+Added Net: Name=DOUT112
+Added Net: Name=DOUT113
+Added Net: Name=DOUT114
+Added Net: Name=DOUT115
+Added Net: Name=DOUT116
+Added Net: Name=DOUT117
+Added Net: Name=DOUT118
+Added Net: Name=DOUT119
+Added Net: Name=DOUT120
+Added Net: Name=DOUT121
+Added Net: Name=DOUT122
+Added Net: Name=DOUT123
+Added Net: Name=DOUT124
+Added Net: Name=DOUT125
+Added Net: Name=DOUT126
+Added Net: Name=DOUT127
+Added Net: Name=IVL_W0
+Added Net: Name=IVL_W1
+Added Net: Name=IVL_W2
+Added Net: Name=IVL_W3
+Added Net: Name=IVL_W4
+Added Net: Name=IVL_W5
+Added Net: Name=IVL_W6
+Added Net: Name=IVL_W7
+Added Net: Name=IVL_W8
+Added Net: Name=IVL_W9
+Added Net: Name=IVL_W10
+Added Net: Name=IVL_W11
+Added Net: Name=IVL_W12
+Added Net: Name=IVL_W13
+Added Net: Name=IVL_W14
+Added Net: Name=IVL_W15
+Added Pin To Net: NetName=L_H2 Pin=3V3-2
+Added Pin To Net: NetName=L_H2 Pin=3V3-3
+Added Pin To Net: NetName=L_H2 Pin=S1-1
+Added Net: Name=L_H2
+Added Pin To Net: NetName=L_H5 Pin=-5V-2
+Added Pin To Net: NetName=L_H5 Pin=-5V-3
+Added Pin To Net: NetName=L_H5 Pin=3V3-1
+Added Pin To Net: NetName=L_H5 Pin=3V3-1
+Added Pin To Net: NetName=L_H5 Pin=12V.-1
+Added Pin To Net: NetName=L_H5 Pin=12V.-1
+Added Pin To Net: NetName=L_H5 Pin=C3-1
+Added Pin To Net: NetName=L_H5 Pin=C4-1
+Added Pin To Net: NetName=L_H5 Pin=C5-1
+Added Pin To Net: NetName=L_H5 Pin=C6-1
+Added Pin To Net: NetName=L_H5 Pin=C7-1
+Added Pin To Net: NetName=L_H5 Pin=ETH3-17
+Added Pin To Net: NetName=L_H5 Pin=ETH3-18
+Added Pin To Net: NetName=L_H5 Pin=ETH3-19
+Added Pin To Net: NetName=L_H5 Pin=ETH3-20
+Added Pin To Net: NetName=L_H5 Pin=ETH3-21
+Added Pin To Net: NetName=L_H5 Pin=ETH3-22
+Added Pin To Net: NetName=L_H5 Pin=ETH3-23
+Added Pin To Net: NetName=L_H5 Pin=ETH3-24
+Added Pin To Net: NetName=L_H5 Pin=ETH4-11
+Added Pin To Net: NetName=L_H5 Pin=ETH4-30
+Added Pin To Net: NetName=L_H5 Pin=R1-1
+Added Pin To Net: NetName=L_H5 Pin=R5-1
+Added Pin To Net: NetName=L_H5 Pin=R9-1
+Added Net: Name=L_H5
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=D2-1
+Added Pin To Net: NetName=NetC1_2 Pin=R7-1
+Added Pin To Net: NetName=NetC1_2 Pin=VR1-1
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=D1-1
+Added Pin To Net: NetName=NetC2_2 Pin=D2-2
+Added Pin To Net: NetName=NetC2_2 Pin=R7-2
+Added Pin To Net: NetName=NetC2_2 Pin=VR1-2
+Added Pin To Net: NetName=NetC2_2 Pin=VR1-4
+Added Net: Name=NetC2_2
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetETH4_16 Pin=ETH4-16
+Added Net: Name=NetETH4_16
+Added Pin To Net: NetName=NetETH4_17 Pin=ETH4-17
+Added Net: Name=NetETH4_17
+Added Pin To Net: NetName=NetETH4_18 Pin=ETH4-18
+Added Net: Name=NetETH4_18
+Added Pin To Net: NetName=NetETH4_19 Pin=ETH4-19
+Added Net: Name=NetETH4_19
+Added Pin To Net: NetName=NetETH4_20 Pin=ETH4-20
+Added Net: Name=NetETH4_20
+Added Pin To Net: NetName=NetETH4_21 Pin=ETH4-21
+Added Net: Name=NetETH4_21
+Added Pin To Net: NetName=NetETH4_22 Pin=ETH4-22
+Added Net: Name=NetETH4_22
+Added Pin To Net: NetName=NetETH4_23 Pin=ETH4-23
+Added Net: Name=NetETH4_23
+Added Pin To Net: NetName=NetETH4_24 Pin=ETH4-24
+Added Net: Name=NetETH4_24
+Added Pin To Net: NetName=NetETH4_25 Pin=ETH4-25
+Added Net: Name=NetETH4_25
+Added Pin To Net: NetName=NetETH4_26 Pin=ETH4-26
+Added Net: Name=NetETH4_26
+Added Pin To Net: NetName=NetETH4_27 Pin=ETH4-27
+Added Net: Name=NetETH4_27
+Added Pin To Net: NetName=NetETH4_28 Pin=ETH4-28
+Added Net: Name=NetETH4_28
+Added Pin To Net: NetName=NetETH4_29 Pin=ETH4-29
+Added Net: Name=NetETH4_29
+Added Pin To Net: NetName=NetETH4_31 Pin=ETH4-31
+Added Net: Name=NetETH4_31
+Added Pin To Net: NetName=NetETH4_32 Pin=ETH4-32
+Added Net: Name=NetETH4_32
+Added Pin To Net: NetName=NetETH4_33 Pin=ETH4-33
+Added Net: Name=NetETH4_33
+Added Pin To Net: NetName=NetETH4_34 Pin=ETH4-34
+Added Net: Name=NetETH4_34
+Added Pin To Net: NetName=NetETH4_35 Pin=ETH4-35
+Added Net: Name=NetETH4_35
+Added Pin To Net: NetName=NetETH4_36 Pin=ETH4-36
+Added Net: Name=NetETH4_36
+Added Pin To Net: NetName=NetETH4_37 Pin=ETH4-37
+Added Net: Name=NetETH4_37
+Added Pin To Net: NetName=NetETH4_38 Pin=ETH4-38
+Added Net: Name=NetETH4_38
+Added Pin To Net: NetName=NetETH4_39 Pin=ETH4-39
+Added Net: Name=NetETH4_39
+Added Pin To Net: NetName=NetETH4_40 Pin=ETH4-40
+Added Net: Name=NetETH4_40
+Added Pin To Net: NetName=NetLM1_1 Pin=R5-2
+Added Pin To Net: NetName=NetLM1_1 Pin=R6-2
+Added Net: Name=NetLM1_1
+Added Pin To Net: NetName=NetLM2_1 Pin=R9-2
+Added Pin To Net: NetName=NetLM2_1 Pin=R10-1
+Added Net: Name=NetLM2_1
+Added Net: Name=NetPOT_1
+Added Net: Name=NetPOT_10
+Added Net: Name=NetPOT_11
+Added Net: Name=NetPOT_12
+Added Net: Name=NetPOT_13
+Added Net: Name=NetPOT_14
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=S1-2
+Added Net: Name=NetR1_2
+Added Net: Name=NetSR1_9
+Added Net: Name=NetSR1_14
+Added Net: Name=NetSR2_9
+Added Net: Name=NetSR2_14
+Added Net: Name=NetSR3_9
+Added Net: Name=NetSR5_9
+Added Net: Name=NetSR6_9
+Added Net: Name=NetSR8_9
+Added Net: Name=NetSR9_9
+Added Net: Name=NetSR10_9
+Added Net: Name=NetSR11_9
+Added Net: Name=NetSR12_9
+Added Net: Name=NetSR13_9
+Added Net: Name=NetSR15_9
+Added Pin To Net: NetName=OTH0 Pin=ETH-17
+Added Net: Name=OTH0
+Added Pin To Net: NetName=OTH1 Pin=ETH-18
+Added Net: Name=OTH1
+Added Pin To Net: NetName=OTH2 Pin=ETH-19
+Added Net: Name=OTH2
+Added Pin To Net: NetName=OTH3 Pin=ETH-20
+Added Net: Name=OTH3
+Added Pin To Net: NetName=OTH4 Pin=ETH-21
+Added Net: Name=OTH4
+Added Pin To Net: NetName=OTH5 Pin=ETH-22
+Added Net: Name=OTH5
+Added Pin To Net: NetName=OTH6 Pin=ETH-23
+Added Net: Name=OTH6
+Added Pin To Net: NetName=OTH7 Pin=ETH-24
+Added Net: Name=OTH7
+Added Pin To Net: NetName=OUT1 Pin=C1-1
+Added Pin To Net: NetName=OUT1 Pin=C2-1
+Added Net: Name=OUT1
+Added Pin To Net: NetName=OUT2 Pin=D1-2
+Added Pin To Net: NetName=OUT2 Pin=VR1-3
+Added Net: Name=OUT2
+Added Net: Name=OVCC_W0
+Added Net: Name=OVCC_W1
+Added Net: Name=OVCC_W2
+Added Net: Name=OVCC_W3
+Added Net: Name=OVCC_W4
+Added Net: Name=OVCC_W5
+Added Net: Name=OVCC_W6
+Added Net: Name=OVCC_W7
+Added Net: Name=OVCC_W8
+Added Net: Name=OVCC_W9
+Added Net: Name=OVCC_W10
+Added Net: Name=OVCC_W11
+Added Net: Name=OVCC_W12
+Added Net: Name=OVCC_W13
+Added Net: Name=OVCC_W14
+Added Net: Name=OVCC_W15
+Added Net: Name=RCLK
+Added Net: Name=RDY0
+Added Net: Name=RDY1
+Added Net: Name=RX
+Added Net: Name=S1
+Added Net: Name=S2
+Added Pin To Net: NetName=SIG0 Pin=ETH-1
+Added Net: Name=SIG0
+Added Pin To Net: NetName=SIG1 Pin=ETH-2
+Added Net: Name=SIG1
+Added Pin To Net: NetName=SIG2 Pin=ETH-3
+Added Net: Name=SIG2
+Added Pin To Net: NetName=SIG3 Pin=ETH-4
+Added Net: Name=SIG3
+Added Pin To Net: NetName=SIG4 Pin=ETH-5
+Added Net: Name=SIG4
+Added Pin To Net: NetName=SIG5 Pin=ETH-6
+Added Net: Name=SIG5
+Added Pin To Net: NetName=SIG6 Pin=ETH-7
+Added Net: Name=SIG6
+Added Pin To Net: NetName=SIG7 Pin=ETH-8
+Added Net: Name=SIG7
+Added Pin To Net: NetName=SIG8 Pin=ETH-9
+Added Net: Name=SIG8
+Added Pin To Net: NetName=SIG9 Pin=ETH-10
+Added Net: Name=SIG9
+Added Pin To Net: NetName=SIG10 Pin=ETH-11
+Added Net: Name=SIG10
+Added Pin To Net: NetName=SIG11 Pin=ETH-12
+Added Net: Name=SIG11
+Added Pin To Net: NetName=SIG12 Pin=ETH-13
+Added Net: Name=SIG12
+Added Pin To Net: NetName=SIG13 Pin=ETH-14
+Added Net: Name=SIG13
+Added Pin To Net: NetName=SIG14 Pin=ETH-15
+Added Net: Name=SIG14
+Added Pin To Net: NetName=SIG15 Pin=ETH-16
+Added Net: Name=SIG15
+Added Pin To Net: NetName=SIG16 Pin=ETH-25
+Added Net: Name=SIG16
+Added Pin To Net: NetName=SIG17 Pin=ETH-26
+Added Net: Name=SIG17
+Added Pin To Net: NetName=SIG18 Pin=ETH-27
+Added Net: Name=SIG18
+Added Pin To Net: NetName=SIG19 Pin=ETH-28
+Added Net: Name=SIG19
+Added Pin To Net: NetName=SIG20 Pin=ETH-29
+Added Net: Name=SIG20
+Added Pin To Net: NetName=SIG21 Pin=ETH-30
+Added Net: Name=SIG21
+Added Pin To Net: NetName=SIG22 Pin=ETH-31
+Added Net: Name=SIG22
+Added Pin To Net: NetName=SIG23 Pin=ETH-32
+Added Net: Name=SIG23
+Added Pin To Net: NetName=SIG24 Pin=ETH-33
+Added Net: Name=SIG24
+Added Pin To Net: NetName=SIG25 Pin=ETH-34
+Added Net: Name=SIG25
+Added Pin To Net: NetName=SIG26 Pin=ETH-35
+Added Net: Name=SIG26
+Added Pin To Net: NetName=SIG27 Pin=ETH-36
+Added Net: Name=SIG27
+Added Pin To Net: NetName=SIG28 Pin=ETH-37
+Added Net: Name=SIG28
+Added Pin To Net: NetName=SIG29 Pin=ETH-38
+Added Net: Name=SIG29
+Added Pin To Net: NetName=SIG30 Pin=ETH-39
+Added Net: Name=SIG30
+Added Pin To Net: NetName=SIG31 Pin=ETH-40
+Added Net: Name=SIG31
+Added Pin To Net: NetName=SIGNAL0 Pin=ETH1-1
+Added Net: Name=SIGNAL0
+Added Pin To Net: NetName=SIGNAL1 Pin=ETH1-2
+Added Net: Name=SIGNAL1
+Added Pin To Net: NetName=SIGNAL2 Pin=ETH1-3
+Added Net: Name=SIGNAL2
+Added Pin To Net: NetName=SIGNAL3 Pin=ETH1-4
+Added Net: Name=SIGNAL3
+Added Pin To Net: NetName=SIGNAL4 Pin=ETH1-5
+Added Net: Name=SIGNAL4
+Added Pin To Net: NetName=SIGNAL5 Pin=ETH1-6
+Added Net: Name=SIGNAL5
+Added Pin To Net: NetName=SIGNAL6 Pin=ETH1-7
+Added Net: Name=SIGNAL6
+Added Pin To Net: NetName=SIGNAL7 Pin=ETH1-8
+Added Net: Name=SIGNAL7
+Added Pin To Net: NetName=SIGNAL8 Pin=ETH1-9
+Added Net: Name=SIGNAL8
+Added Pin To Net: NetName=SIGNAL9 Pin=ETH1-10
+Added Net: Name=SIGNAL9
+Added Pin To Net: NetName=SIGNAL10 Pin=ETH1-11
+Added Net: Name=SIGNAL10
+Added Pin To Net: NetName=SIGNAL11 Pin=ETH1-12
+Added Net: Name=SIGNAL11
+Added Pin To Net: NetName=SIGNAL12 Pin=ETH1-13
+Added Net: Name=SIGNAL12
+Added Pin To Net: NetName=SIGNAL13 Pin=ETH1-14
+Added Net: Name=SIGNAL13
+Added Pin To Net: NetName=SIGNAL14 Pin=ETH1-15
+Added Net: Name=SIGNAL14
+Added Pin To Net: NetName=SIGNAL15 Pin=ETH1-16
+Added Net: Name=SIGNAL15
+Added Pin To Net: NetName=SIGNAL16 Pin=ETH1-17
+Added Net: Name=SIGNAL16
+Added Pin To Net: NetName=SIGNAL17 Pin=ETH1-18
+Added Net: Name=SIGNAL17
+Added Pin To Net: NetName=SIGNAL18 Pin=ETH1-19
+Added Net: Name=SIGNAL18
+Added Pin To Net: NetName=SIGNAL19 Pin=ETH1-20
+Added Net: Name=SIGNAL19
+Added Pin To Net: NetName=SIGNAL40 Pin=ETH2-1
+Added Net: Name=SIGNAL40
+Added Pin To Net: NetName=SIGNAL41 Pin=ETH2-2
+Added Net: Name=SIGNAL41
+Added Pin To Net: NetName=SIGNAL42 Pin=ETH2-3
+Added Net: Name=SIGNAL42
+Added Pin To Net: NetName=SIGNAL43 Pin=ETH2-4
+Added Net: Name=SIGNAL43
+Added Pin To Net: NetName=SIGNAL44 Pin=ETH2-5
+Added Net: Name=SIGNAL44
+Added Pin To Net: NetName=SIGNAL45 Pin=ETH2-6
+Added Net: Name=SIGNAL45
+Added Pin To Net: NetName=SIGNAL46 Pin=ETH2-7
+Added Net: Name=SIGNAL46
+Added Pin To Net: NetName=SIGNAL47 Pin=ETH2-8
+Added Net: Name=SIGNAL47
+Added Pin To Net: NetName=SIGNAL48 Pin=ETH2-9
+Added Net: Name=SIGNAL48
+Added Pin To Net: NetName=SIGNAL49 Pin=ETH2-10
+Added Net: Name=SIGNAL49
+Added Pin To Net: NetName=SIGNAL50 Pin=ETH2-11
+Added Net: Name=SIGNAL50
+Added Pin To Net: NetName=SIGNAL51 Pin=ETH2-12
+Added Net: Name=SIGNAL51
+Added Pin To Net: NetName=SIGNAL52 Pin=ETH2-13
+Added Net: Name=SIGNAL52
+Added Pin To Net: NetName=SIGNAL53 Pin=ETH2-14
+Added Net: Name=SIGNAL53
+Added Pin To Net: NetName=SIGNAL54 Pin=ETH2-15
+Added Net: Name=SIGNAL54
+Added Pin To Net: NetName=SIGNAL55 Pin=ETH2-16
+Added Net: Name=SIGNAL55
+Added Pin To Net: NetName=SIGNAL56 Pin=ETH2-17
+Added Net: Name=SIGNAL56
+Added Pin To Net: NetName=SIGNAL57 Pin=ETH2-18
+Added Net: Name=SIGNAL57
+Added Pin To Net: NetName=SIGNAL58 Pin=ETH2-19
+Added Net: Name=SIGNAL58
+Added Pin To Net: NetName=SIGNAL59 Pin=ETH2-20
+Added Net: Name=SIGNAL59
+Added Pin To Net: NetName=SIGNAL80 Pin=ETH3-1
+Added Net: Name=SIGNAL80
+Added Pin To Net: NetName=SIGNAL81 Pin=ETH3-2
+Added Net: Name=SIGNAL81
+Added Pin To Net: NetName=SIGNAL82 Pin=ETH3-3
+Added Net: Name=SIGNAL82
+Added Pin To Net: NetName=SIGNAL83 Pin=ETH3-4
+Added Net: Name=SIGNAL83
+Added Pin To Net: NetName=SIGNAL84 Pin=ETH3-5
+Added Net: Name=SIGNAL84
+Added Pin To Net: NetName=SIGNAL85 Pin=ETH3-6
+Added Net: Name=SIGNAL85
+Added Pin To Net: NetName=SIGNAL86 Pin=ETH3-7
+Added Net: Name=SIGNAL86
+Added Pin To Net: NetName=SIGNAL87 Pin=ETH3-8
+Added Net: Name=SIGNAL87
+Added Pin To Net: NetName=SIGNAL88 Pin=ETH3-9
+Added Net: Name=SIGNAL88
+Added Pin To Net: NetName=SIGNAL89 Pin=ETH3-10
+Added Net: Name=SIGNAL89
+Added Pin To Net: NetName=SIGNAL90 Pin=ETH3-11
+Added Net: Name=SIGNAL90
+Added Pin To Net: NetName=SIGNAL91 Pin=ETH3-12
+Added Net: Name=SIGNAL91
+Added Pin To Net: NetName=SIGNAL92 Pin=ETH3-13
+Added Net: Name=SIGNAL92
+Added Pin To Net: NetName=SIGNAL93 Pin=ETH3-14
+Added Net: Name=SIGNAL93
+Added Pin To Net: NetName=SIGNAL94 Pin=ETH3-15
+Added Net: Name=SIGNAL94
+Added Pin To Net: NetName=SIGNAL95 Pin=ETH3-16
+Added Net: Name=SIGNAL95
+Added Pin To Net: NetName=SIGNAL112 Pin=ETH4-1
+Added Net: Name=SIGNAL112
+Added Pin To Net: NetName=SIGNAL113 Pin=ETH4-2
+Added Net: Name=SIGNAL113
+Added Pin To Net: NetName=SIGNAL114 Pin=ETH4-3
+Added Net: Name=SIGNAL114
+Added Pin To Net: NetName=SIGNAL115 Pin=ETH4-4
+Added Net: Name=SIGNAL115
+Added Pin To Net: NetName=SIGNAL116 Pin=ETH4-5
+Added Net: Name=SIGNAL116
+Added Pin To Net: NetName=SIGNAL117 Pin=ETH4-6
+Added Net: Name=SIGNAL117
+Added Pin To Net: NetName=SIGNAL118 Pin=ETH4-7
+Added Net: Name=SIGNAL118
+Added Pin To Net: NetName=SIGNAL119 Pin=ETH4-8
+Added Net: Name=SIGNAL119
+Added Pin To Net: NetName=SIGNAL120 Pin=ETH4-9
+Added Net: Name=SIGNAL120
+Added Pin To Net: NetName=SIGNAL121 Pin=ETH4-10
+Added Net: Name=SIGNAL121
+Added Pin To Net: NetName=SIGNAL122 Pin=ETH4-12
+Added Net: Name=SIGNAL122
+Added Pin To Net: NetName=SIGNAL123\ Pin=ETH4-13
+Added Net: Name=SIGNAL123\
+Added Pin To Net: NetName=SIGNAL124 Pin=ETH4-14
+Added Net: Name=SIGNAL124
+Added Pin To Net: NetName=SIGNAL125 Pin=ETH4-15
+Added Net: Name=SIGNAL125
+Added Net: Name=SPI1D1
+Added Net: Name=SPICLK0
+Added Net: Name=SPICLK1
+Added Net: Name=SPICS0
+Added Net: Name=SPICS1
+Added Net: Name=SRCLK
+Added Net: Name=TX
+Added Net: Name=V_RST
+Added Pin To Net: NetName=VCC Pin=C6-2
+Added Pin To Net: NetName=VCC Pin=C7-2
+Added Net: Name=VCC
+Added Pin To Net: NetName=VT_3V3_W Pin=0.1uF_0-1
+Added Pin To Net: NetName=VT_3V3_W Pin=0.1uF_1-1
+Added Net: Name=VT_3V3_W
+Added Net: Name=VT_EN_W
+Added Pin To Net: NetName=VT_VCC_W Pin=0.1uF_3-1
+Added Pin To Net: NetName=VT_VCC_W Pin=0.1uF_4-1
+Added Net: Name=VT_VCC_W
+Added Net: Name=Y0
+Added Net: Name=Y1
+Added Net: Name=Y2
+Added Net: Name=Y3
+Added Net: Name=Y4
+Added Net: Name=Y5
+Added Net: Name=Y6
+Added Net: Name=Y7
+Added Net: Name=Y8
+Added Net: Name=Y9
+Added Net: Name=Y10
+Added Net: Name=Y11
+Added Net: Name=Y12
+Added Net: Name=Y13
+Added Net: Name=Y14
+Added Net: Name=Y15
+Added Net: Name=Y16
+Added Net: Name=Y17
+Added Net: Name=Y18
+Added Net: Name=Y19
+Added Net: Name=Y20
+Added Net: Name=Y21
+Added Net: Name=Y22
+Added Net: Name=Y23
+Added Net: Name=Y24
+Added Net: Name=Y25
+Added Net: Name=Y26
+Added Net: Name=Y27
+Added Net: Name=Y28
+Added Net: Name=Y29
+Added Net: Name=Y30
+Added Net: Name=Y31
+Added Net: Name=Y32
+Added Net: Name=Y33
+Added Net: Name=Y34
+Added Net: Name=Y35
+Added Net: Name=Y36
+Added Net: Name=Y37
+Added Net: Name=Y38
+Added Net: Name=Y39
+Added Net: Name=Y40
+Added Net: Name=Y41
+Added Net: Name=Y42
+Added Net: Name=Y43
+Added Net: Name=Y44
+Added Net: Name=Y45
+Added Net: Name=Y46
+Added Net: Name=Y47
+Added Net: Name=Y48
+Added Net: Name=Y49
+Added Net: Name=Y50
+Added Net: Name=Y51
+Added Net: Name=Y52
+Added Net: Name=Y53
+Added Net: Name=Y54
+Added Net: Name=Y55
+Added Net: Name=Y56
+Added Net: Name=Y57
+Added Net: Name=Y58
+Added Net: Name=Y59
+Added Net: Name=Y60
+Added Net: Name=Y61
+Added Net: Name=Y62
+Added Net: Name=Y63
+Added Net: Name=Y64
+Added Net: Name=Y65
+Added Net: Name=Y66
+Added Net: Name=Y67
+Added Net: Name=Y68
+Added Net: Name=Y69
+Added Net: Name=Y70
+Added Net: Name=Y71
+Added Net: Name=Y72
+Added Net: Name=Y73
+Added Net: Name=Y74
+Added Net: Name=Y75
+Added Net: Name=Y76
+Added Net: Name=Y77
+Added Net: Name=Y78
+Added Net: Name=Y79
+Added Net: Name=Y80
+Added Net: Name=Y81
+Added Net: Name=Y82
+Added Net: Name=Y83
+Added Net: Name=Y84
+Added Net: Name=Y85
+Added Net: Name=Y86
+Added Net: Name=Y87
+Added Net: Name=Y88
+Added Net: Name=Y89
+Added Net: Name=Y90
+Added Net: Name=Y91
+Added Net: Name=Y92
+Added Net: Name=Y93
+Added Net: Name=Y94
+Added Net: Name=Y95
+Added Net: Name=Y96
+Added Net: Name=Y97
+Added Net: Name=Y98
+Added Net: Name=Y99
+Added Net: Name=Y100
+Added Net: Name=Y101
+Added Net: Name=Y102
+Added Net: Name=Y103
+Added Net: Name=Y104
+Added Net: Name=Y105
+Added Net: Name=Y106
+Added Net: Name=Y107
+Added Net: Name=Y108
+Added Net: Name=Y109
+Added Net: Name=Y110
+Added Net: Name=Y111
+Added Net: Name=Y112
+Added Net: Name=Y113
+Added Net: Name=Y114
+Added Net: Name=Y115
+Added Net: Name=Y116
+Added Net: Name=Y117
+Added Net: Name=Y118
+Added Net: Name=Y119
+Added Net: Name=Y120
+Added Net: Name=Y121
+Added Net: Name=Y122
+Added Net: Name=Y123
+Added Net: Name=Y124
+Added Net: Name=Y125
+Added Net: Name=Y126
+Added Net: Name=Y127
+Added Net: Name=~OE0
+Added Net: Name=~OE1
+Added Net: Name=~OE2
+Added Net: Name=~OE3
+Added Net: Name=~OE4
+Added Net: Name=~OE5
+Added Net: Name=~OE6
+Added Net: Name=~OE7
+Added Net: Name=~OE8
+Added Net: Name=~OE9
+Added Net: Name=~OE10
+Added Net: Name=~OE11
+Added Net: Name=~OE12
+Added Net: Name=~OE13
+Added Net: Name=~OE14
+Added Net: Name=~OE15
+Added Net: Name=~OE16
+Added Net: Name=~OE17
+Added Net: Name=~OE18
+Added Net: Name=~OE19
+Added Net: Name=~OE20
+Added Net: Name=~OE21
+Added Net: Name=~OE22
+Added Net: Name=~OE23
+Added Net: Name=~OE24
+Added Net: Name=~OE25
+Added Net: Name=~OE26
+Added Net: Name=~OE27
+Added Net: Name=~OE28
+Added Net: Name=~OE29
+Added Net: Name=~OE30
+Added Net: Name=~OE31
+Added Net: Name=~OE32
+Added Net: Name=~OE33
+Added Net: Name=~OE34
+Added Net: Name=~OE35
+Added Net: Name=~OE36
+Added Net: Name=~OE37
+Added Net: Name=~OE38
+Added Net: Name=~OE39
+Added Net: Name=~OE40
+Added Net: Name=~OE41
+Added Net: Name=~OE42
+Added Net: Name=~OE43
+Added Net: Name=~OE44
+Added Net: Name=~OE45
+Added Net: Name=~OE46
+Added Net: Name=~OE47
+Added Net: Name=~OE64
+Added Net: Name=~OE65
+Added Net: Name=~OE66
+Added Net: Name=~OE67
+Added Net: Name=~OE68
+Added Net: Name=~OE69
+Added Net: Name=~OE70
+Added Net: Name=~OE71
+Added Net: Name=~OE72
+Added Net: Name=~OE73
+Added Net: Name=~OE74
+Added Net: Name=~OE75
+Added Net: Name=~OE76
+Added Net: Name=~OE77
+Added Net: Name=~OE78
+Added Net: Name=~OE79
+Added Net: Name=~OE80
+Added Net: Name=~OE81
+Added Net: Name=~OE82
+Added Net: Name=~OE83
+Added Net: Name=~OE84
+Added Net: Name=~OE85
+Added Net: Name=~OE86
+Added Net: Name=~OE87
+Added Net: Name=~OE88
+Added Net: Name=~OE89
+Added Net: Name=~OE90
+Added Net: Name=~OE91
+Added Net: Name=~OE92
+Added Net: Name=~OE93
+Added Net: Name=~OE94
+Added Net: Name=~OE95
+Added Net: Name=~OE96
+Added Net: Name=~OE97
+Added Net: Name=~OE98
+Added Net: Name=~OE99
+Added Net: Name=~OE100
+Added Net: Name=~OE101
+Added Net: Name=~OE102
+Added Net: Name=~OE103
+Added Net: Name=~OE104
+Added Net: Name=~OE105
+Added Net: Name=~OE106
+Added Net: Name=~OE107
+Added Net: Name=~OE108
+Added Net: Name=~OE109
+Added Net: Name=~OE110
+Added Net: Name=~OE111
+Added Net: Name=~OE112
+Added Net: Name=~OE113
+Added Net: Name=~OE114
+Added Net: Name=~OE115
+Added Net: Name=~OE116
+Added Net: Name=~OE117
+Added Net: Name=~OE118
+Added Net: Name=~OE119
+Added Net: Name=~OE120
+Added Net: Name=~OE121
+Added Net: Name=~OE122
+Added Net: Name=~OE123
+Added Net: Name=~OE124
+Added Net: Name=~OE125
+Added Net: Name=~OE126
+Added Net: Name=~OE127
+Added Net: Name=~RCLR
+Added Net: Name=~SRCLR
+Added Class: Name=BBB_Board
+Added Class: Name=DUT_HEADER
+Added Class: Name=NUMATO_HDR
+Added Class: Name=POW_CONT
+Added Class: Name=TEMPLATE_REG
+Added Class: Name=TRISTATE_BANK
+Added Class: Name=VT_WRP
+Added Class: Name=A[127..0]
+Added Class: Name=B_H[0..7]
+Added Class: Name=DOUT[127..0]
+Added Class: Name=IVL_B[127..0]
+Added Class: Name=IVL_W[15..0]
+Added Class: Name=L_H[0..7]
+Added Class: Name=OTH[0..7]
+Added Class: Name=OVCC_B[127..0]
+Added Class: Name=OVCC_W[15..0]
+Added Class: Name=R_H[0..7]
+Added Class: Name=SIG[0..31]
+Added Class: Name=SIGNAL[125..0]
+Added Class: Name=T_H[0..7]
+Added Class: Name=Y[127..0]

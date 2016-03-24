@@ -1,0 +1,17 @@
+Replace Part 1 0.1uF_0603 in X:\Masters\BBB_Board\POW_CONT.SchDoc with 0.1uF_0603 from BBB_Board.SchLib
+Replace Part 2 0.1uF_0603 in X:\Masters\BBB_Board\POW_CONT.SchDoc with 0.1uF_0603 from BBB_Board.SchLib
+Replace Part 3 0.1uF_0603 in X:\Masters\BBB_Board\POW_CONT.SchDoc with 0.1uF_0603 from BBB_Board.SchLib
+Replace Part 4 0.1uF_0603 in X:\Masters\BBB_Board\POW_CONT.SchDoc with 0.1uF_0603 from BBB_Board.SchLib
+Replace Part 5 0.1uF_0603 in X:\Masters\BBB_Board\POW_CONT.SchDoc with 0.1uF_0603 from BBB_Board.SchLib
+Replace Part 6 0.1uF_0603 in X:\Masters\BBB_Board\POW_CONT.SchDoc with 0.1uF_0603 from BBB_Board.SchLib
+Replace Part D1 Diode 1N4001 in X:\Masters\BBB_Board\POW_CONT.SchDoc with Diode 1N4001 from Miscellaneous Devices.IntLib
+Replace Part D2 Diode 1N4001 in X:\Masters\BBB_Board\POW_CONT.SchDoc with Diode 1N4001 from Miscellaneous Devices.IntLib
+Replace Part LM1 LM321MF/NOPB in X:\Masters\BBB_Board\POW_CONT.SchDoc with LM321MF/NOPB from BBB_Board.SchLib
+Replace Part LM2 LM321MF/NOPB in X:\Masters\BBB_Board\POW_CONT.SchDoc with LM321MF/NOPB from BBB_Board.SchLib
+Replace Part POT Digital Pot in X:\Masters\BBB_Board\POW_CONT.SchDoc with Digital Pot from BBB_Board.SchLib
+Replace Part R2 RNCS0603BKE10K0 in X:\Masters\BBB_Board\POW_CONT.SchDoc with RNCS0603BKE10K0 from BBB_Board.SchLib
+Replace Part R5 Res3 in X:\Masters\BBB_Board\POW_CONT.SchDoc with Res3 from Miscellaneous Devices.IntLib
+Replace Part R6 Res3 in X:\Masters\BBB_Board\POW_CONT.SchDoc with Res3 from Miscellaneous Devices.IntLib
+Replace Part R9 Res3 in X:\Masters\BBB_Board\POW_CONT.SchDoc with Res3 from Miscellaneous Devices.IntLib
+Replace Part R10 Res3 in X:\Masters\BBB_Board\POW_CONT.SchDoc with Res3 from Miscellaneous Devices.IntLib
+Replace Part VR1 Voltage Regulator in X:\Masters\BBB_Board\POW_CONT.SchDoc with Voltage Regulator from BBB_Board.SchLib

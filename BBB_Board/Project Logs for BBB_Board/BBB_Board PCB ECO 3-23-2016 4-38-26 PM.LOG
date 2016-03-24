@@ -1,0 +1,2209 @@
+Added Component: Designator=-5V(CP-002BHPJCT-ND)
+Added Component: Designator=0.1uF_0(0.1uF_0603)
+Added Component: Designator=0.1uF_1(0.1uF_0603)
+Added Component: Designator=0.1uF_3(0.1uF_0603)
+Added Component: Designator=0.1uF_4(0.1uF_0603)
+Added Component: Designator=1(0.1uF_0603)
+Added Component: Designator=2(0.1uF_0603)
+Added Component: Designator=3(0.1uF_0603)
+Added Component: Designator=3V3(CP-002BHPJCT-ND)
+Added Component: Designator=4(0.1uF_0603)
+Added Component: Designator=5(0.1uF_0603)
+Added Component: Designator=6(0.1uF_0603)
+Added Component: Designator=12V.(CP-002BHPJCT-ND)
+Added Component: Designator=BBB(BBB_Pin)
+Added Component: Designator=D1(DO-41)
+Added Component: Designator=D2(DO-41)
+Added Component: Designator=ETH1(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH2(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH3(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH4(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH(FEMALE_HEADER_SMD)
+Added Component: Designator=LM1(op_amp)
+Added Component: Designator=LM2(op_amp)
+Added Component: Designator=LT1(8-bit_level)
+Added Component: Designator=LT2(8-bit_level)
+Added Component: Designator=POT(Dig_Pot)
+Added Component: Designator=R1(0.1uF_0603)
+Added Component: Designator=R2(0.1uF_0603)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=R9(J1-0603)
+Added Component: Designator=R10(J1-0603)
+Added Component: Designator=S1(SPST-2)
+Added Component: Designator=SR1(8-bit_shiftreg)
+Added Component: Designator=SR2(8-bit_shiftreg)
+Added Component: Designator=SR3(8-bit_shiftreg)
+Added Component: Designator=SR4(8-bit_shiftreg)
+Added Component: Designator=SR5(8-bit_shiftreg)
+Added Component: Designator=SR6(8-bit_shiftreg)
+Added Component: Designator=SR7(8-bit_shiftreg)
+Added Component: Designator=SR8(8-bit_shiftreg)
+Added Component: Designator=SR9(8-bit_shiftreg)
+Added Component: Designator=SR10(8-bit_shiftreg)
+Added Component: Designator=SR11(8-bit_shiftreg)
+Added Component: Designator=SR12(8-bit_shiftreg)
+Added Component: Designator=SR13(8-bit_shiftreg)
+Added Component: Designator=SR14(8-bit_shiftreg)
+Added Component: Designator=SR15(8-bit_shiftreg)
+Added Component: Designator=SR16(8-bit_shiftreg)
+Added Component: Designator=TSB1(tri_state)
+Added Component: Designator=TSB2(tri_state)
+Added Component: Designator=TSB3(tri_state)
+Added Component: Designator=TSB4(tri_state)
+Added Component: Designator=TSB5(tri_state)
+Added Component: Designator=TSB6(tri_state)
+Added Component: Designator=TSB7(tri_state)
+Added Component: Designator=TSB8(tri_state)
+Added Component: Designator=TSB9(tri_state)
+Added Component: Designator=TSB10(tri_state)
+Added Component: Designator=TSB11(tri_state)
+Added Component: Designator=TSB12(tri_state)
+Added Component: Designator=TSB13(tri_state)
+Added Component: Designator=TSB14(tri_state)
+Added Component: Designator=TSB15(tri_state)
+Added Component: Designator=TSB16(tri_state)
+Added Component: Designator=TSB17(tri_state)
+Added Component: Designator=TSB18(tri_state)
+Added Component: Designator=TSB19(tri_state)
+Added Component: Designator=TSB20(tri_state)
+Added Component: Designator=TSB21(tri_state)
+Added Component: Designator=TSB22(tri_state)
+Added Component: Designator=TSB23(tri_state)
+Added Component: Designator=TSB24(tri_state)
+Added Component: Designator=TSB25(tri_state)
+Added Component: Designator=TSB26(tri_state)
+Added Component: Designator=TSB27(tri_state)
+Added Component: Designator=TSB28(tri_state)
+Added Component: Designator=TSB29(tri_state)
+Added Component: Designator=TSB30(tri_state)
+Added Component: Designator=TSB31(tri_state)
+Added Component: Designator=TSB32(tri_state)
+Added Component: Designator=TSB33(tri_state)
+Added Component: Designator=TSB34(tri_state)
+Added Component: Designator=TSB35(tri_state)
+Added Component: Designator=TSB36(tri_state)
+Added Component: Designator=TSB37(tri_state)
+Added Component: Designator=TSB38(tri_state)
+Added Component: Designator=TSB39(tri_state)
+Added Component: Designator=TSB40(tri_state)
+Added Component: Designator=TSB41(tri_state)
+Added Component: Designator=TSB42(tri_state)
+Added Component: Designator=TSB43(tri_state)
+Added Component: Designator=TSB44(tri_state)
+Added Component: Designator=TSB45(tri_state)
+Added Component: Designator=TSB46(tri_state)
+Added Component: Designator=TSB47(tri_state)
+Added Component: Designator=TSB48(tri_state)
+Added Component: Designator=TSB49(tri_state)
+Added Component: Designator=TSB50(tri_state)
+Added Component: Designator=TSB51(tri_state)
+Added Component: Designator=TSB52(tri_state)
+Added Component: Designator=TSB53(tri_state)
+Added Component: Designator=TSB54(tri_state)
+Added Component: Designator=TSB55(tri_state)
+Added Component: Designator=TSB56(tri_state)
+Added Component: Designator=TSB57(tri_state)
+Added Component: Designator=TSB58(tri_state)
+Added Component: Designator=TSB59(tri_state)
+Added Component: Designator=TSB60(tri_state)
+Added Component: Designator=TSB61(tri_state)
+Added Component: Designator=TSB62(tri_state)
+Added Component: Designator=TSB63(tri_state)
+Added Component: Designator=TSB64(tri_state)
+Added Component: Designator=TSB65(tri_state)
+Added Component: Designator=TSB66(tri_state)
+Added Component: Designator=TSB67(tri_state)
+Added Component: Designator=TSB68(tri_state)
+Added Component: Designator=TSB69(tri_state)
+Added Component: Designator=TSB70(tri_state)
+Added Component: Designator=TSB71(tri_state)
+Added Component: Designator=TSB72(tri_state)
+Added Component: Designator=TSB73(tri_state)
+Added Component: Designator=TSB74(tri_state)
+Added Component: Designator=TSB75(tri_state)
+Added Component: Designator=TSB76(tri_state)
+Added Component: Designator=TSB77(tri_state)
+Added Component: Designator=TSB78(tri_state)
+Added Component: Designator=TSB79(tri_state)
+Added Component: Designator=TSB80(tri_state)
+Added Component: Designator=TSB81(tri_state)
+Added Component: Designator=TSB82(tri_state)
+Added Component: Designator=TSB83(tri_state)
+Added Component: Designator=TSB84(tri_state)
+Added Component: Designator=TSB85(tri_state)
+Added Component: Designator=TSB86(tri_state)
+Added Component: Designator=TSB87(tri_state)
+Added Component: Designator=TSB88(tri_state)
+Added Component: Designator=TSB89(tri_state)
+Added Component: Designator=TSB90(tri_state)
+Added Component: Designator=TSB91(tri_state)
+Added Component: Designator=TSB92(tri_state)
+Added Component: Designator=TSB93(tri_state)
+Added Component: Designator=TSB94(tri_state)
+Added Component: Designator=TSB95(tri_state)
+Added Component: Designator=TSB96(tri_state)
+Added Component: Designator=TSB97(tri_state)
+Added Component: Designator=TSB98(tri_state)
+Added Component: Designator=TSB99(tri_state)
+Added Component: Designator=TSB100(tri_state)
+Added Component: Designator=TSB101(tri_state)
+Added Component: Designator=TSB102(tri_state)
+Added Component: Designator=TSB103(tri_state)
+Added Component: Designator=TSB104(tri_state)
+Added Component: Designator=TSB105(tri_state)
+Added Component: Designator=TSB106(tri_state)
+Added Component: Designator=TSB107(tri_state)
+Added Component: Designator=TSB108(tri_state)
+Added Component: Designator=TSB109(tri_state)
+Added Component: Designator=TSB110(tri_state)
+Added Component: Designator=TSB111(tri_state)
+Added Component: Designator=TSB112(tri_state)
+Added Component: Designator=TSB113(tri_state)
+Added Component: Designator=TSB114(tri_state)
+Added Component: Designator=TSB115(tri_state)
+Added Component: Designator=TSB116(tri_state)
+Added Component: Designator=TSB117(tri_state)
+Added Component: Designator=TSB118(tri_state)
+Added Component: Designator=TSB119(tri_state)
+Added Component: Designator=TSB120(tri_state)
+Added Component: Designator=TSB121(tri_state)
+Added Component: Designator=TSB122(tri_state)
+Added Component: Designator=TSB123(tri_state)
+Added Component: Designator=TSB124(tri_state)
+Added Component: Designator=TSB125(tri_state)
+Added Component: Designator=TSB126(tri_state)
+Added Component: Designator=TSB127(tri_state)
+Added Component: Designator=TSB128(tri_state)
+Added Component: Designator=VR1(volt_reg)
+Added Pin To Net: NetName=-5V_W Pin=LM1-2
+Added Pin To Net: NetName=-5V_W Pin=R6-1
+Added Net: Name=-5V_W
+Added Pin To Net: NetName=3V3_WRP Pin=POT-8
+Added Net: Name=3V3_WRP
+Added Pin To Net: NetName=3V3_W Pin=SR1-16
+Added Pin To Net: NetName=3V3_W Pin=SR2-16
+Added Pin To Net: NetName=3V3_W Pin=SR3-16
+Added Pin To Net: NetName=3V3_W Pin=SR4-16
+Added Pin To Net: NetName=3V3_W Pin=SR5-16
+Added Pin To Net: NetName=3V3_W Pin=SR6-16
+Added Pin To Net: NetName=3V3_W Pin=SR7-16
+Added Pin To Net: NetName=3V3_W Pin=SR8-16
+Added Pin To Net: NetName=3V3_W Pin=SR9-16
+Added Pin To Net: NetName=3V3_W Pin=SR10-16
+Added Pin To Net: NetName=3V3_W Pin=SR11-16
+Added Pin To Net: NetName=3V3_W Pin=SR12-16
+Added Pin To Net: NetName=3V3_W Pin=SR13-16
+Added Pin To Net: NetName=3V3_W Pin=SR14-16
+Added Pin To Net: NetName=3V3_W Pin=SR15-16
+Added Pin To Net: NetName=3V3_W Pin=SR16-16
+Added Net: Name=3V3_W
+Added Pin To Net: NetName=12V_W Pin=LM2-5
+Added Pin To Net: NetName=12V_W Pin=POT-6
+Added Pin To Net: NetName=12V_W Pin=R10-2
+Added Net: Name=12V_W
+Added Pin To Net: NetName=A0 Pin=TSB1-2
+Added Net: Name=A0
+Added Pin To Net: NetName=A1 Pin=TSB8-2
+Added Net: Name=A1
+Added Pin To Net: NetName=A2 Pin=TSB15-2
+Added Net: Name=A2
+Added Pin To Net: NetName=A3 Pin=TSB22-2
+Added Net: Name=A3
+Added Pin To Net: NetName=A4 Pin=TSB29-2
+Added Net: Name=A4
+Added Pin To Net: NetName=A5 Pin=TSB36-2
+Added Net: Name=A5
+Added Pin To Net: NetName=A6 Pin=TSB43-2
+Added Net: Name=A6
+Added Pin To Net: NetName=A7 Pin=TSB50-2
+Added Net: Name=A7
+Added Pin To Net: NetName=A8 Pin=TSB57-2
+Added Net: Name=A8
+Added Pin To Net: NetName=A9 Pin=TSB64-2
+Added Net: Name=A9
+Added Pin To Net: NetName=A10 Pin=TSB71-2
+Added Net: Name=A10
+Added Pin To Net: NetName=A11 Pin=TSB78-2
+Added Net: Name=A11
+Added Pin To Net: NetName=A12 Pin=TSB85-2
+Added Net: Name=A12
+Added Pin To Net: NetName=A13 Pin=TSB92-2
+Added Net: Name=A13
+Added Pin To Net: NetName=A14 Pin=TSB99-2
+Added Net: Name=A14
+Added Pin To Net: NetName=A15 Pin=TSB106-2
+Added Net: Name=A15
+Added Pin To Net: NetName=A16 Pin=TSB113-2
+Added Net: Name=A16
+Added Pin To Net: NetName=A17 Pin=TSB120-2
+Added Net: Name=A17
+Added Pin To Net: NetName=A18 Pin=TSB2-2
+Added Net: Name=A18
+Added Pin To Net: NetName=A19 Pin=TSB9-2
+Added Net: Name=A19
+Added Pin To Net: NetName=A20 Pin=TSB16-2
+Added Net: Name=A20
+Added Pin To Net: NetName=A21 Pin=TSB23-2
+Added Net: Name=A21
+Added Pin To Net: NetName=A22 Pin=TSB30-2
+Added Net: Name=A22
+Added Pin To Net: NetName=A23 Pin=TSB37-2
+Added Net: Name=A23
+Added Pin To Net: NetName=A24 Pin=TSB44-2
+Added Net: Name=A24
+Added Pin To Net: NetName=A25 Pin=TSB51-2
+Added Net: Name=A25
+Added Pin To Net: NetName=A26 Pin=TSB58-2
+Added Net: Name=A26
+Added Pin To Net: NetName=A27 Pin=TSB65-2
+Added Net: Name=A27
+Added Pin To Net: NetName=A28 Pin=TSB72-2
+Added Net: Name=A28
+Added Pin To Net: NetName=A29 Pin=TSB79-2
+Added Net: Name=A29
+Added Pin To Net: NetName=A30 Pin=TSB86-2
+Added Net: Name=A30
+Added Pin To Net: NetName=A31 Pin=TSB93-2
+Added Net: Name=A31
+Added Pin To Net: NetName=A32 Pin=TSB100-2
+Added Net: Name=A32
+Added Pin To Net: NetName=A33 Pin=TSB107-2
+Added Net: Name=A33
+Added Pin To Net: NetName=A34 Pin=TSB114-2
+Added Net: Name=A34
+Added Pin To Net: NetName=A35 Pin=TSB121-2
+Added Net: Name=A35
+Added Pin To Net: NetName=A36 Pin=TSB3-2
+Added Net: Name=A36
+Added Pin To Net: NetName=A37 Pin=TSB10-2
+Added Net: Name=A37
+Added Pin To Net: NetName=A38 Pin=TSB17-2
+Added Net: Name=A38
+Added Pin To Net: NetName=A39 Pin=TSB24-2
+Added Net: Name=A39
+Added Pin To Net: NetName=A40 Pin=TSB31-2
+Added Net: Name=A40
+Added Pin To Net: NetName=A41 Pin=TSB38-2
+Added Net: Name=A41
+Added Pin To Net: NetName=A42 Pin=TSB45-2
+Added Net: Name=A42
+Added Pin To Net: NetName=A43 Pin=TSB52-2
+Added Net: Name=A43
+Added Pin To Net: NetName=A44 Pin=TSB59-2
+Added Net: Name=A44
+Added Pin To Net: NetName=A45 Pin=TSB66-2
+Added Net: Name=A45
+Added Pin To Net: NetName=A46 Pin=TSB73-2
+Added Net: Name=A46
+Added Pin To Net: NetName=A47 Pin=TSB80-2
+Added Net: Name=A47
+Added Pin To Net: NetName=A48 Pin=TSB87-2
+Added Net: Name=A48
+Added Pin To Net: NetName=A49 Pin=TSB94-2
+Added Net: Name=A49
+Added Pin To Net: NetName=A50 Pin=TSB101-2
+Added Net: Name=A50
+Added Pin To Net: NetName=A51 Pin=TSB108-2
+Added Net: Name=A51
+Added Pin To Net: NetName=A52 Pin=TSB115-2
+Added Net: Name=A52
+Added Pin To Net: NetName=A53 Pin=TSB122-2
+Added Net: Name=A53
+Added Pin To Net: NetName=A54 Pin=TSB4-2
+Added Net: Name=A54
+Added Pin To Net: NetName=A55 Pin=TSB11-2
+Added Net: Name=A55
+Added Pin To Net: NetName=A56 Pin=TSB18-2
+Added Net: Name=A56
+Added Pin To Net: NetName=A57 Pin=TSB25-2
+Added Net: Name=A57
+Added Pin To Net: NetName=A58 Pin=TSB32-2
+Added Net: Name=A58
+Added Pin To Net: NetName=A59 Pin=TSB39-2
+Added Net: Name=A59
+Added Pin To Net: NetName=A60 Pin=TSB46-2
+Added Net: Name=A60
+Added Pin To Net: NetName=A61 Pin=TSB53-2
+Added Net: Name=A61
+Added Pin To Net: NetName=A62 Pin=TSB60-2
+Added Net: Name=A62
+Added Pin To Net: NetName=A63 Pin=TSB67-2
+Added Net: Name=A63
+Added Pin To Net: NetName=A64 Pin=TSB74-2
+Added Net: Name=A64
+Added Pin To Net: NetName=A65 Pin=TSB81-2
+Added Net: Name=A65
+Added Pin To Net: NetName=A66 Pin=TSB88-2
+Added Net: Name=A66
+Added Pin To Net: NetName=A67 Pin=TSB95-2
+Added Net: Name=A67
+Added Pin To Net: NetName=A68 Pin=TSB102-2
+Added Net: Name=A68
+Added Pin To Net: NetName=A69 Pin=TSB109-2
+Added Net: Name=A69
+Added Pin To Net: NetName=A70 Pin=TSB116-2
+Added Net: Name=A70
+Added Pin To Net: NetName=A71 Pin=TSB123-2
+Added Net: Name=A71
+Added Pin To Net: NetName=A72 Pin=TSB5-2
+Added Net: Name=A72
+Added Pin To Net: NetName=A73 Pin=TSB12-2
+Added Net: Name=A73
+Added Pin To Net: NetName=A74 Pin=TSB19-2
+Added Net: Name=A74
+Added Pin To Net: NetName=A75 Pin=TSB26-2
+Added Net: Name=A75
+Added Pin To Net: NetName=A76 Pin=TSB33-2
+Added Net: Name=A76
+Added Pin To Net: NetName=A77 Pin=TSB40-2
+Added Net: Name=A77
+Added Pin To Net: NetName=A78 Pin=TSB47-2
+Added Net: Name=A78
+Added Pin To Net: NetName=A79 Pin=TSB54-2
+Added Net: Name=A79
+Added Pin To Net: NetName=A80 Pin=TSB61-2
+Added Net: Name=A80
+Added Pin To Net: NetName=A81 Pin=TSB68-2
+Added Net: Name=A81
+Added Pin To Net: NetName=A82 Pin=TSB75-2
+Added Net: Name=A82
+Added Pin To Net: NetName=A83 Pin=TSB82-2
+Added Net: Name=A83
+Added Pin To Net: NetName=A84 Pin=TSB89-2
+Added Net: Name=A84
+Added Pin To Net: NetName=A85 Pin=TSB96-2
+Added Net: Name=A85
+Added Pin To Net: NetName=A86 Pin=TSB103-2
+Added Net: Name=A86
+Added Pin To Net: NetName=A87 Pin=TSB110-2
+Added Net: Name=A87
+Added Pin To Net: NetName=A88 Pin=TSB117-2
+Added Net: Name=A88
+Added Pin To Net: NetName=A89 Pin=TSB124-2
+Added Net: Name=A89
+Added Pin To Net: NetName=A90 Pin=TSB6-2
+Added Net: Name=A90
+Added Pin To Net: NetName=A91 Pin=TSB13-2
+Added Net: Name=A91
+Added Pin To Net: NetName=A92 Pin=TSB20-2
+Added Net: Name=A92
+Added Pin To Net: NetName=A93 Pin=TSB27-2
+Added Net: Name=A93
+Added Pin To Net: NetName=A94 Pin=TSB34-2
+Added Net: Name=A94
+Added Pin To Net: NetName=A95 Pin=TSB41-2
+Added Net: Name=A95
+Added Pin To Net: NetName=A96 Pin=TSB48-2
+Added Net: Name=A96
+Added Pin To Net: NetName=A97 Pin=TSB55-2
+Added Net: Name=A97
+Added Pin To Net: NetName=A98 Pin=TSB62-2
+Added Net: Name=A98
+Added Pin To Net: NetName=A99 Pin=TSB69-2
+Added Net: Name=A99
+Added Pin To Net: NetName=A100 Pin=TSB76-2
+Added Net: Name=A100
+Added Pin To Net: NetName=A101 Pin=TSB83-2
+Added Net: Name=A101
+Added Pin To Net: NetName=A102 Pin=TSB90-2
+Added Net: Name=A102
+Added Pin To Net: NetName=A103 Pin=TSB97-2
+Added Net: Name=A103
+Added Pin To Net: NetName=A104 Pin=TSB104-2
+Added Net: Name=A104
+Added Pin To Net: NetName=A105 Pin=TSB111-2
+Added Net: Name=A105
+Added Pin To Net: NetName=A106 Pin=TSB118-2
+Added Net: Name=A106
+Added Pin To Net: NetName=A107 Pin=TSB125-2
+Added Net: Name=A107
+Added Pin To Net: NetName=A108 Pin=TSB7-2
+Added Net: Name=A108
+Added Pin To Net: NetName=A109 Pin=TSB14-2
+Added Net: Name=A109
+Added Pin To Net: NetName=A110 Pin=TSB21-2
+Added Net: Name=A110
+Added Pin To Net: NetName=A111 Pin=TSB28-2
+Added Net: Name=A111
+Added Pin To Net: NetName=A112 Pin=TSB35-2
+Added Net: Name=A112
+Added Pin To Net: NetName=A113 Pin=TSB42-2
+Added Net: Name=A113
+Added Pin To Net: NetName=A114 Pin=TSB49-2
+Added Net: Name=A114
+Added Pin To Net: NetName=A115 Pin=TSB56-2
+Added Net: Name=A115
+Added Pin To Net: NetName=A116 Pin=TSB63-2
+Added Net: Name=A116
+Added Pin To Net: NetName=A117 Pin=TSB70-2
+Added Net: Name=A117
+Added Pin To Net: NetName=A118 Pin=TSB77-2
+Added Net: Name=A118
+Added Pin To Net: NetName=A119 Pin=TSB84-2
+Added Net: Name=A119
+Added Pin To Net: NetName=A120 Pin=TSB91-2
+Added Net: Name=A120
+Added Pin To Net: NetName=A121 Pin=TSB98-2
+Added Net: Name=A121
+Added Pin To Net: NetName=A122 Pin=TSB105-2
+Added Net: Name=A122
+Added Pin To Net: NetName=A123 Pin=TSB112-2
+Added Net: Name=A123
+Added Pin To Net: NetName=A124 Pin=TSB119-2
+Added Net: Name=A124
+Added Pin To Net: NetName=A125 Pin=TSB126-2
+Added Net: Name=A125
+Added Pin To Net: NetName=DIN0 Pin=BBB-21
+Added Net: Name=DIN0
+Added Pin To Net: NetName=DIN1 Pin=BBB-29
+Added Net: Name=DIN1
+Added Pin To Net: NetName=DIN_W Pin=POT-10
+Added Net: Name=DIN_W
+Added Pin To Net: NetName=DOUT0 Pin=SR1-15
+Added Net: Name=DOUT0
+Added Pin To Net: NetName=DOUT1 Pin=SR1-1
+Added Net: Name=DOUT1
+Added Pin To Net: NetName=DOUT2 Pin=SR1-2
+Added Net: Name=DOUT2
+Added Pin To Net: NetName=DOUT3 Pin=SR1-3
+Added Net: Name=DOUT3
+Added Pin To Net: NetName=DOUT4 Pin=SR1-4
+Added Net: Name=DOUT4
+Added Pin To Net: NetName=DOUT5 Pin=SR1-5
+Added Net: Name=DOUT5
+Added Pin To Net: NetName=DOUT6 Pin=SR1-6
+Added Net: Name=DOUT6
+Added Pin To Net: NetName=DOUT7 Pin=SR1-7
+Added Net: Name=DOUT7
+Added Pin To Net: NetName=DOUT8 Pin=SR3-15
+Added Net: Name=DOUT8
+Added Pin To Net: NetName=DOUT9 Pin=SR3-1
+Added Net: Name=DOUT9
+Added Pin To Net: NetName=DOUT10 Pin=SR3-2
+Added Net: Name=DOUT10
+Added Pin To Net: NetName=DOUT11 Pin=SR3-3
+Added Net: Name=DOUT11
+Added Pin To Net: NetName=DOUT12 Pin=SR3-4
+Added Net: Name=DOUT12
+Added Pin To Net: NetName=DOUT13 Pin=SR3-5
+Added Net: Name=DOUT13
+Added Pin To Net: NetName=DOUT14 Pin=SR3-6
+Added Net: Name=DOUT14
+Added Pin To Net: NetName=DOUT15 Pin=SR3-7
+Added Net: Name=DOUT15
+Added Pin To Net: NetName=DOUT16 Pin=SR5-15
+Added Net: Name=DOUT16
+Added Pin To Net: NetName=DOUT17 Pin=SR5-1
+Added Net: Name=DOUT17
+Added Pin To Net: NetName=DOUT18 Pin=SR5-2
+Added Net: Name=DOUT18
+Added Pin To Net: NetName=DOUT19 Pin=SR5-3
+Added Net: Name=DOUT19
+Added Pin To Net: NetName=DOUT20 Pin=SR5-4
+Added Net: Name=DOUT20
+Added Pin To Net: NetName=DOUT21 Pin=SR5-5
+Added Net: Name=DOUT21
+Added Pin To Net: NetName=DOUT22 Pin=SR5-6
+Added Net: Name=DOUT22
+Added Pin To Net: NetName=DOUT23 Pin=SR5-7
+Added Net: Name=DOUT23
+Added Pin To Net: NetName=DOUT24 Pin=SR7-15
+Added Net: Name=DOUT24
+Added Pin To Net: NetName=DOUT25 Pin=SR7-1
+Added Net: Name=DOUT25
+Added Pin To Net: NetName=DOUT26 Pin=SR7-2
+Added Net: Name=DOUT26
+Added Pin To Net: NetName=DOUT27 Pin=SR7-3
+Added Net: Name=DOUT27
+Added Pin To Net: NetName=DOUT28 Pin=SR7-4
+Added Net: Name=DOUT28
+Added Pin To Net: NetName=DOUT29 Pin=SR7-5
+Added Net: Name=DOUT29
+Added Pin To Net: NetName=DOUT30 Pin=SR7-6
+Added Net: Name=DOUT30
+Added Pin To Net: NetName=DOUT31 Pin=SR7-7
+Added Net: Name=DOUT31
+Added Pin To Net: NetName=DOUT32 Pin=SR2-15
+Added Net: Name=DOUT32
+Added Pin To Net: NetName=DOUT33 Pin=SR2-1
+Added Net: Name=DOUT33
+Added Pin To Net: NetName=DOUT34 Pin=SR2-2
+Added Net: Name=DOUT34
+Added Pin To Net: NetName=DOUT35 Pin=SR2-3
+Added Net: Name=DOUT35
+Added Pin To Net: NetName=DOUT36 Pin=SR2-4
+Added Net: Name=DOUT36
+Added Pin To Net: NetName=DOUT37 Pin=SR2-5
+Added Net: Name=DOUT37
+Added Pin To Net: NetName=DOUT38 Pin=SR2-6
+Added Net: Name=DOUT38
+Added Pin To Net: NetName=DOUT39 Pin=SR2-7
+Added Net: Name=DOUT39
+Added Pin To Net: NetName=DOUT40 Pin=SR4-15
+Added Net: Name=DOUT40
+Added Pin To Net: NetName=DOUT41 Pin=SR4-1
+Added Net: Name=DOUT41
+Added Pin To Net: NetName=DOUT42 Pin=SR4-2
+Added Net: Name=DOUT42
+Added Pin To Net: NetName=DOUT43 Pin=SR4-3
+Added Net: Name=DOUT43
+Added Pin To Net: NetName=DOUT44 Pin=SR4-4
+Added Net: Name=DOUT44
+Added Pin To Net: NetName=DOUT45 Pin=SR4-5
+Added Net: Name=DOUT45
+Added Pin To Net: NetName=DOUT46 Pin=SR4-6
+Added Net: Name=DOUT46
+Added Pin To Net: NetName=DOUT47 Pin=SR4-7
+Added Net: Name=DOUT47
+Added Pin To Net: NetName=DOUT48 Pin=SR6-15
+Added Net: Name=DOUT48
+Added Pin To Net: NetName=DOUT49 Pin=SR6-1
+Added Net: Name=DOUT49
+Added Pin To Net: NetName=DOUT50 Pin=SR6-2
+Added Net: Name=DOUT50
+Added Pin To Net: NetName=DOUT51 Pin=SR6-3
+Added Net: Name=DOUT51
+Added Pin To Net: NetName=DOUT52 Pin=SR6-4
+Added Net: Name=DOUT52
+Added Pin To Net: NetName=DOUT53 Pin=SR6-5
+Added Net: Name=DOUT53
+Added Pin To Net: NetName=DOUT54 Pin=SR6-6
+Added Net: Name=DOUT54
+Added Pin To Net: NetName=DOUT55 Pin=SR6-7
+Added Net: Name=DOUT55
+Added Pin To Net: NetName=DOUT56 Pin=SR8-15
+Added Net: Name=DOUT56
+Added Pin To Net: NetName=DOUT57 Pin=SR8-1
+Added Net: Name=DOUT57
+Added Pin To Net: NetName=DOUT58 Pin=SR8-2
+Added Net: Name=DOUT58
+Added Pin To Net: NetName=DOUT59 Pin=SR8-3
+Added Net: Name=DOUT59
+Added Pin To Net: NetName=DOUT60 Pin=SR8-4
+Added Net: Name=DOUT60
+Added Pin To Net: NetName=DOUT61 Pin=SR8-5
+Added Net: Name=DOUT61
+Added Pin To Net: NetName=DOUT62 Pin=SR8-6
+Added Net: Name=DOUT62
+Added Pin To Net: NetName=DOUT63 Pin=SR8-7
+Added Net: Name=DOUT63
+Added Pin To Net: NetName=DOUT64 Pin=SR11-15
+Added Net: Name=DOUT64
+Added Pin To Net: NetName=DOUT65 Pin=SR11-1
+Added Net: Name=DOUT65
+Added Pin To Net: NetName=DOUT66 Pin=SR11-2
+Added Net: Name=DOUT66
+Added Pin To Net: NetName=DOUT67 Pin=SR11-3
+Added Net: Name=DOUT67
+Added Pin To Net: NetName=DOUT68 Pin=SR11-4
+Added Net: Name=DOUT68
+Added Pin To Net: NetName=DOUT69 Pin=SR11-5
+Added Net: Name=DOUT69
+Added Pin To Net: NetName=DOUT70 Pin=SR11-6
+Added Net: Name=DOUT70
+Added Pin To Net: NetName=DOUT71 Pin=SR11-7
+Added Net: Name=DOUT71
+Added Pin To Net: NetName=DOUT72 Pin=SR13-15
+Added Net: Name=DOUT72
+Added Pin To Net: NetName=DOUT73 Pin=SR13-1
+Added Net: Name=DOUT73
+Added Pin To Net: NetName=DOUT74 Pin=SR13-2
+Added Net: Name=DOUT74
+Added Pin To Net: NetName=DOUT75 Pin=SR13-3
+Added Net: Name=DOUT75
+Added Pin To Net: NetName=DOUT76 Pin=SR13-4
+Added Net: Name=DOUT76
+Added Pin To Net: NetName=DOUT77 Pin=SR13-5
+Added Net: Name=DOUT77
+Added Pin To Net: NetName=DOUT78 Pin=SR13-6
+Added Net: Name=DOUT78
+Added Pin To Net: NetName=DOUT79 Pin=SR13-7
+Added Net: Name=DOUT79
+Added Pin To Net: NetName=DOUT80 Pin=SR15-15
+Added Net: Name=DOUT80
+Added Pin To Net: NetName=DOUT81 Pin=SR15-1
+Added Net: Name=DOUT81
+Added Pin To Net: NetName=DOUT82 Pin=SR15-2
+Added Net: Name=DOUT82
+Added Pin To Net: NetName=DOUT83 Pin=SR15-3
+Added Net: Name=DOUT83
+Added Pin To Net: NetName=DOUT84 Pin=SR15-4
+Added Net: Name=DOUT84
+Added Pin To Net: NetName=DOUT85 Pin=SR15-5
+Added Net: Name=DOUT85
+Added Pin To Net: NetName=DOUT86 Pin=SR15-6
+Added Net: Name=DOUT86
+Added Pin To Net: NetName=DOUT87 Pin=SR15-7
+Added Net: Name=DOUT87
+Added Pin To Net: NetName=DOUT88 Pin=SR16-15
+Added Net: Name=DOUT88
+Added Pin To Net: NetName=DOUT89 Pin=SR16-1
+Added Net: Name=DOUT89
+Added Pin To Net: NetName=DOUT90 Pin=SR16-2
+Added Net: Name=DOUT90
+Added Pin To Net: NetName=DOUT91 Pin=SR16-3
+Added Net: Name=DOUT91
+Added Pin To Net: NetName=DOUT92 Pin=SR16-4
+Added Net: Name=DOUT92
+Added Pin To Net: NetName=DOUT93 Pin=SR16-5
+Added Net: Name=DOUT93
+Added Pin To Net: NetName=DOUT94 Pin=SR16-6
+Added Net: Name=DOUT94
+Added Pin To Net: NetName=DOUT95 Pin=SR16-7
+Added Net: Name=DOUT95
+Added Pin To Net: NetName=DOUT96 Pin=SR9-15
+Added Net: Name=DOUT96
+Added Pin To Net: NetName=DOUT97 Pin=SR9-1
+Added Net: Name=DOUT97
+Added Pin To Net: NetName=DOUT98 Pin=SR9-2
+Added Net: Name=DOUT98
+Added Pin To Net: NetName=DOUT99 Pin=SR9-3
+Added Net: Name=DOUT99
+Added Pin To Net: NetName=DOUT100 Pin=SR9-4
+Added Net: Name=DOUT100
+Added Pin To Net: NetName=DOUT101 Pin=SR9-5
+Added Net: Name=DOUT101
+Added Pin To Net: NetName=DOUT102 Pin=SR9-6
+Added Net: Name=DOUT102
+Added Pin To Net: NetName=DOUT103 Pin=SR9-7
+Added Net: Name=DOUT103
+Added Pin To Net: NetName=DOUT104 Pin=SR10-15
+Added Net: Name=DOUT104
+Added Pin To Net: NetName=DOUT105 Pin=SR10-1
+Added Net: Name=DOUT105
+Added Pin To Net: NetName=DOUT106 Pin=SR10-2
+Added Net: Name=DOUT106
+Added Pin To Net: NetName=DOUT107 Pin=SR10-3
+Added Net: Name=DOUT107
+Added Pin To Net: NetName=DOUT108 Pin=SR10-4
+Added Net: Name=DOUT108
+Added Pin To Net: NetName=DOUT109 Pin=SR10-5
+Added Net: Name=DOUT109
+Added Pin To Net: NetName=DOUT110 Pin=SR10-6
+Added Net: Name=DOUT110
+Added Pin To Net: NetName=DOUT111 Pin=SR10-7
+Added Net: Name=DOUT111
+Added Pin To Net: NetName=DOUT112 Pin=SR12-15
+Added Net: Name=DOUT112
+Added Pin To Net: NetName=DOUT113 Pin=SR12-1
+Added Net: Name=DOUT113
+Added Pin To Net: NetName=DOUT114 Pin=SR12-2
+Added Net: Name=DOUT114
+Added Pin To Net: NetName=DOUT115 Pin=SR12-3
+Added Net: Name=DOUT115
+Added Pin To Net: NetName=DOUT116 Pin=SR12-4
+Added Net: Name=DOUT116
+Added Pin To Net: NetName=DOUT117 Pin=SR12-5
+Added Net: Name=DOUT117
+Added Pin To Net: NetName=DOUT118 Pin=SR12-6
+Added Net: Name=DOUT118
+Added Pin To Net: NetName=DOUT119 Pin=SR12-7
+Added Net: Name=DOUT119
+Added Pin To Net: NetName=DOUT120 Pin=SR14-15
+Added Net: Name=DOUT120
+Added Pin To Net: NetName=DOUT121 Pin=SR14-1
+Added Net: Name=DOUT121
+Added Pin To Net: NetName=DOUT122 Pin=SR14-2
+Added Net: Name=DOUT122
+Added Pin To Net: NetName=DOUT123 Pin=SR14-3
+Added Net: Name=DOUT123
+Added Pin To Net: NetName=DOUT124 Pin=SR14-4
+Added Net: Name=DOUT124
+Added Pin To Net: NetName=DOUT125 Pin=SR14-5
+Added Net: Name=DOUT125
+Added Pin To Net: NetName=DOUT126 Pin=SR14-6
+Added Net: Name=DOUT126
+Added Pin To Net: NetName=DOUT127 Pin=SR14-7
+Added Net: Name=DOUT127
+Added Pin To Net: NetName=FPGA_RX Pin=BBB-26
+Added Net: Name=FPGA_RX
+Added Pin To Net: NetName=FPGA_TX Pin=BBB-24
+Added Net: Name=FPGA_TX
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=3V3-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=3V3-3
+Added Net: Name=GLOBAL_3V3
+Added Pin To Net: NetName=GLOBAL_12V Pin=12V.-2
+Added Pin To Net: NetName=GLOBAL_12V Pin=12V.-3
+Added Net: Name=GLOBAL_12V
+Added Pin To Net: NetName=GLOBAL_-5V Pin=-5V-1
+Added Pin To Net: NetName=GLOBAL_-5V Pin=-5V-1
+Added Net: Name=GLOBAL_-5V
+Added Pin To Net: NetName=GND_W Pin=LT1-11
+Added Pin To Net: NetName=GND_W Pin=LT2-11
+Added Net: Name=GND_W
+Added Pin To Net: NetName=IVL_W0 Pin=LT1-1
+Added Net: Name=IVL_W0
+Added Pin To Net: NetName=IVL_W1 Pin=LT1-3
+Added Net: Name=IVL_W1
+Added Pin To Net: NetName=IVL_W2 Pin=LT1-4
+Added Net: Name=IVL_W2
+Added Pin To Net: NetName=IVL_W3 Pin=LT1-5
+Added Net: Name=IVL_W3
+Added Pin To Net: NetName=IVL_W4 Pin=LT1-6
+Added Net: Name=IVL_W4
+Added Pin To Net: NetName=IVL_W5 Pin=LT1-7
+Added Net: Name=IVL_W5
+Added Pin To Net: NetName=IVL_W6 Pin=LT1-8
+Added Net: Name=IVL_W6
+Added Pin To Net: NetName=IVL_W7 Pin=LT1-9
+Added Net: Name=IVL_W7
+Added Pin To Net: NetName=IVL_W8 Pin=LT2-1
+Added Net: Name=IVL_W8
+Added Pin To Net: NetName=IVL_W9 Pin=LT2-3
+Added Net: Name=IVL_W9
+Added Pin To Net: NetName=IVL_W10 Pin=LT2-4
+Added Net: Name=IVL_W10
+Added Pin To Net: NetName=IVL_W11 Pin=LT2-5
+Added Net: Name=IVL_W11
+Added Pin To Net: NetName=IVL_W12 Pin=LT2-6
+Added Net: Name=IVL_W12
+Added Pin To Net: NetName=IVL_W13 Pin=LT2-7
+Added Net: Name=IVL_W13
+Added Pin To Net: NetName=IVL_W14 Pin=LT2-8
+Added Net: Name=IVL_W14
+Added Pin To Net: NetName=IVL_W15 Pin=LT2-9
+Added Net: Name=IVL_W15
+Added Pin To Net: NetName=L_H2 Pin=S1-1
+Added Net: Name=L_H2
+Added Pin To Net: NetName=L_H5 Pin=-5V-2
+Added Pin To Net: NetName=L_H5 Pin=-5V-3
+Added Pin To Net: NetName=L_H5 Pin=3-1
+Added Pin To Net: NetName=L_H5 Pin=3V3-1
+Added Pin To Net: NetName=L_H5 Pin=3V3-1
+Added Pin To Net: NetName=L_H5 Pin=4-1
+Added Pin To Net: NetName=L_H5 Pin=5-1
+Added Pin To Net: NetName=L_H5 Pin=6-1
+Added Pin To Net: NetName=L_H5 Pin=12V.-1
+Added Pin To Net: NetName=L_H5 Pin=12V.-1
+Added Pin To Net: NetName=L_H5 Pin=BBB-1
+Added Pin To Net: NetName=L_H5 Pin=BBB-2
+Added Pin To Net: NetName=L_H5 Pin=BBB-43
+Added Pin To Net: NetName=L_H5 Pin=BBB-44
+Added Pin To Net: NetName=L_H5 Pin=BBB-45
+Added Pin To Net: NetName=L_H5 Pin=BBB-46
+Added Pin To Net: NetName=L_H5 Pin=BBB-47
+Added Pin To Net: NetName=L_H5 Pin=BBB-48
+Added Pin To Net: NetName=L_H5 Pin=ETH3-17
+Added Pin To Net: NetName=L_H5 Pin=ETH3-18
+Added Pin To Net: NetName=L_H5 Pin=ETH3-19
+Added Pin To Net: NetName=L_H5 Pin=ETH3-20
+Added Pin To Net: NetName=L_H5 Pin=ETH3-21
+Added Pin To Net: NetName=L_H5 Pin=ETH3-22
+Added Pin To Net: NetName=L_H5 Pin=ETH3-23
+Added Pin To Net: NetName=L_H5 Pin=ETH3-24
+Added Pin To Net: NetName=L_H5 Pin=ETH4-11
+Added Pin To Net: NetName=L_H5 Pin=ETH4-30
+Added Pin To Net: NetName=L_H5 Pin=LM2-2
+Added Pin To Net: NetName=L_H5 Pin=POT-2
+Added Pin To Net: NetName=L_H5 Pin=POT-9
+Added Pin To Net: NetName=L_H5 Pin=R1-1
+Added Pin To Net: NetName=L_H5 Pin=R5-1
+Added Pin To Net: NetName=L_H5 Pin=R9-1
+Added Pin To Net: NetName=L_H5 Pin=SR1-8
+Added Pin To Net: NetName=L_H5 Pin=SR2-8
+Added Pin To Net: NetName=L_H5 Pin=SR3-8
+Added Pin To Net: NetName=L_H5 Pin=SR4-8
+Added Pin To Net: NetName=L_H5 Pin=SR5-8
+Added Pin To Net: NetName=L_H5 Pin=SR6-8
+Added Pin To Net: NetName=L_H5 Pin=SR7-8
+Added Pin To Net: NetName=L_H5 Pin=SR8-8
+Added Pin To Net: NetName=L_H5 Pin=SR9-8
+Added Pin To Net: NetName=L_H5 Pin=SR10-8
+Added Pin To Net: NetName=L_H5 Pin=SR11-8
+Added Pin To Net: NetName=L_H5 Pin=SR12-8
+Added Pin To Net: NetName=L_H5 Pin=SR13-8
+Added Pin To Net: NetName=L_H5 Pin=SR14-8
+Added Pin To Net: NetName=L_H5 Pin=SR15-8
+Added Pin To Net: NetName=L_H5 Pin=SR16-8
+Added Pin To Net: NetName=L_H5 Pin=TSB1-3
+Added Pin To Net: NetName=L_H5 Pin=TSB2-3
+Added Pin To Net: NetName=L_H5 Pin=TSB3-3
+Added Pin To Net: NetName=L_H5 Pin=TSB4-3
+Added Pin To Net: NetName=L_H5 Pin=TSB5-3
+Added Pin To Net: NetName=L_H5 Pin=TSB6-3
+Added Pin To Net: NetName=L_H5 Pin=TSB7-3
+Added Pin To Net: NetName=L_H5 Pin=TSB8-3
+Added Pin To Net: NetName=L_H5 Pin=TSB9-3
+Added Pin To Net: NetName=L_H5 Pin=TSB10-3
+Added Pin To Net: NetName=L_H5 Pin=TSB11-3
+Added Pin To Net: NetName=L_H5 Pin=TSB12-3
+Added Pin To Net: NetName=L_H5 Pin=TSB13-3
+Added Pin To Net: NetName=L_H5 Pin=TSB14-3
+Added Pin To Net: NetName=L_H5 Pin=TSB15-3
+Added Pin To Net: NetName=L_H5 Pin=TSB16-3
+Added Pin To Net: NetName=L_H5 Pin=TSB17-3
+Added Pin To Net: NetName=L_H5 Pin=TSB18-3
+Added Pin To Net: NetName=L_H5 Pin=TSB19-3
+Added Pin To Net: NetName=L_H5 Pin=TSB20-3
+Added Pin To Net: NetName=L_H5 Pin=TSB21-3
+Added Pin To Net: NetName=L_H5 Pin=TSB22-3
+Added Pin To Net: NetName=L_H5 Pin=TSB23-3
+Added Pin To Net: NetName=L_H5 Pin=TSB24-3
+Added Pin To Net: NetName=L_H5 Pin=TSB25-3
+Added Pin To Net: NetName=L_H5 Pin=TSB26-3
+Added Pin To Net: NetName=L_H5 Pin=TSB27-3
+Added Pin To Net: NetName=L_H5 Pin=TSB28-3
+Added Pin To Net: NetName=L_H5 Pin=TSB29-3
+Added Pin To Net: NetName=L_H5 Pin=TSB30-3
+Added Pin To Net: NetName=L_H5 Pin=TSB31-3
+Added Pin To Net: NetName=L_H5 Pin=TSB32-3
+Added Pin To Net: NetName=L_H5 Pin=TSB33-3
+Added Pin To Net: NetName=L_H5 Pin=TSB34-3
+Added Pin To Net: NetName=L_H5 Pin=TSB35-3
+Added Pin To Net: NetName=L_H5 Pin=TSB36-3
+Added Pin To Net: NetName=L_H5 Pin=TSB37-3
+Added Pin To Net: NetName=L_H5 Pin=TSB38-3
+Added Pin To Net: NetName=L_H5 Pin=TSB39-3
+Added Pin To Net: NetName=L_H5 Pin=TSB40-3
+Added Pin To Net: NetName=L_H5 Pin=TSB41-3
+Added Pin To Net: NetName=L_H5 Pin=TSB42-3
+Added Pin To Net: NetName=L_H5 Pin=TSB43-3
+Added Pin To Net: NetName=L_H5 Pin=TSB44-3
+Added Pin To Net: NetName=L_H5 Pin=TSB45-3
+Added Pin To Net: NetName=L_H5 Pin=TSB46-3
+Added Pin To Net: NetName=L_H5 Pin=TSB47-3
+Added Pin To Net: NetName=L_H5 Pin=TSB48-3
+Added Pin To Net: NetName=L_H5 Pin=TSB49-3
+Added Pin To Net: NetName=L_H5 Pin=TSB50-3
+Added Pin To Net: NetName=L_H5 Pin=TSB51-3
+Added Pin To Net: NetName=L_H5 Pin=TSB52-3
+Added Pin To Net: NetName=L_H5 Pin=TSB53-3
+Added Pin To Net: NetName=L_H5 Pin=TSB54-3
+Added Pin To Net: NetName=L_H5 Pin=TSB55-3
+Added Pin To Net: NetName=L_H5 Pin=TSB56-3
+Added Pin To Net: NetName=L_H5 Pin=TSB57-3
+Added Pin To Net: NetName=L_H5 Pin=TSB58-3
+Added Pin To Net: NetName=L_H5 Pin=TSB59-3
+Added Pin To Net: NetName=L_H5 Pin=TSB60-3
+Added Pin To Net: NetName=L_H5 Pin=TSB61-3
+Added Pin To Net: NetName=L_H5 Pin=TSB62-3
+Added Pin To Net: NetName=L_H5 Pin=TSB63-3
+Added Pin To Net: NetName=L_H5 Pin=TSB64-3
+Added Pin To Net: NetName=L_H5 Pin=TSB65-3
+Added Pin To Net: NetName=L_H5 Pin=TSB66-3
+Added Pin To Net: NetName=L_H5 Pin=TSB67-3
+Added Pin To Net: NetName=L_H5 Pin=TSB68-3
+Added Pin To Net: NetName=L_H5 Pin=TSB69-3
+Added Pin To Net: NetName=L_H5 Pin=TSB70-3
+Added Pin To Net: NetName=L_H5 Pin=TSB71-3
+Added Pin To Net: NetName=L_H5 Pin=TSB72-3
+Added Pin To Net: NetName=L_H5 Pin=TSB73-3
+Added Pin To Net: NetName=L_H5 Pin=TSB74-3
+Added Pin To Net: NetName=L_H5 Pin=TSB75-3
+Added Pin To Net: NetName=L_H5 Pin=TSB76-3
+Added Pin To Net: NetName=L_H5 Pin=TSB77-3
+Added Pin To Net: NetName=L_H5 Pin=TSB78-3
+Added Pin To Net: NetName=L_H5 Pin=TSB79-3
+Added Pin To Net: NetName=L_H5 Pin=TSB80-3
+Added Pin To Net: NetName=L_H5 Pin=TSB81-3
+Added Pin To Net: NetName=L_H5 Pin=TSB82-3
+Added Pin To Net: NetName=L_H5 Pin=TSB83-3
+Added Pin To Net: NetName=L_H5 Pin=TSB84-3
+Added Pin To Net: NetName=L_H5 Pin=TSB85-3
+Added Pin To Net: NetName=L_H5 Pin=TSB86-3
+Added Pin To Net: NetName=L_H5 Pin=TSB87-3
+Added Pin To Net: NetName=L_H5 Pin=TSB88-3
+Added Pin To Net: NetName=L_H5 Pin=TSB89-3
+Added Pin To Net: NetName=L_H5 Pin=TSB90-3
+Added Pin To Net: NetName=L_H5 Pin=TSB91-3
+Added Pin To Net: NetName=L_H5 Pin=TSB92-3
+Added Pin To Net: NetName=L_H5 Pin=TSB93-3
+Added Pin To Net: NetName=L_H5 Pin=TSB94-3
+Added Pin To Net: NetName=L_H5 Pin=TSB95-3
+Added Pin To Net: NetName=L_H5 Pin=TSB96-3
+Added Pin To Net: NetName=L_H5 Pin=TSB97-3
+Added Pin To Net: NetName=L_H5 Pin=TSB98-3
+Added Pin To Net: NetName=L_H5 Pin=TSB99-3
+Added Pin To Net: NetName=L_H5 Pin=TSB100-3
+Added Pin To Net: NetName=L_H5 Pin=TSB101-3
+Added Pin To Net: NetName=L_H5 Pin=TSB102-3
+Added Pin To Net: NetName=L_H5 Pin=TSB103-3
+Added Pin To Net: NetName=L_H5 Pin=TSB104-3
+Added Pin To Net: NetName=L_H5 Pin=TSB105-3
+Added Pin To Net: NetName=L_H5 Pin=TSB106-3
+Added Pin To Net: NetName=L_H5 Pin=TSB107-3
+Added Pin To Net: NetName=L_H5 Pin=TSB108-3
+Added Pin To Net: NetName=L_H5 Pin=TSB109-3
+Added Pin To Net: NetName=L_H5 Pin=TSB110-3
+Added Pin To Net: NetName=L_H5 Pin=TSB111-3
+Added Pin To Net: NetName=L_H5 Pin=TSB112-3
+Added Pin To Net: NetName=L_H5 Pin=TSB113-3
+Added Pin To Net: NetName=L_H5 Pin=TSB114-3
+Added Pin To Net: NetName=L_H5 Pin=TSB115-3
+Added Pin To Net: NetName=L_H5 Pin=TSB116-3
+Added Pin To Net: NetName=L_H5 Pin=TSB117-3
+Added Pin To Net: NetName=L_H5 Pin=TSB118-3
+Added Pin To Net: NetName=L_H5 Pin=TSB119-3
+Added Pin To Net: NetName=L_H5 Pin=TSB120-3
+Added Pin To Net: NetName=L_H5 Pin=TSB121-3
+Added Pin To Net: NetName=L_H5 Pin=TSB123-3
+Added Pin To Net: NetName=L_H5 Pin=TSB124-3
+Added Pin To Net: NetName=L_H5 Pin=TSB125-3
+Added Pin To Net: NetName=L_H5 Pin=TSB126-3
+Added Pin To Net: NetName=L_H5 Pin=TSB127-2
+Added Pin To Net: NetName=L_H5 Pin=TSB127-3
+Added Pin To Net: NetName=L_H5 Pin=TSB128-2
+Added Pin To Net: NetName=L_H5 Pin=TSB128-3
+Added Net: Name=L_H5
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=POT-4
+Added Pin To Net: NetName=NetD2_1 Pin=R2-1
+Added Pin To Net: NetName=NetD2_1 Pin=VR1-1
+Added Net: Name=NetD2_1
+Added Pin To Net: NetName=NetLM1_1 Pin=LM1-1
+Added Pin To Net: NetName=NetLM1_1 Pin=R5-2
+Added Pin To Net: NetName=NetLM1_1 Pin=R6-2
+Added Net: Name=NetLM1_1
+Added Pin To Net: NetName=NetLM2_1 Pin=LM2-1
+Added Pin To Net: NetName=NetLM2_1 Pin=R9-2
+Added Pin To Net: NetName=NetLM2_1 Pin=R10-1
+Added Net: Name=NetLM2_1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=S1-2
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetSR1_9 Pin=SR1-9
+Added Pin To Net: NetName=NetSR1_9 Pin=SR3-14
+Added Net: Name=NetSR1_9
+Added Pin To Net: NetName=NetSR2_9 Pin=SR2-9
+Added Pin To Net: NetName=NetSR2_9 Pin=SR4-14
+Added Net: Name=NetSR2_9
+Added Pin To Net: NetName=NetSR2_14 Pin=SR2-14
+Added Pin To Net: NetName=NetSR2_14 Pin=SR7-9
+Added Net: Name=NetSR2_14
+Added Pin To Net: NetName=NetSR3_9 Pin=SR3-9
+Added Pin To Net: NetName=NetSR3_9 Pin=SR5-14
+Added Net: Name=NetSR3_9
+Added Pin To Net: NetName=NetSR5_9 Pin=SR5-9
+Added Pin To Net: NetName=NetSR5_9 Pin=SR7-14
+Added Net: Name=NetSR5_9
+Added Pin To Net: NetName=NetSR6_9 Pin=SR6-9
+Added Pin To Net: NetName=NetSR6_9 Pin=SR8-14
+Added Net: Name=NetSR6_9
+Added Pin To Net: NetName=NetSR8_9 Pin=SR8-9
+Added Pin To Net: NetName=NetSR8_9 Pin=SR11-14
+Added Net: Name=NetSR8_9
+Added Pin To Net: NetName=NetSR9_9 Pin=SR9-9
+Added Pin To Net: NetName=NetSR9_9 Pin=SR10-14
+Added Net: Name=NetSR9_9
+Added Pin To Net: NetName=NetSR10_9 Pin=SR10-9
+Added Pin To Net: NetName=NetSR10_9 Pin=SR12-14
+Added Net: Name=NetSR10_9
+Added Pin To Net: NetName=NetSR11_9 Pin=SR11-9
+Added Pin To Net: NetName=NetSR11_9 Pin=SR13-14
+Added Net: Name=NetSR11_9
+Added Pin To Net: NetName=NetSR12_9 Pin=SR12-9
+Added Pin To Net: NetName=NetSR12_9 Pin=SR14-14
+Added Net: Name=NetSR12_9
+Added Pin To Net: NetName=NetSR13_9 Pin=SR13-9
+Added Pin To Net: NetName=NetSR13_9 Pin=SR15-14
+Added Net: Name=NetSR13_9
+Added Pin To Net: NetName=NetSR15_9 Pin=SR15-9
+Added Pin To Net: NetName=NetSR15_9 Pin=SR16-14
+Added Net: Name=NetSR15_9
+Added Pin To Net: NetName=OTH_W0 Pin=ETH-17
+Added Net: Name=OTH_W0
+Added Pin To Net: NetName=OTH_W1 Pin=ETH-18
+Added Net: Name=OTH_W1
+Added Pin To Net: NetName=OTH_W2 Pin=ETH-19
+Added Net: Name=OTH_W2
+Added Pin To Net: NetName=OTH_W3 Pin=ETH-20
+Added Net: Name=OTH_W3
+Added Pin To Net: NetName=OTH_W4 Pin=ETH-21
+Added Net: Name=OTH_W4
+Added Pin To Net: NetName=OTH_W5 Pin=ETH-22
+Added Net: Name=OTH_W5
+Added Pin To Net: NetName=OTH_W6 Pin=ETH-23
+Added Net: Name=OTH_W6
+Added Pin To Net: NetName=OTH_W7 Pin=ETH-24
+Added Net: Name=OTH_W7
+Added Pin To Net: NetName=OTHER_W1 Pin=ETH4-40
+Added Net: Name=OTHER_W1
+Added Pin To Net: NetName=OTHER_W2 Pin=ETH4-39
+Added Net: Name=OTHER_W2
+Added Pin To Net: NetName=OTHER_W3 Pin=ETH4-38
+Added Net: Name=OTHER_W3
+Added Pin To Net: NetName=OTHER_W4 Pin=ETH4-37
+Added Net: Name=OTHER_W4
+Added Pin To Net: NetName=OTHER_W5 Pin=ETH4-36
+Added Net: Name=OTHER_W5
+Added Pin To Net: NetName=OTHER_W6 Pin=ETH4-35
+Added Net: Name=OTHER_W6
+Added Pin To Net: NetName=OTHER_W7 Pin=ETH4-34
+Added Net: Name=OTHER_W7
+Added Pin To Net: NetName=OTHER_W8 Pin=ETH4-33
+Added Net: Name=OTHER_W8
+Added Pin To Net: NetName=OTHER_W9 Pin=ETH4-32
+Added Net: Name=OTHER_W9
+Added Pin To Net: NetName=OTHER_W10 Pin=ETH4-31
+Added Net: Name=OTHER_W10
+Added Pin To Net: NetName=OTHER_W11 Pin=ETH4-29
+Added Net: Name=OTHER_W11
+Added Pin To Net: NetName=OTHER_W12 Pin=ETH4-28
+Added Net: Name=OTHER_W12
+Added Pin To Net: NetName=OTHER_W13 Pin=ETH4-27
+Added Net: Name=OTHER_W13
+Added Pin To Net: NetName=OTHER_W14 Pin=ETH4-26
+Added Net: Name=OTHER_W14
+Added Pin To Net: NetName=OTHER_W15 Pin=ETH4-25
+Added Net: Name=OTHER_W15
+Added Pin To Net: NetName=OTHER_W16 Pin=ETH4-24
+Added Net: Name=OTHER_W16
+Added Pin To Net: NetName=OTHER_W17 Pin=ETH4-23
+Added Net: Name=OTHER_W17
+Added Pin To Net: NetName=OTHER_W18 Pin=ETH4-22
+Added Net: Name=OTHER_W18
+Added Pin To Net: NetName=OTHER_W19 Pin=ETH4-21
+Added Net: Name=OTHER_W19
+Added Pin To Net: NetName=OTHER_W20 Pin=ETH4-20
+Added Net: Name=OTHER_W20
+Added Pin To Net: NetName=OTHER_W21 Pin=ETH4-19
+Added Net: Name=OTHER_W21
+Added Pin To Net: NetName=OTHER_W22 Pin=ETH4-18
+Added Net: Name=OTHER_W22
+Added Pin To Net: NetName=OUT1 Pin=1-1
+Added Pin To Net: NetName=OUT1 Pin=2-1
+Added Pin To Net: NetName=OUT1 Pin=LM1-3
+Added Pin To Net: NetName=OUT1 Pin=LM1-4
+Added Pin To Net: NetName=OUT1 Pin=POT-3
+Added Net: Name=OUT1
+Added Pin To Net: NetName=OUT2 Pin=D1-2
+Added Pin To Net: NetName=OUT2 Pin=LM1-5
+Added Pin To Net: NetName=OUT2 Pin=LM2-3
+Added Pin To Net: NetName=OUT2 Pin=LM2-4
+Added Pin To Net: NetName=OUT2 Pin=VR1-3
+Added Net: Name=OUT2
+Added Pin To Net: NetName=OVCC_W0 Pin=LT1-20
+Added Net: Name=OVCC_W0
+Added Pin To Net: NetName=OVCC_W1 Pin=LT1-18
+Added Net: Name=OVCC_W1
+Added Pin To Net: NetName=OVCC_W2 Pin=LT1-17
+Added Net: Name=OVCC_W2
+Added Pin To Net: NetName=OVCC_W3 Pin=LT1-16
+Added Net: Name=OVCC_W3
+Added Pin To Net: NetName=OVCC_W4 Pin=LT1-15
+Added Net: Name=OVCC_W4
+Added Pin To Net: NetName=OVCC_W5 Pin=LT1-14
+Added Net: Name=OVCC_W5
+Added Pin To Net: NetName=OVCC_W6 Pin=LT1-13
+Added Net: Name=OVCC_W6
+Added Pin To Net: NetName=OVCC_W7 Pin=LT1-12
+Added Net: Name=OVCC_W7
+Added Pin To Net: NetName=OVCC_W8 Pin=LT2-20
+Added Net: Name=OVCC_W8
+Added Pin To Net: NetName=OVCC_W9 Pin=LT2-18
+Added Net: Name=OVCC_W9
+Added Pin To Net: NetName=OVCC_W10 Pin=LT2-17
+Added Net: Name=OVCC_W10
+Added Pin To Net: NetName=OVCC_W11 Pin=LT2-16
+Added Net: Name=OVCC_W11
+Added Pin To Net: NetName=OVCC_W12 Pin=LT2-15
+Added Net: Name=OVCC_W12
+Added Pin To Net: NetName=OVCC_W13 Pin=LT2-14
+Added Net: Name=OVCC_W13
+Added Pin To Net: NetName=OVCC_W14 Pin=LT2-13
+Added Net: Name=OVCC_W14
+Added Pin To Net: NetName=OVCC_W15 Pin=LT2-12
+Added Net: Name=OVCC_W15
+Added Pin To Net: NetName=RCLK Pin=SR1-12
+Added Pin To Net: NetName=RCLK Pin=SR2-12
+Added Pin To Net: NetName=RCLK Pin=SR3-12
+Added Pin To Net: NetName=RCLK Pin=SR4-12
+Added Pin To Net: NetName=RCLK Pin=SR5-12
+Added Pin To Net: NetName=RCLK Pin=SR6-12
+Added Pin To Net: NetName=RCLK Pin=SR7-12
+Added Pin To Net: NetName=RCLK Pin=SR8-12
+Added Pin To Net: NetName=RCLK Pin=SR9-12
+Added Pin To Net: NetName=RCLK Pin=SR10-12
+Added Pin To Net: NetName=RCLK Pin=SR11-12
+Added Pin To Net: NetName=RCLK Pin=SR12-12
+Added Pin To Net: NetName=RCLK Pin=SR13-12
+Added Pin To Net: NetName=RCLK Pin=SR14-12
+Added Pin To Net: NetName=RCLK Pin=SR15-12
+Added Pin To Net: NetName=RCLK Pin=SR16-12
+Added Net: Name=RCLK
+Added Pin To Net: NetName=RDY0 Pin=BBB-15
+Added Net: Name=RDY0
+Added Pin To Net: NetName=RDY1 Pin=BBB-23
+Added Net: Name=RDY1
+Added Pin To Net: NetName=RDY_W Pin=POT-14
+Added Net: Name=RDY_W
+Added Pin To Net: NetName=RX_W Pin=ETH4-16
+Added Net: Name=RX_W
+Added Pin To Net: NetName=S1 Pin=SR4-9
+Added Pin To Net: NetName=S1 Pin=SR6-14
+Added Net: Name=S1
+Added Pin To Net: NetName=S2 Pin=SR9-14
+Added Pin To Net: NetName=S2 Pin=SR16-9
+Added Net: Name=S2
+Added Pin To Net: NetName=SCLK_W Pin=POT-11
+Added Net: Name=SCLK_W
+Added Pin To Net: NetName=SDO_W Pin=POT-13
+Added Net: Name=SDO_W
+Added Pin To Net: NetName=SER Pin=SR1-14
+Added Net: Name=SER
+Added Pin To Net: NetName=SIG_W0 Pin=ETH-1
+Added Net: Name=SIG_W0
+Added Pin To Net: NetName=SIG_W1 Pin=ETH-2
+Added Net: Name=SIG_W1
+Added Pin To Net: NetName=SIG_W2 Pin=ETH-3
+Added Net: Name=SIG_W2
+Added Pin To Net: NetName=SIG_W3 Pin=ETH-4
+Added Net: Name=SIG_W3
+Added Pin To Net: NetName=SIG_W4 Pin=ETH-5
+Added Net: Name=SIG_W4
+Added Pin To Net: NetName=SIG_W5 Pin=ETH-6
+Added Net: Name=SIG_W5
+Added Pin To Net: NetName=SIG_W6 Pin=ETH-7
+Added Net: Name=SIG_W6
+Added Pin To Net: NetName=SIG_W7 Pin=ETH-8
+Added Net: Name=SIG_W7
+Added Pin To Net: NetName=SIG_W8 Pin=ETH-9
+Added Net: Name=SIG_W8
+Added Pin To Net: NetName=SIG_W9 Pin=ETH-10
+Added Net: Name=SIG_W9
+Added Pin To Net: NetName=SIG_W10 Pin=ETH-11
+Added Net: Name=SIG_W10
+Added Pin To Net: NetName=SIG_W11 Pin=ETH-12
+Added Net: Name=SIG_W11
+Added Pin To Net: NetName=SIG_W12 Pin=ETH-13
+Added Net: Name=SIG_W12
+Added Pin To Net: NetName=SIG_W13 Pin=ETH-14
+Added Net: Name=SIG_W13
+Added Pin To Net: NetName=SIG_W14 Pin=ETH-15
+Added Net: Name=SIG_W14
+Added Pin To Net: NetName=SIG_W15 Pin=ETH-16
+Added Net: Name=SIG_W15
+Added Pin To Net: NetName=SIG_W16 Pin=ETH-25
+Added Net: Name=SIG_W16
+Added Pin To Net: NetName=SIG_W17 Pin=ETH-26
+Added Net: Name=SIG_W17
+Added Pin To Net: NetName=SIG_W18 Pin=ETH-27
+Added Net: Name=SIG_W18
+Added Pin To Net: NetName=SIG_W19 Pin=ETH-28
+Added Net: Name=SIG_W19
+Added Pin To Net: NetName=SIG_W20 Pin=ETH-29
+Added Net: Name=SIG_W20
+Added Pin To Net: NetName=SIG_W21 Pin=ETH-30
+Added Net: Name=SIG_W21
+Added Pin To Net: NetName=SIG_W22 Pin=ETH-31
+Added Net: Name=SIG_W22
+Added Pin To Net: NetName=SIG_W23 Pin=ETH-32
+Added Net: Name=SIG_W23
+Added Pin To Net: NetName=SIG_W24 Pin=ETH-33
+Added Net: Name=SIG_W24
+Added Pin To Net: NetName=SIG_W25 Pin=ETH-34
+Added Net: Name=SIG_W25
+Added Pin To Net: NetName=SIG_W26 Pin=ETH-35
+Added Net: Name=SIG_W26
+Added Pin To Net: NetName=SIG_W27 Pin=ETH-36
+Added Net: Name=SIG_W27
+Added Pin To Net: NetName=SIG_W28 Pin=ETH-37
+Added Net: Name=SIG_W28
+Added Pin To Net: NetName=SIG_W29 Pin=ETH-38
+Added Net: Name=SIG_W29
+Added Pin To Net: NetName=SIG_W30 Pin=ETH-39
+Added Net: Name=SIG_W30
+Added Pin To Net: NetName=SIG_W31 Pin=ETH-40
+Added Net: Name=SIG_W31
+Added Pin To Net: NetName=SIGNAL_W0 Pin=ETH1-1
+Added Net: Name=SIGNAL_W0
+Added Pin To Net: NetName=SIGNAL_W1 Pin=ETH1-2
+Added Net: Name=SIGNAL_W1
+Added Pin To Net: NetName=SIGNAL_W2 Pin=ETH1-3
+Added Net: Name=SIGNAL_W2
+Added Pin To Net: NetName=SIGNAL_W3 Pin=ETH1-4
+Added Net: Name=SIGNAL_W3
+Added Pin To Net: NetName=SIGNAL_W4 Pin=ETH1-5
+Added Net: Name=SIGNAL_W4
+Added Pin To Net: NetName=SIGNAL_W5 Pin=ETH1-6
+Added Net: Name=SIGNAL_W5
+Added Pin To Net: NetName=SIGNAL_W6 Pin=ETH1-7
+Added Net: Name=SIGNAL_W6
+Added Pin To Net: NetName=SIGNAL_W7 Pin=ETH1-8
+Added Net: Name=SIGNAL_W7
+Added Pin To Net: NetName=SIGNAL_W8 Pin=ETH1-9
+Added Net: Name=SIGNAL_W8
+Added Pin To Net: NetName=SIGNAL_W9 Pin=ETH1-10
+Added Net: Name=SIGNAL_W9
+Added Pin To Net: NetName=SIGNAL_W10 Pin=ETH1-11
+Added Net: Name=SIGNAL_W10
+Added Pin To Net: NetName=SIGNAL_W11 Pin=ETH1-12
+Added Net: Name=SIGNAL_W11
+Added Pin To Net: NetName=SIGNAL_W12 Pin=ETH1-13
+Added Net: Name=SIGNAL_W12
+Added Pin To Net: NetName=SIGNAL_W13 Pin=ETH1-14
+Added Net: Name=SIGNAL_W13
+Added Pin To Net: NetName=SIGNAL_W14 Pin=ETH1-15
+Added Net: Name=SIGNAL_W14
+Added Pin To Net: NetName=SIGNAL_W15 Pin=ETH1-16
+Added Net: Name=SIGNAL_W15
+Added Pin To Net: NetName=SIGNAL_W16 Pin=ETH1-17
+Added Net: Name=SIGNAL_W16
+Added Pin To Net: NetName=SIGNAL_W17 Pin=ETH1-18
+Added Net: Name=SIGNAL_W17
+Added Pin To Net: NetName=SIGNAL_W18 Pin=ETH1-19
+Added Net: Name=SIGNAL_W18
+Added Pin To Net: NetName=SIGNAL_W19 Pin=ETH1-20
+Added Net: Name=SIGNAL_W19
+Added Pin To Net: NetName=SIGNAL_W20 Pin=ETH1-21
+Added Net: Name=SIGNAL_W20
+Added Pin To Net: NetName=SIGNAL_W21 Pin=ETH1-22
+Added Net: Name=SIGNAL_W21
+Added Pin To Net: NetName=SIGNAL_W22 Pin=ETH1-23
+Added Net: Name=SIGNAL_W22
+Added Pin To Net: NetName=SIGNAL_W23 Pin=ETH1-24
+Added Net: Name=SIGNAL_W23
+Added Pin To Net: NetName=SIGNAL_W24 Pin=ETH1-25
+Added Net: Name=SIGNAL_W24
+Added Pin To Net: NetName=SIGNAL_W25 Pin=ETH1-26
+Added Net: Name=SIGNAL_W25
+Added Pin To Net: NetName=SIGNAL_W26 Pin=ETH1-27
+Added Net: Name=SIGNAL_W26
+Added Pin To Net: NetName=SIGNAL_W27 Pin=ETH1-28
+Added Net: Name=SIGNAL_W27
+Added Pin To Net: NetName=SIGNAL_W28 Pin=ETH1-29
+Added Net: Name=SIGNAL_W28
+Added Pin To Net: NetName=SIGNAL_W29 Pin=ETH1-30
+Added Net: Name=SIGNAL_W29
+Added Pin To Net: NetName=SIGNAL_W30 Pin=ETH1-31
+Added Net: Name=SIGNAL_W30
+Added Pin To Net: NetName=SIGNAL_W31 Pin=ETH1-32
+Added Net: Name=SIGNAL_W31
+Added Pin To Net: NetName=SIGNAL_W32 Pin=ETH1-33
+Added Net: Name=SIGNAL_W32
+Added Pin To Net: NetName=SIGNAL_W33 Pin=ETH1-34
+Added Net: Name=SIGNAL_W33
+Added Pin To Net: NetName=SIGNAL_W34 Pin=ETH1-35
+Added Net: Name=SIGNAL_W34
+Added Pin To Net: NetName=SIGNAL_W35 Pin=ETH1-36
+Added Net: Name=SIGNAL_W35
+Added Pin To Net: NetName=SIGNAL_W36 Pin=ETH1-37
+Added Net: Name=SIGNAL_W36
+Added Pin To Net: NetName=SIGNAL_W37 Pin=ETH1-38
+Added Net: Name=SIGNAL_W37
+Added Pin To Net: NetName=SIGNAL_W38 Pin=ETH1-39
+Added Net: Name=SIGNAL_W38
+Added Pin To Net: NetName=SIGNAL_W39 Pin=ETH1-40
+Added Net: Name=SIGNAL_W39
+Added Pin To Net: NetName=SIGNAL_W40 Pin=ETH2-1
+Added Net: Name=SIGNAL_W40
+Added Pin To Net: NetName=SIGNAL_W41 Pin=ETH2-2
+Added Net: Name=SIGNAL_W41
+Added Pin To Net: NetName=SIGNAL_W42 Pin=ETH2-3
+Added Net: Name=SIGNAL_W42
+Added Pin To Net: NetName=SIGNAL_W43 Pin=ETH2-4
+Added Net: Name=SIGNAL_W43
+Added Pin To Net: NetName=SIGNAL_W44 Pin=ETH2-5
+Added Net: Name=SIGNAL_W44
+Added Pin To Net: NetName=SIGNAL_W45 Pin=ETH2-6
+Added Net: Name=SIGNAL_W45
+Added Pin To Net: NetName=SIGNAL_W46 Pin=ETH2-7
+Added Net: Name=SIGNAL_W46
+Added Pin To Net: NetName=SIGNAL_W47 Pin=ETH2-8
+Added Net: Name=SIGNAL_W47
+Added Pin To Net: NetName=SIGNAL_W48 Pin=ETH2-9
+Added Net: Name=SIGNAL_W48
+Added Pin To Net: NetName=SIGNAL_W49 Pin=ETH2-10
+Added Net: Name=SIGNAL_W49
+Added Pin To Net: NetName=SIGNAL_W50 Pin=ETH2-11
+Added Net: Name=SIGNAL_W50
+Added Pin To Net: NetName=SIGNAL_W51 Pin=ETH2-12
+Added Net: Name=SIGNAL_W51
+Added Pin To Net: NetName=SIGNAL_W52 Pin=ETH2-13
+Added Net: Name=SIGNAL_W52
+Added Pin To Net: NetName=SIGNAL_W53 Pin=ETH2-14
+Added Net: Name=SIGNAL_W53
+Added Pin To Net: NetName=SIGNAL_W54 Pin=ETH2-15
+Added Net: Name=SIGNAL_W54
+Added Pin To Net: NetName=SIGNAL_W55 Pin=ETH2-16
+Added Net: Name=SIGNAL_W55
+Added Pin To Net: NetName=SIGNAL_W56 Pin=ETH2-17
+Added Net: Name=SIGNAL_W56
+Added Pin To Net: NetName=SIGNAL_W57 Pin=ETH2-18
+Added Net: Name=SIGNAL_W57
+Added Pin To Net: NetName=SIGNAL_W58 Pin=ETH2-19
+Added Net: Name=SIGNAL_W58
+Added Pin To Net: NetName=SIGNAL_W59 Pin=ETH2-20
+Added Net: Name=SIGNAL_W59
+Added Pin To Net: NetName=SIGNAL_W60 Pin=ETH2-21
+Added Net: Name=SIGNAL_W60
+Added Pin To Net: NetName=SIGNAL_W61 Pin=ETH2-22
+Added Net: Name=SIGNAL_W61
+Added Pin To Net: NetName=SIGNAL_W62 Pin=ETH2-23
+Added Net: Name=SIGNAL_W62
+Added Pin To Net: NetName=SIGNAL_W63 Pin=ETH2-24
+Added Net: Name=SIGNAL_W63
+Added Pin To Net: NetName=SIGNAL_W64 Pin=ETH2-25
+Added Net: Name=SIGNAL_W64
+Added Pin To Net: NetName=SIGNAL_W65 Pin=ETH2-26
+Added Net: Name=SIGNAL_W65
+Added Pin To Net: NetName=SIGNAL_W66 Pin=ETH2-27
+Added Net: Name=SIGNAL_W66
+Added Pin To Net: NetName=SIGNAL_W67 Pin=ETH2-28
+Added Net: Name=SIGNAL_W67
+Added Pin To Net: NetName=SIGNAL_W68 Pin=ETH2-29
+Added Net: Name=SIGNAL_W68
+Added Pin To Net: NetName=SIGNAL_W69 Pin=ETH2-30
+Added Net: Name=SIGNAL_W69
+Added Pin To Net: NetName=SIGNAL_W70 Pin=ETH2-31
+Added Net: Name=SIGNAL_W70
+Added Pin To Net: NetName=SIGNAL_W71 Pin=ETH2-32
+Added Net: Name=SIGNAL_W71
+Added Pin To Net: NetName=SIGNAL_W72 Pin=ETH2-33
+Added Net: Name=SIGNAL_W72
+Added Pin To Net: NetName=SIGNAL_W73 Pin=ETH2-34
+Added Net: Name=SIGNAL_W73
+Added Pin To Net: NetName=SIGNAL_W74 Pin=ETH2-35
+Added Net: Name=SIGNAL_W74
+Added Pin To Net: NetName=SIGNAL_W75 Pin=ETH2-36
+Added Net: Name=SIGNAL_W75
+Added Pin To Net: NetName=SIGNAL_W76 Pin=ETH2-37
+Added Net: Name=SIGNAL_W76
+Added Pin To Net: NetName=SIGNAL_W77 Pin=ETH2-38
+Added Net: Name=SIGNAL_W77
+Added Pin To Net: NetName=SIGNAL_W78 Pin=ETH2-39
+Added Net: Name=SIGNAL_W78
+Added Pin To Net: NetName=SIGNAL_W79 Pin=ETH2-40
+Added Net: Name=SIGNAL_W79
+Added Pin To Net: NetName=SIGNAL_W80 Pin=ETH3-1
+Added Net: Name=SIGNAL_W80
+Added Pin To Net: NetName=SIGNAL_W81 Pin=ETH3-2
+Added Net: Name=SIGNAL_W81
+Added Pin To Net: NetName=SIGNAL_W82 Pin=ETH3-3
+Added Net: Name=SIGNAL_W82
+Added Pin To Net: NetName=SIGNAL_W83 Pin=ETH3-4
+Added Net: Name=SIGNAL_W83
+Added Pin To Net: NetName=SIGNAL_W84 Pin=ETH3-5
+Added Net: Name=SIGNAL_W84
+Added Pin To Net: NetName=SIGNAL_W85 Pin=ETH3-6
+Added Net: Name=SIGNAL_W85
+Added Pin To Net: NetName=SIGNAL_W86 Pin=ETH3-7
+Added Net: Name=SIGNAL_W86
+Added Pin To Net: NetName=SIGNAL_W87 Pin=ETH3-8
+Added Net: Name=SIGNAL_W87
+Added Pin To Net: NetName=SIGNAL_W88 Pin=ETH3-9
+Added Net: Name=SIGNAL_W88
+Added Pin To Net: NetName=SIGNAL_W89 Pin=ETH3-10
+Added Net: Name=SIGNAL_W89
+Added Pin To Net: NetName=SIGNAL_W90 Pin=ETH3-11
+Added Net: Name=SIGNAL_W90
+Added Pin To Net: NetName=SIGNAL_W91 Pin=ETH3-12
+Added Net: Name=SIGNAL_W91
+Added Pin To Net: NetName=SIGNAL_W92 Pin=ETH3-13
+Added Net: Name=SIGNAL_W92
+Added Pin To Net: NetName=SIGNAL_W93 Pin=ETH3-14
+Added Net: Name=SIGNAL_W93
+Added Pin To Net: NetName=SIGNAL_W94 Pin=ETH3-15
+Added Net: Name=SIGNAL_W94
+Added Pin To Net: NetName=SIGNAL_W95 Pin=ETH3-16
+Added Net: Name=SIGNAL_W95
+Added Pin To Net: NetName=SIGNAL_W96 Pin=ETH3-25
+Added Net: Name=SIGNAL_W96
+Added Pin To Net: NetName=SIGNAL_W97 Pin=ETH3-26
+Added Net: Name=SIGNAL_W97
+Added Pin To Net: NetName=SIGNAL_W98 Pin=ETH3-27
+Added Net: Name=SIGNAL_W98
+Added Pin To Net: NetName=SIGNAL_W99 Pin=ETH3-28
+Added Net: Name=SIGNAL_W99
+Added Pin To Net: NetName=SIGNAL_W100 Pin=ETH3-29
+Added Net: Name=SIGNAL_W100
+Added Pin To Net: NetName=SIGNAL_W101 Pin=ETH3-30
+Added Net: Name=SIGNAL_W101
+Added Pin To Net: NetName=SIGNAL_W102 Pin=ETH3-31
+Added Net: Name=SIGNAL_W102
+Added Pin To Net: NetName=SIGNAL_W103 Pin=ETH3-32
+Added Net: Name=SIGNAL_W103
+Added Pin To Net: NetName=SIGNAL_W104 Pin=ETH3-33
+Added Net: Name=SIGNAL_W104
+Added Pin To Net: NetName=SIGNAL_W105 Pin=ETH3-34
+Added Net: Name=SIGNAL_W105
+Added Pin To Net: NetName=SIGNAL_W106 Pin=ETH3-35
+Added Net: Name=SIGNAL_W106
+Added Pin To Net: NetName=SIGNAL_W107 Pin=ETH3-36
+Added Net: Name=SIGNAL_W107
+Added Pin To Net: NetName=SIGNAL_W108 Pin=ETH3-37
+Added Net: Name=SIGNAL_W108
+Added Pin To Net: NetName=SIGNAL_W109 Pin=ETH3-38
+Added Net: Name=SIGNAL_W109
+Added Pin To Net: NetName=SIGNAL_W110 Pin=ETH3-39
+Added Net: Name=SIGNAL_W110
+Added Pin To Net: NetName=SIGNAL_W111 Pin=ETH3-40
+Added Net: Name=SIGNAL_W111
+Added Pin To Net: NetName=SIGNAL_W112 Pin=ETH4-1
+Added Net: Name=SIGNAL_W112
+Added Pin To Net: NetName=SIGNAL_W113 Pin=ETH4-2
+Added Net: Name=SIGNAL_W113
+Added Pin To Net: NetName=SIGNAL_W114 Pin=ETH4-3
+Added Net: Name=SIGNAL_W114
+Added Pin To Net: NetName=SIGNAL_W115 Pin=ETH4-4
+Added Net: Name=SIGNAL_W115
+Added Pin To Net: NetName=SIGNAL_W116 Pin=ETH4-5
+Added Net: Name=SIGNAL_W116
+Added Pin To Net: NetName=SIGNAL_W117 Pin=ETH4-6
+Added Net: Name=SIGNAL_W117
+Added Pin To Net: NetName=SIGNAL_W118 Pin=ETH4-7
+Added Net: Name=SIGNAL_W118
+Added Pin To Net: NetName=SIGNAL_W119 Pin=ETH4-8
+Added Net: Name=SIGNAL_W119
+Added Pin To Net: NetName=SIGNAL_W120 Pin=ETH4-9
+Added Net: Name=SIGNAL_W120
+Added Pin To Net: NetName=SIGNAL_W121 Pin=ETH4-10
+Added Net: Name=SIGNAL_W121
+Added Pin To Net: NetName=SIGNAL_W122 Pin=ETH4-12
+Added Net: Name=SIGNAL_W122
+Added Pin To Net: NetName=SIGNAL_W123\ Pin=ETH4-13
+Added Net: Name=SIGNAL_W123\
+Added Pin To Net: NetName=SIGNAL_W124 Pin=ETH4-14
+Added Net: Name=SIGNAL_W124
+Added Pin To Net: NetName=SIGNAL_W125 Pin=ETH4-15
+Added Net: Name=SIGNAL_W125
+Added Pin To Net: NetName=SPI1D1 Pin=BBB-18
+Added Pin To Net: NetName=SPI1D1 Pin=BBB-30
+Added Net: Name=SPI1D1
+Added Pin To Net: NetName=SPICLK0 Pin=BBB-22
+Added Net: Name=SPICLK0
+Added Pin To Net: NetName=SPICLK1 Pin=BBB-32
+Added Net: Name=SPICLK1
+Added Pin To Net: NetName=SPICS0 Pin=BBB-17
+Added Net: Name=SPICS0
+Added Pin To Net: NetName=SPICS1 Pin=BBB-28
+Added Pin To Net: NetName=SPICS1 Pin=BBB-28
+Added Net: Name=SPICS1
+Added Pin To Net: NetName=SRCLK Pin=SR1-11
+Added Pin To Net: NetName=SRCLK Pin=SR2-11
+Added Pin To Net: NetName=SRCLK Pin=SR3-11
+Added Pin To Net: NetName=SRCLK Pin=SR4-11
+Added Pin To Net: NetName=SRCLK Pin=SR5-11
+Added Pin To Net: NetName=SRCLK Pin=SR6-11
+Added Pin To Net: NetName=SRCLK Pin=SR7-11
+Added Pin To Net: NetName=SRCLK Pin=SR8-11
+Added Pin To Net: NetName=SRCLK Pin=SR9-11
+Added Pin To Net: NetName=SRCLK Pin=SR10-11
+Added Pin To Net: NetName=SRCLK Pin=SR11-11
+Added Pin To Net: NetName=SRCLK Pin=SR12-11
+Added Pin To Net: NetName=SRCLK Pin=SR13-11
+Added Pin To Net: NetName=SRCLK Pin=SR14-11
+Added Pin To Net: NetName=SRCLK Pin=SR15-11
+Added Pin To Net: NetName=SRCLK Pin=SR16-11
+Added Net: Name=SRCLK
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB1-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB2-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB3-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB4-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB5-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB6-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB7-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB8-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB9-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB10-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB11-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB12-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB13-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB14-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB15-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB16-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB17-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB18-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB19-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB20-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB21-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB22-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB23-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB24-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB25-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB26-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB27-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB28-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB29-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB30-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB31-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB32-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB33-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB34-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB35-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB36-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB37-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB38-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB39-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB40-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB41-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB42-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB43-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB44-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB45-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB46-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB47-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB48-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB49-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB50-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB51-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB52-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB53-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB54-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB55-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB56-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB57-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB58-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB59-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB60-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB61-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB62-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB63-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB64-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB65-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB66-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB67-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB68-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB69-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB70-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB71-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB72-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB73-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB74-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB75-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB76-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB77-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB78-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB79-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB80-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB81-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB82-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB83-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB84-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB85-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB86-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB87-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB88-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB89-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB90-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB91-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB92-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB93-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB94-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB95-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB96-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB97-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB98-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB99-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB100-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB101-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB102-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB103-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB104-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB105-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB106-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB107-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB108-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB109-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB110-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB111-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB112-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB113-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB114-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB115-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB116-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB117-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB118-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB119-5
+Added Pin To Net: NetName=TSB_VCC_B Pin=TSB126-5
+Added Net: Name=TSB_VCC_B
+Added Pin To Net: NetName=TX_W Pin=ETH4-17
+Added Net: Name=TX_W
+Added Pin To Net: NetName=V_RST Pin=BBB-12
+Added Net: Name=V_RST
+Added Pin To Net: NetName=VOUT_W Pin=D1-1
+Added Pin To Net: NetName=VOUT_W Pin=D2-2
+Added Pin To Net: NetName=VOUT_W Pin=R2-2
+Added Pin To Net: NetName=VOUT_W Pin=VR1-2
+Added Pin To Net: NetName=VOUT_W Pin=VR1-4
+Added Net: Name=VOUT_W
+Added Pin To Net: NetName=VT_3V3_W Pin=0.1uF_0-1
+Added Pin To Net: NetName=VT_3V3_W Pin=0.1uF_1-1
+Added Pin To Net: NetName=VT_3V3_W Pin=LT1-2
+Added Pin To Net: NetName=VT_3V3_W Pin=LT2-2
+Added Net: Name=VT_3V3_W
+Added Pin To Net: NetName=VT_EN_W Pin=LT1-10
+Added Pin To Net: NetName=VT_EN_W Pin=LT2-10
+Added Net: Name=VT_EN_W
+Added Pin To Net: NetName=VT_VCC_W Pin=0.1uF_3-1
+Added Pin To Net: NetName=VT_VCC_W Pin=0.1uF_4-1
+Added Pin To Net: NetName=VT_VCC_W Pin=LT1-19
+Added Pin To Net: NetName=VT_VCC_W Pin=LT2-19
+Added Net: Name=VT_VCC_W
+Added Pin To Net: NetName=Y0 Pin=TSB1-4
+Added Net: Name=Y0
+Added Pin To Net: NetName=Y1 Pin=TSB8-4
+Added Net: Name=Y1
+Added Pin To Net: NetName=Y2 Pin=TSB15-4
+Added Net: Name=Y2
+Added Pin To Net: NetName=Y3 Pin=TSB22-4
+Added Net: Name=Y3
+Added Pin To Net: NetName=Y4 Pin=TSB29-4
+Added Net: Name=Y4
+Added Pin To Net: NetName=Y5 Pin=TSB36-4
+Added Net: Name=Y5
+Added Pin To Net: NetName=Y6 Pin=TSB43-4
+Added Net: Name=Y6
+Added Pin To Net: NetName=Y7 Pin=TSB50-4
+Added Net: Name=Y7
+Added Pin To Net: NetName=Y8 Pin=TSB57-4
+Added Net: Name=Y8
+Added Pin To Net: NetName=Y9 Pin=TSB64-4
+Added Net: Name=Y9
+Added Pin To Net: NetName=Y10 Pin=TSB71-4
+Added Net: Name=Y10
+Added Pin To Net: NetName=Y11 Pin=TSB78-4
+Added Net: Name=Y11
+Added Pin To Net: NetName=Y12 Pin=TSB85-4
+Added Net: Name=Y12
+Added Pin To Net: NetName=Y13 Pin=TSB92-4
+Added Net: Name=Y13
+Added Pin To Net: NetName=Y14 Pin=TSB99-4
+Added Net: Name=Y14
+Added Pin To Net: NetName=Y15 Pin=TSB106-4
+Added Net: Name=Y15
+Added Pin To Net: NetName=Y16 Pin=TSB113-4
+Added Net: Name=Y16
+Added Pin To Net: NetName=Y17 Pin=TSB120-4
+Added Net: Name=Y17
+Added Pin To Net: NetName=Y18 Pin=TSB2-4
+Added Net: Name=Y18
+Added Pin To Net: NetName=Y19 Pin=TSB9-4
+Added Net: Name=Y19
+Added Pin To Net: NetName=Y20 Pin=TSB16-4
+Added Net: Name=Y20
+Added Pin To Net: NetName=Y21 Pin=TSB23-4
+Added Net: Name=Y21
+Added Pin To Net: NetName=Y22 Pin=TSB30-4
+Added Net: Name=Y22
+Added Pin To Net: NetName=Y23 Pin=TSB37-4
+Added Net: Name=Y23
+Added Pin To Net: NetName=Y24 Pin=TSB44-4
+Added Net: Name=Y24
+Added Pin To Net: NetName=Y25 Pin=TSB51-4
+Added Net: Name=Y25
+Added Pin To Net: NetName=Y26 Pin=TSB58-4
+Added Net: Name=Y26
+Added Pin To Net: NetName=Y27 Pin=TSB65-4
+Added Net: Name=Y27
+Added Pin To Net: NetName=Y28 Pin=TSB72-4
+Added Net: Name=Y28
+Added Pin To Net: NetName=Y29 Pin=TSB79-4
+Added Net: Name=Y29
+Added Pin To Net: NetName=Y30 Pin=TSB86-4
+Added Net: Name=Y30
+Added Pin To Net: NetName=Y31 Pin=TSB93-4
+Added Net: Name=Y31
+Added Pin To Net: NetName=Y32 Pin=TSB100-4
+Added Net: Name=Y32
+Added Pin To Net: NetName=Y33 Pin=TSB107-4
+Added Net: Name=Y33
+Added Pin To Net: NetName=Y34 Pin=TSB114-4
+Added Net: Name=Y34
+Added Pin To Net: NetName=Y35 Pin=TSB121-4
+Added Net: Name=Y35
+Added Pin To Net: NetName=Y36 Pin=TSB3-4
+Added Net: Name=Y36
+Added Pin To Net: NetName=Y37 Pin=TSB10-4
+Added Net: Name=Y37
+Added Pin To Net: NetName=Y38 Pin=TSB17-4
+Added Net: Name=Y38
+Added Pin To Net: NetName=Y39 Pin=TSB24-4
+Added Net: Name=Y39
+Added Pin To Net: NetName=Y40 Pin=TSB31-4
+Added Net: Name=Y40
+Added Pin To Net: NetName=Y41 Pin=TSB38-4
+Added Net: Name=Y41
+Added Pin To Net: NetName=Y42 Pin=TSB45-4
+Added Net: Name=Y42
+Added Pin To Net: NetName=Y43 Pin=TSB52-4
+Added Net: Name=Y43
+Added Pin To Net: NetName=Y44 Pin=TSB59-4
+Added Net: Name=Y44
+Added Pin To Net: NetName=Y45 Pin=TSB66-4
+Added Net: Name=Y45
+Added Pin To Net: NetName=Y46 Pin=TSB73-4
+Added Net: Name=Y46
+Added Pin To Net: NetName=Y47 Pin=TSB80-4
+Added Net: Name=Y47
+Added Pin To Net: NetName=Y48 Pin=TSB87-4
+Added Net: Name=Y48
+Added Pin To Net: NetName=Y49 Pin=TSB94-4
+Added Net: Name=Y49
+Added Pin To Net: NetName=Y50 Pin=TSB101-4
+Added Net: Name=Y50
+Added Pin To Net: NetName=Y51 Pin=TSB108-4
+Added Net: Name=Y51
+Added Pin To Net: NetName=Y52 Pin=TSB115-4
+Added Net: Name=Y52
+Added Pin To Net: NetName=Y53 Pin=TSB122-4
+Added Net: Name=Y53
+Added Pin To Net: NetName=Y54 Pin=TSB4-4
+Added Net: Name=Y54
+Added Pin To Net: NetName=Y55 Pin=TSB11-4
+Added Net: Name=Y55
+Added Pin To Net: NetName=Y56 Pin=TSB18-4
+Added Net: Name=Y56
+Added Pin To Net: NetName=Y57 Pin=TSB25-4
+Added Net: Name=Y57
+Added Pin To Net: NetName=Y58 Pin=TSB32-4
+Added Net: Name=Y58
+Added Pin To Net: NetName=Y59 Pin=TSB39-4
+Added Net: Name=Y59
+Added Pin To Net: NetName=Y60 Pin=TSB46-4
+Added Net: Name=Y60
+Added Pin To Net: NetName=Y61 Pin=TSB53-4
+Added Net: Name=Y61
+Added Pin To Net: NetName=Y62 Pin=TSB60-4
+Added Net: Name=Y62
+Added Pin To Net: NetName=Y63 Pin=TSB67-4
+Added Net: Name=Y63
+Added Pin To Net: NetName=Y64 Pin=TSB74-4
+Added Net: Name=Y64
+Added Pin To Net: NetName=Y65 Pin=TSB81-4
+Added Net: Name=Y65
+Added Pin To Net: NetName=Y66 Pin=TSB88-4
+Added Net: Name=Y66
+Added Pin To Net: NetName=Y67 Pin=TSB95-4
+Added Net: Name=Y67
+Added Pin To Net: NetName=Y68 Pin=TSB102-4
+Added Net: Name=Y68
+Added Pin To Net: NetName=Y69 Pin=TSB109-4
+Added Net: Name=Y69
+Added Pin To Net: NetName=Y70 Pin=TSB116-4
+Added Net: Name=Y70
+Added Pin To Net: NetName=Y71 Pin=TSB123-4
+Added Net: Name=Y71
+Added Pin To Net: NetName=Y72 Pin=TSB5-4
+Added Net: Name=Y72
+Added Pin To Net: NetName=Y73 Pin=TSB12-4
+Added Net: Name=Y73
+Added Pin To Net: NetName=Y74 Pin=TSB19-4
+Added Net: Name=Y74
+Added Pin To Net: NetName=Y75 Pin=TSB26-4
+Added Net: Name=Y75
+Added Pin To Net: NetName=Y76 Pin=TSB33-4
+Added Net: Name=Y76
+Added Pin To Net: NetName=Y77 Pin=TSB40-4
+Added Net: Name=Y77
+Added Pin To Net: NetName=Y78 Pin=TSB47-4
+Added Net: Name=Y78
+Added Pin To Net: NetName=Y79 Pin=TSB54-4
+Added Net: Name=Y79
+Added Pin To Net: NetName=Y80 Pin=TSB61-4
+Added Net: Name=Y80
+Added Pin To Net: NetName=Y81 Pin=TSB68-4
+Added Net: Name=Y81
+Added Pin To Net: NetName=Y82 Pin=TSB75-4
+Added Net: Name=Y82
+Added Pin To Net: NetName=Y83 Pin=TSB82-4
+Added Net: Name=Y83
+Added Pin To Net: NetName=Y84 Pin=TSB89-4
+Added Net: Name=Y84
+Added Pin To Net: NetName=Y85 Pin=TSB96-4
+Added Net: Name=Y85
+Added Pin To Net: NetName=Y86 Pin=TSB103-4
+Added Net: Name=Y86
+Added Pin To Net: NetName=Y87 Pin=TSB110-4
+Added Net: Name=Y87
+Added Pin To Net: NetName=Y88 Pin=TSB117-4
+Added Net: Name=Y88
+Added Pin To Net: NetName=Y89 Pin=TSB124-4
+Added Net: Name=Y89
+Added Pin To Net: NetName=Y90 Pin=TSB6-4
+Added Net: Name=Y90
+Added Pin To Net: NetName=Y91 Pin=TSB13-4
+Added Net: Name=Y91
+Added Pin To Net: NetName=Y92 Pin=TSB20-4
+Added Net: Name=Y92
+Added Pin To Net: NetName=Y93 Pin=TSB27-4
+Added Net: Name=Y93
+Added Pin To Net: NetName=Y94 Pin=TSB34-4
+Added Net: Name=Y94
+Added Pin To Net: NetName=Y95 Pin=TSB41-4
+Added Net: Name=Y95
+Added Pin To Net: NetName=Y96 Pin=TSB48-4
+Added Net: Name=Y96
+Added Pin To Net: NetName=Y97 Pin=TSB55-4
+Added Net: Name=Y97
+Added Pin To Net: NetName=Y98 Pin=TSB62-4
+Added Net: Name=Y98
+Added Pin To Net: NetName=Y99 Pin=TSB69-4
+Added Net: Name=Y99
+Added Pin To Net: NetName=Y100 Pin=TSB76-4
+Added Net: Name=Y100
+Added Pin To Net: NetName=Y101 Pin=TSB83-4
+Added Net: Name=Y101
+Added Pin To Net: NetName=Y102 Pin=TSB90-4
+Added Net: Name=Y102
+Added Pin To Net: NetName=Y103 Pin=TSB97-4
+Added Net: Name=Y103
+Added Pin To Net: NetName=Y104 Pin=TSB104-4
+Added Net: Name=Y104
+Added Pin To Net: NetName=Y105 Pin=TSB111-4
+Added Net: Name=Y105
+Added Pin To Net: NetName=Y106 Pin=TSB118-4
+Added Net: Name=Y106
+Added Pin To Net: NetName=Y107 Pin=TSB125-4
+Added Net: Name=Y107
+Added Pin To Net: NetName=Y108 Pin=TSB7-4
+Added Net: Name=Y108
+Added Pin To Net: NetName=Y109 Pin=TSB14-4
+Added Net: Name=Y109
+Added Pin To Net: NetName=Y110 Pin=TSB21-4
+Added Net: Name=Y110
+Added Pin To Net: NetName=Y111 Pin=TSB28-4
+Added Net: Name=Y111
+Added Pin To Net: NetName=Y112 Pin=TSB35-4
+Added Net: Name=Y112
+Added Pin To Net: NetName=Y113 Pin=TSB42-4
+Added Net: Name=Y113
+Added Pin To Net: NetName=Y114 Pin=TSB49-4
+Added Net: Name=Y114
+Added Pin To Net: NetName=Y115 Pin=TSB56-4
+Added Net: Name=Y115
+Added Pin To Net: NetName=Y116 Pin=TSB63-4
+Added Net: Name=Y116
+Added Pin To Net: NetName=Y117 Pin=TSB70-4
+Added Net: Name=Y117
+Added Pin To Net: NetName=Y118 Pin=TSB77-4
+Added Net: Name=Y118
+Added Pin To Net: NetName=Y119 Pin=TSB84-4
+Added Net: Name=Y119
+Added Pin To Net: NetName=Y120 Pin=TSB91-4
+Added Net: Name=Y120
+Added Pin To Net: NetName=Y121 Pin=TSB98-4
+Added Net: Name=Y121
+Added Pin To Net: NetName=Y122 Pin=TSB105-4
+Added Net: Name=Y122
+Added Pin To Net: NetName=Y123 Pin=TSB112-4
+Added Net: Name=Y123
+Added Pin To Net: NetName=Y124 Pin=TSB119-4
+Added Net: Name=Y124
+Added Pin To Net: NetName=Y125 Pin=TSB126-4
+Added Net: Name=Y125
+Added Pin To Net: NetName=Y126 Pin=TSB127-4
+Added Net: Name=Y126
+Added Pin To Net: NetName=Y127 Pin=TSB128-4
+Added Net: Name=Y127
+Added Pin To Net: NetName=~OE0 Pin=TSB1-1
+Added Net: Name=~OE0
+Added Pin To Net: NetName=~OE1 Pin=TSB8-1
+Added Net: Name=~OE1
+Added Pin To Net: NetName=~OE2 Pin=TSB15-1
+Added Net: Name=~OE2
+Added Pin To Net: NetName=~OE3 Pin=TSB22-1
+Added Net: Name=~OE3
+Added Pin To Net: NetName=~OE4 Pin=TSB29-1
+Added Net: Name=~OE4
+Added Pin To Net: NetName=~OE5 Pin=TSB36-1
+Added Net: Name=~OE5
+Added Pin To Net: NetName=~OE6 Pin=TSB43-1
+Added Net: Name=~OE6
+Added Pin To Net: NetName=~OE7 Pin=TSB50-1
+Added Net: Name=~OE7
+Added Pin To Net: NetName=~OE8 Pin=TSB57-1
+Added Net: Name=~OE8
+Added Pin To Net: NetName=~OE9 Pin=TSB64-1
+Added Net: Name=~OE9
+Added Pin To Net: NetName=~OE10 Pin=TSB71-1
+Added Net: Name=~OE10
+Added Pin To Net: NetName=~OE11 Pin=TSB78-1
+Added Net: Name=~OE11
+Added Pin To Net: NetName=~OE12 Pin=TSB85-1
+Added Net: Name=~OE12
+Added Pin To Net: NetName=~OE13 Pin=TSB92-1
+Added Net: Name=~OE13
+Added Pin To Net: NetName=~OE14 Pin=TSB99-1
+Added Net: Name=~OE14
+Added Pin To Net: NetName=~OE15 Pin=TSB106-1
+Added Net: Name=~OE15
+Added Pin To Net: NetName=~OE16 Pin=TSB113-1
+Added Net: Name=~OE16
+Added Pin To Net: NetName=~OE17 Pin=TSB120-1
+Added Net: Name=~OE17
+Added Pin To Net: NetName=~OE18 Pin=TSB2-1
+Added Net: Name=~OE18
+Added Pin To Net: NetName=~OE19 Pin=TSB9-1
+Added Net: Name=~OE19
+Added Pin To Net: NetName=~OE20 Pin=TSB16-1
+Added Net: Name=~OE20
+Added Pin To Net: NetName=~OE21 Pin=TSB23-1
+Added Net: Name=~OE21
+Added Pin To Net: NetName=~OE22 Pin=TSB30-1
+Added Net: Name=~OE22
+Added Pin To Net: NetName=~OE23 Pin=TSB37-1
+Added Net: Name=~OE23
+Added Pin To Net: NetName=~OE24 Pin=TSB44-1
+Added Net: Name=~OE24
+Added Pin To Net: NetName=~OE25 Pin=TSB51-1
+Added Net: Name=~OE25
+Added Pin To Net: NetName=~OE26 Pin=TSB58-1
+Added Net: Name=~OE26
+Added Pin To Net: NetName=~OE27 Pin=TSB65-1
+Added Net: Name=~OE27
+Added Pin To Net: NetName=~OE28 Pin=TSB72-1
+Added Net: Name=~OE28
+Added Pin To Net: NetName=~OE29 Pin=TSB79-1
+Added Net: Name=~OE29
+Added Pin To Net: NetName=~OE30 Pin=TSB86-1
+Added Net: Name=~OE30
+Added Pin To Net: NetName=~OE31 Pin=TSB93-1
+Added Net: Name=~OE31
+Added Pin To Net: NetName=~OE32 Pin=TSB100-1
+Added Net: Name=~OE32
+Added Pin To Net: NetName=~OE33 Pin=TSB107-1
+Added Net: Name=~OE33
+Added Pin To Net: NetName=~OE34 Pin=TSB114-1
+Added Net: Name=~OE34
+Added Pin To Net: NetName=~OE35 Pin=TSB121-1
+Added Net: Name=~OE35
+Added Pin To Net: NetName=~OE36 Pin=TSB3-1
+Added Net: Name=~OE36
+Added Pin To Net: NetName=~OE37 Pin=TSB10-1
+Added Net: Name=~OE37
+Added Pin To Net: NetName=~OE38 Pin=TSB17-1
+Added Net: Name=~OE38
+Added Pin To Net: NetName=~OE39 Pin=TSB24-1
+Added Net: Name=~OE39
+Added Pin To Net: NetName=~OE40 Pin=TSB31-1
+Added Net: Name=~OE40
+Added Pin To Net: NetName=~OE41 Pin=TSB38-1
+Added Net: Name=~OE41
+Added Pin To Net: NetName=~OE42 Pin=TSB45-1
+Added Net: Name=~OE42
+Added Pin To Net: NetName=~OE43 Pin=TSB52-1
+Added Net: Name=~OE43
+Added Pin To Net: NetName=~OE44 Pin=TSB59-1
+Added Net: Name=~OE44
+Added Pin To Net: NetName=~OE45 Pin=TSB66-1
+Added Net: Name=~OE45
+Added Pin To Net: NetName=~OE46 Pin=TSB73-1
+Added Net: Name=~OE46
+Added Pin To Net: NetName=~OE47 Pin=TSB80-1
+Added Net: Name=~OE47
+Added Pin To Net: NetName=~OE48 Pin=TSB87-1
+Added Net: Name=~OE48
+Added Pin To Net: NetName=~OE49 Pin=TSB94-1
+Added Net: Name=~OE49
+Added Pin To Net: NetName=~OE50 Pin=TSB101-1
+Added Net: Name=~OE50
+Added Pin To Net: NetName=~OE51 Pin=TSB108-1
+Added Net: Name=~OE51
+Added Pin To Net: NetName=~OE52 Pin=TSB115-1
+Added Net: Name=~OE52
+Added Pin To Net: NetName=~OE53 Pin=TSB122-1
+Added Net: Name=~OE53
+Added Pin To Net: NetName=~OE54 Pin=TSB4-1
+Added Net: Name=~OE54
+Added Pin To Net: NetName=~OE55 Pin=TSB11-1
+Added Net: Name=~OE55
+Added Pin To Net: NetName=~OE56 Pin=TSB18-1
+Added Net: Name=~OE56
+Added Pin To Net: NetName=~OE57 Pin=TSB25-1
+Added Net: Name=~OE57
+Added Pin To Net: NetName=~OE58 Pin=TSB32-1
+Added Net: Name=~OE58
+Added Pin To Net: NetName=~OE59 Pin=TSB39-1
+Added Net: Name=~OE59
+Added Pin To Net: NetName=~OE60 Pin=TSB46-1
+Added Net: Name=~OE60
+Added Pin To Net: NetName=~OE61 Pin=TSB53-1
+Added Net: Name=~OE61
+Added Pin To Net: NetName=~OE62 Pin=TSB60-1
+Added Net: Name=~OE62
+Added Pin To Net: NetName=~OE63 Pin=TSB67-1
+Added Net: Name=~OE63
+Added Pin To Net: NetName=~OE64 Pin=TSB74-1
+Added Net: Name=~OE64
+Added Pin To Net: NetName=~OE65 Pin=TSB81-1
+Added Net: Name=~OE65
+Added Pin To Net: NetName=~OE66 Pin=TSB88-1
+Added Net: Name=~OE66
+Added Pin To Net: NetName=~OE67 Pin=TSB95-1
+Added Net: Name=~OE67
+Added Pin To Net: NetName=~OE68 Pin=TSB102-1
+Added Net: Name=~OE68
+Added Pin To Net: NetName=~OE69 Pin=TSB109-1
+Added Net: Name=~OE69
+Added Pin To Net: NetName=~OE70 Pin=TSB116-1
+Added Net: Name=~OE70
+Added Pin To Net: NetName=~OE71 Pin=TSB123-1
+Added Net: Name=~OE71
+Added Pin To Net: NetName=~OE72 Pin=TSB5-1
+Added Net: Name=~OE72
+Added Pin To Net: NetName=~OE73 Pin=TSB12-1
+Added Net: Name=~OE73
+Added Pin To Net: NetName=~OE74 Pin=TSB19-1
+Added Net: Name=~OE74
+Added Pin To Net: NetName=~OE75 Pin=TSB26-1
+Added Net: Name=~OE75
+Added Pin To Net: NetName=~OE76 Pin=TSB33-1
+Added Net: Name=~OE76
+Added Pin To Net: NetName=~OE77 Pin=TSB40-1
+Added Net: Name=~OE77
+Added Pin To Net: NetName=~OE78 Pin=TSB47-1
+Added Net: Name=~OE78
+Added Pin To Net: NetName=~OE79 Pin=TSB54-1
+Added Net: Name=~OE79
+Added Pin To Net: NetName=~OE80 Pin=TSB61-1
+Added Net: Name=~OE80
+Added Pin To Net: NetName=~OE81 Pin=TSB68-1
+Added Net: Name=~OE81
+Added Pin To Net: NetName=~OE82 Pin=TSB75-1
+Added Net: Name=~OE82
+Added Pin To Net: NetName=~OE83 Pin=TSB82-1
+Added Net: Name=~OE83
+Added Pin To Net: NetName=~OE84 Pin=TSB89-1
+Added Net: Name=~OE84
+Added Pin To Net: NetName=~OE85 Pin=TSB96-1
+Added Net: Name=~OE85
+Added Pin To Net: NetName=~OE86 Pin=TSB103-1
+Added Net: Name=~OE86
+Added Pin To Net: NetName=~OE87 Pin=TSB110-1
+Added Net: Name=~OE87
+Added Pin To Net: NetName=~OE88 Pin=TSB117-1
+Added Net: Name=~OE88
+Added Pin To Net: NetName=~OE89 Pin=TSB124-1
+Added Net: Name=~OE89
+Added Pin To Net: NetName=~OE90 Pin=TSB6-1
+Added Net: Name=~OE90
+Added Pin To Net: NetName=~OE91 Pin=TSB13-1
+Added Net: Name=~OE91
+Added Pin To Net: NetName=~OE92 Pin=TSB20-1
+Added Net: Name=~OE92
+Added Pin To Net: NetName=~OE93 Pin=TSB27-1
+Added Net: Name=~OE93
+Added Pin To Net: NetName=~OE94 Pin=TSB34-1
+Added Net: Name=~OE94
+Added Pin To Net: NetName=~OE95 Pin=TSB41-1
+Added Net: Name=~OE95
+Added Pin To Net: NetName=~OE96 Pin=TSB48-1
+Added Net: Name=~OE96
+Added Pin To Net: NetName=~OE97 Pin=TSB55-1
+Added Net: Name=~OE97
+Added Pin To Net: NetName=~OE98 Pin=TSB62-1
+Added Net: Name=~OE98
+Added Pin To Net: NetName=~OE99 Pin=TSB69-1
+Added Net: Name=~OE99
+Added Pin To Net: NetName=~OE100 Pin=TSB76-1
+Added Net: Name=~OE100
+Added Pin To Net: NetName=~OE101 Pin=TSB83-1
+Added Net: Name=~OE101
+Added Pin To Net: NetName=~OE102 Pin=TSB90-1
+Added Net: Name=~OE102
+Added Pin To Net: NetName=~OE103 Pin=TSB97-1
+Added Net: Name=~OE103
+Added Pin To Net: NetName=~OE104 Pin=TSB104-1
+Added Net: Name=~OE104
+Added Pin To Net: NetName=~OE105 Pin=TSB111-1
+Added Net: Name=~OE105
+Added Pin To Net: NetName=~OE106 Pin=TSB118-1
+Added Net: Name=~OE106
+Added Pin To Net: NetName=~OE107 Pin=TSB125-1
+Added Net: Name=~OE107
+Added Pin To Net: NetName=~OE108 Pin=TSB7-1
+Added Net: Name=~OE108
+Added Pin To Net: NetName=~OE109 Pin=TSB14-1
+Added Net: Name=~OE109
+Added Pin To Net: NetName=~OE110 Pin=TSB21-1
+Added Net: Name=~OE110
+Added Pin To Net: NetName=~OE111 Pin=TSB28-1
+Added Net: Name=~OE111
+Added Pin To Net: NetName=~OE112 Pin=TSB35-1
+Added Net: Name=~OE112
+Added Pin To Net: NetName=~OE113 Pin=TSB42-1
+Added Net: Name=~OE113
+Added Pin To Net: NetName=~OE114 Pin=TSB49-1
+Added Net: Name=~OE114
+Added Pin To Net: NetName=~OE115 Pin=TSB56-1
+Added Net: Name=~OE115
+Added Pin To Net: NetName=~OE116 Pin=TSB63-1
+Added Net: Name=~OE116
+Added Pin To Net: NetName=~OE117 Pin=TSB70-1
+Added Net: Name=~OE117
+Added Pin To Net: NetName=~OE118 Pin=TSB77-1
+Added Net: Name=~OE118
+Added Pin To Net: NetName=~OE119 Pin=TSB84-1
+Added Net: Name=~OE119
+Added Pin To Net: NetName=~OE120 Pin=TSB91-1
+Added Net: Name=~OE120
+Added Pin To Net: NetName=~OE121 Pin=TSB98-1
+Added Net: Name=~OE121
+Added Pin To Net: NetName=~OE122 Pin=TSB105-1
+Added Net: Name=~OE122
+Added Pin To Net: NetName=~OE123 Pin=TSB112-1
+Added Net: Name=~OE123
+Added Pin To Net: NetName=~OE124 Pin=TSB119-1
+Added Net: Name=~OE124
+Added Pin To Net: NetName=~OE125 Pin=TSB126-1
+Added Net: Name=~OE125
+Added Pin To Net: NetName=~OE126 Pin=TSB127-1
+Added Net: Name=~OE126
+Added Pin To Net: NetName=~OE127 Pin=TSB128-1
+Added Net: Name=~OE127
+Added Pin To Net: NetName=~RCLR Pin=SR1-13
+Added Pin To Net: NetName=~RCLR Pin=SR2-13
+Added Pin To Net: NetName=~RCLR Pin=SR3-13
+Added Pin To Net: NetName=~RCLR Pin=SR4-13
+Added Pin To Net: NetName=~RCLR Pin=SR5-13
+Added Pin To Net: NetName=~RCLR Pin=SR6-13
+Added Pin To Net: NetName=~RCLR Pin=SR7-13
+Added Pin To Net: NetName=~RCLR Pin=SR8-13
+Added Pin To Net: NetName=~RCLR Pin=SR9-13
+Added Pin To Net: NetName=~RCLR Pin=SR10-13
+Added Pin To Net: NetName=~RCLR Pin=SR11-13
+Added Pin To Net: NetName=~RCLR Pin=SR12-13
+Added Pin To Net: NetName=~RCLR Pin=SR13-13
+Added Pin To Net: NetName=~RCLR Pin=SR14-13
+Added Pin To Net: NetName=~RCLR Pin=SR15-13
+Added Pin To Net: NetName=~RCLR Pin=SR16-13
+Added Net: Name=~RCLR
+Added Pin To Net: NetName=~RESET_W Pin=POT-1
+Added Net: Name=~RESET_W
+Added Pin To Net: NetName=~SRCLR Pin=SR1-10
+Added Pin To Net: NetName=~SRCLR Pin=SR2-10
+Added Pin To Net: NetName=~SRCLR Pin=SR3-10
+Added Pin To Net: NetName=~SRCLR Pin=SR4-10
+Added Pin To Net: NetName=~SRCLR Pin=SR5-10
+Added Pin To Net: NetName=~SRCLR Pin=SR6-10
+Added Pin To Net: NetName=~SRCLR Pin=SR7-10
+Added Pin To Net: NetName=~SRCLR Pin=SR8-10
+Added Pin To Net: NetName=~SRCLR Pin=SR9-10
+Added Pin To Net: NetName=~SRCLR Pin=SR10-10
+Added Pin To Net: NetName=~SRCLR Pin=SR11-10
+Added Pin To Net: NetName=~SRCLR Pin=SR12-10
+Added Pin To Net: NetName=~SRCLR Pin=SR13-10
+Added Pin To Net: NetName=~SRCLR Pin=SR14-10
+Added Pin To Net: NetName=~SRCLR Pin=SR15-10
+Added Pin To Net: NetName=~SRCLR Pin=SR16-10
+Added Net: Name=~SRCLR
+Added Pin To Net: NetName=~SYNC_W Pin=POT-12
+Added Net: Name=~SYNC_W
+Added Class: Name=BBB_Board
+Added Class: Name=DUT_HEADER
+Added Class: Name=NUMATO_HDR
+Added Class: Name=POW_CONT
+Added Class: Name=TEMPLATE_REG
+Added Class: Name=TRISTATE_BANK
+Added Class: Name=VT_WRP
+Added Class: Name=A_B[125..0]
+Added Class: Name=B_H[7..0]
+Added Class: Name=DOUT[127..0]
+Added Class: Name=IVL_B[127..0]
+Added Class: Name=IVL_W[15..0]
+Added Class: Name=L_H[7..0]
+Added Class: Name=NO[125..0]
+Added Class: Name=OTH_W[7..0]
+Added Class: Name=OVCC_B[127..0]
+Added Class: Name=OVCC_W[15..0]
+Added Class: Name=R_H[7..0]
+Added Class: Name=SIG_W[31..0]
+Added Class: Name=SIGNAL[63..48]
+Added Class: Name=SIGNAL_W[125..0]
+Added Class: Name=T_H[7..0]
+Added Class: Name=TRO[127..0]
+Added Class: Name=TSBO[127..0]
+Added Class: Name=VTO[127..0]
+Added Class: Name=Y_B[127..0]
