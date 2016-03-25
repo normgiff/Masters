@@ -1,0 +1,56 @@
+Removed Pin From Net: NetName=GND Pin=R5_U_Power_Control1-1
+Removed Pin From Net: NetName=NetLM1_U_Power_Control1_1 Pin=R5_U_Power_Control1-2
+Removed Pin From Net: NetName=GND Pin=R5_U_Power_Control2-1
+Removed Pin From Net: NetName=NetLM1_U_Power_Control2_1 Pin=R5_U_Power_Control2-2
+Removed Pin From Net: NetName=-5V_W_U_Power_Control1 Pin=R6_U_Power_Control1-1
+Removed Pin From Net: NetName=NetLM1_U_Power_Control1_1 Pin=R6_U_Power_Control1-2
+Removed Pin From Net: NetName=-5V_W_U_Power_Control1 Pin=R6_U_Power_Control2-1
+Removed Pin From Net: NetName=NetLM1_U_Power_Control2_1 Pin=R6_U_Power_Control2-2
+Removed Pin From Net: NetName=GND Pin=R9_U_Power_Control1-1
+Removed Pin From Net: NetName=NetLM2_U_Power_Control1_1 Pin=R9_U_Power_Control1-2
+Removed Pin From Net: NetName=GND Pin=R9_U_Power_Control2-1
+Removed Pin From Net: NetName=NetLM2_U_Power_Control2_1 Pin=R9_U_Power_Control2-2
+Removed Pin From Net: NetName=NetLM2_U_Power_Control1_1 Pin=R10_U_Power_Control1-1
+Removed Pin From Net: NetName=12V_W_U_Power_Control1 Pin=R10_U_Power_Control1-2
+Removed Pin From Net: NetName=NetLM2_U_Power_Control2_1 Pin=R10_U_Power_Control2-1
+Removed Pin From Net: NetName=12V_W_U_Power_Control1 Pin=R10_U_Power_Control2-2
+Removed Member From Class: ClassName=U_Power_Control1 Member=R9_U_Power_Control1
+Removed Member From Class: ClassName=U_Power_Control2 Member=R9_U_Power_Control2
+Removed Member From Class: ClassName=U_Power_Control1 Member=R10_U_Power_Control1
+Removed Member From Class: ClassName=U_Power_Control2 Member=R10_U_Power_Control2
+Change Component DesignItemId : Designator=R5_U_Power_Control1 Old DesignItemId=Res3 New DesignItemId=RNCS0603BKE10K0
+Change Component DesignItemId : Designator=R5_U_Power_Control2 Old DesignItemId=Res3 New DesignItemId=RNCS0603BKE10K0
+Change Component DesignItemId : Designator=R6_U_Power_Control1 Old DesignItemId=Res3 New DesignItemId=RNCS0603BKE10K0
+Change Component DesignItemId : Designator=R6_U_Power_Control2 Old DesignItemId=Res3 New DesignItemId=RNCS0603BKE10K0
+Change Component Footprint: Designator=R5_U_Power_Control1 Old Footprint=J1-0603 New Footprint=0.1uF_0603
+Change Component Footprint: Designator=R5_U_Power_Control2 Old Footprint=J1-0603 New Footprint=0.1uF_0603
+Change Component Footprint: Designator=R6_U_Power_Control1 Old Footprint=J1-0603 New Footprint=0.1uF_0603
+Change Component Footprint: Designator=R6_U_Power_Control2 Old Footprint=J1-0603 New Footprint=0.1uF_0603
+Change Component Comment : Designator=R5_U_Power_Control1 Old Comment=Res3 New Comment=RNCS0603BKE10K0
+Change Component Comment : Designator=R5_U_Power_Control2 Old Comment=Res3 New Comment=RNCS0603BKE10K0
+Change Component Comment : Designator=R6_U_Power_Control1 Old Comment=Res3 New Comment=RNCS0603BKE10K0
+Change Component Comment : Designator=R6_U_Power_Control2 Old Comment=Res3 New Comment=RNCS0603BKE10K0
+Added Component: Designator=R3_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=R3_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=R4_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=R4_U_Power_Control2(0.1uF_0603)
+Added Pin To Net: NetName=NetLM1_U_Power_Control1_1 Pin=R3_U_Power_Control1-1
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=R3_U_Power_Control1-2
+Added Pin To Net: NetName=NetLM1_U_Power_Control2_1 Pin=R3_U_Power_Control2-1
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=R3_U_Power_Control2-2
+Added Pin To Net: NetName=GND Pin=R4_U_Power_Control1-1
+Added Pin To Net: NetName=NetLM1_U_Power_Control1_1 Pin=R4_U_Power_Control1-2
+Added Pin To Net: NetName=GND Pin=R4_U_Power_Control2-1
+Added Pin To Net: NetName=NetLM1_U_Power_Control2_1 Pin=R4_U_Power_Control2-2
+Added Pin To Net: NetName=NetLM2_U_Power_Control1_1 Pin=R5_U_Power_Control1-1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=R5_U_Power_Control1-2
+Added Pin To Net: NetName=NetLM2_U_Power_Control2_1 Pin=R5_U_Power_Control2-1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=R5_U_Power_Control2-2
+Added Pin To Net: NetName=GND Pin=R6_U_Power_Control1-1
+Added Pin To Net: NetName=NetLM2_U_Power_Control1_1 Pin=R6_U_Power_Control1-2
+Added Pin To Net: NetName=GND Pin=R6_U_Power_Control2-1
+Added Pin To Net: NetName=NetLM2_U_Power_Control2_1 Pin=R6_U_Power_Control2-2
+Added Member To Class: ClassName=U_Power_Control1 Member=Component R3_U_Power_Control1 (R3) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control2 Member=Component R3_U_Power_Control2 (R3) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control1 Member=Component R4_U_Power_Control1 (R4) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control2 Member=Component R4_U_Power_Control2 (R4) RNCS0603BKE10K0

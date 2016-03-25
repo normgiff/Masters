@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-17
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-18
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-19
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-20
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-21
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-22
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-23
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH3-24
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH4-11
+Removed Pin From Net: NetName=IVL_B127 Pin=ETH4-30
+Removed Pin From Net: NetName=IVL_B127 Pin=LT2_U_VT_WRP1-8
+Added Pin To Net: NetName=GND Pin=ETH3-17
+Added Pin To Net: NetName=GND Pin=ETH3-18
+Added Pin To Net: NetName=GND Pin=ETH3-19
+Added Pin To Net: NetName=GND Pin=ETH3-20
+Added Pin To Net: NetName=GND Pin=ETH3-21
+Added Pin To Net: NetName=GND Pin=ETH3-22
+Added Pin To Net: NetName=GND Pin=ETH3-23
+Added Pin To Net: NetName=GND Pin=ETH3-24
+Added Pin To Net: NetName=GND Pin=ETH4-11
+Added Pin To Net: NetName=GND Pin=ETH4-30
+Added Pin To Net: NetName=IVL_B126 Pin=LT2_U_VT_WRP1-8
+Added Net: Name=IVL_B126
+Added Member To Class: ClassName=IVL_B[127..0] Member=Element[126]: IVL_B

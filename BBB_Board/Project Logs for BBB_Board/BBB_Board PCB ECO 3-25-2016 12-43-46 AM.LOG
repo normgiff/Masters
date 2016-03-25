@@ -1,0 +1,22 @@
+Removed Member From Class: ClassName=IVL_B[127..0] Member=IVL_B124
+Removed Member From Class: ClassName=IVL_B[127..0] Member=IVL_B125
+Change Component Designator: OldDesignator= NewDesignator=BBB_DOWN
+Change Component Designator: OldDesignator=5V NewDesignator=-5V
+Change Component Designator: OldDesignator=10kOhm NewDesignator=R1
+Change Component Designator: OldDesignator=FPGA RESET NewDesignator=S1
+Change Component Designator: OldDesignator=GND NewDesignator=GND1
+Change Component Designator: OldDesignator=GND NewDesignator=GND2
+Change Net Name : Old Net Name=IVL_B114 New Net Name=IVL_B112
+Change Net Name : Old Net Name=IVL_B115 New Net Name=IVL_B113
+Change Net Name : Old Net Name=IVL_B116 New Net Name=IVL_B114
+Change Net Name : Old Net Name=IVL_B117 New Net Name=IVL_B115
+Change Net Name : Old Net Name=IVL_B118 New Net Name=IVL_B116
+Change Net Name : Old Net Name=IVL_B119 New Net Name=IVL_B117
+Change Net Name : Old Net Name=IVL_B120 New Net Name=IVL_B118
+Change Net Name : Old Net Name=IVL_B121 New Net Name=IVL_B119
+Change Net Name : Old Net Name=IVL_B122 New Net Name=IVL_B120
+Change Net Name : Old Net Name=IVL_B123 New Net Name=IVL_B121
+Change Net Name : Old Net Name=IVL_B124 New Net Name=IVL_B122
+Change Net Name : Old Net Name=IVL_B125 New Net Name=IVL_B123
+Added Member To Class: ClassName=BBB_Board Member=Component BBB_DOWN BBB_Pin
+Added Member To Class: ClassName=BBB_Board Member=Component GND1 Header 10
