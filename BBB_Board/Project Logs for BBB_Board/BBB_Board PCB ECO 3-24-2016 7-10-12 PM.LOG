@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=IVL_B112 Pin=ETH4-1
+Removed Pin From Net: NetName=IVL_B113 Pin=ETH4-2
+Removed Pin From Net: NetName=IVL_B114 Pin=ETH4-3
+Removed Pin From Net: NetName=IVL_B115 Pin=ETH4-4
+Removed Pin From Net: NetName=IVL_B116 Pin=ETH4-5
+Removed Pin From Net: NetName=IVL_B117 Pin=ETH4-6
+Removed Pin From Net: NetName=IVL_B118 Pin=ETH4-7
+Removed Pin From Net: NetName=IVL_B119 Pin=ETH4-8
+Removed Pin From Net: NetName=IVL_B120 Pin=ETH4-9
+Removed Pin From Net: NetName=IVL_B121 Pin=ETH4-10
+Removed Pin From Net: NetName=IVL_B122 Pin=ETH4-12
+Removed Pin From Net: NetName=IVL_B123 Pin=ETH4-13
+Removed Pin From Net: NetName=IVL_B124 Pin=ETH4-14
+Removed Pin From Net: NetName=IVL_B125 Pin=ETH4-15
+Added Component: Designator=P1(HDR1X10)
+Added Component: Designator=P2(HDR1X10)
+Added Pin To Net: NetName=IVL_B114 Pin=ETH4-1
+Added Pin To Net: NetName=IVL_B115 Pin=ETH4-2
+Added Pin To Net: NetName=IVL_B116 Pin=ETH4-3
+Added Pin To Net: NetName=IVL_B117 Pin=ETH4-4
+Added Pin To Net: NetName=IVL_B118 Pin=ETH4-5
+Added Pin To Net: NetName=IVL_B119 Pin=ETH4-6
+Added Pin To Net: NetName=IVL_B120 Pin=ETH4-7
+Added Pin To Net: NetName=IVL_B121 Pin=ETH4-8
+Added Pin To Net: NetName=IVL_B122 Pin=ETH4-9
+Added Pin To Net: NetName=IVL_B123 Pin=ETH4-10
+Added Pin To Net: NetName=IVL_B124 Pin=ETH4-12
+Added Pin To Net: NetName=IVL_B125 Pin=ETH4-13
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-3
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-4
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-5
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-6
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-7
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-8
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-9
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=P1-10
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-3
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-4
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-5
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-6
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-7
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-8
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-9
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=P2-10
+Added Pin To Net: NetName=SIGNAL_W124 Pin=ETH4-14
+Added Net: Name=SIGNAL_W124
+Added Pin To Net: NetName=SIGNAL_W125 Pin=ETH4-15
+Added Net: Name=SIGNAL_W125
+Change Class Name : Old Net Name=TSBO[127..112] New Net Name=SIGNAL_W[125..112]
+Added Member To Class: ClassName=BBB_Board Member=Component P1 Header 10
+Added Member To Class: ClassName=BBB_Board Member=Component P2 Header 10
+Added Member To Class: ClassName=SIGNAL_W[125..112] Member=Element[124]: SIGNAL_W
+Added Member To Class: ClassName=SIGNAL_W[125..112] Member=Element[125]: SIGNAL_W

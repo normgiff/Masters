@@ -1,0 +1,50 @@
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP8-2
+Added Pin To Net: NetName=NetD2_U_Power_Control1_1 Pin=1_U_Power_Control1-2
+Added Pin To Net: NetName=NetD2_U_Power_Control2_1 Pin=1_U_Power_Control2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=2_U_Power_Control1-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=2_U_Power_Control2-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=3_U_Power_Control1-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=3_U_Power_Control2-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=4_U_Power_Control1-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=4_U_Power_Control2-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=6_U_Power_Control1-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=6_U_Power_Control2-2
+Change Net Name : Old Net Name=NetD2_U_Power_Control1_1 New Net Name=Net1_U_Power_Control1_2
+Change Net Name : Old Net Name=NetD2_U_Power_Control2_1 New Net Name=Net1_U_Power_Control2_2
+Added Pin To Net: NetName=Net5_U_Power_Control1_2 Pin=5_U_Power_Control1-2
+Added Pin To Net: NetName=Net5_U_Power_Control1_2 Pin=POT_U_Power_Control1-7
+Added Net: Name=Net5_U_Power_Control1_2
+Added Pin To Net: NetName=Net5_U_Power_Control2_2 Pin=5_U_Power_Control2-2
+Added Pin To Net: NetName=Net5_U_Power_Control2_2 Pin=POT_U_Power_Control2-7
+Added Net: Name=Net5_U_Power_Control2_2

@@ -1,0 +1,84 @@
+Removed Member From Class: ClassName=U_VT_WRP1 Member=
+Removed Member From Class: ClassName=U_VT_WRP2 Member=
+Removed Member From Class: ClassName=U_VT_WRP4 Member=
+Removed Member From Class: ClassName=U_VT_WRP5 Member=
+Removed Member From Class: ClassName=U_VT_WRP6 Member=
+Removed Member From Class: ClassName=U_VT_WRP7 Member=
+Removed Member From Class: ClassName=U_VT_WRP8 Member=
+Removed Member From Class: ClassName=U_VT_WRP5 Member=VT5
+Removed Member From Class: ClassName=U_VT_WRP5 Member=VT6
+Change Component Comment : Designator= Old Comment= New Comment=0.1uF_0603
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_0_U_VT_WRP3
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_0_U_VT_WRP4
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP2
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP3
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP4
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP5
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP6
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP7
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_1_U_VT_WRP8
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP1
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP2
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP3
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP4
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP5
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP6
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_3_U_VT_WRP8
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP1
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP2
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP3
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP4
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP5
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP6
+Change Component Designator: OldDesignator= NewDesignator=0.1uF_4_U_VT_WRP7
+Change Component Designator: OldDesignator=0.1uF NewDesignator=0.1uF_4_U_VT_WRP8
+Change Component Designator: OldDesignator=VT1 NewDesignator=LT1_U_VT_WRP1
+Change Component Designator: OldDesignator=VT2 NewDesignator=LT2_U_VT_WRP1
+Change Component Designator: OldDesignator=VT3 NewDesignator=LT1_U_VT_WRP5
+Change Component Designator: OldDesignator=VT4 NewDesignator=LT2_U_VT_WRP5
+Change Component Designator: OldDesignator=VT5 NewDesignator=LT1_U_VT_WRP3
+Change Component Designator: OldDesignator=VT6 NewDesignator=LT2_U_VT_WRP3
+Change Component Designator: OldDesignator=VT7 NewDesignator=LT1_U_VT_WRP7
+Change Component Designator: OldDesignator=VT8 NewDesignator=LT2_U_VT_WRP7
+Change Component Designator: OldDesignator=VT9 NewDesignator=LT2_U_VT_WRP2
+Change Component Designator: OldDesignator=VT10 NewDesignator=LT1_U_VT_WRP2
+Change Component Designator: OldDesignator=VT11 NewDesignator=LT1_U_VT_WRP6
+Change Component Designator: OldDesignator=VT12 NewDesignator=LT2_U_VT_WRP6
+Change Component Designator: OldDesignator=VT13 NewDesignator=LT2_U_VT_WRP4
+Change Component Designator: OldDesignator=VT14 NewDesignator=LT1_U_VT_WRP4
+Change Component Designator: OldDesignator=VT15 NewDesignator=LT1_U_VT_WRP8
+Change Component Designator: OldDesignator=VT16 NewDesignator=LT2_U_VT_WRP8
+Added Pin To Net: NetName=GND Pin=GND-1
+Added Pin To Net: NetName=GND Pin=GND-2
+Added Pin To Net: NetName=GND Pin=GND-3
+Added Pin To Net: NetName=GND Pin=GND-4
+Added Pin To Net: NetName=GND Pin=GND-5
+Added Pin To Net: NetName=GND Pin=GND-6
+Added Pin To Net: NetName=GND Pin=GND-7
+Added Pin To Net: NetName=GND Pin=GND-8
+Added Pin To Net: NetName=GND Pin=GND-9
+Added Pin To Net: NetName=GND Pin=GND-10
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_0_U_VT_WRP4 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_1_U_VT_WRP2 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_1_U_VT_WRP3 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_1_U_VT_WRP4 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component 0.1uF_1_U_VT_WRP5 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_1_U_VT_WRP6 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component 0.1uF_1_U_VT_WRP7 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP8 Member=Component 0.1uF_1_U_VT_WRP8 (0.1uF_1) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component 0.1uF_3_U_VT_WRP1 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_3_U_VT_WRP2 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_3_U_VT_WRP3 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_3_U_VT_WRP4 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component 0.1uF_3_U_VT_WRP5 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_3_U_VT_WRP6 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP8 Member=Component 0.1uF_3_U_VT_WRP8 (0.1uF_3) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component 0.1uF_4_U_VT_WRP1 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_4_U_VT_WRP2 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_4_U_VT_WRP3 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_4_U_VT_WRP4 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component 0.1uF_4_U_VT_WRP5 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_4_U_VT_WRP6 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component 0.1uF_4_U_VT_WRP7 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component LT1_U_VT_WRP5 (LT1) 8-Chanel Level Translator
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component LT2_U_VT_WRP5 (LT2) 8-Chanel Level Translator

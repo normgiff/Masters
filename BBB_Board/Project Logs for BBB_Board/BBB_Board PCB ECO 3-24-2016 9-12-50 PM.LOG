@@ -1,0 +1,29 @@
+Removed Member From Class: ClassName=U_VT_WRP1 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP2 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP3 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP4 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP5 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP7 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP8 Member=0.1uF_1_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP3 Member=0.1uF_3_U_VT_WRP2
+Removed Member From Class: ClassName=U_VT_WRP4 Member=0.1uF_3_U_VT_WRP2
+Removed Member From Class: ClassName=U_VT_WRP5 Member=0.1uF_3_U_VT_WRP2
+Removed Member From Class: ClassName=U_VT_WRP6 Member=0.1uF_3_U_VT_WRP2
+Removed Member From Class: ClassName=U_VT_WRP3 Member=0.1uF_3_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP4 Member=0.1uF_3_U_VT_WRP6
+Removed Member From Class: ClassName=U_VT_WRP3 Member=0.1uF_4_U_VT_WRP2
+Change Component Designator: OldDesignator=12V NewDesignator=12V.
+Change Component Designator: OldDesignator=GND NewDesignator=GND1
+Change Component Designator: OldDesignator=GND NewDesignator=GND2
+Added Pin To Net: NetName=GND Pin=GND2-1
+Added Pin To Net: NetName=GND Pin=GND2-2
+Added Pin To Net: NetName=GND Pin=GND2-3
+Added Pin To Net: NetName=GND Pin=GND2-4
+Added Pin To Net: NetName=GND Pin=GND2-5
+Added Pin To Net: NetName=GND Pin=GND2-6
+Added Pin To Net: NetName=GND Pin=GND2-7
+Added Pin To Net: NetName=GND Pin=GND2-8
+Added Pin To Net: NetName=GND Pin=GND2-9
+Added Pin To Net: NetName=GND Pin=GND2-10
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_0_U_VT_WRP3 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=BBB_Board Member=Component GND1 Header 10

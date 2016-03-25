@@ -1,0 +1,23 @@
+Added Pin To Net: NetName=BBB_GPIO_117 Pin=BBB_DOWN-25
+Added Pin To Net: NetName=BBB_GPIO_115 Pin=BBB_DOWN-27
+Added Pin To Net: NetName=BBB_VDD_ADC Pin=BBB_DOWN-32
+Added Pin To Net: NetName=BBB_AIN4 Pin=BBB_DOWN-33
+Added Pin To Net: NetName=BBB_AIN6 Pin=BBB_DOWN-35
+Added Pin To Net: NetName=BBB_AIN5 Pin=BBB_DOWN-36
+Added Pin To Net: NetName=BBB_AIN2 Pin=BBB_DOWN-37
+Added Pin To Net: NetName=BBB_AIN3 Pin=BBB_DOWN-38
+Added Pin To Net: NetName=BBB_AIN0 Pin=BBB_DOWN-39
+Added Pin To Net: NetName=BBB_AIN1 Pin=BBB_DOWN-40
+Added Pin To Net: NetName=BBB_GPIO_20 Pin=BBB_DOWN-41
+Added Pin To Net: NetName=BBB_ECAPWMO Pin=BBB_DOWN-42
+Added Pin To Net: NetName=GND Pin=GND-1
+Added Pin To Net: NetName=GND Pin=GND-2
+Added Pin To Net: NetName=GND Pin=GND-3
+Added Pin To Net: NetName=GND Pin=GND-4
+Added Pin To Net: NetName=GND Pin=GND-5
+Added Pin To Net: NetName=GND Pin=GND-6
+Added Pin To Net: NetName=GND Pin=GND-7
+Added Pin To Net: NetName=GND Pin=GND-8
+Added Pin To Net: NetName=GND Pin=GND-9
+Added Pin To Net: NetName=GND Pin=GND-10
+Change Net Name : Old Net Name=GND_ADC New Net Name=BBB_\GND_ADC

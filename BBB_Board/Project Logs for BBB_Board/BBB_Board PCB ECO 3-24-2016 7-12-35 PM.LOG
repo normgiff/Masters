@@ -1,0 +1,24 @@
+Change Component Designator: OldDesignator=P2 NewDesignator=LOGIC_HIGH
+Added Component: Designator=GND(HDR1X10)
+Added Component: Designator=GND(HDR1X10)
+Added Pin To Net: NetName=GND Pin=GND-1
+Added Pin To Net: NetName=GND Pin=GND-1
+Added Pin To Net: NetName=GND Pin=GND-2
+Added Pin To Net: NetName=GND Pin=GND-2
+Added Pin To Net: NetName=GND Pin=GND-3
+Added Pin To Net: NetName=GND Pin=GND-3
+Added Pin To Net: NetName=GND Pin=GND-4
+Added Pin To Net: NetName=GND Pin=GND-4
+Added Pin To Net: NetName=GND Pin=GND-5
+Added Pin To Net: NetName=GND Pin=GND-5
+Added Pin To Net: NetName=GND Pin=GND-6
+Added Pin To Net: NetName=GND Pin=GND-6
+Added Pin To Net: NetName=GND Pin=GND-7
+Added Pin To Net: NetName=GND Pin=GND-7
+Added Pin To Net: NetName=GND Pin=GND-8
+Added Pin To Net: NetName=GND Pin=GND-8
+Added Pin To Net: NetName=GND Pin=GND-9
+Added Pin To Net: NetName=GND Pin=GND-9
+Added Pin To Net: NetName=GND Pin=GND-10
+Added Pin To Net: NetName=GND Pin=GND-10
+Added Member To Class: ClassName=BBB_Board Member=Component GND Header 10
