@@ -1,0 +1,6 @@
+Added Component: Designator=1uF_5_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1uF_5_U_Power_Control2(0.1uF_0603)
+Added Pin To Net: NetName=GND Pin=1uF_5_U_Power_Control1-1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=1uF_5_U_Power_Control1-2
+Added Pin To Net: NetName=GND Pin=1uF_5_U_Power_Control2-1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=1uF_5_U_Power_Control2-2

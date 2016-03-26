@@ -70,7 +70,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=GIBRKECA
 
 [Document3]
 DocumentPath=BBB_Board.SchLib
@@ -104,7 +104,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=WODBHCLC
 
 [Document5]
 DocumentPath=VT_WRP.SchDoc
@@ -121,7 +121,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=AEFYLIUH
 
 [Document6]
 DocumentPath=VT_BANK.SchDoc
@@ -138,7 +138,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=PNXWUCFY
 
 [Document7]
 DocumentPath=BBB_Board.PcbLib
@@ -172,7 +172,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UOETFMLX
 
 [Document9]
 DocumentPath=DUT_HEADER.SchDoc
@@ -189,11 +189,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
-
-[GeneratedDocument1]
-DocumentPath=Project Outputs for BBB_Board\Design Rule Check - BBB_Board_Sandbox.html
-DItemRevisionGUID=
+DocumentUniqueId=OAGGLGHD
 
 [Configuration1]
 Name=Default Configuration

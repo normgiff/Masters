@@ -1,0 +1,421 @@
+Removed Pin From Net: NetName=12V_W_U_Power_Control1 Pin=3_U_Power_Control1-2
+Removed Pin From Net: NetName=12V_W_U_Power_Control1 Pin=3_U_Power_Control2-2
+Removed Pin From Net: NetName=OVCC_B32 Pin=DB BOTTOM-1
+Removed Pin From Net: NetName=OVCC_B33 Pin=DB BOTTOM-2
+Removed Pin From Net: NetName=OVCC_B34 Pin=DB BOTTOM-3
+Removed Pin From Net: NetName=OVCC_B35 Pin=DB BOTTOM-4
+Removed Pin From Net: NetName=OVCC_B36 Pin=DB BOTTOM-5
+Removed Pin From Net: NetName=OVCC_B37 Pin=DB BOTTOM-6
+Removed Pin From Net: NetName=OVCC_B38 Pin=DB BOTTOM-7
+Removed Pin From Net: NetName=OVCC_B39 Pin=DB BOTTOM-8
+Removed Pin From Net: NetName=OVCC_B40 Pin=DB BOTTOM-9
+Removed Pin From Net: NetName=OVCC_B41 Pin=DB BOTTOM-10
+Removed Pin From Net: NetName=OVCC_B42 Pin=DB BOTTOM-11
+Removed Pin From Net: NetName=OVCC_B43 Pin=DB BOTTOM-12
+Removed Pin From Net: NetName=OVCC_B44 Pin=DB BOTTOM-13
+Removed Pin From Net: NetName=OVCC_B45 Pin=DB BOTTOM-14
+Removed Pin From Net: NetName=OVCC_B46 Pin=DB BOTTOM-15
+Removed Pin From Net: NetName=OVCC_B47 Pin=DB BOTTOM-16
+Removed Pin From Net: NetName=FPGA_~CS4 Pin=DB BOTTOM-17
+Removed Pin From Net: NetName=FPGA_~WE4 Pin=DB BOTTOM-18
+Removed Pin From Net: NetName=FPGA_~MR Pin=DB BOTTOM-19
+Removed Pin From Net: NetName=FPGA_Q Pin=DB BOTTOM-20
+Removed Pin From Net: NetName=FPGA_~PL Pin=DB BOTTOM-21
+Removed Pin From Net: NetName=FPGA_SHCP Pin=DB BOTTOM-22
+Removed Pin From Net: NetName=FPGA_STCP Pin=DB BOTTOM-23
+Removed Pin From Net: NetName=COUNTER_CLK1 Pin=DB BOTTOM-24
+Removed Pin From Net: NetName=OVCC_B48 Pin=DB BOTTOM-25
+Removed Pin From Net: NetName=OVCC_B49 Pin=DB BOTTOM-26
+Removed Pin From Net: NetName=OVCC_B50 Pin=DB BOTTOM-27
+Removed Pin From Net: NetName=OVCC_B51 Pin=DB BOTTOM-28
+Removed Pin From Net: NetName=OVCC_B52 Pin=DB BOTTOM-29
+Removed Pin From Net: NetName=OVCC_B53 Pin=DB BOTTOM-30
+Removed Pin From Net: NetName=OVCC_B54 Pin=DB BOTTOM-31
+Removed Pin From Net: NetName=OVCC_B55 Pin=DB BOTTOM-32
+Removed Pin From Net: NetName=OVCC_B56 Pin=DB BOTTOM-33
+Removed Pin From Net: NetName=OVCC_B57 Pin=DB BOTTOM-34
+Removed Pin From Net: NetName=OVCC_B58 Pin=DB BOTTOM-35
+Removed Pin From Net: NetName=OVCC_B59 Pin=DB BOTTOM-36
+Removed Pin From Net: NetName=OVCC_B60 Pin=DB BOTTOM-37
+Removed Pin From Net: NetName=OVCC_B61 Pin=DB BOTTOM-38
+Removed Pin From Net: NetName=OVCC_B62 Pin=DB BOTTOM-39
+Removed Pin From Net: NetName=OVCC_B63 Pin=DB BOTTOM-40
+Removed Pin From Net: NetName=OVCC_B64 Pin=DB LEFT-1
+Removed Pin From Net: NetName=OVCC_B65 Pin=DB LEFT-2
+Removed Pin From Net: NetName=OVCC_B66 Pin=DB LEFT-3
+Removed Pin From Net: NetName=OVCC_B67 Pin=DB LEFT-4
+Removed Pin From Net: NetName=OVCC_B68 Pin=DB LEFT-5
+Removed Pin From Net: NetName=OVCC_B69 Pin=DB LEFT-6
+Removed Pin From Net: NetName=OVCC_B70 Pin=DB LEFT-7
+Removed Pin From Net: NetName=OVCC_B71 Pin=DB LEFT-8
+Removed Pin From Net: NetName=OVCC_B72 Pin=DB LEFT-9
+Removed Pin From Net: NetName=OVCC_B73 Pin=DB LEFT-10
+Removed Pin From Net: NetName=OVCC_B74 Pin=DB LEFT-11
+Removed Pin From Net: NetName=OVCC_B75 Pin=DB LEFT-12
+Removed Pin From Net: NetName=OVCC_B76 Pin=DB LEFT-13
+Removed Pin From Net: NetName=OVCC_B77 Pin=DB LEFT-14
+Removed Pin From Net: NetName=OVCC_B78 Pin=DB LEFT-15
+Removed Pin From Net: NetName=OVCC_B79 Pin=DB LEFT-16
+Removed Pin From Net: NetName=FPGA_~CS2 Pin=DB LEFT-17
+Removed Pin From Net: NetName=FPGA_~WE2 Pin=DB LEFT-18
+Removed Pin From Net: NetName=3V3 Pin=DB LEFT-19
+Removed Pin From Net: NetName=GND Pin=DB LEFT-20
+Removed Pin From Net: NetName=GND Pin=DB LEFT-21
+Removed Pin From Net: NetName=GND Pin=DB LEFT-22
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=DB LEFT-23
+Removed Pin From Net: NetName=COUNTER_CLK2 Pin=DB LEFT-24
+Removed Pin From Net: NetName=OVCC_B80 Pin=DB LEFT-25
+Removed Pin From Net: NetName=OVCC_B81 Pin=DB LEFT-26
+Removed Pin From Net: NetName=OVCC_B82 Pin=DB LEFT-27
+Removed Pin From Net: NetName=OVCC_B83 Pin=DB LEFT-28
+Removed Pin From Net: NetName=OVCC_B84 Pin=DB LEFT-29
+Removed Pin From Net: NetName=OVCC_B85 Pin=DB LEFT-30
+Removed Pin From Net: NetName=OVCC_B86 Pin=DB LEFT-31
+Removed Pin From Net: NetName=OVCC_B87 Pin=DB LEFT-32
+Removed Pin From Net: NetName=OVCC_B88 Pin=DB LEFT-33
+Removed Pin From Net: NetName=OVCC_B89 Pin=DB LEFT-34
+Removed Pin From Net: NetName=OVCC_B90 Pin=DB LEFT-35
+Removed Pin From Net: NetName=OVCC_B91 Pin=DB LEFT-36
+Removed Pin From Net: NetName=OVCC_B92 Pin=DB LEFT-37
+Removed Pin From Net: NetName=OVCC_B93 Pin=DB LEFT-38
+Removed Pin From Net: NetName=OVCC_B94 Pin=DB LEFT-39
+Removed Pin From Net: NetName=OVCC_B95 Pin=DB LEFT-40
+Removed Pin From Net: NetName=OVCC_B96 Pin=DB RIGHT-1
+Removed Pin From Net: NetName=OVCC_B97 Pin=DB RIGHT-2
+Removed Pin From Net: NetName=OVCC_B98 Pin=DB RIGHT-3
+Removed Pin From Net: NetName=OVCC_B99 Pin=DB RIGHT-4
+Removed Pin From Net: NetName=OVCC_B100 Pin=DB RIGHT-5
+Removed Pin From Net: NetName=OVCC_B101 Pin=DB RIGHT-6
+Removed Pin From Net: NetName=OVCC_B102 Pin=DB RIGHT-7
+Removed Pin From Net: NetName=OVCC_B103 Pin=DB RIGHT-8
+Removed Pin From Net: NetName=OVCC_B104 Pin=DB RIGHT-9
+Removed Pin From Net: NetName=OVCC_B105 Pin=DB RIGHT-10
+Removed Pin From Net: NetName=OVCC_B106 Pin=DB RIGHT-11
+Removed Pin From Net: NetName=OVCC_B107 Pin=DB RIGHT-12
+Removed Pin From Net: NetName=OVCC_B108 Pin=DB RIGHT-13
+Removed Pin From Net: NetName=OVCC_B109 Pin=DB RIGHT-14
+Removed Pin From Net: NetName=OVCC_B110 Pin=DB RIGHT-15
+Removed Pin From Net: NetName=OVCC_B111 Pin=DB RIGHT-16
+Removed Pin From Net: NetName=FPGA_~CS3 Pin=DB RIGHT-17
+Removed Pin From Net: NetName=FPGA_~WE3 Pin=DB RIGHT-18
+Removed Pin From Net: NetName=GND Pin=DB RIGHT-19
+Removed Pin From Net: NetName=GND Pin=DB RIGHT-20
+Removed Pin From Net: NetName=GND Pin=DB RIGHT-21
+Removed Pin From Net: NetName=GND Pin=DB RIGHT-22
+Removed Pin From Net: NetName=GND Pin=DB RIGHT-23
+Removed Pin From Net: NetName=COUNTER_CLK3 Pin=DB RIGHT-24
+Removed Pin From Net: NetName=OVCC_B112 Pin=DB RIGHT-25
+Removed Pin From Net: NetName=OVCC_B113 Pin=DB RIGHT-26
+Removed Pin From Net: NetName=OVCC_B114 Pin=DB RIGHT-27
+Removed Pin From Net: NetName=OVCC_B115 Pin=DB RIGHT-28
+Removed Pin From Net: NetName=OVCC_B116 Pin=DB RIGHT-29
+Removed Pin From Net: NetName=OVCC_B117 Pin=DB RIGHT-30
+Removed Pin From Net: NetName=OVCC_B118 Pin=DB RIGHT-31
+Removed Pin From Net: NetName=OVCC_B119 Pin=DB RIGHT-32
+Removed Pin From Net: NetName=OVCC_B120 Pin=DB RIGHT-33
+Removed Pin From Net: NetName=OVCC_B121 Pin=DB RIGHT-34
+Removed Pin From Net: NetName=OVCC_B122 Pin=DB RIGHT-35
+Removed Pin From Net: NetName=OVCC_B123 Pin=DB RIGHT-36
+Removed Pin From Net: NetName=OVCC_B124 Pin=DB RIGHT-37
+Removed Pin From Net: NetName=OVCC_B125 Pin=DB RIGHT-38
+Removed Pin From Net: NetName=OVCC_B126 Pin=DB RIGHT-39
+Removed Pin From Net: NetName=OVCC_B127 Pin=DB RIGHT-40
+Removed Pin From Net: NetName=OVCC_B0 Pin=DB TOP-1
+Removed Pin From Net: NetName=OVCC_B1 Pin=DB TOP-2
+Removed Pin From Net: NetName=OVCC_B2 Pin=DB TOP-3
+Removed Pin From Net: NetName=OVCC_B3 Pin=DB TOP-4
+Removed Pin From Net: NetName=OVCC_B4 Pin=DB TOP-5
+Removed Pin From Net: NetName=OVCC_B5 Pin=DB TOP-6
+Removed Pin From Net: NetName=OVCC_B6 Pin=DB TOP-7
+Removed Pin From Net: NetName=OVCC_B7 Pin=DB TOP-8
+Removed Pin From Net: NetName=OVCC_B8 Pin=DB TOP-9
+Removed Pin From Net: NetName=OVCC_B9 Pin=DB TOP-10
+Removed Pin From Net: NetName=OVCC_B10 Pin=DB TOP-11
+Removed Pin From Net: NetName=OVCC_B11 Pin=DB TOP-12
+Removed Pin From Net: NetName=OVCC_B12 Pin=DB TOP-13
+Removed Pin From Net: NetName=OVCC_B13 Pin=DB TOP-14
+Removed Pin From Net: NetName=OVCC_B14 Pin=DB TOP-15
+Removed Pin From Net: NetName=OVCC_B15 Pin=DB TOP-16
+Removed Pin From Net: NetName=FPGA_~CS1 Pin=DB TOP-17
+Removed Pin From Net: NetName=FPGA_~OE Pin=DB TOP-18
+Removed Pin From Net: NetName=FPGA_~WE1 Pin=DB TOP-19
+Removed Pin From Net: NetName=GND Pin=DB TOP-20
+Removed Pin From Net: NetName=GND Pin=DB TOP-21
+Removed Pin From Net: NetName=EN Pin=DB TOP-22
+Removed Pin From Net: NetName=COUNTER_CLR Pin=DB TOP-23
+Removed Pin From Net: NetName=COUNTER_CLK0 Pin=DB TOP-24
+Removed Pin From Net: NetName=OVCC_B16 Pin=DB TOP-25
+Removed Pin From Net: NetName=OVCC_B17 Pin=DB TOP-26
+Removed Pin From Net: NetName=OVCC_B18 Pin=DB TOP-27
+Removed Pin From Net: NetName=OVCC_B19 Pin=DB TOP-28
+Removed Pin From Net: NetName=OVCC_B20 Pin=DB TOP-29
+Removed Pin From Net: NetName=OVCC_B21 Pin=DB TOP-30
+Removed Pin From Net: NetName=OVCC_B22 Pin=DB TOP-31
+Removed Pin From Net: NetName=OVCC_B23 Pin=DB TOP-32
+Removed Pin From Net: NetName=OVCC_B24 Pin=DB TOP-33
+Removed Pin From Net: NetName=OVCC_B25 Pin=DB TOP-34
+Removed Pin From Net: NetName=OVCC_B26 Pin=DB TOP-35
+Removed Pin From Net: NetName=OVCC_B27 Pin=DB TOP-36
+Removed Pin From Net: NetName=OVCC_B28 Pin=DB TOP-37
+Removed Pin From Net: NetName=OVCC_B29 Pin=DB TOP-38
+Removed Pin From Net: NetName=OVCC_B30 Pin=DB TOP-39
+Removed Pin From Net: NetName=OVCC_B31 Pin=DB TOP-40
+Removed Pin From Net: NetName=NetLM2_U_Power_Control1_1 Pin=R5_U_Power_Control1-1
+Removed Pin From Net: NetName=12V_W_U_Power_Control1 Pin=R5_U_Power_Control1-2
+Removed Pin From Net: NetName=NetLM2_U_Power_Control2_1 Pin=R5_U_Power_Control2-1
+Removed Pin From Net: NetName=12V_W_U_Power_Control1 Pin=R5_U_Power_Control2-2
+Removed Pin From Net: NetName=GND Pin=R6_U_Power_Control1-1
+Removed Pin From Net: NetName=NetLM2_U_Power_Control1_1 Pin=R6_U_Power_Control1-2
+Removed Pin From Net: NetName=GND Pin=R6_U_Power_Control2-1
+Removed Pin From Net: NetName=NetLM2_U_Power_Control2_1 Pin=R6_U_Power_Control2-2
+Removed Member From Class: ClassName=U_Power_Control1 Member=D1N4001
+Removed Member From Class: ClassName=U_DUT_HEADER3 Member=DB BOTTOM
+Removed Member From Class: ClassName=U_DUT_HEADER2 Member=DB LEFT
+Removed Member From Class: ClassName=U_DUT_HEADER1 Member=DB RIGHT
+Removed Member From Class: ClassName=U_DUT_HEADER4 Member=DB TOP
+Removed Member From Class: ClassName=U_Power_Control1 Member=R5_U_Power_Control1
+Removed Member From Class: ClassName=U_Power_Control2 Member=R5_U_Power_Control2
+Removed Member From Class: ClassName=U_Power_Control1 Member=R6_U_Power_Control1
+Removed Member From Class: ClassName=U_Power_Control2 Member=R6_U_Power_Control2
+Removed Member From Class: ClassName=U_VT_WRP1 Member=VT13
+Change Component Designator: OldDesignator=1_U_Power_Control1 NewDesignator=1uF_2_U_Power_Control1
+Change Component Designator: OldDesignator=1_U_Power_Control2 NewDesignator=1uF_2_U_Power_Control2
+Change Component Designator: OldDesignator=2_U_Power_Control1 NewDesignator=1uF_1_U_Power_Control1
+Change Component Designator: OldDesignator=2_U_Power_Control2 NewDesignator=1uF_1_U_Power_Control2
+Change Component Designator: OldDesignator=3_U_Power_Control1 NewDesignator=10uF_1_U_Power_Control1
+Change Component Designator: OldDesignator=3_U_Power_Control2 NewDesignator=10uF_1_U_Power_Control2
+Change Component Designator: OldDesignator=4_U_Power_Control1 NewDesignator=10uF_2_U_Power_Control1
+Change Component Designator: OldDesignator=4_U_Power_Control2 NewDesignator=10uF_2_U_Power_Control2
+Change Component Designator: OldDesignator=5_U_Power_Control1 NewDesignator=1uF_3_U_Power_Control1
+Change Component Designator: OldDesignator=5_U_Power_Control2 NewDesignator=1uF_3_U_Power_Control2
+Change Component Designator: OldDesignator=5V NewDesignator=-5V
+Change Component Designator: OldDesignator=6_U_Power_Control1 NewDesignator=1uF_4_U_Power_Control1
+Change Component Designator: OldDesignator=6_U_Power_Control2 NewDesignator=1uF_4_U_Power_Control2
+Change Component Designator: OldDesignator=10kOhm NewDesignator=10kOhm_2
+Change Component Designator: OldDesignator=D1N4001 NewDesignator=D2_U_Power_Control1
+Change Component Designator: OldDesignator=D1N4001 NewDesignator=D2_U_Power_Control2
+Change Component Designator: OldDesignator=FPGA RESET NewDesignator=S1
+Change Component Designator: OldDesignator=GND NewDesignator=GND1
+Change Component Designator: OldDesignator=GND NewDesignator=GND2
+Change Component Designator: OldDesignator=LM321 NewDesignator=LM1_U_Power_Control1
+Change Component Designator: OldDesignator=LM321 NewDesignator=LM2_U_Power_Control1
+Change Component Designator: OldDesignator=LOGIC HIGH NewDesignator=LOGIC_HIGH
+Change Component Designator: OldDesignator=LOGIC LOW NewDesignator=LOGIC_LOW
+Change Component Designator: OldDesignator=R2_U_Power_Control1 NewDesignator=10kOhm_1_U_Power_Control1
+Change Component Designator: OldDesignator=R2_U_Power_Control2 NewDesignator=10kOhm_1_U_Power_Control2
+Change Component Designator: OldDesignator=R3_U_Power_Control1 NewDesignator=3MOhm_U_Power_Control1
+Change Component Designator: OldDesignator=R3_U_Power_Control2 NewDesignator=3MOhm_U_Power_Control2
+Change Component Designator: OldDesignator=R4_U_Power_Control1 NewDesignator=1MOhm_U_Power_Control1
+Change Component Designator: OldDesignator=R4_U_Power_Control2 NewDesignator=1MOhm_U_Power_Control2
+Change Component Designator: OldDesignator=VT1 NewDesignator=LT1_U_VT_WRP8
+Change Component Designator: OldDesignator=VT2 NewDesignator=LT2_U_VT_WRP8
+Change Component Designator: OldDesignator=VT3 NewDesignator=LT2_U_VT_WRP2
+Change Component Designator: OldDesignator=VT4 NewDesignator=LT1_U_VT_WRP2
+Change Component Designator: OldDesignator=VT5 NewDesignator=LT1_U_VT_WRP6
+Change Component Designator: OldDesignator=VT6 NewDesignator=LT2_U_VT_WRP6
+Change Component Designator: OldDesignator=VT7 NewDesignator=LT2_U_VT_WRP4
+Change Component Designator: OldDesignator=VT8 NewDesignator=LT1_U_VT_WRP4
+Change Component Designator: OldDesignator=VT9 NewDesignator=LT1_U_VT_WRP7
+Change Component Designator: OldDesignator=VT10 NewDesignator=LT2_U_VT_WRP7
+Change Component Designator: OldDesignator=VT11 NewDesignator=LT1_U_VT_WRP1
+Change Component Designator: OldDesignator=VT12 NewDesignator=LT2_U_VT_WRP1
+Change Component Designator: OldDesignator=VT13 NewDesignator=LT1_U_VT_WRP5
+Change Component Designator: OldDesignator=VT14 NewDesignator=LT2_U_VT_WRP5
+Change Component Designator: OldDesignator=VT15 NewDesignator=LT1_U_VT_WRP3
+Change Component Designator: OldDesignator=VT16 NewDesignator=LT2_U_VT_WRP3
+Added Component: Designator=5MOhm_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=5MOhm_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=7MOhm_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=7MOhm_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=DUT1_U_DUT_HEADER1(FEMALE_HEADER_SMD)
+Added Component: Designator=DUT1_U_DUT_HEADER2(FEMALE_HEADER_SMD)
+Added Component: Designator=DUT1_U_DUT_HEADER3(FEMALE_HEADER_SMD)
+Added Component: Designator=DUT1_U_DUT_HEADER4(FEMALE_HEADER_SMD)
+Added Pin To Net: NetName=NetLM2_U_Power_Control1_1 Pin=5MOhm_U_Power_Control1-1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=5MOhm_U_Power_Control1-2
+Added Pin To Net: NetName=NetLM2_U_Power_Control2_1 Pin=5MOhm_U_Power_Control2-1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=5MOhm_U_Power_Control2-2
+Added Pin To Net: NetName=GND Pin=7MOhm_U_Power_Control1-1
+Added Pin To Net: NetName=NetLM2_U_Power_Control1_1 Pin=7MOhm_U_Power_Control1-2
+Added Pin To Net: NetName=GND Pin=7MOhm_U_Power_Control2-1
+Added Pin To Net: NetName=NetLM2_U_Power_Control2_1 Pin=7MOhm_U_Power_Control2-2
+Added Pin To Net: NetName=OVCC_B96 Pin=DUT1_U_DUT_HEADER1-1
+Added Pin To Net: NetName=OVCC_B97 Pin=DUT1_U_DUT_HEADER1-2
+Added Pin To Net: NetName=OVCC_B98 Pin=DUT1_U_DUT_HEADER1-3
+Added Pin To Net: NetName=OVCC_B99 Pin=DUT1_U_DUT_HEADER1-4
+Added Pin To Net: NetName=OVCC_B100 Pin=DUT1_U_DUT_HEADER1-5
+Added Pin To Net: NetName=OVCC_B101 Pin=DUT1_U_DUT_HEADER1-6
+Added Pin To Net: NetName=OVCC_B102 Pin=DUT1_U_DUT_HEADER1-7
+Added Pin To Net: NetName=OVCC_B103 Pin=DUT1_U_DUT_HEADER1-8
+Added Pin To Net: NetName=OVCC_B104 Pin=DUT1_U_DUT_HEADER1-9
+Added Pin To Net: NetName=OVCC_B105 Pin=DUT1_U_DUT_HEADER1-10
+Added Pin To Net: NetName=OVCC_B106 Pin=DUT1_U_DUT_HEADER1-11
+Added Pin To Net: NetName=OVCC_B107 Pin=DUT1_U_DUT_HEADER1-12
+Added Pin To Net: NetName=OVCC_B108 Pin=DUT1_U_DUT_HEADER1-13
+Added Pin To Net: NetName=OVCC_B109 Pin=DUT1_U_DUT_HEADER1-14
+Added Pin To Net: NetName=OVCC_B110 Pin=DUT1_U_DUT_HEADER1-15
+Added Pin To Net: NetName=OVCC_B111 Pin=DUT1_U_DUT_HEADER1-16
+Added Pin To Net: NetName=FPGA_~CS3 Pin=DUT1_U_DUT_HEADER1-17
+Added Pin To Net: NetName=FPGA_~WE3 Pin=DUT1_U_DUT_HEADER1-18
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-19
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-20
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-21
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-22
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-23
+Added Pin To Net: NetName=COUNTER_CLK3 Pin=DUT1_U_DUT_HEADER1-24
+Added Pin To Net: NetName=OVCC_B112 Pin=DUT1_U_DUT_HEADER1-25
+Added Pin To Net: NetName=OVCC_B113 Pin=DUT1_U_DUT_HEADER1-26
+Added Pin To Net: NetName=OVCC_B114 Pin=DUT1_U_DUT_HEADER1-27
+Added Pin To Net: NetName=OVCC_B115 Pin=DUT1_U_DUT_HEADER1-28
+Added Pin To Net: NetName=OVCC_B116 Pin=DUT1_U_DUT_HEADER1-29
+Added Pin To Net: NetName=OVCC_B117 Pin=DUT1_U_DUT_HEADER1-30
+Added Pin To Net: NetName=OVCC_B118 Pin=DUT1_U_DUT_HEADER1-31
+Added Pin To Net: NetName=OVCC_B119 Pin=DUT1_U_DUT_HEADER1-32
+Added Pin To Net: NetName=OVCC_B120 Pin=DUT1_U_DUT_HEADER1-33
+Added Pin To Net: NetName=OVCC_B121 Pin=DUT1_U_DUT_HEADER1-34
+Added Pin To Net: NetName=OVCC_B122 Pin=DUT1_U_DUT_HEADER1-35
+Added Pin To Net: NetName=OVCC_B123 Pin=DUT1_U_DUT_HEADER1-36
+Added Pin To Net: NetName=OVCC_B124 Pin=DUT1_U_DUT_HEADER1-37
+Added Pin To Net: NetName=OVCC_B125 Pin=DUT1_U_DUT_HEADER1-38
+Added Pin To Net: NetName=OVCC_B126 Pin=DUT1_U_DUT_HEADER1-39
+Added Pin To Net: NetName=OVCC_B127 Pin=DUT1_U_DUT_HEADER1-40
+Added Pin To Net: NetName=OVCC_B64 Pin=DUT1_U_DUT_HEADER2-1
+Added Pin To Net: NetName=OVCC_B65 Pin=DUT1_U_DUT_HEADER2-2
+Added Pin To Net: NetName=OVCC_B66 Pin=DUT1_U_DUT_HEADER2-3
+Added Pin To Net: NetName=OVCC_B67 Pin=DUT1_U_DUT_HEADER2-4
+Added Pin To Net: NetName=OVCC_B68 Pin=DUT1_U_DUT_HEADER2-5
+Added Pin To Net: NetName=OVCC_B69 Pin=DUT1_U_DUT_HEADER2-6
+Added Pin To Net: NetName=OVCC_B70 Pin=DUT1_U_DUT_HEADER2-7
+Added Pin To Net: NetName=OVCC_B71 Pin=DUT1_U_DUT_HEADER2-8
+Added Pin To Net: NetName=OVCC_B72 Pin=DUT1_U_DUT_HEADER2-9
+Added Pin To Net: NetName=OVCC_B73 Pin=DUT1_U_DUT_HEADER2-10
+Added Pin To Net: NetName=OVCC_B74 Pin=DUT1_U_DUT_HEADER2-11
+Added Pin To Net: NetName=OVCC_B75 Pin=DUT1_U_DUT_HEADER2-12
+Added Pin To Net: NetName=OVCC_B76 Pin=DUT1_U_DUT_HEADER2-13
+Added Pin To Net: NetName=OVCC_B77 Pin=DUT1_U_DUT_HEADER2-14
+Added Pin To Net: NetName=OVCC_B78 Pin=DUT1_U_DUT_HEADER2-15
+Added Pin To Net: NetName=OVCC_B79 Pin=DUT1_U_DUT_HEADER2-16
+Added Pin To Net: NetName=FPGA_~CS2 Pin=DUT1_U_DUT_HEADER2-17
+Added Pin To Net: NetName=FPGA_~WE2 Pin=DUT1_U_DUT_HEADER2-18
+Added Pin To Net: NetName=3V3 Pin=DUT1_U_DUT_HEADER2-19
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER2-20
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER2-21
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER2-22
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=DUT1_U_DUT_HEADER2-23
+Added Pin To Net: NetName=COUNTER_CLK2 Pin=DUT1_U_DUT_HEADER2-24
+Added Pin To Net: NetName=OVCC_B80 Pin=DUT1_U_DUT_HEADER2-25
+Added Pin To Net: NetName=OVCC_B81 Pin=DUT1_U_DUT_HEADER2-26
+Added Pin To Net: NetName=OVCC_B82 Pin=DUT1_U_DUT_HEADER2-27
+Added Pin To Net: NetName=OVCC_B83 Pin=DUT1_U_DUT_HEADER2-28
+Added Pin To Net: NetName=OVCC_B84 Pin=DUT1_U_DUT_HEADER2-29
+Added Pin To Net: NetName=OVCC_B85 Pin=DUT1_U_DUT_HEADER2-30
+Added Pin To Net: NetName=OVCC_B86 Pin=DUT1_U_DUT_HEADER2-31
+Added Pin To Net: NetName=OVCC_B87 Pin=DUT1_U_DUT_HEADER2-32
+Added Pin To Net: NetName=OVCC_B88 Pin=DUT1_U_DUT_HEADER2-33
+Added Pin To Net: NetName=OVCC_B89 Pin=DUT1_U_DUT_HEADER2-34
+Added Pin To Net: NetName=OVCC_B90 Pin=DUT1_U_DUT_HEADER2-35
+Added Pin To Net: NetName=OVCC_B91 Pin=DUT1_U_DUT_HEADER2-36
+Added Pin To Net: NetName=OVCC_B92 Pin=DUT1_U_DUT_HEADER2-37
+Added Pin To Net: NetName=OVCC_B93 Pin=DUT1_U_DUT_HEADER2-38
+Added Pin To Net: NetName=OVCC_B94 Pin=DUT1_U_DUT_HEADER2-39
+Added Pin To Net: NetName=OVCC_B95 Pin=DUT1_U_DUT_HEADER2-40
+Added Pin To Net: NetName=OVCC_B32 Pin=DUT1_U_DUT_HEADER3-1
+Added Pin To Net: NetName=OVCC_B33 Pin=DUT1_U_DUT_HEADER3-2
+Added Pin To Net: NetName=OVCC_B34 Pin=DUT1_U_DUT_HEADER3-3
+Added Pin To Net: NetName=OVCC_B35 Pin=DUT1_U_DUT_HEADER3-4
+Added Pin To Net: NetName=OVCC_B36 Pin=DUT1_U_DUT_HEADER3-5
+Added Pin To Net: NetName=OVCC_B37 Pin=DUT1_U_DUT_HEADER3-6
+Added Pin To Net: NetName=OVCC_B38 Pin=DUT1_U_DUT_HEADER3-7
+Added Pin To Net: NetName=OVCC_B39 Pin=DUT1_U_DUT_HEADER3-8
+Added Pin To Net: NetName=OVCC_B40 Pin=DUT1_U_DUT_HEADER3-9
+Added Pin To Net: NetName=OVCC_B41 Pin=DUT1_U_DUT_HEADER3-10
+Added Pin To Net: NetName=OVCC_B42 Pin=DUT1_U_DUT_HEADER3-11
+Added Pin To Net: NetName=OVCC_B43 Pin=DUT1_U_DUT_HEADER3-12
+Added Pin To Net: NetName=OVCC_B44 Pin=DUT1_U_DUT_HEADER3-13
+Added Pin To Net: NetName=OVCC_B45 Pin=DUT1_U_DUT_HEADER3-14
+Added Pin To Net: NetName=OVCC_B46 Pin=DUT1_U_DUT_HEADER3-15
+Added Pin To Net: NetName=OVCC_B47 Pin=DUT1_U_DUT_HEADER3-16
+Added Pin To Net: NetName=FPGA_~CS4 Pin=DUT1_U_DUT_HEADER3-17
+Added Pin To Net: NetName=FPGA_~WE4 Pin=DUT1_U_DUT_HEADER3-18
+Added Pin To Net: NetName=FPGA_~MR Pin=DUT1_U_DUT_HEADER3-19
+Added Pin To Net: NetName=FPGA_Q Pin=DUT1_U_DUT_HEADER3-20
+Added Pin To Net: NetName=FPGA_~PL Pin=DUT1_U_DUT_HEADER3-21
+Added Pin To Net: NetName=FPGA_SHCP Pin=DUT1_U_DUT_HEADER3-22
+Added Pin To Net: NetName=FPGA_STCP Pin=DUT1_U_DUT_HEADER3-23
+Added Pin To Net: NetName=COUNTER_CLK1 Pin=DUT1_U_DUT_HEADER3-24
+Added Pin To Net: NetName=OVCC_B48 Pin=DUT1_U_DUT_HEADER3-25
+Added Pin To Net: NetName=OVCC_B49 Pin=DUT1_U_DUT_HEADER3-26
+Added Pin To Net: NetName=OVCC_B50 Pin=DUT1_U_DUT_HEADER3-27
+Added Pin To Net: NetName=OVCC_B51 Pin=DUT1_U_DUT_HEADER3-28
+Added Pin To Net: NetName=OVCC_B52 Pin=DUT1_U_DUT_HEADER3-29
+Added Pin To Net: NetName=OVCC_B53 Pin=DUT1_U_DUT_HEADER3-30
+Added Pin To Net: NetName=OVCC_B54 Pin=DUT1_U_DUT_HEADER3-31
+Added Pin To Net: NetName=OVCC_B55 Pin=DUT1_U_DUT_HEADER3-32
+Added Pin To Net: NetName=OVCC_B56 Pin=DUT1_U_DUT_HEADER3-33
+Added Pin To Net: NetName=OVCC_B57 Pin=DUT1_U_DUT_HEADER3-34
+Added Pin To Net: NetName=OVCC_B58 Pin=DUT1_U_DUT_HEADER3-35
+Added Pin To Net: NetName=OVCC_B59 Pin=DUT1_U_DUT_HEADER3-36
+Added Pin To Net: NetName=OVCC_B60 Pin=DUT1_U_DUT_HEADER3-37
+Added Pin To Net: NetName=OVCC_B61 Pin=DUT1_U_DUT_HEADER3-38
+Added Pin To Net: NetName=OVCC_B62 Pin=DUT1_U_DUT_HEADER3-39
+Added Pin To Net: NetName=OVCC_B63 Pin=DUT1_U_DUT_HEADER3-40
+Added Pin To Net: NetName=OVCC_B0 Pin=DUT1_U_DUT_HEADER4-1
+Added Pin To Net: NetName=OVCC_B1 Pin=DUT1_U_DUT_HEADER4-2
+Added Pin To Net: NetName=OVCC_B2 Pin=DUT1_U_DUT_HEADER4-3
+Added Pin To Net: NetName=OVCC_B3 Pin=DUT1_U_DUT_HEADER4-4
+Added Pin To Net: NetName=OVCC_B4 Pin=DUT1_U_DUT_HEADER4-5
+Added Pin To Net: NetName=OVCC_B5 Pin=DUT1_U_DUT_HEADER4-6
+Added Pin To Net: NetName=OVCC_B6 Pin=DUT1_U_DUT_HEADER4-7
+Added Pin To Net: NetName=OVCC_B7 Pin=DUT1_U_DUT_HEADER4-8
+Added Pin To Net: NetName=OVCC_B8 Pin=DUT1_U_DUT_HEADER4-9
+Added Pin To Net: NetName=OVCC_B9 Pin=DUT1_U_DUT_HEADER4-10
+Added Pin To Net: NetName=OVCC_B10 Pin=DUT1_U_DUT_HEADER4-11
+Added Pin To Net: NetName=OVCC_B11 Pin=DUT1_U_DUT_HEADER4-12
+Added Pin To Net: NetName=OVCC_B12 Pin=DUT1_U_DUT_HEADER4-13
+Added Pin To Net: NetName=OVCC_B13 Pin=DUT1_U_DUT_HEADER4-14
+Added Pin To Net: NetName=OVCC_B14 Pin=DUT1_U_DUT_HEADER4-15
+Added Pin To Net: NetName=OVCC_B15 Pin=DUT1_U_DUT_HEADER4-16
+Added Pin To Net: NetName=FPGA_~CS1 Pin=DUT1_U_DUT_HEADER4-17
+Added Pin To Net: NetName=FPGA_~OE Pin=DUT1_U_DUT_HEADER4-18
+Added Pin To Net: NetName=FPGA_~WE1 Pin=DUT1_U_DUT_HEADER4-19
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER4-20
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER4-21
+Added Pin To Net: NetName=EN Pin=DUT1_U_DUT_HEADER4-22
+Added Pin To Net: NetName=COUNTER_CLR Pin=DUT1_U_DUT_HEADER4-23
+Added Pin To Net: NetName=COUNTER_CLK0 Pin=DUT1_U_DUT_HEADER4-24
+Added Pin To Net: NetName=OVCC_B16 Pin=DUT1_U_DUT_HEADER4-25
+Added Pin To Net: NetName=OVCC_B17 Pin=DUT1_U_DUT_HEADER4-26
+Added Pin To Net: NetName=OVCC_B18 Pin=DUT1_U_DUT_HEADER4-27
+Added Pin To Net: NetName=OVCC_B19 Pin=DUT1_U_DUT_HEADER4-28
+Added Pin To Net: NetName=OVCC_B20 Pin=DUT1_U_DUT_HEADER4-29
+Added Pin To Net: NetName=OVCC_B21 Pin=DUT1_U_DUT_HEADER4-30
+Added Pin To Net: NetName=OVCC_B22 Pin=DUT1_U_DUT_HEADER4-31
+Added Pin To Net: NetName=OVCC_B23 Pin=DUT1_U_DUT_HEADER4-32
+Added Pin To Net: NetName=OVCC_B24 Pin=DUT1_U_DUT_HEADER4-33
+Added Pin To Net: NetName=OVCC_B25 Pin=DUT1_U_DUT_HEADER4-34
+Added Pin To Net: NetName=OVCC_B26 Pin=DUT1_U_DUT_HEADER4-35
+Added Pin To Net: NetName=OVCC_B27 Pin=DUT1_U_DUT_HEADER4-36
+Added Pin To Net: NetName=OVCC_B28 Pin=DUT1_U_DUT_HEADER4-37
+Added Pin To Net: NetName=OVCC_B29 Pin=DUT1_U_DUT_HEADER4-38
+Added Pin To Net: NetName=OVCC_B30 Pin=DUT1_U_DUT_HEADER4-39
+Added Pin To Net: NetName=OVCC_B31 Pin=DUT1_U_DUT_HEADER4-40
+Change Net Name : Old Net Name=Net1_U_Power_Control1_2 New Net Name=Net1uF_2_U_Power_Control1_2
+Change Net Name : Old Net Name=Net1_U_Power_Control2_2 New Net Name=Net1uF_2_U_Power_Control2_2
+Change Net Name : Old Net Name=Net5_U_Power_Control1_2 New Net Name=Net1uF_3_U_Power_Control1_2
+Change Net Name : Old Net Name=Net5_U_Power_Control2_2 New Net Name=Net1uF_3_U_Power_Control2_2
+Change Net Name : Old Net Name=NetLM1_U_Power_Control1_1 New Net Name=Net1MOhm_U_Power_Control1_2
+Change Net Name : Old Net Name=NetLM1_U_Power_Control2_1 New Net Name=Net1MOhm_U_Power_Control2_2
+Change Net Name : Old Net Name=NetLM2_U_Power_Control1_1 New Net Name=Net5MOhm_U_Power_Control1_1
+Change Net Name : Old Net Name=NetLM2_U_Power_Control2_1 New Net Name=Net5MOhm_U_Power_Control2_1
+Added Member To Class: ClassName=U_Power_Control1 Member=Component 5MOhm_U_Power_Control1 (5MOhm) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control2 Member=Component 5MOhm_U_Power_Control2 (5MOhm) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control1 Member=Component 7MOhm_U_Power_Control1 (7MOhm) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control2 Member=Component 7MOhm_U_Power_Control2 (7MOhm) RNCS0603BKE10K0
+Added Member To Class: ClassName=U_Power_Control1 Member=Component D2_U_Power_Control1 (D2) Diode 1N4001
+Added Member To Class: ClassName=U_DUT_HEADER1 Member=Component DUT1_U_DUT_HEADER1 (DUT1) ADAFRUIT_HEADER
+Added Member To Class: ClassName=U_DUT_HEADER2 Member=Component DUT1_U_DUT_HEADER2 (DUT1) ADAFRUIT_HEADER
+Added Member To Class: ClassName=U_DUT_HEADER3 Member=Component DUT1_U_DUT_HEADER3 (DUT1) ADAFRUIT_HEADER
+Added Member To Class: ClassName=U_DUT_HEADER4 Member=Component DUT1_U_DUT_HEADER4 (DUT1) ADAFRUIT_HEADER
+Added Member To Class: ClassName=BBB_Board Member=Component GND2 Header 10
+Added Member To Class: ClassName=U_Power_Control1 Member=Component LM1_U_Power_Control1 (LM1) LM321MF/NOPB
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component LT2_U_VT_WRP1 (LT2) 8-Chanel Level Translator
