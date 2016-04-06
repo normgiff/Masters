@@ -1,0 +1,26 @@
+`timescale 1ns / 1ps
+
+module UART_CTRL(CLK, RST, 
+					  RX, RXDATA_READY, RXDATA_RETRIEVED, RXDATA, 
+					  TX, TXDATA, TXCAPTURE, TXTRANSMIT, TXSENT);
+	
+	input CLK;
+	input RST;
+	
+	input RX;
+	input RXDATA_RETRIEVED;
+	output RXDATA_READY;
+	output [7:0] RXDATA;
+	
+	input [7:0] TXDATA;
+	input TXCAPTURE;
+	input TXTRANSMIT;
+	output TX;
+	output TXSENT;
+	
+	UART_RX uart_rx0(.CLK(CLK), .RST(RST), .RX(RX), .DATA_READY(RXDATA_READY), 
+						  .DATA_RETRIEVED(RXDATA_RETRIEVED), .DATA(RXDATA));
+	UART_TX uart_tx0(.CLK(CLK), .RST(RST), .TX(TX), .DATA(TXDATA), 
+						  .CAPTURE(TXCAPTURE), .TRANSMIT(TXTRANSMIT), .SENT(TXSENT));
+
+endmodule
