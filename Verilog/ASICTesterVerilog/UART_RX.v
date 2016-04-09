@@ -22,8 +22,10 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 	output reg [7:0] DATA;
 
 	parameter BAUD_RATE = 115200;
-	parameter PERIOD = 868;
-	parameter HALF_PERIOD = 434;
+	
+	// Subtract 1 to account for switching states.
+	parameter PERIOD = 867 - 1;
+	parameter HALF_PERIOD = 433 - 1;
 	
 	parameter IDLE_NODATA = 0;
 	parameter STARTBIT = 1;

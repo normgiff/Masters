@@ -46,7 +46,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "UART_CTRL"
 Output Format                      : NGC
-Target Device                      : xc6slx16-3-csg324
+Target Device                      : xc7a100t-3-csg324
 
 ---- Source Options
 Top Module Name                    : UART_CTRL
@@ -70,7 +70,7 @@ LUT Combining                      : Auto
 Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
-Add Generic Clock Buffer(BUFG)     : 16
+Add Generic Clock Buffer(BUFG)     : 32
 Register Duplication               : YES
 Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Auto
@@ -135,8 +135,8 @@ Unit <UART_CTRL> synthesized.
 Synthesizing Unit <UART_RX>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\UART_RX.v".
         BAUD_RATE = 115200
-        PERIOD = 868
-        HALF_PERIOD = 434
+        PERIOD = 866
+        HALF_PERIOD = 432
         IDLE_NODATA = 0
         STARTBIT = 1
         BIT0 = 2
@@ -165,7 +165,7 @@ Synthesizing Unit <UART_RX>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <clock_counter[9]_GND_2_o_add_15_OUT> created at line 90.
+    Found 10-bit adder for signal <clock_counter[9]_GND_2_o_add_15_OUT> created at line 92.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  18 D-type flip-flop(s).
@@ -176,8 +176,8 @@ Unit <UART_RX> synthesized.
 Synthesizing Unit <UART_TX>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\UART_TX.v".
         BAUD_RATE = 115200
-        PERIOD = 868
-        HALF_PERIOD = 434
+        PERIOD = 866
+        HALF_PERIOD = 432
         IDLE = 0
         STARTBIT = 1
         BIT0 = 2
@@ -197,8 +197,8 @@ Synthesizing Unit <UART_TX>.
     Found finite state machine <FSM_1> for signal <PS>.
     -----------------------------------------------------------------------
     | States             | 12                                             |
-    | Transitions        | 23                                             |
-    | Inputs             | 2                                              |
+    | Transitions        | 24                                             |
+    | Inputs             | 3                                              |
     | Outputs            | 7                                              |
     | Clock              | CLK (rising_edge)                              |
     | Reset              | RST (positive)                                 |
@@ -207,8 +207,8 @@ Synthesizing Unit <UART_TX>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <clock_counter[9]_GND_3_o_add_3_OUT> created at line 104.
-    Found 1-bit 13-to-1 multiplexer for signal <PS[3]_PWR_3_o_Mux_1_o> created at line 60.
+    Found 10-bit adder for signal <clock_counter[9]_GND_3_o_add_3_OUT> created at line 107.
+    Found 1-bit 12-to-1 multiplexer for signal <PS[3]_PWR_3_o_Mux_1_o> created at line 63.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  19 D-type flip-flop(s).
@@ -227,7 +227,7 @@ Macro Statistics
  10-bit register                                       : 2
  8-bit register                                        : 2
 # Multiplexers                                         : 12
- 1-bit 13-to-1 multiplexer                             : 1
+ 1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 11
 # FSMs                                                 : 2
 
@@ -255,7 +255,7 @@ Macro Statistics
 # Registers                                            : 17
  Flip-Flops                                            : 17
 # Multiplexers                                         : 12
- 1-bit 13-to-1 multiplexer                             : 1
+ 1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 11
 # FSMs                                                 : 2
 
@@ -310,9 +310,6 @@ Optimizing unit <UART_RX> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block UART_CTRL, actual ratio is 0.
-FlipFlop uart_rx0/PS_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop uart_rx0/PS_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop uart_rx0/PS_FSM_FFd3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -320,8 +317,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 48
- Flip-Flops                                            : 48
+# Registers                                            : 45
+ Flip-Flops                                            : 45
 
 =========================================================================
 
@@ -344,52 +341,54 @@ Top Level Output File Name         : UART_CTRL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 175
+# BELS                             : 124
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 18
-#      LUT3                        : 12
+#      LUT2                        : 1
+#      LUT3                        : 2
 #      LUT4                        : 16
-#      LUT5                        : 36
-#      LUT6                        : 51
+#      LUT5                        : 18
+#      LUT6                        : 24
 #      MUXCY                       : 18
+#      MUXF7                       : 3
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 48
-#      FD                          : 20
-#      FDR                         : 11
-#      FDRE                        : 16
+# FlipFlops/Latches                : 45
+#      FD                          : 10
+#      FDR                         : 8
+#      FDRE                        : 26
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 24
-#      IBUF                        : 13
+# IO Buffers                       : 25
+#      IBUF                        : 14
 #      OBUF                        : 11
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx16csg324-3 
+Selected Device : 7a100tcsg324-3 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              48  out of  18224     0%  
- Number of Slice LUTs:                  135  out of   9112     1%  
-    Number used as Logic:               135  out of   9112     1%  
+ Number of Slice Registers:              45  out of  126800     0%  
+ Number of Slice LUTs:                   81  out of  63400     0%  
+    Number used as Logic:                81  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    145
-   Number with an unused Flip Flop:      97  out of    145    66%  
-   Number with an unused LUT:            10  out of    145     6%  
-   Number of fully used LUT-FF pairs:    38  out of    145    26%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:     88
+   Number with an unused Flip Flop:      43  out of     88    48%  
+   Number with an unused LUT:             7  out of     88     7%  
+   Number of fully used LUT-FF pairs:    38  out of     88    43%  
+   Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                          25
- Number of bonded IOBs:                  25  out of    232    10%  
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    210    12%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -412,7 +411,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 48    |
+CLK                                | BUFGP                  | 45    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -423,9 +422,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.551ns (Maximum Frequency: 219.710MHz)
-   Minimum input arrival time before clock: 5.400ns
-   Maximum output required time after clock: 5.350ns
+   Minimum period: 2.623ns (Maximum Frequency: 381.272MHz)
+   Minimum input arrival time before clock: 1.671ns
+   Maximum output required time after clock: 1.351ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -434,56 +433,55 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 4.551ns (frequency: 219.710MHz)
-  Total number of paths / destination ports: 1484 / 56
+  Clock period: 2.623ns (frequency: 381.272MHz)
+  Total number of paths / destination ports: 1403 / 73
 -------------------------------------------------------------------------
-Delay:               4.551ns (Levels of Logic = 4)
-  Source:            uart_tx0/clock_counter_0 (FF)
+Delay:               2.623ns (Levels of Logic = 3)
+  Source:            uart_tx0/clock_counter_1 (FF)
   Destination:       uart_tx0/clock_counter_9 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: uart_tx0/clock_counter_0 to uart_tx0/clock_counter_9
+  Data Path: uart_tx0/clock_counter_1 to uart_tx0/clock_counter_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.447   0.995  uart_tx0/clock_counter_0 (uart_tx0/clock_counter_0)
-     LUT5:I0->O            2   0.203   0.617  uart_tx0/GND_3_o_GND_3_o_equal_49_o<9>_SW0 (N2)
-     LUT6:I5->O            5   0.205   0.715  uart_tx0/GND_3_o_GND_3_o_equal_49_o<9> (uart_tx0/GND_3_o_GND_3_o_equal_49_o)
-     LUT6:I5->O           10   0.205   0.857  uart_tx0/RST_reset_count_OR_52_o1 (uart_tx0/RST_reset_count_OR_52_o)
-     LUT5:I4->O            1   0.205   0.000  uart_tx0/clock_counter_9_rstpot (uart_tx0/clock_counter_9_rstpot)
-     FD:D                      0.102          uart_tx0/clock_counter_9
+     FDRE:C->Q             2   0.361   0.688  uart_tx0/clock_counter_1 (uart_tx0/clock_counter_1)
+     LUT5:I0->O            1   0.097   0.295  uart_tx0/GND_3_o_GND_3_o_equal_50_o<9>_SW0 (N6)
+     LUT6:I5->O            6   0.097   0.318  uart_tx0/GND_3_o_GND_3_o_equal_50_o<9> (uart_tx0/GND_3_o_GND_3_o_equal_50_o)
+     LUT6:I5->O           10   0.097   0.321  uart_tx0/RST_reset_count_OR_52_o1 (uart_tx0/RST_reset_count_OR_52_o)
+     FDRE:R                    0.349          uart_tx0/clock_counter_0
     ----------------------------------------
-    Total                      4.551ns (1.367ns logic, 3.184ns route)
-                                       (30.0% logic, 70.0% route)
+    Total                      2.623ns (1.001ns logic, 1.622ns route)
+                                       (38.2% logic, 61.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 156 / 78
+  Total number of paths / destination ports: 104 / 75
 -------------------------------------------------------------------------
-Offset:              5.400ns (Levels of Logic = 4)
-  Source:            RST (PAD)
-  Destination:       uart_rx0/clock_counter_9 (FF)
+Offset:              1.671ns (Levels of Logic = 4)
+  Source:            RX (PAD)
+  Destination:       uart_rx0/clock_counter_1 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST to uart_rx0/clock_counter_9
+  Data Path: RX to uart_rx0/clock_counter_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            42   1.222   1.798  RST_IBUF (RST_IBUF)
-     LUT6:I0->O           10   0.203   0.857  uart_rx0/RST_reset_count_OR_19_o2_SW2 (N17)
-     LUT5:I4->O            1   0.205   0.808  uart_rx0/clock_counter_0_rstpot_SW2 (N32)
-     LUT6:I3->O            1   0.205   0.000  uart_rx0/clock_counter_0_rstpot (uart_rx0/clock_counter_0_rstpot)
-     FD:D                      0.102          uart_rx0/clock_counter_0
+     IBUF:I->O            11   0.001   0.740  RX_IBUF (RX_IBUF)
+     LUT6:I0->O            1   0.097   0.295  uart_rx0/RST_reset_count_OR_19_o2 (uart_rx0/RST_reset_count_OR_19_o2)
+     LUT6:I5->O           10   0.097   0.337  uart_rx0/RST_reset_count_OR_19_o3 (uart_rx0/RST_reset_count_OR_19_o)
+     LUT4:I3->O            1   0.097   0.000  uart_rx0/clock_counter_1_rstpot (uart_rx0/clock_counter_1_rstpot)
+     FD:D                      0.008          uart_rx0/clock_counter_1
     ----------------------------------------
-    Total                      5.400ns (1.937ns logic, 3.463ns route)
-                                       (35.9% logic, 64.1% route)
+    Total                      1.671ns (0.300ns logic, 1.371ns route)
+                                       (17.9% logic, 82.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 15 / 11
 -------------------------------------------------------------------------
-Offset:              5.350ns (Levels of Logic = 2)
+Offset:              1.351ns (Levels of Logic = 2)
   Source:            uart_rx0/PS_FSM_FFd4 (FF)
   Destination:       RXDATA_READY (PAD)
   Source Clock:      CLK rising
@@ -492,12 +490,12 @@ Offset:              5.350ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             34   0.447   1.549  uart_rx0/PS_FSM_FFd4 (uart_rx0/PS_FSM_FFd4)
-     LUT3:I0->O            1   0.205   0.579  uart_rx0/PS_DATA_READY1 (RXDATA_READY_OBUF)
-     OBUF:I->O                 2.571          RXDATA_READY_OBUF (RXDATA_READY)
+     FDR:C->Q             24   0.361   0.613  uart_rx0/PS_FSM_FFd4 (uart_rx0/PS_FSM_FFd4)
+     LUT3:I0->O            1   0.097   0.279  uart_rx0/PS_DATA_READY1 (RXDATA_READY_OBUF)
+     OBUF:I->O                 0.000          RXDATA_READY_OBUF (RXDATA_READY)
     ----------------------------------------
-    Total                      5.350ns (3.223ns logic, 2.127ns route)
-                                       (60.2% logic, 39.8% route)
+    Total                      1.351ns (0.458ns logic, 0.893ns route)
+                                       (33.9% logic, 66.1% route)
 
 =========================================================================
 
@@ -509,18 +507,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.551|         |         |         |
+CLK            |    2.623|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.68 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.40 secs
  
 --> 
 
-Total memory usage is 255336 kilobytes
+Total memory usage is 449184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

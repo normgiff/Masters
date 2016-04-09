@@ -1,0 +1,924 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: BRAM_CTRL_WRAPPER_TEST.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BRAM_CTRL_WRAPPER_TEST.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BRAM_CTRL_WRAPPER_TEST"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : BRAM_CTRL_WRAPPER_TEST
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM.v" into library work
+Parsing module <BRAM>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL.v" into library work
+Parsing module <BRAM_CTRL>.
+Parsing verilog file "BRAM_CTRL_PARAMS.v" included at line 35.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL_WRAPPER_TEST.v" into library work
+Parsing module <BRAM_CTRL_WRAPPER_TEST>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <BRAM_CTRL_WRAPPER_TEST>.
+
+Elaborating module <BRAM_CTRL>.
+
+Elaborating module <BRAM>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <BRAM_CTRL_WRAPPER_TEST>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL_WRAPPER_TEST.v".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <BRAM_CTRL_WRAPPER_TEST> synthesized.
+
+Synthesizing Unit <BRAM_CTRL>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL.v".
+        TEMPLATE_0_ADDR_A0 = 13'b0000000000000
+        TEMPLATE_0_ADDR_B0 = 13'b0000000100000
+        TEMPLATE_0_ADDR_A1 = 13'b0000001000000
+        TEMPLATE_0_ADDR_B1 = 13'b0000001100000
+        TEMPLATE_INCR_FACTOR = 13'b0000010000000
+        FF_0_ADDR_A0 = 13'b0001000000000
+        FF_0_ADDR_B0 = 13'b0001000100000
+        FF_0_ADDR_A1 = 13'b0001001000000
+        FF_0_ADDR_B1 = 13'b0001001100000
+        FF_0_ADDR_A2 = 13'b0001010000000
+        FF_0_ADDR_B2 = 13'b0001010100000
+        FF_0_ADDR_A3 = 13'b0001011000000
+        FF_0_ADDR_B3 = 13'b0001011100000
+        FF_INCR_FACTOR = 13'b0000100000000
+        TC_0_ADDR_A0 = 13'b0011000000000
+        TC_0_ADDR_B0 = 13'b0011000100000
+        TC_0_ADDR_A1 = 13'b0011001000000
+        TC_0_ADDR_B1 = 13'b0011001100000
+        TC_INCR_FACTOR = 13'b0000010000000
+        INPUT_START_ADDR_A = 8'b01000000
+        INPUT_START_ADDR_B = 8'b01000001
+        INPUT_INCR_FACTOR = 8'b00000001
+        IDLE = 0
+        INPUT_WRITE_1 = 1
+        INPUT_WRITE_2 = 2
+        TEMPLATE_WRITE_1 = 3
+        TEMPLATE_WRITE_2 = 4
+        FF_WRITE_1 = 5
+        FF_WRITE_2 = 6
+        FF_WRITE_3 = 7
+        FF_WRITE_4 = 8
+        INPUT_READ_0 = 9
+        INPUT_READ_1 = 10
+        INPUT_READ_2 = 11
+        TEMPLATE_READ_0 = 12
+        TEMPLATE_READ_1 = 13
+        TEMPLATE_READ_2 = 14
+        FF_READ_0 = 15
+        FF_READ_1 = 16
+        FF_READ_2 = 17
+        FF_READ_3 = 18
+        FF_READ_4 = 19
+        CHECK_TEMPLATE = 20
+        RESET_TEMPLATE = 4
+    Found 8-bit register for signal <input_write_posA>.
+    Found 8-bit register for signal <input_read_posA>.
+    Found 8-bit register for signal <input_write_posB>.
+    Found 8-bit register for signal <input_read_posB>.
+    Found 1-bit register for signal <READ_DATA_0<127>>.
+    Found 1-bit register for signal <READ_DATA_0<126>>.
+    Found 1-bit register for signal <READ_DATA_0<125>>.
+    Found 1-bit register for signal <READ_DATA_0<124>>.
+    Found 1-bit register for signal <READ_DATA_0<123>>.
+    Found 1-bit register for signal <READ_DATA_0<122>>.
+    Found 1-bit register for signal <READ_DATA_0<121>>.
+    Found 1-bit register for signal <READ_DATA_0<120>>.
+    Found 1-bit register for signal <READ_DATA_0<119>>.
+    Found 1-bit register for signal <READ_DATA_0<118>>.
+    Found 1-bit register for signal <READ_DATA_0<117>>.
+    Found 1-bit register for signal <READ_DATA_0<116>>.
+    Found 1-bit register for signal <READ_DATA_0<115>>.
+    Found 1-bit register for signal <READ_DATA_0<114>>.
+    Found 1-bit register for signal <READ_DATA_0<113>>.
+    Found 1-bit register for signal <READ_DATA_0<112>>.
+    Found 1-bit register for signal <READ_DATA_0<111>>.
+    Found 1-bit register for signal <READ_DATA_0<110>>.
+    Found 1-bit register for signal <READ_DATA_0<109>>.
+    Found 1-bit register for signal <READ_DATA_0<108>>.
+    Found 1-bit register for signal <READ_DATA_0<107>>.
+    Found 1-bit register for signal <READ_DATA_0<106>>.
+    Found 1-bit register for signal <READ_DATA_0<105>>.
+    Found 1-bit register for signal <READ_DATA_0<104>>.
+    Found 1-bit register for signal <READ_DATA_0<103>>.
+    Found 1-bit register for signal <READ_DATA_0<102>>.
+    Found 1-bit register for signal <READ_DATA_0<101>>.
+    Found 1-bit register for signal <READ_DATA_0<100>>.
+    Found 1-bit register for signal <READ_DATA_0<99>>.
+    Found 1-bit register for signal <READ_DATA_0<98>>.
+    Found 1-bit register for signal <READ_DATA_0<97>>.
+    Found 1-bit register for signal <READ_DATA_0<96>>.
+    Found 1-bit register for signal <READ_DATA_0<95>>.
+    Found 1-bit register for signal <READ_DATA_0<94>>.
+    Found 1-bit register for signal <READ_DATA_0<93>>.
+    Found 1-bit register for signal <READ_DATA_0<92>>.
+    Found 1-bit register for signal <READ_DATA_0<91>>.
+    Found 1-bit register for signal <READ_DATA_0<90>>.
+    Found 1-bit register for signal <READ_DATA_0<89>>.
+    Found 1-bit register for signal <READ_DATA_0<88>>.
+    Found 1-bit register for signal <READ_DATA_0<87>>.
+    Found 1-bit register for signal <READ_DATA_0<86>>.
+    Found 1-bit register for signal <READ_DATA_0<85>>.
+    Found 1-bit register for signal <READ_DATA_0<84>>.
+    Found 1-bit register for signal <READ_DATA_0<83>>.
+    Found 1-bit register for signal <READ_DATA_0<82>>.
+    Found 1-bit register for signal <READ_DATA_0<81>>.
+    Found 1-bit register for signal <READ_DATA_0<80>>.
+    Found 1-bit register for signal <READ_DATA_0<79>>.
+    Found 1-bit register for signal <READ_DATA_0<78>>.
+    Found 1-bit register for signal <READ_DATA_0<77>>.
+    Found 1-bit register for signal <READ_DATA_0<76>>.
+    Found 1-bit register for signal <READ_DATA_0<75>>.
+    Found 1-bit register for signal <READ_DATA_0<74>>.
+    Found 1-bit register for signal <READ_DATA_0<73>>.
+    Found 1-bit register for signal <READ_DATA_0<72>>.
+    Found 1-bit register for signal <READ_DATA_0<71>>.
+    Found 1-bit register for signal <READ_DATA_0<70>>.
+    Found 1-bit register for signal <READ_DATA_0<69>>.
+    Found 1-bit register for signal <READ_DATA_0<68>>.
+    Found 1-bit register for signal <READ_DATA_0<67>>.
+    Found 1-bit register for signal <READ_DATA_0<66>>.
+    Found 1-bit register for signal <READ_DATA_0<65>>.
+    Found 1-bit register for signal <READ_DATA_0<64>>.
+    Found 1-bit register for signal <READ_DATA_0<63>>.
+    Found 1-bit register for signal <READ_DATA_0<62>>.
+    Found 1-bit register for signal <READ_DATA_0<61>>.
+    Found 1-bit register for signal <READ_DATA_0<60>>.
+    Found 1-bit register for signal <READ_DATA_0<59>>.
+    Found 1-bit register for signal <READ_DATA_0<58>>.
+    Found 1-bit register for signal <READ_DATA_0<57>>.
+    Found 1-bit register for signal <READ_DATA_0<56>>.
+    Found 1-bit register for signal <READ_DATA_0<55>>.
+    Found 1-bit register for signal <READ_DATA_0<54>>.
+    Found 1-bit register for signal <READ_DATA_0<53>>.
+    Found 1-bit register for signal <READ_DATA_0<52>>.
+    Found 1-bit register for signal <READ_DATA_0<51>>.
+    Found 1-bit register for signal <READ_DATA_0<50>>.
+    Found 1-bit register for signal <READ_DATA_0<49>>.
+    Found 1-bit register for signal <READ_DATA_0<48>>.
+    Found 1-bit register for signal <READ_DATA_0<47>>.
+    Found 1-bit register for signal <READ_DATA_0<46>>.
+    Found 1-bit register for signal <READ_DATA_0<45>>.
+    Found 1-bit register for signal <READ_DATA_0<44>>.
+    Found 1-bit register for signal <READ_DATA_0<43>>.
+    Found 1-bit register for signal <READ_DATA_0<42>>.
+    Found 1-bit register for signal <READ_DATA_0<41>>.
+    Found 1-bit register for signal <READ_DATA_0<40>>.
+    Found 1-bit register for signal <READ_DATA_0<39>>.
+    Found 1-bit register for signal <READ_DATA_0<38>>.
+    Found 1-bit register for signal <READ_DATA_0<37>>.
+    Found 1-bit register for signal <READ_DATA_0<36>>.
+    Found 1-bit register for signal <READ_DATA_0<35>>.
+    Found 1-bit register for signal <READ_DATA_0<34>>.
+    Found 1-bit register for signal <READ_DATA_0<33>>.
+    Found 1-bit register for signal <READ_DATA_0<32>>.
+    Found 1-bit register for signal <READ_DATA_0<31>>.
+    Found 1-bit register for signal <READ_DATA_0<30>>.
+    Found 1-bit register for signal <READ_DATA_0<29>>.
+    Found 1-bit register for signal <READ_DATA_0<28>>.
+    Found 1-bit register for signal <READ_DATA_0<27>>.
+    Found 1-bit register for signal <READ_DATA_0<26>>.
+    Found 1-bit register for signal <READ_DATA_0<25>>.
+    Found 1-bit register for signal <READ_DATA_0<24>>.
+    Found 1-bit register for signal <READ_DATA_0<23>>.
+    Found 1-bit register for signal <READ_DATA_0<22>>.
+    Found 1-bit register for signal <READ_DATA_0<21>>.
+    Found 1-bit register for signal <READ_DATA_0<20>>.
+    Found 1-bit register for signal <READ_DATA_0<19>>.
+    Found 1-bit register for signal <READ_DATA_0<18>>.
+    Found 1-bit register for signal <READ_DATA_0<17>>.
+    Found 1-bit register for signal <READ_DATA_0<16>>.
+    Found 1-bit register for signal <READ_DATA_0<15>>.
+    Found 1-bit register for signal <READ_DATA_0<14>>.
+    Found 1-bit register for signal <READ_DATA_0<13>>.
+    Found 1-bit register for signal <READ_DATA_0<12>>.
+    Found 1-bit register for signal <READ_DATA_0<11>>.
+    Found 1-bit register for signal <READ_DATA_0<10>>.
+    Found 1-bit register for signal <READ_DATA_0<9>>.
+    Found 1-bit register for signal <READ_DATA_0<8>>.
+    Found 1-bit register for signal <READ_DATA_0<7>>.
+    Found 1-bit register for signal <READ_DATA_0<6>>.
+    Found 1-bit register for signal <READ_DATA_0<5>>.
+    Found 1-bit register for signal <READ_DATA_0<4>>.
+    Found 1-bit register for signal <READ_DATA_0<3>>.
+    Found 1-bit register for signal <READ_DATA_0<2>>.
+    Found 1-bit register for signal <READ_DATA_0<1>>.
+    Found 1-bit register for signal <READ_DATA_0<0>>.
+    Found 1-bit register for signal <READ_DATA_1<127>>.
+    Found 1-bit register for signal <READ_DATA_1<126>>.
+    Found 1-bit register for signal <READ_DATA_1<125>>.
+    Found 1-bit register for signal <READ_DATA_1<124>>.
+    Found 1-bit register for signal <READ_DATA_1<123>>.
+    Found 1-bit register for signal <READ_DATA_1<122>>.
+    Found 1-bit register for signal <READ_DATA_1<121>>.
+    Found 1-bit register for signal <READ_DATA_1<120>>.
+    Found 1-bit register for signal <READ_DATA_1<119>>.
+    Found 1-bit register for signal <READ_DATA_1<118>>.
+    Found 1-bit register for signal <READ_DATA_1<117>>.
+    Found 1-bit register for signal <READ_DATA_1<116>>.
+    Found 1-bit register for signal <READ_DATA_1<115>>.
+    Found 1-bit register for signal <READ_DATA_1<114>>.
+    Found 1-bit register for signal <READ_DATA_1<113>>.
+    Found 1-bit register for signal <READ_DATA_1<112>>.
+    Found 1-bit register for signal <READ_DATA_1<111>>.
+    Found 1-bit register for signal <READ_DATA_1<110>>.
+    Found 1-bit register for signal <READ_DATA_1<109>>.
+    Found 1-bit register for signal <READ_DATA_1<108>>.
+    Found 1-bit register for signal <READ_DATA_1<107>>.
+    Found 1-bit register for signal <READ_DATA_1<106>>.
+    Found 1-bit register for signal <READ_DATA_1<105>>.
+    Found 1-bit register for signal <READ_DATA_1<104>>.
+    Found 1-bit register for signal <READ_DATA_1<103>>.
+    Found 1-bit register for signal <READ_DATA_1<102>>.
+    Found 1-bit register for signal <READ_DATA_1<101>>.
+    Found 1-bit register for signal <READ_DATA_1<100>>.
+    Found 1-bit register for signal <READ_DATA_1<99>>.
+    Found 1-bit register for signal <READ_DATA_1<98>>.
+    Found 1-bit register for signal <READ_DATA_1<97>>.
+    Found 1-bit register for signal <READ_DATA_1<96>>.
+    Found 1-bit register for signal <READ_DATA_1<95>>.
+    Found 1-bit register for signal <READ_DATA_1<94>>.
+    Found 1-bit register for signal <READ_DATA_1<93>>.
+    Found 1-bit register for signal <READ_DATA_1<92>>.
+    Found 1-bit register for signal <READ_DATA_1<91>>.
+    Found 1-bit register for signal <READ_DATA_1<90>>.
+    Found 1-bit register for signal <READ_DATA_1<89>>.
+    Found 1-bit register for signal <READ_DATA_1<88>>.
+    Found 1-bit register for signal <READ_DATA_1<87>>.
+    Found 1-bit register for signal <READ_DATA_1<86>>.
+    Found 1-bit register for signal <READ_DATA_1<85>>.
+    Found 1-bit register for signal <READ_DATA_1<84>>.
+    Found 1-bit register for signal <READ_DATA_1<83>>.
+    Found 1-bit register for signal <READ_DATA_1<82>>.
+    Found 1-bit register for signal <READ_DATA_1<81>>.
+    Found 1-bit register for signal <READ_DATA_1<80>>.
+    Found 1-bit register for signal <READ_DATA_1<79>>.
+    Found 1-bit register for signal <READ_DATA_1<78>>.
+    Found 1-bit register for signal <READ_DATA_1<77>>.
+    Found 1-bit register for signal <READ_DATA_1<76>>.
+    Found 1-bit register for signal <READ_DATA_1<75>>.
+    Found 1-bit register for signal <READ_DATA_1<74>>.
+    Found 1-bit register for signal <READ_DATA_1<73>>.
+    Found 1-bit register for signal <READ_DATA_1<72>>.
+    Found 1-bit register for signal <READ_DATA_1<71>>.
+    Found 1-bit register for signal <READ_DATA_1<70>>.
+    Found 1-bit register for signal <READ_DATA_1<69>>.
+    Found 1-bit register for signal <READ_DATA_1<68>>.
+    Found 1-bit register for signal <READ_DATA_1<67>>.
+    Found 1-bit register for signal <READ_DATA_1<66>>.
+    Found 1-bit register for signal <READ_DATA_1<65>>.
+    Found 1-bit register for signal <READ_DATA_1<64>>.
+    Found 1-bit register for signal <READ_DATA_1<63>>.
+    Found 1-bit register for signal <READ_DATA_1<62>>.
+    Found 1-bit register for signal <READ_DATA_1<61>>.
+    Found 1-bit register for signal <READ_DATA_1<60>>.
+    Found 1-bit register for signal <READ_DATA_1<59>>.
+    Found 1-bit register for signal <READ_DATA_1<58>>.
+    Found 1-bit register for signal <READ_DATA_1<57>>.
+    Found 1-bit register for signal <READ_DATA_1<56>>.
+    Found 1-bit register for signal <READ_DATA_1<55>>.
+    Found 1-bit register for signal <READ_DATA_1<54>>.
+    Found 1-bit register for signal <READ_DATA_1<53>>.
+    Found 1-bit register for signal <READ_DATA_1<52>>.
+    Found 1-bit register for signal <READ_DATA_1<51>>.
+    Found 1-bit register for signal <READ_DATA_1<50>>.
+    Found 1-bit register for signal <READ_DATA_1<49>>.
+    Found 1-bit register for signal <READ_DATA_1<48>>.
+    Found 1-bit register for signal <READ_DATA_1<47>>.
+    Found 1-bit register for signal <READ_DATA_1<46>>.
+    Found 1-bit register for signal <READ_DATA_1<45>>.
+    Found 1-bit register for signal <READ_DATA_1<44>>.
+    Found 1-bit register for signal <READ_DATA_1<43>>.
+    Found 1-bit register for signal <READ_DATA_1<42>>.
+    Found 1-bit register for signal <READ_DATA_1<41>>.
+    Found 1-bit register for signal <READ_DATA_1<40>>.
+    Found 1-bit register for signal <READ_DATA_1<39>>.
+    Found 1-bit register for signal <READ_DATA_1<38>>.
+    Found 1-bit register for signal <READ_DATA_1<37>>.
+    Found 1-bit register for signal <READ_DATA_1<36>>.
+    Found 1-bit register for signal <READ_DATA_1<35>>.
+    Found 1-bit register for signal <READ_DATA_1<34>>.
+    Found 1-bit register for signal <READ_DATA_1<33>>.
+    Found 1-bit register for signal <READ_DATA_1<32>>.
+    Found 1-bit register for signal <READ_DATA_1<31>>.
+    Found 1-bit register for signal <READ_DATA_1<30>>.
+    Found 1-bit register for signal <READ_DATA_1<29>>.
+    Found 1-bit register for signal <READ_DATA_1<28>>.
+    Found 1-bit register for signal <READ_DATA_1<27>>.
+    Found 1-bit register for signal <READ_DATA_1<26>>.
+    Found 1-bit register for signal <READ_DATA_1<25>>.
+    Found 1-bit register for signal <READ_DATA_1<24>>.
+    Found 1-bit register for signal <READ_DATA_1<23>>.
+    Found 1-bit register for signal <READ_DATA_1<22>>.
+    Found 1-bit register for signal <READ_DATA_1<21>>.
+    Found 1-bit register for signal <READ_DATA_1<20>>.
+    Found 1-bit register for signal <READ_DATA_1<19>>.
+    Found 1-bit register for signal <READ_DATA_1<18>>.
+    Found 1-bit register for signal <READ_DATA_1<17>>.
+    Found 1-bit register for signal <READ_DATA_1<16>>.
+    Found 1-bit register for signal <READ_DATA_1<15>>.
+    Found 1-bit register for signal <READ_DATA_1<14>>.
+    Found 1-bit register for signal <READ_DATA_1<13>>.
+    Found 1-bit register for signal <READ_DATA_1<12>>.
+    Found 1-bit register for signal <READ_DATA_1<11>>.
+    Found 1-bit register for signal <READ_DATA_1<10>>.
+    Found 1-bit register for signal <READ_DATA_1<9>>.
+    Found 1-bit register for signal <READ_DATA_1<8>>.
+    Found 1-bit register for signal <READ_DATA_1<7>>.
+    Found 1-bit register for signal <READ_DATA_1<6>>.
+    Found 1-bit register for signal <READ_DATA_1<5>>.
+    Found 1-bit register for signal <READ_DATA_1<4>>.
+    Found 1-bit register for signal <READ_DATA_1<3>>.
+    Found 1-bit register for signal <READ_DATA_1<2>>.
+    Found 1-bit register for signal <READ_DATA_1<1>>.
+    Found 1-bit register for signal <READ_DATA_1<0>>.
+    Found 2-bit register for signal <curr_temp>.
+    Found 3-bit register for signal <prev_temp>.
+    Found 1-bit register for signal <TEMPLATE_CHANGE>.
+    Found 5-bit register for signal <PS>.
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 21                                             |
+    | Transitions        | 27                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 24                                             |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <input_write_posA[7]_GND_2_o_add_22_OUT> created at line 217.
+    Found 8-bit adder for signal <input_write_posB[7]_GND_2_o_add_23_OUT> created at line 218.
+    Found 8-bit adder for signal <input_read_posA[7]_GND_2_o_add_26_OUT> created at line 221.
+    Found 8-bit adder for signal <input_read_posB[7]_GND_2_o_add_27_OUT> created at line 222.
+    Found 3-bit comparator not equal for signal <n0349> created at line 596
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 294 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  46 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <BRAM_CTRL> synthesized.
+
+Synthesizing Unit <BRAM>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM.v".
+        RAM_WIDTH = 32
+        RAM_ADDR_BITS = 13
+    Found 8192x32-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
+    Found 32-bit register for signal <DOUT_B>.
+    Found 32-bit register for signal <DOUT_A>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <BRAM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8192x32-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 4
+ 8-bit adder                                           : 4
+# Registers                                            : 11
+ 1-bit register                                        : 1
+ 128-bit register                                      : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 2
+ 8-bit register                                        : 4
+# Comparators                                          : 1
+ 3-bit comparator not equal                            : 1
+# Multiplexers                                         : 50
+ 128-bit 2-to-1 multiplexer                            : 2
+ 13-bit 2-to-1 multiplexer                             : 42
+ 32-bit 2-to-1 multiplexer                             : 2
+ 64-bit 2-to-1 multiplexer                             : 4
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BRAM>.
+INFO:Xst:3226 - The RAM <Mram_the_memory_core> will be implemented as a BLOCK RAM, absorbing the following register(s): <DOUT_A> <DOUT_B>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <WE_A>          | high     |
+    |     addrA          | connected to signal <ADDR_A>        |          |
+    |     diA            | connected to signal <DIN_A>         |          |
+    |     doA            | connected to signal <DOUT_A>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     weB            | connected to signal <WE_B>          | high     |
+    |     addrB          | connected to signal <ADDR_B>        |          |
+    |     diB            | connected to signal <DIN_B>         |          |
+    |     doB            | connected to signal <DOUT_B>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <BRAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <BRAM_CTRL>.
+The following registers are absorbed into counter <input_write_posA>: 1 register on signal <input_write_posA>.
+The following registers are absorbed into counter <input_read_posA>: 1 register on signal <input_read_posA>.
+The following registers are absorbed into counter <input_read_posB>: 1 register on signal <input_read_posB>.
+The following registers are absorbed into counter <input_write_posB>: 1 register on signal <input_write_posB>.
+Unit <BRAM_CTRL> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8192x32-bit dual-port block RAM                       : 1
+# Counters                                             : 4
+ 8-bit up counter                                      : 4
+# Registers                                            : 262
+ Flip-Flops                                            : 262
+# Comparators                                          : 1
+ 3-bit comparator not equal                            : 1
+# Multiplexers                                         : 48
+ 128-bit 2-to-1 multiplexer                            : 2
+ 13-bit 2-to-1 multiplexer                             : 42
+ 64-bit 2-to-1 multiplexer                             : 4
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <bram_ctrl0/FSM_0> on signal <PS[1:21]> with one-hot encoding.
+--------------------------------
+ State | Encoding
+--------------------------------
+ 00000 | 000000000000000000001
+ 01111 | 000000000000000000010
+ 01100 | 000000000000000000100
+ 01001 | 000000000000000001000
+ 00101 | 000000000000000010000
+ 00011 | 000000000000000100000
+ 00001 | 000000000000001000000
+ 00010 | 000000000000010000000
+ 00100 | 000000000000100000000
+ 00110 | 000000000001000000000
+ 00111 | 000000000010000000000
+ 01000 | 000000000100000000000
+ 01010 | 000000001000000000000
+ 01011 | 000000010000000000000
+ 10100 | 000000100000000000000
+ 01101 | 000001000000000000000
+ 01110 | 000010000000000000000
+ 10000 | 000100000000000000000
+ 10001 | 001000000000000000000
+ 10010 | 010000000000000000000
+ 10011 | 100000000000000000000
+--------------------------------
+
+Optimizing unit <BRAM_CTRL_WRAPPER_TEST> ...
+
+Optimizing unit <BRAM_CTRL> ...
+INFO:Xst:3203 - The FF/Latch <bram_ctrl0/input_write_posB_0> in Unit <BRAM_CTRL_WRAPPER_TEST> is the opposite to the following FF/Latch, which will be removed : <bram_ctrl0/input_write_posA_0> 
+INFO:Xst:3203 - The FF/Latch <bram_ctrl0/input_read_posB_0> in Unit <BRAM_CTRL_WRAPPER_TEST> is the opposite to the following FF/Latch, which will be removed : <bram_ctrl0/input_read_posA_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BRAM_CTRL_WRAPPER_TEST, actual ratio is 10.
+FlipFlop bram_ctrl0/PS_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop bram_ctrl0/PS_FSM_FFd10 has been replicated 3 time(s)
+FlipFlop bram_ctrl0/PS_FSM_FFd11 has been replicated 3 time(s)
+FlipFlop bram_ctrl0/PS_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop bram_ctrl0/PS_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop bram_ctrl0/PS_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop bram_ctrl0/PS_FSM_FFd9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 328
+ Flip-Flops                                            : 328
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : BRAM_CTRL_WRAPPER_TEST.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 686
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 30
+#      LUT2                        : 63
+#      LUT3                        : 14
+#      LUT4                        : 133
+#      LUT5                        : 71
+#      LUT6                        : 269
+#      MUXCY                       : 71
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 328
+#      FD                          : 5
+#      FDR                         : 287
+#      FDRE                        : 28
+#      FDS                         : 1
+#      FDSE                        : 7
+# RAMS                             : 16
+#      RAMB16BWER                  : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 136
+#      IBUF                        : 7
+#      OBUF                        : 129
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             328  out of  18224     1%  
+ Number of Slice LUTs:                  582  out of   9112     6%  
+    Number used as Logic:               582  out of   9112     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    609
+   Number with an unused Flip Flop:     281  out of    609    46%  
+   Number with an unused LUT:            27  out of    609     4%  
+   Number of fully used LUT-FF pairs:   301  out of    609    49%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                         137
+ Number of bonded IOBs:                 137  out of    232    59%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of     32    50%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 344   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.794ns (Maximum Frequency: 208.603MHz)
+   Minimum input arrival time before clock: 6.860ns
+   Maximum output required time after clock: 6.587ns
+   Maximum combinational path delay: 8.122ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.794ns (frequency: 208.603MHz)
+  Total number of paths / destination ports: 12177 / 810
+-------------------------------------------------------------------------
+Delay:               4.794ns (Levels of Logic = 2)
+  Source:            bram_ctrl0/PS_FSM_FFd14 (FF)
+  Destination:       bram_ctrl0/bram0/Mram_the_memory_core15 (RAM)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: bram_ctrl0/PS_FSM_FFd14 to bram_ctrl0/bram0/Mram_the_memory_core15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             16   0.447   1.109  bram_ctrl0/PS_FSM_FFd14 (bram_ctrl0/PS_FSM_FFd14)
+     LUT3:I1->O            1   0.203   0.580  bram_ctrl0/PS_write_en_SW0 (N6)
+     LUT6:I5->O          128   0.205   1.950  bram_ctrl0/PS_write_en (bram_ctrl0/write_en)
+     RAMB16BWER:WEA2           0.300          bram_ctrl0/bram0/Mram_the_memory_core15
+    ----------------------------------------
+    Total                      4.794ns (1.155ns logic, 3.639ns route)
+                                       (24.1% logic, 75.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1283 / 779
+-------------------------------------------------------------------------
+Offset:              6.860ns (Levels of Logic = 4)
+  Source:            INPUT_WRITE (PAD)
+  Destination:       bram_ctrl0/bram0/Mram_the_memory_core15 (RAM)
+  Destination Clock: CLK rising
+
+  Data Path: INPUT_WRITE to bram_ctrl0/bram0/Mram_the_memory_core15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           183   1.222   2.142  INPUT_WRITE_IBUF (INPUT_WRITE_IBUF)
+     LUT2:I0->O            4   0.203   0.912  Mmux_WRITE_DATA_1301 (WRITE_DATA_1<126>)
+     LUT6:I3->O            2   0.205   0.617  bram_ctrl0/PS_addr_a<10>1 (bram_ctrl0/PS_addr_a<10>1)
+     LUT6:I5->O           16   0.205   1.004  bram_ctrl0/PS_addr_b<10>1 (bram_ctrl0/addr_b<10>)
+     RAMB16BWER:ADDRB11        0.350          bram_ctrl0/bram0/Mram_the_memory_core15
+    ----------------------------------------
+    Total                      6.860ns (2.185ns logic, 4.675ns route)
+                                       (31.9% logic, 68.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 384 / 129
+-------------------------------------------------------------------------
+Offset:              6.587ns (Levels of Logic = 29)
+  Source:            bram_ctrl0/READ_DATA_1_126 (FF)
+  Destination:       JUNK (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: bram_ctrl0/READ_DATA_1_126 to JUNK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.447   0.819  bram_ctrl0/READ_DATA_1_126 (bram_ctrl0/READ_DATA_1_126)
+     LUT2:I0->O            1   0.203   0.924  JUNK_wg_lut<17>_SW0 (N242)
+     LUT6:I1->O            1   0.203   0.000  JUNK_wg_lut<17> (JUNK_wg_lut<17>)
+     MUXCY:S->O            1   0.172   0.000  JUNK_wg_cy<17> (JUNK_wg_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<18> (JUNK_wg_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<19> (JUNK_wg_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<20> (JUNK_wg_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<21> (JUNK_wg_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<22> (JUNK_wg_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<23> (JUNK_wg_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<24> (JUNK_wg_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<25> (JUNK_wg_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<26> (JUNK_wg_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<27> (JUNK_wg_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<28> (JUNK_wg_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<29> (JUNK_wg_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<30> (JUNK_wg_cy<30>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<31> (JUNK_wg_cy<31>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<32> (JUNK_wg_cy<32>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<33> (JUNK_wg_cy<33>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<34> (JUNK_wg_cy<34>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<35> (JUNK_wg_cy<35>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<36> (JUNK_wg_cy<36>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<37> (JUNK_wg_cy<37>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<38> (JUNK_wg_cy<38>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<39> (JUNK_wg_cy<39>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<40> (JUNK_wg_cy<40>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<41> (JUNK_wg_cy<41>)
+     MUXCY:CI->O           1   0.213   0.579  JUNK_wg_cy<42> (JUNK_OBUF)
+     OBUF:I->O                 2.571          JUNK_OBUF (JUNK)
+    ----------------------------------------
+    Total                      6.587ns (4.265ns logic, 2.322ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 43 / 1
+-------------------------------------------------------------------------
+Delay:               8.122ns (Levels of Logic = 45)
+  Source:            INPUT_WRITE (PAD)
+  Destination:       JUNK (PAD)
+
+  Data Path: INPUT_WRITE to JUNK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           183   1.222   2.402  INPUT_WRITE_IBUF (INPUT_WRITE_IBUF)
+     LUT6:I0->O            1   0.203   0.000  JUNK_wg_lut<1> (JUNK_wg_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  JUNK_wg_cy<1> (JUNK_wg_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<2> (JUNK_wg_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<3> (JUNK_wg_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<4> (JUNK_wg_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<5> (JUNK_wg_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<6> (JUNK_wg_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<7> (JUNK_wg_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<8> (JUNK_wg_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<9> (JUNK_wg_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<10> (JUNK_wg_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<11> (JUNK_wg_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<12> (JUNK_wg_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<13> (JUNK_wg_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<14> (JUNK_wg_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<15> (JUNK_wg_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<16> (JUNK_wg_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<17> (JUNK_wg_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<18> (JUNK_wg_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<19> (JUNK_wg_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<20> (JUNK_wg_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<21> (JUNK_wg_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<22> (JUNK_wg_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<23> (JUNK_wg_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<24> (JUNK_wg_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<25> (JUNK_wg_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<26> (JUNK_wg_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<27> (JUNK_wg_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<28> (JUNK_wg_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<29> (JUNK_wg_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<30> (JUNK_wg_cy<30>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<31> (JUNK_wg_cy<31>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<32> (JUNK_wg_cy<32>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<33> (JUNK_wg_cy<33>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<34> (JUNK_wg_cy<34>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<35> (JUNK_wg_cy<35>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<36> (JUNK_wg_cy<36>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<37> (JUNK_wg_cy<37>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<38> (JUNK_wg_cy<38>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<39> (JUNK_wg_cy<39>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<40> (JUNK_wg_cy<40>)
+     MUXCY:CI->O           1   0.019   0.000  JUNK_wg_cy<41> (JUNK_wg_cy<41>)
+     MUXCY:CI->O           1   0.213   0.579  JUNK_wg_cy<42> (JUNK_OBUF)
+     OBUF:I->O                 2.571          JUNK_OBUF (JUNK)
+    ----------------------------------------
+    Total                      8.122ns (5.141ns logic, 2.981ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.794|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.22 secs
+ 
+--> 
+
+Total memory usage is 268960 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

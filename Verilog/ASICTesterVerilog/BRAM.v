@@ -26,10 +26,10 @@ module BRAM(CLK, EN_A, EN_B, WE_A, WE_B, DIN_A, DIN_B, ADDR_A, ADDR_B, DOUT_A, D
 	// Reading four adjacent memory addresses will output a full 128-bit vector.
 	// With dual-port read, two read cycles are needed to obtain a full 128-bit vector.
 	// To maximize block RAM space, the FPGA will fetch one output bit vector at a time and send
-	// it to the BeagleBone Black.
+	// it to the BeagleBone Black. (Slow but oh well.)
 	// Assuming a maximum of 196 template vectors, maximum number of input bit vectors is 4000.
 	parameter RAM_WIDTH = 32; 
-	parameter RAM_ADDR_BITS = 14;
+	parameter RAM_ADDR_BITS = 13;
 
 	// Port A
 	input CLK, EN_A, WE_A;
