@@ -32,7 +32,7 @@ parameter TC_INCR_FACTOR = 13'd128;
 // requires I/O pins...
 parameter INPUT_START_ADDR_A = 8'd64;
 parameter INPUT_START_ADDR_B = 8'd65;
-parameter INPUT_INCR_FACTOR = 8'd1;
+parameter INPUT_INCR_FACTOR = 8'd2;
 
 // State parameters.
 parameter IDLE = 0;

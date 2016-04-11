@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-08T20:58:05</DateModified>
+  <DateModified>2016-04-10T19:44:33</DateModified>
   <ModuleName>BRAM_CTRL</ModuleName>
   <SummaryTimeStamp>2016-04-08T20:51:06</SummaryTimeStamp>
   <SavedFilePath>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/iseconfig/BRAM_CTRL.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog\</ImplementationReportsDirectory>
   <DateInitialized>2016-04-08T20:50:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

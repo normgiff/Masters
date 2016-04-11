@@ -38,6 +38,10 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="BRAM_CTRL.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="BRAM_CTRL.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="BRAM_CTRL.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BRAM_CTRL_TB_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="BRAM_CTRL_TB_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="BRAM_CTRL_TB_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BRAM_CTRL_TB_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="BRAM_CTRL_WRAPPER_TEST.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="BRAM_CTRL_WRAPPER_TEST.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="BRAM_CTRL_WRAPPER_TEST.ngc"/>
@@ -170,8 +174,89 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1460339145" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1460339145">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339229" xil_pn:in_ck="4225376164544565965" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1460339229">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="BRAM.v"/>
+      <outfile xil_pn:name="BRAM_CTRL.v"/>
+      <outfile xil_pn:name="BRAM_CTRL_PARAMS.v"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB.v"/>
+      <outfile xil_pn:name="COUNTER_CTRL.v"/>
+      <outfile xil_pn:name="DB_FF_REG.v"/>
+      <outfile xil_pn:name="FF_REG.v"/>
+      <outfile xil_pn:name="FF_REG_TB.v"/>
+      <outfile xil_pn:name="UART_CTRL.v"/>
+      <outfile xil_pn:name="UART_RX.v"/>
+      <outfile xil_pn:name="UART_TX.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339186" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4947430948958316158" xil_pn:start_ts="1460339186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339186" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1527650949630151360" xil_pn:start_ts="1460339186">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339145" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="704881361850758938" xil_pn:start_ts="1460339145">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339231" xil_pn:in_ck="4225376164544565965" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1460339231">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="BRAM.v"/>
+      <outfile xil_pn:name="BRAM_CTRL.v"/>
+      <outfile xil_pn:name="BRAM_CTRL_PARAMS.v"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB.v"/>
+      <outfile xil_pn:name="COUNTER_CTRL.v"/>
+      <outfile xil_pn:name="DB_FF_REG.v"/>
+      <outfile xil_pn:name="FF_REG.v"/>
+      <outfile xil_pn:name="FF_REG_TB.v"/>
+      <outfile xil_pn:name="UART_CTRL.v"/>
+      <outfile xil_pn:name="UART_RX.v"/>
+      <outfile xil_pn:name="UART_TX.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339234" xil_pn:in_ck="4225376164544565965" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4620671040066922653" xil_pn:start_ts="1460339231">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB_beh.prj"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1460339234" xil_pn:in_ck="-585785694690019173" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1977588149270095814" xil_pn:start_ts="1460339234">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
     <transform xil_pn:end_ts="1460082903" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1460082903">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1460170633" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6049911167779464821" xil_pn:start_ts="1460170633">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -197,7 +282,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460170672" xil_pn:in_ck="6032475946133703900" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="771788190246466217" xil_pn:start_ts="1460170662">
+    <transform xil_pn:end_ts="1460341561" xil_pn:in_ck="6032475946133703900" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="771788190246466217" xil_pn:start_ts="1460341547">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -209,6 +294,8 @@
       <outfile xil_pn:name="BRAM_CTRL.stx"/>
       <outfile xil_pn:name="BRAM_CTRL.syr"/>
       <outfile xil_pn:name="BRAM_CTRL.xst"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB_beh.prj"/>
+      <outfile xil_pn:name="BRAM_CTRL_TB_stx_beh.prj"/>
       <outfile xil_pn:name="BRAM_CTRL_WRAPPER_TEST.prj"/>
       <outfile xil_pn:name="BRAM_CTRL_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>

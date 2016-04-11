@@ -170,7 +170,7 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 			end
 			
 			TEMPLATE_READ_2: begin
-				NS = CHECK_TEMPLATE;
+				NS = IDLE;
 			end
 			
 			FF_READ_0: begin
@@ -190,7 +190,7 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 			end
 			
 			FF_READ_4: begin
-				NS = CHECK_TEMPLATE;
+				NS = IDLE;
 			end
 			
 			CHECK_TEMPLATE: begin
@@ -559,19 +559,19 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 				end
 				
 				FF_READ_1: begin
-					READ_DATA_0[63:0] <= din;
+					READ_DATA_0[63:0] <= dout;
 				end
 				
 				FF_READ_2: begin
-					READ_DATA_0[127:64] <= din;
+					READ_DATA_0[127:64] <= dout;
 				end
 				
 				FF_READ_3: begin
-					READ_DATA_1[63:0] <= din;
+					READ_DATA_1[63:0] <= dout;
 				end
 				
 				FF_READ_4: begin
-					READ_DATA_1[127:64] <= din;
+					READ_DATA_1[127:64] <= dout;
 				end
 				
 			endcase
