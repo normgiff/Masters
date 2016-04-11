@@ -19,7 +19,6 @@
  * Outputs:
  * 	Q
  */ 
- 
 module DB_FF_REG(CLK, RST, CYCLE, LOAD, TRANSFER, FF, D, Q);
 	input CLK;
 	input RST;
@@ -47,10 +46,6 @@ module DB_FF_REG(CLK, RST, CYCLE, LOAD, TRANSFER, FF, D, Q);
 		end
 		else if (TRANSFER) begin
 			buffer_out <= buffer_data;
-		end
-		else begin
-			buffer_data <= buffer_data;
-			buffer_out <= buffer_out;
 		end
 	end
 

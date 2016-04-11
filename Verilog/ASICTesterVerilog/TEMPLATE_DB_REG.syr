@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
---> Reading design: DB_FF_REG.prj
+--> Reading design: TEMPLATE_DB_REG.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -40,16 +40,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "DB_FF_REG.prj"
+Input File Name                    : "TEMPLATE_DB_REG.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "DB_FF_REG"
+Output File Name                   : "TEMPLATE_DB_REG"
 Output Format                      : NGC
 Target Device                      : xc6slx16-3-csg324
 
 ---- Source Options
-Top Module Name                    : DB_FF_REG
+Top Module Name                    : TEMPLATE_DB_REG
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -105,52 +105,33 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\FF_REG.v" into library work
-Parsing module <FF_REG>.
-Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DB_FF_REG.v" into library work
-Parsing module <DB_FF_REG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TEMPLATE_DB_REG.v" into library work
+Parsing module <TEMPLATE_DB_REG>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <DB_FF_REG>.
-
-Elaborating module <FF_REG>.
+Elaborating module <TEMPLATE_DB_REG>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <DB_FF_REG>.
-    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DB_FF_REG.v".
-    Found 1-bit register for signal <buffer_out>.
-    Found 1-bit register for signal <buffer_data>.
+Synthesizing Unit <TEMPLATE_DB_REG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TEMPLATE_DB_REG.v".
+    Found 1-bit register for signal <internal_q>.
+    Found 1-bit register for signal <Q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <DB_FF_REG> synthesized.
-
-Synthesizing Unit <FF_REG>.
-    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\FF_REG.v".
-        R0 = 2'b00
-        R1 = 2'b01
-        DNRZ_L = 2'b10
-        DNRZ_T = 2'b11
-    Found 1-bit register for signal <T_reg>.
-    Found 1-bit register for signal <L_reg>.
-    Summary:
-	inferred   2 D-type flip-flop(s).
-	inferred   3 Multiplexer(s).
-Unit <FF_REG> synthesized.
+Unit <TEMPLATE_DB_REG> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 4
- 1-bit register                                        : 4
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 3
+# Registers                                            : 2
+ 1-bit register                                        : 2
 
 =========================================================================
 
@@ -163,10 +144,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 3
+# Registers                                            : 2
+ Flip-Flops                                            : 2
 
 =========================================================================
 
@@ -174,11 +153,11 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <DB_FF_REG> ...
+Optimizing unit <TEMPLATE_DB_REG> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block DB_FF_REG, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block TEMPLATE_DB_REG, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -186,8 +165,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
+# Registers                                            : 2
+ Flip-Flops                                            : 2
 
 =========================================================================
 
@@ -206,22 +185,18 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : DB_FF_REG.ngc
+Top Level Output File Name         : TEMPLATE_DB_REG.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2
+# BELS                             : 1
 #      LUT2                        : 1
-#      LUT6                        : 1
-# FlipFlops/Latches                : 4
-#      FD                          : 1
-#      FD_1                        : 1
+# FlipFlops/Latches                : 2
 #      FDRE                        : 2
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 8
-#      IBUF                        : 7
+# IO Buffers                       : 5
+#      IBUF                        : 4
 #      OBUF                        : 1
 
 Device utilization summary:
@@ -231,23 +206,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               4  out of  18224     0%  
- Number of Slice LUTs:                    2  out of   9112     0%  
-    Number used as Logic:                 2  out of   9112     0%  
+ Number of Slice Registers:               2  out of  18224     0%  
+ Number of Slice LUTs:                    1  out of   9112     0%  
+    Number used as Logic:                 1  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      6
-   Number with an unused Flip Flop:       2  out of      6    33%  
-   Number with an unused LUT:             4  out of      6    66%  
-   Number of fully used LUT-FF pairs:     0  out of      6     0%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:      3
+   Number with an unused Flip Flop:       1  out of      3    33%  
+   Number with an unused LUT:             2  out of      3    66%  
+   Number of fully used LUT-FF pairs:     0  out of      3     0%  
+   Number of unique control sets:         2
 
 IO Utilization: 
- Number of IOs:                           9
- Number of bonded IOBs:                   9  out of    232     3%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    232     2%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -271,7 +246,6 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 CLK                                | BUFGP                  | 2     |
-CYCLE                              | IBUF+BUFG              | 2     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -284,8 +258,8 @@ Speed Grade: -3
 
    Minimum period: 1.128ns (Maximum Frequency: 886.643MHz)
    Minimum input arrival time before clock: 3.047ns
-   Maximum output required time after clock: 4.627ns
-   Maximum combinational path delay: 5.519ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
@@ -297,17 +271,17 @@ Timing constraint: Default period analysis for Clock 'CLK'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               1.128ns (Levels of Logic = 0)
-  Source:            buffer_data (FF)
-  Destination:       buffer_out (FF)
+  Source:            internal_q (FF)
+  Destination:       Q (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: buffer_data to buffer_out
+  Data Path: internal_q to Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.447   0.579  buffer_data (buffer_data)
-     FDRE:D                    0.102          buffer_out
+     FDRE:C->Q             1   0.447   0.579  internal_q (internal_q)
+     FDRE:D                    0.102          Q
     ----------------------------------------
     Total                      1.128ns (0.549ns logic, 0.579ns route)
                                        (48.7% logic, 51.3% route)
@@ -318,78 +292,38 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
 -------------------------------------------------------------------------
 Offset:              3.047ns (Levels of Logic = 2)
   Source:            LOAD (PAD)
-  Destination:       buffer_out (FF)
+  Destination:       Q (FF)
   Destination Clock: CLK rising
 
-  Data Path: LOAD to buffer_out
+  Data Path: LOAD to Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.222   0.721  LOAD_IBUF (LOAD_IBUF)
      LUT2:I0->O            1   0.203   0.579  _n0011_inv1 (_n0011_inv)
-     FDRE:CE                   0.322          buffer_out
+     FDRE:CE                   0.322          Q
     ----------------------------------------
     Total                      3.047ns (1.747ns logic, 1.300ns route)
                                        (57.3% logic, 42.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CYCLE'
-  Total number of paths / destination ports: 2 / 1
--------------------------------------------------------------------------
-Offset:              4.627ns (Levels of Logic = 2)
-  Source:            ff_reg0/L_reg (FF)
-  Destination:       Q (PAD)
-  Source Clock:      CYCLE rising
-
-  Data Path: ff_reg0/L_reg to Q
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.827  ff_reg0/L_reg (ff_reg0/L_reg)
-     LUT6:I2->O            1   0.203   0.579  ff_reg0/Q1 (Q_OBUF)
-     OBUF:I->O                 2.571          Q_OBUF (Q)
-    ----------------------------------------
-    Total                      4.627ns (3.221ns logic, 1.406ns route)
-                                       (69.6% logic, 30.4% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.453ns (Levels of Logic = 2)
-  Source:            buffer_out (FF)
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Q (FF)
   Destination:       Q (PAD)
   Source Clock:      CLK rising
 
-  Data Path: buffer_out to Q
+  Data Path: Q to Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.447   0.651  buffer_out (buffer_out)
-     LUT6:I5->O            1   0.205   0.579  ff_reg0/Q1 (Q_OBUF)
+     FDRE:C->Q             1   0.447   0.579  Q (Q_OBUF)
      OBUF:I->O                 2.571          Q_OBUF (Q)
     ----------------------------------------
-    Total                      4.453ns (3.223ns logic, 1.230ns route)
-                                       (72.4% logic, 27.6% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3 / 1
--------------------------------------------------------------------------
-Delay:               5.519ns (Levels of Logic = 3)
-  Source:            FF<1> (PAD)
-  Destination:       Q (PAD)
-
-  Data Path: FF<1> to Q
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.944  FF_1_IBUF (FF_1_IBUF)
-     LUT6:I0->O            1   0.203   0.579  ff_reg0/Q1 (Q_OBUF)
-     OBUF:I->O                 2.571          Q_OBUF (Q)
-    ----------------------------------------
-    Total                      5.519ns (3.996ns logic, 1.523ns route)
-                                       (72.4% logic, 27.6% route)
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
 
@@ -404,23 +338,15 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 CLK            |    1.128|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock CYCLE
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |    1.199|         |    1.199|         |
----------------+---------+---------+---------+---------+
-
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.69 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.49 secs
  
 --> 
 
-Total memory usage is 257184 kilobytes
+Total memory usage is 256800 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
