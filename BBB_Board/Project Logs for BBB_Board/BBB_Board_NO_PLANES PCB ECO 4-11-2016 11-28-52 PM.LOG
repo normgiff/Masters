@@ -1,0 +1,20 @@
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=1uF-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=250 Ohm-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=CUSTOM_LOW-1
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=D1N4001-1
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=D1N4001-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=LM317-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=LM317-4
+Added Net: Name=CUSTOM_HIGH
+Added Pin To Net: NetName=CUSTOM_LOW Pin=1uF-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=250 Ohm-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=CUSTOM_HIGH-1
+Added Pin To Net: NetName=CUSTOM_LOW Pin=D1N4001-1
+Added Pin To Net: NetName=CUSTOM_LOW Pin=D1N4001-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=LM317-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=LM317-4
+Added Net: Name=CUSTOM_LOW
+Added Pin To Net: NetName=GLOBAL_5V_BACKUP Pin=DUT HIGH (BACKUP)-2
+Added Pin To Net: NetName=GLOBAL_5V_BACKUP Pin=DUT HIGH (BACKUP)-3
+Added Pin To Net: NetName=GLOBAL_5V_BACKUP Pin=CUSTOM_HIGH-3
+Added Net: Name=GLOBAL_5V_BACKUP

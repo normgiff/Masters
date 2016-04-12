@@ -1,0 +1,904 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4/11/2016</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:00:00 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc" class="file"><acronym title="X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc">X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">180</td></tr>
+</table>
+</td>
+</table><a name="ID0I2RDTWHNF5PGQKF3OF1TATRSKKMLIEQO31T3PFVAV0T123LA5YL"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJOMIC02DQC2ODC4S0NHHFAEZIC0EX3AD05G1WSBAT4DHLUHS5HZ">Clearance Constraint (Gap=6mil) (IsPad),(IsPad)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3KLB22LS0VMEFMASWNMD5OG24DJHLIZGF1IRMDC0GBTCGXKD42QK">Clearance Constraint (Gap=6mil) (isPad),(IsPad)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNMOQBQ2WYPRQKC1US0ATIQTUVJE3W1PMBO531PEN1LDDPFM3J0CK">Clearance Constraint (Gap=25mil) (IsPad),(IsVia)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDY1TCFVV45LFRTDMAJ1IHHK4SI2VFTFK4V4FMTERG0KDSLJIBGTO">Clearance Constraint (Gap=25mil) (IsPad),(IsVia)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDK0VMKEQIED3DDRIIQ4KFDHQ5RDW24PBRXRFXWDE5EILZ5NOK0J3E">Clearance Constraint (Gap=25mil) (IsVia),(IsVia)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4HPRJPV0KEH2M02RLK3XIUMRBKWXLFBOJMOIQXDNNKI4NMLYCJ4M">Clearance Constraint (Gap=25mil) (IsVia),(IsVia)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVTIY220PE41HJMIESAFSL3FH3B4DQ423E1BUSBPYLKWJQ0WV1Y1F">Clearance Constraint (Gap=8mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID00I3XFVUEKBK0ZEDE1YGL1XRDVFK01TZP5WY1HQKV2EAFUWG42K">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQGHUVGHNIDA4IGL5UGGTZKF5FLXI1OSIUAKHMLNIRIKK4YUPL2MK">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVOEOSIS3SIHAGQGFZLSZQUL5YKA42IQ1PVS014PVZTFNLLK3PNLL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZAJROK3OGOFAD1BEBFXPKIPFFNKYB3ATMW5BA0BU5SLOSTWPYBUJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">43</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGFUSG55OGVW3FNZTPAMRLKQEQOGNQ4YR5HINMKL52O1IJZZMCFJG">Minimum Annular Ring (Minimum=7mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDC3HR2CPHDNSRDOLFRW0OXBHTWIHXU14STJHN2MG1LP3G1NH15HQN">Hole Size Constraint (Min=15mil) (Max=150mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDG10V3HZPFX5ILJMIUCWFEG2UYJN4H4JR4QAHZXOQF0NHZTR0WOSL">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQDHSOJZIFENUMV4C2GFWAIENMJUQX5NETGD45RD0M2SH4L4AUF5D">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIMONSWHVYOMIKY4MNU3L23OEYPVEG54BFLR3ECC3QMKAYB3QF3BH">Minimum Solder Mask Sliver (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVO2HMRB0DDV5FWON1XGYVJ4IOFWAANWRAC01GDGLXETIX5JN2ZO">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">30</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHWFZJBCUBQJ2MEFRGKA3IW1LMTLXTQNLCLKROEG0G2GQIP3RE5B">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDC2WGA1X0DUONKZJXMQHZJVZANLJSBV1CL02YWNFFXWVD11NK0BFH">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">107</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEUV3DFBF4F5CP3E3XMRB5CC4QMMBWXF3U10MWRDUUQRKU2MLWPDK">Clearance Constraint (Gap=10mil) (IsPad OR IsVia),(IsTrack)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">180</td>
+</tr>
+</table><br><a name="IDZAJROK3OGOFAD1BEBFXPKIPFFNKYB3ATMW5BA0BU5SLOSTWPYBUJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11332.204mil|Location2.X=11532.204mil|Location1.Y=4747.204mil|Location2.Y=4947.204mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11332.204mil|Location2.X=11532.204mil|Location1.Y=4747.204mil|Location2.Y=4947.204mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B124 Between Track (9432.204mil,1847.204mil)(9818.204mil,1847.204mil) on Bottom Layer And Track (9432.204mil,1847.204mil)(9576.812mil,1847.204mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5186mil|Location2.X=5386mil|Location1.Y=5500mil|Location2.Y=5700mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5186mil|Location2.X=5386mil|Location1.Y=5500mil|Location2.Y=5700mil|Absolute=True">Un-Routed Net Constraint: Net BBB_MMC1_DAT5 Between Track (3286mil,2600mil)(3291mil,2605mil) on Bottom Layer And Track (3236mil,2550mil)(3286mil,2600mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5018mil|Location2.X=5219mil|Location1.Y=4758mil|Location2.Y=4770.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5018mil|Location2.X=5219mil|Location1.Y=4758mil|Location2.Y=4770.686mil|Absolute=True">Un-Routed Net Constraint: Net BBB_LCD_DATA10 Between Track (3118mil,1858mil)(3119mil,1859mil) on Bottom Layer And Track (3002.314mil,1554mil)(3119mil,1670.686mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4990mil|Location2.X=5198.908mil|Location1.Y=4357mil|Location2.Y=4600mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4990mil|Location2.X=5198.908mil|Location1.Y=4357mil|Location2.Y=4600mil|Absolute=True">Un-Routed Net Constraint: Net BBB_LCD_DATA3 Between Track (3090mil,1457mil)(3117mil,1457mil) on Bottom Layer And Track (3098.908mil,1095.908mil)(3098.908mil,1500mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2621mil|Location2.X=2821mil|Location1.Y=5968mil|Location2.Y=6168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2621mil|Location2.X=2821mil|Location1.Y=5968mil|Location2.Y=6168mil|Absolute=True">Un-Routed Net Constraint: Net BBB_GPIO_45 Between Track (721mil,3068mil)(725mil,3064mil) on Bottom Layer And Track (721mil,3068mil)(721mil,3304mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8515.158mil|Location2.X=8715.158mil|Location1.Y=3954.158mil|Location2.Y=4154.158mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8515.158mil|Location2.X=8715.158mil|Location1.Y=3954.158mil|Location2.Y=4154.158mil|Absolute=True">Un-Routed Net Constraint: Net EN Between Track (6615.158mil,1054.158mil)(6620mil,1059mil) on Bottom Layer And Track (6615.158mil,986.812mil)(6615.158mil,1054.158mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5389mil|Location2.X=5804mil|Location1.Y=4356mil|Location2.Y=4654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5389mil|Location2.X=5804mil|Location1.Y=4356mil|Location2.Y=4654mil|Absolute=True">Un-Routed Net Constraint: Net SCLK_W_U_Power_Control1 Between Track (3383mil,1350mil)(3489mil,1456mil) on Bottom Layer And Track (3704mil,1554mil)(3704mil,1680mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9640.18mil|Location2.X=9840.18mil|Location1.Y=3107.82mil|Location2.Y=3307.82mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9640.18mil|Location2.X=9840.18mil|Location1.Y=3107.82mil|Location2.Y=3307.82mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B47 Between Track (7740.18mil,207.82mil)(8180mil,207.82mil) on Top Layer And Track (7735mil,213mil)(7740.18mil,207.82mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10211mil|Location2.X=10511.768mil|Location1.Y=3188mil|Location2.Y=3388mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10211mil|Location2.X=10511.768mil|Location1.Y=3188mil|Location2.Y=3388mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B39 Between Track (8290mil,309mil)(8311mil,288mil) on Bottom Layer And Track (8411.768mil,288mil)(8430.684mil,269.084mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10070mil|Location2.X=10270mil|Location1.Y=3133mil|Location2.Y=3333mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10070mil|Location2.X=10270mil|Location1.Y=3133mil|Location2.Y=3333mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B36 Between Track (8170mil,233mil)(9576.764mil,233mil) on Bottom Layer And Track (8053.786mil,233mil)(8170mil,233mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10979mil|Location2.X=11179mil|Location1.Y=6636mil|Location2.Y=6836mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10979mil|Location2.X=11179mil|Location1.Y=6636mil|Location2.Y=6836mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B27 Between Track (9079mil,3736mil)(9084mil,3731mil) on Bottom Layer And Track (9079mil,3736mil)(9079mil,4140mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11946mil|Location2.X=12146mil|Location1.Y=7610.658mil|Location2.Y=7810.658mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11946mil|Location2.X=12146mil|Location1.Y=7610.658mil|Location2.Y=7810.658mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B8 Between Track (10046mil,4710.658mil)(10079mil,4677.658mil) on Top Layer And Track (10046mil,4710.658mil)(10052.342mil,4710.658mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11664mil|Location2.X=11986mil|Location1.Y=7070mil|Location2.Y=7270mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11664mil|Location2.X=11986mil|Location1.Y=7070mil|Location2.Y=7270mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B8 Between Track (9754mil,4180mil)(9764mil,4170mil) on Bottom Layer And Via (9886mil,4170mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8823mil|Location2.X=9023mil|Location1.Y=7255mil|Location2.Y=7455mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8823mil|Location2.X=9023mil|Location1.Y=7255mil|Location2.Y=7455mil|Absolute=True">Un-Routed Net Constraint: Net OVCC_B1 Between Track (6923mil,4355mil)(6923mil,4594mil) on Top Layer And Track (6923mil,4355mil)(6928.294mil,4349.706mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11734.642mil|Location2.X=12634.066mil|Location1.Y=6793mil|Location2.Y=6993mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11734.642mil|Location2.X=12634.066mil|Location1.Y=6793mil|Location2.Y=6993mil|Absolute=True">Un-Routed Net Constraint: Net GLOBAL_HIGH_POWER Between Track (9818.91mil,3877.268mil)(9834.642mil,3893mil) on Bottom Layer And Track (10534.066mil,3893mil)(10544.066mil,3883mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8730mil|Location2.X=8930mil|Location1.Y=3755.338mil|Location2.Y=3955.338mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8730mil|Location2.X=8930mil|Location1.Y=3755.338mil|Location2.Y=3955.338mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (6830mil,855.338mil)(6899mil,924.338mil) on Top Layer And Track (6674.662mil,700mil)(6830mil,855.338mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8712mil|Location2.X=8924mil|Location1.Y=4282mil|Location2.Y=4650mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8712mil|Location2.X=8924mil|Location1.Y=4282mil|Location2.Y=4650mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (6682mil,1382mil)(6812mil,1382mil) on Top Layer And Track (6824mil,1550mil)(6840mil,1550mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11409.024mil|Location2.X=11609.024mil|Location1.Y=4823.976mil|Location2.Y=5023.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11409.024mil|Location2.X=11609.024mil|Location1.Y=4823.976mil|Location2.Y=5023.976mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B121 Between Track (9509.024mil,1923.976mil)(9576.812mil,1923.976mil) on Top Layer And Track (9500.976mil,1923.976mil)(9509.024mil,1923.976mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12775mil|Location2.X=12975mil|Location1.Y=6638mil|Location2.Y=6838mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12775mil|Location2.X=12975mil|Location1.Y=6638mil|Location2.Y=6838mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B107 Between Track (10875mil,3738mil)(10875mil,3772mil) on Bottom Layer And Track (10874mil,3737mil)(10875mil,3738mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11210mil|Location2.X=11410mil|Location1.Y=3768mil|Location2.Y=3968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11210mil|Location2.X=11410mil|Location1.Y=3768mil|Location2.Y=3968mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B101 Between Track (9310mil,868mil)(9315mil,868mil) on Bottom Layer And Track (9310mil,626mil)(9310mil,868mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12011.188mil|Location2.X=12240.792mil|Location1.Y=3711mil|Location2.Y=4004mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12011.188mil|Location2.X=12240.792mil|Location1.Y=3711mil|Location2.Y=4004mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B98 Between Track (10047.792mil,811mil)(10111.188mil,811mil) on Bottom Layer And Track (10140.792mil,904mil)(10245mil,904mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12022.766mil|Location2.X=12261.078mil|Location1.Y=3693mil|Location2.Y=3986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12022.766mil|Location2.X=12261.078mil|Location1.Y=3693mil|Location2.Y=3986mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B97 Between Track (9841.212mil,793mil)(10122.766mil,793mil) on Bottom Layer And Track (10161.078mil,886mil)(10214mil,886mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12126mil|Location2.X=12551.476mil|Location1.Y=3774mil|Location2.Y=3973mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12126mil|Location2.X=12551.476mil|Location1.Y=3774mil|Location2.Y=3973mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B97 Between Track (10214mil,886mil)(10226mil,874mil) on Bottom Layer And Track (10451.476mil,873mil)(10452.476mil,874mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12460mil|Location2.X=12660mil|Location1.Y=3847.342mil|Location2.Y=4047.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12460mil|Location2.X=12660mil|Location1.Y=3847.342mil|Location2.Y=4047.342mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B96 Between Track (10560mil,947.342mil)(10577.658mil,965mil) on Top Layer And Track (10560mil,942mil)(10560mil,947.342mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9254.976mil|Location2.X=9454.976mil|Location1.Y=5263.976mil|Location2.Y=5463.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9254.976mil|Location2.X=9454.976mil|Location1.Y=5263.976mil|Location2.Y=5463.976mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B86 Between Track (7354.976mil,2363.976mil)(7443.19mil,2363.976mil) on Top Layer And Track (7354.976mil,2361mil)(7354.976mil,2363.976mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9267mil|Location2.X=9467mil|Location1.Y=3728mil|Location2.Y=3928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9267mil|Location2.X=9467mil|Location1.Y=3728mil|Location2.Y=3928mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B83 Between Track (7367mil,828mil)(7383mil,812mil) on Bottom Layer And Track (7367mil,828mil)(7367mil,2132.6mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8381.614mil|Location2.X=8581.614mil|Location1.Y=6954.386mil|Location2.Y=7154.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8381.614mil|Location2.X=8581.614mil|Location1.Y=6954.386mil|Location2.Y=7154.386mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B66 Between Track (6481.614mil,3986.812mil)(6481.614mil,4054.386mil) on Top Layer And Track (6481.614mil,4054.386mil)(6524.228mil,4097mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8763mil|Location2.X=8963mil|Location1.Y=4703mil|Location2.Y=4903mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8763mil|Location2.X=8963mil|Location1.Y=4703mil|Location2.Y=4903mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B58 Between Track (6863mil,1803mil)(6863mil,1861mil) on Bottom Layer And Track (6863mil,1720mil)(6863mil,1803mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10572mil|Location2.X=10772mil|Location1.Y=5479mil|Location2.Y=5679mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10572mil|Location2.X=10772mil|Location1.Y=5479mil|Location2.Y=5679mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B54 Between Track (8668mil,2575mil)(8672mil,2579mil) on Top Layer And Track (8672mil,2579mil)(8737mil,2579mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8824mil|Location2.X=9024mil|Location1.Y=5715mil|Location2.Y=5915mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8824mil|Location2.X=9024mil|Location1.Y=5715mil|Location2.Y=5915mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B54 Between Track (6924mil,2815mil)(6929mil,2820mil) on Bottom Layer And Track (6924mil,2815mil)(6974mil,2865mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9137.314mil|Location2.X=9337.314mil|Location1.Y=4798mil|Location2.Y=4998mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9137.314mil|Location2.X=9337.314mil|Location1.Y=4798mil|Location2.Y=4998mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B42 Between Track (7237.314mil,1898mil)(7238mil,1897.314mil) on Top Layer And Track (6860.686mil,1898mil)(7237.314mil,1898mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12675mil|Location2.X=12875mil|Location1.Y=7329mil|Location2.Y=7529mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12675mil|Location2.X=12875mil|Location1.Y=7329mil|Location2.Y=7529mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B38 Between Track (10759mil,4413mil)(10775mil,4429mil) on Top Layer And Track (10775mil,4429mil)(10779mil,4425mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12367.114mil|Location2.X=12712.544mil|Location1.Y=7097mil|Location2.Y=7319mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12367.114mil|Location2.X=12712.544mil|Location1.Y=7097mil|Location2.Y=7319mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B35 Between Track (10467.114mil,4197mil)(10492.114mil,4172mil) on Bottom Layer And Track (10612.544mil,4219mil)(10659.544mil,4172mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11695mil|Location2.X=12547.114mil|Location1.Y=7079mil|Location2.Y=7279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11695mil|Location2.X=12547.114mil|Location1.Y=7079mil|Location2.Y=7279mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B34 Between Track (9772mil,4202mil)(9795mil,4179mil) on Bottom Layer And Track (10447.114mil,4179mil)(10475.114mil,4151mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11404mil|Location2.X=11604mil|Location1.Y=6735mil|Location2.Y=6935mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11404mil|Location2.X=11604mil|Location1.Y=6735mil|Location2.Y=6935mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B28 Between Track (9500mil,3831mil)(9504mil,3835mil) on Bottom Layer And Track (9504mil,3835mil)(9504mil,4647mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10380mil|Location2.X=10580mil|Location1.Y=6418mil|Location2.Y=6618mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10380mil|Location2.X=10580mil|Location1.Y=6418mil|Location2.Y=6618mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B23 Between Track (8480mil,3518mil)(8539.566mil,3458.434mil) on Top Layer And Track (8326.08mil,3671.92mil)(8480mil,3518mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10771mil|Location2.X=10971mil|Location1.Y=6661mil|Location2.Y=6861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10771mil|Location2.X=10971mil|Location1.Y=6661mil|Location2.Y=6861mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B5 Between Track (8869mil,3763mil)(8871mil,3761mil) on Top Layer And Track (8477mil,3761mil)(8871mil,3761mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10897mil|Location2.X=11097mil|Location1.Y=7291.314mil|Location2.Y=7491.314mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10897mil|Location2.X=11097mil|Location1.Y=7291.314mil|Location2.Y=7491.314mil|Absolute=True">Un-Routed Net Constraint: Net IVL_B4 Between Track (8997mil,4391.314mil)(9000mil,4388.314mil) on Bottom Layer And Track (8997mil,4391.314mil)(8997mil,4550mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9029.842mil|Location2.X=9229.842mil|Location1.Y=5315.158mil|Location2.Y=5515.158mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9029.842mil|Location2.X=9229.842mil|Location1.Y=5315.158mil|Location2.Y=5515.158mil|Absolute=True">Un-Routed Net Constraint: Net GLOBAL_LOW_POWER Between Track (7129.842mil,2415.158mil)(7216mil,2415.158mil) on Top Layer And Track (7125mil,2420mil)(7129.842mil,2415.158mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12014mil|Location2.X=12303.342mil|Location1.Y=7347.342mil|Location2.Y=7512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12014mil|Location2.X=12303.342mil|Location1.Y=7347.342mil|Location2.Y=7512mil|Absolute=True">Un-Routed Net Constraint: Net GLOBAL_LOW_POWER Between Track (10113.19mil,4447.342mil)(10114mil,4447.342mil) on Top Layer And Track (10203.342mil,4412mil)(10230mil,4412mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6500mil|Location2.X=6700mil|Location1.Y=7090mil|Location2.Y=7290mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6500mil|Location2.X=6700mil|Location1.Y=7090mil|Location2.Y=7290mil|Absolute=True">Un-Routed Net Constraint: Net 12V_W_U_Power_Control1 Between Track (4490mil,4080mil)(4600mil,4190mil) on Bottom Layer And Track (4600mil,4190mil)(4600mil,4810mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11095.302mil|Location2.X=11295.302mil|Location1.Y=6205.302mil|Location2.Y=6405.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11095.302mil|Location2.X=11295.302mil|Location1.Y=6205.302mil|Location2.Y=6405.302mil|Absolute=True">Un-Routed Net Constraint: Net GLOBAL_3V3 Between Track (9190mil,3305.302mil)(9195.302mil,3305.302mil) on Bottom Layer And Track (9195.302mil,3305.302mil)(9224mil,3276.604mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8622mil|Location2.X=8822mil|Location1.Y=3709mil|Location2.Y=3909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8622mil|Location2.X=8822mil|Location1.Y=3709mil|Location2.Y=3909mil|Absolute=True">Un-Routed Net Constraint: Net GLOBAL_3V3 Between Track (6656.5mil,809mil)(6722mil,809mil) on Bottom Layer And Track (6722mil,809mil)(6809.118mil,809mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVO2HMRB0DDV5FWON1XGYVJ4IOFWAANWRAC01GDGLXETIX5JN2ZO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5381.186mil|Location2.X=5392.436mil|Location1.Y=4784.965mil|Location2.Y=4796.215mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5381.186mil|Location2.X=5392.436mil|Location1.Y=4784.965mil|Location2.Y=4796.215mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (3386.811mil,1805.315mil) on Top Overlay And Pad AD5293-1(3386.812mil,1776.772mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5607.564mil|Location2.X=5618.814mil|Location1.Y=6103.785mil|Location2.Y=6115.035mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5607.564mil|Location2.X=5618.814mil|Location1.Y=6103.785mil|Location2.Y=6115.035mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (3613.189mil,3094.685mil) on Top Overlay And Pad AD5293-1(3613.19mil,3123.228mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11571.186mil|Location2.X=11582.436mil|Location1.Y=5783.35mil|Location2.Y=5794.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11571.186mil|Location2.X=11582.436mil|Location1.Y=5783.35mil|Location2.Y=5794.6mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (9576.811mil,2803.701mil) on Top Overlay And Pad VT11-1(9576.812mil,2775.158mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12585.85mil|Location2.X=12597.1mil|Location1.Y=4007.564mil|Location2.Y=4018.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12585.85mil|Location2.X=12597.1mil|Location1.Y=4007.564mil|Location2.Y=4018.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (10606.201mil,1013.189mil) on Top Overlay And Pad VT4-1(10577.658mil,1013.19mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9437.564mil|Location2.X=9448.814mil|Location1.Y=5165.4mil|Location2.Y=5176.65mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9437.564mil|Location2.X=9448.814mil|Location1.Y=5165.4mil|Location2.Y=5176.65mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (7443.189mil,2156.299mil) on Top Overlay And Pad VT15-1(7443.19mil,2184.842mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8385.399mil|Location2.X=8396.649mil|Location1.Y=6981.186mil|Location2.Y=6992.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8385.399mil|Location2.X=8396.649mil|Location1.Y=6981.186mil|Location2.Y=6992.436mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (6376.299mil,3986.811mil) on Top Overlay And Pad VT8-1(6404.842mil,3986.812mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11073.35mil|Location2.X=11084.6mil|Location1.Y=4607.564mil|Location2.Y=4618.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11073.35mil|Location2.X=11084.6mil|Location1.Y=4607.564mil|Location2.Y=4618.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (9093.701mil,1613.189mil) on Top Overlay And Pad VT13-1(9065.158mil,1613.19mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12107.564mil|Location2.X=12118.814mil|Location1.Y=3402.899mil|Location2.Y=3414.149mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12107.564mil|Location2.X=12118.814mil|Location1.Y=3402.899mil|Location2.Y=3414.149mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (10113.189mil,393.799mil) on Top Overlay And Pad VT5-1(10113.19mil,422.342mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10315.399mil|Location2.X=10326.649mil|Location1.Y=6381.186mil|Location2.Y=6392.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10315.399mil|Location2.X=10326.649mil|Location1.Y=6381.186mil|Location2.Y=6392.436mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (8306.299mil,3386.811mil) on Top Overlay And Pad VT9-1(8334.842mil,3386.812mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8781.186mil|Location2.X=8792.436mil|Location1.Y=7685.85mil|Location2.Y=7697.1mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8781.186mil|Location2.X=8792.436mil|Location1.Y=7685.85mil|Location2.Y=7697.1mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (6786.811mil,4706.201mil) on Top Overlay And Pad VT1-1(6786.812mil,4677.658mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11571.186mil|Location2.X=11582.436mil|Location1.Y=4983.35mil|Location2.Y=4994.6mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11571.186mil|Location2.X=11582.436mil|Location1.Y=4983.35mil|Location2.Y=4994.6mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (9576.811mil,2003.701mil) on Top Overlay And Pad VT12-1(9576.812mil,1975.158mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12585.85mil|Location2.X=12597.1mil|Location1.Y=7207.564mil|Location2.Y=7218.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12585.85mil|Location2.X=12597.1mil|Location1.Y=7207.564mil|Location2.Y=7218.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (10606.201mil,4213.189mil) on Top Overlay And Pad VT3-1(10577.658mil,4213.19mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9437.564mil|Location2.X=9448.814mil|Location1.Y=6040.4mil|Location2.Y=6051.65mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9437.564mil|Location2.X=9448.814mil|Location1.Y=6040.4mil|Location2.Y=6051.65mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (7443.189mil,3031.299mil) on Top Overlay And Pad VT16-1(7443.19mil,3059.842mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8365.399mil|Location2.X=8376.649mil|Location1.Y=3981.186mil|Location2.Y=3992.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8365.399mil|Location2.X=8376.649mil|Location1.Y=3981.186mil|Location2.Y=3992.436mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (6356.299mil,986.811mil) on Top Overlay And Pad VT7-1(6384.842mil,986.812mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10273.35mil|Location2.X=10284.6mil|Location1.Y=4607.564mil|Location2.Y=4618.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10273.35mil|Location2.X=10284.6mil|Location1.Y=4607.564mil|Location2.Y=4618.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (8293.701mil,1613.189mil) on Top Overlay And Pad VT14-1(8265.158mil,1613.19mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9007.564mil|Location2.X=9018.814mil|Location1.Y=3402.899mil|Location2.Y=3414.149mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9007.564mil|Location2.X=9018.814mil|Location1.Y=3402.899mil|Location2.Y=3414.149mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (7013.189mil,393.799mil) on Top Overlay And Pad VT6-1(7013.19mil,422.342mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11185.399mil|Location2.X=11196.649mil|Location1.Y=6381.186mil|Location2.Y=6392.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11185.399mil|Location2.X=11196.649mil|Location1.Y=6381.186mil|Location2.Y=6392.436mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (9176.299mil,3386.811mil) on Top Overlay And Pad VT10-1(9204.842mil,3386.812mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11881.186mil|Location2.X=11892.436mil|Location1.Y=7685.85mil|Location2.Y=7697.1mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11881.186mil|Location2.X=11892.436mil|Location1.Y=7685.85mil|Location2.Y=7697.1mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.766mil &lt; 10mil) Between Arc (9886.811mil,4706.201mil) on Top Overlay And Pad VT2-1(9886.812mil,4677.658mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.766mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4057.958mil|Location2.X=4069.208mil|Location1.Y=3285.615mil|Location2.Y=3296.865mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4057.958mil|Location2.X=4069.208mil|Location1.Y=3285.615mil|Location2.Y=3296.865mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.646mil &lt; 10mil) Between Track (1831.496mil,300mil)(2168.504mil,300mil) on Top Overlay And Pad FPGA RESET-1(2100mil,250mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [9.646mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4057.958mil|Location2.X=4069.208mil|Location1.Y=3203.135mil|Location2.Y=3214.385mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4057.958mil|Location2.X=4069.208mil|Location1.Y=3203.135mil|Location2.Y=3214.385mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.646mil &lt; 10mil) Between Track (1831.496mil,200mil)(2168.504mil,200mil) on Top Overlay And Pad FPGA RESET-1(2100mil,250mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [9.646mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3894.375mil|Location2.X=3905.625mil|Location1.Y=3285.671mil|Location2.Y=3296.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3894.375mil|Location2.X=3905.625mil|Location1.Y=3285.671mil|Location2.Y=3296.921mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.533mil &lt; 10mil) Between Track (1831.496mil,300mil)(2168.504mil,300mil) on Top Overlay And Pad FPGA RESET-2(1900mil,250mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [9.533mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3894.375mil|Location2.X=3905.625mil|Location1.Y=3203.079mil|Location2.Y=3214.329mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3894.375mil|Location2.X=3905.625mil|Location1.Y=3203.079mil|Location2.Y=3214.329mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.533mil &lt; 10mil) Between Track (1831.496mil,200mil)(2168.504mil,200mil) on Top Overlay And Pad FPGA RESET-2(1900mil,250mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [9.533mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6031.383mil|Location2.X=6042.633mil|Location1.Y=6131.382mil|Location2.Y=6142.632mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6031.383mil|Location2.X=6042.633mil|Location1.Y=6131.382mil|Location2.Y=6142.632mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,3144.882mil)(4231.89mil,3144.882mil) on Top Overlay And Pad LM317-4(4100mil,3085.826mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5984.138mil|Location2.X=5995.388mil|Location1.Y=6257.367mil|Location2.Y=6268.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5984.138mil|Location2.X=5995.388mil|Location1.Y=6257.367mil|Location2.Y=6268.617mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,3255.118mil)(4231.89mil,3255.118mil) on Top Overlay And Pad LM317-3(4009.448mil,3314.174mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.69mil|Location2.X=6085.94mil|Location1.Y=6257.367mil|Location2.Y=6268.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.69mil|Location2.X=6085.94mil|Location1.Y=6257.367mil|Location2.Y=6268.617mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,3255.118mil)(4231.89mil,3255.118mil) on Top Overlay And Pad LM317-2(4100mil,3314.174mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6165.242mil|Location2.X=6176.492mil|Location1.Y=6257.367mil|Location2.Y=6268.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6165.242mil|Location2.X=6176.492mil|Location1.Y=6257.367mil|Location2.Y=6268.617mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,3255.118mil)(4231.89mil,3255.118mil) on Top Overlay And Pad LM317-1(4190.552mil,3314.174mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6031.383mil|Location2.X=6042.633mil|Location1.Y=4757.367mil|Location2.Y=4768.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6031.383mil|Location2.X=6042.633mil|Location1.Y=4757.367mil|Location2.Y=4768.617mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,1755.118mil)(4231.89mil,1755.118mil) on Top Overlay And Pad LM317-4(4100mil,1814.174mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6165.242mil|Location2.X=6176.492mil|Location1.Y=4631.382mil|Location2.Y=4642.632mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6165.242mil|Location2.X=6176.492mil|Location1.Y=4631.382mil|Location2.Y=4642.632mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,1644.882mil)(4231.89mil,1644.882mil) on Top Overlay And Pad LM317-3(4190.552mil,1585.826mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.69mil|Location2.X=6085.94mil|Location1.Y=4631.382mil|Location2.Y=4642.632mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6074.69mil|Location2.X=6085.94mil|Location1.Y=4631.382mil|Location2.Y=4642.632mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,1644.882mil)(4231.89mil,1644.882mil) on Top Overlay And Pad LM317-2(4100mil,1585.826mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5984.138mil|Location2.X=5995.388mil|Location1.Y=4631.382mil|Location2.Y=4642.632mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5984.138mil|Location2.X=5995.388mil|Location1.Y=4631.382mil|Location2.Y=4642.632mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.875mil &lt; 10mil) Between Track (3968.11mil,1644.882mil)(4231.89mil,1644.882mil) on Top Overlay And Pad LM317-1(4009.448mil,1585.826mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.875mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDC2WGA1X0DUONKZJXMQHZJVZANLJSBV1CL02YWNFFXWVD11NK0BFH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11863.5mil|Location2.X=11917.566mil|Location1.Y=7147.5mil|Location2.Y=7232.687mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11863.5mil|Location2.X=11917.566mil|Location1.Y=7147.5mil|Location2.Y=7232.687mil|Absolute=True">Net Antennae: Via (9886mil,4170mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11384.5mil|Location2.X=11408.089mil|Location1.Y=5473.5mil|Location2.Y=5507.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11384.5mil|Location2.X=11408.089mil|Location1.Y=5473.5mil|Location2.Y=5507.699mil|Absolute=True">Net Antennae: Track (9393mil,2482mil)(9414mil,2482mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7372.5mil|Location2.X=7396.089mil|Location1.Y=6569.5mil|Location2.Y=6603.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7372.5mil|Location2.X=7396.089mil|Location1.Y=6569.5mil|Location2.Y=6603.699mil|Absolute=True">Net Antennae: Track (5381mil,3578mil)(5448mil,3578mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5795.5mil|Location2.X=5819.089mil|Location1.Y=4691.5mil|Location2.Y=4725.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5795.5mil|Location2.X=5819.089mil|Location1.Y=4691.5mil|Location2.Y=4725.699mil|Absolute=True">Net Antennae: Track (3804mil,1700mil)(3844mil,1660mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9391.5mil|Location2.X=9415.089mil|Location1.Y=5388.5mil|Location2.Y=5422.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9391.5mil|Location2.X=9415.089mil|Location1.Y=5388.5mil|Location2.Y=5422.699mil|Absolute=True">Net Antennae: Track (7386mil,2411mil)(7400mil,2397mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12127.5mil|Location2.X=12151.089mil|Location1.Y=6744.5mil|Location2.Y=6778.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12127.5mil|Location2.X=12151.089mil|Location1.Y=6744.5mil|Location2.Y=6778.699mil|Absolute=True">Net Antennae: Track (9985mil,3753mil)(10136mil,3753mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9540.5mil|Location2.X=9564.089mil|Location1.Y=5383.5mil|Location2.Y=5417.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9540.5mil|Location2.X=9564.089mil|Location1.Y=5383.5mil|Location2.Y=5417.699mil|Absolute=True">Net Antennae: Track (7549mil,2392mil)(7562mil,2379mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9121.342mil|Location2.X=9144.931mil|Location1.Y=5406.658mil|Location2.Y=5440.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9121.342mil|Location2.X=9144.931mil|Location1.Y=5406.658mil|Location2.Y=5440.858mil|Absolute=True">Net Antennae: Track (7129.842mil,2415.158mil)(7152mil,2393mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11491.5mil|Location2.X=11515.089mil|Location1.Y=6822.5mil|Location2.Y=6856.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11491.5mil|Location2.X=11515.089mil|Location1.Y=6822.5mil|Location2.Y=6856.699mil|Absolute=True">Net Antennae: Track (9500mil,3831mil)(9561mil,3831mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12524.5mil|Location2.X=12548.089mil|Location1.Y=7191.5mil|Location2.Y=7225.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12524.5mil|Location2.X=12548.089mil|Location1.Y=7191.5mil|Location2.Y=7225.699mil|Absolute=True">Net Antennae: Track (10533mil,4200mil)(10582mil,4151mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12279.5mil|Location2.X=12303.089mil|Location1.Y=3599.5mil|Location2.Y=3633.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12279.5mil|Location2.X=12303.089mil|Location1.Y=3599.5mil|Location2.Y=3633.7mil|Absolute=True">Net Antennae: Track (10288mil,608mil)(10328mil,608mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8768.5mil|Location2.X=8792.089mil|Location1.Y=4001.5mil|Location2.Y=4035.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8768.5mil|Location2.X=8792.089mil|Location1.Y=4001.5mil|Location2.Y=4035.7mil|Absolute=True">Net Antennae: Track (6777mil,1010mil)(6845mil,1078mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12102.688mil|Location2.X=12126.277mil|Location1.Y=3802.5mil|Location2.Y=3836.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12102.688mil|Location2.X=12126.277mil|Location1.Y=3802.5mil|Location2.Y=3836.7mil|Absolute=True">Net Antennae: Track (10047.792mil,811mil)(10111.188mil,811mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12094.798mil|Location2.X=12118.387mil|Location1.Y=3859.5mil|Location2.Y=3893.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12094.798mil|Location2.X=12118.387mil|Location1.Y=3859.5mil|Location2.Y=3893.7mil|Absolute=True">Net Antennae: Track (10077mil,868mil)(10103.298mil,868mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11306.5mil|Location2.X=11330.089mil|Location1.Y=3859.5mil|Location2.Y=3893.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11306.5mil|Location2.X=11330.089mil|Location1.Y=3859.5mil|Location2.Y=3893.7mil|Absolute=True">Net Antennae: Track (9315mil,868mil)(10077mil,868mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5725.5mil|Location2.X=5749.089mil|Location1.Y=4692.5mil|Location2.Y=4726.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5725.5mil|Location2.X=5749.089mil|Location1.Y=4692.5mil|Location2.Y=4726.699mil|Absolute=True">Net Antennae: Track (3734mil,1419mil)(3734mil,1701mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12525.566mil|Location2.X=12549.155mil|Location1.Y=6884.5mil|Location2.Y=6918.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12525.566mil|Location2.X=12549.155mil|Location1.Y=6884.5mil|Location2.Y=6918.699mil|Absolute=True">Net Antennae: Track (10534.066mil,3893mil)(10544.066mil,3883mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11826.142mil|Location2.X=11849.731mil|Location1.Y=6884.5mil|Location2.Y=6918.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11826.142mil|Location2.X=11849.731mil|Location1.Y=6884.5mil|Location2.Y=6918.699mil|Absolute=True">Net Antennae: Track (9818.91mil,3877.268mil)(9834.642mil,3893mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10348.584mil|Location2.X=10372.173mil|Location1.Y=3279.5mil|Location2.Y=3313.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10348.584mil|Location2.X=10372.173mil|Location1.Y=3279.5mil|Location2.Y=3313.7mil|Absolute=True">Net Antennae: Track (8321.084mil,324mil)(8357.084mil,288mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10321.416mil|Location2.X=10345.005mil|Location1.Y=3260.584mil|Location2.Y=3294.784mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10321.416mil|Location2.X=10345.005mil|Location1.Y=3260.584mil|Location2.Y=3294.784mil|Absolute=True">Net Antennae: Track (8311mil,288mil)(8329.916mil,269.084mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3417.5mil|Location2.X=3441.089mil|Location1.Y=5337.5mil|Location2.Y=5371.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3417.5mil|Location2.X=3441.089mil|Location1.Y=5337.5mil|Location2.Y=5371.699mil|Absolute=True">Net Antennae: Track (1351mil,2346mil)(1426mil,2346mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8713.5mil|Location2.X=8737.089mil|Location1.Y=3800.5mil|Location2.Y=3834.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8713.5mil|Location2.X=8737.089mil|Location1.Y=3800.5mil|Location2.Y=3834.7mil|Absolute=True">Net Antennae: Track (6656.5mil,809mil)(6722mil,809mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6591.5mil|Location2.X=6615.089mil|Location1.Y=7181.5mil|Location2.Y=7215.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6591.5mil|Location2.X=6615.089mil|Location1.Y=7181.5mil|Location2.Y=7215.699mil|Absolute=True">Net Antennae: Track (4490mil,4080mil)(4600mil,4190mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11784.5mil|Location2.X=11808.089mil|Location1.Y=7191.5mil|Location2.Y=7225.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11784.5mil|Location2.X=11808.089mil|Location1.Y=7191.5mil|Location2.Y=7225.699mil|Absolute=True">Net Antennae: Track (9773mil,4220mil)(9793mil,4200mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10161.5mil|Location2.X=10185.089mil|Location1.Y=3224.5mil|Location2.Y=3258.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10161.5mil|Location2.X=10185.089mil|Location1.Y=3224.5mil|Location2.Y=3258.7mil|Absolute=True">Net Antennae: Track (8170mil,233mil)(9576.764mil,233mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5480.5mil|Location2.X=5504.089mil|Location1.Y=4447.5mil|Location2.Y=4481.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5480.5mil|Location2.X=5504.089mil|Location1.Y=4447.5mil|Location2.Y=4481.699mil|Absolute=True">Net Antennae: Track (3383mil,1350mil)(3489mil,1456mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5695.5mil|Location2.X=5719.089mil|Location1.Y=4545.5mil|Location2.Y=4579.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5695.5mil|Location2.X=5719.089mil|Location1.Y=4545.5mil|Location2.Y=4579.699mil|Absolute=True">Net Antennae: Track (3704mil,1554mil)(3704mil,1680mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8611.5mil|Location2.X=8635.089mil|Location1.Y=4050.5mil|Location2.Y=4084.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8611.5mil|Location2.X=8635.089mil|Location1.Y=4050.5mil|Location2.Y=4084.7mil|Absolute=True">Net Antennae: Track (6620mil,1059mil)(6713mil,1059mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5135.85mil|Location2.X=5159.439mil|Location1.Y=4451.5mil|Location2.Y=4485.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5135.85mil|Location2.X=5159.439mil|Location1.Y=4451.5mil|Location2.Y=4485.699mil|Absolute=True">Net Antennae: Track (3144.35mil,1460mil)(3245mil,1460mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10991.5mil|Location2.X=11015.089mil|Location1.Y=7379.814mil|Location2.Y=7414.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10991.5mil|Location2.X=11015.089mil|Location1.Y=7379.814mil|Location2.Y=7414.014mil|Absolute=True">Net Antennae: Track (9000mil,4296.456mil)(9000mil,4388.314mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12766.5mil|Location2.X=12790.089mil|Location1.Y=7420.5mil|Location2.Y=7454.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12766.5mil|Location2.X=12790.089mil|Location1.Y=7420.5mil|Location2.Y=7454.699mil|Absolute=True">Net Antennae: Track (10354.638mil,4429mil)(10775mil,4429mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8915.5mil|Location2.X=8939.089mil|Location1.Y=5806.5mil|Location2.Y=5840.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8915.5mil|Location2.X=8939.089mil|Location1.Y=5806.5mil|Location2.Y=5840.699mil|Absolute=True">Net Antennae: Track (6649.486mil,2815mil)(6924mil,2815mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12152.578mil|Location2.X=12176.167mil|Location1.Y=3877.5mil|Location2.Y=3911.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12152.578mil|Location2.X=12176.167mil|Location1.Y=3877.5mil|Location2.Y=3911.7mil|Absolute=True">Net Antennae: Track (10161.078mil,886mil)(10214mil,886mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12217.5mil|Location2.X=12241.089mil|Location1.Y=3865.5mil|Location2.Y=3899.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12217.5mil|Location2.X=12241.089mil|Location1.Y=3865.5mil|Location2.Y=3899.7mil|Absolute=True">Net Antennae: Track (10214mil,886mil)(10226mil,874mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12443.976mil|Location2.X=12467.565mil|Location1.Y=3865.5mil|Location2.Y=3899.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12443.976mil|Location2.X=12467.565mil|Location1.Y=3865.5mil|Location2.Y=3899.7mil|Absolute=True">Net Antennae: Track (10452.476mil,874mil)(10506.476mil,928mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12132.292mil|Location2.X=12155.881mil|Location1.Y=3895.5mil|Location2.Y=3929.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12132.292mil|Location2.X=12155.881mil|Location1.Y=3895.5mil|Location2.Y=3929.7mil|Absolute=True">Net Antennae: Track (10140.792mil,904mil)(10245mil,904mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8919.794mil|Location2.X=8943.383mil|Location1.Y=7341.206mil|Location2.Y=7375.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8919.794mil|Location2.X=8943.383mil|Location1.Y=7341.206mil|Location2.Y=7375.405mil|Absolute=True">Net Antennae: Track (6928.294mil,4349.706mil)(7000.034mil,4349.706mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12043.842mil|Location2.X=12067.431mil|Location1.Y=7702.158mil|Location2.Y=7736.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12043.842mil|Location2.X=12067.431mil|Location1.Y=7702.158mil|Location2.Y=7736.358mil|Absolute=True">Net Antennae: Track (10052.342mil,4710.658mil)(10072mil,4691mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9726.5mil|Location2.X=9750.089mil|Location1.Y=3204.5mil|Location2.Y=3238.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9726.5mil|Location2.X=9750.089mil|Location1.Y=3204.5mil|Location2.Y=3238.7mil|Absolute=True">Net Antennae: Track (7004mil,213mil)(7735mil,213mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5277.5mil|Location2.X=5301.089mil|Location1.Y=5591.5mil|Location2.Y=5625.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5277.5mil|Location2.X=5301.089mil|Location1.Y=5591.5mil|Location2.Y=5625.699mil|Absolute=True">Net Antennae: Track (3200mil,2600mil)(3286mil,2600mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6831.5mil|Location2.X=6855.089mil|Location1.Y=7161.5mil|Location2.Y=7195.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6831.5mil|Location2.X=6855.089mil|Location1.Y=7161.5mil|Location2.Y=7195.699mil|Absolute=True">Net Antennae: Track (4840mil,4170mil)(5170mil,3840mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4095.5mil|Location2.X=4119.089mil|Location1.Y=4896.5mil|Location2.Y=4930.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4095.5mil|Location2.X=4119.089mil|Location1.Y=4896.5mil|Location2.Y=4930.699mil|Absolute=True">Net Antennae: Track (2104mil,1905mil)(2144mil,1945mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3523.5mil|Location2.X=3547.089mil|Location1.Y=5174.5mil|Location2.Y=5208.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3523.5mil|Location2.X=3547.089mil|Location1.Y=5174.5mil|Location2.Y=5208.699mil|Absolute=True">Net Antennae: Track (1532mil,2183mil)(1553mil,2162mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2716.5mil|Location2.X=2740.089mil|Location1.Y=6055.5mil|Location2.Y=6089.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2716.5mil|Location2.X=2740.089mil|Location1.Y=6055.5mil|Location2.Y=6089.699mil|Absolute=True">Net Antennae: Track (725mil,3064mil)(1177.314mil,3064mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11887.5mil|Location2.X=11911.089mil|Location1.Y=6827.5mil|Location2.Y=6861.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11887.5mil|Location2.X=11911.089mil|Location1.Y=6827.5mil|Location2.Y=6861.699mil|Absolute=True">Net Antennae: Track (9896mil,3836mil)(9978.5mil,3753.5mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11431.5mil|Location2.X=11455.089mil|Location1.Y=6676.5mil|Location2.Y=6710.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11431.5mil|Location2.X=11455.089mil|Location1.Y=6676.5mil|Location2.Y=6710.699mil|Absolute=True">Net Antennae: Track (9440mil,3685mil)(9910mil,3685mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5597.5mil|Location2.X=5621.089mil|Location1.Y=4471.5mil|Location2.Y=4505.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5597.5mil|Location2.X=5621.089mil|Location1.Y=4471.5mil|Location2.Y=4505.699mil|Absolute=True">Net Antennae: Track (3606mil,1480mil)(3606mil,1599mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12260.5mil|Location2.X=12284.089mil|Location1.Y=7364.5mil|Location2.Y=7398.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12260.5mil|Location2.X=12284.089mil|Location1.Y=7364.5mil|Location2.Y=7398.699mil|Absolute=True">Net Antennae: Track (10230mil,4412mil)(10269mil,4373mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12194.842mil|Location2.X=12218.431mil|Location1.Y=7403.5mil|Location2.Y=7437.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12194.842mil|Location2.X=12218.431mil|Location1.Y=7403.5mil|Location2.Y=7437.699mil|Absolute=True">Net Antennae: Track (10203.342mil,4412mil)(10230mil,4412mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11786.5mil|Location2.X=11810.089mil|Location1.Y=7170.5mil|Location2.Y=7204.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11786.5mil|Location2.X=11810.089mil|Location1.Y=7170.5mil|Location2.Y=7204.699mil|Absolute=True">Net Antennae: Track (9772mil,4202mil)(9795mil,4179mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12438.614mil|Location2.X=12462.203mil|Location1.Y=7170.5mil|Location2.Y=7204.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12438.614mil|Location2.X=12462.203mil|Location1.Y=7170.5mil|Location2.Y=7204.699mil|Absolute=True">Net Antennae: Track (10447.114mil,4179mil)(10475.114mil,4151mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12458.614mil|Location2.X=12482.203mil|Location1.Y=7188.5mil|Location2.Y=7222.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12458.614mil|Location2.X=12482.203mil|Location1.Y=7188.5mil|Location2.Y=7222.699mil|Absolute=True">Net Antennae: Track (10467.114mil,4197mil)(10492.114mil,4172mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12483.614mil|Location2.X=12507.203mil|Location1.Y=7163.5mil|Location2.Y=7197.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12483.614mil|Location2.X=12507.203mil|Location1.Y=7163.5mil|Location2.Y=7197.699mil|Absolute=True">Net Antennae: Track (10467.114mil,4197mil)(10492.114mil,4172mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11075.5mil|Location2.X=11099.089mil|Location1.Y=6722.5mil|Location2.Y=6756.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11075.5mil|Location2.X=11099.089mil|Location1.Y=6722.5mil|Location2.Y=6756.699mil|Absolute=True">Net Antennae: Track (9084mil,3731mil)(9124mil,3731mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10403.268mil|Location2.X=10426.857mil|Location1.Y=3279.5mil|Location2.Y=3313.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10403.268mil|Location2.X=10426.857mil|Location1.Y=3279.5mil|Location2.Y=3313.7mil|Absolute=True">Net Antennae: Track (8411.768mil,288mil)(8430.684mil,269.084mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9801.558mil|Location2.X=9825.147mil|Location1.Y=4606.442mil|Location2.Y=4640.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9801.558mil|Location2.X=9825.147mil|Location1.Y=4606.442mil|Location2.Y=4640.641mil|Absolute=True">Net Antennae: Track (7794mil,1631mil)(7810.058mil,1614.942mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10556.658mil|Location2.X=10580.247mil|Location1.Y=6236.5mil|Location2.Y=6270.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10556.658mil|Location2.X=10580.247mil|Location1.Y=6236.5mil|Location2.Y=6270.699mil|Absolute=True">Net Antennae: Track (8565.158mil,3245mil)(8629.158mil,3181mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4791.5mil|Location2.X=4815.089mil|Location1.Y=6173.5mil|Location2.Y=6207.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4791.5mil|Location2.X=4815.089mil|Location1.Y=6173.5mil|Location2.Y=6207.699mil|Absolute=True">Net Antennae: Track (2790mil,3192mil)(2800mil,3182mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5137.128mil|Location2.X=5160.717mil|Location1.Y=4509.814mil|Location2.Y=4544.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5137.128mil|Location2.X=5160.717mil|Location1.Y=4509.814mil|Location2.Y=4544.014mil|Absolute=True">Net Antennae: Track (3145.628mil,1518.314mil)(3145.628mil,1635mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5033.482mil|Location2.X=5057.071mil|Location1.Y=4480.646mil|Location2.Y=4514.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5033.482mil|Location2.X=5057.071mil|Location1.Y=4480.646mil|Location2.Y=4514.846mil|Absolute=True">Net Antennae: Track (2988.836mil,1436mil)(3041.982mil,1489.146mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5110.5mil|Location2.X=5134.089mil|Location1.Y=4850.5mil|Location2.Y=4884.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5110.5mil|Location2.X=5134.089mil|Location1.Y=4850.5mil|Location2.Y=4884.699mil|Absolute=True">Net Antennae: Track (3119mil,1859mil)(3160mil,1900mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12112.5mil|Location2.X=12136.089mil|Location1.Y=4003.5mil|Location2.Y=4037.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12112.5mil|Location2.X=12136.089mil|Location1.Y=4003.5mil|Location2.Y=4037.7mil|Absolute=True">Net Antennae: Track (10045mil,936mil)(10121mil,1012mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12581.5mil|Location2.X=12605.089mil|Location1.Y=6896.5mil|Location2.Y=6930.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12581.5mil|Location2.X=12605.089mil|Location1.Y=6896.5mil|Location2.Y=6930.699mil|Absolute=True">Net Antennae: Track (10590mil,3905mil)(10601.5mil,3893.5mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10862.5mil|Location2.X=10886.089mil|Location1.Y=6752.5mil|Location2.Y=6786.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10862.5mil|Location2.X=10886.089mil|Location1.Y=6752.5mil|Location2.Y=6786.699mil|Absolute=True">Net Antennae: Track (8477mil,3761mil)(8871mil,3761mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11679.5mil|Location2.X=11703.089mil|Location1.Y=7314.5mil|Location2.Y=7348.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11679.5mil|Location2.X=11703.089mil|Location1.Y=7314.5mil|Location2.Y=7348.699mil|Absolute=True">Net Antennae: Track (9688mil,4043mil)(9688mil,4323mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9228.814mil|Location2.X=9252.403mil|Location1.Y=4889.5mil|Location2.Y=4923.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9228.814mil|Location2.X=9252.403mil|Location1.Y=4889.5mil|Location2.Y=4923.699mil|Absolute=True">Net Antennae: Track (6860.686mil,1898mil)(7237.314mil,1898mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10663.5mil|Location2.X=10687.089mil|Location1.Y=5570.5mil|Location2.Y=5604.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10663.5mil|Location2.X=10687.089mil|Location1.Y=5570.5mil|Location2.Y=5604.699mil|Absolute=True">Net Antennae: Track (8672mil,2579mil)(8737mil,2579mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12551.5mil|Location2.X=12575.089mil|Location1.Y=3933.5mil|Location2.Y=3967.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12551.5mil|Location2.X=12575.089mil|Location1.Y=3933.5mil|Location2.Y=3967.7mil|Absolute=True">Net Antennae: Track (10560mil,926.57mil)(10560mil,942mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12114.266mil|Location2.X=12137.855mil|Location1.Y=3784.5mil|Location2.Y=3818.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12114.266mil|Location2.X=12137.855mil|Location1.Y=3784.5mil|Location2.Y=3818.7mil|Absolute=True">Net Antennae: Track (9841.212mil,793mil)(10122.766mil,793mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11960.5mil|Location2.X=11984.089mil|Location1.Y=7121.5mil|Location2.Y=7155.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11960.5mil|Location2.X=11984.089mil|Location1.Y=7121.5mil|Location2.Y=7155.699mil|Absolute=True">Net Antennae: Track (9780mil,4130mil)(9969mil,4130mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10366.584mil|Location2.X=10390.173mil|Location1.Y=3260.5mil|Location2.Y=3294.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10366.584mil|Location2.X=10390.173mil|Location1.Y=3260.5mil|Location2.Y=3294.7mil|Absolute=True">Net Antennae: Track (8375.084mil,269mil)(8393mil,251.084mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5081.5mil|Location2.X=5105.089mil|Location1.Y=4448.5mil|Location2.Y=4482.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5081.5mil|Location2.X=5105.089mil|Location1.Y=4448.5mil|Location2.Y=4482.699mil|Absolute=True">Net Antennae: Track (3090mil,1457mil)(3117mil,1457mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5108.5mil|Location2.X=5132.089mil|Location1.Y=4448.5mil|Location2.Y=4482.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5108.5mil|Location2.X=5132.089mil|Location1.Y=4448.5mil|Location2.Y=4482.699mil|Absolute=True">Net Antennae: Track (3090mil,1457mil)(3117mil,1457mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9736.5mil|Location2.X=9760.089mil|Location1.Y=6221.5mil|Location2.Y=6255.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9736.5mil|Location2.X=9760.089mil|Location1.Y=6221.5mil|Location2.Y=6255.699mil|Absolute=True">Net Antennae: Track (7650mil,3230mil)(7745mil,3230mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5962.5mil|Location2.X=5986.089mil|Location1.Y=6549.5mil|Location2.Y=6583.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5962.5mil|Location2.X=5986.089mil|Location1.Y=6549.5mil|Location2.Y=6583.699mil|Absolute=True">Net Antennae: Track (3971mil,3558mil)(4438mil,3558mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9121.342mil|Location2.X=9144.931mil|Location1.Y=5406.658mil|Location2.Y=5440.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9121.342mil|Location2.X=9144.931mil|Location1.Y=5406.658mil|Location2.Y=5440.858mil|Absolute=True">Net Antennae: Track (7129.842mil,2415.158mil)(7216mil,2415.158mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8713.5mil|Location2.X=8737.089mil|Location1.Y=3800.5mil|Location2.Y=3834.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8713.5mil|Location2.X=8737.089mil|Location1.Y=3800.5mil|Location2.Y=3834.7mil|Absolute=True">Net Antennae: Track (6722mil,809mil)(6809.118mil,809mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6591.5mil|Location2.X=6615.089mil|Location1.Y=7181.5mil|Location2.Y=7215.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6591.5mil|Location2.X=6615.089mil|Location1.Y=7181.5mil|Location2.Y=7215.699mil|Absolute=True">Net Antennae: Track (4600mil,4190mil)(4600mil,4810mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10471.5mil|Location2.X=10495.089mil|Location1.Y=6509.5mil|Location2.Y=6543.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10471.5mil|Location2.X=10495.089mil|Location1.Y=6509.5mil|Location2.Y=6543.699mil|Absolute=True">Net Antennae: Track (8480mil,3518mil)(8539.566mil,3458.434mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11495.5mil|Location2.X=11519.089mil|Location1.Y=6826.5mil|Location2.Y=6860.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11495.5mil|Location2.X=11519.089mil|Location1.Y=6826.5mil|Location2.Y=6860.699mil|Absolute=True">Net Antennae: Track (9504mil,3835mil)(9504mil,4647mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8854.5mil|Location2.X=8878.089mil|Location1.Y=4794.5mil|Location2.Y=4828.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8854.5mil|Location2.X=8878.089mil|Location1.Y=4794.5mil|Location2.Y=4828.699mil|Absolute=True">Net Antennae: Track (6863mil,1720mil)(6863mil,1803mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9358.5mil|Location2.X=9382.089mil|Location1.Y=3819.5mil|Location2.Y=3853.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9358.5mil|Location2.X=9382.089mil|Location1.Y=3819.5mil|Location2.Y=3853.7mil|Absolute=True">Net Antennae: Track (7367mil,828mil)(7367mil,2132.6mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9346.476mil|Location2.X=9370.065mil|Location1.Y=5355.476mil|Location2.Y=5389.676mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9346.476mil|Location2.X=9370.065mil|Location1.Y=5355.476mil|Location2.Y=5389.676mil|Absolute=True">Net Antennae: Track (7354.976mil,2363.976mil)(7443.19mil,2363.976mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12551.5mil|Location2.X=12575.089mil|Location1.Y=3938.842mil|Location2.Y=3973.041mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12551.5mil|Location2.X=12575.089mil|Location1.Y=3938.842mil|Location2.Y=3973.041mil|Absolute=True">Net Antennae: Track (10560mil,947.342mil)(10577.658mil,965mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12865.5mil|Location2.X=12889.089mil|Location1.Y=6728.5mil|Location2.Y=6762.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12865.5mil|Location2.X=12889.089mil|Location1.Y=6728.5mil|Location2.Y=6762.699mil|Absolute=True">Net Antennae: Track (10874mil,1546mil)(10874mil,3737mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10161.5mil|Location2.X=10185.089mil|Location1.Y=3224.5mil|Location2.Y=3258.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10161.5mil|Location2.X=10185.089mil|Location1.Y=3224.5mil|Location2.Y=3258.7mil|Absolute=True">Net Antennae: Track (8053.786mil,233mil)(8170mil,233mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8606.658mil|Location2.X=8630.247mil|Location1.Y=4045.658mil|Location2.Y=4079.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8606.658mil|Location2.X=8630.247mil|Location1.Y=4045.658mil|Location2.Y=4079.858mil|Absolute=True">Net Antennae: Track (6615.158mil,986.812mil)(6615.158mil,1054.158mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11423.704mil|Location2.X=11447.293mil|Location1.Y=4838.704mil|Location2.Y=4872.904mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11423.704mil|Location2.X=11447.293mil|Location1.Y=4838.704mil|Location2.Y=4872.904mil|Absolute=True">Net Antennae: Track (9432.204mil,1847.204mil)(9576.812mil,1847.204mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11186.802mil|Location2.X=11210.391mil|Location1.Y=6296.802mil|Location2.Y=6331.002mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11186.802mil|Location2.X=11210.391mil|Location1.Y=6296.802mil|Location2.Y=6331.002mil|Absolute=True">Net Antennae: Track (9195.302mil,3305.302mil)(9224mil,3276.604mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10988.5mil|Location2.X=11012.089mil|Location1.Y=7382.814mil|Location2.Y=7417.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10988.5mil|Location2.X=11012.089mil|Location1.Y=7382.814mil|Location2.Y=7417.014mil|Absolute=True">Net Antennae: Track (8997mil,4391.314mil)(8997mil,4550mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10860.5mil|Location2.X=10884.089mil|Location1.Y=6754.5mil|Location2.Y=6788.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10860.5mil|Location2.X=10884.089mil|Location1.Y=6754.5mil|Location2.Y=6788.699mil|Absolute=True">Net Antennae: Track (8869mil,3763mil)(8869mil,4009mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12766.5mil|Location2.X=12790.089mil|Location1.Y=7420.5mil|Location2.Y=7454.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12766.5mil|Location2.X=12790.089mil|Location1.Y=7420.5mil|Location2.Y=7454.699mil|Absolute=True">Net Antennae: Track (10759mil,4413mil)(10775mil,4429mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9229.5mil|Location2.X=9253.089mil|Location1.Y=4888.814mil|Location2.Y=4923.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9229.5mil|Location2.X=9253.089mil|Location1.Y=4888.814mil|Location2.Y=4923.014mil|Absolute=True">Net Antennae: Track (7238mil,1682mil)(7238mil,1897.314mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8915.5mil|Location2.X=8939.089mil|Location1.Y=5806.5mil|Location2.Y=5840.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8915.5mil|Location2.X=8939.089mil|Location1.Y=5806.5mil|Location2.Y=5840.699mil|Absolute=True">Net Antennae: Track (6924mil,2815mil)(6974mil,2865mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10659.5mil|Location2.X=10683.089mil|Location1.Y=5566.5mil|Location2.Y=5600.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10659.5mil|Location2.X=10683.089mil|Location1.Y=5566.5mil|Location2.Y=5600.699mil|Absolute=True">Net Antennae: Track (8668mil,1640mil)(8668mil,2575mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8473.114mil|Location2.X=8496.703mil|Location1.Y=7045.886mil|Location2.Y=7080.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8473.114mil|Location2.X=8496.703mil|Location1.Y=7045.886mil|Location2.Y=7080.086mil|Absolute=True">Net Antennae: Track (6481.614mil,3986.812mil)(6481.614mil,4054.386mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11301.5mil|Location2.X=11325.089mil|Location1.Y=3859.5mil|Location2.Y=3893.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11301.5mil|Location2.X=11325.089mil|Location1.Y=3859.5mil|Location2.Y=3893.7mil|Absolute=True">Net Antennae: Track (9310mil,626mil)(9310mil,868mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11500.524mil|Location2.X=11524.113mil|Location1.Y=4915.476mil|Location2.Y=4949.676mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11500.524mil|Location2.X=11524.113mil|Location1.Y=4915.476mil|Location2.Y=4949.676mil|Absolute=True">Net Antennae: Track (9509.024mil,1923.976mil)(9576.812mil,1923.976mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8821.5mil|Location2.X=8845.089mil|Location1.Y=3846.838mil|Location2.Y=3881.037mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8821.5mil|Location2.X=8845.089mil|Location1.Y=3846.838mil|Location2.Y=3881.037mil|Absolute=True">Net Antennae: Track (6830mil,855.338mil)(6899mil,924.338mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8861.5mil|Location2.X=8885.089mil|Location1.Y=4511.5mil|Location2.Y=4545.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8861.5mil|Location2.X=8885.089mil|Location1.Y=4511.5mil|Location2.Y=4545.699mil|Absolute=True">Net Antennae: Track (6840mil,1550mil)(6870mil,1520mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8803.5mil|Location2.X=8827.089mil|Location1.Y=4373.5mil|Location2.Y=4407.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8803.5mil|Location2.X=8827.089mil|Location1.Y=4373.5mil|Location2.Y=4407.699mil|Absolute=True">Net Antennae: Track (6682mil,1382mil)(6812mil,1382mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8914.5mil|Location2.X=8938.089mil|Location1.Y=7346.5mil|Location2.Y=7380.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8914.5mil|Location2.X=8938.089mil|Location1.Y=7346.5mil|Location2.Y=7380.699mil|Absolute=True">Net Antennae: Track (6923mil,4355mil)(6923mil,4594mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12037.5mil|Location2.X=12061.089mil|Location1.Y=7702.158mil|Location2.Y=7736.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12037.5mil|Location2.X=12061.089mil|Location1.Y=7702.158mil|Location2.Y=7736.358mil|Absolute=True">Net Antennae: Track (10046mil,4710.658mil)(10079mil,4677.658mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11070.5mil|Location2.X=11094.089mil|Location1.Y=6727.5mil|Location2.Y=6761.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11070.5mil|Location2.X=11094.089mil|Location1.Y=6727.5mil|Location2.Y=6761.699mil|Absolute=True">Net Antennae: Track (9079mil,3736mil)(9079mil,4140mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9731.68mil|Location2.X=9755.269mil|Location1.Y=3199.32mil|Location2.Y=3233.519mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9731.68mil|Location2.X=9755.269mil|Location1.Y=3199.32mil|Location2.Y=3233.519mil|Absolute=True">Net Antennae: Track (7740.18mil,207.82mil)(8180mil,207.82mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2712.5mil|Location2.X=2736.089mil|Location1.Y=6059.5mil|Location2.Y=6093.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2712.5mil|Location2.X=2736.089mil|Location1.Y=6059.5mil|Location2.Y=6093.699mil|Absolute=True">Net Antennae: Track (721mil,3068mil)(721mil,3304mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5277.5mil|Location2.X=5301.089mil|Location1.Y=5591.5mil|Location2.Y=5625.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=X:\Masters\BBB_Board\BBB_Board_NO_PLANES.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5277.5mil|Location2.X=5301.089mil|Location1.Y=5591.5mil|Location2.Y=5625.699mil|Absolute=True">Net Antennae: Track (3236mil,2550mil)(3286mil,2600mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
