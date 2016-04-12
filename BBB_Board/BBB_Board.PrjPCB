@@ -53,9 +53,26 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=EDQUCOWA
+DocumentUniqueId=FCTGTMVY
 
 [Document2]
+DocumentPath=BBB_Board_NEW_PLANES.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=EDQUCOWA
+
+[Document3]
 DocumentPath=BBB_Board.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -72,7 +89,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QTOQRLTD
 
-[Document3]
+[Document4]
 DocumentPath=BBB_Board.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -89,7 +106,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document4]
+[Document5]
 DocumentPath=POW_CONT.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -106,7 +123,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WODBHCLC
 
-[Document5]
+[Document6]
 DocumentPath=VT_WRP.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -123,7 +140,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AEFYLIUH
 
-[Document6]
+[Document7]
 DocumentPath=VT_BANK.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -140,7 +157,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PNXWUCFY
 
-[Document7]
+[Document8]
 DocumentPath=BBB_Board.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -155,9 +172,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=OPVIXRVI
 
-[Document8]
+[Document9]
 DocumentPath=NUMATO_HDR.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UOETFMLX
 
-[Document9]
+[Document10]
 DocumentPath=DUT_HEADER.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -191,7 +208,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JVWSOBNU
 
-[Document10]
+[Document11]
 DocumentPath=BBB_Board_NO_PLANES_Jobs.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -208,7 +225,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document11]
+[Document12]
 DocumentPath=BBB_Board_PLANES_Jobs.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -318,10 +335,14 @@ DocumentPath=Project Outputs for BBB_Board\Design Rule Check - BBB_Board.html
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for BBB_Board\Design Rule Check - BBB_Board_NO_PLANES.html
+DocumentPath=Project Outputs for BBB_Board\Design Rule Check - BBB_Board_NEW.html
 DItemRevisionGUID=
 
 [GeneratedDocument25]
+DocumentPath=Project Outputs for BBB_Board\Design Rule Check - BBB_Board_NO_PLANES.html
+DItemRevisionGUID=
+
+[GeneratedDocument26]
 DocumentPath=Project Outputs for BBB_Board\Design Rule Check - BBB_Board_PLANES.html
 DItemRevisionGUID=
 
