@@ -1,0 +1,5 @@
+verilog work "UART_TX.v"
+verilog work "UART_RX.v"
+verilog work "UART_CTRL.v"
+verilog work "UART_CTRL_TB.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

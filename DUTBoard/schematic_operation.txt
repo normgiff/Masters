@@ -1,0 +1,19 @@
+The "EXTERNAL" bus represents the 128 FPGA pins tied to this board. These pins are used to deliver signals to/from the DUT.
+
+There are four clocks, CLK_1, CLK_2, CLK_3, CLK_4, which are identical clocks used for each counter IC. A single reset is provided for all of the counter ICs.
+For real-time testing, the skew on the counter clock should be minimal. When switching from SRAM write mode to SRAM read mode, which requires that we reset the counter, minimizing the skew on the reset signal is not critical.
+
+There are four ~CS signals (~CS_1, ~CS_2, ~CS_3, ~CS_4), four ~WE signals (~WE_1, ~WE_2, ~WE_3, ~WE_4), and one ~OE signal. Each ~CS and ~WE signal drives two SRAM ICs; the ~OE signal drives all of the SRAM blocks.
+For real-time testing, the skew on the ~CS and ~WE signals should be minimal. The ~OE signal is set to 0 when the SRAM ICs need to be read/written and is set to 1 otherwise in order to save power.
+
+The ~PL, ~MR, STCP, SHCP, and Q signals (all corresponding to the output buffer IC) are not sensitive to timing, as the output buffer only becomes relevant after real-time testing is complete. 
+
+Similarly, the EN signal (used for the voltage translators) is not timing sensitive since the signal changes value after real-time testing is complete.
+
+GLOBAL_HIGH_POWER is used as the "VCC" input to the voltage translator. For instance, we may need to convert 4V (if the user requests that voltage as their logic high) into 3.3V.
+
+VCC is whatever voltage the user wants to serve as a logic high for their DUT.
+3V3 powers all of the ICs on the board.
+
+Total pins used by FPGA: 128 + 4 + 1 + 9 + 5 + 1 = 148 pins
+The remaining two pins are used as RX/TX lines for communication with the BeagleBone Black.

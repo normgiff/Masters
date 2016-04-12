@@ -50,29 +50,29 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "\\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\adjustablevoltageregulator2.dsn")
+         "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltageregulator2.dsn")
       (Path "Design Resources"
-         "\\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\adjustablevoltageregulator2.dsn"
+         "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltageregulator2.dsn"
          "SCHEMATIC1")
       (Path "Outputs")
       (Select "Design Resources"
-         "\\chips.eng.utah.edu\home\dkhoury\.win_desktop\Masters\explorations\power\adjustablevoltageregulator2.dsn"
+         "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\explorations\power\adjustablevoltageregulator2.dsn"
          "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 293"))
+        (Placement "44 0 1 -1 -1 -9 -38 0 200 0 293"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 50 1694 50 519")
-        (Scroll "-421 0")
-        (Zoom "100")
+        (Placement "44 2 3 -1 -1 -9 -38 64 1460 64 396")
+        (Scroll "515 42")
+        (Zoom "232")
         (Occurrence "/"))
       (Path
-         "\\CHIPS.ENG.UTAH.EDU\HOME\DKHOURY\.WIN_DESKTOP\MASTERS\EXPLORATIONS\POWER\ADJUSTABLEVOLTAGEREGULATOR2.DSN")
+         "C:\USERS\DKHOURY\ONEDRIVE\DOCUMENTS\SOURCETREE-MASTERS\EXPLORATIONS\POWER\ADJUSTABLEVOLTAGEREGULATOR2.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1")))
   (MPSSessionName "dkhoury"))
