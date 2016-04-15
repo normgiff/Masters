@@ -154,6 +154,18 @@ When the new DUTBoard arrives, Daniel will take care of testing it and (if it wo
 </p>
 
 <p>
+<b>04/15/2016:</b>
+<br>
+An unexpected short between 3.3V and ground (that we never figured out the exact cause of despite an intensive hunt) caused the BeagleBone Black PCB to fry. :( Some data was deleted from the BeagleBone Black, but it appears to still work. We know the UART works on the BeagleBone Black, and reinstalling PHP appears to have fixed the web server. We have a backup BBB if needed.
+<br><br>
+We ordered two more versions of the BBB PCB, one with power/ground planes and one without, and with a jumper option to bypass the power circuitry and use standard 5V/GND if something goes amiss with that circuitry. Altium Designer does not show a short between 3.3V and ground, so if a short does appear then it is likely the result of a manufacturing error. These boards should arrive around April 20th. Before the 20th, we aim to have our Verilog complete, the DUT board soldered, the BBB web interface (a simple form for the moment) complete, and have the SPI banks on the BBB tested. As soon as the boards arrive, we will test for any shorts (of course), solder all of the components onto the board, and then test the system at large. :)
+<br><br>
+Norm is soldering the new DUT board and will aim to have it complete by end-of-day Monday. A pad fell off while soldering, but fortunately there are enough vias on the board that we were able to fix the problem by using a high-gauge wire to jumper a pin from the counter IC to a nearby via. Daniel is working on the Verilog for the FPGA and aims to have it complete by end-of-day Monday.
+<br><br>
+Our final presentation will be <b>April 27th at 4:00 PM.</b> We hope (but cannot promise) to have a working demo by this day. No matter how far we get, we will be at least 95 to 99 percent complete with our project, so any remaining bugs/problems/etc. will be thoroughly addressed in our documentation.
+</p>
+
+<p>
 <a href="index.html">Click here</a> to return to the home page.
 </p>
 </p>
