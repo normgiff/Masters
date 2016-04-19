@@ -12,6 +12,7 @@
  *		INPUT_WRITE:        128-bit write {2 template bits, 126 input vector bits} 		
  * 	TEMPLATE_WRITE: 	  128-bit write {2 template bits, 126 template-config bits}	
  * 	FF_WRITE: 		 	  128-bit write {2 template bits, 63 sets of 2-bit FF configs}
+ *    TC_WRITE:           128-bit write {2 template bits, 126 cycle-config bits}
  * 	WRITE_DATA_0: 		  128-bit write input.
  * 	WRITE_DATA_1: 		  128-bit write input (for FF_WRITE only).
  * 	
@@ -23,13 +24,16 @@
  * 							  must be provided naturally.
  * 	INPUT_READ:         128-bit read {2 template bits, 126 input vector bits}
  * 	FF_READ:            128-bit read {2 template bits, 64 sets of 2-bit FF configs}
- * 							  Note: Two reads are need for a full FF vector!
+ *    TC_READ:            128-bit read {2 template bits, 126 cycle-config bits}
  *		TEMPLATE_CHANGE: 	  Indicates if the read template is different from the last read template.
  * 	READY: 		        Read/write operation is not in progress.
  * 
  */
-module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, WRITE_DATA_1,
-					  READ_DATA_0, READ_DATA_1, TEMPLATE_READ, TEMPLATE_BITS, INPUT_READ, FF_READ,
+module BRAM_CTRL(CLK, RST, 
+					  INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, TC_WRITE,
+					  WRITE_DATA_0, WRITE_DATA_1,
+					  TEMPLATE_READ, TEMPLATE_BITS, INPUT_READ, FF_READ, TC_READ,
+					  READ_DATA_0, READ_DATA_1, 
 					  TEMPLATE_CHANGE, READY);					  
 					  
 	`include "BRAM_CTRL_PARAMS.v"
@@ -40,6 +44,7 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 	input INPUT_WRITE;
 	input TEMPLATE_WRITE;
 	input FF_WRITE;
+	input TC_WRITE;
 	input [127:0] WRITE_DATA_0;
 	input [127:0] WRITE_DATA_1;
 	
@@ -47,6 +52,7 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 	input [1:0] TEMPLATE_BITS;
 	input INPUT_READ;
 	input FF_READ;
+	input TC_READ;
 	
 	output reg [127:0] READ_DATA_0;
 	output reg [127:0] READ_DATA_1;
@@ -68,10 +74,10 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 	reg [2:0] prev_temp;
 	reg [1:0] curr_temp;
 	
-	reg [7:0] input_write_posA;
-	reg [7:0] input_read_posA;
-	reg [7:0] input_write_posB;
-	reg [7:0] input_read_posB;
+	reg [6:0] input_write_posA;
+	reg [6:0] input_read_posA;
+	reg [6:0] input_write_posB;
+	reg [6:0] input_read_posB;
 	
 	BRAM bram0(.CLK(CLK), .EN_A(1'b1), .EN_B(1'b1), .WE_A(write_en), .WE_B(write_en), 
 				  .DIN_A(din[31:0]), .DIN_B(din[63:32]), .ADDR_A(addr_a), .ADDR_B(addr_b), 
@@ -103,6 +109,9 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 				else if (FF_WRITE) begin
 					NS = FF_WRITE_1;
 				end
+				else if (TC_WRITE) begin
+					NS = TC_WRITE_1;
+				end
 				else if (INPUT_READ) begin
 					NS = INPUT_READ_0;
 				end
@@ -111,6 +120,9 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 				end
 				else if (FF_READ) begin
 					NS = FF_READ_0;
+				end
+				else if (TC_READ) begin
+					NS = TC_READ_0;
 				end
 				else begin
 					NS = IDLE;
@@ -146,6 +158,14 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 			end
 			
 			FF_WRITE_4: begin
+				NS = IDLE;
+			end
+			
+			TC_WRITE_1: begin
+				NS = TC_WRITE_2; 
+			end
+			
+			TC_WRITE_2: begin
 				NS = IDLE;
 			end
 			
@@ -193,6 +213,18 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 				NS = IDLE;
 			end
 			
+			TC_READ_0: begin
+				NS = TC_READ_1;
+			end
+			
+			TC_READ_1: begin
+				NS = TC_READ_2;
+			end
+			
+			TC_READ_2: begin
+				NS = IDLE;
+			end
+			
 			CHECK_TEMPLATE: begin
 				NS = IDLE;
 			end
@@ -207,19 +239,19 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 	// Logic to update read and write addresses for input vectors.
 	always@(posedge CLK) begin
 		if (RST) begin
-			input_write_posA = INPUT_START_ADDR_A;
-			input_read_posA = INPUT_START_ADDR_A;
-			input_write_posB = INPUT_START_ADDR_B;
-			input_read_posB = INPUT_START_ADDR_B;
+			input_write_posA <= INPUT_START_ADDR_A;
+			input_read_posA <= INPUT_START_ADDR_A;
+			input_write_posB <= INPUT_START_ADDR_B;
+			input_read_posB <= INPUT_START_ADDR_B;
 		end
 		else begin
 			if (PS == INPUT_WRITE_1 || PS == INPUT_WRITE_2) begin
-				input_write_posA = input_write_posA + INPUT_INCR_FACTOR;
-				input_write_posB = input_write_posB + INPUT_INCR_FACTOR;
+				input_write_posA <= input_write_posA + INPUT_INCR_FACTOR;
+				input_write_posB <= input_write_posB + INPUT_INCR_FACTOR;
 			end
 			else if (PS == INPUT_READ_0 || PS == INPUT_READ_1) begin
-				input_read_posA = input_read_posA + INPUT_INCR_FACTOR;
-				input_read_posB = input_read_posB + INPUT_INCR_FACTOR;
+				input_read_posA <= input_read_posA + INPUT_INCR_FACTOR;
+				input_read_posB <= input_read_posB + INPUT_INCR_FACTOR;
 			end
 		end
 	end
@@ -236,14 +268,14 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 			
 			INPUT_WRITE_1: begin
 				din = WRITE_DATA_0[63:0];
-				addr_a = {input_write_posA, 5'b00000};
-				addr_b = {input_write_posB, 5'b00000};
+				addr_a = {input_write_posA, 6'b000000};
+				addr_b = {input_write_posB, 6'b000000};
 			end
 			
 			INPUT_WRITE_2: begin
 				din = WRITE_DATA_0[127:64];
-				addr_a = {input_write_posA, 5'b00000};
-				addr_b = {input_write_posB, 5'b00000};
+				addr_a = {input_write_posA, 6'b100000};
+				addr_b = {input_write_posB, 6'b100000};
 			end
 			
 			TEMPLATE_WRITE_1: begin
@@ -262,8 +294,8 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 						addr_b = TEMPLATE_0_ADDR_B0 + (TEMPLATE_INCR_FACTOR << 1);
 					end
 					2'b11: begin
-						// Left-shifting by 2 is equivalent to multiplying by four.
-						// Left-shifting by 2 and subtracting is equivalent to multiplying by three.
+						// Left-shifting by 2 and subtracting the original value 
+						// is equivalent to multiplying by three.
 						addr_a = TEMPLATE_0_ADDR_A0 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
 						addr_b = TEMPLATE_0_ADDR_B0 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
 					end
@@ -380,14 +412,58 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 				endcase
 			end
 			
+			TC_WRITE_1: begin
+				din = WRITE_DATA_0[63:0];
+				case (WRITE_DATA_0[127:126])
+					2'b00: begin
+						addr_a = TC_0_ADDR_A0;
+						addr_b = TC_0_ADDR_B0;
+					end
+					2'b01: begin
+						addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR);
+						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR);
+					end
+					2'b10: begin
+						addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR << 1);
+						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR << 1);
+					end
+					2'b11: begin
+						addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+					end
+				endcase
+			end
+			
+			TC_WRITE_2: begin
+				din = WRITE_DATA_0[63:0];
+				case (WRITE_DATA_0[127:126])
+					2'b00: begin
+						addr_a = TC_0_ADDR_A1;
+						addr_b = TC_0_ADDR_B1;
+					end
+					2'b01: begin
+						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR);
+						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR);
+					end
+					2'b10: begin
+						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR << 1);
+						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR << 1);
+					end
+					2'b11: begin
+						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+					end
+				endcase
+			end
+			
 			INPUT_READ_0: begin
-				addr_a = {input_read_posA, 5'b00000};
-				addr_b = {input_read_posB, 5'b00000};
+				addr_a = {input_read_posA, 6'b000000};
+				addr_b = {input_read_posB, 6'b000000};
 			end
 			
 			INPUT_READ_1: begin
-				addr_a = {input_read_posA, 5'b00000};
-				addr_b = {input_read_posB, 5'b00000};
+				addr_a = {input_read_posA, 6'b100000};
+				addr_b = {input_read_posB, 6'b100000};
 			end
 			
 			INPUT_READ_2: begin
@@ -409,9 +485,6 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 						addr_b = TEMPLATE_0_ADDR_B0 + (TEMPLATE_INCR_FACTOR << 1);
 					end
 					2'b11: begin
-						// Left-shifting by 2 is equivalent to multiplying by four.
-						// Left-shifting by 2 and subtracting the original value 
-						// is equivalent to multiplying by three.
 						addr_a = TEMPLATE_0_ADDR_A0 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
 						addr_b = TEMPLATE_0_ADDR_B0 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
 					end
@@ -440,6 +513,54 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 			end
 			
 			TEMPLATE_READ_2: begin
+				// Data fully read by now.
+			end
+			
+			TC_READ_0: begin
+				case (TEMPLATE_BITS)
+					2'b00: begin
+						addr_a = TC_0_ADDR_A0;
+						addr_b = TC_0_ADDR_B0;
+					end
+					2'b01: begin
+						addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR);
+						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR);
+					end
+					2'b10: begin
+						addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR << 1);
+						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR << 1);
+					end
+					2'b11: begin
+							addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+					end
+				endcase
+			end
+			
+			TC_READ_1: begin
+				case (TEMPLATE_BITS)
+					2'b00: begin
+						addr_a = TC_0_ADDR_A1;
+						addr_b = TC_0_ADDR_B1;
+					end
+					2'b01: begin
+						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR);
+						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR);
+					end
+					2'b10: begin
+						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR << 1);
+						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR << 1);
+					end
+					2'b11: begin
+						// Left-shifting by 2 is equivalent to multiplying by four.
+						// Left-shifting by 2 and subtracting is equivalent to multiplying by three.
+						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+					end
+				endcase
+			end
+			
+			TC_READ_2: begin
 				// Data fully read by now.
 			end
 			
@@ -572,6 +693,14 @@ module BRAM_CTRL(CLK, RST, INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, WRITE_DATA_0, 
 				
 				FF_READ_4: begin
 					READ_DATA_1[127:64] <= dout;
+				end
+				
+				TC_READ_1: begin
+					READ_DATA_0[63:0] <= dout;
+				end
+				
+				TC_READ_2: begin
+					READ_DATA_0[127:64] <= dout;
 				end
 				
 			endcase

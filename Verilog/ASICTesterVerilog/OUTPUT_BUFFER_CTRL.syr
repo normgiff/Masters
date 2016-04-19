@@ -1,0 +1,435 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: OUTPUT_BUFFER_CTRL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "OUTPUT_BUFFER_CTRL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "OUTPUT_BUFFER_CTRL"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : OUTPUT_BUFFER_CTRL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\OUTPUT_BUFFER_CTRL.v" into library work
+Parsing module <OUTPUT_BUFFER_CTRL>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <OUTPUT_BUFFER_CTRL>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <OUTPUT_BUFFER_CTRL>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\OUTPUT_BUFFER_CTRL.v".
+        IDLE = 0
+        RESET_BUFFER = 1
+        LATCH_DATA = 2
+        RETRIEVE_DATA = 3
+        MAX_DELAY = 40
+        SERIAL_LIMIT = 128
+    Found 6-bit register for signal <propagation_delay_counter>.
+    Found 2-bit register for signal <PS>.
+    Found 128-bit register for signal <SRAM_DATA>.
+    Found 8-bit register for signal <serial_counter>.
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <propagation_delay_counter[5]_GND_1_o_add_1_OUT> created at line 72.
+    Found 8-bit adder for signal <serial_counter[7]_GND_1_o_add_4_OUT> created at line 78.
+    Found 6-bit comparator lessequal for signal <propagation_delay_counter[5]_GND_1_o_LessThan_24_o> created at line 163
+    Found 8-bit comparator lessequal for signal <n0031> created at line 225
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 142 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred 135 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <OUTPUT_BUFFER_CTRL> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 3
+ 128-bit register                                      : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 2
+ 6-bit comparator lessequal                            : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 135
+ 1-bit 2-to-1 multiplexer                              : 134
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <OUTPUT_BUFFER_CTRL>.
+The following registers are absorbed into counter <serial_counter>: 1 register on signal <serial_counter>.
+The following registers are absorbed into counter <propagation_delay_counter>: 1 register on signal <propagation_delay_counter>.
+Unit <OUTPUT_BUFFER_CTRL> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Comparators                                          : 2
+ 6-bit comparator lessequal                            : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 134
+ 1-bit 2-to-1 multiplexer                              : 134
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 10    | 10
+ 01    | 01
+ 11    | 11
+-------------------
+
+Optimizing unit <OUTPUT_BUFFER_CTRL> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block OUTPUT_BUFFER_CTRL, actual ratio is 2.
+FlipFlop PS_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop PS_FSM_FFd2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 147
+ Flip-Flops                                            : 147
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : OUTPUT_BUFFER_CTRL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 323
+#      GND                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 3
+#      LUT4                        : 139
+#      LUT5                        : 17
+#      LUT6                        : 145
+#      MUXCY                       : 7
+#      XORCY                       : 8
+# FlipFlops/Latches                : 147
+#      FD                          : 6
+#      FDR                         : 5
+#      FDRE                        : 136
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 137
+#      IBUF                        : 4
+#      OBUF                        : 133
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             147  out of  18224     0%  
+ Number of Slice LUTs:                  307  out of   9112     3%  
+    Number used as Logic:               307  out of   9112     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    310
+   Number with an unused Flip Flop:     163  out of    310    52%  
+   Number with an unused LUT:             3  out of    310     0%  
+   Number of fully used LUT-FF pairs:   144  out of    310    46%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                         138
+ Number of bonded IOBs:                 138  out of    232    59%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 147   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.938ns (Maximum Frequency: 253.917MHz)
+   Minimum input arrival time before clock: 4.656ns
+   Maximum output required time after clock: 6.165ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.938ns (frequency: 253.917MHz)
+  Total number of paths / destination ports: 2928 / 283
+-------------------------------------------------------------------------
+Delay:               3.938ns (Levels of Logic = 3)
+  Source:            serial_counter_2 (FF)
+  Destination:       SRAM_DATA_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: serial_counter_2 to SRAM_DATA_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            18   0.447   1.394  serial_counter_2 (serial_counter_2)
+     LUT5:I0->O            8   0.203   0.803  serial_counter[6]_serial_counter[7]_AND_255_o31 (serial_counter[6]_serial_counter[7]_AND_255_o3)
+     LUT6:I5->O            1   0.205   0.580  Mmux_SRAM_DATA[94]_Q_MUX_67_o11 (SRAM_DATA[94]_Q_MUX_67_o)
+     LUT4:I3->O            1   0.205   0.000  SRAM_DATA_94_dpot (SRAM_DATA_94_dpot)
+     FDRE:D                    0.102          SRAM_DATA_94
+    ----------------------------------------
+    Total                      3.938ns (1.162ns logic, 2.776ns route)
+                                       (29.5% logic, 70.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 282 / 280
+-------------------------------------------------------------------------
+Offset:              4.656ns (Levels of Logic = 3)
+  Source:            RST (PAD)
+  Destination:       propagation_delay_counter_2 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to propagation_delay_counter_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           144   1.222   2.240  RST_IBUF (RST_IBUF)
+     LUT4:I0->O            4   0.203   0.684  Mcount_propagation_delay_counter_val1 (Mcount_propagation_delay_counter_val)
+     LUT4:I3->O            1   0.205   0.000  propagation_delay_counter_3_rstpot (propagation_delay_counter_3_rstpot)
+     FD:D                      0.102          propagation_delay_counter_3
+    ----------------------------------------
+    Total                      4.656ns (1.732ns logic, 2.924ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 150 / 133
+-------------------------------------------------------------------------
+Offset:              6.165ns (Levels of Logic = 2)
+  Source:            PS_FSM_FFd2 (FF)
+  Destination:       SHCP (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: PS_FSM_FFd2 to SHCP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            147   0.447   2.365  PS_FSM_FFd2 (PS_FSM_FFd2)
+     LUT6:I0->O            1   0.203   0.579  STCP1 (STCP_OBUF)
+     OBUF:I->O                 2.571          STCP_OBUF (STCP)
+    ----------------------------------------
+    Total                      6.165ns (3.221ns logic, 2.944ns route)
+                                       (52.2% logic, 47.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.938|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.05 secs
+ 
+--> 
+
+Total memory usage is 260140 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

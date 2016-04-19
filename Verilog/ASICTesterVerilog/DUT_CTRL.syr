@@ -1,0 +1,627 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: DUT_CTRL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DUT_CTRL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DUT_CTRL"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : DUT_CTRL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\FF_REG.v" into library work
+Parsing module <FF_REG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TRIREG.v" into library work
+Parsing module <TRIREG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TEMPLATE_DB_REG.v" into library work
+Parsing module <TEMPLATE_DB_REG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DUTSIG_DB_REG.v" into library work
+Parsing module <DUTSIG_DB_REG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DB_FF_REG.v" into library work
+Parsing module <FF_DB_REG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DB_CYCLE_REG.v" into library work
+Parsing module <CYCLE_DB_REG>.
+Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DUT_CTRL.v" into library work
+Parsing module <DUT_CTRL>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <DUT_CTRL>.
+
+Elaborating module <DUTSIG_DB_REG>.
+
+Elaborating module <FF_DB_REG>.
+
+Elaborating module <FF_REG>.
+
+Elaborating module <TEMPLATE_DB_REG>.
+
+Elaborating module <CYCLE_DB_REG>.
+
+Elaborating module <TRIREG>.
+
+Elaborating module <IOBUF(DRIVE=24,IOSTANDARD="DEFAULT",SLEW="FAST")>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DUT_CTRL>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DUT_CTRL.v".
+    Summary:
+	no macro.
+Unit <DUT_CTRL> synthesized.
+
+Synthesizing Unit <DUTSIG_DB_REG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DUTSIG_DB_REG.v".
+    Found 1-bit register for signal <internal_q>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <DUTSIG_DB_REG> synthesized.
+
+Synthesizing Unit <FF_DB_REG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DB_FF_REG.v".
+    Found 1-bit register for signal <buffer_out>.
+    Found 1-bit register for signal <buffer_data>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <FF_DB_REG> synthesized.
+
+Synthesizing Unit <FF_REG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\FF_REG.v".
+        R0 = 2'b00
+        R1 = 2'b01
+        DNRZ_L = 2'b10
+        DNRZ_T = 2'b11
+    Found 1-bit register for signal <r0_val>.
+    Found 1-bit register for signal <r1_val>.
+    Found 1-bit register for signal <L_reg>.
+    Found 1-bit register for signal <T_reg>.
+    Found 1-bit register for signal <Q>.
+    Found 8-bit register for signal <cycle_counter>.
+    Found 8-bit subtractor for signal <GND_4_o_GND_4_o_sub_11_OUT> created at line 79.
+    Found 8-bit subtractor for signal <GND_4_o_GND_4_o_sub_14_OUT> created at line 91.
+    Found 8-bit adder for signal <cycle_counter[7]_GND_4_o_add_2_OUT> created at line 50.
+    Found 1-bit 4-to-1 multiplexer for signal <FF[1]_T_reg_Mux_16_o> created at line 98.
+    Found 8-bit comparator equal for signal <cycle_counter[7]_CYCLE_LENGTH[7]_equal_2_o> created at line 45
+    Found 8-bit comparator equal for signal <cycle_counter[7]_GND_4_o_equal_8_o> created at line 63
+    Found 8-bit comparator equal for signal <cycle_counter[7]_GND_4_o_equal_9_o> created at line 67
+    Found 32-bit comparator equal for signal <GND_4_o_GND_4_o_equal_12_o> created at line 79
+    Found 32-bit comparator equal for signal <GND_4_o_GND_4_o_equal_15_o> created at line 91
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <FF_REG> synthesized.
+
+Synthesizing Unit <TEMPLATE_DB_REG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TEMPLATE_DB_REG.v".
+    Found 1-bit register for signal <internal_q>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <TEMPLATE_DB_REG> synthesized.
+
+Synthesizing Unit <CYCLE_DB_REG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\DB_CYCLE_REG.v".
+    Found 1-bit register for signal <internal_q>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <CYCLE_DB_REG> synthesized.
+
+Synthesizing Unit <TRIREG>.
+    Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TRIREG.v".
+    Summary:
+	no macro.
+Unit <TRIREG> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 384
+ 8-bit adder                                           : 128
+ 8-bit subtractor                                      : 256
+# Registers                                            : 1792
+ 1-bit register                                        : 1664
+ 8-bit register                                        : 128
+# Comparators                                          : 640
+ 32-bit comparator equal                               : 256
+ 8-bit comparator equal                                : 384
+# Multiplexers                                         : 640
+ 1-bit 2-to-1 multiplexer                              : 128
+ 1-bit 4-to-1 multiplexer                              : 128
+ 7-bit 2-to-1 multiplexer                              : 256
+ 8-bit 2-to-1 multiplexer                              : 128
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FF_REG>.
+The following registers are absorbed into counter <cycle_counter>: 1 register on signal <cycle_counter>.
+Unit <FF_REG> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 256
+ 8-bit subtractor                                      : 256
+# Counters                                             : 128
+ 8-bit up counter                                      : 128
+# Registers                                            : 1664
+ Flip-Flops                                            : 1664
+# Comparators                                          : 640
+ 32-bit comparator equal                               : 256
+ 8-bit comparator equal                                : 384
+# Multiplexers                                         : 512
+ 1-bit 4-to-1 multiplexer                              : 128
+ 7-bit 2-to-1 multiplexer                              : 256
+ 8-bit 2-to-1 multiplexer                              : 128
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DUT_CTRL> ...
+
+Optimizing unit <FF_REG> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DUT_CTRL, actual ratio is 107.
+Optimizing block <DUT_CTRL> to meet ratio 100 (+ 5) of 2278 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <DUT_CTRL>, final ratio is 111.
+FlipFlop cycle_regs<0>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<100>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<101>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<102>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<103>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<104>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<105>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<106>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<107>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<108>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<109>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<10>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<110>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<111>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<112>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<113>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<114>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<115>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<116>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<117>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<118>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<119>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<11>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<120>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<121>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<122>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<123>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<124>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<125>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<126>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<127>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<12>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<13>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<14>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<15>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<16>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<17>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<18>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<19>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<1>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<20>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<21>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<22>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<23>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<24>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<25>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<26>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<27>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<28>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<29>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<2>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<30>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<31>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<32>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<33>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<34>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<35>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<36>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<37>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<38>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<39>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<3>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<40>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<41>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<42>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<43>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<44>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<45>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<46>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<47>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<48>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<49>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<4>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<50>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<51>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<52>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<53>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<54>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<55>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<56>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<57>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<58>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<59>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<5>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<60>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<61>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<62>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<63>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<64>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<65>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<66>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<67>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<68>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<69>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<6>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<70>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<71>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<72>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<73>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<74>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<75>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<76>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<77>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<78>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<79>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<7>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<80>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<81>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<82>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<83>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<84>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<85>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<86>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<87>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<88>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<89>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<8>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<90>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<91>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<92>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<93>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<94>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<95>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<96>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<97>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<98>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<99>/Q has been replicated 1 time(s)
+FlipFlop cycle_regs<9>/Q has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2816
+ Flip-Flops                                            : 2816
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DUT_CTRL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 10374
+#      GND                         : 1
+#      INV                         : 256
+#      LUT1                        : 896
+#      LUT2                        : 260
+#      LUT3                        : 2426
+#      LUT4                        : 512
+#      LUT5                        : 256
+#      LUT6                        : 3331
+#      MUXCY                       : 896
+#      MUXF7                       : 515
+#      VCC                         : 1
+#      XORCY                       : 1024
+# FlipFlops/Latches                : 2816
+#      FD                          : 128
+#      FDRE                        : 2176
+#      FDRE_1                      : 128
+#      FDSE                        : 384
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 438
+#      IBUF                        : 310
+#      IOBUF                       : 128
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2816  out of  18224    15%  
+ Number of Slice LUTs:                 7937  out of   9112    87%  
+    Number used as Logic:              7937  out of   9112    87%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   9278
+   Number with an unused Flip Flop:    6462  out of   9278    69%  
+   Number with an unused LUT:          1341  out of   9278    14%  
+   Number of fully used LUT-FF pairs:  1475  out of   9278    15%  
+   Number of unique control sets:       649
+
+IO Utilization: 
+ Number of IOs:                         439
+ Number of bonded IOBs:                 439  out of    232   189% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 2816  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.845ns (Maximum Frequency: 146.086MHz)
+   Minimum input arrival time before clock: 7.465ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 6.845ns (frequency: 146.086MHz)
+  Total number of paths / destination ports: 45468 / 4096
+-------------------------------------------------------------------------
+Delay:               3.423ns (Levels of Logic = 4)
+  Source:            ff_regs<0>/ff_reg0/cycle_counter_3 (FF)
+  Destination:       ff_regs<0>/ff_reg0/T_reg (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
+
+  Data Path: ff_regs<0>/ff_reg0/cycle_counter_3 to ff_regs<0>/ff_reg0/T_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.447   0.857  ff_regs<0>/ff_reg0/cycle_counter_3 (ff_regs<0>/ff_reg0/cycle_counter_3)
+     LUT6:I5->O            1   0.205   0.000  ff_regs<0>/ff_reg0/GND_4_o_GND_4_o_equal_15_o91_G (N903)
+     MUXF7:I1->O           1   0.140   0.684  ff_regs<0>/ff_reg0/GND_4_o_GND_4_o_equal_15_o91 (ff_regs<0>/ff_reg0/GND_4_o_GND_4_o_equal_15_o9)
+     LUT6:I4->O            1   0.203   0.580  ff_regs<0>/ff_reg0/GND_4_o_GND_4_o_equal_15_o92 (ff_regs<0>/ff_reg0/GND_4_o_GND_4_o_equal_15_o92)
+     LUT6:I5->O            1   0.205   0.000  ff_regs<0>/ff_reg0/T_reg_dpot (ff_regs<0>/ff_reg0/T_reg_dpot)
+     FDRE_1:D                  0.102          ff_regs<0>/ff_reg0/T_reg
+    ----------------------------------------
+    Total                      3.423ns (1.302ns logic, 2.121ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 45862 / 6016
+-------------------------------------------------------------------------
+Offset:              7.465ns (Levels of Logic = 5)
+  Source:            TRAILING_EDGE_2<6> (PAD)
+  Destination:       ff_regs<1>/ff_reg0/r0_val (FF)
+  Destination Clock: CLK rising
+
+  Data Path: TRAILING_EDGE_2<6> to ff_regs<1>/ff_reg0/r0_val
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           384   1.222   2.307  TRAILING_EDGE_2_6_IBUF (TRAILING_EDGE_2_6_IBUF)
+     LUT3:I0->O            1   0.205   0.808  ff_regs<127>/Mmux_trailing_edge71 (ff_regs<127>/trailing_edge<6>)
+     LUT6:I3->O            1   0.205   0.580  ff_regs<127>/ff_reg0/cycle_counter[7]_GND_4_o_equal_9_o8_SW1 (N256)
+     LUT6:I5->O            2   0.205   0.721  ff_regs<127>/ff_reg0/cycle_counter[7]_GND_4_o_equal_9_o8 (ff_regs<127>/ff_reg0/cycle_counter[7]_GND_4_o_equal_9_o)
+     LUT3:I1->O            1   0.203   0.579  ff_regs<127>/ff_reg0/Reset_OR_DriverANDClockEnable1 (ff_regs<127>/ff_reg0/Reset_OR_DriverANDClockEnable)
+     FDRE:R                    0.430          ff_regs<127>/ff_reg0/r0_val
+    ----------------------------------------
+    Total                      7.465ns (2.470ns logic, 4.995ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 256 / 128
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            ff_regs<127>/ff_reg0/Q (FF)
+  Destination:       OUTPUT_SIGNALS<127> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: ff_regs<127>/ff_reg0/Q to OUTPUT_SIGNALS<127>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  ff_regs<127>/ff_reg0/Q (ff_regs<127>/ff_reg0/Q)
+     IOBUF:I->O                2.571          triregs<127>/IOBUF_inst (OUTPUT_SIGNALS<127>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.576|    1.599|    3.423|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 36.52 secs
+ 
+--> 
+
+Total memory usage is 333484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,7 @@
+verilog work "FF_REG.v"
+verilog work "TRIREG.v"
+verilog work "TEMPLATE_DB_REG.v"
+verilog work "DUTSIG_DB_REG.v"
+verilog work "DB_FF_REG.v"
+verilog work "DB_CYCLE_REG.v"
+verilog work "DUT_CTRL.v"

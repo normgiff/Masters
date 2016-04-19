@@ -25,7 +25,9 @@ module TEMPLATE_DB_REG(CLK, RST, LOAD, TRANSFER, D, Q);
 	
 	always@(posedge CLK) begin
 		if (RST) begin
-			Q <= 1'b0;
+			// NOTE: By default, internal tristates MUST be disabled upon reset.
+			// Otherwise, we might drive a DUT output!
+			Q <= 1'b1;
 			internal_q <= 1'b0;
 		end
 		else begin

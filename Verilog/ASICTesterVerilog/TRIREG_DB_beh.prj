@@ -1,0 +1,3 @@
+verilog work "TRIREG.v"
+verilog work "TRIREG_DB.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/OUTPUT_BUFFER_CTRL_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="OUTPUT_BUFFER_CTRL_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/READY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/SRAM_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SRAM_DATA[127:0]</obj_property>
+      <obj_property name="ObjectShortName">SRAM_DATA[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/MR_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MR_BAR</obj_property>
+      <obj_property name="ObjectShortName">MR_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/PL_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PL_BAR</obj_property>
+      <obj_property name="ObjectShortName">PL_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/SHCP" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SHCP</obj_property>
+      <obj_property name="ObjectShortName">SHCP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/STCP" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">STCP</obj_property>
+      <obj_property name="ObjectShortName">STCP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/CLEAR_BUFFER" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLEAR_BUFFER</obj_property>
+      <obj_property name="ObjectShortName">CLEAR_BUFFER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/CAPTURE_SRAM_DATA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CAPTURE_SRAM_DATA</obj_property>
+      <obj_property name="ObjectShortName">CAPTURE_SRAM_DATA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/Q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/serial_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">serial_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">serial_counter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/propagation_delay_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">propagation_delay_counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">propagation_delay_counter[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/enable_delay_counter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable_delay_counter</obj_property>
+      <obj_property name="ObjectShortName">enable_delay_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/reset_delay_counter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_delay_counter</obj_property>
+      <obj_property name="ObjectShortName">reset_delay_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/enable_serial_counter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable_serial_counter</obj_property>
+      <obj_property name="ObjectShortName">enable_serial_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/reset_serial_counter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_serial_counter</obj_property>
+      <obj_property name="ObjectShortName">reset_serial_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/PS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/OUTPUT_BUFFER_CTRL_TB/uut/NS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -8,12 +8,14 @@ module BRAM_CTRL_TB;
 	reg INPUT_WRITE;
 	reg TEMPLATE_WRITE;
 	reg FF_WRITE;
+	reg TC_WRITE;
 	reg [127:0] WRITE_DATA_0;
 	reg [127:0] WRITE_DATA_1;
 	reg TEMPLATE_READ;
 	reg [1:0] TEMPLATE_BITS;
 	reg INPUT_READ;
 	reg FF_READ;
+	reg TC_READ;
 
 	// Outputs
 	wire [127:0] READ_DATA_0;
@@ -28,6 +30,7 @@ module BRAM_CTRL_TB;
 		.INPUT_WRITE(INPUT_WRITE), 
 		.TEMPLATE_WRITE(TEMPLATE_WRITE), 
 		.FF_WRITE(FF_WRITE), 
+		.TC_WRITE(TC_WRITE),
 		.WRITE_DATA_0(WRITE_DATA_0), 
 		.WRITE_DATA_1(WRITE_DATA_1), 
 		.READ_DATA_0(READ_DATA_0), 
@@ -36,6 +39,7 @@ module BRAM_CTRL_TB;
 		.TEMPLATE_BITS(TEMPLATE_BITS), 
 		.INPUT_READ(INPUT_READ), 
 		.FF_READ(FF_READ), 
+		.TC_READ(TC_READ),
 		.TEMPLATE_CHANGE(TEMPLATE_CHANGE), 
 		.READY(READY)
 	);
@@ -53,12 +57,40 @@ module BRAM_CTRL_TB;
 		TEMPLATE_BITS = 0;
 		INPUT_READ = 0;
 		FF_READ = 0;
+		TC_READ = 0;
+		TC_WRITE = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		RST = 0;
 		#100;
+		
+		// Write, then read a cycle vector
+		// Associated with template 0
+		WRITE_DATA_0 = 128'h0123FEEDDEADBEEF0123FEEDDEADBEEF;
+		TC_WRITE = 1;
+		#10;
+		TC_WRITE = 0;
+		#10;
+		
+		while (READY == 1'b0) begin
+			#10;
+		end
+		
+		TEMPLATE_BITS = 0;
+		TC_READ = 1;
+		#10;
+		TC_READ = 0;
+		#10;
+		
+		while (READY == 1'b0) begin
+			#10;
+		end
+		
+		if (READ_DATA_0 != 128'h0123FEEDDEADBEEF0123FEEDDEADBEEF) begin
+			$display("READ_DATA_0 should be %d, but is %d.\n", 128'h0123FEEDDEADBEEF0123FEEDDEADBEEF, READ_DATA_0);
+		end
 		
 		// Write, then read a template
 		// Template 0

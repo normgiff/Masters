@@ -30,9 +30,9 @@ parameter TC_INCR_FACTOR = 13'd128;
 // Should this limit become a problem, allowing input vectors to "jump" to addresses
 // after their execution may be best. External SRAM is also a possibility but that
 // requires I/O pins...
-parameter INPUT_START_ADDR_A = 8'd64;
-parameter INPUT_START_ADDR_B = 8'd65;
-parameter INPUT_INCR_FACTOR = 8'd2;
+parameter INPUT_START_ADDR_A = 7'd32;
+parameter INPUT_START_ADDR_B = 7'd33;
+parameter INPUT_INCR_FACTOR = 7'd1;
 
 // State parameters.
 parameter IDLE = 0;
@@ -44,18 +44,23 @@ parameter FF_WRITE_1 = 5;
 parameter FF_WRITE_2 = 6;
 parameter FF_WRITE_3 = 7;
 parameter FF_WRITE_4 = 8;
-parameter INPUT_READ_0 = 9;
-parameter INPUT_READ_1 = 10;
-parameter INPUT_READ_2 = 11;
-parameter TEMPLATE_READ_0 = 12;
-parameter TEMPLATE_READ_1 = 13;
-parameter TEMPLATE_READ_2 = 14;
-parameter FF_READ_0 = 15;
-parameter FF_READ_1 = 16;
-parameter FF_READ_2 = 17;
-parameter FF_READ_3 = 18;
-parameter FF_READ_4 = 19;
-parameter CHECK_TEMPLATE = 20;
+parameter TC_WRITE_1 = 9;
+parameter TC_WRITE_2 = 10;
+parameter INPUT_READ_0 = 11;
+parameter INPUT_READ_1 = 12;
+parameter INPUT_READ_2 = 13;
+parameter TEMPLATE_READ_0 = 14;
+parameter TEMPLATE_READ_1 = 15;
+parameter TEMPLATE_READ_2 = 16;
+parameter FF_READ_0 = 17;
+parameter FF_READ_1 = 18;
+parameter FF_READ_2 = 19;
+parameter FF_READ_3 = 20;
+parameter FF_READ_4 = 21;
+parameter TC_READ_0 = 22;
+parameter TC_READ_1 = 23;
+parameter TC_READ_2 = 24;
+parameter CHECK_TEMPLATE = 25;
 
 // Valid templates are 0, 1, 2, and 3.
 // Using 4 allows us to recognize a template change

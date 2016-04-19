@@ -10,9 +10,9 @@
  * Outputs:
  * 	O
  */ 
-module TRIREG(I, O, EN);
+module TRIREG(I, O, EN_BAR);
 	input I;
-	input EN;
+	input EN_BAR;
 	output O;
 	
 	IOBUF #(
@@ -23,7 +23,7 @@ module TRIREG(I, O, EN);
 			.O(),   // Unconnected since DUT outputs should not enter the FPGA
 			.IO(O), // Just output
 			.I(I),
-			.T(EN)
+			.T(EN_BAR)
 	);
 
 endmodule

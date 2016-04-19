@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: FF_REG.prj
 
@@ -124,21 +124,38 @@ Synthesizing Unit <FF_REG>.
         R1 = 2'b01
         DNRZ_L = 2'b10
         DNRZ_T = 2'b11
-    Found 1-bit register for signal <T_reg>.
+    Found 1-bit register for signal <r0_val>.
+    Found 1-bit register for signal <r1_val>.
     Found 1-bit register for signal <L_reg>.
+    Found 1-bit register for signal <T_reg>.
+    Found 1-bit register for signal <Q>.
+    Found 8-bit register for signal <cycle_counter>.
+    Found 8-bit adder for signal <cycle_counter[7]_GND_1_o_add_2_OUT> created at line 48.
+    Found 1-bit 4-to-1 multiplexer for signal <FF[1]_T_reg_Mux_13_o> created at line 95.
+    Found 8-bit comparator equal for signal <cycle_counter[7]_CYCLE_LENGTH[7]_equal_2_o> created at line 44
+    Found 8-bit comparator equal for signal <cycle_counter[7]_GND_1_o_equal_7_o> created at line 60
+    Found 8-bit comparator equal for signal <cycle_counter[7]_GND_1_o_equal_8_o> created at line 64
     Summary:
-	inferred   2 D-type flip-flop(s).
-	inferred   3 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   2 Multiplexer(s).
 Unit <FF_REG> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 2
- 1-bit register                                        : 2
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 3
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 6
+ 1-bit register                                        : 5
+ 8-bit register                                        : 1
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 3
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -147,14 +164,22 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <FF_REG>.
+The following registers are absorbed into counter <cycle_counter>: 1 register on signal <cycle_counter>.
+Unit <FF_REG> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 2
- Flip-Flops                                            : 2
-# Multiplexers                                         : 3
- 1-bit 2-to-1 multiplexer                              : 3
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Comparators                                          : 3
+ 8-bit comparator equal                                : 3
+# Multiplexers                                         : 1
+ 1-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -174,8 +199,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 13
+ Flip-Flops                                            : 13
 
 =========================================================================
 
@@ -198,15 +223,26 @@ Top Level Output File Name         : FF_REG.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
-#      LUT6                        : 1
-# FlipFlops/Latches                : 2
-#      FD                          : 1
-#      FD_1                        : 1
+# BELS                             : 41
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 7
+#      LUT3                        : 1
+#      LUT4                        : 3
+#      LUT5                        : 2
+#      LUT6                        : 10
+#      MUXCY                       : 7
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 13
+#      FD                          : 2
+#      FDR                         : 9
+#      FDRE_1                      : 1
+#      FDS                         : 1
 # Clock Buffers                    : 1
-#      BUFG                        : 1
-# IO Buffers                       : 5
-#      IBUF                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 27
+#      IBUF                        : 26
 #      OBUF                        : 1
 
 Device utilization summary:
@@ -216,20 +252,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               2  out of  18224     0%  
- Number of Slice LUTs:                    1  out of   9112     0%  
-    Number used as Logic:                 1  out of   9112     0%  
+ Number of Slice Registers:              13  out of  18224     0%  
+ Number of Slice LUTs:                   24  out of   9112     0%  
+    Number used as Logic:                24  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      3
-   Number with an unused Flip Flop:       1  out of      3    33%  
-   Number with an unused LUT:             2  out of      3    66%  
-   Number of fully used LUT-FF pairs:     0  out of      3     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     24
+   Number with an unused Flip Flop:      11  out of     24    45%  
+   Number with an unused LUT:             0  out of     24     0%  
+   Number of fully used LUT-FF pairs:    13  out of     24    54%  
+   Number of unique control sets:         4
 
 IO Utilization: 
- Number of IOs:                           5
- Number of bonded IOBs:                   5  out of    232     2%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    232    12%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -255,7 +291,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CYCLE                              | IBUF+BUFG              | 2     |
+CLK                                | BUFGP                  | 13    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -266,87 +302,101 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: 1.974ns
-   Maximum output required time after clock: 4.627ns
-   Maximum combinational path delay: 5.519ns
+   Minimum period: 5.004ns (Maximum Frequency: 199.856MHz)
+   Minimum input arrival time before clock: 5.040ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CYCLE'
-  Total number of paths / destination ports: 2 / 2
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.004ns (frequency: 199.856MHz)
+  Total number of paths / destination ports: 180 / 22
 -------------------------------------------------------------------------
-Offset:              1.974ns (Levels of Logic = 1)
-  Source:            D (PAD)
+Delay:               2.502ns (Levels of Logic = 1)
+  Source:            cycle_counter_5 (FF)
   Destination:       T_reg (FF)
-  Destination Clock: CYCLE falling
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
 
-  Data Path: D to T_reg
+  Data Path: cycle_counter_5 to T_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.222   0.650  D_IBUF (D_IBUF)
-     FD_1:D                    0.102          T_reg
+     FDR:C->Q              4   0.447   0.912  cycle_counter_5 (cycle_counter_5)
+     LUT6:I3->O            2   0.205   0.616  cycle_counter[7]_GND_1_o_equal_8_o81 (cycle_counter[7]_GND_1_o_equal_8_o8)
+     FDRE_1:CE                 0.322          T_reg
     ----------------------------------------
-    Total                      1.974ns (1.324ns logic, 0.650ns route)
-                                       (67.1% logic, 32.9% route)
+    Total                      2.502ns (0.974ns logic, 1.528ns route)
+                                       (38.9% logic, 61.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CYCLE'
-  Total number of paths / destination ports: 2 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 145 / 17
 -------------------------------------------------------------------------
-Offset:              4.627ns (Levels of Logic = 2)
-  Source:            L_reg (FF)
-  Destination:       Q (PAD)
-  Source Clock:      CYCLE rising
+Offset:              5.040ns (Levels of Logic = 5)
+  Source:            TRAILING_EDGE<2> (PAD)
+  Destination:       r1_val (FF)
+  Destination Clock: CLK rising
 
-  Data Path: L_reg to Q
+  Data Path: TRAILING_EDGE<2> to r1_val
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.827  L_reg (L_reg)
-     LUT6:I2->O            1   0.203   0.579  Q1 (Q_OBUF)
-     OBUF:I->O                 2.571          Q_OBUF (Q)
+     IBUF:I->O             1   1.222   0.944  TRAILING_EDGE_2_IBUF (TRAILING_EDGE_2_IBUF)
+     LUT6:I0->O            2   0.203   0.721  cycle_counter[7]_GND_1_o_equal_8_o82 (cycle_counter[7]_GND_1_o_equal_8_o81)
+     LUT5:I3->O            2   0.203   0.617  cycle_counter[7]_GND_1_o_equal_8_o83 (cycle_counter[7]_GND_1_o_equal_8_o)
+     LUT6:I5->O            2   0.205   0.617  cycle_counter[7]_GND_1_o_equal_7_o11 (cycle_counter[7]_GND_1_o_equal_7_o1)
+     LUT4:I3->O            1   0.205   0.000  r1_val_rstpot (r1_val_rstpot)
+     FDS:D                     0.102          r1_val
     ----------------------------------------
-    Total                      4.627ns (3.221ns logic, 1.406ns route)
-                                       (69.6% logic, 30.4% route)
+    Total                      5.040ns (2.140ns logic, 2.900ns route)
+                                       (42.5% logic, 57.5% route)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 4 / 1
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               5.519ns (Levels of Logic = 3)
-  Source:            FF<1> (PAD)
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Q (FF)
   Destination:       Q (PAD)
+  Source Clock:      CLK rising
 
-  Data Path: FF<1> to Q
+  Data Path: Q to Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.944  FF_1_IBUF (FF_1_IBUF)
-     LUT6:I0->O            1   0.203   0.579  Q1 (Q_OBUF)
+     FD:C->Q               1   0.447   0.579  Q (Q_OBUF)
      OBUF:I->O                 2.571          Q_OBUF (Q)
     ----------------------------------------
-    Total                      5.519ns (3.996ns logic, 1.523ns route)
-                                       (72.4% logic, 27.6% route)
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.234|    1.599|    2.502|         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.90 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.81 secs
  
 --> 
 
-Total memory usage is 256672 kilobytes
+Total memory usage is 254024 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
