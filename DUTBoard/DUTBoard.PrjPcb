@@ -370,122 +370,110 @@ DocumentPath=Gerber\NC Drill Files\DUTBoard.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Gerber\Gerber Files\DUTBoard.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument4]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument5]
+[GeneratedDocument4]
 DocumentPath=Gerber\Gerber Files\DUTBoard.G1
 DItemRevisionGUID=
 
-[GeneratedDocument6]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.G1
 DItemRevisionGUID=
 
-[GeneratedDocument7]
+[GeneratedDocument6]
 DocumentPath=Gerber\Gerber Files\DUTBoard.G2
 DItemRevisionGUID=
 
-[GeneratedDocument8]
+[GeneratedDocument7]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.G2
 DItemRevisionGUID=
 
-[GeneratedDocument9]
+[GeneratedDocument8]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument10]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument11]
+[GeneratedDocument10]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument12]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument14]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument14]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument16]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GM3
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GM3
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument18]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument20]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument22]
+[GeneratedDocument21]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument23]
+[GeneratedDocument22]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument24]
+[GeneratedDocument23]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument25]
+[GeneratedDocument24]
 DocumentPath=Gerber\Gerber Files\DUTBoard.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument26]
+[GeneratedDocument25]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument27]
+[GeneratedDocument26]
 DocumentPath=Gerber\NC Drill Files\DUTBoard.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument28]
-DocumentPath=Gerber\Gerber Files\DUTBoard.REP
-DItemRevisionGUID=
-
-[GeneratedDocument29]
+[GeneratedDocument27]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.REP
 DItemRevisionGUID=
 
-[GeneratedDocument30]
-DocumentPath=Gerber\Gerber Files\DUTBoard.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument31]
+[GeneratedDocument28]
 DocumentPath=Project Outputs for DUTBoard\New Folder Structure\Gerber\DUTBoard.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument32]
+[GeneratedDocument29]
 DocumentPath=Gerber\NC Drill Files\DUTBoard.TXT
 DItemRevisionGUID=
 

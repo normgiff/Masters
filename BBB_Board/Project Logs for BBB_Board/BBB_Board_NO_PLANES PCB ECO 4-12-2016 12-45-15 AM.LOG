@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=10kOhm_1_U_Power_Control1 NewDesignator=250Ohm_U_Power_Control1
+Change Component Designator: OldDesignator=10kOhm_1_U_Power_Control2 NewDesignator=250Ohm_U_Power_Control2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=10uF_1_U_Power_Control1-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=10uF_1_U_Power_Control2-2

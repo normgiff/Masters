@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=BBB_GPIO_60 Pin=-13
+Change Net Name : Old Net Name=SPI1_SCLK New Net Name=SPI1CLK
+Added Pin To Net: NetName=BBB_UART4_TXD Pin=-13
+Added Net: Name=BBB_UART4_TXD

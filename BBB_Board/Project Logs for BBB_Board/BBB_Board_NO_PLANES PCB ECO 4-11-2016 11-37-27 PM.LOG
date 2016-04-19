@@ -1,0 +1,2 @@
+Change Component Designator: OldDesignator=-5V NewDesignator=5V
+Change Component Designator: OldDesignator=5V NewDesignator=DUT_HIGH_BACKUP

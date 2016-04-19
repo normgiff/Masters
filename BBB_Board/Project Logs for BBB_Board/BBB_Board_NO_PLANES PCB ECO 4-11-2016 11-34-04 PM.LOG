@@ -1,0 +1,1563 @@
+Added Component: Designator=-5V(CP-002BHPJCT-ND)
+Added Component: Designator=0.1uF_0_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP8(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_1_U_VT_WRP8(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_3_U_VT_WRP8(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP8(0.1uF_0603)
+Added Component: Designator=1MOhm_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1MOhm_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=1uF_1_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1uF_1_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=1uF_2_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1uF_2_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=1uF_3_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1uF_3_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=1uF_4_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1uF_4_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=1uF_5_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=1uF_5_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=3MOhm_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=3MOhm_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=3V3(CP-002BHPJCT-ND)
+Added Component: Designator=5MOhm_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=5MOhm_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=5V(CP-002BHPJCT-ND)
+Added Component: Designator=7MOhm_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=7MOhm_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=10kOhm_1_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=10kOhm_1_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=10uF_1_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=10uF_1_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=10uF_2_U_Power_Control1(0.1uF_0603)
+Added Component: Designator=10uF_2_U_Power_Control2(0.1uF_0603)
+Added Component: Designator=12V(CP-002BHPJCT-ND)
+Added Component: Designator=BBB_DOWN(BBB_Pin)
+Added Component: Designator=BBB_PINOUT1(HDR1X20)
+Added Component: Designator=BBB_PINOUT2(HDR1X20)
+Added Component: Designator=BBB_PINOUT3(HDR1X20)
+Added Component: Designator=BBB_PINOUT4(HDR1X20)
+Added Component: Designator=CUSTOM_HIGH(HDR1X3)
+Added Component: Designator=CUSTOM_LOW(HDR1X3)
+Added Component: Designator=D1_U_Power_Control1(DO-41)
+Added Component: Designator=D1_U_Power_Control2(DO-41)
+Added Component: Designator=D2_U_Power_Control1(DO-41)
+Added Component: Designator=D2_U_Power_Control2(DO-41)
+Added Component: Designator=DUT1_U_DUT_HEADER1(FEMALE_HEADER_SMD)
+Added Component: Designator=DUT1_U_DUT_HEADER2(FEMALE_HEADER_SMD)
+Added Component: Designator=DUT1_U_DUT_HEADER3(FEMALE_HEADER_SMD)
+Added Component: Designator=DUT1_U_DUT_HEADER4(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH1(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH2(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH3(FEMALE_HEADER_SMD)
+Added Component: Designator=ETH4(FEMALE_HEADER_SMD)
+Added Component: Designator=GND1(HDR1X10)
+Added Component: Designator=GND2(HDR1X10)
+Added Component: Designator=LM1_U_Power_Control1(op_amp)
+Added Component: Designator=LM1_U_Power_Control2(op_amp)
+Added Component: Designator=LM2_U_Power_Control1(op_amp)
+Added Component: Designator=LM2_U_Power_Control2(op_amp)
+Added Component: Designator=LOGIC_HIGH(HDR1X10)
+Added Component: Designator=LOGIC_LOW(HDR1X10)
+Added Component: Designator=LT1_U_VT_WRP1(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP2(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP3(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP4(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP5(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP6(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP7(8-bit_level)
+Added Component: Designator=LT1_U_VT_WRP8(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP1(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP2(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP3(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP4(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP5(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP6(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP7(8-bit_level)
+Added Component: Designator=LT2_U_VT_WRP8(8-bit_level)
+Added Component: Designator=POT_U_Power_Control1(Dig_Pot)
+Added Component: Designator=POT_U_Power_Control2(Dig_Pot)
+Added Component: Designator=R1(0.1uF_0603)
+Added Component: Designator=S1(SPST-2)
+Added Component: Designator=VR1_U_Power_Control1(volt_reg)
+Added Component: Designator=VR1_U_Power_Control2(volt_reg)
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=-5V-1
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=-5V-1
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=3MOhm_U_Power_Control1-2
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=3MOhm_U_Power_Control2-2
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=LM1_U_Power_Control1-2
+Added Pin To Net: NetName=-5V_W_U_Power_Control1 Pin=LM1_U_Power_Control2-2
+Added Net: Name=-5V_W_U_Power_Control1
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=1uF_5_U_Power_Control1-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=1uF_5_U_Power_Control2-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=5MOhm_U_Power_Control1-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=5MOhm_U_Power_Control2-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=10uF_2_U_Power_Control1-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=10uF_2_U_Power_Control2-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=12V-2
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=12V-3
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=LM2_U_Power_Control1-5
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=LM2_U_Power_Control2-5
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=POT_U_Power_Control1-6
+Added Pin To Net: NetName=12V_W_U_Power_Control1 Pin=POT_U_Power_Control2-6
+Added Net: Name=12V_W_U_Power_Control1
+Added Pin To Net: NetName=BBB_AIN0 Pin=BBB_DOWN-39
+Added Pin To Net: NetName=BBB_AIN0 Pin=BBB_PINOUT2-17
+Added Net: Name=BBB_AIN0
+Added Pin To Net: NetName=BBB_AIN1 Pin=BBB_DOWN-40
+Added Pin To Net: NetName=BBB_AIN1 Pin=BBB_PINOUT2-16
+Added Net: Name=BBB_AIN1
+Added Pin To Net: NetName=BBB_AIN2 Pin=BBB_DOWN-37
+Added Pin To Net: NetName=BBB_AIN2 Pin=BBB_PINOUT2-19
+Added Net: Name=BBB_AIN2
+Added Pin To Net: NetName=BBB_AIN3 Pin=BBB_DOWN-38
+Added Pin To Net: NetName=BBB_AIN3 Pin=BBB_PINOUT2-18
+Added Net: Name=BBB_AIN3
+Added Pin To Net: NetName=BBB_AIN4 Pin=BBB_DOWN-33
+Added Pin To Net: NetName=BBB_AIN4 Pin=BBB_PINOUT1-3
+Added Net: Name=BBB_AIN4
+Added Pin To Net: NetName=BBB_AIN5 Pin=BBB_DOWN-36
+Added Pin To Net: NetName=BBB_AIN5 Pin=BBB_PINOUT2-20
+Added Net: Name=BBB_AIN5
+Added Pin To Net: NetName=BBB_AIN6 Pin=BBB_DOWN-35
+Added Pin To Net: NetName=BBB_AIN6 Pin=BBB_PINOUT1-1
+Added Net: Name=BBB_AIN6
+Added Pin To Net: NetName=BBB_DCS_DATA1 Pin=BBB_DOWN-92
+Added Pin To Net: NetName=BBB_DCS_DATA1 Pin=BBB_PINOUT4-20
+Added Net: Name=BBB_DCS_DATA1
+Added Pin To Net: NetName=BBB_ECAPWMO Pin=BBB_DOWN-42
+Added Pin To Net: NetName=BBB_ECAPWMO Pin=BBB_PINOUT2-14
+Added Net: Name=BBB_ECAPWMO
+Added Pin To Net: NetName=BBB_EHRPWM1A Pin=BBB_DOWN-14
+Added Pin To Net: NetName=BBB_EHRPWM1A Pin=BBB_PINOUT1-10
+Added Net: Name=BBB_EHRPWM1A
+Added Pin To Net: NetName=BBB_EHRPWM1B Pin=BBB_DOWN-16
+Added Pin To Net: NetName=BBB_EHRPWM1B Pin=BBB_PINOUT1-9
+Added Net: Name=BBB_EHRPWM1B
+Added Pin To Net: NetName=BBB_EHRPWM2A Pin=BBB_DOWN-65
+Added Pin To Net: NetName=BBB_EHRPWM2A Pin=BBB_PINOUT3-18
+Added Net: Name=BBB_EHRPWM2A
+Added Pin To Net: NetName=BBB_EHRPWM2B Pin=BBB_DOWN-59
+Added Pin To Net: NetName=BBB_EHRPWM2B Pin=BBB_PINOUT2-4
+Added Net: Name=BBB_EHRPWM2B
+Added Pin To Net: NetName=BBB_GND_ADC Pin=BBB_DOWN-34
+Added Pin To Net: NetName=BBB_GND_ADC Pin=BBB_PINOUT1-2
+Added Net: Name=BBB_GND_ADC
+Added Pin To Net: NetName=BBB_GPIO_20 Pin=BBB_DOWN-41
+Added Pin To Net: NetName=BBB_GPIO_20 Pin=BBB_PINOUT2-15
+Added Net: Name=BBB_GPIO_20
+Added Pin To Net: NetName=BBB_GPIO_26 Pin=BBB_DOWN-60
+Added Pin To Net: NetName=BBB_GPIO_26 Pin=BBB_PINOUT2-3
+Added Net: Name=BBB_GPIO_26
+Added Pin To Net: NetName=BBB_GPIO_27 Pin=BBB_DOWN-63
+Added Pin To Net: NetName=BBB_GPIO_27 Pin=BBB_PINOUT3-20
+Added Net: Name=BBB_GPIO_27
+Added Pin To Net: NetName=BBB_GPIO_44 Pin=BBB_DOWN-58
+Added Pin To Net: NetName=BBB_GPIO_44 Pin=BBB_PINOUT2-5
+Added Net: Name=BBB_GPIO_44
+Added Pin To Net: NetName=BBB_GPIO_45 Pin=BBB_DOWN-57
+Added Pin To Net: NetName=BBB_GPIO_45 Pin=BBB_PINOUT2-6
+Added Net: Name=BBB_GPIO_45
+Added Pin To Net: NetName=BBB_GPIO_46 Pin=BBB_DOWN-62
+Added Pin To Net: NetName=BBB_GPIO_46 Pin=BBB_PINOUT2-1
+Added Net: Name=BBB_GPIO_46
+Added Pin To Net: NetName=BBB_GPIO_47 Pin=BBB_DOWN-61
+Added Pin To Net: NetName=BBB_GPIO_47 Pin=BBB_PINOUT2-2
+Added Net: Name=BBB_GPIO_47
+Added Pin To Net: NetName=BBB_GPIO_60 Pin=BBB_PINOUT1-11
+Added Net: Name=BBB_GPIO_60
+Added Pin To Net: NetName=BBB_GPIO_61 Pin=BBB_DOWN-72
+Added Pin To Net: NetName=BBB_GPIO_61 Pin=BBB_PINOUT3-11
+Added Net: Name=BBB_GPIO_61
+Added Pin To Net: NetName=BBB_GPIO_65 Pin=BBB_DOWN-64
+Added Pin To Net: NetName=BBB_GPIO_65 Pin=BBB_PINOUT3-19
+Added Net: Name=BBB_GPIO_65
+Added Pin To Net: NetName=BBB_GPIO_66 Pin=BBB_DOWN-53
+Added Pin To Net: NetName=BBB_GPIO_66 Pin=BBB_PINOUT2-9
+Added Net: Name=BBB_GPIO_66
+Added Pin To Net: NetName=BBB_GPIO_67 Pin=BBB_DOWN-54
+Added Net: Name=BBB_GPIO_67
+Added Pin To Net: NetName=BBB_GPIO_68 Pin=BBB_DOWN-56
+Added Pin To Net: NetName=BBB_GPIO_68 Pin=BBB_PINOUT2-7
+Added Net: Name=BBB_GPIO_68
+Added Pin To Net: NetName=BBB_GPIO_69 Pin=BBB_DOWN-55
+Added Pin To Net: NetName=BBB_GPIO_69 Pin=BBB_PINOUT2-8
+Added Net: Name=BBB_GPIO_69
+Added Pin To Net: NetName=BBB_GPIO_115 Pin=BBB_DOWN-27
+Added Pin To Net: NetName=BBB_GPIO_115 Pin=BBB_PINOUT1-5
+Added Net: Name=BBB_GPIO_115
+Added Pin To Net: NetName=BBB_GPIO_117 Pin=BBB_DOWN-25
+Added Pin To Net: NetName=BBB_GPIO_117 Pin=BBB_PINOUT1-6
+Added Net: Name=BBB_GPIO_117
+Added Pin To Net: NetName=BBB_I2C2_SCL Pin=BBB_DOWN-19
+Added Pin To Net: NetName=BBB_I2C2_SCL Pin=BBB_PINOUT1-8
+Added Net: Name=BBB_I2C2_SCL
+Added Pin To Net: NetName=BBB_I2C_SDA Pin=BBB_DOWN-20
+Added Pin To Net: NetName=BBB_I2C_SDA Pin=BBB_PINOUT1-7
+Added Net: Name=BBB_I2C_SDA
+Added Pin To Net: NetName=BBB_LCD_AC_BIAS Pin=BBB_DOWN-76
+Added Pin To Net: NetName=BBB_LCD_AC_BIAS Pin=BBB_PINOUT4-4
+Added Net: Name=BBB_LCD_AC_BIAS
+Added Pin To Net: NetName=BBB_LCD_DATA0 Pin=BBB_DOWN-91
+Added Pin To Net: NetName=BBB_LCD_DATA0 Pin=BBB_PINOUT4-19
+Added Net: Name=BBB_LCD_DATA0
+Added Pin To Net: NetName=BBB_LCD_DATA2 Pin=BBB_DOWN-89
+Added Pin To Net: NetName=BBB_LCD_DATA2 Pin=BBB_PINOUT4-17
+Added Net: Name=BBB_LCD_DATA2
+Added Pin To Net: NetName=BBB_LCD_DATA3 Pin=BBB_DOWN-90
+Added Pin To Net: NetName=BBB_LCD_DATA3 Pin=BBB_PINOUT4-18
+Added Net: Name=BBB_LCD_DATA3
+Added Pin To Net: NetName=BBB_LCD_DATA4 Pin=BBB_DOWN-87
+Added Pin To Net: NetName=BBB_LCD_DATA4 Pin=BBB_PINOUT4-15
+Added Net: Name=BBB_LCD_DATA4
+Added Pin To Net: NetName=BBB_LCD_DATA5 Pin=BBB_DOWN-88
+Added Pin To Net: NetName=BBB_LCD_DATA5 Pin=BBB_PINOUT4-16
+Added Net: Name=BBB_LCD_DATA5
+Added Pin To Net: NetName=BBB_LCD_DATA6 Pin=BBB_DOWN-85
+Added Pin To Net: NetName=BBB_LCD_DATA6 Pin=BBB_PINOUT4-13
+Added Net: Name=BBB_LCD_DATA6
+Added Pin To Net: NetName=BBB_LCD_DATA7 Pin=BBB_DOWN-86
+Added Pin To Net: NetName=BBB_LCD_DATA7 Pin=BBB_PINOUT4-14
+Added Net: Name=BBB_LCD_DATA7
+Added Pin To Net: NetName=BBB_LCD_DATA8 Pin=BBB_DOWN-83
+Added Pin To Net: NetName=BBB_LCD_DATA8 Pin=BBB_PINOUT4-11
+Added Net: Name=BBB_LCD_DATA8
+Added Pin To Net: NetName=BBB_LCD_DATA9 Pin=BBB_DOWN-84
+Added Pin To Net: NetName=BBB_LCD_DATA9 Pin=BBB_PINOUT4-12
+Added Net: Name=BBB_LCD_DATA9
+Added Pin To Net: NetName=BBB_LCD_DATA10 Pin=BBB_DOWN-82
+Added Pin To Net: NetName=BBB_LCD_DATA10 Pin=BBB_PINOUT4-10
+Added Net: Name=BBB_LCD_DATA10
+Added Pin To Net: NetName=BBB_LCD_DATA11 Pin=BBB_DOWN-80
+Added Pin To Net: NetName=BBB_LCD_DATA11 Pin=BBB_PINOUT4-8
+Added Net: Name=BBB_LCD_DATA11
+Added Pin To Net: NetName=BBB_LCD_DATA12 Pin=BBB_DOWN-81
+Added Pin To Net: NetName=BBB_LCD_DATA12 Pin=BBB_PINOUT4-9
+Added Net: Name=BBB_LCD_DATA12
+Added Pin To Net: NetName=BBB_LCD_DATA13 Pin=BBB_DOWN-79
+Added Pin To Net: NetName=BBB_LCD_DATA13 Pin=BBB_PINOUT4-7
+Added Net: Name=BBB_LCD_DATA13
+Added Pin To Net: NetName=BBB_LCD_DATA14 Pin=BBB_DOWN-77
+Added Pin To Net: NetName=BBB_LCD_DATA14 Pin=BBB_PINOUT4-5
+Added Net: Name=BBB_LCD_DATA14
+Added Pin To Net: NetName=BBB_LCD_DATA15 Pin=BBB_DOWN-78
+Added Pin To Net: NetName=BBB_LCD_DATA15 Pin=BBB_PINOUT4-6
+Added Net: Name=BBB_LCD_DATA15
+Added Pin To Net: NetName=BBB_LCD_HSYNC Pin=BBB_DOWN-75
+Added Pin To Net: NetName=BBB_LCD_HSYNC Pin=BBB_PINOUT4-3
+Added Net: Name=BBB_LCD_HSYNC
+Added Pin To Net: NetName=BBB_LCD_PCLK Pin=BBB_DOWN-74
+Added Pin To Net: NetName=BBB_LCD_PCLK Pin=BBB_PINOUT4-2
+Added Net: Name=BBB_LCD_PCLK
+Added Pin To Net: NetName=BBB_LCD_VSYNC Pin=BBB_DOWN-73
+Added Pin To Net: NetName=BBB_LCD_VSYNC Pin=BBB_PINOUT4-1
+Added Net: Name=BBB_LCD_VSYNC
+Added Pin To Net: NetName=BBB_MMC1_CLK Pin=BBB_DOWN-67
+Added Pin To Net: NetName=BBB_MMC1_CLK Pin=BBB_PINOUT3-16
+Added Net: Name=BBB_MMC1_CLK
+Added Pin To Net: NetName=BBB_MMC1_CMD Pin=BBB_DOWN-66
+Added Pin To Net: NetName=BBB_MMC1_CMD Pin=BBB_PINOUT3-17
+Added Net: Name=BBB_MMC1_CMD
+Added Pin To Net: NetName=BBB_MMC1_DAT0 Pin=BBB_DOWN-71
+Added Pin To Net: NetName=BBB_MMC1_DAT0 Pin=BBB_PINOUT3-12
+Added Net: Name=BBB_MMC1_DAT0
+Added Pin To Net: NetName=BBB_MMC1_DAT1 Pin=BBB_DOWN-70
+Added Pin To Net: NetName=BBB_MMC1_DAT1 Pin=BBB_PINOUT3-13
+Added Net: Name=BBB_MMC1_DAT1
+Added Pin To Net: NetName=BBB_MMC1_DAT2 Pin=BBB_DOWN-51
+Added Pin To Net: NetName=BBB_MMC1_DAT2 Pin=BBB_PINOUT2-11
+Added Net: Name=BBB_MMC1_DAT2
+Added Pin To Net: NetName=BBB_MMC1_DAT3 Pin=BBB_DOWN-52
+Added Pin To Net: NetName=BBB_MMC1_DAT3 Pin=BBB_PINOUT2-10
+Added Net: Name=BBB_MMC1_DAT3
+Added Pin To Net: NetName=BBB_MMC1_DAT4 Pin=BBB_DOWN-69
+Added Pin To Net: NetName=BBB_MMC1_DAT4 Pin=BBB_PINOUT3-14
+Added Net: Name=BBB_MMC1_DAT4
+Added Pin To Net: NetName=BBB_MMC1_DAT5 Pin=BBB_DOWN-68
+Added Pin To Net: NetName=BBB_MMC1_DAT5 Pin=BBB_PINOUT3-15
+Added Net: Name=BBB_MMC1_DAT5
+Added Pin To Net: NetName=BBB_MMC1_DAT6 Pin=BBB_DOWN-49
+Added Pin To Net: NetName=BBB_MMC1_DAT6 Pin=BBB_PINOUT2-13
+Added Net: Name=BBB_MMC1_DAT6
+Added Pin To Net: NetName=BBB_MMC1_DAT7 Pin=BBB_DOWN-50
+Added Pin To Net: NetName=BBB_MMC1_DAT7 Pin=BBB_PINOUT2-12
+Added Net: Name=BBB_MMC1_DAT7
+Added Pin To Net: NetName=BBB_PWR_BUT Pin=BBB_DOWN-9
+Added Pin To Net: NetName=BBB_PWR_BUT Pin=BBB_PINOUT1-14
+Added Net: Name=BBB_PWR_BUT
+Added Pin To Net: NetName=BBB_SYS_5V Pin=BBB_DOWN-7
+Added Pin To Net: NetName=BBB_SYS_5V Pin=BBB_DOWN-8
+Added Pin To Net: NetName=BBB_SYS_5V Pin=BBB_PINOUT1-15
+Added Pin To Net: NetName=BBB_SYS_5V Pin=BBB_PINOUT1-16
+Added Net: Name=BBB_SYS_5V
+Added Pin To Net: NetName=BBB_SYS_RST Pin=BBB_DOWN-10
+Added Pin To Net: NetName=BBB_SYS_RST Pin=BBB_PINOUT1-13
+Added Net: Name=BBB_SYS_RST
+Added Pin To Net: NetName=BBB_UART4_RXD Pin=BBB_DOWN-11
+Added Pin To Net: NetName=BBB_UART4_RXD Pin=BBB_PINOUT1-12
+Added Net: Name=BBB_UART4_RXD
+Added Pin To Net: NetName=BBB_UART4_TXD Pin=BBB_DOWN-13
+Added Net: Name=BBB_UART4_TXD
+Added Pin To Net: NetName=BBB_VDD_3V3 Pin=BBB_DOWN-3
+Added Pin To Net: NetName=BBB_VDD_3V3 Pin=BBB_DOWN-4
+Added Pin To Net: NetName=BBB_VDD_3V3 Pin=BBB_PINOUT1-19
+Added Pin To Net: NetName=BBB_VDD_3V3 Pin=BBB_PINOUT1-20
+Added Net: Name=BBB_VDD_3V3
+Added Pin To Net: NetName=BBB_VDD_5V Pin=BBB_DOWN-5
+Added Pin To Net: NetName=BBB_VDD_5V Pin=BBB_DOWN-6
+Added Pin To Net: NetName=BBB_VDD_5V Pin=BBB_PINOUT1-17
+Added Pin To Net: NetName=BBB_VDD_5V Pin=BBB_PINOUT1-18
+Added Net: Name=BBB_VDD_5V
+Added Pin To Net: NetName=BBB_VDD_ADC Pin=BBB_DOWN-32
+Added Pin To Net: NetName=BBB_VDD_ADC Pin=BBB_PINOUT1-4
+Added Net: Name=BBB_VDD_ADC
+Added Pin To Net: NetName=COUNTER_CLK0 Pin=DUT1_U_DUT_HEADER4-24
+Added Pin To Net: NetName=COUNTER_CLK0 Pin=ETH4-35
+Added Net: Name=COUNTER_CLK0
+Added Pin To Net: NetName=COUNTER_CLK1 Pin=DUT1_U_DUT_HEADER3-24
+Added Pin To Net: NetName=COUNTER_CLK1 Pin=ETH4-25
+Added Net: Name=COUNTER_CLK1
+Added Pin To Net: NetName=COUNTER_CLK2 Pin=DUT1_U_DUT_HEADER2-24
+Added Pin To Net: NetName=COUNTER_CLK2 Pin=ETH4-22
+Added Net: Name=COUNTER_CLK2
+Added Pin To Net: NetName=COUNTER_CLK3 Pin=DUT1_U_DUT_HEADER1-24
+Added Pin To Net: NetName=COUNTER_CLK3 Pin=ETH4-21
+Added Net: Name=COUNTER_CLK3
+Added Pin To Net: NetName=COUNTER_CLR Pin=DUT1_U_DUT_HEADER4-23
+Added Pin To Net: NetName=COUNTER_CLR Pin=ETH4-36
+Added Net: Name=COUNTER_CLR
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=1uF_1_U_Power_Control1-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=10kOhm_1_U_Power_Control1-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=CUSTOM_LOW-1
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=D1_U_Power_Control1-1
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=D2_U_Power_Control1-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=VR1_U_Power_Control1-2
+Added Pin To Net: NetName=CUSTOM_HIGH Pin=VR1_U_Power_Control1-4
+Added Net: Name=CUSTOM_HIGH
+Added Pin To Net: NetName=CUSTOM_LOW Pin=1uF_1_U_Power_Control2-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=10kOhm_1_U_Power_Control2-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=CUSTOM_HIGH-1
+Added Pin To Net: NetName=CUSTOM_LOW Pin=D1_U_Power_Control2-1
+Added Pin To Net: NetName=CUSTOM_LOW Pin=D2_U_Power_Control2-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=VR1_U_Power_Control2-2
+Added Pin To Net: NetName=CUSTOM_LOW Pin=VR1_U_Power_Control2-4
+Added Net: Name=CUSTOM_LOW
+Added Pin To Net: NetName=DIN0 Pin=BBB_DOWN-21
+Added Pin To Net: NetName=DIN0 Pin=POT_U_Power_Control2-10
+Added Net: Name=DIN0
+Added Pin To Net: NetName=DIN1 Pin=BBB_DOWN-29
+Added Pin To Net: NetName=DIN1 Pin=POT_U_Power_Control1-10
+Added Net: Name=DIN1
+Added Pin To Net: NetName=DUT_HIGH_BACKUP Pin=5V-2
+Added Pin To Net: NetName=DUT_HIGH_BACKUP Pin=5V-3
+Added Net: Name=DUT_HIGH_BACKUP
+Added Pin To Net: NetName=EN Pin=DUT1_U_DUT_HEADER4-22
+Added Pin To Net: NetName=EN Pin=ETH4-37
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP1-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP2-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP3-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP4-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP5-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP6-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP7-10
+Added Pin To Net: NetName=EN Pin=LT1_U_VT_WRP8-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP1-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP2-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP3-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP4-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP5-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP6-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP7-10
+Added Pin To Net: NetName=EN Pin=LT2_U_VT_WRP8-10
+Added Net: Name=EN
+Added Pin To Net: NetName=FPGA_Q Pin=DUT1_U_DUT_HEADER3-20
+Added Pin To Net: NetName=FPGA_Q Pin=ETH4-18
+Added Net: Name=FPGA_Q
+Added Pin To Net: NetName=FPGA_RX Pin=BBB_DOWN-26
+Added Pin To Net: NetName=FPGA_RX Pin=ETH4-16
+Added Net: Name=FPGA_RX
+Added Pin To Net: NetName=FPGA_SHCP Pin=DUT1_U_DUT_HEADER3-22
+Added Pin To Net: NetName=FPGA_SHCP Pin=ETH4-29
+Added Net: Name=FPGA_SHCP
+Added Pin To Net: NetName=FPGA_STCP Pin=DUT1_U_DUT_HEADER3-23
+Added Pin To Net: NetName=FPGA_STCP Pin=ETH4-28
+Added Net: Name=FPGA_STCP
+Added Pin To Net: NetName=FPGA_TX Pin=BBB_DOWN-24
+Added Pin To Net: NetName=FPGA_TX Pin=ETH4-17
+Added Net: Name=FPGA_TX
+Added Pin To Net: NetName=FPGA_~CS1 Pin=DUT1_U_DUT_HEADER4-17
+Added Pin To Net: NetName=FPGA_~CS1 Pin=ETH4-40
+Added Net: Name=FPGA_~CS1
+Added Pin To Net: NetName=FPGA_~CS2 Pin=DUT1_U_DUT_HEADER2-17
+Added Pin To Net: NetName=FPGA_~CS2 Pin=ETH4-27
+Added Net: Name=FPGA_~CS2
+Added Pin To Net: NetName=FPGA_~CS3 Pin=DUT1_U_DUT_HEADER1-17
+Added Pin To Net: NetName=FPGA_~CS3 Pin=ETH4-24
+Added Net: Name=FPGA_~CS3
+Added Pin To Net: NetName=FPGA_~CS4 Pin=DUT1_U_DUT_HEADER3-17
+Added Pin To Net: NetName=FPGA_~CS4 Pin=ETH4-34
+Added Net: Name=FPGA_~CS4
+Added Pin To Net: NetName=FPGA_~MR Pin=DUT1_U_DUT_HEADER3-19
+Added Pin To Net: NetName=FPGA_~MR Pin=ETH4-32
+Added Net: Name=FPGA_~MR
+Added Pin To Net: NetName=FPGA_~OE Pin=DUT1_U_DUT_HEADER4-18
+Added Pin To Net: NetName=FPGA_~OE Pin=ETH4-39
+Added Net: Name=FPGA_~OE
+Added Pin To Net: NetName=FPGA_~PL Pin=DUT1_U_DUT_HEADER3-21
+Added Pin To Net: NetName=FPGA_~PL Pin=ETH4-31
+Added Net: Name=FPGA_~PL
+Added Pin To Net: NetName=FPGA_~WE1 Pin=DUT1_U_DUT_HEADER4-19
+Added Pin To Net: NetName=FPGA_~WE1 Pin=ETH4-38
+Added Net: Name=FPGA_~WE1
+Added Pin To Net: NetName=FPGA_~WE2 Pin=DUT1_U_DUT_HEADER2-18
+Added Pin To Net: NetName=FPGA_~WE2 Pin=ETH4-26
+Added Net: Name=FPGA_~WE2
+Added Pin To Net: NetName=FPGA_~WE3 Pin=DUT1_U_DUT_HEADER1-18
+Added Pin To Net: NetName=FPGA_~WE3 Pin=ETH4-23
+Added Net: Name=FPGA_~WE3
+Added Pin To Net: NetName=FPGA_~WE4 Pin=DUT1_U_DUT_HEADER3-18
+Added Pin To Net: NetName=FPGA_~WE4 Pin=ETH4-33
+Added Net: Name=FPGA_~WE4
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP1-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP3-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP4-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP5-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_0_U_VT_WRP8-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP1-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP3-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP4-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP5-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=0.1uF_1_U_VT_WRP8-1
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=1uF_4_U_Power_Control1-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=1uF_4_U_Power_Control2-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=3V3-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=3V3-3
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=DUT1_U_DUT_HEADER2-19
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT1_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=LT2_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=POT_U_Power_Control1-8
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=POT_U_Power_Control2-8
+Added Pin To Net: NetName=GLOBAL_3V3 Pin=S1-1
+Added Net: Name=GLOBAL_3V3
+Added Pin To Net: NetName=GLOBAL_5V_BACKUP Pin=CUSTOM_HIGH-3
+Added Net: Name=GLOBAL_5V_BACKUP
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP1-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP3-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP4-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP5-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP8-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP1-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP3-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP4-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP5-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP8-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=CUSTOM_HIGH-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=DUT1_U_DUT_HEADER2-23
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-1
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-3
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-4
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-5
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-6
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-7
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-8
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-9
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LOGIC_HIGH-10
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP1-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP2-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP3-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP4-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP5-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP6-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP7-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT1_U_VT_WRP8-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP1-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP2-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP3-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP4-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP5-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP6-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP7-19
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=LT2_U_VT_WRP8-19
+Added Net: Name=GLOBAL_HIGH_POWER
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP1-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP5-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP8-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=CUSTOM_LOW-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-2
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-3
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-4
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-5
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-6
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-7
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-8
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-9
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LOGIC_LOW-10
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP1-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP2-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP3-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP4-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP5-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP6-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP7-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT1_U_VT_WRP8-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP1-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP2-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP3-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP4-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP5-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP6-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP7-11
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=LT2_U_VT_WRP8-11
+Added Net: Name=GLOBAL_LOW_POWER
+Added Pin To Net: NetName=GND Pin=-5V-2
+Added Pin To Net: NetName=GND Pin=-5V-3
+Added Pin To Net: NetName=GND Pin=1MOhm_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=1MOhm_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=1uF_3_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=1uF_3_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=1uF_4_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=1uF_4_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=1uF_5_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=1uF_5_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=3V3-1
+Added Pin To Net: NetName=GND Pin=3V3-1
+Added Pin To Net: NetName=GND Pin=5V-1
+Added Pin To Net: NetName=GND Pin=5V-1
+Added Pin To Net: NetName=GND Pin=7MOhm_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=7MOhm_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=10uF_1_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=10uF_1_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=10uF_2_U_Power_Control1-1
+Added Pin To Net: NetName=GND Pin=10uF_2_U_Power_Control2-1
+Added Pin To Net: NetName=GND Pin=12V-1
+Added Pin To Net: NetName=GND Pin=12V-1
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-1
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-2
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-43
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-44
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-45
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-46
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-47
+Added Pin To Net: NetName=GND Pin=BBB_DOWN-48
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-1
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-2
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-3
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-4
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-5
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-6
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-7
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-8
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-9
+Added Pin To Net: NetName=GND Pin=BBB_PINOUT3-10
+Added Pin To Net: NetName=GND Pin=CUSTOM_LOW-3
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-19
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-20
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-21
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-22
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER1-23
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER2-20
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER2-21
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER2-22
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER4-20
+Added Pin To Net: NetName=GND Pin=DUT1_U_DUT_HEADER4-21
+Added Pin To Net: NetName=GND Pin=ETH3-17
+Added Pin To Net: NetName=GND Pin=ETH3-18
+Added Pin To Net: NetName=GND Pin=ETH3-19
+Added Pin To Net: NetName=GND Pin=ETH3-20
+Added Pin To Net: NetName=GND Pin=ETH3-21
+Added Pin To Net: NetName=GND Pin=ETH3-22
+Added Pin To Net: NetName=GND Pin=ETH3-23
+Added Pin To Net: NetName=GND Pin=ETH3-24
+Added Pin To Net: NetName=GND Pin=ETH4-11
+Added Pin To Net: NetName=GND Pin=ETH4-30
+Added Pin To Net: NetName=GND Pin=GND1-1
+Added Pin To Net: NetName=GND Pin=GND1-2
+Added Pin To Net: NetName=GND Pin=GND1-3
+Added Pin To Net: NetName=GND Pin=GND1-4
+Added Pin To Net: NetName=GND Pin=GND1-5
+Added Pin To Net: NetName=GND Pin=GND1-6
+Added Pin To Net: NetName=GND Pin=GND1-7
+Added Pin To Net: NetName=GND Pin=GND1-8
+Added Pin To Net: NetName=GND Pin=GND1-9
+Added Pin To Net: NetName=GND Pin=GND1-10
+Added Pin To Net: NetName=GND Pin=GND2-1
+Added Pin To Net: NetName=GND Pin=GND2-2
+Added Pin To Net: NetName=GND Pin=GND2-3
+Added Pin To Net: NetName=GND Pin=GND2-4
+Added Pin To Net: NetName=GND Pin=GND2-5
+Added Pin To Net: NetName=GND Pin=GND2-6
+Added Pin To Net: NetName=GND Pin=GND2-7
+Added Pin To Net: NetName=GND Pin=GND2-8
+Added Pin To Net: NetName=GND Pin=GND2-9
+Added Pin To Net: NetName=GND Pin=GND2-10
+Added Pin To Net: NetName=GND Pin=LM2_U_Power_Control1-2
+Added Pin To Net: NetName=GND Pin=LM2_U_Power_Control2-2
+Added Pin To Net: NetName=GND Pin=POT_U_Power_Control1-2
+Added Pin To Net: NetName=GND Pin=POT_U_Power_Control1-9
+Added Pin To Net: NetName=GND Pin=POT_U_Power_Control2-2
+Added Pin To Net: NetName=GND Pin=POT_U_Power_Control2-9
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Net: Name=GND
+Added Pin To Net: NetName=IVL_B0 Pin=ETH1-1
+Added Pin To Net: NetName=IVL_B0 Pin=LT1_U_VT_WRP8-1
+Added Net: Name=IVL_B0
+Added Pin To Net: NetName=IVL_B1 Pin=ETH1-2
+Added Pin To Net: NetName=IVL_B1 Pin=LT1_U_VT_WRP8-3
+Added Net: Name=IVL_B1
+Added Pin To Net: NetName=IVL_B2 Pin=ETH1-3
+Added Pin To Net: NetName=IVL_B2 Pin=LT1_U_VT_WRP8-4
+Added Net: Name=IVL_B2
+Added Pin To Net: NetName=IVL_B3 Pin=ETH1-4
+Added Pin To Net: NetName=IVL_B3 Pin=LT1_U_VT_WRP8-5
+Added Net: Name=IVL_B3
+Added Pin To Net: NetName=IVL_B4 Pin=ETH1-5
+Added Pin To Net: NetName=IVL_B4 Pin=LT1_U_VT_WRP8-6
+Added Net: Name=IVL_B4
+Added Pin To Net: NetName=IVL_B5 Pin=ETH1-6
+Added Pin To Net: NetName=IVL_B5 Pin=LT1_U_VT_WRP8-7
+Added Net: Name=IVL_B5
+Added Pin To Net: NetName=IVL_B6 Pin=ETH1-7
+Added Pin To Net: NetName=IVL_B6 Pin=LT1_U_VT_WRP8-8
+Added Net: Name=IVL_B6
+Added Pin To Net: NetName=IVL_B7 Pin=ETH1-8
+Added Pin To Net: NetName=IVL_B7 Pin=LT1_U_VT_WRP8-9
+Added Net: Name=IVL_B7
+Added Pin To Net: NetName=IVL_B8 Pin=ETH1-9
+Added Pin To Net: NetName=IVL_B8 Pin=LT2_U_VT_WRP8-1
+Added Net: Name=IVL_B8
+Added Pin To Net: NetName=IVL_B9 Pin=ETH1-10
+Added Pin To Net: NetName=IVL_B9 Pin=LT2_U_VT_WRP8-3
+Added Net: Name=IVL_B9
+Added Pin To Net: NetName=IVL_B10 Pin=ETH1-11
+Added Pin To Net: NetName=IVL_B10 Pin=LT2_U_VT_WRP8-4
+Added Net: Name=IVL_B10
+Added Pin To Net: NetName=IVL_B11 Pin=ETH1-12
+Added Pin To Net: NetName=IVL_B11 Pin=LT2_U_VT_WRP8-5
+Added Net: Name=IVL_B11
+Added Pin To Net: NetName=IVL_B12 Pin=ETH1-13
+Added Pin To Net: NetName=IVL_B12 Pin=LT2_U_VT_WRP8-6
+Added Net: Name=IVL_B12
+Added Pin To Net: NetName=IVL_B13 Pin=ETH1-14
+Added Pin To Net: NetName=IVL_B13 Pin=LT2_U_VT_WRP8-7
+Added Net: Name=IVL_B13
+Added Pin To Net: NetName=IVL_B14 Pin=ETH1-15
+Added Pin To Net: NetName=IVL_B14 Pin=LT2_U_VT_WRP8-8
+Added Net: Name=IVL_B14
+Added Pin To Net: NetName=IVL_B15 Pin=ETH1-16
+Added Pin To Net: NetName=IVL_B15 Pin=LT2_U_VT_WRP8-9
+Added Net: Name=IVL_B15
+Added Pin To Net: NetName=IVL_B16 Pin=ETH1-17
+Added Pin To Net: NetName=IVL_B16 Pin=LT1_U_VT_WRP7-1
+Added Net: Name=IVL_B16
+Added Pin To Net: NetName=IVL_B17 Pin=ETH1-18
+Added Pin To Net: NetName=IVL_B17 Pin=LT1_U_VT_WRP7-3
+Added Net: Name=IVL_B17
+Added Pin To Net: NetName=IVL_B18 Pin=ETH1-19
+Added Pin To Net: NetName=IVL_B18 Pin=LT1_U_VT_WRP7-4
+Added Net: Name=IVL_B18
+Added Pin To Net: NetName=IVL_B19 Pin=ETH1-20
+Added Pin To Net: NetName=IVL_B19 Pin=LT1_U_VT_WRP7-5
+Added Net: Name=IVL_B19
+Added Pin To Net: NetName=IVL_B20 Pin=ETH1-21
+Added Pin To Net: NetName=IVL_B20 Pin=LT1_U_VT_WRP7-6
+Added Net: Name=IVL_B20
+Added Pin To Net: NetName=IVL_B21 Pin=ETH1-22
+Added Pin To Net: NetName=IVL_B21 Pin=LT1_U_VT_WRP7-7
+Added Net: Name=IVL_B21
+Added Pin To Net: NetName=IVL_B22 Pin=ETH1-23
+Added Pin To Net: NetName=IVL_B22 Pin=LT1_U_VT_WRP7-8
+Added Net: Name=IVL_B22
+Added Pin To Net: NetName=IVL_B23 Pin=ETH1-24
+Added Pin To Net: NetName=IVL_B23 Pin=LT1_U_VT_WRP7-9
+Added Net: Name=IVL_B23
+Added Pin To Net: NetName=IVL_B24 Pin=ETH1-25
+Added Pin To Net: NetName=IVL_B24 Pin=LT2_U_VT_WRP7-1
+Added Net: Name=IVL_B24
+Added Pin To Net: NetName=IVL_B25 Pin=ETH1-26
+Added Pin To Net: NetName=IVL_B25 Pin=LT2_U_VT_WRP7-3
+Added Net: Name=IVL_B25
+Added Pin To Net: NetName=IVL_B26 Pin=ETH1-27
+Added Pin To Net: NetName=IVL_B26 Pin=LT2_U_VT_WRP7-4
+Added Net: Name=IVL_B26
+Added Pin To Net: NetName=IVL_B27 Pin=ETH1-28
+Added Pin To Net: NetName=IVL_B27 Pin=LT2_U_VT_WRP7-5
+Added Net: Name=IVL_B27
+Added Pin To Net: NetName=IVL_B28 Pin=ETH1-29
+Added Pin To Net: NetName=IVL_B28 Pin=LT2_U_VT_WRP7-6
+Added Net: Name=IVL_B28
+Added Pin To Net: NetName=IVL_B29 Pin=ETH1-30
+Added Pin To Net: NetName=IVL_B29 Pin=LT2_U_VT_WRP7-7
+Added Net: Name=IVL_B29
+Added Pin To Net: NetName=IVL_B30 Pin=ETH1-31
+Added Pin To Net: NetName=IVL_B30 Pin=LT2_U_VT_WRP7-8
+Added Net: Name=IVL_B30
+Added Pin To Net: NetName=IVL_B31 Pin=ETH1-32
+Added Pin To Net: NetName=IVL_B31 Pin=LT2_U_VT_WRP7-9
+Added Net: Name=IVL_B31
+Added Pin To Net: NetName=IVL_B32 Pin=ETH1-33
+Added Pin To Net: NetName=IVL_B32 Pin=LT1_U_VT_WRP6-1
+Added Net: Name=IVL_B32
+Added Pin To Net: NetName=IVL_B33 Pin=ETH1-34
+Added Pin To Net: NetName=IVL_B33 Pin=LT1_U_VT_WRP6-3
+Added Net: Name=IVL_B33
+Added Pin To Net: NetName=IVL_B34 Pin=ETH1-35
+Added Pin To Net: NetName=IVL_B34 Pin=LT1_U_VT_WRP6-4
+Added Net: Name=IVL_B34
+Added Pin To Net: NetName=IVL_B35 Pin=ETH1-36
+Added Pin To Net: NetName=IVL_B35 Pin=LT1_U_VT_WRP6-5
+Added Net: Name=IVL_B35
+Added Pin To Net: NetName=IVL_B36 Pin=ETH1-37
+Added Pin To Net: NetName=IVL_B36 Pin=LT1_U_VT_WRP6-6
+Added Net: Name=IVL_B36
+Added Pin To Net: NetName=IVL_B37 Pin=ETH1-38
+Added Pin To Net: NetName=IVL_B37 Pin=LT1_U_VT_WRP6-7
+Added Net: Name=IVL_B37
+Added Pin To Net: NetName=IVL_B38 Pin=ETH1-39
+Added Pin To Net: NetName=IVL_B38 Pin=LT1_U_VT_WRP6-8
+Added Net: Name=IVL_B38
+Added Pin To Net: NetName=IVL_B39 Pin=ETH1-40
+Added Pin To Net: NetName=IVL_B39 Pin=LT1_U_VT_WRP6-9
+Added Net: Name=IVL_B39
+Added Pin To Net: NetName=IVL_B40 Pin=ETH2-1
+Added Pin To Net: NetName=IVL_B40 Pin=LT2_U_VT_WRP6-1
+Added Net: Name=IVL_B40
+Added Pin To Net: NetName=IVL_B41 Pin=ETH2-2
+Added Pin To Net: NetName=IVL_B41 Pin=LT2_U_VT_WRP6-3
+Added Net: Name=IVL_B41
+Added Pin To Net: NetName=IVL_B42 Pin=ETH2-3
+Added Pin To Net: NetName=IVL_B42 Pin=LT2_U_VT_WRP6-4
+Added Net: Name=IVL_B42
+Added Pin To Net: NetName=IVL_B43 Pin=ETH2-4
+Added Pin To Net: NetName=IVL_B43 Pin=LT2_U_VT_WRP6-5
+Added Net: Name=IVL_B43
+Added Pin To Net: NetName=IVL_B44 Pin=ETH2-5
+Added Pin To Net: NetName=IVL_B44 Pin=LT2_U_VT_WRP6-6
+Added Net: Name=IVL_B44
+Added Pin To Net: NetName=IVL_B45 Pin=ETH2-6
+Added Pin To Net: NetName=IVL_B45 Pin=LT2_U_VT_WRP6-7
+Added Net: Name=IVL_B45
+Added Pin To Net: NetName=IVL_B46 Pin=ETH2-7
+Added Pin To Net: NetName=IVL_B46 Pin=LT2_U_VT_WRP6-8
+Added Net: Name=IVL_B46
+Added Pin To Net: NetName=IVL_B47 Pin=ETH2-8
+Added Pin To Net: NetName=IVL_B47 Pin=LT2_U_VT_WRP6-9
+Added Net: Name=IVL_B47
+Added Pin To Net: NetName=IVL_B48 Pin=ETH2-9
+Added Pin To Net: NetName=IVL_B48 Pin=LT1_U_VT_WRP5-1
+Added Net: Name=IVL_B48
+Added Pin To Net: NetName=IVL_B49 Pin=ETH2-10
+Added Pin To Net: NetName=IVL_B49 Pin=LT1_U_VT_WRP5-3
+Added Net: Name=IVL_B49
+Added Pin To Net: NetName=IVL_B50 Pin=ETH2-11
+Added Pin To Net: NetName=IVL_B50 Pin=LT1_U_VT_WRP5-4
+Added Net: Name=IVL_B50
+Added Pin To Net: NetName=IVL_B51 Pin=ETH2-12
+Added Pin To Net: NetName=IVL_B51 Pin=LT1_U_VT_WRP5-5
+Added Net: Name=IVL_B51
+Added Pin To Net: NetName=IVL_B52 Pin=ETH2-13
+Added Pin To Net: NetName=IVL_B52 Pin=LT1_U_VT_WRP5-6
+Added Net: Name=IVL_B52
+Added Pin To Net: NetName=IVL_B53 Pin=ETH2-14
+Added Pin To Net: NetName=IVL_B53 Pin=LT1_U_VT_WRP5-7
+Added Net: Name=IVL_B53
+Added Pin To Net: NetName=IVL_B54 Pin=ETH2-15
+Added Pin To Net: NetName=IVL_B54 Pin=LT1_U_VT_WRP5-8
+Added Net: Name=IVL_B54
+Added Pin To Net: NetName=IVL_B55 Pin=ETH2-16
+Added Pin To Net: NetName=IVL_B55 Pin=LT1_U_VT_WRP5-9
+Added Net: Name=IVL_B55
+Added Pin To Net: NetName=IVL_B56 Pin=ETH2-17
+Added Pin To Net: NetName=IVL_B56 Pin=LT2_U_VT_WRP5-1
+Added Net: Name=IVL_B56
+Added Pin To Net: NetName=IVL_B57 Pin=ETH2-18
+Added Pin To Net: NetName=IVL_B57 Pin=LT2_U_VT_WRP5-3
+Added Net: Name=IVL_B57
+Added Pin To Net: NetName=IVL_B58 Pin=ETH2-19
+Added Pin To Net: NetName=IVL_B58 Pin=LT2_U_VT_WRP5-4
+Added Net: Name=IVL_B58
+Added Pin To Net: NetName=IVL_B59 Pin=ETH2-20
+Added Pin To Net: NetName=IVL_B59 Pin=LT2_U_VT_WRP5-5
+Added Net: Name=IVL_B59
+Added Pin To Net: NetName=IVL_B60 Pin=ETH2-21
+Added Pin To Net: NetName=IVL_B60 Pin=LT2_U_VT_WRP5-6
+Added Net: Name=IVL_B60
+Added Pin To Net: NetName=IVL_B61 Pin=ETH2-22
+Added Pin To Net: NetName=IVL_B61 Pin=LT2_U_VT_WRP5-7
+Added Net: Name=IVL_B61
+Added Pin To Net: NetName=IVL_B62 Pin=ETH2-23
+Added Pin To Net: NetName=IVL_B62 Pin=LT2_U_VT_WRP5-8
+Added Net: Name=IVL_B62
+Added Pin To Net: NetName=IVL_B63 Pin=ETH2-24
+Added Pin To Net: NetName=IVL_B63 Pin=LT2_U_VT_WRP5-9
+Added Net: Name=IVL_B63
+Added Pin To Net: NetName=IVL_B64 Pin=ETH2-25
+Added Pin To Net: NetName=IVL_B64 Pin=LT1_U_VT_WRP4-1
+Added Net: Name=IVL_B64
+Added Pin To Net: NetName=IVL_B65 Pin=ETH2-26
+Added Pin To Net: NetName=IVL_B65 Pin=LT1_U_VT_WRP4-3
+Added Net: Name=IVL_B65
+Added Pin To Net: NetName=IVL_B66 Pin=ETH2-27
+Added Pin To Net: NetName=IVL_B66 Pin=LT1_U_VT_WRP4-4
+Added Net: Name=IVL_B66
+Added Pin To Net: NetName=IVL_B67 Pin=ETH2-28
+Added Pin To Net: NetName=IVL_B67 Pin=LT1_U_VT_WRP4-5
+Added Net: Name=IVL_B67
+Added Pin To Net: NetName=IVL_B68 Pin=ETH2-29
+Added Pin To Net: NetName=IVL_B68 Pin=LT1_U_VT_WRP4-6
+Added Net: Name=IVL_B68
+Added Pin To Net: NetName=IVL_B69 Pin=ETH2-30
+Added Pin To Net: NetName=IVL_B69 Pin=LT1_U_VT_WRP4-7
+Added Net: Name=IVL_B69
+Added Pin To Net: NetName=IVL_B70 Pin=ETH2-31
+Added Pin To Net: NetName=IVL_B70 Pin=LT1_U_VT_WRP4-8
+Added Net: Name=IVL_B70
+Added Pin To Net: NetName=IVL_B71 Pin=ETH2-32
+Added Pin To Net: NetName=IVL_B71 Pin=LT1_U_VT_WRP4-9
+Added Net: Name=IVL_B71
+Added Pin To Net: NetName=IVL_B72 Pin=ETH2-33
+Added Pin To Net: NetName=IVL_B72 Pin=LT2_U_VT_WRP4-1
+Added Net: Name=IVL_B72
+Added Pin To Net: NetName=IVL_B73 Pin=ETH2-34
+Added Pin To Net: NetName=IVL_B73 Pin=LT2_U_VT_WRP4-3
+Added Net: Name=IVL_B73
+Added Pin To Net: NetName=IVL_B74 Pin=ETH2-35
+Added Pin To Net: NetName=IVL_B74 Pin=LT2_U_VT_WRP4-4
+Added Net: Name=IVL_B74
+Added Pin To Net: NetName=IVL_B75 Pin=ETH2-36
+Added Pin To Net: NetName=IVL_B75 Pin=LT2_U_VT_WRP4-5
+Added Net: Name=IVL_B75
+Added Pin To Net: NetName=IVL_B76 Pin=ETH2-37
+Added Pin To Net: NetName=IVL_B76 Pin=LT2_U_VT_WRP4-6
+Added Net: Name=IVL_B76
+Added Pin To Net: NetName=IVL_B77 Pin=ETH2-38
+Added Pin To Net: NetName=IVL_B77 Pin=LT2_U_VT_WRP4-7
+Added Net: Name=IVL_B77
+Added Pin To Net: NetName=IVL_B78 Pin=ETH2-39
+Added Pin To Net: NetName=IVL_B78 Pin=LT2_U_VT_WRP4-8
+Added Net: Name=IVL_B78
+Added Pin To Net: NetName=IVL_B79 Pin=ETH2-40
+Added Pin To Net: NetName=IVL_B79 Pin=LT2_U_VT_WRP4-9
+Added Net: Name=IVL_B79
+Added Pin To Net: NetName=IVL_B80 Pin=ETH3-1
+Added Pin To Net: NetName=IVL_B80 Pin=LT1_U_VT_WRP3-1
+Added Net: Name=IVL_B80
+Added Pin To Net: NetName=IVL_B81 Pin=ETH3-2
+Added Pin To Net: NetName=IVL_B81 Pin=LT1_U_VT_WRP3-3
+Added Net: Name=IVL_B81
+Added Pin To Net: NetName=IVL_B82 Pin=ETH3-3
+Added Pin To Net: NetName=IVL_B82 Pin=LT1_U_VT_WRP3-4
+Added Net: Name=IVL_B82
+Added Pin To Net: NetName=IVL_B83 Pin=ETH3-4
+Added Pin To Net: NetName=IVL_B83 Pin=LT1_U_VT_WRP3-5
+Added Net: Name=IVL_B83
+Added Pin To Net: NetName=IVL_B84 Pin=ETH3-5
+Added Pin To Net: NetName=IVL_B84 Pin=LT1_U_VT_WRP3-6
+Added Net: Name=IVL_B84
+Added Pin To Net: NetName=IVL_B85 Pin=ETH3-6
+Added Pin To Net: NetName=IVL_B85 Pin=LT1_U_VT_WRP3-7
+Added Net: Name=IVL_B85
+Added Pin To Net: NetName=IVL_B86 Pin=ETH3-7
+Added Pin To Net: NetName=IVL_B86 Pin=LT1_U_VT_WRP3-8
+Added Net: Name=IVL_B86
+Added Pin To Net: NetName=IVL_B87 Pin=ETH3-8
+Added Pin To Net: NetName=IVL_B87 Pin=LT1_U_VT_WRP3-9
+Added Net: Name=IVL_B87
+Added Pin To Net: NetName=IVL_B88 Pin=ETH3-9
+Added Pin To Net: NetName=IVL_B88 Pin=LT2_U_VT_WRP3-1
+Added Net: Name=IVL_B88
+Added Pin To Net: NetName=IVL_B89 Pin=ETH3-10
+Added Pin To Net: NetName=IVL_B89 Pin=LT2_U_VT_WRP3-3
+Added Net: Name=IVL_B89
+Added Pin To Net: NetName=IVL_B90 Pin=ETH3-11
+Added Pin To Net: NetName=IVL_B90 Pin=LT2_U_VT_WRP3-4
+Added Net: Name=IVL_B90
+Added Pin To Net: NetName=IVL_B91 Pin=ETH3-12
+Added Pin To Net: NetName=IVL_B91 Pin=LT2_U_VT_WRP3-5
+Added Net: Name=IVL_B91
+Added Pin To Net: NetName=IVL_B92 Pin=ETH3-13
+Added Pin To Net: NetName=IVL_B92 Pin=LT2_U_VT_WRP3-6
+Added Net: Name=IVL_B92
+Added Pin To Net: NetName=IVL_B93 Pin=ETH3-14
+Added Pin To Net: NetName=IVL_B93 Pin=LT2_U_VT_WRP3-7
+Added Net: Name=IVL_B93
+Added Pin To Net: NetName=IVL_B94 Pin=ETH3-15
+Added Pin To Net: NetName=IVL_B94 Pin=LT2_U_VT_WRP3-8
+Added Net: Name=IVL_B94
+Added Pin To Net: NetName=IVL_B95 Pin=ETH3-16
+Added Pin To Net: NetName=IVL_B95 Pin=LT2_U_VT_WRP3-9
+Added Net: Name=IVL_B95
+Added Pin To Net: NetName=IVL_B96 Pin=ETH3-25
+Added Pin To Net: NetName=IVL_B96 Pin=LT1_U_VT_WRP2-1
+Added Net: Name=IVL_B96
+Added Pin To Net: NetName=IVL_B97 Pin=ETH3-26
+Added Pin To Net: NetName=IVL_B97 Pin=LT1_U_VT_WRP2-3
+Added Net: Name=IVL_B97
+Added Pin To Net: NetName=IVL_B98 Pin=ETH3-27
+Added Pin To Net: NetName=IVL_B98 Pin=LT1_U_VT_WRP2-4
+Added Net: Name=IVL_B98
+Added Pin To Net: NetName=IVL_B99 Pin=ETH3-28
+Added Pin To Net: NetName=IVL_B99 Pin=LT1_U_VT_WRP2-5
+Added Net: Name=IVL_B99
+Added Pin To Net: NetName=IVL_B100 Pin=ETH3-29
+Added Pin To Net: NetName=IVL_B100 Pin=LT1_U_VT_WRP2-6
+Added Net: Name=IVL_B100
+Added Pin To Net: NetName=IVL_B101 Pin=ETH3-30
+Added Pin To Net: NetName=IVL_B101 Pin=LT1_U_VT_WRP2-7
+Added Net: Name=IVL_B101
+Added Pin To Net: NetName=IVL_B102 Pin=ETH3-31
+Added Pin To Net: NetName=IVL_B102 Pin=LT1_U_VT_WRP2-8
+Added Net: Name=IVL_B102
+Added Pin To Net: NetName=IVL_B103 Pin=ETH3-32
+Added Pin To Net: NetName=IVL_B103 Pin=LT1_U_VT_WRP2-9
+Added Net: Name=IVL_B103
+Added Pin To Net: NetName=IVL_B104 Pin=ETH3-33
+Added Pin To Net: NetName=IVL_B104 Pin=LT2_U_VT_WRP2-1
+Added Net: Name=IVL_B104
+Added Pin To Net: NetName=IVL_B105 Pin=ETH3-34
+Added Pin To Net: NetName=IVL_B105 Pin=LT2_U_VT_WRP2-3
+Added Net: Name=IVL_B105
+Added Pin To Net: NetName=IVL_B106 Pin=ETH3-35
+Added Pin To Net: NetName=IVL_B106 Pin=LT2_U_VT_WRP2-4
+Added Net: Name=IVL_B106
+Added Pin To Net: NetName=IVL_B107 Pin=ETH3-36
+Added Pin To Net: NetName=IVL_B107 Pin=LT2_U_VT_WRP2-5
+Added Net: Name=IVL_B107
+Added Pin To Net: NetName=IVL_B108 Pin=ETH3-37
+Added Pin To Net: NetName=IVL_B108 Pin=LT2_U_VT_WRP2-6
+Added Net: Name=IVL_B108
+Added Pin To Net: NetName=IVL_B109 Pin=ETH3-38
+Added Pin To Net: NetName=IVL_B109 Pin=LT2_U_VT_WRP2-7
+Added Net: Name=IVL_B109
+Added Pin To Net: NetName=IVL_B110 Pin=ETH3-39
+Added Pin To Net: NetName=IVL_B110 Pin=LT2_U_VT_WRP2-8
+Added Net: Name=IVL_B110
+Added Pin To Net: NetName=IVL_B111 Pin=ETH3-40
+Added Pin To Net: NetName=IVL_B111 Pin=LT2_U_VT_WRP2-9
+Added Net: Name=IVL_B111
+Added Pin To Net: NetName=IVL_B112 Pin=ETH4-1
+Added Pin To Net: NetName=IVL_B112 Pin=LT1_U_VT_WRP1-1
+Added Net: Name=IVL_B112
+Added Pin To Net: NetName=IVL_B113 Pin=ETH4-2
+Added Pin To Net: NetName=IVL_B113 Pin=LT1_U_VT_WRP1-3
+Added Net: Name=IVL_B113
+Added Pin To Net: NetName=IVL_B114 Pin=ETH4-3
+Added Pin To Net: NetName=IVL_B114 Pin=LT1_U_VT_WRP1-4
+Added Net: Name=IVL_B114
+Added Pin To Net: NetName=IVL_B115 Pin=ETH4-4
+Added Pin To Net: NetName=IVL_B115 Pin=LT1_U_VT_WRP1-5
+Added Net: Name=IVL_B115
+Added Pin To Net: NetName=IVL_B116 Pin=ETH4-5
+Added Pin To Net: NetName=IVL_B116 Pin=LT1_U_VT_WRP1-6
+Added Net: Name=IVL_B116
+Added Pin To Net: NetName=IVL_B117 Pin=ETH4-6
+Added Pin To Net: NetName=IVL_B117 Pin=LT1_U_VT_WRP1-7
+Added Net: Name=IVL_B117
+Added Pin To Net: NetName=IVL_B118 Pin=ETH4-7
+Added Pin To Net: NetName=IVL_B118 Pin=LT1_U_VT_WRP1-8
+Added Net: Name=IVL_B118
+Added Pin To Net: NetName=IVL_B119 Pin=ETH4-8
+Added Pin To Net: NetName=IVL_B119 Pin=LT1_U_VT_WRP1-9
+Added Net: Name=IVL_B119
+Added Pin To Net: NetName=IVL_B120 Pin=ETH4-9
+Added Pin To Net: NetName=IVL_B120 Pin=LT2_U_VT_WRP1-1
+Added Net: Name=IVL_B120
+Added Pin To Net: NetName=IVL_B121 Pin=ETH4-10
+Added Pin To Net: NetName=IVL_B121 Pin=LT2_U_VT_WRP1-3
+Added Net: Name=IVL_B121
+Added Pin To Net: NetName=IVL_B122 Pin=ETH4-12
+Added Pin To Net: NetName=IVL_B122 Pin=LT2_U_VT_WRP1-4
+Added Net: Name=IVL_B122
+Added Pin To Net: NetName=IVL_B123 Pin=ETH4-13
+Added Pin To Net: NetName=IVL_B123 Pin=LT2_U_VT_WRP1-5
+Added Net: Name=IVL_B123
+Added Pin To Net: NetName=IVL_B124 Pin=ETH4-14
+Added Pin To Net: NetName=IVL_B124 Pin=LT2_U_VT_WRP1-6
+Added Net: Name=IVL_B124
+Added Pin To Net: NetName=IVL_B125 Pin=ETH4-15
+Added Pin To Net: NetName=IVL_B125 Pin=LT2_U_VT_WRP1-7
+Added Net: Name=IVL_B125
+Added Pin To Net: NetName=IVL_B126 Pin=LT2_U_VT_WRP1-8
+Added Net: Name=IVL_B126
+Added Pin To Net: NetName=IVL_B127 Pin=LT2_U_VT_WRP1-9
+Added Net: Name=IVL_B127
+Added Pin To Net: NetName=Net1MOhm_U_Power_Control1_2 Pin=1MOhm_U_Power_Control1-2
+Added Pin To Net: NetName=Net1MOhm_U_Power_Control1_2 Pin=3MOhm_U_Power_Control1-1
+Added Pin To Net: NetName=Net1MOhm_U_Power_Control1_2 Pin=LM1_U_Power_Control1-1
+Added Net: Name=Net1MOhm_U_Power_Control1_2
+Added Pin To Net: NetName=Net1MOhm_U_Power_Control2_2 Pin=1MOhm_U_Power_Control2-2
+Added Pin To Net: NetName=Net1MOhm_U_Power_Control2_2 Pin=3MOhm_U_Power_Control2-1
+Added Pin To Net: NetName=Net1MOhm_U_Power_Control2_2 Pin=LM1_U_Power_Control2-1
+Added Net: Name=Net1MOhm_U_Power_Control2_2
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control1_2 Pin=1uF_2_U_Power_Control1-2
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control1_2 Pin=10kOhm_1_U_Power_Control1-1
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control1_2 Pin=D2_U_Power_Control1-1
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control1_2 Pin=POT_U_Power_Control1-4
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control1_2 Pin=VR1_U_Power_Control1-1
+Added Net: Name=Net1uF_2_U_Power_Control1_2
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control2_2 Pin=1uF_2_U_Power_Control2-2
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control2_2 Pin=10kOhm_1_U_Power_Control2-1
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control2_2 Pin=D2_U_Power_Control2-1
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control2_2 Pin=POT_U_Power_Control2-4
+Added Pin To Net: NetName=Net1uF_2_U_Power_Control2_2 Pin=VR1_U_Power_Control2-1
+Added Net: Name=Net1uF_2_U_Power_Control2_2
+Added Pin To Net: NetName=Net1uF_3_U_Power_Control1_2 Pin=1uF_3_U_Power_Control1-2
+Added Pin To Net: NetName=Net1uF_3_U_Power_Control1_2 Pin=POT_U_Power_Control1-7
+Added Net: Name=Net1uF_3_U_Power_Control1_2
+Added Pin To Net: NetName=Net1uF_3_U_Power_Control2_2 Pin=1uF_3_U_Power_Control2-2
+Added Pin To Net: NetName=Net1uF_3_U_Power_Control2_2 Pin=POT_U_Power_Control2-7
+Added Net: Name=Net1uF_3_U_Power_Control2_2
+Added Pin To Net: NetName=Net5MOhm_U_Power_Control1_1 Pin=5MOhm_U_Power_Control1-1
+Added Pin To Net: NetName=Net5MOhm_U_Power_Control1_1 Pin=7MOhm_U_Power_Control1-2
+Added Pin To Net: NetName=Net5MOhm_U_Power_Control1_1 Pin=LM2_U_Power_Control1-1
+Added Net: Name=Net5MOhm_U_Power_Control1_1
+Added Pin To Net: NetName=Net5MOhm_U_Power_Control2_1 Pin=5MOhm_U_Power_Control2-1
+Added Pin To Net: NetName=Net5MOhm_U_Power_Control2_1 Pin=7MOhm_U_Power_Control2-2
+Added Pin To Net: NetName=Net5MOhm_U_Power_Control2_1 Pin=LM2_U_Power_Control2-1
+Added Net: Name=Net5MOhm_U_Power_Control2_1
+Added Pin To Net: NetName=OTHER_W20 Pin=ETH4-20
+Added Net: Name=OTHER_W20
+Added Pin To Net: NetName=OTHER_W21 Pin=ETH4-19
+Added Pin To Net: NetName=OTHER_W21 Pin=R1-2
+Added Pin To Net: NetName=OTHER_W21 Pin=S1-2
+Added Net: Name=OTHER_W21
+Added Pin To Net: NetName=OUT1_U_Power_Control1 Pin=1uF_1_U_Power_Control1-1
+Added Pin To Net: NetName=OUT1_U_Power_Control1 Pin=1uF_2_U_Power_Control1-1
+Added Pin To Net: NetName=OUT1_U_Power_Control1 Pin=LM1_U_Power_Control1-3
+Added Pin To Net: NetName=OUT1_U_Power_Control1 Pin=LM1_U_Power_Control1-4
+Added Pin To Net: NetName=OUT1_U_Power_Control1 Pin=POT_U_Power_Control1-3
+Added Net: Name=OUT1_U_Power_Control1
+Added Pin To Net: NetName=OUT1_U_Power_Control2 Pin=1uF_1_U_Power_Control2-1
+Added Pin To Net: NetName=OUT1_U_Power_Control2 Pin=1uF_2_U_Power_Control2-1
+Added Pin To Net: NetName=OUT1_U_Power_Control2 Pin=LM1_U_Power_Control2-3
+Added Pin To Net: NetName=OUT1_U_Power_Control2 Pin=LM1_U_Power_Control2-4
+Added Pin To Net: NetName=OUT1_U_Power_Control2 Pin=POT_U_Power_Control2-3
+Added Net: Name=OUT1_U_Power_Control2
+Added Pin To Net: NetName=OUT2_U_Power_Control1 Pin=D1_U_Power_Control1-2
+Added Pin To Net: NetName=OUT2_U_Power_Control1 Pin=LM1_U_Power_Control1-5
+Added Pin To Net: NetName=OUT2_U_Power_Control1 Pin=LM2_U_Power_Control1-3
+Added Pin To Net: NetName=OUT2_U_Power_Control1 Pin=LM2_U_Power_Control1-4
+Added Pin To Net: NetName=OUT2_U_Power_Control1 Pin=VR1_U_Power_Control1-3
+Added Net: Name=OUT2_U_Power_Control1
+Added Pin To Net: NetName=OUT2_U_Power_Control2 Pin=D1_U_Power_Control2-2
+Added Pin To Net: NetName=OUT2_U_Power_Control2 Pin=LM1_U_Power_Control2-5
+Added Pin To Net: NetName=OUT2_U_Power_Control2 Pin=LM2_U_Power_Control2-3
+Added Pin To Net: NetName=OUT2_U_Power_Control2 Pin=LM2_U_Power_Control2-4
+Added Pin To Net: NetName=OUT2_U_Power_Control2 Pin=VR1_U_Power_Control2-3
+Added Net: Name=OUT2_U_Power_Control2
+Added Pin To Net: NetName=OVCC_B0 Pin=DUT1_U_DUT_HEADER4-1
+Added Pin To Net: NetName=OVCC_B0 Pin=LT1_U_VT_WRP8-20
+Added Net: Name=OVCC_B0
+Added Pin To Net: NetName=OVCC_B1 Pin=DUT1_U_DUT_HEADER4-2
+Added Pin To Net: NetName=OVCC_B1 Pin=LT1_U_VT_WRP8-18
+Added Net: Name=OVCC_B1
+Added Pin To Net: NetName=OVCC_B2 Pin=DUT1_U_DUT_HEADER4-3
+Added Pin To Net: NetName=OVCC_B2 Pin=LT1_U_VT_WRP8-17
+Added Net: Name=OVCC_B2
+Added Pin To Net: NetName=OVCC_B3 Pin=DUT1_U_DUT_HEADER4-4
+Added Pin To Net: NetName=OVCC_B3 Pin=LT1_U_VT_WRP8-16
+Added Net: Name=OVCC_B3
+Added Pin To Net: NetName=OVCC_B4 Pin=DUT1_U_DUT_HEADER4-5
+Added Pin To Net: NetName=OVCC_B4 Pin=LT1_U_VT_WRP8-15
+Added Net: Name=OVCC_B4
+Added Pin To Net: NetName=OVCC_B5 Pin=DUT1_U_DUT_HEADER4-6
+Added Pin To Net: NetName=OVCC_B5 Pin=LT1_U_VT_WRP8-14
+Added Net: Name=OVCC_B5
+Added Pin To Net: NetName=OVCC_B6 Pin=DUT1_U_DUT_HEADER4-7
+Added Pin To Net: NetName=OVCC_B6 Pin=LT1_U_VT_WRP8-13
+Added Net: Name=OVCC_B6
+Added Pin To Net: NetName=OVCC_B7 Pin=DUT1_U_DUT_HEADER4-8
+Added Pin To Net: NetName=OVCC_B7 Pin=LT1_U_VT_WRP8-12
+Added Net: Name=OVCC_B7
+Added Pin To Net: NetName=OVCC_B8 Pin=DUT1_U_DUT_HEADER4-9
+Added Pin To Net: NetName=OVCC_B8 Pin=LT2_U_VT_WRP8-20
+Added Net: Name=OVCC_B8
+Added Pin To Net: NetName=OVCC_B9 Pin=DUT1_U_DUT_HEADER4-10
+Added Pin To Net: NetName=OVCC_B9 Pin=LT2_U_VT_WRP8-18
+Added Net: Name=OVCC_B9
+Added Pin To Net: NetName=OVCC_B10 Pin=DUT1_U_DUT_HEADER4-11
+Added Pin To Net: NetName=OVCC_B10 Pin=LT2_U_VT_WRP8-17
+Added Net: Name=OVCC_B10
+Added Pin To Net: NetName=OVCC_B11 Pin=DUT1_U_DUT_HEADER4-12
+Added Pin To Net: NetName=OVCC_B11 Pin=LT2_U_VT_WRP8-16
+Added Net: Name=OVCC_B11
+Added Pin To Net: NetName=OVCC_B12 Pin=DUT1_U_DUT_HEADER4-13
+Added Pin To Net: NetName=OVCC_B12 Pin=LT2_U_VT_WRP8-15
+Added Net: Name=OVCC_B12
+Added Pin To Net: NetName=OVCC_B13 Pin=DUT1_U_DUT_HEADER4-14
+Added Pin To Net: NetName=OVCC_B13 Pin=LT2_U_VT_WRP8-14
+Added Net: Name=OVCC_B13
+Added Pin To Net: NetName=OVCC_B14 Pin=DUT1_U_DUT_HEADER4-15
+Added Pin To Net: NetName=OVCC_B14 Pin=LT2_U_VT_WRP8-13
+Added Net: Name=OVCC_B14
+Added Pin To Net: NetName=OVCC_B15 Pin=DUT1_U_DUT_HEADER4-16
+Added Pin To Net: NetName=OVCC_B15 Pin=LT2_U_VT_WRP8-12
+Added Net: Name=OVCC_B15
+Added Pin To Net: NetName=OVCC_B16 Pin=DUT1_U_DUT_HEADER4-25
+Added Pin To Net: NetName=OVCC_B16 Pin=LT1_U_VT_WRP7-20
+Added Net: Name=OVCC_B16
+Added Pin To Net: NetName=OVCC_B17 Pin=DUT1_U_DUT_HEADER4-26
+Added Pin To Net: NetName=OVCC_B17 Pin=LT1_U_VT_WRP7-18
+Added Net: Name=OVCC_B17
+Added Pin To Net: NetName=OVCC_B18 Pin=DUT1_U_DUT_HEADER4-27
+Added Pin To Net: NetName=OVCC_B18 Pin=LT1_U_VT_WRP7-17
+Added Net: Name=OVCC_B18
+Added Pin To Net: NetName=OVCC_B19 Pin=DUT1_U_DUT_HEADER4-28
+Added Pin To Net: NetName=OVCC_B19 Pin=LT1_U_VT_WRP7-16
+Added Net: Name=OVCC_B19
+Added Pin To Net: NetName=OVCC_B20 Pin=DUT1_U_DUT_HEADER4-29
+Added Pin To Net: NetName=OVCC_B20 Pin=LT1_U_VT_WRP7-15
+Added Net: Name=OVCC_B20
+Added Pin To Net: NetName=OVCC_B21 Pin=DUT1_U_DUT_HEADER4-30
+Added Pin To Net: NetName=OVCC_B21 Pin=LT1_U_VT_WRP7-14
+Added Net: Name=OVCC_B21
+Added Pin To Net: NetName=OVCC_B22 Pin=DUT1_U_DUT_HEADER4-31
+Added Pin To Net: NetName=OVCC_B22 Pin=LT1_U_VT_WRP7-13
+Added Net: Name=OVCC_B22
+Added Pin To Net: NetName=OVCC_B23 Pin=DUT1_U_DUT_HEADER4-32
+Added Pin To Net: NetName=OVCC_B23 Pin=LT1_U_VT_WRP7-12
+Added Net: Name=OVCC_B23
+Added Pin To Net: NetName=OVCC_B24 Pin=DUT1_U_DUT_HEADER4-33
+Added Pin To Net: NetName=OVCC_B24 Pin=LT2_U_VT_WRP7-20
+Added Net: Name=OVCC_B24
+Added Pin To Net: NetName=OVCC_B25 Pin=DUT1_U_DUT_HEADER4-34
+Added Pin To Net: NetName=OVCC_B25 Pin=LT2_U_VT_WRP7-18
+Added Net: Name=OVCC_B25
+Added Pin To Net: NetName=OVCC_B26 Pin=DUT1_U_DUT_HEADER4-35
+Added Pin To Net: NetName=OVCC_B26 Pin=LT2_U_VT_WRP7-17
+Added Net: Name=OVCC_B26
+Added Pin To Net: NetName=OVCC_B27 Pin=DUT1_U_DUT_HEADER4-36
+Added Pin To Net: NetName=OVCC_B27 Pin=LT2_U_VT_WRP7-16
+Added Net: Name=OVCC_B27
+Added Pin To Net: NetName=OVCC_B28 Pin=DUT1_U_DUT_HEADER4-37
+Added Pin To Net: NetName=OVCC_B28 Pin=LT2_U_VT_WRP7-15
+Added Net: Name=OVCC_B28
+Added Pin To Net: NetName=OVCC_B29 Pin=DUT1_U_DUT_HEADER4-38
+Added Pin To Net: NetName=OVCC_B29 Pin=LT2_U_VT_WRP7-14
+Added Net: Name=OVCC_B29
+Added Pin To Net: NetName=OVCC_B30 Pin=DUT1_U_DUT_HEADER4-39
+Added Pin To Net: NetName=OVCC_B30 Pin=LT2_U_VT_WRP7-13
+Added Net: Name=OVCC_B30
+Added Pin To Net: NetName=OVCC_B31 Pin=DUT1_U_DUT_HEADER4-40
+Added Pin To Net: NetName=OVCC_B31 Pin=LT2_U_VT_WRP7-12
+Added Net: Name=OVCC_B31
+Added Pin To Net: NetName=OVCC_B32 Pin=DUT1_U_DUT_HEADER3-1
+Added Pin To Net: NetName=OVCC_B32 Pin=LT1_U_VT_WRP6-20
+Added Net: Name=OVCC_B32
+Added Pin To Net: NetName=OVCC_B33 Pin=DUT1_U_DUT_HEADER3-2
+Added Pin To Net: NetName=OVCC_B33 Pin=LT1_U_VT_WRP6-18
+Added Net: Name=OVCC_B33
+Added Pin To Net: NetName=OVCC_B34 Pin=DUT1_U_DUT_HEADER3-3
+Added Pin To Net: NetName=OVCC_B34 Pin=LT1_U_VT_WRP6-17
+Added Net: Name=OVCC_B34
+Added Pin To Net: NetName=OVCC_B35 Pin=DUT1_U_DUT_HEADER3-4
+Added Pin To Net: NetName=OVCC_B35 Pin=LT1_U_VT_WRP6-16
+Added Net: Name=OVCC_B35
+Added Pin To Net: NetName=OVCC_B36 Pin=DUT1_U_DUT_HEADER3-5
+Added Pin To Net: NetName=OVCC_B36 Pin=LT1_U_VT_WRP6-15
+Added Net: Name=OVCC_B36
+Added Pin To Net: NetName=OVCC_B37 Pin=DUT1_U_DUT_HEADER3-6
+Added Pin To Net: NetName=OVCC_B37 Pin=LT1_U_VT_WRP6-14
+Added Net: Name=OVCC_B37
+Added Pin To Net: NetName=OVCC_B38 Pin=DUT1_U_DUT_HEADER3-7
+Added Pin To Net: NetName=OVCC_B38 Pin=LT1_U_VT_WRP6-13
+Added Net: Name=OVCC_B38
+Added Pin To Net: NetName=OVCC_B39 Pin=DUT1_U_DUT_HEADER3-8
+Added Pin To Net: NetName=OVCC_B39 Pin=LT1_U_VT_WRP6-12
+Added Net: Name=OVCC_B39
+Added Pin To Net: NetName=OVCC_B40 Pin=DUT1_U_DUT_HEADER3-9
+Added Pin To Net: NetName=OVCC_B40 Pin=LT2_U_VT_WRP6-20
+Added Net: Name=OVCC_B40
+Added Pin To Net: NetName=OVCC_B41 Pin=DUT1_U_DUT_HEADER3-10
+Added Pin To Net: NetName=OVCC_B41 Pin=LT2_U_VT_WRP6-18
+Added Net: Name=OVCC_B41
+Added Pin To Net: NetName=OVCC_B42 Pin=DUT1_U_DUT_HEADER3-11
+Added Pin To Net: NetName=OVCC_B42 Pin=LT2_U_VT_WRP6-17
+Added Net: Name=OVCC_B42
+Added Pin To Net: NetName=OVCC_B43 Pin=DUT1_U_DUT_HEADER3-12
+Added Pin To Net: NetName=OVCC_B43 Pin=LT2_U_VT_WRP6-16
+Added Net: Name=OVCC_B43
+Added Pin To Net: NetName=OVCC_B44 Pin=DUT1_U_DUT_HEADER3-13
+Added Pin To Net: NetName=OVCC_B44 Pin=LT2_U_VT_WRP6-15
+Added Net: Name=OVCC_B44
+Added Pin To Net: NetName=OVCC_B45 Pin=DUT1_U_DUT_HEADER3-14
+Added Pin To Net: NetName=OVCC_B45 Pin=LT2_U_VT_WRP6-14
+Added Net: Name=OVCC_B45
+Added Pin To Net: NetName=OVCC_B46 Pin=DUT1_U_DUT_HEADER3-15
+Added Pin To Net: NetName=OVCC_B46 Pin=LT2_U_VT_WRP6-13
+Added Net: Name=OVCC_B46
+Added Pin To Net: NetName=OVCC_B47 Pin=DUT1_U_DUT_HEADER3-16
+Added Pin To Net: NetName=OVCC_B47 Pin=LT2_U_VT_WRP6-12
+Added Net: Name=OVCC_B47
+Added Pin To Net: NetName=OVCC_B48 Pin=DUT1_U_DUT_HEADER3-25
+Added Pin To Net: NetName=OVCC_B48 Pin=LT1_U_VT_WRP5-20
+Added Net: Name=OVCC_B48
+Added Pin To Net: NetName=OVCC_B49 Pin=DUT1_U_DUT_HEADER3-26
+Added Pin To Net: NetName=OVCC_B49 Pin=LT1_U_VT_WRP5-18
+Added Net: Name=OVCC_B49
+Added Pin To Net: NetName=OVCC_B50 Pin=DUT1_U_DUT_HEADER3-27
+Added Pin To Net: NetName=OVCC_B50 Pin=LT1_U_VT_WRP5-17
+Added Net: Name=OVCC_B50
+Added Pin To Net: NetName=OVCC_B51 Pin=DUT1_U_DUT_HEADER3-28
+Added Pin To Net: NetName=OVCC_B51 Pin=LT1_U_VT_WRP5-16
+Added Net: Name=OVCC_B51
+Added Pin To Net: NetName=OVCC_B52 Pin=DUT1_U_DUT_HEADER3-29
+Added Pin To Net: NetName=OVCC_B52 Pin=LT1_U_VT_WRP5-15
+Added Net: Name=OVCC_B52
+Added Pin To Net: NetName=OVCC_B53 Pin=DUT1_U_DUT_HEADER3-30
+Added Pin To Net: NetName=OVCC_B53 Pin=LT1_U_VT_WRP5-14
+Added Net: Name=OVCC_B53
+Added Pin To Net: NetName=OVCC_B54 Pin=DUT1_U_DUT_HEADER3-31
+Added Pin To Net: NetName=OVCC_B54 Pin=LT1_U_VT_WRP5-13
+Added Net: Name=OVCC_B54
+Added Pin To Net: NetName=OVCC_B55 Pin=DUT1_U_DUT_HEADER3-32
+Added Pin To Net: NetName=OVCC_B55 Pin=LT1_U_VT_WRP5-12
+Added Net: Name=OVCC_B55
+Added Pin To Net: NetName=OVCC_B56 Pin=DUT1_U_DUT_HEADER3-33
+Added Pin To Net: NetName=OVCC_B56 Pin=LT2_U_VT_WRP5-20
+Added Net: Name=OVCC_B56
+Added Pin To Net: NetName=OVCC_B57 Pin=DUT1_U_DUT_HEADER3-34
+Added Pin To Net: NetName=OVCC_B57 Pin=LT2_U_VT_WRP5-18
+Added Net: Name=OVCC_B57
+Added Pin To Net: NetName=OVCC_B58 Pin=DUT1_U_DUT_HEADER3-35
+Added Pin To Net: NetName=OVCC_B58 Pin=LT2_U_VT_WRP5-17
+Added Net: Name=OVCC_B58
+Added Pin To Net: NetName=OVCC_B59 Pin=DUT1_U_DUT_HEADER3-36
+Added Pin To Net: NetName=OVCC_B59 Pin=LT2_U_VT_WRP5-16
+Added Net: Name=OVCC_B59
+Added Pin To Net: NetName=OVCC_B60 Pin=DUT1_U_DUT_HEADER3-37
+Added Pin To Net: NetName=OVCC_B60 Pin=LT2_U_VT_WRP5-15
+Added Net: Name=OVCC_B60
+Added Pin To Net: NetName=OVCC_B61 Pin=DUT1_U_DUT_HEADER3-38
+Added Pin To Net: NetName=OVCC_B61 Pin=LT2_U_VT_WRP5-14
+Added Net: Name=OVCC_B61
+Added Pin To Net: NetName=OVCC_B62 Pin=DUT1_U_DUT_HEADER3-39
+Added Pin To Net: NetName=OVCC_B62 Pin=LT2_U_VT_WRP5-13
+Added Net: Name=OVCC_B62
+Added Pin To Net: NetName=OVCC_B63 Pin=DUT1_U_DUT_HEADER3-40
+Added Pin To Net: NetName=OVCC_B63 Pin=LT2_U_VT_WRP5-12
+Added Net: Name=OVCC_B63
+Added Pin To Net: NetName=OVCC_B64 Pin=DUT1_U_DUT_HEADER2-1
+Added Pin To Net: NetName=OVCC_B64 Pin=LT1_U_VT_WRP4-20
+Added Net: Name=OVCC_B64
+Added Pin To Net: NetName=OVCC_B65 Pin=DUT1_U_DUT_HEADER2-2
+Added Pin To Net: NetName=OVCC_B65 Pin=LT1_U_VT_WRP4-18
+Added Net: Name=OVCC_B65
+Added Pin To Net: NetName=OVCC_B66 Pin=DUT1_U_DUT_HEADER2-3
+Added Pin To Net: NetName=OVCC_B66 Pin=LT1_U_VT_WRP4-17
+Added Net: Name=OVCC_B66
+Added Pin To Net: NetName=OVCC_B67 Pin=DUT1_U_DUT_HEADER2-4
+Added Pin To Net: NetName=OVCC_B67 Pin=LT1_U_VT_WRP4-16
+Added Net: Name=OVCC_B67
+Added Pin To Net: NetName=OVCC_B68 Pin=DUT1_U_DUT_HEADER2-5
+Added Pin To Net: NetName=OVCC_B68 Pin=LT1_U_VT_WRP4-15
+Added Net: Name=OVCC_B68
+Added Pin To Net: NetName=OVCC_B69 Pin=DUT1_U_DUT_HEADER2-6
+Added Pin To Net: NetName=OVCC_B69 Pin=LT1_U_VT_WRP4-14
+Added Net: Name=OVCC_B69
+Added Pin To Net: NetName=OVCC_B70 Pin=DUT1_U_DUT_HEADER2-7
+Added Pin To Net: NetName=OVCC_B70 Pin=LT1_U_VT_WRP4-13
+Added Net: Name=OVCC_B70
+Added Pin To Net: NetName=OVCC_B71 Pin=DUT1_U_DUT_HEADER2-8
+Added Pin To Net: NetName=OVCC_B71 Pin=LT1_U_VT_WRP4-12
+Added Net: Name=OVCC_B71
+Added Pin To Net: NetName=OVCC_B72 Pin=DUT1_U_DUT_HEADER2-9
+Added Pin To Net: NetName=OVCC_B72 Pin=LT2_U_VT_WRP4-20
+Added Net: Name=OVCC_B72
+Added Pin To Net: NetName=OVCC_B73 Pin=DUT1_U_DUT_HEADER2-10
+Added Pin To Net: NetName=OVCC_B73 Pin=LT2_U_VT_WRP4-18
+Added Net: Name=OVCC_B73
+Added Pin To Net: NetName=OVCC_B74 Pin=DUT1_U_DUT_HEADER2-11
+Added Pin To Net: NetName=OVCC_B74 Pin=LT2_U_VT_WRP4-17
+Added Net: Name=OVCC_B74
+Added Pin To Net: NetName=OVCC_B75 Pin=DUT1_U_DUT_HEADER2-12
+Added Pin To Net: NetName=OVCC_B75 Pin=LT2_U_VT_WRP4-16
+Added Net: Name=OVCC_B75
+Added Pin To Net: NetName=OVCC_B76 Pin=DUT1_U_DUT_HEADER2-13
+Added Pin To Net: NetName=OVCC_B76 Pin=LT2_U_VT_WRP4-15
+Added Net: Name=OVCC_B76
+Added Pin To Net: NetName=OVCC_B77 Pin=DUT1_U_DUT_HEADER2-14
+Added Pin To Net: NetName=OVCC_B77 Pin=LT2_U_VT_WRP4-14
+Added Net: Name=OVCC_B77
+Added Pin To Net: NetName=OVCC_B78 Pin=DUT1_U_DUT_HEADER2-15
+Added Pin To Net: NetName=OVCC_B78 Pin=LT2_U_VT_WRP4-13
+Added Net: Name=OVCC_B78
+Added Pin To Net: NetName=OVCC_B79 Pin=DUT1_U_DUT_HEADER2-16
+Added Pin To Net: NetName=OVCC_B79 Pin=LT2_U_VT_WRP4-12
+Added Net: Name=OVCC_B79
+Added Pin To Net: NetName=OVCC_B80 Pin=DUT1_U_DUT_HEADER2-25
+Added Pin To Net: NetName=OVCC_B80 Pin=LT1_U_VT_WRP3-20
+Added Net: Name=OVCC_B80
+Added Pin To Net: NetName=OVCC_B81 Pin=DUT1_U_DUT_HEADER2-26
+Added Pin To Net: NetName=OVCC_B81 Pin=LT1_U_VT_WRP3-18
+Added Net: Name=OVCC_B81
+Added Pin To Net: NetName=OVCC_B82 Pin=DUT1_U_DUT_HEADER2-27
+Added Pin To Net: NetName=OVCC_B82 Pin=LT1_U_VT_WRP3-17
+Added Net: Name=OVCC_B82
+Added Pin To Net: NetName=OVCC_B83 Pin=DUT1_U_DUT_HEADER2-28
+Added Pin To Net: NetName=OVCC_B83 Pin=LT1_U_VT_WRP3-16
+Added Net: Name=OVCC_B83
+Added Pin To Net: NetName=OVCC_B84 Pin=DUT1_U_DUT_HEADER2-29
+Added Pin To Net: NetName=OVCC_B84 Pin=LT1_U_VT_WRP3-15
+Added Net: Name=OVCC_B84
+Added Pin To Net: NetName=OVCC_B85 Pin=DUT1_U_DUT_HEADER2-30
+Added Pin To Net: NetName=OVCC_B85 Pin=LT1_U_VT_WRP3-14
+Added Net: Name=OVCC_B85
+Added Pin To Net: NetName=OVCC_B86 Pin=DUT1_U_DUT_HEADER2-31
+Added Pin To Net: NetName=OVCC_B86 Pin=LT1_U_VT_WRP3-13
+Added Net: Name=OVCC_B86
+Added Pin To Net: NetName=OVCC_B87 Pin=DUT1_U_DUT_HEADER2-32
+Added Pin To Net: NetName=OVCC_B87 Pin=LT1_U_VT_WRP3-12
+Added Net: Name=OVCC_B87
+Added Pin To Net: NetName=OVCC_B88 Pin=DUT1_U_DUT_HEADER2-33
+Added Pin To Net: NetName=OVCC_B88 Pin=LT2_U_VT_WRP3-20
+Added Net: Name=OVCC_B88
+Added Pin To Net: NetName=OVCC_B89 Pin=DUT1_U_DUT_HEADER2-34
+Added Pin To Net: NetName=OVCC_B89 Pin=LT2_U_VT_WRP3-18
+Added Net: Name=OVCC_B89
+Added Pin To Net: NetName=OVCC_B90 Pin=DUT1_U_DUT_HEADER2-35
+Added Pin To Net: NetName=OVCC_B90 Pin=LT2_U_VT_WRP3-17
+Added Net: Name=OVCC_B90
+Added Pin To Net: NetName=OVCC_B91 Pin=DUT1_U_DUT_HEADER2-36
+Added Pin To Net: NetName=OVCC_B91 Pin=LT2_U_VT_WRP3-16
+Added Net: Name=OVCC_B91
+Added Pin To Net: NetName=OVCC_B92 Pin=DUT1_U_DUT_HEADER2-37
+Added Pin To Net: NetName=OVCC_B92 Pin=LT2_U_VT_WRP3-15
+Added Net: Name=OVCC_B92
+Added Pin To Net: NetName=OVCC_B93 Pin=DUT1_U_DUT_HEADER2-38
+Added Pin To Net: NetName=OVCC_B93 Pin=LT2_U_VT_WRP3-14
+Added Net: Name=OVCC_B93
+Added Pin To Net: NetName=OVCC_B94 Pin=DUT1_U_DUT_HEADER2-39
+Added Pin To Net: NetName=OVCC_B94 Pin=LT2_U_VT_WRP3-13
+Added Net: Name=OVCC_B94
+Added Pin To Net: NetName=OVCC_B95 Pin=DUT1_U_DUT_HEADER2-40
+Added Pin To Net: NetName=OVCC_B95 Pin=LT2_U_VT_WRP3-12
+Added Net: Name=OVCC_B95
+Added Pin To Net: NetName=OVCC_B96 Pin=DUT1_U_DUT_HEADER1-1
+Added Pin To Net: NetName=OVCC_B96 Pin=LT1_U_VT_WRP2-20
+Added Net: Name=OVCC_B96
+Added Pin To Net: NetName=OVCC_B97 Pin=DUT1_U_DUT_HEADER1-2
+Added Pin To Net: NetName=OVCC_B97 Pin=LT1_U_VT_WRP2-18
+Added Net: Name=OVCC_B97
+Added Pin To Net: NetName=OVCC_B98 Pin=DUT1_U_DUT_HEADER1-3
+Added Pin To Net: NetName=OVCC_B98 Pin=LT1_U_VT_WRP2-17
+Added Net: Name=OVCC_B98
+Added Pin To Net: NetName=OVCC_B99 Pin=DUT1_U_DUT_HEADER1-4
+Added Pin To Net: NetName=OVCC_B99 Pin=LT1_U_VT_WRP2-16
+Added Net: Name=OVCC_B99
+Added Pin To Net: NetName=OVCC_B100 Pin=DUT1_U_DUT_HEADER1-5
+Added Pin To Net: NetName=OVCC_B100 Pin=LT1_U_VT_WRP2-15
+Added Net: Name=OVCC_B100
+Added Pin To Net: NetName=OVCC_B101 Pin=DUT1_U_DUT_HEADER1-6
+Added Pin To Net: NetName=OVCC_B101 Pin=LT1_U_VT_WRP2-14
+Added Net: Name=OVCC_B101
+Added Pin To Net: NetName=OVCC_B102 Pin=DUT1_U_DUT_HEADER1-7
+Added Pin To Net: NetName=OVCC_B102 Pin=LT1_U_VT_WRP2-13
+Added Net: Name=OVCC_B102
+Added Pin To Net: NetName=OVCC_B103 Pin=DUT1_U_DUT_HEADER1-8
+Added Pin To Net: NetName=OVCC_B103 Pin=LT1_U_VT_WRP2-12
+Added Net: Name=OVCC_B103
+Added Pin To Net: NetName=OVCC_B104 Pin=DUT1_U_DUT_HEADER1-9
+Added Pin To Net: NetName=OVCC_B104 Pin=LT2_U_VT_WRP2-20
+Added Net: Name=OVCC_B104
+Added Pin To Net: NetName=OVCC_B105 Pin=DUT1_U_DUT_HEADER1-10
+Added Pin To Net: NetName=OVCC_B105 Pin=LT2_U_VT_WRP2-18
+Added Net: Name=OVCC_B105
+Added Pin To Net: NetName=OVCC_B106 Pin=DUT1_U_DUT_HEADER1-11
+Added Pin To Net: NetName=OVCC_B106 Pin=LT2_U_VT_WRP2-17
+Added Net: Name=OVCC_B106
+Added Pin To Net: NetName=OVCC_B107 Pin=DUT1_U_DUT_HEADER1-12
+Added Pin To Net: NetName=OVCC_B107 Pin=LT2_U_VT_WRP2-16
+Added Net: Name=OVCC_B107
+Added Pin To Net: NetName=OVCC_B108 Pin=DUT1_U_DUT_HEADER1-13
+Added Pin To Net: NetName=OVCC_B108 Pin=LT2_U_VT_WRP2-15
+Added Net: Name=OVCC_B108
+Added Pin To Net: NetName=OVCC_B109 Pin=DUT1_U_DUT_HEADER1-14
+Added Pin To Net: NetName=OVCC_B109 Pin=LT2_U_VT_WRP2-14
+Added Net: Name=OVCC_B109
+Added Pin To Net: NetName=OVCC_B110 Pin=DUT1_U_DUT_HEADER1-15
+Added Pin To Net: NetName=OVCC_B110 Pin=LT2_U_VT_WRP2-13
+Added Net: Name=OVCC_B110
+Added Pin To Net: NetName=OVCC_B111 Pin=DUT1_U_DUT_HEADER1-16
+Added Pin To Net: NetName=OVCC_B111 Pin=LT2_U_VT_WRP2-12
+Added Net: Name=OVCC_B111
+Added Pin To Net: NetName=OVCC_B112 Pin=DUT1_U_DUT_HEADER1-25
+Added Pin To Net: NetName=OVCC_B112 Pin=LT1_U_VT_WRP1-20
+Added Net: Name=OVCC_B112
+Added Pin To Net: NetName=OVCC_B113 Pin=DUT1_U_DUT_HEADER1-26
+Added Pin To Net: NetName=OVCC_B113 Pin=LT1_U_VT_WRP1-18
+Added Net: Name=OVCC_B113
+Added Pin To Net: NetName=OVCC_B114 Pin=DUT1_U_DUT_HEADER1-27
+Added Pin To Net: NetName=OVCC_B114 Pin=LT1_U_VT_WRP1-17
+Added Net: Name=OVCC_B114
+Added Pin To Net: NetName=OVCC_B115 Pin=DUT1_U_DUT_HEADER1-28
+Added Pin To Net: NetName=OVCC_B115 Pin=LT1_U_VT_WRP1-16
+Added Net: Name=OVCC_B115
+Added Pin To Net: NetName=OVCC_B116 Pin=DUT1_U_DUT_HEADER1-29
+Added Pin To Net: NetName=OVCC_B116 Pin=LT1_U_VT_WRP1-15
+Added Net: Name=OVCC_B116
+Added Pin To Net: NetName=OVCC_B117 Pin=DUT1_U_DUT_HEADER1-30
+Added Pin To Net: NetName=OVCC_B117 Pin=LT1_U_VT_WRP1-14
+Added Net: Name=OVCC_B117
+Added Pin To Net: NetName=OVCC_B118 Pin=DUT1_U_DUT_HEADER1-31
+Added Pin To Net: NetName=OVCC_B118 Pin=LT1_U_VT_WRP1-13
+Added Net: Name=OVCC_B118
+Added Pin To Net: NetName=OVCC_B119 Pin=DUT1_U_DUT_HEADER1-32
+Added Pin To Net: NetName=OVCC_B119 Pin=LT1_U_VT_WRP1-12
+Added Net: Name=OVCC_B119
+Added Pin To Net: NetName=OVCC_B120 Pin=DUT1_U_DUT_HEADER1-33
+Added Pin To Net: NetName=OVCC_B120 Pin=LT2_U_VT_WRP1-20
+Added Net: Name=OVCC_B120
+Added Pin To Net: NetName=OVCC_B121 Pin=DUT1_U_DUT_HEADER1-34
+Added Pin To Net: NetName=OVCC_B121 Pin=LT2_U_VT_WRP1-18
+Added Net: Name=OVCC_B121
+Added Pin To Net: NetName=OVCC_B122 Pin=DUT1_U_DUT_HEADER1-35
+Added Pin To Net: NetName=OVCC_B122 Pin=LT2_U_VT_WRP1-17
+Added Net: Name=OVCC_B122
+Added Pin To Net: NetName=OVCC_B123 Pin=DUT1_U_DUT_HEADER1-36
+Added Pin To Net: NetName=OVCC_B123 Pin=LT2_U_VT_WRP1-16
+Added Net: Name=OVCC_B123
+Added Pin To Net: NetName=OVCC_B124 Pin=DUT1_U_DUT_HEADER1-37
+Added Pin To Net: NetName=OVCC_B124 Pin=LT2_U_VT_WRP1-15
+Added Net: Name=OVCC_B124
+Added Pin To Net: NetName=OVCC_B125 Pin=DUT1_U_DUT_HEADER1-38
+Added Pin To Net: NetName=OVCC_B125 Pin=LT2_U_VT_WRP1-14
+Added Net: Name=OVCC_B125
+Added Pin To Net: NetName=OVCC_B126 Pin=DUT1_U_DUT_HEADER1-39
+Added Pin To Net: NetName=OVCC_B126 Pin=LT2_U_VT_WRP1-13
+Added Net: Name=OVCC_B126
+Added Pin To Net: NetName=OVCC_B127 Pin=DUT1_U_DUT_HEADER1-40
+Added Pin To Net: NetName=OVCC_B127 Pin=LT2_U_VT_WRP1-12
+Added Net: Name=OVCC_B127
+Added Pin To Net: NetName=RDY0 Pin=BBB_DOWN-15
+Added Pin To Net: NetName=RDY0 Pin=POT_U_Power_Control2-14
+Added Net: Name=RDY0
+Added Pin To Net: NetName=RDY1 Pin=BBB_DOWN-23
+Added Pin To Net: NetName=RDY1 Pin=POT_U_Power_Control1-14
+Added Net: Name=RDY1
+Added Pin To Net: NetName=SCLK_W_U_Power_Control1 Pin=POT_U_Power_Control1-11
+Added Net: Name=SCLK_W_U_Power_Control1
+Added Pin To Net: NetName=SCLK_W_U_Power_Control2 Pin=BBB_DOWN-22
+Added Pin To Net: NetName=SCLK_W_U_Power_Control2 Pin=POT_U_Power_Control2-11
+Added Net: Name=SCLK_W_U_Power_Control2
+Added Pin To Net: NetName=SDO_W_U_Power_Control1 Pin=BBB_DOWN-30
+Added Pin To Net: NetName=SDO_W_U_Power_Control1 Pin=POT_U_Power_Control1-13
+Added Net: Name=SDO_W_U_Power_Control1
+Added Pin To Net: NetName=SDO_W_U_Power_Control2 Pin=BBB_DOWN-18
+Added Pin To Net: NetName=SDO_W_U_Power_Control2 Pin=POT_U_Power_Control2-13
+Added Net: Name=SDO_W_U_Power_Control2
+Added Pin To Net: NetName=SPI1CLK Pin=BBB_DOWN-31
+Added Net: Name=SPI1CLK
+Added Pin To Net: NetName=SPICS0 Pin=BBB_DOWN-17
+Added Pin To Net: NetName=SPICS0 Pin=POT_U_Power_Control2-12
+Added Net: Name=SPICS0
+Added Pin To Net: NetName=SPICS1 Pin=BBB_DOWN-28
+Added Pin To Net: NetName=SPICS1 Pin=POT_U_Power_Control1-12
+Added Net: Name=SPICS1
+Added Pin To Net: NetName=V_RST Pin=BBB_DOWN-12
+Added Pin To Net: NetName=V_RST Pin=POT_U_Power_Control1-1
+Added Pin To Net: NetName=V_RST Pin=POT_U_Power_Control2-1
+Added Net: Name=V_RST
+Added Class: Name=BBB_Board
+Added Class: Name=U_DUT_HEADER1
+Added Class: Name=U_DUT_HEADER2
+Added Class: Name=U_DUT_HEADER3
+Added Class: Name=U_DUT_HEADER4
+Added Class: Name=U_NUMATO_HDR
+Added Class: Name=U_Power_Control1
+Added Class: Name=U_Power_Control2
+Added Class: Name=U_VT_WRP1
+Added Class: Name=U_VT_WRP2
+Added Class: Name=U_VT_WRP3
+Added Class: Name=U_VT_WRP4
+Added Class: Name=U_VT_WRP5
+Added Class: Name=U_VT_WRP6
+Added Class: Name=U_VT_WRP7
+Added Class: Name=U_VT_WRP8
+Added Class: Name=IVL_B[127..0]
+Added Class: Name=OVCC_B[127..0]
+Added Class: Name=DUT_HEADER
+Added Class: Name=POW_CONT
+Added Class: Name=VT_WRP
