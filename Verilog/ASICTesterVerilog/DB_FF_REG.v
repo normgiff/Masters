@@ -48,6 +48,9 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 	
 	reg buffer_data;
 	reg buffer_out;
+	
+	reg [1:0] ff_data;
+	reg [1:0] ff_out;
 
 	reg [6:0] leading_edge;
 	reg [6:0] trailing_edge;
@@ -68,18 +71,22 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 
 	FF_REG ff_reg0(.CLK(CLK), .RST(RST), .EN(EN_FF_LOGIC), .LEADING_EDGE(leading_edge), 
 						.TRAILING_EDGE(trailing_edge), .CYCLE_LENGTH(cycle_length), 
-						.D(buffer_out), .FF(FF), .Q(Q));	
+						.D(buffer_out), .FF(ff_out), .Q(Q));	
 	
 	always@(posedge CLK) begin
 		if (RST) begin
 			buffer_data <= 1'b0;
 			buffer_out <= 1'b0;
+			ff_data <= 2'b0;
+			ff_out <= 2'b0;
 		end
 		else if (LOAD) begin
 			buffer_data <= D;
+			ff_data <= FF;
 		end
 		else if (TRANSFER) begin
 			buffer_out <= buffer_data;
+			ff_out <= ff_data;
 		end
 	end
 

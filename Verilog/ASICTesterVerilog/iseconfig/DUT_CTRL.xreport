@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-18T17:30:07</DateModified>
-  <ModuleName>DUT_CTRL</ModuleName>
+  <DateModified>2016-04-19T15:06:35</DateModified>
+  <ModuleName>CENTRAL_FSM</ModuleName>
   <SummaryTimeStamp>2016-04-18T15:31:20</SummaryTimeStamp>
   <SavedFilePath>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/iseconfig/DUT_CTRL.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog\</ImplementationReportsDirectory>
-  <DateInitialized>2016-04-18T15:26:46</DateInitialized>
+  <DateInitialized>2016-04-19T15:06:35</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

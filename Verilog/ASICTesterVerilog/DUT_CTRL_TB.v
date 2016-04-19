@@ -76,9 +76,153 @@ module DUT_CTRL_TB;
 		#100;
 		RST = 0;
 		#100;
-        
+		
+		LEADING_EDGE_1 = 20;
+		LEADING_EDGE_2 = 40;
+      
+		TRAILING_EDGE_1 = 40;
+		TRAILING_EDGE_2 = 60;
+      
+		CYCLE_LENGTH_1 = 80;
+		CYCLE_LENGTH_2 = 120;
+		
 		// Load all registers, then inspect the outputs and see if they look OK.
-
+		// Must be loaded and transfered before FF.
+		BUS128_0 = 128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE;
+		#10;
+		SIG_LOAD = 1;
+		#10;
+		SIG_LOAD = 0;
+		#10;
+		SIG_TRANSFER = 1;
+		#10;
+		SIG_TRANSFER = 0;
+		#10;
+		
+		BUS128_0 = 128'h0;
+		BUS128_1 = 128'h0;
+		#10;
+		FF_LOAD = 1;
+		#10;
+		FF_LOAD = 0;
+		#10;
+		
+		BUS128_0 = 128'h0;
+		TEMPLATE_LOAD = 1;
+		#10;
+		TEMPLATE_LOAD = 0;
+		#10;
+		
+		BUS128_0 = 128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;
+		#10;
+		CYCLE_LOAD = 1;	
+		#10;
+		CYCLE_LOAD = 0;
+		#10; 
+		
+		FF_TRANSFER = 1;
+		CYCLE_TRANSFER = 1;
+		TEMPLATE_TRANSFER = 1;
+		#10;
+		
+		PERFORM_TEST = 1;
+		#10;
+		
+		FF_TRANSFER = 0;
+		CYCLE_TRANSFER = 0;
+		TEMPLATE_TRANSFER = 0;
+		#10000;
+		
+		// Load new signals and FF logic.
+		PERFORM_TEST = 0;
+		#10;
+		
+		BUS128_0 = 128'h00000000000000000000000000000001;
+		#10;
+		SIG_LOAD = 1;
+		#10;
+		SIG_LOAD = 0;
+		#10;
+		SIG_TRANSFER = 1;
+		#10;
+		SIG_TRANSFER = 0;
+		#10;
+		
+		BUS128_0 = 128'h55555555555555555555555555555555;
+		BUS128_1 = 128'h55555555555555555555555555555555;
+		#10;
+		FF_LOAD = 1;
+		#10;
+		FF_LOAD = 0;
+		#10;
+		FF_TRANSFER = 1;
+		#10;
+		FF_TRANSFER = 0;
+		#10;
+		
+		PERFORM_TEST = 1;
+		#10000;
+		
+		// Load new FF logic.
+		PERFORM_TEST = 0;
+		#10;
+		
+		BUS128_0 = 128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;
+		#10;
+		SIG_LOAD = 1;
+		#10;
+		SIG_LOAD = 0;
+		#10;
+		SIG_TRANSFER = 1;
+		#10;
+		SIG_TRANSFER = 0;
+		#10;
+		
+		BUS128_0 = 128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;
+		BUS128_1 = 128'hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;
+		#10;
+		FF_LOAD = 1;
+		#10;
+		FF_LOAD = 0;
+		#10;
+		FF_TRANSFER = 1;
+		#10;
+		FF_TRANSFER = 0;
+		#10;
+		
+		PERFORM_TEST = 1;
+		#10000;
+		
+		// Load new FF logic.
+		PERFORM_TEST = 0;
+		#10;
+		
+		BUS128_0 = 128'h55555555555555555555555555555555;
+		#10;
+		SIG_LOAD = 1;
+		#10;
+		SIG_LOAD = 0;
+		#10;
+		SIG_TRANSFER = 1;
+		#10;
+		SIG_TRANSFER = 0;
+		#10;
+		
+		BUS128_0 = 128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+		BUS128_1 = 128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+		#10;
+		FF_LOAD = 1;
+		#10;
+		FF_LOAD = 0;
+		#10;
+		FF_TRANSFER = 1;
+		#10;
+		FF_TRANSFER = 0;
+		#10;
+		
+		PERFORM_TEST = 1;
+		#10000;
+		$finish;
 	end
 	
 	always begin
