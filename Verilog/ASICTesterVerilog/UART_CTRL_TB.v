@@ -5,15 +5,16 @@ module UART_CTRL_TB;
 	// Inputs
 	reg CLK;
 	reg RST;
-	reg RX;
+	//reg RX;
 	reg RXDATA_RETRIEVED;
-	reg [7:0] TXDATA;
+	reg [127:0] TXDATA;
 	reg TXCAPTURE;
 	reg TXTRANSMIT;
+	reg TXACK;
 
 	// Outputs
 	wire RXDATA_READY;
-	wire [7:0] RXDATA;
+	wire [127:0] RXDATA;
 	wire TX;
 	wire TXSENT;
 
@@ -21,7 +22,7 @@ module UART_CTRL_TB;
 	UART_CTRL uut (
 		.CLK(CLK), 
 		.RST(RST), 
-		.RX(RX), 
+		.RX(TX), // Read what TX sends out.
 		.RXDATA_READY(RXDATA_READY), 
 		.RXDATA_RETRIEVED(RXDATA_RETRIEVED), 
 		.RXDATA(RXDATA), 
@@ -29,61 +30,48 @@ module UART_CTRL_TB;
 		.TXDATA(TXDATA), 
 		.TXCAPTURE(TXCAPTURE), 
 		.TXTRANSMIT(TXTRANSMIT), 
-		.TXSENT(TXSENT)
+		.TXSENT(TXSENT), 
+		.TXACK(TXACK)
 	);
 
 	initial begin
 		// Initialize Inputs
 		CLK = 0;
-		RST = 0;
-		RX = 0;
+		RST = 1;
 		RXDATA_RETRIEVED = 0;
 		TXDATA = 0;
 		TXCAPTURE = 0;
 		TXTRANSMIT = 0;
+		TXACK = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
-		RST = 1;
-		#100;
 		RST = 0;
 		#100;
-		
-		TXDATA = 8'b10101010;
-		#100;
+        
+		// Add stimulus here
+		// Ensure that the first and last four 1's are sent!
+		TXDATA = 128'hF000000000000000000000000000000F;
+		#10;
 		TXCAPTURE = 1;
-		#100;
+		#10;
 		TXCAPTURE = 0;
-		#100;
+		#10;
 		TXTRANSMIT = 1;
-		#100;
+		#10;
 		TXTRANSMIT = 0;
-		#100;
+		#10;
 		
-		RX = 0;
-		#8680;
-		RX = 1;
-		#8680;
-		RX = 1;
-		#8680;
-		RX = 0;
-		#8680;
-		RX = 0;
-		#8680;
-		RX = 1;
-		#8680;
-		RX = 0;
-		#8680;
-		RX = 0;
-		#8680;
-		RX = 1;
-		#8680;
-		RX = 0;
-		#8680;
+		while (TXSENT == 1'b0) begin
+			#10;
+		end
 		
+		while (RXDATA_READY == 1'b0) begin
+			#10;
+		end
 		
-		#1000;
+		$finish;
+
 	end
 	
 	always begin

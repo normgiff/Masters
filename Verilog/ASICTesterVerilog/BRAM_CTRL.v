@@ -27,6 +27,8 @@
  *    TC_READ:            128-bit read {2 template bits, 126 cycle-config bits}
  *		TEMPLATE_CHANGE: 	  Indicates if the read template is different from the last read template.
  * 	READY: 		        Read/write operation is not in progress.
+ *    MORE_TO_READ:       Always 1 unless this controller has finished reading the last input vector.
+ *                        Reading again will cause the first input vector to be read.
  * 
  */
 module BRAM_CTRL(CLK, RST, 
@@ -34,7 +36,8 @@ module BRAM_CTRL(CLK, RST,
 					  WRITE_DATA_0, WRITE_DATA_1,
 					  TEMPLATE_READ, TEMPLATE_BITS, INPUT_READ, FF_READ, TC_READ,
 					  READ_DATA_0, READ_DATA_1, 
-					  TEMPLATE_CHANGE, READY);					  
+					  TEMPLATE_CHANGE, READY,
+					  MORE_TO_READ);					  
 					  
 	`include "BRAM_CTRL_PARAMS.v"
 	
@@ -58,8 +61,10 @@ module BRAM_CTRL(CLK, RST,
 	output reg [127:0] READ_DATA_1;
 	output reg TEMPLATE_CHANGE;
 	output READY;
+	output MORE_TO_READ;
 	
 	assign READY = (PS == IDLE);
+	assign MORE_TO_READ = (PS == IDLE) && (input_vectors_written == input_vectors_read);
 	
 	wire write_en = PS == INPUT_WRITE_1 || PS == INPUT_WRITE_2 || 
 						 PS == TEMPLATE_WRITE_1 || PS == TEMPLATE_WRITE_2 || 
@@ -78,6 +83,10 @@ module BRAM_CTRL(CLK, RST,
 	reg [6:0] input_read_posA;
 	reg [6:0] input_write_posB;
 	reg [6:0] input_read_posB;
+	
+	// Right now, only 240 input vectors are allowed.
+	reg [7:0] input_vectors_written;
+	reg [7:0] input_vectors_read;
 	
 	BRAM bram0(.CLK(CLK), .EN_A(1'b1), .EN_B(1'b1), .WE_A(write_en), .WE_B(write_en), 
 				  .DIN_A(din[31:0]), .DIN_B(din[63:32]), .ADDR_A(addr_a), .ADDR_B(addr_b), 
@@ -236,6 +245,28 @@ module BRAM_CTRL(CLK, RST,
 		endcase
 	end
 	
+	// Logic to update number of input vectors read and written.
+	always@(posedge CLK) begin
+		if (RST) begin
+			input_vectors_written <= 8'd0;
+			input_vectors_read <= 8'd0;
+		end
+		else begin
+			if (PS == INPUT_WRITE_2) begin
+				input_vectors_written <= input_vectors_written + 8'd1;
+			end
+			else if (PS == INPUT_READ_1) begin
+				// Delay by a clock cycle so we can reset this counter in time.
+				// (See below.)
+				input_vectors_read <= input_vectors_read + 8'd1;
+			end
+			
+			if (input_vectors_read == input_vectors_written) begin
+				input_vectors_read <= 8'd0;
+			end
+		end
+	end
+	
 	// Logic to update read and write addresses for input vectors.
 	always@(posedge CLK) begin
 		if (RST) begin
@@ -263,7 +294,7 @@ module BRAM_CTRL(CLK, RST,
 		addr_b = 14'd0;
 		case (PS)
 			IDLE: begin
-				// Nothing to do.
+				// Do nothing.
 			end
 			
 			INPUT_WRITE_1: begin

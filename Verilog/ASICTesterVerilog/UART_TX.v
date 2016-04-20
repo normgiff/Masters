@@ -4,6 +4,7 @@
  * Module: UART_RX
  * Function: Serial communication with BeagleBone Black (rev C).
  *           Baud rate is fixed at 115,200. (Bits are held for 8.68 microseconds on the wire.)
+ *           WARNING: This module assumes that bytes are always transferred in groups of 16!
  * Inputs: 
  * 	CLK (100 MHz)
  * 	RST
@@ -19,7 +20,7 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 	input CLK;
 	input RST;
 	
-	input [7:0] DATA;
+	input [127:0] DATA;
 	input CAPTURE;
 	input TRANSMIT;
 	input ACKNOWLEDGE;
@@ -31,7 +32,7 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 	
 	// Subtract 1 to account for switching states.
 	parameter PERIOD = 867 - 1;
-	parameter HALF_PERIOD = 433 - 1;
+	// parameter HALF_PERIOD = 433 - 1;
 	
 	parameter IDLE = 0;
 	parameter STARTBIT = 1;
@@ -49,7 +50,10 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 	reg [3:0] PS;
 	reg [3:0] NS;
 	
-	reg [7:0] data_buffer;
+	// We transmit 16 bytes over the line, so 128 bits.
+	reg [6:0] bit_count;
+	
+	reg [127:0] data_buffer;
 	reg [9:0] clock_counter;
 	reg count;
 	reg reset_count;
@@ -58,6 +62,7 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 	always@(posedge CLK) begin
 		if (RST) begin
 			TX <= 1'b1;
+			bit_count <= 6'd0;
 		end
 		else begin
 			case (PS) 
@@ -65,28 +70,52 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 					TX <= 1'b0;
 				end
 				BIT0: begin 
-					TX <= data_buffer[0];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				BIT1: begin 
-					TX <= data_buffer[1];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
-				BIT2: begin 
-					TX <= data_buffer[2];
+				BIT2: begin
+					TX <= data_buffer[bit_count];				
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				BIT3: begin 
-					TX <= data_buffer[3];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				BIT4: begin 
-					TX <= data_buffer[4];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				BIT5: begin 
-					TX <= data_buffer[5];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				BIT6: begin 
-					TX <= data_buffer[6];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				BIT7: begin 
-					TX <= data_buffer[7];
+					TX <= data_buffer[bit_count];
+					if (clock_counter == PERIOD) begin
+						bit_count <= bit_count + 7'd1;
+					end
 				end
 				STOPBIT: begin
 					TX <= 1'b1;
@@ -114,7 +143,7 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 	// Used to capture data.
 	always@(posedge CLK) begin
 		if (RST) begin
-			data_buffer <= 8'd0;
+			data_buffer <= 127'd0;
 		end
 		else begin
 			if ((PS == IDLE || PS == IDLE_SENT) && CAPTURE) begin
@@ -229,7 +258,12 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 			
 			STOPBIT: begin
 				if (clock_counter == PERIOD) begin
-					NS = IDLE_SENT;
+					if (bit_count == 7'd0) begin
+						NS = IDLE_SENT;
+					end
+					else begin
+						NS = STARTBIT;
+					end
 				end
 				else begin
 					NS = STOPBIT;

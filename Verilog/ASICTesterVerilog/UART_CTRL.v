@@ -10,7 +10,7 @@
  *           an input to the DUT or not. In other words, a template bit
  *           is just the enable bit for an FPGA pin's tristate buffer.
  * 000001XX: The next 32 bytes (256 bits) that the BBB will send are 
- *           the force-format configurations for template XXX.
+ *           the force-format configurations for template XX.
  *           Note: Recall that there are four force-format options: 
  *           	R0 | 00 == Force signal when test cycle is high, return to zero otherwise.
  * 				R1 | 01 == Force signal when test cycle is high, return to one otherwise.
@@ -27,7 +27,7 @@
  *                 in the test file.
  * 00010YXX: The next three bytes that the BBB will send are the "count" for the leading edge,
  *           the "count" for the trailing edge, and the test cycle length for test cycle Y, 
- *           template XXX. The FPGA will likely run off a 100 MHz clock (10 nanoseconds).
+ *           template XX. The FPGA will likely run off a 100 MHz clock (10 nanoseconds).
  *           Example: If the BBB sends the following: 
  *           00100000 00001111 00011110 00111100
  *           Then for the "first" test cycle, the leading edge is at 15*10 ns = 150 ns,
@@ -57,12 +57,12 @@ module UART_CTRL(CLK, RST,
 	input RX;
 	input RXDATA_RETRIEVED;
 	output RXDATA_READY;
-	output [7:0] RXDATA;
+	output [127:0] RXDATA;
 	
-	input [7:0] TXDATA;
+	input [127:0] TXDATA;
 	input TXCAPTURE;
 	input TXTRANSMIT;
-	input ACKNOWLEDGE;
+	input TXACK;
 	output TX;
 	output TXSENT;
 	

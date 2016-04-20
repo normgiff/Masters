@@ -4,6 +4,7 @@
  * Module: UART_RX
  * Function: Serial communication with BeagleBone Black (rev C).
  *           Baud rate is fixed at 115,200. (Bits are held for 8.68 microseconds on the wire.)
+ *           WARNING: This module assumes that bytes are always transferred in groups of 16!
  * Inputs: 
  * 	CLK (100 MHz)
  * 	RST
@@ -19,7 +20,7 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 	input DATA_RETRIEVED;
 
 	output reg DATA_READY;
-	output reg [7:0] DATA;
+	output reg [127:0] DATA;
 
 	parameter BAUD_RATE = 115200;
 	
@@ -40,6 +41,8 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 	parameter STOPBIT = 10;
 	parameter IDLE_DATA = 11;
 	
+	// We expect 16 bytes over the line, so 128 bits.
+	reg [6:0] bit_count;
 	reg [3:0] PS;
 	reg [3:0] NS;
 	
@@ -51,33 +54,35 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 	// Used to sample bits.
 	always@(posedge CLK) begin
 		if (RST) begin
-			DATA <= 8'd0;
+			DATA <= 127'd0;
+			bit_count <= 7'd0;
 		end
 		else if (sample) begin
+			bit_count <= bit_count + 7'd1;
 			case (PS) 
 				BIT0: begin 
-					DATA[0] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT1: begin 
-					DATA[1] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT2: begin 
-					DATA[2] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT3: begin 
-					DATA[3] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT4: begin 
-					DATA[4] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT5: begin 
-					DATA[5] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT6: begin 
-					DATA[6] <= RX;
+					DATA[bit_count] <= RX;
 				end
 				BIT7: begin 
-					DATA[7] <= RX;
+					DATA[bit_count] <= RX;
 				end
 			endcase
 		end
@@ -207,7 +212,12 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 			
 			STOPBIT: begin
 				if (clock_counter == PERIOD) begin
-					NS = IDLE_DATA;
+					if (bit_count == 7'd0) begin
+						NS = IDLE_DATA;
+					end
+					else begin
+						NS = STARTBIT;
+					end
 				end
 				else begin
 					NS = STOPBIT;

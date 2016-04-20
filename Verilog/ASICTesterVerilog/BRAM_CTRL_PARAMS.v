@@ -28,8 +28,7 @@ parameter TC_INCR_FACTOR = 13'd128;
 // Number of input vectors is: (32768-2048)/128 = 240
 // If more input vectors are needed, a user will need to create an additional test. 
 // Should this limit become a problem, allowing input vectors to "jump" to addresses
-// after their execution may be best. External SRAM is also a possibility but that
-// requires I/O pins...
+// after their execution may be best. 
 parameter INPUT_START_ADDR_A = 7'd32;
 parameter INPUT_START_ADDR_B = 7'd33;
 parameter INPUT_INCR_FACTOR = 7'd1;
