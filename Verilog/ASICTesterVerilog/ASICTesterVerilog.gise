@@ -79,6 +79,15 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="COUNTER_CTRL_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="COUNTER_CTRL_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="COUNTER_CTRL_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="CYCLE_DB_REG.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="CYCLE_DB_REG.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="CYCLE_DB_REG.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="CYCLE_DB_REG.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CYCLE_DB_REG.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="CYCLE_DB_REG.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="CYCLE_DB_REG.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="CYCLE_DB_REG.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="CYCLE_DB_REG_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DB_FF_REG.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DB_FF_REG.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DB_FF_REG.ngc"/>
@@ -90,6 +99,15 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="DB_FF_REG_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="DB_FF_REG_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DB_FF_REG_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DUTSIG_DB_REG.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DUTSIG_DB_REG.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DUTSIG_DB_REG.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="DUTSIG_DB_REG.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DUTSIG_DB_REG.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="DUTSIG_DB_REG.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="DUTSIG_DB_REG.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="DUTSIG_DB_REG.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DUTSIG_DB_REG_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DUT_CTRL.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DUT_CTRL.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DUT_CTRL.ngc"/>
@@ -102,6 +120,15 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="DUT_CTRL_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="DUT_CTRL_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DUT_CTRL_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="FF_DB_REG.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="FF_DB_REG.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="FF_DB_REG.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="FF_DB_REG.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FF_DB_REG.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="FF_DB_REG.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="FF_DB_REG.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="FF_DB_REG.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FF_DB_REG_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="FF_REG.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="FF_REG.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="FF_REG.ngc"/>
@@ -129,6 +156,16 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="OUTPUT_BUFFER_CTRL_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="OUTPUT_BUFFER_CTRL_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="OUTPUT_BUFFER_CTRL_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SRAM_CTRL.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SRAM_CTRL.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SRAM_CTRL.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="SRAM_CTRL.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SRAM_CTRL.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SRAM_CTRL.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SRAM_CTRL.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SRAM_CTRL.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SRAM_CTRL_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SRAM_CTRL_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TEMPLATE_DB_REG.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TEMPLATE_DB_REG.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="TEMPLATE_DB_REG.ngc"/>
@@ -137,6 +174,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="TEMPLATE_DB_REG.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="TEMPLATE_DB_REG.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TEMPLATE_DB_REG.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TEMPLATE_DB_REG_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TEMPLATE_DB_REG_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TEMPLATE_DB_REG_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TOP_MODULE.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TOP_MODULE.lso"/>
@@ -157,10 +196,10 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="TRIREG.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="TRIREG.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TRIREG.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TRIREG_DB_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TRIREG_DB_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TRIREG_DB_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TRIREG_DB_isim_beh.wdb"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TRIREG_DB_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TRIREG_DB_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="TRIREG_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="TRIREG_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TRIREG_xst.xrpt"/>
@@ -362,51 +401,52 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378021" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="278735547869649165" xil_pn:start_ts="1461378021">
+    <transform xil_pn:end_ts="1461382407" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6093712248360435677" xil_pn:start_ts="1461382407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378021" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5486579528401631524" xil_pn:start_ts="1461378021">
+    <transform xil_pn:end_ts="1461382407" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7798952406380840526" xil_pn:start_ts="1461382407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378021" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1461378021">
+    <transform xil_pn:end_ts="1461382407" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1461382407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378021" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-185967529670950001" xil_pn:start_ts="1461378021">
+    <transform xil_pn:end_ts="1461382407" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2982169733490656539" xil_pn:start_ts="1461382407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378021" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1461378021">
+    <transform xil_pn:end_ts="1461382407" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1461382407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378021" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7749123387371179622" xil_pn:start_ts="1461378021">
+    <transform xil_pn:end_ts="1461382407" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4704130118802240124" xil_pn:start_ts="1461382407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461378595" xil_pn:in_ck="6949689432440233059" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2027163883579675798" xil_pn:start_ts="1461378551">
+    <transform xil_pn:end_ts="1461382477" xil_pn:in_ck="6949689432440233059" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7298163477176677536" xil_pn:start_ts="1461382443">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BRAM.ngr"/>
       <outfile xil_pn:name="BRAM_CTRL.ngr"/>
+      <outfile xil_pn:name="CENTRAL_FSM.lso"/>
+      <outfile xil_pn:name="CENTRAL_FSM.ngc"/>
       <outfile xil_pn:name="CENTRAL_FSM.ngr"/>
+      <outfile xil_pn:name="CENTRAL_FSM.prj"/>
+      <outfile xil_pn:name="CENTRAL_FSM.stx"/>
+      <outfile xil_pn:name="CENTRAL_FSM.syr"/>
+      <outfile xil_pn:name="CENTRAL_FSM.xst"/>
+      <outfile xil_pn:name="CENTRAL_FSM_xst.xrpt"/>
       <outfile xil_pn:name="COUNTER_CTRL.ngr"/>
       <outfile xil_pn:name="DB_FF_REG.ngr"/>
+      <outfile xil_pn:name="DUTSIG_DB_REG.ngr"/>
       <outfile xil_pn:name="DUT_CTRL.ngr"/>
       <outfile xil_pn:name="FF_REG.ngr"/>
       <outfile xil_pn:name="OUTPUT_BUFFER_CTRL.ngr"/>
+      <outfile xil_pn:name="SRAM_CTRL.ngr"/>
       <outfile xil_pn:name="TEMPLATE_DB_REG.ngr"/>
-      <outfile xil_pn:name="TOP_MODULE.lso"/>
-      <outfile xil_pn:name="TOP_MODULE.ngc"/>
-      <outfile xil_pn:name="TOP_MODULE.ngr"/>
-      <outfile xil_pn:name="TOP_MODULE.prj"/>
-      <outfile xil_pn:name="TOP_MODULE.stx"/>
-      <outfile xil_pn:name="TOP_MODULE.syr"/>
-      <outfile xil_pn:name="TOP_MODULE.xst"/>
-      <outfile xil_pn:name="TOP_MODULE_xst.xrpt"/>
       <outfile xil_pn:name="TRIREG.ngr"/>
       <outfile xil_pn:name="UART_CTRL.ngr"/>
       <outfile xil_pn:name="UART_RX.ngr"/>

@@ -12,10 +12,8 @@
  * 				    High-to-low transition denotes trailing edge
  *    LOAD:        Loads D into the buffer.
  *    TRANSFER:    Transfers the buffer data to the FF register.
- *  	FF: 		    00 == R0 		(return to zero on trailing edge)
- *					    01 == R1 		(return to one on trailing edge)
- * 				    10 == DNRZ_L	(force signal value on leading edge)
- * 				    11 == DNRZ_T   (force signal value on trailing edge)
+ *  	FF: 		    0 == R0 		(return to zero on trailing edge)
+ * 				    1 == DNRZ_L	(force signal value on leading edge)
  * 	D
  * Outputs:
  * 	Q
@@ -31,7 +29,7 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 	input LOAD;
 	input TRANSFER;
 	
-	input [1:0] FF;
+	input FF;
 	input D;
 	
 	input [6:0] LEADING_EDGE_1;
@@ -49,8 +47,8 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 	reg buffer_data;
 	reg buffer_out;
 	
-	reg [1:0] ff_data;
-	reg [1:0] ff_out;
+	reg ff_data;
+	reg ff_out;
 
 	reg [6:0] leading_edge;
 	reg [6:0] trailing_edge;
@@ -77,8 +75,8 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 		if (RST) begin
 			buffer_data <= 1'b0;
 			buffer_out <= 1'b0;
-			ff_data <= 2'b0;
-			ff_out <= 2'b0;
+			ff_data <= 1'b0;
+			ff_out <= 1'b0;
 		end
 		else if (LOAD) begin
 			buffer_data <= D;

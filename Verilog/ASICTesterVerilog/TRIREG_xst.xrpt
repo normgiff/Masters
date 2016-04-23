@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Apr 14 21:05:55 2016">
+  <application stringID="Xst" timeStamp="Fri Apr 22 21:20:16 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -55,8 +55,8 @@
       <item DEFAULT="NGC" label="-ofmt" stringID="XST_OFMT" value="NGC"/>
       <item DEFAULT="" label="-p" stringID="XST_P" value="xc6slx16-3-csg324"/>
       <item DEFAULT="" label="-top" stringID="XST_TOP" value="TRIREG"/>
-      <item DEFAULT="Speed" label="-opt_mode" stringID="XST_OPTMODE" value="Speed"/>
-      <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="1"/>
+      <item DEFAULT="Speed" label="-opt_mode" stringID="XST_OPTMODE" value="Area"/>
+      <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="2"/>
       <item DEFAULT="No" label="-power" stringID="XST_POWER" value="NO"/>
       <item DEFAULT="No" label="-iuc" stringID="XST_IUC" value="NO"/>
       <item DEFAULT="No" label="-keep_hierarchy" stringID="XST_KEEPHIERARCHY" value="No"/>

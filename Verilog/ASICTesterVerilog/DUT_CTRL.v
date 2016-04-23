@@ -12,7 +12,7 @@
  *    SIG_BUS_OUT:  128-bit signal vector (output of FPGA).
  * 
  */
-module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128_0, BUS128_1,
+module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128,
 					 SIG_LOAD, SIG_TRANSFER, 
 					 FF_LOAD, FF_TRANSFER, 
 					 TEMPLATE_LOAD, TEMPLATE_TRANSFER,
@@ -24,8 +24,7 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128_0, BUS128_1,
 	input CLK;
 	input RST;
 	input PERFORM_TEST;
-	input [127:0] BUS128_0;
-	input [127:0] BUS128_1;
+	input [127:0] BUS128;
 	
 	input SIG_LOAD;
 	input SIG_TRANSFER;
@@ -55,12 +54,12 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128_0, BUS128_1,
 	
 	// Signal registers
 	DUTSIG_DB_REG signal_regs[127:0](.CLK(CLK), .RST(RST), .LOAD(SIG_LOAD), 
-												.TRANSFER(SIG_TRANSFER), .D(BUS128_0), 
+												.TRANSFER(SIG_TRANSFER), .D(BUS128), 
 												.Q(sig_outputs));
 	
 	// FF registers
 	FF_DB_REG ff_regs[127:0](.CLK(CLK), .RST(RST), .EN_FF_LOGIC(PERFORM_TEST), 
-									  .LOAD(FF_LOAD), .TRANSFER(FF_TRANSFER), .FF({BUS128_1, BUS128_0}), 
+									  .LOAD(FF_LOAD), .TRANSFER(FF_TRANSFER), .FF(BUS128), 
 									  .LEADING_EDGE_1(LEADING_EDGE_1), .TRAILING_EDGE_1(TRAILING_EDGE_1), 
 									  .CYCLE_LENGTH_1(CYCLE_LENGTH_1), .LEADING_EDGE_2(LEADING_EDGE_2), 
 									  .TRAILING_EDGE_2(TRAILING_EDGE_2), .CYCLE_LENGTH_2(CYCLE_LENGTH_2), 
@@ -68,12 +67,12 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128_0, BUS128_1,
 											
 	// Template registers
 	TEMPLATE_DB_REG template_regs[127:0](.CLK(CLK), .RST(RST), .LOAD(TEMPLATE_LOAD),
-													 .TRANSFER(TEMPLATE_TRANSFER), .D(BUS128_0), 
+													 .TRANSFER(TEMPLATE_TRANSFER), .D(BUS128), 
 													 .Q(template_outputs));
 													 
 	// Signal registers
 	CYCLE_DB_REG cycle_regs[127:0](.CLK(CLK), .RST(RST), .LOAD(CYCLE_LOAD), 
-											 .TRANSFER(CYCLE_TRANSFER), .D(BUS128_0), 
+											 .TRANSFER(CYCLE_TRANSFER), .D(BUS128), 
 											 .Q(cycle_outputs));
 			
 	// Tristate registers

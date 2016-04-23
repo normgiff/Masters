@@ -122,8 +122,7 @@ module CENTRAL_FSM(CLK, RST,
 	// Next-state logic.
 	always@(*) begin
 
-		// We get to this state if none of the below conditions match.
-		NS = ERROR_STATE;
+		NS = IDLE;
 
 		case (PS)			
 			IDLE: begin
@@ -331,42 +330,6 @@ module CENTRAL_FSM(CLK, RST,
 			
 			WAIT_FOR_FF_VECTOR_2: begin
 				if (rxdata_ready) begin
-					NS = SAVE_LOWER_FF_VECTOR_1;
-				end
-				else begin
-					NS = WAIT_FOR_FF_VECTOR_2;
-				end
-			end
-			
-			SAVE_LOWER_FF_VECTOR_1: begin
-				NS = SAVE_LOWER_FF_VECTOR_2;
-			end
-			
-			SAVE_LOWER_FF_VECTOR_2: begin
-				if (txsent) begin
-					NS = PREPARE_FOR_FF_VECTOR_3;
-				end			
-			end
-			
-			PREPARE_FOR_FF_VECTOR_3: begin
-				NS = PREPARE_FOR_FF_VECTOR_4;
-			end
-			
-			PREPARE_FOR_FF_VECTOR_4: begin
-				NS = WAIT_FOR_FF_VECTOR_3;
-			end
-			
-			WAIT_FOR_FF_VECTOR_3: begin
-				if (txsent) begin
-					NS = WAIT_FOR_FF_VECTOR_4;
-				end
-				else begin
-					NS = WAIT_FOR_FF_VECTOR_3;
-				end
-			end
-			
-			WAIT_FOR_FF_VECTOR_4: begin
-				if (rxdata_ready) begin
 					NS = STORE_FF_VECTOR_1;
 				end
 				else begin
@@ -481,17 +444,6 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			APPLY_INPUTS: begin
-				// During a test cycle, we must do the following (in order): 
-				// 1) Cycle 1: Enable the FF logic and begin counting. 
-				// 1) Cycle 1: If there are more input vectors to read, request the next input vector.
-				//             Otherwise, the tests are complete.
-				// 2) Cycle 2: Set the SRAM blocks to write-mode by lowering CS_BAR.
-				// 3) Cycle 4: As soon as the next input vector is read, we have two cases: 
-				//             If the template bits have changed, go to the LOAD_INPUT_VECTOR state
-				//             in order to halt real-time testing and load the new config bits.
-				//             Otherwise, load the next input vector (don't transfer it yet!).
-				// 4) Trailing edge cycle: Disable write-mode by raising CS_BAR.
-				// 5) Cycle after trailing edge: Advance the counter.
 				if (more_to_read) begin
 					NS = READ_INPUT_VECTOR_1;				
 				end
@@ -584,10 +536,6 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			ERROR_STATE: begin
-				NS = ERROR_STATE;
-			end
-
 		endcase
 	
 	end
@@ -601,15 +549,13 @@ module CENTRAL_FSM(CLK, RST,
 	reg template_write;
 	reg ff_write;
 	reg tc_write;
-	reg [127:0] write_data_0;
-	reg [127:0] write_data_1;
+	reg [127:0] write_data;
 	reg template_read;
 	reg [1:0] template_bits;
 	reg input_read;
 	reg ff_read;
 	reg tc_read;
-	wire [127:0] read_data_0;
-	wire [127:0] read_data_1;
+	wire [127:0] read_data;
 	wire template_change;
 	wire bram_ctrl_ready;
 	wire more_to_read;
@@ -623,7 +569,7 @@ module CENTRAL_FSM(CLK, RST,
 			case (PS) 
 				READ_INPUT_VECTOR_2: begin
 					if (bram_ctrl_ready) begin
-						current_template_bits <= read_data_0[127:126];
+						current_template_bits <= read_data[127:126];
 					end
 				end
 			endcase
@@ -636,8 +582,7 @@ module CENTRAL_FSM(CLK, RST,
 		input_write = 1'b0;
 		ff_write = 1'b0;
 		tc_write = 1'b0;
-		write_data_0 = 128'b0;
-		write_data_1 = 128'b0;
+		write_data = 128'b0;
 		
 		template_read = 1'b0;
 		template_bits = current_template_bits;
@@ -649,40 +594,38 @@ module CENTRAL_FSM(CLK, RST,
 		
 			STORE_TEMPLATE_VECTOR_1: begin
 				template_write = 1'b1;
-				write_data_0 = rxdata;
+				write_data = rxdata;
 			end
 			
 			STORE_TEMPLATE_VECTOR_2: begin
-				write_data_0 = rxdata;
+				write_data = rxdata;
 			end
 			
 			STORE_INPUT_VECTOR_1: begin
 				input_write = 1'b1;
-				write_data_0 = rxdata;
+				write_data = rxdata;
 			end
 			
 			STORE_INPUT_VECTOR_2: begin
-				write_data_0 = rxdata;
+				write_data = rxdata;
 			end
 			
 			STORE_CYCLE_VECTOR_1: begin
 				tc_write = 1'b1;
-				write_data_0 = rxdata;
+				write_data = rxdata;
 			end
 			
 			STORE_CYCLE_VECTOR_2: begin
-				write_data_0 = rxdata;
+				write_data = rxdata;
 			end
 			
 			STORE_FF_VECTOR_1: begin
 				ff_write = 1'b1;
-				write_data_0 = rxdata;
-				write_data_1 = ff_read_0;
+				write_data = rxdata;
 			end
 			
-			STORE_FF_VECTOR_1: begin
-				write_data_0 = rxdata;
-				write_data_1 = ff_read_0;
+			STORE_FF_VECTOR_2: begin
+				write_data = rxdata;
 			end
 			
 			READ_INPUT_VECTOR_1: begin
@@ -712,15 +655,13 @@ module CENTRAL_FSM(CLK, RST,
 								.TEMPLATE_WRITE(template_write), 
 								.FF_WRITE(ff_write), 
 								.TC_WRITE(tc_write),
-								.WRITE_DATA_0(write_data_0), 
-								.WRITE_DATA_1(write_data_1),
+								.WRITE_DATA(write_data), 
 								.TEMPLATE_READ(template_read), 
 								.TEMPLATE_BITS(template_bits), 
 								.INPUT_READ(input_read), 
 								.FF_READ(ff_read), 
 								.TC_READ(tc_read),
-								.READ_DATA_0(read_data_0), 
-								.READ_DATA_1(read_data_1), 
+								.READ_DATA(read_data), 
 								.TEMPLATE_CHANGE(template_change), 
 								.READY(bram_ctrl_ready),
 								.MORE_TO_READ(more_to_read)
@@ -774,8 +715,7 @@ module CENTRAL_FSM(CLK, RST,
 										
 	// DUT controller
 	reg perform_test;
-	wire [127:0] bus128_0;
-	wire [127:0] bus128_1;
+	wire [127:0] bus128;
 	reg sig_load;
 	reg sig_transfer;
 	reg ff_load;
@@ -791,8 +731,7 @@ module CENTRAL_FSM(CLK, RST,
 	reg [6:0] trailing_edge_2;
 	reg [7:0] cycle_length_2;
 	
-	assign bus128_0 = read_data_0;
-	assign bus128_1 = read_data_1;
+	assign bus128 = read_data;
 	
 	// Logic to store cycle configuration parameters.
 	always@(posedge CLK) begin
@@ -869,8 +808,7 @@ module CENTRAL_FSM(CLK, RST,
 							 .CLK(CLK), 
 							 .RST(rst), 
 							 .PERFORM_TEST(perform_test), 
-							 .BUS128_0(bus128_0), 
-							 .BUS128_1(bus128_1),
+							 .BUS128(bus128), 
 							 .SIG_LOAD(sig_load), 
 							 .SIG_TRANSFER(sig_transfer), 
 							 .FF_LOAD(ff_load), 
@@ -999,19 +937,6 @@ module CENTRAL_FSM(CLK, RST,
 	reg txtransmit;
 	wire txsent;
 	reg txack;
-	
-	reg [127:0] ff_read_0;
-	// Force-format vectors require two UART reads.
-	// We need to save one of the reads for later use.
-	
-	always@(posedge CLK) begin
-		if (rst) begin
-			ff_read_0 <= 128'b0;
-		end
-		else if (PS == SAVE_LOWER_FF_VECTOR_1) begin
-			ff_read_0 <= rxdata;
-		end
-	end
 	
 	always@(*) begin
 		rxdata_retrieved = 1'b0;
@@ -1156,48 +1081,14 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			WAIT_FOR_FF_VECTOR_2: begin
-				// Wait until the lower half of the FF vector arrives.
+				// Wait until the FF vector arrives.
 			end
 			
-			SAVE_LOWER_FF_VECTOR_1: begin
-				// Clear the UART read buffer.
-				rxdata_retrieved = 1'b1;
-				
-				// Ready the UART controller for transmission of acknowledgement.
-				txdata = {120'b0, ACKNOWLEDGE};
-				txcapture = 1'b1;				
-			end
-			
-			SAVE_LOWER_FF_VECTOR_2: begin
-				// Acknowledge completion of the transmission. 
-				if (txsent) begin
-					txack = 1'b1;
-				end				
-			end
-			
-			PREPARE_FOR_FF_VECTOR_3: begin
-				// Clear the UART read buffer.
-				rxdata_retrieved = 1'b1;
-				
-				// Ready the UART controller for transmission of acknowledgement.
-				txdata = {120'b0, ACKNOWLEDGE};
-				txcapture = 1'b1;
-			end
-			
-			PREPARE_FOR_FF_VECTOR_4: begin
-				// Transmit the acknowledgement to the BBB.
-				txtransmit = 1'b1;
-			end
-			
-			WAIT_FOR_FF_VECTOR_3: begin
-				// Acknowledge completion of the transmission.
-				if (txsent) begin
-					txack = 1'b1;
+			STORE_FF_VECTOR_2: begin
+				if (bram_ctrl_ready) begin
+					// We finished storing the input vector.
+					rxdata_retrieved = 1'b1;
 				end
-			end
-			
-			WAIT_FOR_FF_VECTOR_4: begin
-				// Wait until the upper half of the FF vector arrives.
 			end
 			
 			/////////////////////////////////////

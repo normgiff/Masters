@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -80,8 +80,8 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -223,8 +223,134 @@ Optimizing unit <OUTPUT_BUFFER_CTRL> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block OUTPUT_BUFFER_CTRL, actual ratio is 2.
-FlipFlop PS_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop PS_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop SRAM_DATA_127 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_126 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_125 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_124 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_123 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_122 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_121 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_120 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_119 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_118 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_117 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_116 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_115 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_114 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_113 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_112 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_111 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_110 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_109 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_108 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_107 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_106 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_105 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_104 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_103 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_102 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_101 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_100 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_99 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_98 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_97 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_96 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_95 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_94 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_93 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_92 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_91 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_90 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_89 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_88 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_87 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_86 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_85 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_84 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_83 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_82 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_81 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_80 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_79 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_78 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_77 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_76 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_75 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_74 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_73 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_72 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_71 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_70 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_69 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_68 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_67 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_66 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_65 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_64 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_63 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_62 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_61 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_60 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_59 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_58 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_57 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_56 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_55 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_54 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_53 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_52 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_51 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_50 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_49 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_48 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_47 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_46 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_45 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_44 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_43 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_42 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_41 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_40 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_39 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_38 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_37 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_36 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_35 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_34 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_33 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_32 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_31 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop SRAM_DATA_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -232,8 +358,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 147
- Flip-Flops                                            : 147
+# Registers                                            : 272
+ Flip-Flops                                            : 272
 
 =========================================================================
 
@@ -256,19 +382,19 @@ Top Level Output File Name         : OUTPUT_BUFFER_CTRL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 323
+# BELS                             : 188
 #      GND                         : 1
+#      INV                         : 1
 #      LUT2                        : 3
-#      LUT3                        : 3
-#      LUT4                        : 139
-#      LUT5                        : 17
-#      LUT6                        : 145
+#      LUT3                        : 5
+#      LUT4                        : 10
+#      LUT5                        : 19
+#      LUT6                        : 134
 #      MUXCY                       : 7
 #      XORCY                       : 8
-# FlipFlops/Latches                : 147
-#      FD                          : 6
-#      FDR                         : 5
-#      FDRE                        : 136
+# FlipFlops/Latches                : 272
+#      FDR                         : 2
+#      FDRE                        : 270
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 137
@@ -282,20 +408,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             147  out of  18224     0%  
- Number of Slice LUTs:                  307  out of   9112     3%  
-    Number used as Logic:               307  out of   9112     3%  
+ Number of Slice Registers:             144  out of  18224     0%  
+ Number of Slice LUTs:                  172  out of   9112     1%  
+    Number used as Logic:               172  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    310
-   Number with an unused Flip Flop:     163  out of    310    52%  
-   Number with an unused LUT:             3  out of    310     0%  
-   Number of fully used LUT-FF pairs:   144  out of    310    46%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    172
+   Number with an unused Flip Flop:      28  out of    172    16%  
+   Number with an unused LUT:             0  out of    172     0%  
+   Number of fully used LUT-FF pairs:   144  out of    172    83%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                         138
  Number of bonded IOBs:                 138  out of    232    59%  
+    IOB Flip Flops/Latches:             128
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -321,7 +448,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 147   |
+CLK                                | BUFGP                  | 272   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -332,9 +459,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.938ns (Maximum Frequency: 253.917MHz)
-   Minimum input arrival time before clock: 4.656ns
-   Maximum output required time after clock: 6.165ns
+   Minimum period: 5.358ns (Maximum Frequency: 186.622MHz)
+   Minimum input arrival time before clock: 4.914ns
+   Maximum output required time after clock: 5.236ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -343,54 +470,60 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 3.938ns (frequency: 253.917MHz)
-  Total number of paths / destination ports: 2928 / 283
+  Clock period: 5.358ns (frequency: 186.622MHz)
+  Total number of paths / destination ports: 4947 / 548
 -------------------------------------------------------------------------
-Delay:               3.938ns (Levels of Logic = 3)
-  Source:            serial_counter_2 (FF)
-  Destination:       SRAM_DATA_0 (FF)
+Delay:               5.358ns (Levels of Logic = 10)
+  Source:            propagation_delay_counter_4 (FF)
+  Destination:       serial_counter_7 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: serial_counter_2 to SRAM_DATA_0
+  Data Path: propagation_delay_counter_4 to serial_counter_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            18   0.447   1.394  serial_counter_2 (serial_counter_2)
-     LUT5:I0->O            8   0.203   0.803  serial_counter[6]_serial_counter[7]_AND_255_o31 (serial_counter[6]_serial_counter[7]_AND_255_o3)
-     LUT6:I5->O            1   0.205   0.580  Mmux_SRAM_DATA[94]_Q_MUX_67_o11 (SRAM_DATA[94]_Q_MUX_67_o)
-     LUT4:I3->O            1   0.205   0.000  SRAM_DATA_94_dpot (SRAM_DATA_94_dpot)
-     FDRE:D                    0.102          SRAM_DATA_94
+     FDRE:C->Q             6   0.447   1.089  propagation_delay_counter_4 (propagation_delay_counter_4)
+     LUT6:I1->O           13   0.203   0.933  GND_1_o_GND_1_o_equal_29_o<5>1 (GND_1_o_GND_1_o_equal_29_o)
+     LUT3:I2->O          257   0.205   2.066  Mmux_enable_serial_counter11 (enable_serial_counter)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_serial_counter_cy<0> (Mcount_serial_counter_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_serial_counter_cy<1> (Mcount_serial_counter_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_serial_counter_cy<2> (Mcount_serial_counter_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_serial_counter_cy<3> (Mcount_serial_counter_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_serial_counter_cy<4> (Mcount_serial_counter_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_serial_counter_cy<5> (Mcount_serial_counter_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_serial_counter_cy<6> (Mcount_serial_counter_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_serial_counter_xor<7> (Mcount_serial_counter7)
+     FDRE:D                    0.102          serial_counter_7
     ----------------------------------------
-    Total                      3.938ns (1.162ns logic, 2.776ns route)
-                                       (29.5% logic, 70.5% route)
+    Total                      5.358ns (1.270ns logic, 4.088ns route)
+                                       (23.7% logic, 76.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 282 / 280
+  Total number of paths / destination ports: 531 / 530
 -------------------------------------------------------------------------
-Offset:              4.656ns (Levels of Logic = 3)
+Offset:              4.914ns (Levels of Logic = 2)
   Source:            RST (PAD)
-  Destination:       propagation_delay_counter_2 (FF)
+  Destination:       propagation_delay_counter_1 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST to propagation_delay_counter_2
+  Data Path: RST to propagation_delay_counter_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           144   1.222   2.240  RST_IBUF (RST_IBUF)
-     LUT4:I0->O            4   0.203   0.684  Mcount_propagation_delay_counter_val1 (Mcount_propagation_delay_counter_val)
-     LUT4:I3->O            1   0.205   0.000  propagation_delay_counter_3_rstpot (propagation_delay_counter_3_rstpot)
-     FD:D                      0.102          propagation_delay_counter_3
+     IBUF:I->O           267   1.222   2.315  RST_IBUF (RST_IBUF)
+     LUT4:I0->O            6   0.203   0.744  Mcount_propagation_delay_counter_val1 (Mcount_propagation_delay_counter_val)
+     FDRE:R                    0.430          propagation_delay_counter_0
     ----------------------------------------
-    Total                      4.656ns (1.732ns logic, 2.924ns route)
-                                       (37.2% logic, 62.8% route)
+    Total                      4.914ns (1.855ns logic, 3.059ns route)
+                                       (37.7% logic, 62.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 150 / 133
 -------------------------------------------------------------------------
-Offset:              6.165ns (Levels of Logic = 2)
+Offset:              5.236ns (Levels of Logic = 2)
   Source:            PS_FSM_FFd2 (FF)
   Destination:       SHCP (PAD)
   Source Clock:      CLK rising
@@ -399,12 +532,12 @@ Offset:              6.165ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q            147   0.447   2.365  PS_FSM_FFd2 (PS_FSM_FFd2)
-     LUT6:I0->O            1   0.203   0.579  STCP1 (STCP_OBUF)
-     OBUF:I->O                 2.571          STCP_OBUF (STCP)
+     FDR:C->Q             19   0.447   1.436  PS_FSM_FFd2 (PS_FSM_FFd2)
+     LUT6:I0->O            1   0.203   0.579  Mmux_SHCP11 (SHCP_OBUF)
+     OBUF:I->O                 2.571          SHCP_OBUF (SHCP)
     ----------------------------------------
-    Total                      6.165ns (3.221ns logic, 2.944ns route)
-                                       (52.2% logic, 47.8% route)
+    Total                      5.236ns (3.221ns logic, 2.015ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 
@@ -416,14 +549,14 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    3.938|         |         |         |
+CLK            |    5.358|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.05 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.54 secs
  
 --> 
 

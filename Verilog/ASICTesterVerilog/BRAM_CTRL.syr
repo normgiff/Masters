@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: BRAM_CTRL.prj
 
@@ -80,8 +80,8 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -109,7 +109,7 @@ Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\V
 Parsing module <BRAM>.
 Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL.v" into library work
 Parsing module <BRAM_CTRL>.
-Parsing verilog file "BRAM_CTRL_PARAMS.v" included at line 38.
+Parsing verilog file "BRAM_CTRL_PARAMS.v" included at line 42.
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -125,28 +125,24 @@ Elaborating module <BRAM>.
 
 Synthesizing Unit <BRAM_CTRL>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL.v".
-        TEMPLATE_0_ADDR_A0 = 13'b0000000000000
-        TEMPLATE_0_ADDR_B0 = 13'b0000000100000
-        TEMPLATE_0_ADDR_A1 = 13'b0000001000000
-        TEMPLATE_0_ADDR_B1 = 13'b0000001100000
-        TEMPLATE_INCR_FACTOR = 13'b0000010000000
-        FF_0_ADDR_A0 = 13'b0001000000000
-        FF_0_ADDR_B0 = 13'b0001000100000
-        FF_0_ADDR_A1 = 13'b0001001000000
-        FF_0_ADDR_B1 = 13'b0001001100000
-        FF_0_ADDR_A2 = 13'b0001010000000
-        FF_0_ADDR_B2 = 13'b0001010100000
-        FF_0_ADDR_A3 = 13'b0001011000000
-        FF_0_ADDR_B3 = 13'b0001011100000
-        FF_INCR_FACTOR = 13'b0000100000000
-        TC_0_ADDR_A0 = 13'b0011000000000
-        TC_0_ADDR_B0 = 13'b0011000100000
-        TC_0_ADDR_A1 = 13'b0011001000000
-        TC_0_ADDR_B1 = 13'b0011001100000
-        TC_INCR_FACTOR = 13'b0000010000000
-        INPUT_START_ADDR_A = 7'b0100000
-        INPUT_START_ADDR_B = 7'b0100001
-        INPUT_INCR_FACTOR = 7'b0000001
+        TEMPLATE_0_ADDR_A0 = 14'b00000000000000
+        TEMPLATE_0_ADDR_B0 = 14'b00000000100000
+        TEMPLATE_0_ADDR_A1 = 14'b00000001000000
+        TEMPLATE_0_ADDR_B1 = 14'b00000001100000
+        TEMPLATE_INCR_FACTOR = 14'b00000010000000
+        FF_0_ADDR_A0 = 14'b00001000000000
+        FF_0_ADDR_B0 = 14'b00001000100000
+        FF_0_ADDR_A1 = 14'b00001001000000
+        FF_0_ADDR_B1 = 14'b00001001100000
+        FF_INCR_FACTOR = 14'b00000010000000
+        TC_0_ADDR_A0 = 14'b00010000000000
+        TC_0_ADDR_B0 = 14'b00010000100000
+        TC_0_ADDR_A1 = 14'b00010001000000
+        TC_0_ADDR_B1 = 14'b00010001100000
+        TC_INCR_FACTOR = 14'b00000010000000
+        INPUT_START_ADDR_A = 8'b00011001
+        INPUT_START_ADDR_B = 8'b00011010
+        INPUT_INCR_FACTOR = 8'b00000001
         IDLE = 0
         INPUT_WRITE_1 = 1
         INPUT_WRITE_2 = 2
@@ -154,296 +150,168 @@ Synthesizing Unit <BRAM_CTRL>.
         TEMPLATE_WRITE_2 = 4
         FF_WRITE_1 = 5
         FF_WRITE_2 = 6
-        FF_WRITE_3 = 7
-        FF_WRITE_4 = 8
-        TC_WRITE_1 = 9
-        TC_WRITE_2 = 10
-        INPUT_READ_0 = 11
-        INPUT_READ_1 = 12
-        INPUT_READ_2 = 13
-        TEMPLATE_READ_0 = 14
-        TEMPLATE_READ_1 = 15
-        TEMPLATE_READ_2 = 16
-        FF_READ_0 = 17
-        FF_READ_1 = 18
-        FF_READ_2 = 19
-        FF_READ_3 = 20
-        FF_READ_4 = 21
-        TC_READ_0 = 22
-        TC_READ_1 = 23
-        TC_READ_2 = 24
-        CHECK_TEMPLATE = 25
+        TC_WRITE_1 = 7
+        TC_WRITE_2 = 8
+        INPUT_READ_0 = 9
+        INPUT_READ_1 = 10
+        INPUT_READ_2 = 11
+        TEMPLATE_READ_0 = 12
+        TEMPLATE_READ_1 = 13
+        TEMPLATE_READ_2 = 14
+        FF_READ_0 = 15
+        FF_READ_1 = 16
+        FF_READ_2 = 17
+        FF_READ_3 = 18
+        FF_READ_4 = 19
+        TC_READ_0 = 20
+        TC_READ_1 = 21
+        TC_READ_2 = 22
+        CHECK_TEMPLATE = 23
         RESET_TEMPLATE = 4
-    Found 7-bit register for signal <input_write_posA>.
-    Found 7-bit register for signal <input_read_posA>.
-    Found 7-bit register for signal <input_write_posB>.
-    Found 7-bit register for signal <input_read_posB>.
-    Found 1-bit register for signal <READ_DATA_0<127>>.
-    Found 1-bit register for signal <READ_DATA_0<126>>.
-    Found 1-bit register for signal <READ_DATA_0<125>>.
-    Found 1-bit register for signal <READ_DATA_0<124>>.
-    Found 1-bit register for signal <READ_DATA_0<123>>.
-    Found 1-bit register for signal <READ_DATA_0<122>>.
-    Found 1-bit register for signal <READ_DATA_0<121>>.
-    Found 1-bit register for signal <READ_DATA_0<120>>.
-    Found 1-bit register for signal <READ_DATA_0<119>>.
-    Found 1-bit register for signal <READ_DATA_0<118>>.
-    Found 1-bit register for signal <READ_DATA_0<117>>.
-    Found 1-bit register for signal <READ_DATA_0<116>>.
-    Found 1-bit register for signal <READ_DATA_0<115>>.
-    Found 1-bit register for signal <READ_DATA_0<114>>.
-    Found 1-bit register for signal <READ_DATA_0<113>>.
-    Found 1-bit register for signal <READ_DATA_0<112>>.
-    Found 1-bit register for signal <READ_DATA_0<111>>.
-    Found 1-bit register for signal <READ_DATA_0<110>>.
-    Found 1-bit register for signal <READ_DATA_0<109>>.
-    Found 1-bit register for signal <READ_DATA_0<108>>.
-    Found 1-bit register for signal <READ_DATA_0<107>>.
-    Found 1-bit register for signal <READ_DATA_0<106>>.
-    Found 1-bit register for signal <READ_DATA_0<105>>.
-    Found 1-bit register for signal <READ_DATA_0<104>>.
-    Found 1-bit register for signal <READ_DATA_0<103>>.
-    Found 1-bit register for signal <READ_DATA_0<102>>.
-    Found 1-bit register for signal <READ_DATA_0<101>>.
-    Found 1-bit register for signal <READ_DATA_0<100>>.
-    Found 1-bit register for signal <READ_DATA_0<99>>.
-    Found 1-bit register for signal <READ_DATA_0<98>>.
-    Found 1-bit register for signal <READ_DATA_0<97>>.
-    Found 1-bit register for signal <READ_DATA_0<96>>.
-    Found 1-bit register for signal <READ_DATA_0<95>>.
-    Found 1-bit register for signal <READ_DATA_0<94>>.
-    Found 1-bit register for signal <READ_DATA_0<93>>.
-    Found 1-bit register for signal <READ_DATA_0<92>>.
-    Found 1-bit register for signal <READ_DATA_0<91>>.
-    Found 1-bit register for signal <READ_DATA_0<90>>.
-    Found 1-bit register for signal <READ_DATA_0<89>>.
-    Found 1-bit register for signal <READ_DATA_0<88>>.
-    Found 1-bit register for signal <READ_DATA_0<87>>.
-    Found 1-bit register for signal <READ_DATA_0<86>>.
-    Found 1-bit register for signal <READ_DATA_0<85>>.
-    Found 1-bit register for signal <READ_DATA_0<84>>.
-    Found 1-bit register for signal <READ_DATA_0<83>>.
-    Found 1-bit register for signal <READ_DATA_0<82>>.
-    Found 1-bit register for signal <READ_DATA_0<81>>.
-    Found 1-bit register for signal <READ_DATA_0<80>>.
-    Found 1-bit register for signal <READ_DATA_0<79>>.
-    Found 1-bit register for signal <READ_DATA_0<78>>.
-    Found 1-bit register for signal <READ_DATA_0<77>>.
-    Found 1-bit register for signal <READ_DATA_0<76>>.
-    Found 1-bit register for signal <READ_DATA_0<75>>.
-    Found 1-bit register for signal <READ_DATA_0<74>>.
-    Found 1-bit register for signal <READ_DATA_0<73>>.
-    Found 1-bit register for signal <READ_DATA_0<72>>.
-    Found 1-bit register for signal <READ_DATA_0<71>>.
-    Found 1-bit register for signal <READ_DATA_0<70>>.
-    Found 1-bit register for signal <READ_DATA_0<69>>.
-    Found 1-bit register for signal <READ_DATA_0<68>>.
-    Found 1-bit register for signal <READ_DATA_0<67>>.
-    Found 1-bit register for signal <READ_DATA_0<66>>.
-    Found 1-bit register for signal <READ_DATA_0<65>>.
-    Found 1-bit register for signal <READ_DATA_0<64>>.
-    Found 1-bit register for signal <READ_DATA_0<63>>.
-    Found 1-bit register for signal <READ_DATA_0<62>>.
-    Found 1-bit register for signal <READ_DATA_0<61>>.
-    Found 1-bit register for signal <READ_DATA_0<60>>.
-    Found 1-bit register for signal <READ_DATA_0<59>>.
-    Found 1-bit register for signal <READ_DATA_0<58>>.
-    Found 1-bit register for signal <READ_DATA_0<57>>.
-    Found 1-bit register for signal <READ_DATA_0<56>>.
-    Found 1-bit register for signal <READ_DATA_0<55>>.
-    Found 1-bit register for signal <READ_DATA_0<54>>.
-    Found 1-bit register for signal <READ_DATA_0<53>>.
-    Found 1-bit register for signal <READ_DATA_0<52>>.
-    Found 1-bit register for signal <READ_DATA_0<51>>.
-    Found 1-bit register for signal <READ_DATA_0<50>>.
-    Found 1-bit register for signal <READ_DATA_0<49>>.
-    Found 1-bit register for signal <READ_DATA_0<48>>.
-    Found 1-bit register for signal <READ_DATA_0<47>>.
-    Found 1-bit register for signal <READ_DATA_0<46>>.
-    Found 1-bit register for signal <READ_DATA_0<45>>.
-    Found 1-bit register for signal <READ_DATA_0<44>>.
-    Found 1-bit register for signal <READ_DATA_0<43>>.
-    Found 1-bit register for signal <READ_DATA_0<42>>.
-    Found 1-bit register for signal <READ_DATA_0<41>>.
-    Found 1-bit register for signal <READ_DATA_0<40>>.
-    Found 1-bit register for signal <READ_DATA_0<39>>.
-    Found 1-bit register for signal <READ_DATA_0<38>>.
-    Found 1-bit register for signal <READ_DATA_0<37>>.
-    Found 1-bit register for signal <READ_DATA_0<36>>.
-    Found 1-bit register for signal <READ_DATA_0<35>>.
-    Found 1-bit register for signal <READ_DATA_0<34>>.
-    Found 1-bit register for signal <READ_DATA_0<33>>.
-    Found 1-bit register for signal <READ_DATA_0<32>>.
-    Found 1-bit register for signal <READ_DATA_0<31>>.
-    Found 1-bit register for signal <READ_DATA_0<30>>.
-    Found 1-bit register for signal <READ_DATA_0<29>>.
-    Found 1-bit register for signal <READ_DATA_0<28>>.
-    Found 1-bit register for signal <READ_DATA_0<27>>.
-    Found 1-bit register for signal <READ_DATA_0<26>>.
-    Found 1-bit register for signal <READ_DATA_0<25>>.
-    Found 1-bit register for signal <READ_DATA_0<24>>.
-    Found 1-bit register for signal <READ_DATA_0<23>>.
-    Found 1-bit register for signal <READ_DATA_0<22>>.
-    Found 1-bit register for signal <READ_DATA_0<21>>.
-    Found 1-bit register for signal <READ_DATA_0<20>>.
-    Found 1-bit register for signal <READ_DATA_0<19>>.
-    Found 1-bit register for signal <READ_DATA_0<18>>.
-    Found 1-bit register for signal <READ_DATA_0<17>>.
-    Found 1-bit register for signal <READ_DATA_0<16>>.
-    Found 1-bit register for signal <READ_DATA_0<15>>.
-    Found 1-bit register for signal <READ_DATA_0<14>>.
-    Found 1-bit register for signal <READ_DATA_0<13>>.
-    Found 1-bit register for signal <READ_DATA_0<12>>.
-    Found 1-bit register for signal <READ_DATA_0<11>>.
-    Found 1-bit register for signal <READ_DATA_0<10>>.
-    Found 1-bit register for signal <READ_DATA_0<9>>.
-    Found 1-bit register for signal <READ_DATA_0<8>>.
-    Found 1-bit register for signal <READ_DATA_0<7>>.
-    Found 1-bit register for signal <READ_DATA_0<6>>.
-    Found 1-bit register for signal <READ_DATA_0<5>>.
-    Found 1-bit register for signal <READ_DATA_0<4>>.
-    Found 1-bit register for signal <READ_DATA_0<3>>.
-    Found 1-bit register for signal <READ_DATA_0<2>>.
-    Found 1-bit register for signal <READ_DATA_0<1>>.
-    Found 1-bit register for signal <READ_DATA_0<0>>.
-    Found 1-bit register for signal <READ_DATA_1<127>>.
-    Found 1-bit register for signal <READ_DATA_1<126>>.
-    Found 1-bit register for signal <READ_DATA_1<125>>.
-    Found 1-bit register for signal <READ_DATA_1<124>>.
-    Found 1-bit register for signal <READ_DATA_1<123>>.
-    Found 1-bit register for signal <READ_DATA_1<122>>.
-    Found 1-bit register for signal <READ_DATA_1<121>>.
-    Found 1-bit register for signal <READ_DATA_1<120>>.
-    Found 1-bit register for signal <READ_DATA_1<119>>.
-    Found 1-bit register for signal <READ_DATA_1<118>>.
-    Found 1-bit register for signal <READ_DATA_1<117>>.
-    Found 1-bit register for signal <READ_DATA_1<116>>.
-    Found 1-bit register for signal <READ_DATA_1<115>>.
-    Found 1-bit register for signal <READ_DATA_1<114>>.
-    Found 1-bit register for signal <READ_DATA_1<113>>.
-    Found 1-bit register for signal <READ_DATA_1<112>>.
-    Found 1-bit register for signal <READ_DATA_1<111>>.
-    Found 1-bit register for signal <READ_DATA_1<110>>.
-    Found 1-bit register for signal <READ_DATA_1<109>>.
-    Found 1-bit register for signal <READ_DATA_1<108>>.
-    Found 1-bit register for signal <READ_DATA_1<107>>.
-    Found 1-bit register for signal <READ_DATA_1<106>>.
-    Found 1-bit register for signal <READ_DATA_1<105>>.
-    Found 1-bit register for signal <READ_DATA_1<104>>.
-    Found 1-bit register for signal <READ_DATA_1<103>>.
-    Found 1-bit register for signal <READ_DATA_1<102>>.
-    Found 1-bit register for signal <READ_DATA_1<101>>.
-    Found 1-bit register for signal <READ_DATA_1<100>>.
-    Found 1-bit register for signal <READ_DATA_1<99>>.
-    Found 1-bit register for signal <READ_DATA_1<98>>.
-    Found 1-bit register for signal <READ_DATA_1<97>>.
-    Found 1-bit register for signal <READ_DATA_1<96>>.
-    Found 1-bit register for signal <READ_DATA_1<95>>.
-    Found 1-bit register for signal <READ_DATA_1<94>>.
-    Found 1-bit register for signal <READ_DATA_1<93>>.
-    Found 1-bit register for signal <READ_DATA_1<92>>.
-    Found 1-bit register for signal <READ_DATA_1<91>>.
-    Found 1-bit register for signal <READ_DATA_1<90>>.
-    Found 1-bit register for signal <READ_DATA_1<89>>.
-    Found 1-bit register for signal <READ_DATA_1<88>>.
-    Found 1-bit register for signal <READ_DATA_1<87>>.
-    Found 1-bit register for signal <READ_DATA_1<86>>.
-    Found 1-bit register for signal <READ_DATA_1<85>>.
-    Found 1-bit register for signal <READ_DATA_1<84>>.
-    Found 1-bit register for signal <READ_DATA_1<83>>.
-    Found 1-bit register for signal <READ_DATA_1<82>>.
-    Found 1-bit register for signal <READ_DATA_1<81>>.
-    Found 1-bit register for signal <READ_DATA_1<80>>.
-    Found 1-bit register for signal <READ_DATA_1<79>>.
-    Found 1-bit register for signal <READ_DATA_1<78>>.
-    Found 1-bit register for signal <READ_DATA_1<77>>.
-    Found 1-bit register for signal <READ_DATA_1<76>>.
-    Found 1-bit register for signal <READ_DATA_1<75>>.
-    Found 1-bit register for signal <READ_DATA_1<74>>.
-    Found 1-bit register for signal <READ_DATA_1<73>>.
-    Found 1-bit register for signal <READ_DATA_1<72>>.
-    Found 1-bit register for signal <READ_DATA_1<71>>.
-    Found 1-bit register for signal <READ_DATA_1<70>>.
-    Found 1-bit register for signal <READ_DATA_1<69>>.
-    Found 1-bit register for signal <READ_DATA_1<68>>.
-    Found 1-bit register for signal <READ_DATA_1<67>>.
-    Found 1-bit register for signal <READ_DATA_1<66>>.
-    Found 1-bit register for signal <READ_DATA_1<65>>.
-    Found 1-bit register for signal <READ_DATA_1<64>>.
-    Found 1-bit register for signal <READ_DATA_1<63>>.
-    Found 1-bit register for signal <READ_DATA_1<62>>.
-    Found 1-bit register for signal <READ_DATA_1<61>>.
-    Found 1-bit register for signal <READ_DATA_1<60>>.
-    Found 1-bit register for signal <READ_DATA_1<59>>.
-    Found 1-bit register for signal <READ_DATA_1<58>>.
-    Found 1-bit register for signal <READ_DATA_1<57>>.
-    Found 1-bit register for signal <READ_DATA_1<56>>.
-    Found 1-bit register for signal <READ_DATA_1<55>>.
-    Found 1-bit register for signal <READ_DATA_1<54>>.
-    Found 1-bit register for signal <READ_DATA_1<53>>.
-    Found 1-bit register for signal <READ_DATA_1<52>>.
-    Found 1-bit register for signal <READ_DATA_1<51>>.
-    Found 1-bit register for signal <READ_DATA_1<50>>.
-    Found 1-bit register for signal <READ_DATA_1<49>>.
-    Found 1-bit register for signal <READ_DATA_1<48>>.
-    Found 1-bit register for signal <READ_DATA_1<47>>.
-    Found 1-bit register for signal <READ_DATA_1<46>>.
-    Found 1-bit register for signal <READ_DATA_1<45>>.
-    Found 1-bit register for signal <READ_DATA_1<44>>.
-    Found 1-bit register for signal <READ_DATA_1<43>>.
-    Found 1-bit register for signal <READ_DATA_1<42>>.
-    Found 1-bit register for signal <READ_DATA_1<41>>.
-    Found 1-bit register for signal <READ_DATA_1<40>>.
-    Found 1-bit register for signal <READ_DATA_1<39>>.
-    Found 1-bit register for signal <READ_DATA_1<38>>.
-    Found 1-bit register for signal <READ_DATA_1<37>>.
-    Found 1-bit register for signal <READ_DATA_1<36>>.
-    Found 1-bit register for signal <READ_DATA_1<35>>.
-    Found 1-bit register for signal <READ_DATA_1<34>>.
-    Found 1-bit register for signal <READ_DATA_1<33>>.
-    Found 1-bit register for signal <READ_DATA_1<32>>.
-    Found 1-bit register for signal <READ_DATA_1<31>>.
-    Found 1-bit register for signal <READ_DATA_1<30>>.
-    Found 1-bit register for signal <READ_DATA_1<29>>.
-    Found 1-bit register for signal <READ_DATA_1<28>>.
-    Found 1-bit register for signal <READ_DATA_1<27>>.
-    Found 1-bit register for signal <READ_DATA_1<26>>.
-    Found 1-bit register for signal <READ_DATA_1<25>>.
-    Found 1-bit register for signal <READ_DATA_1<24>>.
-    Found 1-bit register for signal <READ_DATA_1<23>>.
-    Found 1-bit register for signal <READ_DATA_1<22>>.
-    Found 1-bit register for signal <READ_DATA_1<21>>.
-    Found 1-bit register for signal <READ_DATA_1<20>>.
-    Found 1-bit register for signal <READ_DATA_1<19>>.
-    Found 1-bit register for signal <READ_DATA_1<18>>.
-    Found 1-bit register for signal <READ_DATA_1<17>>.
-    Found 1-bit register for signal <READ_DATA_1<16>>.
-    Found 1-bit register for signal <READ_DATA_1<15>>.
-    Found 1-bit register for signal <READ_DATA_1<14>>.
-    Found 1-bit register for signal <READ_DATA_1<13>>.
-    Found 1-bit register for signal <READ_DATA_1<12>>.
-    Found 1-bit register for signal <READ_DATA_1<11>>.
-    Found 1-bit register for signal <READ_DATA_1<10>>.
-    Found 1-bit register for signal <READ_DATA_1<9>>.
-    Found 1-bit register for signal <READ_DATA_1<8>>.
-    Found 1-bit register for signal <READ_DATA_1<7>>.
-    Found 1-bit register for signal <READ_DATA_1<6>>.
-    Found 1-bit register for signal <READ_DATA_1<5>>.
-    Found 1-bit register for signal <READ_DATA_1<4>>.
-    Found 1-bit register for signal <READ_DATA_1<3>>.
-    Found 1-bit register for signal <READ_DATA_1<2>>.
-    Found 1-bit register for signal <READ_DATA_1<1>>.
-    Found 1-bit register for signal <READ_DATA_1<0>>.
+    Found 8-bit register for signal <input_vectors_written>.
+    Found 8-bit register for signal <input_vectors_read>.
+    Found 8-bit register for signal <input_write_posA>.
+    Found 8-bit register for signal <input_read_posA>.
+    Found 8-bit register for signal <input_write_posB>.
+    Found 8-bit register for signal <input_read_posB>.
+    Found 1-bit register for signal <READ_DATA<127>>.
+    Found 1-bit register for signal <READ_DATA<126>>.
+    Found 1-bit register for signal <READ_DATA<125>>.
+    Found 1-bit register for signal <READ_DATA<124>>.
+    Found 1-bit register for signal <READ_DATA<123>>.
+    Found 1-bit register for signal <READ_DATA<122>>.
+    Found 1-bit register for signal <READ_DATA<121>>.
+    Found 1-bit register for signal <READ_DATA<120>>.
+    Found 1-bit register for signal <READ_DATA<119>>.
+    Found 1-bit register for signal <READ_DATA<118>>.
+    Found 1-bit register for signal <READ_DATA<117>>.
+    Found 1-bit register for signal <READ_DATA<116>>.
+    Found 1-bit register for signal <READ_DATA<115>>.
+    Found 1-bit register for signal <READ_DATA<114>>.
+    Found 1-bit register for signal <READ_DATA<113>>.
+    Found 1-bit register for signal <READ_DATA<112>>.
+    Found 1-bit register for signal <READ_DATA<111>>.
+    Found 1-bit register for signal <READ_DATA<110>>.
+    Found 1-bit register for signal <READ_DATA<109>>.
+    Found 1-bit register for signal <READ_DATA<108>>.
+    Found 1-bit register for signal <READ_DATA<107>>.
+    Found 1-bit register for signal <READ_DATA<106>>.
+    Found 1-bit register for signal <READ_DATA<105>>.
+    Found 1-bit register for signal <READ_DATA<104>>.
+    Found 1-bit register for signal <READ_DATA<103>>.
+    Found 1-bit register for signal <READ_DATA<102>>.
+    Found 1-bit register for signal <READ_DATA<101>>.
+    Found 1-bit register for signal <READ_DATA<100>>.
+    Found 1-bit register for signal <READ_DATA<99>>.
+    Found 1-bit register for signal <READ_DATA<98>>.
+    Found 1-bit register for signal <READ_DATA<97>>.
+    Found 1-bit register for signal <READ_DATA<96>>.
+    Found 1-bit register for signal <READ_DATA<95>>.
+    Found 1-bit register for signal <READ_DATA<94>>.
+    Found 1-bit register for signal <READ_DATA<93>>.
+    Found 1-bit register for signal <READ_DATA<92>>.
+    Found 1-bit register for signal <READ_DATA<91>>.
+    Found 1-bit register for signal <READ_DATA<90>>.
+    Found 1-bit register for signal <READ_DATA<89>>.
+    Found 1-bit register for signal <READ_DATA<88>>.
+    Found 1-bit register for signal <READ_DATA<87>>.
+    Found 1-bit register for signal <READ_DATA<86>>.
+    Found 1-bit register for signal <READ_DATA<85>>.
+    Found 1-bit register for signal <READ_DATA<84>>.
+    Found 1-bit register for signal <READ_DATA<83>>.
+    Found 1-bit register for signal <READ_DATA<82>>.
+    Found 1-bit register for signal <READ_DATA<81>>.
+    Found 1-bit register for signal <READ_DATA<80>>.
+    Found 1-bit register for signal <READ_DATA<79>>.
+    Found 1-bit register for signal <READ_DATA<78>>.
+    Found 1-bit register for signal <READ_DATA<77>>.
+    Found 1-bit register for signal <READ_DATA<76>>.
+    Found 1-bit register for signal <READ_DATA<75>>.
+    Found 1-bit register for signal <READ_DATA<74>>.
+    Found 1-bit register for signal <READ_DATA<73>>.
+    Found 1-bit register for signal <READ_DATA<72>>.
+    Found 1-bit register for signal <READ_DATA<71>>.
+    Found 1-bit register for signal <READ_DATA<70>>.
+    Found 1-bit register for signal <READ_DATA<69>>.
+    Found 1-bit register for signal <READ_DATA<68>>.
+    Found 1-bit register for signal <READ_DATA<67>>.
+    Found 1-bit register for signal <READ_DATA<66>>.
+    Found 1-bit register for signal <READ_DATA<65>>.
+    Found 1-bit register for signal <READ_DATA<64>>.
+    Found 1-bit register for signal <READ_DATA<63>>.
+    Found 1-bit register for signal <READ_DATA<62>>.
+    Found 1-bit register for signal <READ_DATA<61>>.
+    Found 1-bit register for signal <READ_DATA<60>>.
+    Found 1-bit register for signal <READ_DATA<59>>.
+    Found 1-bit register for signal <READ_DATA<58>>.
+    Found 1-bit register for signal <READ_DATA<57>>.
+    Found 1-bit register for signal <READ_DATA<56>>.
+    Found 1-bit register for signal <READ_DATA<55>>.
+    Found 1-bit register for signal <READ_DATA<54>>.
+    Found 1-bit register for signal <READ_DATA<53>>.
+    Found 1-bit register for signal <READ_DATA<52>>.
+    Found 1-bit register for signal <READ_DATA<51>>.
+    Found 1-bit register for signal <READ_DATA<50>>.
+    Found 1-bit register for signal <READ_DATA<49>>.
+    Found 1-bit register for signal <READ_DATA<48>>.
+    Found 1-bit register for signal <READ_DATA<47>>.
+    Found 1-bit register for signal <READ_DATA<46>>.
+    Found 1-bit register for signal <READ_DATA<45>>.
+    Found 1-bit register for signal <READ_DATA<44>>.
+    Found 1-bit register for signal <READ_DATA<43>>.
+    Found 1-bit register for signal <READ_DATA<42>>.
+    Found 1-bit register for signal <READ_DATA<41>>.
+    Found 1-bit register for signal <READ_DATA<40>>.
+    Found 1-bit register for signal <READ_DATA<39>>.
+    Found 1-bit register for signal <READ_DATA<38>>.
+    Found 1-bit register for signal <READ_DATA<37>>.
+    Found 1-bit register for signal <READ_DATA<36>>.
+    Found 1-bit register for signal <READ_DATA<35>>.
+    Found 1-bit register for signal <READ_DATA<34>>.
+    Found 1-bit register for signal <READ_DATA<33>>.
+    Found 1-bit register for signal <READ_DATA<32>>.
+    Found 1-bit register for signal <READ_DATA<31>>.
+    Found 1-bit register for signal <READ_DATA<30>>.
+    Found 1-bit register for signal <READ_DATA<29>>.
+    Found 1-bit register for signal <READ_DATA<28>>.
+    Found 1-bit register for signal <READ_DATA<27>>.
+    Found 1-bit register for signal <READ_DATA<26>>.
+    Found 1-bit register for signal <READ_DATA<25>>.
+    Found 1-bit register for signal <READ_DATA<24>>.
+    Found 1-bit register for signal <READ_DATA<23>>.
+    Found 1-bit register for signal <READ_DATA<22>>.
+    Found 1-bit register for signal <READ_DATA<21>>.
+    Found 1-bit register for signal <READ_DATA<20>>.
+    Found 1-bit register for signal <READ_DATA<19>>.
+    Found 1-bit register for signal <READ_DATA<18>>.
+    Found 1-bit register for signal <READ_DATA<17>>.
+    Found 1-bit register for signal <READ_DATA<16>>.
+    Found 1-bit register for signal <READ_DATA<15>>.
+    Found 1-bit register for signal <READ_DATA<14>>.
+    Found 1-bit register for signal <READ_DATA<13>>.
+    Found 1-bit register for signal <READ_DATA<12>>.
+    Found 1-bit register for signal <READ_DATA<11>>.
+    Found 1-bit register for signal <READ_DATA<10>>.
+    Found 1-bit register for signal <READ_DATA<9>>.
+    Found 1-bit register for signal <READ_DATA<8>>.
+    Found 1-bit register for signal <READ_DATA<7>>.
+    Found 1-bit register for signal <READ_DATA<6>>.
+    Found 1-bit register for signal <READ_DATA<5>>.
+    Found 1-bit register for signal <READ_DATA<4>>.
+    Found 1-bit register for signal <READ_DATA<3>>.
+    Found 1-bit register for signal <READ_DATA<2>>.
+    Found 1-bit register for signal <READ_DATA<1>>.
+    Found 1-bit register for signal <READ_DATA<0>>.
     Found 2-bit register for signal <curr_temp>.
     Found 3-bit register for signal <prev_temp>.
     Found 1-bit register for signal <TEMPLATE_CHANGE>.
     Found 5-bit register for signal <PS>.
     Found finite state machine <FSM_0> for signal <PS>.
     -----------------------------------------------------------------------
-    | States             | 26                                             |
-    | Transitions        | 34                                             |
+    | States             | 22                                             |
+    | Transitions        | 30                                             |
     | Inputs             | 8                                              |
-    | Outputs            | 26                                             |
+    | Outputs            | 22                                             |
     | Clock              | CLK (rising_edge)                              |
     | Reset              | RST (positive)                                 |
     | Reset type         | synchronous                                    |
@@ -451,26 +319,29 @@ Synthesizing Unit <BRAM_CTRL>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <input_write_posA[6]_GND_1_o_add_24_OUT> created at line 248.
-    Found 7-bit adder for signal <input_write_posB[6]_GND_1_o_add_25_OUT> created at line 249.
-    Found 7-bit adder for signal <input_read_posA[6]_GND_1_o_add_28_OUT> created at line 252.
-    Found 7-bit adder for signal <input_read_posB[6]_GND_1_o_add_29_OUT> created at line 253.
-    Found 13-bit 25-to-1 multiplexer for signal <addr_a> created at line 263.
-    Found 13-bit 25-to-1 multiplexer for signal <addr_b> created at line 263.
-    Found 3-bit comparator not equal for signal <n0361> created at line 734
+    Found 8-bit adder for signal <input_vectors_written[7]_GND_1_o_add_22_OUT> created at line 238.
+    Found 8-bit adder for signal <input_vectors_read[7]_GND_1_o_add_24_OUT> created at line 243.
+    Found 8-bit adder for signal <input_write_posA[7]_GND_1_o_add_37_OUT> created at line 262.
+    Found 8-bit adder for signal <input_write_posB[7]_GND_1_o_add_38_OUT> created at line 263.
+    Found 8-bit adder for signal <input_read_posA[7]_GND_1_o_add_41_OUT> created at line 266.
+    Found 8-bit adder for signal <input_read_posB[7]_GND_1_o_add_42_OUT> created at line 267.
+    Found 14-bit 23-to-1 multiplexer for signal <addr_a> created at line 277.
+    Found 14-bit 23-to-1 multiplexer for signal <addr_b> created at line 277.
+    Found 8-bit comparator equal for signal <n0001> created at line 65
+    Found 3-bit comparator not equal for signal <n0230> created at line 644
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred 290 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   6 Multiplexer(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 182 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <BRAM_CTRL> synthesized.
 
 Synthesizing Unit <BRAM>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM.v".
         RAM_WIDTH = 32
-        RAM_ADDR_BITS = 13
-    Found 8192x32-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
+        RAM_ADDR_BITS = 14
+    Found 16384x32-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
     Found 32-bit register for signal <DOUT_B>.
     Found 32-bit register for signal <DOUT_A>.
     Summary:
@@ -484,22 +355,23 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 8192x32-bit dual-port RAM                             : 1
-# Adders/Subtractors                                   : 4
- 7-bit adder                                           : 4
-# Registers                                            : 11
+ 16384x32-bit dual-port RAM                            : 1
+# Adders/Subtractors                                   : 6
+ 8-bit adder                                           : 6
+# Registers                                            : 12
  1-bit register                                        : 1
- 128-bit register                                      : 2
+ 128-bit register                                      : 1
  2-bit register                                        : 1
  3-bit register                                        : 1
  32-bit register                                       : 2
- 7-bit register                                        : 4
-# Comparators                                          : 1
+ 8-bit register                                        : 6
+# Comparators                                          : 2
  3-bit comparator not equal                            : 1
-# Multiplexers                                         : 8
- 13-bit 25-to-1 multiplexer                            : 2
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 6
+ 14-bit 23-to-1 multiplexer                            : 2
  32-bit 2-to-1 multiplexer                             : 2
- 64-bit 2-to-1 multiplexer                             : 4
+ 64-bit 2-to-1 multiplexer                             : 2
 # FSMs                                                 : 1
 
 =========================================================================
@@ -510,39 +382,35 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <BRAM>.
-INFO:Xst:3226 - The RAM <Mram_the_memory_core> will be implemented as a BLOCK RAM, absorbing the following register(s): <DOUT_A> <DOUT_B>
+INFO:Xst:3230 - The RAM description <Mram_the_memory_core> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
     -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
+    | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8192-word x 32-bit                  |          |
-    |     mode           | write-first                         |          |
+    |     aspect ratio   | 16384-word x 32-bit                 |          |
     |     clkA           | connected to signal <CLK>           | rise     |
     |     weA            | connected to signal <WE_A>          | high     |
     |     addrA          | connected to signal <ADDR_A>        |          |
     |     diA            | connected to signal <DIN_A>         |          |
-    |     doA            | connected to signal <DOUT_A>        |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
+    |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 8192-word x 32-bit                  |          |
-    |     mode           | write-first                         |          |
+    |     aspect ratio   | 16384-word x 32-bit                 |          |
     |     clkB           | connected to signal <CLK>           | rise     |
     |     weB            | connected to signal <WE_B>          | high     |
     |     addrB          | connected to signal <ADDR_B>        |          |
     |     diB            | connected to signal <DIN_B>         |          |
-    |     doB            | connected to signal <DOUT_B>        |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
+    |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <BRAM> synthesized (advanced).
 
 Synthesizing (advanced) Unit <BRAM_CTRL>.
+The following registers are absorbed into counter <input_vectors_written>: 1 register on signal <input_vectors_written>.
 The following registers are absorbed into counter <input_read_posA>: 1 register on signal <input_read_posA>.
 The following registers are absorbed into counter <input_write_posA>: 1 register on signal <input_write_posA>.
 The following registers are absorbed into counter <input_write_posB>: 1 register on signal <input_write_posB>.
 The following registers are absorbed into counter <input_read_posB>: 1 register on signal <input_read_posB>.
+The following registers are absorbed into counter <input_vectors_read>: 1 register on signal <input_vectors_read>.
 Unit <BRAM_CTRL> synthesized (advanced).
 
 =========================================================================
@@ -550,16 +418,18 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 8192x32-bit dual-port block RAM                       : 1
-# Counters                                             : 4
- 7-bit up counter                                      : 4
-# Registers                                            : 262
- Flip-Flops                                            : 262
-# Comparators                                          : 1
+ 16384x32-bit dual-port distributed RAM                : 1
+# Counters                                             : 6
+ 8-bit up counter                                      : 6
+# Registers                                            : 198
+ Flip-Flops                                            : 198
+# Comparators                                          : 2
  3-bit comparator not equal                            : 1
+ 8-bit comparator equal                                : 1
 # Multiplexers                                         : 6
- 13-bit 25-to-1 multiplexer                            : 2
- 64-bit 2-to-1 multiplexer                             : 4
+ 14-bit 23-to-1 multiplexer                            : 2
+ 32-bit 2-to-1 multiplexer                             : 2
+ 64-bit 2-to-1 multiplexer                             : 2
 # FSMs                                                 : 1
 
 =========================================================================
@@ -568,51 +438,172 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <PS[1:26]> with one-hot encoding.
--------------------------------------
+Optimizing FSM <FSM_0> on signal <PS[1:22]> with one-hot encoding.
+---------------------------------
  State | Encoding
--------------------------------------
- 00000 | 00000000000000000000000001
- 10110 | 00000000000000000000000010
- 10001 | 00000000000000000000000100
- 01110 | 00000000000000000000001000
- 01011 | 00000000000000000000010000
- 01001 | 00000000000000000000100000
- 00101 | 00000000000000000001000000
- 00011 | 00000000000000000010000000
- 00001 | 00000000000000000100000000
- 00010 | 00000000000000001000000000
- 00100 | 00000000000000010000000000
- 00110 | 00000000000000100000000000
- 00111 | 00000000000001000000000000
- 01000 | 00000000000010000000000000
- 01010 | 00000000000100000000000000
- 01100 | 00000000001000000000000000
- 01101 | 00000000010000000000000000
- 11001 | 00000000100000000000000000
- 01111 | 00000001000000000000000000
- 10000 | 00000010000000000000000000
- 10010 | 00000100000000000000000000
- 10011 | 00001000000000000000000000
- 10100 | 00010000000000000000000000
- 10101 | 00100000000000000000000000
- 10111 | 01000000000000000000000000
- 11000 | 10000000000000000000000000
--------------------------------------
+---------------------------------
+ 00000 | 0000000000000000000001
+ 10100 | 0000000000000000000010
+ 01111 | 0000000000000000000100
+ 01100 | 0000000000000000001000
+ 01001 | 0000000000000000010000
+ 00111 | 0000000000000000100000
+ 00101 | 0000000000000001000000
+ 00011 | 0000000000000010000000
+ 00001 | 0000000000000100000000
+ 00010 | 0000000000001000000000
+ 00100 | 0000000000010000000000
+ 00110 | 0000000000100000000000
+ 01000 | 0000000001000000000000
+ 01010 | 0000000010000000000000
+ 01011 | 0000000100000000000000
+ 10111 | 0000001000000000000000
+ 01101 | 0000010000000000000000
+ 01110 | 0000100000000000000000
+ 10000 | 0001000000000000000000
+ 10001 | 0010000000000000000000
+ 10101 | 0100000000000000000000
+ 10110 | 1000000000000000000000
+---------------------------------
 
 Optimizing unit <BRAM_CTRL> ...
+
+Optimizing unit <BRAM> ...
 INFO:Xst:3203 - The FF/Latch <input_write_posA_0> in Unit <BRAM_CTRL> is the opposite to the following FF/Latch, which will be removed : <input_write_posB_0> 
 INFO:Xst:3203 - The FF/Latch <input_read_posA_0> in Unit <BRAM_CTRL> is the opposite to the following FF/Latch, which will be removed : <input_read_posB_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block BRAM_CTRL, actual ratio is 6.
-FlipFlop PS_FSM_FFd11 has been replicated 1 time(s)
-FlipFlop PS_FSM_FFd13 has been replicated 4 time(s)
-FlipFlop PS_FSM_FFd14 has been replicated 1 time(s)
-FlipFlop PS_FSM_FFd3 has been replicated 1 time(s)
-FlipFlop PS_FSM_FFd4 has been replicated 2 time(s)
-FlipFlop PS_FSM_FFd5 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block BRAM_CTRL, actual ratio is 45.
+FlipFlop READ_DATA_127 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_126 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_125 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_124 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_123 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_122 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_121 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_120 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_119 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_118 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_117 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_116 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_115 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_114 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_113 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_112 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_111 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_110 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_109 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_108 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_107 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_106 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_105 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_104 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_103 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_102 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_101 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_100 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_99 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_98 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_97 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_96 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_95 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_94 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_93 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_92 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_91 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_90 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_89 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_88 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_87 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_86 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_85 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_84 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_83 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_82 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_81 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_80 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_79 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_78 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_77 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_76 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_75 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_74 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_73 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_72 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_71 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_70 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_69 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_68 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_67 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_66 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_65 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_64 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_63 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_62 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_61 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_60 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_59 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_58 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_57 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_56 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_55 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_54 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_53 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_52 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_51 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_50 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_49 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_48 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_47 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_46 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_45 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_44 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_43 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_42 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_41 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_40 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_39 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_38 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_37 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_36 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_35 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_34 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_33 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_32 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_31 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop READ_DATA_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop PS_FSM_FFd22 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -620,8 +611,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 324
- Flip-Flops                                            : 324
+# Registers                                            : 395
+ Flip-Flops                                            : 395
 
 =========================================================================
 
@@ -644,28 +635,32 @@ Top Level Output File Name         : BRAM_CTRL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 495
+# BELS                             : 3401
 #      GND                         : 1
-#      INV                         : 2
-#      LUT2                        : 10
-#      LUT3                        : 15
-#      LUT4                        : 337
-#      LUT5                        : 84
-#      LUT6                        : 45
+#      INV                         : 4
+#      LUT1                        : 44
+#      LUT2                        : 138
+#      LUT3                        : 6
+#      LUT4                        : 196
+#      LUT5                        : 75
+#      LUT6                        : 2848
+#      MUXCY                       : 42
 #      VCC                         : 1
-# FlipFlops/Latches                : 324
-#      FD                          : 5
-#      FDR                         : 287
-#      FDRE                        : 26
-#      FDS                         : 1
-#      FDSE                        : 5
-# RAMS                             : 16
-#      RAMB16BWER                  : 16
+#      XORCY                       : 46
+# FlipFlops/Latches                : 395
+#      FD                          : 64
+#      FDE                         : 1
+#      FDR                         : 277
+#      FDRE                        : 38
+#      FDS                         : 2
+#      FDSE                        : 13
+# RAMS                             : 4096
+#      RAM128X1D                   : 4096
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 525
-#      IBUF                        : 267
-#      OBUF                        : 258
+# IO Buffers                       : 270
+#      IBUF                        : 139
+#      OBUF                        : 131
 
 Device utilization summary:
 ---------------------------
@@ -674,24 +669,25 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             324  out of  18224     1%  
- Number of Slice LUTs:                  493  out of   9112     5%  
-    Number used as Logic:               493  out of   9112     5%  
+ Number of Slice Registers:             265  out of  18224     1%  
+ Number of Slice LUTs:                19695  out of   9112   216% (*) 
+    Number used as Logic:              3311  out of   9112    36%  
+    Number used as Memory:            16384  out of   2176   752% (*) 
+       Number used as RAM:            16384
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    520
-   Number with an unused Flip Flop:     196  out of    520    37%  
-   Number with an unused LUT:            27  out of    520     5%  
-   Number of fully used LUT-FF pairs:   297  out of    520    57%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:  19704
+   Number with an unused Flip Flop:   19439  out of  19704    98%  
+   Number with an unused LUT:             9  out of  19704     0%  
+   Number of fully used LUT-FF pairs:   256  out of  19704     1%  
+   Number of unique control sets:        13
 
 IO Utilization: 
- Number of IOs:                         526
- Number of bonded IOBs:                 526  out of    232   226% (*) 
+ Number of IOs:                         271
+ Number of bonded IOBs:                 271  out of    232   116% (*) 
+    IOB Flip Flops/Latches:             130
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               16  out of     32    50%  
-    Number using Block RAM only:         16
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -717,7 +713,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 340   |
+CLK                                | BUFGP                  | 4491  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -728,9 +724,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.851ns (Maximum Frequency: 206.139MHz)
-   Minimum input arrival time before clock: 6.320ns
-   Maximum output required time after clock: 3.762ns
+   Minimum period: 8.905ns (Maximum Frequency: 112.290MHz)
+   Minimum input arrival time before clock: 8.476ns
+   Maximum output required time after clock: 5.965ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -739,69 +735,73 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 4.851ns (frequency: 206.139MHz)
-  Total number of paths / destination ports: 9737 / 802
+  Clock period: 8.905ns (frequency: 112.290MHz)
+  Total number of paths / destination ports: 524813 / 16838
 -------------------------------------------------------------------------
-Delay:               4.851ns (Levels of Logic = 3)
-  Source:            PS_FSM_FFd12 (FF)
-  Destination:       bram0/Mram_the_memory_core1 (RAM)
+Delay:               8.905ns (Levels of Logic = 5)
+  Source:            PS_FSM_FFd21 (FF)
+  Destination:       bram0/Mram_the_memory_core4096 (RAM)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: PS_FSM_FFd12 to bram0/Mram_the_memory_core1
+  Data Path: PS_FSM_FFd21 to bram0/Mram_the_memory_core4096
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              6   0.447   0.973  PS_FSM_FFd12 (PS_FSM_FFd12)
-     LUT4:I1->O            2   0.205   0.845  PS_addr_a<7>311 (PS_addr_a<7>31)
-     LUT6:I3->O            2   0.205   0.617  PS_addr_a<8>14 (PS_addr_a<8>1)
-     LUT6:I5->O           16   0.205   1.004  PS_addr_a<8>2 (addr_a<8>)
-     RAMB16BWER:ADDRA9         0.350          bram0/Mram_the_memory_core1
+     FDR:C->Q              4   0.447   1.028  PS_FSM_FFd21 (PS_FSM_FFd2-In)
+     LUT6:I1->O            8   0.203   1.031  PS_addr_a<7>11 (PS_addr_a<7>1)
+     LUT5:I2->O         1025   0.205   2.214  PS_addr_a<7> (addr_a<7>)
+     LUT6:I5->O           32   0.205   1.292  bram0/N10361 (bram0/N103_bdd8)
+     LUT6:I5->O            1   0.205   0.580  bram0/N10311 (bram0/N103)
+     LUT2:I1->O           32   0.205   1.291  bram0/write_ctrl101 (bram0/write_ctrl101)
+     RAM128X1D:WE              0.000          bram0/Mram_the_memory_core102
     ----------------------------------------
-    Total                      4.851ns (1.412ns logic, 3.439ns route)
-                                       (29.1% logic, 70.9% route)
+    Total                      8.905ns (1.470ns logic, 7.435ns route)
+                                       (16.5% logic, 83.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 1200 / 521
+  Total number of paths / destination ports: 33279 / 8596
 -------------------------------------------------------------------------
-Offset:              6.320ns (Levels of Logic = 5)
+Offset:              8.476ns (Levels of Logic = 5)
   Source:            TEMPLATE_BITS<0> (PAD)
-  Destination:       bram0/Mram_the_memory_core1 (RAM)
+  Destination:       bram0/Mram_the_memory_core4094 (RAM)
   Destination Clock: CLK rising
 
-  Data Path: TEMPLATE_BITS<0> to bram0/Mram_the_memory_core1
+  Data Path: TEMPLATE_BITS<0> to bram0/Mram_the_memory_core4094
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.788  TEMPLATE_BITS_0_IBUF (TEMPLATE_BITS_0_IBUF)
-     LUT2:I0->O            1   0.203   0.944  PS_addr_a<8>11 (PS_addr_a<8>11)
-     LUT6:I0->O            1   0.203   0.580  PS_addr_a<8>12 (PS_addr_a<8>12)
-     LUT6:I5->O            2   0.205   0.617  PS_addr_a<8>14 (PS_addr_a<8>1)
-     LUT6:I5->O           16   0.205   1.004  PS_addr_a<8>2 (addr_a<8>)
-     RAMB16BWER:ADDRA9         0.350          bram0/Mram_the_memory_core1
+     IBUF:I->O             5   1.222   1.059  TEMPLATE_BITS_0_IBUF (TEMPLATE_BITS_0_IBUF)
+     LUT5:I0->O         1025   0.203   2.214  PS_addr_a<7> (addr_a<7>)
+     LUT6:I5->O           32   0.205   1.292  bram0/N10361 (bram0/N103_bdd8)
+     LUT6:I5->O            1   0.205   0.580  bram0/N10311 (bram0/N103)
+     LUT2:I1->O           32   0.205   1.291  bram0/write_ctrl101 (bram0/write_ctrl101)
+     RAM128X1D:WE              0.000          bram0/Mram_the_memory_core102
     ----------------------------------------
-    Total                      6.320ns (2.388ns logic, 3.932ns route)
-                                       (37.8% logic, 62.2% route)
+    Total                      8.476ns (2.040ns logic, 6.436ns route)
+                                       (24.1% logic, 75.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 258 / 258
+  Total number of paths / destination ports: 146 / 131
 -------------------------------------------------------------------------
-Offset:              3.762ns (Levels of Logic = 1)
-  Source:            PS_FSM_FFd26 (FF)
-  Destination:       READY (PAD)
+Offset:              5.965ns (Levels of Logic = 3)
+  Source:            input_vectors_read_1 (FF)
+  Destination:       MORE_TO_READ (PAD)
   Source Clock:      CLK rising
 
-  Data Path: PS_FSM_FFd26 to READY
+  Data Path: input_vectors_read_1 to MORE_TO_READ
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              6   0.447   0.744  PS_FSM_FFd26 (PS_FSM_FFd26)
-     OBUF:I->O                 2.571          READY_OBUF (READY)
+     FDRE:C->Q             2   0.447   0.981  input_vectors_read_1 (input_vectors_read_1)
+     LUT6:I0->O            2   0.203   0.981  n000181 (n00018)
+     LUT6:I0->O            1   0.203   0.579  MORE_TO_READ1 (MORE_TO_READ_OBUF)
+     OBUF:I->O                 2.571          MORE_TO_READ_OBUF (MORE_TO_READ)
     ----------------------------------------
-    Total                      3.762ns (3.018ns logic, 0.744ns route)
-                                       (80.2% logic, 19.8% route)
+    Total                      5.965ns (3.424ns logic, 2.541ns route)
+                                       (57.4% logic, 42.6% route)
 
 =========================================================================
 
@@ -813,18 +813,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.851|         |         |         |
+CLK            |    8.905|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.72 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.37 secs
  
 --> 
 
-Total memory usage is 268332 kilobytes
+Total memory usage is 385900 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

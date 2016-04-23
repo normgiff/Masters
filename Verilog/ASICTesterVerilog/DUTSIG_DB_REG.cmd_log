@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/DUTSIG_DB_REG.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/DUTSIG_DB_REG.syr" 

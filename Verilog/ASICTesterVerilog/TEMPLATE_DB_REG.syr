@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> Reading design: TEMPLATE_DB_REG.prj
 
@@ -80,8 +80,8 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -192,7 +192,8 @@ Primitive and Black Box Usage:
 # BELS                             : 1
 #      LUT2                        : 1
 # FlipFlops/Latches                : 2
-#      FDRE                        : 2
+#      FDRE                        : 1
+#      FDSE                        : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 5
@@ -206,20 +207,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               2  out of  18224     0%  
  Number of Slice LUTs:                    1  out of   9112     0%  
     Number used as Logic:                 1  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      3
-   Number with an unused Flip Flop:       1  out of      3    33%  
-   Number with an unused LUT:             2  out of      3    66%  
-   Number of fully used LUT-FF pairs:     0  out of      3     0%  
+ Number of LUT Flip Flop pairs used:      1
+   Number with an unused Flip Flop:       1  out of      1   100%  
+   Number with an unused LUT:             0  out of      1     0%  
+   Number of fully used LUT-FF pairs:     0  out of      1     0%  
    Number of unique control sets:         2
 
 IO Utilization: 
  Number of IOs:                           6
  Number of bonded IOBs:                   6  out of    232     2%  
+    IOB Flip Flops/Latches:               2
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -281,7 +282,7 @@ Delay:               1.128ns (Levels of Logic = 0)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             1   0.447   0.579  internal_q (internal_q)
-     FDRE:D                    0.102          Q
+     FDSE:D                    0.102          Q
     ----------------------------------------
     Total                      1.128ns (0.549ns logic, 0.579ns route)
                                        (48.7% logic, 51.3% route)
@@ -301,7 +302,7 @@ Offset:              3.047ns (Levels of Logic = 2)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.222   0.721  LOAD_IBUF (LOAD_IBUF)
      LUT2:I0->O            1   0.203   0.579  _n0011_inv1 (_n0011_inv)
-     FDRE:CE                   0.322          Q
+     FDSE:CE                   0.322          Q
     ----------------------------------------
     Total                      3.047ns (1.747ns logic, 1.300ns route)
                                        (57.3% logic, 42.7% route)
@@ -319,7 +320,7 @@ Offset:              3.597ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.447   0.579  Q (Q_OBUF)
+     FDSE:C->Q             1   0.447   0.579  Q (Q_OBUF)
      OBUF:I->O                 2.571          Q_OBUF (Q)
     ----------------------------------------
     Total                      3.597ns (3.018ns logic, 0.579ns route)
@@ -341,12 +342,12 @@ CLK            |    1.128|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.49 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.70 secs
  
 --> 
 
-Total memory usage is 256800 kilobytes
+Total memory usage is 257260 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -80,8 +80,8 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -149,7 +149,6 @@ Synthesizing Unit <UART_RX>.
         BIT7 = 9
         STOPBIT = 10
         IDLE_DATA = 11
-        BITS_PER_TRANSFER = 127
     Found 7-bit register for signal <bit_count>.
     Found 10-bit register for signal <clock_counter>.
     Found 4-bit register for signal <PS>.
@@ -167,8 +166,8 @@ Synthesizing Unit <UART_RX>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <bit_count[6]_GND_2_o_add_1_OUT> created at line 64.
-    Found 10-bit adder for signal <clock_counter[9]_GND_2_o_add_27_OUT> created at line 100.
+    Found 7-bit adder for signal <bit_count[6]_GND_2_o_add_1_OUT> created at line 61.
+    Found 10-bit adder for signal <clock_counter[9]_GND_2_o_add_27_OUT> created at line 97.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 145 D-type flip-flop(s).
@@ -180,7 +179,6 @@ Synthesizing Unit <UART_TX>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\UART_TX.v".
         BAUD_RATE = 115200
         PERIOD = 866
-        HALF_PERIOD = 432
         IDLE = 0
         STARTBIT = 1
         BIT0 = 2
@@ -211,9 +209,9 @@ Synthesizing Unit <UART_TX>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 7-bit adder for signal <bit_count[6]_GND_3_o_add_16_OUT> created at line 102.
-    Found 10-bit adder for signal <clock_counter[9]_GND_3_o_add_22_OUT> created at line 120.
-    Found 1-bit 128-to-1 multiplexer for signal <bit_count[6]_data_buffer[127]_Mux_15_o> created at line 101.
+    Found 7-bit adder for signal <bit_count[6]_GND_3_o_add_31_OUT> created at line 117.
+    Found 10-bit adder for signal <clock_counter[9]_GND_3_o_add_38_OUT> created at line 136.
+    Found 1-bit 128-to-1 multiplexer for signal <bit_count[6]_data_buffer[127]_Mux_29_o> created at line 115.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 146 D-type flip-flop(s).
@@ -320,8 +318,134 @@ Optimizing unit <UART_RX> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block UART_CTRL, actual ratio is 5.
-FlipFlop uart_tx0/bit_count_0 has been replicated 1 time(s)
-FlipFlop uart_tx0/bit_count_1 has been replicated 1 time(s)
+FlipFlop uart_rx0/DATA_127 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_126 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_125 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_124 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_123 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_122 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_121 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_120 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_119 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_118 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_117 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_116 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_115 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_114 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_113 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_112 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_111 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_110 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_109 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_108 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_107 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_106 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_105 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_104 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_103 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_102 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_101 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_100 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_99 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_98 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_97 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_96 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_95 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_94 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_93 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_92 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_91 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_90 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_89 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_88 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_87 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_86 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_85 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_84 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_83 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_82 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_81 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_80 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_79 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_78 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_77 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_76 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_75 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_74 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_73 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_72 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_71 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_70 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_69 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_68 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_67 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_66 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_65 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_64 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_63 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_62 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_61 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_60 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_59 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_58 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_57 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_56 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_55 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_54 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_53 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_52 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_51 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_50 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_49 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_48 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_47 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_46 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_45 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_44 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_43 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_42 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_41 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_40 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_39 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_38 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_37 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_36 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_35 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_34 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_33 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_32 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_31 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_30 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_29 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_28 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_27 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_26 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_25 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_24 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_23 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop uart_rx0/DATA_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -329,8 +453,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 301
- Flip-Flops                                            : 301
+# Registers                                            : 427
+ Flip-Flops                                            : 427
 
 =========================================================================
 
@@ -353,23 +477,22 @@ Top Level Output File Name         : UART_CTRL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 464
+# BELS                             : 337
 #      GND                         : 1
-#      INV                         : 3
+#      INV                         : 4
 #      LUT1                        : 18
-#      LUT2                        : 5
-#      LUT3                        : 158
-#      LUT4                        : 22
-#      LUT5                        : 17
-#      LUT6                        : 196
+#      LUT2                        : 4
+#      LUT3                        : 26
+#      LUT4                        : 20
+#      LUT5                        : 130
+#      LUT6                        : 91
 #      MUXCY                       : 18
-#      MUXF7                       : 5
+#      MUXF7                       : 4
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 301
-#      FD                          : 10
+# FlipFlops/Latches                : 427
 #      FDR                         : 8
-#      FDRE                        : 282
+#      FDRE                        : 418
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -384,20 +507,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             301  out of  18224     1%  
- Number of Slice LUTs:                  419  out of   9112     4%  
-    Number used as Logic:               419  out of   9112     4%  
+ Number of Slice Registers:             170  out of  18224     0%  
+ Number of Slice LUTs:                  293  out of   9112     3%  
+    Number used as Logic:               293  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    546
-   Number with an unused Flip Flop:     245  out of    546    44%  
-   Number with an unused LUT:           127  out of    546    23%  
-   Number of fully used LUT-FF pairs:   174  out of    546    31%  
+ Number of LUT Flip Flop pairs used:    293
+   Number with an unused Flip Flop:     123  out of    293    41%  
+   Number with an unused LUT:             0  out of    293     0%  
+   Number of fully used LUT-FF pairs:   170  out of    293    58%  
    Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                         266
  Number of bonded IOBs:                 266  out of    232   114% (*) 
+    IOB Flip Flops/Latches:             257
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -425,7 +549,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 301   |
+CLK                                | BUFGP                  | 427   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -436,9 +560,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.298ns (Maximum Frequency: 188.735MHz)
-   Minimum input arrival time before clock: 5.697ns
-   Maximum output required time after clock: 5.038ns
+   Minimum period: 5.891ns (Maximum Frequency: 169.748MHz)
+   Minimum input arrival time before clock: 5.156ns
+   Maximum output required time after clock: 4.887ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -447,69 +571,67 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.298ns (frequency: 188.735MHz)
-  Total number of paths / destination ports: 5384 / 465
+  Clock period: 5.891ns (frequency: 169.748MHz)
+  Total number of paths / destination ports: 9154 / 737
 -------------------------------------------------------------------------
-Delay:               5.298ns (Levels of Logic = 3)
+Delay:               5.891ns (Levels of Logic = 3)
   Source:            uart_rx0/clock_counter_8 (FF)
-  Destination:       uart_rx0/bit_count_4 (FF)
+  Destination:       uart_rx0/bit_count_6 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: uart_rx0/clock_counter_8 to uart_rx0/bit_count_4
+  Data Path: uart_rx0/clock_counter_8 to uart_rx0/bit_count_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.447   0.995  uart_rx0/clock_counter_8 (uart_rx0/clock_counter_8)
-     LUT5:I0->O            9   0.203   0.830  uart_rx0/GND_2_o_GND_2_o_equal_63_o<9>11 (uart_rx0/GND_2_o_GND_2_o_equal_63_o<9>1)
-     LUT5:I4->O          135   0.205   2.313  uart_rx0/Mmux_sample11_rstpot (uart_rx0/Mmux_sample11_rstpot)
-     LUT5:I0->O            1   0.203   0.000  uart_rx0/bit_count_3_dpot (uart_rx0/bit_count_3_dpot)
-     FDRE:D                    0.102          uart_rx0/bit_count_3
+     FDRE:C->Q             3   0.447   0.995  uart_rx0/clock_counter_8 (uart_rx0/clock_counter_8)
+     LUT5:I0->O            2   0.203   0.617  uart_rx0/PS_FSM_FFd3-In211 (uart_rx0/PS_FSM_FFd3-In21)
+     LUT6:I5->O            9   0.205   0.830  uart_rx0/GND_2_o_GND_2_o_equal_72_o<9>1 (uart_rx0/GND_2_o_GND_2_o_equal_72_o)
+     LUT4:I3->O          263   0.205   2.067  uart_rx0/sample1 (uart_rx0/sample)
+     FDRE:CE                   0.322          uart_rx0/bit_count_0
     ----------------------------------------
-    Total                      5.298ns (1.160ns logic, 4.138ns route)
-                                       (21.9% logic, 78.1% route)
+    Total                      5.891ns (1.382ns logic, 4.509ns route)
+                                       (23.5% logic, 76.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 720 / 691
+  Total number of paths / destination ports: 967 / 955
 -------------------------------------------------------------------------
-Offset:              5.697ns (Levels of Logic = 4)
-  Source:            RX (PAD)
-  Destination:       uart_rx0/clock_counter_9 (FF)
+Offset:              5.156ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       uart_tx0/clock_counter_9 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RX to uart_rx0/clock_counter_9
+  Data Path: RST to uart_tx0/clock_counter_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           131   1.222   2.323  RX_IBUF (RX_IBUF)
-     LUT6:I0->O            1   0.203   0.580  uart_rx0/RST_reset_count_OR_19_o2 (uart_rx0/RST_reset_count_OR_19_o2)
-     LUT6:I5->O           10   0.205   0.857  uart_rx0/RST_reset_count_OR_19_o3 (uart_rx0/RST_reset_count_OR_19_o)
-     LUT4:I3->O            1   0.205   0.000  uart_rx0/clock_counter_9_rstpot (uart_rx0/clock_counter_9_rstpot)
-     FD:D                      0.102          uart_rx0/clock_counter_9
+     IBUF:I->O           409   1.222   2.445  RST_IBUF (RST_IBUF)
+     LUT6:I0->O           10   0.203   0.856  uart_tx0/RST_reset_count_OR_58_o1 (uart_tx0/RST_reset_count_OR_58_o)
+     FDRE:R                    0.430          uart_tx0/clock_counter_0
     ----------------------------------------
-    Total                      5.697ns (1.937ns logic, 3.760ns route)
-                                       (34.0% logic, 66.0% route)
+    Total                      5.156ns (1.855ns logic, 3.301ns route)
+                                       (36.0% logic, 64.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 135 / 131
 -------------------------------------------------------------------------
-Offset:              5.038ns (Levels of Logic = 2)
-  Source:            uart_rx0/PS_FSM_FFd3 (FF)
+Offset:              4.887ns (Levels of Logic = 2)
+  Source:            uart_rx0/PS_FSM_FFd4 (FF)
   Destination:       RXDATA_READY (PAD)
   Source Clock:      CLK rising
 
-  Data Path: uart_rx0/PS_FSM_FFd3 to RXDATA_READY
+  Data Path: uart_rx0/PS_FSM_FFd4 to RXDATA_READY
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             22   0.447   1.238  uart_rx0/PS_FSM_FFd3 (uart_rx0/PS_FSM_FFd3)
-     LUT3:I1->O            1   0.203   0.579  uart_rx0/PS_DATA_READY1 (RXDATA_READY_OBUF)
+     FDR:C->Q             10   0.447   1.085  uart_rx0/PS_FSM_FFd4 (uart_rx0/PS_FSM_FFd4)
+     LUT3:I0->O            1   0.205   0.579  uart_rx0/PS_DATA_READY1 (RXDATA_READY_OBUF)
      OBUF:I->O                 2.571          RXDATA_READY_OBUF (RXDATA_READY)
     ----------------------------------------
-    Total                      5.038ns (3.221ns logic, 1.817ns route)
-                                       (63.9% logic, 36.1% route)
+    Total                      4.887ns (3.223ns logic, 1.664ns route)
+                                       (66.0% logic, 34.0% route)
 
 =========================================================================
 
@@ -521,18 +643,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.298|         |         |         |
+CLK            |    5.891|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.85 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.27 secs
  
 --> 
 
-Total memory usage is 261228 kilobytes
+Total memory usage is 261548 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

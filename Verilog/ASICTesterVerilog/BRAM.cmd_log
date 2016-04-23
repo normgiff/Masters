@@ -8,3 +8,4 @@ xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/V
 xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.syr" 
 xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.syr" 
 xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.syr" 
+xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM.syr" 

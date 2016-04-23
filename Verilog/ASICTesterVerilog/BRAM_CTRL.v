@@ -33,9 +33,9 @@
  */
 module BRAM_CTRL(CLK, RST, 
 					  INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, TC_WRITE,
-					  WRITE_DATA_0, WRITE_DATA_1,
+					  WRITE_DATA,
 					  TEMPLATE_READ, TEMPLATE_BITS, INPUT_READ, FF_READ, TC_READ,
-					  READ_DATA_0, READ_DATA_1, 
+					  READ_DATA,
 					  TEMPLATE_CHANGE, READY,
 					  MORE_TO_READ);					  
 					  
@@ -48,8 +48,7 @@ module BRAM_CTRL(CLK, RST,
 	input TEMPLATE_WRITE;
 	input FF_WRITE;
 	input TC_WRITE;
-	input [127:0] WRITE_DATA_0;
-	input [127:0] WRITE_DATA_1;
+	input [127:0] WRITE_DATA;
 	
 	input TEMPLATE_READ;
 	input [1:0] TEMPLATE_BITS;
@@ -57,8 +56,7 @@ module BRAM_CTRL(CLK, RST,
 	input FF_READ;
 	input TC_READ;
 	
-	output reg [127:0] READ_DATA_0;
-	output reg [127:0] READ_DATA_1;
+	output reg [127:0] READ_DATA;
 	output reg TEMPLATE_CHANGE;
 	output READY;
 	output MORE_TO_READ;
@@ -68,11 +66,11 @@ module BRAM_CTRL(CLK, RST,
 	
 	wire write_en = PS == INPUT_WRITE_1 || PS == INPUT_WRITE_2 || 
 						 PS == TEMPLATE_WRITE_1 || PS == TEMPLATE_WRITE_2 || 
-						 PS == FF_WRITE_1 || PS == FF_WRITE_2 || PS == FF_WRITE_3 || 
-						 PS == FF_WRITE_4;
-						 
-	wire [63:0] dout;
+						 PS == FF_WRITE_1 || PS == FF_WRITE_2;						 
+
 	reg [63:0] din;
+	wire [63:0] dout;
+
 	reg [12:0] addr_a;
 	reg [12:0] addr_b;
 	
@@ -159,14 +157,6 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			FF_WRITE_2: begin
-				NS = FF_WRITE_3;
-			end
-			
-			FF_WRITE_3: begin
-				NS = FF_WRITE_4;
-			end
-			
-			FF_WRITE_4: begin
 				NS = IDLE;
 			end
 			
@@ -211,14 +201,6 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			FF_READ_2: begin
-				NS = FF_READ_3;
-			end
-			
-			FF_READ_3: begin
-				NS = FF_READ_4;
-			end
-			
-			FF_READ_4: begin
 				NS = IDLE;
 			end
 			
@@ -298,20 +280,20 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			INPUT_WRITE_1: begin
-				din = WRITE_DATA_0[63:0];
+				din = WRITE_DATA[63:0];
 				addr_a = {input_write_posA, 6'b000000};
 				addr_b = {input_write_posB, 6'b000000};
 			end
 			
 			INPUT_WRITE_2: begin
-				din = WRITE_DATA_0[127:64];
+				din = WRITE_DATA[127:64];
 				addr_a = {input_write_posA, 6'b100000};
 				addr_b = {input_write_posB, 6'b100000};
 			end
 			
 			TEMPLATE_WRITE_1: begin
-				din = WRITE_DATA_0[63:0];
-				case (WRITE_DATA_0[127:126])
+				din = WRITE_DATA[63:0];
+				case (WRITE_DATA[127:126])
 					2'b00: begin
 						addr_a = TEMPLATE_0_ADDR_A0;
 						addr_b = TEMPLATE_0_ADDR_B0;
@@ -334,8 +316,8 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			TEMPLATE_WRITE_2: begin
-				din = WRITE_DATA_0[127:64];
-				case (WRITE_DATA_0[127:126])
+				din = WRITE_DATA[127:64];
+				case (WRITE_DATA[127:126])
 					2'b00: begin
 						addr_a = TEMPLATE_0_ADDR_A1;
 						addr_b = TEMPLATE_0_ADDR_B1;
@@ -356,8 +338,8 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			FF_WRITE_1: begin
-				din = WRITE_DATA_0[63:0];
-				case (WRITE_DATA_1[127:126])
+				din = WRITE_DATA[63:0];
+				case (WRITE_DATA[127:126])
 					2'b00: begin
 						addr_a = FF_0_ADDR_A0;
 						addr_b = FF_0_ADDR_B0;
@@ -378,8 +360,8 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			FF_WRITE_2: begin
-				din = WRITE_DATA_0[127:64];
-				case (WRITE_DATA_1[127:126])
+				din = WRITE_DATA[127:64];
+				case (WRITE_DATA[127:126])
 					2'b00: begin
 						addr_a = FF_0_ADDR_A1;
 						addr_b = FF_0_ADDR_B1;
@@ -399,53 +381,9 @@ module BRAM_CTRL(CLK, RST,
 				endcase
 			end
 			
-			FF_WRITE_3: begin
-				din = WRITE_DATA_1[63:0];
-				case (WRITE_DATA_1[127:126])
-					2'b00: begin
-						addr_a = FF_0_ADDR_A2;
-						addr_b = FF_0_ADDR_B2;
-					end
-					2'b01: begin
-						addr_a = FF_0_ADDR_A2 + (TEMPLATE_INCR_FACTOR);
-						addr_b = FF_0_ADDR_B2 + (TEMPLATE_INCR_FACTOR);
-					end
-					2'b10: begin
-						addr_a = FF_0_ADDR_A2 + (TEMPLATE_INCR_FACTOR << 1);
-						addr_b = FF_0_ADDR_B2 + (TEMPLATE_INCR_FACTOR << 1);
-					end
-					2'b11: begin
-						addr_a = FF_0_ADDR_A2 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-						addr_b = FF_0_ADDR_B2 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-					end
-				endcase
-			end
-			
-			FF_WRITE_4: begin
-				din = WRITE_DATA_1[127:64];
-				case (WRITE_DATA_1[127:126])
-					2'b00: begin
-						addr_a = FF_0_ADDR_A3;
-						addr_b = FF_0_ADDR_B3;
-					end
-					2'b01: begin
-						addr_a = FF_0_ADDR_A3 + (TEMPLATE_INCR_FACTOR);
-						addr_b = FF_0_ADDR_B3 + (TEMPLATE_INCR_FACTOR);
-					end
-					2'b10: begin
-						addr_a = FF_0_ADDR_A3 + (TEMPLATE_INCR_FACTOR << 1);
-						addr_b = FF_0_ADDR_B3 + (TEMPLATE_INCR_FACTOR << 1);
-					end
-					2'b11: begin
-						addr_a = FF_0_ADDR_A3 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-						addr_b = FF_0_ADDR_B3 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-					end
-				endcase
-			end
-			
 			TC_WRITE_1: begin
-				din = WRITE_DATA_0[63:0];
-				case (WRITE_DATA_0[127:126])
+				din = WRITE_DATA[63:0];
+				case (WRITE_DATA[127:126])
 					2'b00: begin
 						addr_a = TC_0_ADDR_A0;
 						addr_b = TC_0_ADDR_B0;
@@ -466,8 +404,8 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			TC_WRITE_2: begin
-				din = WRITE_DATA_0[63:0];
-				case (WRITE_DATA_0[127:126])
+				din = WRITE_DATA[127:64];
+				case (WRITE_DATA[127:126])
 					2'b00: begin
 						addr_a = TC_0_ADDR_A1;
 						addr_b = TC_0_ADDR_B1;
@@ -638,100 +576,49 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			FF_READ_2: begin
-				case (TEMPLATE_BITS)
-					2'b00: begin
-						addr_a = FF_0_ADDR_A2;
-						addr_b = FF_0_ADDR_B2;
-					end
-					2'b01: begin
-						addr_a = FF_0_ADDR_A2 + (TEMPLATE_INCR_FACTOR);
-						addr_b = FF_0_ADDR_B2 + (TEMPLATE_INCR_FACTOR);
-					end
-					2'b10: begin
-						addr_a = FF_0_ADDR_A2 + (TEMPLATE_INCR_FACTOR << 1);
-						addr_b = FF_0_ADDR_B2 + (TEMPLATE_INCR_FACTOR << 1);
-					end
-					2'b11: begin
-						addr_a = FF_0_ADDR_A2 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-						addr_b = FF_0_ADDR_B2 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-					end
-				endcase
-			end
-			
-			FF_READ_3: begin
-				case (TEMPLATE_BITS)
-					2'b00: begin
-						addr_a = FF_0_ADDR_A3;
-						addr_b = FF_0_ADDR_B3;
-					end
-					2'b01: begin
-						addr_a = FF_0_ADDR_A3 + (TEMPLATE_INCR_FACTOR);
-						addr_b = FF_0_ADDR_B3 + (TEMPLATE_INCR_FACTOR);
-					end
-					2'b10: begin
-						addr_a = FF_0_ADDR_A3 + (TEMPLATE_INCR_FACTOR << 1);
-						addr_b = FF_0_ADDR_B3 + (TEMPLATE_INCR_FACTOR << 1);
-					end
-					2'b11: begin
-						addr_a = FF_0_ADDR_A3 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-						addr_b = FF_0_ADDR_B3 + (TEMPLATE_INCR_FACTOR << 2) -  TEMPLATE_INCR_FACTOR;
-					end
-				endcase
-			end
-			
-			FF_READ_4: begin
 				// Data fully read by now.
 			end
-			
+
 		endcase
 	end
 	
 	// Logic to latch onto data read. 
 	always@(posedge CLK) begin
 		if (RST) begin
-			READ_DATA_0 <= 128'd0;
-			READ_DATA_1 <= 128'd0;
+			READ_DATA <= 128'd0;
 		end
 		else begin
 			case (PS) 
 				INPUT_READ_1: begin
-					READ_DATA_0[63:0] <= dout;
+					READ_DATA[63:0] <= dout;
 				end
 				
 				INPUT_READ_2: begin
-					READ_DATA_0[127:64] <= dout;
+					READ_DATA[127:64] <= dout;
 				end
 				
 				TEMPLATE_READ_1: begin
-					READ_DATA_0[63:0] <= dout;
+					READ_DATA[63:0] <= dout;
 				end
 				
 				TEMPLATE_READ_2: begin
-					READ_DATA_0[127:64] <= dout;
+					READ_DATA[127:64] <= dout;
 				end
 				
 				FF_READ_1: begin
-					READ_DATA_0[63:0] <= dout;
+					READ_DATA[63:0] <= dout;
 				end
 				
 				FF_READ_2: begin
-					READ_DATA_0[127:64] <= dout;
-				end
-				
-				FF_READ_3: begin
-					READ_DATA_1[63:0] <= dout;
-				end
-				
-				FF_READ_4: begin
-					READ_DATA_1[127:64] <= dout;
+					READ_DATA[127:64] <= dout;
 				end
 				
 				TC_READ_1: begin
-					READ_DATA_0[63:0] <= dout;
+					READ_DATA[63:0] <= dout;
 				end
 				
 				TC_READ_2: begin
-					READ_DATA_0[127:64] <= dout;
+					READ_DATA[127:64] <= dout;
 				end
 				
 			endcase
@@ -741,10 +628,10 @@ module BRAM_CTRL(CLK, RST,
 	// Logic to track the current template read.
 	always@(posedge CLK) begin
 		if (RST) begin
-			curr_temp <= 2'd0;
+			curr_temp <= 3'd0;
 		end
 		else if (PS == INPUT_READ_2) begin
-			curr_temp <= READ_DATA_0[127:126];
+			curr_temp <= READ_DATA[127:126];
 		end
 	end
 	

@@ -80,8 +80,8 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
@@ -160,6 +160,7 @@ Optimizing unit <COUNTER_CTRL> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block COUNTER_CTRL, actual ratio is 0.
+FlipFlop COUNTER_RST has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -167,8 +168,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 3
+ Flip-Flops                                            : 3
 
 =========================================================================
 
@@ -197,8 +198,8 @@ Primitive and Black Box Usage:
 #      LUT3                        : 1
 #      LUT4                        : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 3
-#      FDR                         : 1
+# FlipFlops/Latches                : 4
+#      FDR                         : 2
 #      FDS                         : 1
 #      ODDR2                       : 1
 # Clock Buffers                    : 1
@@ -228,6 +229,7 @@ Slice Logic Distribution:
 IO Utilization: 
  Number of IOs:                           6
  Number of bonded IOBs:                   6  out of    232     2%  
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -253,7 +255,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 4     |
+CLK                                | BUFGP                  | 5     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -265,8 +267,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 1.371ns (Maximum Frequency: 729.262MHz)
-   Minimum input arrival time before clock: 2.425ns
-   Maximum output required time after clock: 3.634ns
+   Minimum input arrival time before clock: 2.458ns
+   Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -276,7 +278,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 1.371ns (frequency: 729.262MHz)
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Delay:               1.371ns (Levels of Logic = 1)
   Source:            counter_clock_oddr2 (FF)
@@ -297,9 +299,9 @@ Delay:               1.371ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 7 / 4
+  Total number of paths / destination ports: 10 / 6
 -------------------------------------------------------------------------
-Offset:              2.425ns (Levels of Logic = 2)
+Offset:              2.458ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       counter_clock_oddr2 (FF)
   Destination Clock: CLK rising
@@ -308,31 +310,31 @@ Offset:              2.425ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.222   0.898  RST_IBUF (RST_IBUF)
+     IBUF:I->O             4   1.222   0.931  RST_IBUF (RST_IBUF)
      LUT4:I0->O            1   0.203   0.000  counter_clock_oddr2_glue_rst (counter_clock_oddr2_glue_rst)
      FDS:D                     0.102          counter_clock_oddr2
     ----------------------------------------
-    Total                      2.425ns (1.527ns logic, 0.898ns route)
-                                       (63.0% logic, 37.0% route)
+    Total                      2.458ns (1.527ns logic, 0.931ns route)
+                                       (62.1% logic, 37.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
-  Source:            COUNTER_RST (FF)
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            COUNTER_RST_1 (FF)
   Destination:       COUNTER_RST (PAD)
   Source Clock:      CLK rising
 
-  Data Path: COUNTER_RST to COUNTER_RST
+  Data Path: COUNTER_RST_1 to COUNTER_RST
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.616  COUNTER_RST (COUNTER_RST_OBUF)
+     FDR:C->Q              1   0.447   0.579  COUNTER_RST_1 (COUNTER_RST_1)
      OBUF:I->O                 2.571          COUNTER_RST_OBUF (COUNTER_RST)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
 
@@ -351,11 +353,11 @@ CLK            |    1.371|         |         |         |
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.98 secs
+Total CPU time to Xst completion: 4.11 secs
  
 --> 
 
-Total memory usage is 256864 kilobytes
+Total memory usage is 256620 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
