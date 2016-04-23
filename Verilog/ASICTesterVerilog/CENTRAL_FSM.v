@@ -24,7 +24,7 @@ module CENTRAL_FSM(CLK, RST,
 	
 	// Counter
 	output COUNTER_CLK;
-	output COUNTER_rst;
+	output COUNTER_RST;
 	
 	// Output buffers (parallel->serial shift registers)
 	output MR_BAR;
@@ -101,7 +101,7 @@ module CENTRAL_FSM(CLK, RST,
 							turn_on_sram <= 1'b0;
 						end
 						
-						cycle_length_1_counter - 8'd1: begin
+						cycle_length_1 - 8'd1: begin
 							// Go to the next counter address right at the end of a test cycle.
 							// Also, transfer the new signals.
 							next_address <= 1'b1;
@@ -121,8 +121,11 @@ module CENTRAL_FSM(CLK, RST,
 	
 	// Next-state logic.
 	always@(*) begin
-		case (PS)
-		
+
+		// We get to this state if none of the below conditions match.
+		NS = ERROR_STATE;
+
+		case (PS)			
 			IDLE: begin
 				if (rxdata_ready) begin
 					NS = DECODE_UART_CODE;
@@ -157,7 +160,7 @@ module CENTRAL_FSM(CLK, RST,
 					
 					EXECUTE_TESTS: begin
 						if (more_to_read) begin
-							NS = RESET_HARDWARE;
+							NS = RESET_HARDWARE_PRETEST;
 						end
 						else begin
 							NS = UART_CAPTURE_NO_TESTS;
@@ -165,7 +168,7 @@ module CENTRAL_FSM(CLK, RST,
 					end
 					
 					SEND_BACK_DATA: begin
-						NS = LOAD_SRAM_DATA;
+						NS = LOAD_SRAM_DATA_1;
 					end
 					
 					default: begin
@@ -396,7 +399,7 @@ module CENTRAL_FSM(CLK, RST,
 			// Performing tests
 			/////////////////////////////////////
 			
-			RESET_HARDWARE: begin
+			RESET_HARDWARE_PRETEST: begin
 				NS = READ_INPUT_VECTOR_1;
 			end
 			
@@ -584,12 +587,7 @@ module CENTRAL_FSM(CLK, RST,
 			ERROR_STATE: begin
 				NS = ERROR_STATE;
 			end
-			
-			// Should never get here...
-			default: begin
-				NS = ERROR_STATE;
-			end
-			
+
 		endcase
 	
 	end
@@ -642,7 +640,7 @@ module CENTRAL_FSM(CLK, RST,
 		write_data_1 = 128'b0;
 		
 		template_read = 1'b0;
-		template_bits = curr_temp_vector;
+		template_bits = current_template_bits;
 		input_read = 1'b0;
 		ff_read = 1'b0;
 		tc_read = 1'b0;
@@ -696,7 +694,7 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			READ_CYCLE_VECTOR_1: begin
-				cycle_read = 1'b1;
+				tc_read = 1'b1;
 			end
 			
 			READ_FF_VECTOR_1: begin
@@ -768,7 +766,7 @@ module CENTRAL_FSM(CLK, RST,
 	COUNTER_CTRL counter_ctrl0(
 										.CLK(CLK), 
 										.RST(rst), 
-										.ADVANCE_COUNTER(reset_counter), 
+										.ADVANCE_COUNTER(advance_counter), 
 										.RESET_COUNTER(reset_counter), 
 										.COUNTER_CLK(COUNTER_CLK), 
 										.COUNTER_RST(COUNTER_RST)
@@ -993,13 +991,13 @@ module CENTRAL_FSM(CLK, RST,
 								 );
 
 	// UART controller
-	reg rxdata_ready;
+	wire rxdata_ready;
 	reg rxdata_retrieved;
-	reg [127:0] rxdata;
+	wire [127:0] rxdata;
 	reg [127:0] txdata;
 	reg txcapture;
 	reg txtransmit;
-	reg txsent;
+	wire txsent;
 	reg txack;
 	
 	reg [127:0] ff_read_0;
@@ -1294,7 +1292,7 @@ module CENTRAL_FSM(CLK, RST,
 	
 	VOLTAGE_TRANSLATOR_CTRL voltage_translator_ctrl(
 																	.EN_IN(vt_en), 
-																	.EN(EN)
+																	.EN(VT_EN)
 																	);
 
 endmodule
