@@ -19,8 +19,7 @@
  * 	Q
  */ 
 module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D, 
-					  LEADING_EDGE_1, TRAILING_EDGE_1, CYCLE_LENGTH_1, 
-					  LEADING_EDGE_2, TRAILING_EDGE_2, CYCLE_LENGTH_2, 
+					  LEADING_EDGE_1, TRAILING_EDGE_1, CYCLE_LENGTH_1, LEADING_EDGE_2, 
 					  TEST_CYCLE, Q);
 	input CLK;
 	input RST;
@@ -37,8 +36,6 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 	input [7:0] CYCLE_LENGTH_1;
 	
 	input [6:0] LEADING_EDGE_2;
-	input [6:0] TRAILING_EDGE_2;
-	input [7:0] CYCLE_LENGTH_2;
 	
 	input TEST_CYCLE;
 	
@@ -50,25 +47,12 @@ module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD, TRANSFER, FF, D,
 	reg ff_data;
 	reg ff_out;
 
-	reg [6:0] leading_edge;
-	reg [6:0] trailing_edge;
-	reg [7:0] cycle_length;
+	wire [6:0] leading_edge;
 	
-	always@(*) begin
-		if (TEST_CYCLE) begin
-			leading_edge = LEADING_EDGE_2;
-			trailing_edge = TRAILING_EDGE_2;
-			cycle_length = CYCLE_LENGTH_2;
-		end
-		else begin
-			leading_edge = LEADING_EDGE_1;
-			trailing_edge = TRAILING_EDGE_1;
-			cycle_length = CYCLE_LENGTH_1;
-		end
-	end
+	assign leading_edge = (TEST_CYCLE) ? LEADING_EDGE_2 : LEADING_EDGE_1;
 
 	FF_REG ff_reg0(.CLK(CLK), .RST(RST), .EN(EN_FF_LOGIC), .LEADING_EDGE(leading_edge), 
-						.TRAILING_EDGE(trailing_edge), .CYCLE_LENGTH(cycle_length), 
+						.TRAILING_EDGE(TRAILING_EDGE_1), .CYCLE_LENGTH(CYCLE_LENGTH_1), 
 						.D(buffer_out), .FF(ff_out), .Q(Q));	
 	
 	always@(posedge CLK) begin

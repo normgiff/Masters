@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: BRAM_CTRL.prj
 
@@ -125,24 +125,24 @@ Elaborating module <BRAM>.
 
 Synthesizing Unit <BRAM_CTRL>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM_CTRL.v".
-        TEMPLATE_0_ADDR_A0 = 14'b00000000000000
-        TEMPLATE_0_ADDR_B0 = 14'b00000000100000
-        TEMPLATE_0_ADDR_A1 = 14'b00000001000000
-        TEMPLATE_0_ADDR_B1 = 14'b00000001100000
-        TEMPLATE_INCR_FACTOR = 14'b00000010000000
-        FF_0_ADDR_A0 = 14'b00001000000000
-        FF_0_ADDR_B0 = 14'b00001000100000
-        FF_0_ADDR_A1 = 14'b00001001000000
-        FF_0_ADDR_B1 = 14'b00001001100000
-        FF_INCR_FACTOR = 14'b00000010000000
-        TC_0_ADDR_A0 = 14'b00010000000000
-        TC_0_ADDR_B0 = 14'b00010000100000
-        TC_0_ADDR_A1 = 14'b00010001000000
-        TC_0_ADDR_B1 = 14'b00010001100000
-        TC_INCR_FACTOR = 14'b00000010000000
-        INPUT_START_ADDR_A = 8'b00011001
-        INPUT_START_ADDR_B = 8'b00011010
-        INPUT_INCR_FACTOR = 8'b00000001
+        TEMPLATE_0_ADDR_A0 = 13'b0000000000000
+        TEMPLATE_0_ADDR_B0 = 13'b0000000100000
+        TEMPLATE_0_ADDR_A1 = 13'b0000001000000
+        TEMPLATE_0_ADDR_B1 = 13'b0000001100000
+        TEMPLATE_INCR_FACTOR = 13'b0000010000000
+        FF_0_ADDR_A0 = 13'b0001000000000
+        FF_0_ADDR_B0 = 13'b0001000100000
+        FF_0_ADDR_A1 = 13'b0001001000000
+        FF_0_ADDR_B1 = 13'b0001001100000
+        FF_INCR_FACTOR = 13'b0000010000000
+        TC_0_ADDR_A0 = 13'b0010000000000
+        TC_0_ADDR_B0 = 13'b0010000100000
+        TC_0_ADDR_A1 = 13'b0010001000000
+        TC_0_ADDR_B1 = 13'b0010001100000
+        TC_INCR_FACTOR = 13'b0000010000000
+        INPUT_START_ADDR_A = 7'b0011001
+        INPUT_START_ADDR_B = 7'b0011010
+        INPUT_INCR_FACTOR = 7'b0000001
         IDLE = 0
         INPUT_WRITE_1 = 1
         INPUT_WRITE_2 = 2
@@ -170,10 +170,10 @@ Synthesizing Unit <BRAM_CTRL>.
         RESET_TEMPLATE = 4
     Found 8-bit register for signal <input_vectors_written>.
     Found 8-bit register for signal <input_vectors_read>.
-    Found 8-bit register for signal <input_write_posA>.
-    Found 8-bit register for signal <input_read_posA>.
-    Found 8-bit register for signal <input_write_posB>.
-    Found 8-bit register for signal <input_read_posB>.
+    Found 7-bit register for signal <input_write_posA>.
+    Found 7-bit register for signal <input_read_posA>.
+    Found 7-bit register for signal <input_write_posB>.
+    Found 7-bit register for signal <input_read_posB>.
     Found 1-bit register for signal <READ_DATA<127>>.
     Found 1-bit register for signal <READ_DATA<126>>.
     Found 1-bit register for signal <READ_DATA<125>>.
@@ -321,17 +321,17 @@ Synthesizing Unit <BRAM_CTRL>.
     -----------------------------------------------------------------------
     Found 8-bit adder for signal <input_vectors_written[7]_GND_1_o_add_22_OUT> created at line 238.
     Found 8-bit adder for signal <input_vectors_read[7]_GND_1_o_add_24_OUT> created at line 243.
-    Found 8-bit adder for signal <input_write_posA[7]_GND_1_o_add_37_OUT> created at line 262.
-    Found 8-bit adder for signal <input_write_posB[7]_GND_1_o_add_38_OUT> created at line 263.
-    Found 8-bit adder for signal <input_read_posA[7]_GND_1_o_add_41_OUT> created at line 266.
-    Found 8-bit adder for signal <input_read_posB[7]_GND_1_o_add_42_OUT> created at line 267.
-    Found 14-bit 23-to-1 multiplexer for signal <addr_a> created at line 277.
-    Found 14-bit 23-to-1 multiplexer for signal <addr_b> created at line 277.
+    Found 7-bit adder for signal <input_write_posA[6]_GND_1_o_add_37_OUT> created at line 262.
+    Found 7-bit adder for signal <input_write_posB[6]_GND_1_o_add_38_OUT> created at line 263.
+    Found 7-bit adder for signal <input_read_posA[6]_GND_1_o_add_41_OUT> created at line 266.
+    Found 7-bit adder for signal <input_read_posB[6]_GND_1_o_add_42_OUT> created at line 267.
+    Found 13-bit 23-to-1 multiplexer for signal <addr_a> created at line 277.
+    Found 13-bit 23-to-1 multiplexer for signal <addr_b> created at line 277.
     Found 8-bit comparator equal for signal <n0001> created at line 65
     Found 3-bit comparator not equal for signal <n0230> created at line 644
     Summary:
 	inferred   6 Adder/Subtractor(s).
-	inferred 182 D-type flip-flop(s).
+	inferred 178 D-type flip-flop(s).
 	inferred   2 Comparator(s).
 	inferred   4 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
@@ -340,8 +340,8 @@ Unit <BRAM_CTRL> synthesized.
 Synthesizing Unit <BRAM>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\BRAM.v".
         RAM_WIDTH = 32
-        RAM_ADDR_BITS = 14
-    Found 16384x32-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
+        RAM_ADDR_BITS = 13
+    Found 8192x32-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
     Found 32-bit register for signal <DOUT_B>.
     Found 32-bit register for signal <DOUT_A>.
     Summary:
@@ -355,21 +355,23 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 16384x32-bit dual-port RAM                            : 1
+ 8192x32-bit dual-port RAM                             : 1
 # Adders/Subtractors                                   : 6
- 8-bit adder                                           : 6
+ 7-bit adder                                           : 4
+ 8-bit adder                                           : 2
 # Registers                                            : 12
  1-bit register                                        : 1
  128-bit register                                      : 1
  2-bit register                                        : 1
  3-bit register                                        : 1
  32-bit register                                       : 2
- 8-bit register                                        : 6
+ 7-bit register                                        : 4
+ 8-bit register                                        : 2
 # Comparators                                          : 2
  3-bit comparator not equal                            : 1
  8-bit comparator equal                                : 1
 # Multiplexers                                         : 6
- 14-bit 23-to-1 multiplexer                            : 2
+ 13-bit 23-to-1 multiplexer                            : 2
  32-bit 2-to-1 multiplexer                             : 2
  64-bit 2-to-1 multiplexer                             : 2
 # FSMs                                                 : 1
@@ -382,25 +384,31 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <BRAM>.
-INFO:Xst:3230 - The RAM description <Mram_the_memory_core> will not be implemented on the device block RAM because of limited available resources. If you would like this RAM to be implemented in block RAM, please select a larger device or increase the value specified by the BRAM_Utilization_Ratio constraint.
+INFO:Xst:3226 - The RAM <Mram_the_memory_core> will be implemented as a BLOCK RAM, absorbing the following register(s): <DOUT_A> <DOUT_B>
     -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
+    | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 16384-word x 32-bit                 |          |
+    |     aspect ratio   | 8192-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
     |     clkA           | connected to signal <CLK>           | rise     |
     |     weA            | connected to signal <WE_A>          | high     |
     |     addrA          | connected to signal <ADDR_A>        |          |
     |     diA            | connected to signal <DIN_A>         |          |
-    |     doA            | connected to internal node          |          |
+    |     doA            | connected to signal <DOUT_A>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 16384-word x 32-bit                 |          |
+    |     aspect ratio   | 8192-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
     |     clkB           | connected to signal <CLK>           | rise     |
     |     weB            | connected to signal <WE_B>          | high     |
     |     addrB          | connected to signal <ADDR_B>        |          |
     |     diB            | connected to signal <DIN_B>         |          |
-    |     doB            | connected to internal node          |          |
+    |     doB            | connected to signal <DOUT_B>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
     -----------------------------------------------------------------------
 Unit <BRAM> synthesized (advanced).
 
@@ -418,17 +426,17 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 16384x32-bit dual-port distributed RAM                : 1
+ 8192x32-bit dual-port block RAM                       : 1
 # Counters                                             : 6
- 8-bit up counter                                      : 6
-# Registers                                            : 198
- Flip-Flops                                            : 198
+ 7-bit up counter                                      : 4
+ 8-bit up counter                                      : 2
+# Registers                                            : 134
+ Flip-Flops                                            : 134
 # Comparators                                          : 2
  3-bit comparator not equal                            : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 6
- 14-bit 23-to-1 multiplexer                            : 2
- 32-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 4
+ 13-bit 23-to-1 multiplexer                            : 2
  64-bit 2-to-1 multiplexer                             : 2
 # FSMs                                                 : 1
 
@@ -467,14 +475,12 @@ Optimizing FSM <FSM_0> on signal <PS[1:22]> with one-hot encoding.
 ---------------------------------
 
 Optimizing unit <BRAM_CTRL> ...
-
-Optimizing unit <BRAM> ...
 INFO:Xst:3203 - The FF/Latch <input_write_posA_0> in Unit <BRAM_CTRL> is the opposite to the following FF/Latch, which will be removed : <input_write_posB_0> 
 INFO:Xst:3203 - The FF/Latch <input_read_posA_0> in Unit <BRAM_CTRL> is the opposite to the following FF/Latch, which will be removed : <input_read_posB_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block BRAM_CTRL, actual ratio is 45.
+Found area constraint ratio of 100 (+ 5) on block BRAM_CTRL, actual ratio is 4.
 FlipFlop READ_DATA_127 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop READ_DATA_126 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop READ_DATA_125 has been replicated 1 time(s) to handle iob=true attribute.
@@ -603,6 +609,7 @@ FlipFlop READ_DATA_3 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop READ_DATA_2 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop READ_DATA_1 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop READ_DATA_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop TEMPLATE_CHANGE has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop PS_FSM_FFd22 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
@@ -611,8 +618,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 395
- Flip-Flops                                            : 395
+# Registers                                            : 328
+ Flip-Flops                                            : 328
 
 =========================================================================
 
@@ -635,27 +642,26 @@ Top Level Output File Name         : BRAM_CTRL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3401
+# BELS                             : 327
 #      GND                         : 1
 #      INV                         : 4
-#      LUT1                        : 44
-#      LUT2                        : 138
-#      LUT3                        : 6
-#      LUT4                        : 196
-#      LUT5                        : 75
-#      LUT6                        : 2848
-#      MUXCY                       : 42
+#      LUT1                        : 14
+#      LUT2                        : 9
+#      LUT3                        : 16
+#      LUT4                        : 201
+#      LUT5                        : 20
+#      LUT6                        : 31
+#      MUXCY                       : 14
 #      VCC                         : 1
-#      XORCY                       : 46
-# FlipFlops/Latches                : 395
-#      FD                          : 64
-#      FDE                         : 1
-#      FDR                         : 277
-#      FDRE                        : 38
+#      XORCY                       : 16
+# FlipFlops/Latches                : 328
+#      FD                          : 6
+#      FDR                         : 273
+#      FDRE                        : 34
 #      FDS                         : 2
 #      FDSE                        : 13
-# RAMS                             : 4096
-#      RAM128X1D                   : 4096
+# RAMS                             : 16
+#      RAMB16BWER                  : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 270
@@ -669,18 +675,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             265  out of  18224     1%  
- Number of Slice LUTs:                19695  out of   9112   216% (*) 
-    Number used as Logic:              3311  out of   9112    36%  
-    Number used as Memory:            16384  out of   2176   752% (*) 
-       Number used as RAM:            16384
+ Number of Slice Registers:             198  out of  18224     1%  
+ Number of Slice LUTs:                  295  out of   9112     3%  
+    Number used as Logic:               295  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  19704
-   Number with an unused Flip Flop:   19439  out of  19704    98%  
-   Number with an unused LUT:             9  out of  19704     0%  
-   Number of fully used LUT-FF pairs:   256  out of  19704     1%  
-   Number of unique control sets:        13
+ Number of LUT Flip Flop pairs used:    303
+   Number with an unused Flip Flop:     105  out of    303    34%  
+   Number with an unused LUT:             8  out of    303     2%  
+   Number of fully used LUT-FF pairs:   190  out of    303    62%  
+   Number of unique control sets:         8
 
 IO Utilization: 
  Number of IOs:                         271
@@ -688,6 +692,8 @@ IO Utilization:
     IOB Flip Flops/Latches:             130
 
 Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of     32    50%  
+    Number using Block RAM only:         16
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -713,7 +719,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 4491  |
+CLK                                | BUFGP                  | 344   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -724,8 +730,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 8.905ns (Maximum Frequency: 112.290MHz)
-   Minimum input arrival time before clock: 8.476ns
+   Minimum period: 5.314ns (Maximum Frequency: 188.199MHz)
+   Minimum input arrival time before clock: 4.834ns
    Maximum output required time after clock: 5.965ns
    Maximum combinational path delay: No path found
 
@@ -735,52 +741,47 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 8.905ns (frequency: 112.290MHz)
-  Total number of paths / destination ports: 524813 / 16838
+  Clock period: 5.314ns (frequency: 188.199MHz)
+  Total number of paths / destination ports: 7913 / 830
 -------------------------------------------------------------------------
-Delay:               8.905ns (Levels of Logic = 5)
-  Source:            PS_FSM_FFd21 (FF)
-  Destination:       bram0/Mram_the_memory_core4096 (RAM)
+Delay:               5.314ns (Levels of Logic = 3)
+  Source:            PS_FSM_FFd1 (FF)
+  Destination:       READ_DATA_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: PS_FSM_FFd21 to bram0/Mram_the_memory_core4096
+  Data Path: PS_FSM_FFd1 to READ_DATA_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              4   0.447   1.028  PS_FSM_FFd21 (PS_FSM_FFd2-In)
-     LUT6:I1->O            8   0.203   1.031  PS_addr_a<7>11 (PS_addr_a<7>1)
-     LUT5:I2->O         1025   0.205   2.214  PS_addr_a<7> (addr_a<7>)
-     LUT6:I5->O           32   0.205   1.292  bram0/N10361 (bram0/N103_bdd8)
-     LUT6:I5->O            1   0.205   0.580  bram0/N10311 (bram0/N103)
-     LUT2:I1->O           32   0.205   1.291  bram0/write_ctrl101 (bram0/write_ctrl101)
-     RAM128X1D:WE              0.000          bram0/Mram_the_memory_core102
+     FDR:C->Q              2   0.447   0.864  PS_FSM_FFd1 (PS_FSM_FFd1)
+     LUT4:I0->O           65   0.203   1.647  PS__n06051 (_n0605)
+     LUT5:I4->O           64   0.205   1.640  PS[4]_READ_DATA[127]_select_94_OUT<100>11 (PS[4]_READ_DATA[127]_select_94_OUT<100>1)
+     LUT4:I3->O            2   0.205   0.000  PS[4]_READ_DATA[127]_select_94_OUT<100>2 (PS[4]_READ_DATA[127]_select_94_OUT<27>)
+     FDR:D                     0.102          READ_DATA_27
     ----------------------------------------
-    Total                      8.905ns (1.470ns logic, 7.435ns route)
-                                       (16.5% logic, 83.5% route)
+    Total                      5.314ns (1.162ns logic, 4.152ns route)
+                                       (21.9% logic, 78.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 33279 / 8596
+  Total number of paths / destination ports: 636 / 462
 -------------------------------------------------------------------------
-Offset:              8.476ns (Levels of Logic = 5)
-  Source:            TEMPLATE_BITS<0> (PAD)
-  Destination:       bram0/Mram_the_memory_core4094 (RAM)
+Offset:              4.834ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       input_vectors_read_1 (FF)
   Destination Clock: CLK rising
 
-  Data Path: TEMPLATE_BITS<0> to bram0/Mram_the_memory_core4094
+  Data Path: RST to input_vectors_read_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.222   1.059  TEMPLATE_BITS_0_IBUF (TEMPLATE_BITS_0_IBUF)
-     LUT5:I0->O         1025   0.203   2.214  PS_addr_a<7> (addr_a<7>)
-     LUT6:I5->O           32   0.205   1.292  bram0/N10361 (bram0/N103_bdd8)
-     LUT6:I5->O            1   0.205   0.580  bram0/N10311 (bram0/N103)
-     LUT2:I1->O           32   0.205   1.291  bram0/write_ctrl101 (bram0/write_ctrl101)
-     RAM128X1D:WE              0.000          bram0/Mram_the_memory_core102
+     IBUF:I->O           320   1.222   2.177  RST_IBUF (RST_IBUF)
+     LUT2:I0->O            8   0.203   0.802  Mcount_input_vectors_read_val1 (Mcount_input_vectors_read_val)
+     FDRE:R                    0.430          input_vectors_read_0
     ----------------------------------------
-    Total                      8.476ns (2.040ns logic, 6.436ns route)
-                                       (24.1% logic, 75.9% route)
+    Total                      4.834ns (1.855ns logic, 2.979ns route)
+                                       (38.4% logic, 61.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -813,18 +814,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    8.905|         |         |         |
+CLK            |    5.314|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.37 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.72 secs
  
 --> 
 
-Total memory usage is 385900 kilobytes
+Total memory usage is 265324 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Fri Apr 22 21:20:16 2016">
+  <application stringID="Xst" timeStamp="Fri Apr 22 21:44:05 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -101,8 +101,10 @@
       <item DEFAULT="Yes" label="-equivalent_register_removal" stringID="XST_EQUIVALENTREGISTERREMOVAL" value="YES"/>
       <item DEFAULT="0" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
-    <section stringID="XST_UNISIM_SUMMARY">
-      <item dataType="int" stringID="XST_NUM_IOBUF" value="1"/>
+    <section stringID="XST_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_TRISTATES" value="1">
+        <item dataType="int" stringID="XST_1BIT_TRISTATE_BUFFER" value="1"/>
+      </item>
     </section>
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORTFOUND_NO_MACRO"/>
     <section stringID="XST_FINAL_REGISTER_REPORTFOUND_NO_MACRO"/>
@@ -118,7 +120,7 @@
       <section stringID="XST_PRIMITIVE_AND_BLACK_BOX_USAGE">
         <item dataType="int" stringID="XST_IO_BUFFERS" value="3">
           <item dataType="int" stringID="XST_IBUF" value="2"/>
-          <item dataType="int" label="-iobuf" stringID="XST_IOBUF" value="1"/>
+          <item dataType="int" stringID="XST_OBUFT" value="1"/>
         </item>
       </section>
     </section>

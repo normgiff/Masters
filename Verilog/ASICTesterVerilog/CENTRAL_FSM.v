@@ -728,8 +728,6 @@ module CENTRAL_FSM(CLK, RST,
 	reg [6:0] trailing_edge_1;
 	reg [7:0] cycle_length_1;
 	reg [6:0] leading_edge_2;
-	reg [6:0] trailing_edge_2;
-	reg [7:0] cycle_length_2;
 	
 	assign bus128 = read_data;
 	
@@ -740,16 +738,12 @@ module CENTRAL_FSM(CLK, RST,
 			trailing_edge_1 <= 7'b0;
 			cycle_length_1 <= 8'b0;
 			leading_edge_2 <= 7'b0;
-			trailing_edge_2 <= 7'b0;
-			cycle_length_2 <= 8'b0;
 		end
 		else if (PS == STORE_CYCLE_CONFIG_DATA) begin
 			leading_edge_1 <= rxdata[14:8];
-			trailing_edge_1 <= rxdata[22:16];
-			cycle_length_1 <= rxdata[31:24];
-			leading_edge_2 <= rxdata[38:32];
-			trailing_edge_2 <= rxdata[46:40];
-			cycle_length_2 <= rxdata[55:48];
+			leading_edge_2 <= rxdata[22:16];
+			trailing_edge_1 <= rxdata[30:24];
+			cycle_length_1 <= rxdata[39:32];
 		end
 	end
 	
@@ -821,8 +815,6 @@ module CENTRAL_FSM(CLK, RST,
 							 .TRAILING_EDGE_1(trailing_edge_1), 
 							 .CYCLE_LENGTH_1(cycle_length_1),
 							 .LEADING_EDGE_2(leading_edge_2), 
-							 .TRAILING_EDGE_2(trailing_edge_2), 
-							 .CYCLE_LENGTH_2(cycle_length_2), 
 							 .OUTPUT_SIGNALS(SIGNALS)
 							 );
 							 

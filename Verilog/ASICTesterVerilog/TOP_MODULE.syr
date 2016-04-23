@@ -275,8 +275,6 @@ Synthesizing Unit <CENTRAL_FSM>.
     Found 7-bit register for signal <trailing_edge_1>.
     Found 8-bit register for signal <cycle_length_1>.
     Found 7-bit register for signal <leading_edge_2>.
-    Found 7-bit register for signal <trailing_edge_2>.
-    Found 8-bit register for signal <cycle_length_2>.
     Found 1-bit register for signal <perform_test>.
     Found 1-bit register for signal <clear_buffer>.
     Found 1-bit register for signal <capture_sram_data>.
@@ -307,7 +305,7 @@ Synthesizing Unit <CENTRAL_FSM>.
     Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_cycle_length_1[7]_equal_12_o> created at line 104
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  66 D-type flip-flop(s).
+	inferred  51 D-type flip-flop(s).
 	inferred   4 Comparator(s).
 	inferred   5 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
@@ -570,7 +568,7 @@ Synthesizing Unit <FF_DB_REG>.
     Found 1-bit register for signal <buffer_data>.
     Summary:
 	inferred   4 D-type flip-flop(s).
-	inferred   3 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 Unit <FF_DB_REG> synthesized.
 
 Synthesizing Unit <FF_REG>.
@@ -582,8 +580,8 @@ Synthesizing Unit <FF_REG>.
     Found 1-bit register for signal <Q>.
     Found 8-bit register for signal <cycle_counter>.
     Found 8-bit subtractor for signal <GND_10_o_GND_10_o_sub_11_OUT> created at line 70.
-    Found 8-bit adder for signal <cycle_counter[7]_GND_10_o_add_2_OUT> created at line 45.
-    Found 8-bit comparator equal for signal <cycle_counter[7]_CYCLE_LENGTH[7]_equal_2_o> created at line 40
+    Found 8-bit adder for signal <cycle_counter[7]_GND_10_o_add_2_OUT> created at line 44.
+    Found 8-bit comparator equal for signal <cycle_counter[7]_CYCLE_LENGTH[7]_equal_2_o> created at line 39
     Found 8-bit comparator equal for signal <cycle_counter[7]_GND_10_o_equal_8_o> created at line 56
     Found 8-bit comparator not equal for signal <cycle_counter[7]_GND_10_o_equal_9_o> created at line 59
     Found 32-bit comparator equal for signal <GND_10_o_GND_10_o_equal_12_o> created at line 70
@@ -770,7 +768,7 @@ Macro Statistics
  7-bit adder                                           : 6
  8-bit adder                                           : 132
  8-bit subtractor                                      : 130
-# Registers                                            : 1836
+# Registers                                            : 1834
  1-bit register                                        : 1680
  10-bit register                                       : 2
  128-bit register                                      : 4
@@ -778,8 +776,8 @@ Macro Statistics
  3-bit register                                        : 1
  32-bit register                                       : 2
  6-bit register                                        : 1
- 7-bit register                                        : 10
- 8-bit register                                        : 134
+ 7-bit register                                        : 9
+ 8-bit register                                        : 133
 # Comparators                                          : 520
  3-bit comparator not equal                            : 1
  32-bit comparator equal                               : 128
@@ -787,7 +785,7 @@ Macro Statistics
  8-bit comparator equal                                : 261
  8-bit comparator lessequal                            : 1
  8-bit comparator not equal                            : 128
-# Multiplexers                                         : 1063
+# Multiplexers                                         : 807
  1-bit 128-to-1 multiplexer                            : 1
  1-bit 2-to-1 multiplexer                              : 534
  128-bit 2-to-1 multiplexer                            : 1
@@ -796,8 +794,8 @@ Macro Statistics
  32-bit 2-to-1 multiplexer                             : 2
  6-bit 2-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 2
- 7-bit 2-to-1 multiplexer                              : 260
- 8-bit 2-to-1 multiplexer                              : 259
+ 7-bit 2-to-1 multiplexer                              : 132
+ 8-bit 2-to-1 multiplexer                              : 131
 # FSMs                                                 : 5
 
 =========================================================================
@@ -881,8 +879,8 @@ Macro Statistics
  6-bit up counter                                      : 1
  7-bit up counter                                      : 6
  8-bit up counter                                      : 132
-# Registers                                            : 2243
- Flip-Flops                                            : 2243
+# Registers                                            : 2228
+ Flip-Flops                                            : 2228
 # Comparators                                          : 520
  3-bit comparator not equal                            : 1
  32-bit comparator equal                               : 128
@@ -890,15 +888,14 @@ Macro Statistics
  8-bit comparator equal                                : 261
  8-bit comparator lessequal                            : 1
  8-bit comparator not equal                            : 128
-# Multiplexers                                         : 797
+# Multiplexers                                         : 541
  1-bit 128-to-1 multiplexer                            : 1
  1-bit 2-to-1 multiplexer                              : 406
  128-bit 2-to-1 multiplexer                            : 1
  13-bit 23-to-1 multiplexer                            : 2
  3-bit 2-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 2
- 7-bit 2-to-1 multiplexer                              : 256
- 8-bit 2-to-1 multiplexer                              : 128
+ 7-bit 2-to-1 multiplexer                              : 128
 # FSMs                                                 : 5
 
 =========================================================================
@@ -1056,15 +1053,214 @@ Optimizing unit <OUTPUT_BUFFER_CTRL> ...
 Optimizing unit <UART_TX> ...
 
 Optimizing unit <UART_RX> ...
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_0>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_0> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_0>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_1> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_1>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_1> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_1>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_2> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_2>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_2> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_2>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_3> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_3>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_3> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_3>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_4> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_4>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_4> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_4>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_5> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_5>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_5> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_5>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_6> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_6>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_6> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_6>
+INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_7> in Unit <TOP_MODULE> is equivalent to the following 127 FFs/Latches, which will be removed : <central_fsm0/dut_ctrl0/ff_regs<1>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<2>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<3>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<4>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<5>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<6>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<7>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<8>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<9>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<10>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<11>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<12>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<13>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<14>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<15>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<16>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<17>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<18>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<19>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<20>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<21>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<22>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<23>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<24>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<25>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<26>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<27>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<28>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<29>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<30>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<31>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<32>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<33>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<34>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<35>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<36>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<37>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<38>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<39>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<40>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<41>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<42>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<43>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<44>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<45>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<46>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<47>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<48>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<49>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<50>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<51>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<52>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<53>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<54>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<55>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<56>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<57>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<58>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<59>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<60>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<61>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<62>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<63>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<64>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<65>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<66>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<67>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<68>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<69>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<70>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<71>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<72>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<73>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<74>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<75>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<76>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<77>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<78>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<79>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<80>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<81>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<82>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<83>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<84>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<85>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<86>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<87>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<88>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<89>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<90>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<91>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<92>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<93>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_7>
+   <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_7>
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TOP_MODULE, actual ratio is 102.
-Optimizing block <TOP_MODULE> to meet ratio 100 (+ 5) of 2278 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <TOP_MODULE>, final ratio is 115.
+Found area constraint ratio of 100 (+ 5) on block TOP_MODULE, actual ratio is 70.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<127>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<126>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<125>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<124>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<123>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<122>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<121>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<120>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<119>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<118>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<117>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<116>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<115>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<114>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<113>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<112>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<111>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<110>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<109>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<108>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<107>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<106>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<105>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<104>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<103>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<102>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<101>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<100>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<99>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<98>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<97>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<96>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<95>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<94>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<93>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<92>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<91>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<90>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<89>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<88>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<87>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<86>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<85>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<84>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<83>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<82>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<81>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<80>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<79>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<78>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<77>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<76>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<75>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<74>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<73>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<72>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<71>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<70>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<69>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<68>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<67>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<66>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<65>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<64>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<63>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<62>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<61>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<60>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<59>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<58>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<57>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<56>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<55>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<54>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<53>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<52>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<51>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<50>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<49>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<48>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<47>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<46>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<45>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<44>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<43>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<42>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<41>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<40>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<39>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<38>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<37>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<36>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<35>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<34>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<33>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<32>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<31>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<30>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<29>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<28>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<27>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<26>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<25>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<24>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<23>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<22>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<21>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<20>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<19>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<18>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<17>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<16>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<15>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<14>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<13>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<12>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<11>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<10>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<9>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<8>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<7>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<6>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<5>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<4>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<3>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<2>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<1>/Q has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/dut_ctrl0/template_regs<0>/Q has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/oe_bar_in has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/cs_bar_in has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/we_bar_in has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/counter_ctrl0/COUNTER_RST has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/vt_en has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
@@ -1073,8 +1269,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3455
- Flip-Flops                                            : 3455
+# Registers                                            : 2553
+ Flip-Flops                                            : 2553
 
 =========================================================================
 
@@ -1097,26 +1293,25 @@ Top Level Output File Name         : TOP_MODULE.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 9556
+# BELS                             : 4201
 #      GND                         : 1
-#      INV                         : 7
+#      INV                         : 6
 #      LUT1                        : 25
-#      LUT2                        : 407
-#      LUT3                        : 1103
-#      LUT4                        : 566
-#      LUT5                        : 888
-#      LUT6                        : 3769
-#      MUXCY                       : 942
-#      MUXF7                       : 771
+#      LUT2                        : 143
+#      LUT3                        : 839
+#      LUT4                        : 569
+#      LUT5                        : 512
+#      LUT6                        : 1732
+#      MUXCY                       : 53
+#      MUXF7                       : 260
 #      VCC                         : 1
-#      XORCY                       : 1076
-# FlipFlops/Latches                : 3456
-#      FD                          : 137
-#      FDE                         : 1055
-#      FDR                         : 220
-#      FDRE                        : 1906
-#      FDS                         : 9
-#      FDSE                        : 128
+#      XORCY                       : 60
+# FlipFlops/Latches                : 2554
+#      FD                          : 10
+#      FDE                         : 39
+#      FDR                         : 477
+#      FDRE                        : 1762
+#      FDS                         : 265
 #      ODDR2                       : 1
 # RAMS                             : 16
 #      RAMB16BWER                  : 16
@@ -1134,16 +1329,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3194  out of  18224    17%  
- Number of Slice LUTs:                 6765  out of   9112    74%  
-    Number used as Logic:              6765  out of   9112    74%  
+ Number of Slice Registers:            2292  out of  18224    12%  
+ Number of Slice LUTs:                 3826  out of   9112    41%  
+    Number used as Logic:              3826  out of   9112    41%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   7471
-   Number with an unused Flip Flop:    4277  out of   7471    57%  
-   Number with an unused LUT:           706  out of   7471     9%  
-   Number of fully used LUT-FF pairs:  2488  out of   7471    33%  
-   Number of unique control sets:       417
+ Number of LUT Flip Flop pairs used:   4466
+   Number with an unused Flip Flop:    2174  out of   4466    48%  
+   Number with an unused LUT:           640  out of   4466    14%  
+   Number of fully used LUT-FF pairs:  1652  out of   4466    36%  
+   Number of unique control sets:       159
 
 IO Utilization: 
  Number of IOs:                         143
@@ -1176,7 +1371,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 3473  |
+CLK                                | BUFGP                  | 2571  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1187,9 +1382,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.931ns (Maximum Frequency: 144.277MHz)
-   Minimum input arrival time before clock: 7.807ns
-   Maximum output required time after clock: 5.318ns
+   Minimum period: 6.310ns (Maximum Frequency: 158.480MHz)
+   Minimum input arrival time before clock: 7.154ns
+   Maximum output required time after clock: 5.298ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1198,10 +1393,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.931ns (frequency: 144.277MHz)
-  Total number of paths / destination ports: 286704 / 9250
+  Clock period: 6.310ns (frequency: 158.480MHz)
+  Total number of paths / destination ports: 44260 / 7301
 -------------------------------------------------------------------------
-Delay:               6.931ns (Levels of Logic = 2)
+Delay:               6.310ns (Levels of Logic = 2)
   Source:            central_fsm0/PS_FSM_FFd6 (FF)
   Destination:       central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_9 (FF)
   Source Clock:      CLK rising
@@ -1211,19 +1406,19 @@ Delay:               6.931ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q           1330   0.447   2.287  central_fsm0/PS_FSM_FFd6 (central_fsm0/PS_FSM_FFd6)
-     LUT2:I1->O         2224   0.205   2.501  central_fsm0/rst1 (central_fsm0/rst)
+     FDR:C->Q             59   0.447   1.607  central_fsm0/PS_FSM_FFd6 (central_fsm0/PS_FSM_FFd6)
+     LUT2:I1->O         2467   0.205   2.560  central_fsm0/rst1 (central_fsm0/rst)
      LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o)
      FDRE:R                    0.430          central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_0
     ----------------------------------------
-    Total                      6.931ns (1.287ns logic, 5.644ns route)
-                                       (18.6% logic, 81.4% route)
+    Total                      6.310ns (1.287ns logic, 5.023ns route)
+                                       (20.4% logic, 79.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 9268 / 4650
+  Total number of paths / destination ports: 2906 / 2860
 -------------------------------------------------------------------------
-Offset:              7.807ns (Levels of Logic = 3)
+Offset:              7.154ns (Levels of Logic = 3)
   Source:            RST (PAD)
   Destination:       central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_9 (FF)
   Destination Clock: CLK rising
@@ -1232,19 +1427,19 @@ Offset:              7.807ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1325   1.222   2.390  RST_IBUF (RST_IBUF)
-     LUT2:I0->O         2224   0.203   2.501  central_fsm0/rst1 (central_fsm0/rst)
+     IBUF:I->O            54   1.222   1.678  RST_IBUF (RST_IBUF)
+     LUT2:I0->O         2467   0.203   2.560  central_fsm0/rst1 (central_fsm0/rst)
      LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o)
      FDRE:R                    0.430          central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_0
     ----------------------------------------
-    Total                      7.807ns (2.060ns logic, 5.747ns route)
-                                       (26.4% logic, 73.6% route)
+    Total                      7.154ns (2.060ns logic, 5.094ns route)
+                                       (28.8% logic, 71.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 282 / 138
 -------------------------------------------------------------------------
-Offset:              5.318ns (Levels of Logic = 2)
+Offset:              5.298ns (Levels of Logic = 2)
   Source:            central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (FF)
   Destination:       STCP (PAD)
   Source Clock:      CLK rising
@@ -1253,12 +1448,12 @@ Offset:              5.318ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             23   0.447   1.518  central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2)
+     FDR:C->Q             22   0.447   1.498  central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2)
      LUT6:I0->O            1   0.203   0.579  central_fsm0/output_buffer_ctrl0/Mmux_STCP11 (STCP_OBUF)
      OBUF:I->O                 2.571          STCP_OBUF (STCP)
     ----------------------------------------
-    Total                      5.318ns (3.221ns logic, 2.097ns route)
-                                       (60.6% logic, 39.4% route)
+    Total                      5.298ns (3.221ns logic, 2.077ns route)
+                                       (60.8% logic, 39.2% route)
 
 =========================================================================
 
@@ -1270,20 +1465,20 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.931|         |         |         |
+CLK            |    6.310|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 35.31 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.71 secs
  
 --> 
 
-Total memory usage is 337964 kilobytes
+Total memory usage is 308780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

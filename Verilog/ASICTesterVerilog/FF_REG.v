@@ -31,7 +31,6 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 	parameter DNRZ_L = 1'b1;
 	
 	reg [7:0] cycle_counter;
-	reg [8:0] cycle_counter_x2;
 	
 	reg L_reg;
 	
@@ -49,6 +48,7 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 	
 	reg r0_val;
 	
+	// Register for R0 logic.
 	always@(posedge CLK) begin
 		if (RST) begin
 			r0_val <= 1'b0;
@@ -74,14 +74,19 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 	end
 	
 	always@(posedge CLK) begin
-		case(FF)
-			DNRZ_L: begin
-				Q <= L_reg;
-			end
-			R0: begin
-				Q <= r0_val;
-			end
-		endcase
+		if (RST) begin
+			Q <= 1'b0;
+		end
+		else begin
+			case(FF)
+				DNRZ_L: begin
+					Q <= L_reg;
+				end
+				R0: begin
+					Q <= r0_val;
+				end
+			endcase
+		end
 	end
 	
 endmodule
