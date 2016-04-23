@@ -185,6 +185,10 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="TOP_MODULE.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="TOP_MODULE.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TOP_MODULE.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TOP_MODULE_TB_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TOP_MODULE_TB_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TOP_MODULE_TB_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TOP_MODULE_TB_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="TOP_MODULE_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="TOP_MODULE_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TOP_MODULE_xst.xrpt"/>
@@ -223,9 +227,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="UART_CTRL.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="UART_CTRL.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="UART_CTRL.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UART_CTRL_TB_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="UART_CTRL_TB_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="UART_CTRL_TB_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="UART_CTRL_TB_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="UART_CTRL_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="UART_CTRL_guide.ncd" xil_pn:origination="imported"/>
@@ -290,12 +292,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461120173" xil_pn:in_ck="-657939433542968839" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1461120173">
+    <transform xil_pn:end_ts="1461447011" xil_pn:in_ck="5402107096985500031" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1461447011">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BRAM.v"/>
@@ -303,6 +304,7 @@
       <outfile xil_pn:name="BRAM_CTRL_PARAMS.v"/>
       <outfile xil_pn:name="BRAM_CTRL_TB.v"/>
       <outfile xil_pn:name="CENTRAL_FSM.v"/>
+      <outfile xil_pn:name="CENTRAL_FSM_PARAMS.v"/>
       <outfile xil_pn:name="COUNTER_CTRL.v"/>
       <outfile xil_pn:name="DB_CYCLE_REG.v"/>
       <outfile xil_pn:name="DB_FF_REG.v"/>
@@ -316,6 +318,7 @@
       <outfile xil_pn:name="SRAM_CTRL.v"/>
       <outfile xil_pn:name="TEMPLATE_DB_REG.v"/>
       <outfile xil_pn:name="TOP_MODULE.v"/>
+      <outfile xil_pn:name="TOP_MODULE_TB.v"/>
       <outfile xil_pn:name="TRIREG.v"/>
       <outfile xil_pn:name="UART_CTRL.v"/>
       <outfile xil_pn:name="UART_CTRL_TB.v"/>
@@ -323,20 +326,19 @@
       <outfile xil_pn:name="UART_TX.v"/>
       <outfile xil_pn:name="VOLTAGE_TRANSLATOR_CTRL.v"/>
     </transform>
-    <transform xil_pn:end_ts="1461118181" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6999645119931620452" xil_pn:start_ts="1461118181">
+    <transform xil_pn:end_ts="1461430989" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9644849624292860" xil_pn:start_ts="1461430989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461118181" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2839436233255662426" xil_pn:start_ts="1461118181">
+    <transform xil_pn:end_ts="1461430989" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8767995922771673538" xil_pn:start_ts="1461430989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461118181" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2818766997540115252" xil_pn:start_ts="1461118181">
+    <transform xil_pn:end_ts="1461430989" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5486579528401631524" xil_pn:start_ts="1461430989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1461120173" xil_pn:in_ck="-657939433542968839" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1461120173">
+    <transform xil_pn:end_ts="1461447011" xil_pn:in_ck="5402107096985500031" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1461447011">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -349,6 +351,7 @@
       <outfile xil_pn:name="BRAM_CTRL_PARAMS.v"/>
       <outfile xil_pn:name="BRAM_CTRL_TB.v"/>
       <outfile xil_pn:name="CENTRAL_FSM.v"/>
+      <outfile xil_pn:name="CENTRAL_FSM_PARAMS.v"/>
       <outfile xil_pn:name="COUNTER_CTRL.v"/>
       <outfile xil_pn:name="DB_CYCLE_REG.v"/>
       <outfile xil_pn:name="DB_FF_REG.v"/>
@@ -362,6 +365,7 @@
       <outfile xil_pn:name="SRAM_CTRL.v"/>
       <outfile xil_pn:name="TEMPLATE_DB_REG.v"/>
       <outfile xil_pn:name="TOP_MODULE.v"/>
+      <outfile xil_pn:name="TOP_MODULE_TB.v"/>
       <outfile xil_pn:name="TRIREG.v"/>
       <outfile xil_pn:name="UART_CTRL.v"/>
       <outfile xil_pn:name="UART_CTRL_TB.v"/>
@@ -369,31 +373,28 @@
       <outfile xil_pn:name="UART_TX.v"/>
       <outfile xil_pn:name="VOLTAGE_TRANSLATOR_CTRL.v"/>
     </transform>
-    <transform xil_pn:end_ts="1461120176" xil_pn:in_ck="-657939433542968839" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2791782248611476521" xil_pn:start_ts="1461120173">
+    <transform xil_pn:end_ts="1461447015" xil_pn:in_ck="5402107096985500031" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8418704376644942663" xil_pn:start_ts="1461447011">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="UART_CTRL_TB_beh.prj"/>
-      <outfile xil_pn:name="UART_CTRL_TB_isim_beh.exe"/>
+      <outfile xil_pn:name="TOP_MODULE_TB_beh.prj"/>
+      <outfile xil_pn:name="TOP_MODULE_TB_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1461120177" xil_pn:in_ck="-6294153558059525917" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2564452297132905350" xil_pn:start_ts="1461120176">
+    <transform xil_pn:end_ts="1461447039" xil_pn:in_ck="-3088934730320321025" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1959337577072238902" xil_pn:start_ts="1461447039">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="UART_CTRL_TB_isim_beh.wdb"/>
+      <outfile xil_pn:name="TOP_MODULE_TB_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -425,9 +426,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1461383429" xil_pn:in_ck="6949689432440233059" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2027163883579675798" xil_pn:start_ts="1461383399">
+    <transform xil_pn:end_ts="1461453642" xil_pn:in_ck="6949689432440233059" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2027163883579675798" xil_pn:start_ts="1461453605">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="BRAM.ngr"/>
       <outfile xil_pn:name="BRAM_CTRL.ngr"/>
       <outfile xil_pn:name="CENTRAL_FSM.ngr"/>
@@ -446,6 +449,8 @@
       <outfile xil_pn:name="TOP_MODULE.stx"/>
       <outfile xil_pn:name="TOP_MODULE.syr"/>
       <outfile xil_pn:name="TOP_MODULE.xst"/>
+      <outfile xil_pn:name="TOP_MODULE_TB_beh.prj"/>
+      <outfile xil_pn:name="TOP_MODULE_TB_stx_beh.prj"/>
       <outfile xil_pn:name="TOP_MODULE_xst.xrpt"/>
       <outfile xil_pn:name="TRIREG.ngr"/>
       <outfile xil_pn:name="UART_CTRL.ngr"/>

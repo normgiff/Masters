@@ -31,6 +31,8 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER, COUNTER_CLK, COUNT
 	output reg COUNTER_RST; 
 	reg counter_clock_oddr2;	
 	
+	// Used to ensure the width of the counter is 10 nanoseconds.
+	
 	always@(posedge CLK) begin
 		if (RST) begin
 			counter_clock_oddr2 <= 1'b1;
@@ -61,7 +63,7 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER, COUNTER_CLK, COUNT
 		.C1(~CLK), // 1-bit clock input
 		.CE(1'b1), // 1-bit clock enable input
 		.D0(counter_clock_oddr2), // 1-bit data input (associated with C0)
-		.D1(1'b1), // 1-bit data input (associated with C1)
+		.D1(counter_clock_oddr2), // 1-bit data input (associated with C1)
 		.R(1'b0), // 1-bit reset input
 		.S(1'b0) // 1-bit set input
 		);

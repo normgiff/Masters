@@ -44,6 +44,11 @@ module BRAM(CLK, EN_A, EN_B, WE_A, WE_B, DIN_A, DIN_B, ADDR_A, ADDR_B, DOUT_A, D
 	output reg [RAM_WIDTH-1:0] DOUT_B;
 
 	reg [RAM_WIDTH-1:0] the_memory_core [(2**RAM_ADDR_BITS)-1:0];
+	
+	// Initialize memory.
+	 initial begin
+		$readmemb("zeroes.list", the_memory_core);
+	 end
 
 	always @(posedge CLK)
 	begin

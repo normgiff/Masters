@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: TOP_MODULE.prj
 
@@ -155,6 +155,7 @@ Elaborating module <CENTRAL_FSM>.
 Elaborating module <BRAM_CTRL>.
 
 Elaborating module <BRAM>.
+Reading initialization file \"zeroes.list\".
 
 Elaborating module <COUNTER_CTRL>.
 
@@ -241,28 +242,30 @@ Synthesizing Unit <CENTRAL_FSM>.
         READ_INPUT_VECTOR_1 = 6'b011100
         READ_INPUT_VECTOR_2 = 6'b011101
         LOAD_INPUT_VECTOR = 6'b011110
-        READ_TEMPLATE_VECTOR_1 = 6'b011111
-        READ_TEMPLATE_VECTOR_2 = 6'b100000
-        LOAD_TEMPLATE_VECTOR = 6'b100001
-        READ_CYCLE_VECTOR_1 = 6'b100010
-        READ_CYCLE_VECTOR_2 = 6'b100011
-        LOAD_CYCLE_VECTOR = 6'b100100
-        READ_FF_VECTOR_1 = 6'b100101
-        READ_FF_VECTOR_2 = 6'b100110
-        LOAD_FF_VECTOR = 6'b100111
-        TRANSFER_VECTORS = 6'b101000
-        APPLY_INPUTS = 6'b101001
-        CHECK_INPUT_VECTOR = 6'b101010
-        TESTS_COMPLETED = 6'b101011
-        LOAD_SRAM_DATA_1 = 6'b101100
-        LOAD_SRAM_DATA_2 = 6'b101101
-        LOAD_SRAM_DATA_3 = 6'b101110
-        TRANSMIT_SRAM_DATA = 6'b101111
-        UART_CAPTURE_ACK = 6'b110000
-        UART_CAPTURE_UNKNOWN_CODE = 6'b110001
-        UART_CAPTURE_NO_TESTS = 6'b110010
-        UART_TRANSMIT_1 = 6'b110011
-        UART_TRANSMIT_2 = 6'b110100
+        TRANSFER_INPUT_VECTOR = 6'b011111
+        READ_TEMPLATE_VECTOR_1 = 6'b100000
+        READ_TEMPLATE_VECTOR_2 = 6'b100001
+        LOAD_TEMPLATE_VECTOR = 6'b100010
+        READ_CYCLE_VECTOR_1 = 6'b100011
+        READ_CYCLE_VECTOR_2 = 6'b100100
+        LOAD_CYCLE_VECTOR = 6'b100101
+        READ_FF_VECTOR_1 = 6'b100110
+        READ_FF_VECTOR_2 = 6'b100111
+        LOAD_FF_VECTOR = 6'b101000
+        TRANSFER_VECTORS = 6'b101001
+        CHECK_FOR_MORE_INPUT_VECTORS = 6'b101010
+        CHECK_INPUT_VECTOR = 6'b101011
+        TESTS_COMPLETED = 6'b101100
+        LOAD_SRAM_DATA_1 = 6'b101101
+        LOAD_SRAM_DATA_2 = 6'b101110
+        LOAD_SRAM_DATA_3 = 6'b101111
+        LOAD_SRAM_DATA_4 = 6'b110000
+        TRANSMIT_SRAM_DATA = 6'b110001
+        UART_CAPTURE_ACK = 6'b110010
+        UART_CAPTURE_UNKNOWN_CODE = 6'b110011
+        UART_CAPTURE_NO_TESTS = 6'b110100
+        UART_TRANSMIT_1 = 6'b110101
+        UART_TRANSMIT_2 = 6'b110110
     Register <transfer_new_signals> equivalent to <next_address> has been removed
     Found 8-bit register for signal <cycle_length_1_counter>.
     Found 1-bit register for signal <next_address>.
@@ -285,26 +288,27 @@ Synthesizing Unit <CENTRAL_FSM>.
     Found 6-bit register for signal <PS>.
     Found finite state machine <FSM_0> for signal <PS>.
     -----------------------------------------------------------------------
-    | States             | 53                                             |
-    | Transitions        | 86                                             |
+    | States             | 55                                             |
+    | Transitions        | 89                                             |
     | Inputs             | 13                                             |
-    | Outputs            | 49                                             |
+    | Outputs            | 50                                             |
     | Clock              | CLK (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
+    | Reset              | RST (positive)                                 |
     | Reset type         | synchronous                                    |
     | Reset State        | 000000                                         |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_8_OUT> created at line 98.
-    Found 8-bit subtractor for signal <cycle_length_1[7]_GND_2_o_sub_9_OUT> created at line 104.
-    Found 8-bit adder for signal <cycle_length_1_counter[7]_GND_2_o_add_6_OUT> created at line 89.
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_cycle_length_1[7]_equal_6_o> created at line 84
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_10_o> created at line 93
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_11_o> created at line 98
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_cycle_length_1[7]_equal_12_o> created at line 104
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_6_OUT> created at line 84.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_9_OUT> created at line 98.
+    Found 8-bit subtractor for signal <cycle_length_1[7]_GND_2_o_sub_10_OUT> created at line 104.
+    Found 8-bit adder for signal <cycle_length_1_counter[7]_GND_2_o_add_7_OUT> created at line 89.
+    Found 32-bit comparator equal for signal <GND_2_o_GND_2_o_equal_7_o> created at line 84
+    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_11_o> created at line 93
+    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_12_o> created at line 98
+    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_cycle_length_1[7]_equal_13_o> created at line 104
     Summary:
-	inferred   3 Adder/Subtractor(s).
+	inferred   4 Adder/Subtractor(s).
 	inferred  51 D-type flip-flop(s).
 	inferred   4 Comparator(s).
 	inferred   5 Multiplexer(s).
@@ -507,21 +511,21 @@ Synthesizing Unit <BRAM_CTRL>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <input_vectors_written[7]_GND_3_o_add_22_OUT> created at line 238.
-    Found 8-bit adder for signal <input_vectors_read[7]_GND_3_o_add_24_OUT> created at line 243.
-    Found 7-bit adder for signal <input_write_posA[6]_GND_3_o_add_37_OUT> created at line 262.
-    Found 7-bit adder for signal <input_write_posB[6]_GND_3_o_add_38_OUT> created at line 263.
-    Found 7-bit adder for signal <input_read_posA[6]_GND_3_o_add_41_OUT> created at line 266.
-    Found 7-bit adder for signal <input_read_posB[6]_GND_3_o_add_42_OUT> created at line 267.
-    Found 13-bit 23-to-1 multiplexer for signal <addr_a> created at line 277.
-    Found 13-bit 23-to-1 multiplexer for signal <addr_b> created at line 277.
-    Found 8-bit comparator equal for signal <n0001> created at line 65
-    Found 3-bit comparator not equal for signal <n0230> created at line 644
+    Found 8-bit adder for signal <input_vectors_written[7]_GND_3_o_add_22_OUT> created at line 242.
+    Found 8-bit adder for signal <input_vectors_read[7]_GND_3_o_add_24_OUT> created at line 247.
+    Found 7-bit adder for signal <input_write_posA[6]_GND_3_o_add_39_OUT> created at line 267.
+    Found 7-bit adder for signal <input_write_posB[6]_GND_3_o_add_40_OUT> created at line 268.
+    Found 7-bit adder for signal <input_read_posA[6]_GND_3_o_add_43_OUT> created at line 271.
+    Found 7-bit adder for signal <input_read_posB[6]_GND_3_o_add_44_OUT> created at line 272.
+    Found 13-bit 23-to-1 multiplexer for signal <addr_a> created at line 282.
+    Found 13-bit 23-to-1 multiplexer for signal <addr_b> created at line 282.
+    Found 8-bit comparator equal for signal <n0001> created at line 66
+    Found 3-bit comparator not equal for signal <n0233> created at line 651
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred 178 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred  10 Multiplexer(s).
+	inferred   4 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <BRAM_CTRL> synthesized.
 
@@ -541,9 +545,12 @@ Unit <BRAM> synthesized.
 Synthesizing Unit <COUNTER_CTRL>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\COUNTER_CTRL.v".
     Found 1-bit register for signal <COUNTER_RST>.
+    Found 1-bit register for signal <counter_pulse_width>.
     Found 1-bit register for signal <counter_clock_oddr2>.
+    Found 1-bit adder for signal <counter_pulse_width_PWR_7_o_add_2_OUT<0>> created at line 47.
     Summary:
-	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
 Unit <COUNTER_CTRL> synthesized.
 
 Synthesizing Unit <DUT_CTRL>.
@@ -579,17 +586,17 @@ Synthesizing Unit <FF_REG>.
     Found 1-bit register for signal <L_reg>.
     Found 1-bit register for signal <Q>.
     Found 8-bit register for signal <cycle_counter>.
-    Found 8-bit subtractor for signal <GND_10_o_GND_10_o_sub_11_OUT> created at line 70.
+    Found 8-bit subtractor for signal <GND_10_o_GND_10_o_sub_11_OUT> created at line 73.
     Found 8-bit adder for signal <cycle_counter[7]_GND_10_o_add_2_OUT> created at line 44.
     Found 8-bit comparator equal for signal <cycle_counter[7]_CYCLE_LENGTH[7]_equal_2_o> created at line 39
-    Found 8-bit comparator equal for signal <cycle_counter[7]_GND_10_o_equal_8_o> created at line 56
-    Found 8-bit comparator not equal for signal <cycle_counter[7]_GND_10_o_equal_9_o> created at line 59
-    Found 32-bit comparator equal for signal <GND_10_o_GND_10_o_equal_12_o> created at line 70
+    Found 8-bit comparator equal for signal <cycle_counter[7]_GND_10_o_equal_8_o> created at line 59
+    Found 8-bit comparator not equal for signal <cycle_counter[7]_GND_10_o_equal_9_o> created at line 62
+    Found 32-bit comparator equal for signal <GND_10_o_GND_10_o_equal_12_o> created at line 73
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  11 D-type flip-flop(s).
 	inferred   4 Comparator(s).
-	inferred   3 Multiplexer(s).
+	inferred   4 Multiplexer(s).
 Unit <FF_REG> synthesized.
 
 Synthesizing Unit <TEMPLATE_DB_REG>.
@@ -762,14 +769,16 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  8192x32-bit dual-port RAM                             : 1
-# Adders/Subtractors                                   : 271
+# Adders/Subtractors                                   : 273
+ 1-bit adder                                           : 1
  10-bit adder                                          : 2
  6-bit adder                                           : 1
  7-bit adder                                           : 6
  8-bit adder                                           : 132
  8-bit subtractor                                      : 130
-# Registers                                            : 1834
- 1-bit register                                        : 1680
+ 9-bit subtractor                                      : 1
+# Registers                                            : 1835
+ 1-bit register                                        : 1681
  10-bit register                                       : 2
  128-bit register                                      : 4
  2-bit register                                        : 2
@@ -780,22 +789,21 @@ Macro Statistics
  8-bit register                                        : 133
 # Comparators                                          : 520
  3-bit comparator not equal                            : 1
- 32-bit comparator equal                               : 128
+ 32-bit comparator equal                               : 129
  6-bit comparator lessequal                            : 1
- 8-bit comparator equal                                : 261
+ 8-bit comparator equal                                : 260
  8-bit comparator lessequal                            : 1
  8-bit comparator not equal                            : 128
-# Multiplexers                                         : 807
+# Multiplexers                                         : 929
  1-bit 128-to-1 multiplexer                            : 1
  1-bit 2-to-1 multiplexer                              : 534
  128-bit 2-to-1 multiplexer                            : 1
  13-bit 23-to-1 multiplexer                            : 2
- 3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 2
  6-bit 2-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 2
- 7-bit 2-to-1 multiplexer                              : 132
- 8-bit 2-to-1 multiplexer                              : 131
+ 7-bit 2-to-1 multiplexer                              : 128
+ 8-bit 2-to-1 multiplexer                              : 258
 # FSMs                                                 : 5
 
 =========================================================================
@@ -835,11 +843,11 @@ INFO:Xst:3226 - The RAM <Mram_the_memory_core> will be implemented as a BLOCK RA
 Unit <BRAM> synthesized (advanced).
 
 Synthesizing (advanced) Unit <BRAM_CTRL>.
-The following registers are absorbed into counter <input_write_posA>: 1 register on signal <input_write_posA>.
+The following registers are absorbed into counter <input_vectors_written>: 1 register on signal <input_vectors_written>.
 The following registers are absorbed into counter <input_read_posA>: 1 register on signal <input_read_posA>.
+The following registers are absorbed into counter <input_write_posA>: 1 register on signal <input_write_posA>.
 The following registers are absorbed into counter <input_write_posB>: 1 register on signal <input_write_posB>.
 The following registers are absorbed into counter <input_read_posB>: 1 register on signal <input_read_posB>.
-The following registers are absorbed into counter <input_vectors_written>: 1 register on signal <input_vectors_written>.
 The following registers are absorbed into counter <input_vectors_read>: 1 register on signal <input_vectors_read>.
 Unit <BRAM_CTRL> synthesized (advanced).
 
@@ -847,9 +855,9 @@ Synthesizing (advanced) Unit <CENTRAL_FSM>.
 The following registers are absorbed into counter <cycle_length_1_counter>: 1 register on signal <cycle_length_1_counter>.
 Unit <CENTRAL_FSM> synthesized (advanced).
 
-Synthesizing (advanced) Unit <FF_REG>.
-The following registers are absorbed into counter <cycle_counter>: 1 register on signal <cycle_counter>.
-Unit <FF_REG> synthesized (advanced).
+Synthesizing (advanced) Unit <COUNTER_CTRL>.
+The following registers are absorbed into counter <counter_pulse_width>: 1 register on signal <counter_pulse_width>.
+Unit <COUNTER_CTRL> synthesized (advanced).
 
 Synthesizing (advanced) Unit <OUTPUT_BUFFER_CTRL>.
 The following registers are absorbed into counter <propagation_delay_counter>: 1 register on signal <propagation_delay_counter>.
@@ -872,30 +880,33 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  8192x32-bit dual-port block RAM                       : 1
-# Adders/Subtractors                                   : 130
+# Adders/Subtractors                                   : 259
+ 8-bit adder                                           : 128
  8-bit subtractor                                      : 130
-# Counters                                             : 141
+ 9-bit subtractor                                      : 1
+# Counters                                             : 14
+ 1-bit up counter                                      : 1
  10-bit up counter                                     : 2
  6-bit up counter                                      : 1
  7-bit up counter                                      : 6
- 8-bit up counter                                      : 132
-# Registers                                            : 2228
- Flip-Flops                                            : 2228
+ 8-bit up counter                                      : 4
+# Registers                                            : 3252
+ Flip-Flops                                            : 3252
 # Comparators                                          : 520
  3-bit comparator not equal                            : 1
- 32-bit comparator equal                               : 128
+ 32-bit comparator equal                               : 129
  6-bit comparator lessequal                            : 1
- 8-bit comparator equal                                : 261
+ 8-bit comparator equal                                : 260
  8-bit comparator lessequal                            : 1
  8-bit comparator not equal                            : 128
-# Multiplexers                                         : 541
+# Multiplexers                                         : 796
  1-bit 128-to-1 multiplexer                            : 1
  1-bit 2-to-1 multiplexer                              : 406
  128-bit 2-to-1 multiplexer                            : 1
  13-bit 23-to-1 multiplexer                            : 2
- 3-bit 2-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 2
  7-bit 2-to-1 multiplexer                              : 128
+ 8-bit 2-to-1 multiplexer                              : 256
 # FSMs                                                 : 5
 
 =========================================================================
@@ -904,64 +915,66 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <central_fsm0/FSM_0> on signal <PS[1:53]> with one-hot encoding.
------------------------------------------------------------------
+Optimizing FSM <central_fsm0/FSM_0> on signal <PS[1:55]> with one-hot encoding.
+-------------------------------------------------------------------
  State  | Encoding
------------------------------------------------------------------
- 000000 | 00000000000000000000000000000000000000000000000000001
- 000001 | 00000000000000000000000000000000000000000000000000010
- 000010 | 00000000000000000000000000000000000000000000000000100
- 010100 | 00000000000000000000000000000000000000000000000001000
- 001110 | 00000000000000000000000000000000000000000000000010000
- 001000 | 00000000000000000000000000000000000000000000000100000
- 011010 | 00000000000000000000000000000000000000000000001000000
- 110010 | 00000000000000000000000000000000000000000000010000000
- 011011 | 00000000000000000000000000000000000000000000100000000
- 101100 | 00000000000000000000000000000000000000000001000000000
- 110001 | 00000000000000000000000000000000000000000010000000000
- 000011 | 00000000000000000000000000000000000000000100000000000
- 000100 | 00000000000000000000000000000000000000001000000000000
- 000101 | 00000000000000000000000000000000000000010000000000000
- 000110 | 00000000000000000000000000000000000000100000000000000
- 000111 | 00000000000000000000000000000000000001000000000000000
- 110000 | 00000000000000000000000000000000000010000000000000000
- 001001 | 00000000000000000000000000000000000100000000000000000
- 001010 | 00000000000000000000000000000000001000000000000000000
- 001011 | 00000000000000000000000000000000010000000000000000000
- 001100 | 00000000000000000000000000000000100000000000000000000
- 001101 | 00000000000000000000000000000001000000000000000000000
- 001111 | 00000000000000000000000000000010000000000000000000000
- 010000 | 00000000000000000000000000000100000000000000000000000
- 010001 | 00000000000000000000000000001000000000000000000000000
- 010010 | 00000000000000000000000000010000000000000000000000000
- 010011 | 00000000000000000000000000100000000000000000000000000
- 010101 | 00000000000000000000000001000000000000000000000000000
- 010110 | 00000000000000000000000010000000000000000000000000000
- 010111 | 00000000000000000000000100000000000000000000000000000
- 011000 | 00000000000000000000001000000000000000000000000000000
- 011001 | 00000000000000000000010000000000000000000000000000000
- 011100 | 00000000000000000000100000000000000000000000000000000
- 011101 | 00000000000000000001000000000000000000000000000000000
- 011110 | 00000000000000000010000000000000000000000000000000000
- 011111 | 00000000000000000100000000000000000000000000000000000
- 101010 | 00000000000000001000000000000000000000000000000000000
- 100000 | 00000000000000010000000000000000000000000000000000000
- 100001 | 00000000000000100000000000000000000000000000000000000
- 100010 | 00000000000001000000000000000000000000000000000000000
- 100011 | 00000000000010000000000000000000000000000000000000000
- 100100 | 00000000000100000000000000000000000000000000000000000
- 100101 | 00000000001000000000000000000000000000000000000000000
- 100110 | 00000000010000000000000000000000000000000000000000000
- 100111 | 00000000100000000000000000000000000000000000000000000
- 101000 | 00000001000000000000000000000000000000000000000000000
- 101001 | 00000010000000000000000000000000000000000000000000000
- 101011 | 00000100000000000000000000000000000000000000000000000
- 101101 | 00001000000000000000000000000000000000000000000000000
- 101110 | 00010000000000000000000000000000000000000000000000000
- 101111 | 00100000000000000000000000000000000000000000000000000
- 110011 | 01000000000000000000000000000000000000000000000000000
- 110100 | 10000000000000000000000000000000000000000000000000000
------------------------------------------------------------------
+-------------------------------------------------------------------
+ 000000 | 0000000000000000000000000000000000000000000000000000001
+ 000001 | 0000000000000000000000000000000000000000000000000000010
+ 000010 | 0000000000000000000000000000000000000000000000000000100
+ 010100 | 0000000000000000000000000000000000000000000000000001000
+ 001110 | 0000000000000000000000000000000000000000000000000010000
+ 001000 | 0000000000000000000000000000000000000000000000000100000
+ 011010 | 0000000000000000000000000000000000000000000000001000000
+ 110100 | 0000000000000000000000000000000000000000000000010000000
+ 011011 | 0000000000000000000000000000000000000000000000100000000
+ 101101 | 0000000000000000000000000000000000000000000001000000000
+ 110011 | 0000000000000000000000000000000000000000000010000000000
+ 000011 | 0000000000000000000000000000000000000000000100000000000
+ 000100 | 0000000000000000000000000000000000000000001000000000000
+ 000101 | 0000000000000000000000000000000000000000010000000000000
+ 000110 | 0000000000000000000000000000000000000000100000000000000
+ 000111 | 0000000000000000000000000000000000000001000000000000000
+ 110010 | 0000000000000000000000000000000000000010000000000000000
+ 001001 | 0000000000000000000000000000000000000100000000000000000
+ 001010 | 0000000000000000000000000000000000001000000000000000000
+ 001011 | 0000000000000000000000000000000000010000000000000000000
+ 001100 | 0000000000000000000000000000000000100000000000000000000
+ 001101 | 0000000000000000000000000000000001000000000000000000000
+ 001111 | 0000000000000000000000000000000010000000000000000000000
+ 010000 | 0000000000000000000000000000000100000000000000000000000
+ 010001 | 0000000000000000000000000000001000000000000000000000000
+ 010010 | 0000000000000000000000000000010000000000000000000000000
+ 010011 | 0000000000000000000000000000100000000000000000000000000
+ 010101 | 0000000000000000000000000001000000000000000000000000000
+ 010110 | 0000000000000000000000000010000000000000000000000000000
+ 010111 | 0000000000000000000000000100000000000000000000000000000
+ 011000 | 0000000000000000000000001000000000000000000000000000000
+ 011001 | 0000000000000000000000010000000000000000000000000000000
+ 011100 | 0000000000000000000000100000000000000000000000000000000
+ 011101 | 0000000000000000000001000000000000000000000000000000000
+ 011110 | 0000000000000000000010000000000000000000000000000000000
+ 011111 | 0000000000000000000100000000000000000000000000000000000
+ 100000 | 0000000000000000001000000000000000000000000000000000000
+ 101011 | 0000000000000000010000000000000000000000000000000000000
+ 100001 | 0000000000000000100000000000000000000000000000000000000
+ 100010 | 0000000000000001000000000000000000000000000000000000000
+ 100011 | 0000000000000010000000000000000000000000000000000000000
+ 100100 | 0000000000000100000000000000000000000000000000000000000
+ 100101 | 0000000000001000000000000000000000000000000000000000000
+ 100110 | 0000000000010000000000000000000000000000000000000000000
+ 100111 | 0000000000100000000000000000000000000000000000000000000
+ 101000 | 0000000001000000000000000000000000000000000000000000000
+ 101001 | 0000000010000000000000000000000000000000000000000000000
+ 101010 | 0000000100000000000000000000000000000000000000000000000
+ 101100 | 0000001000000000000000000000000000000000000000000000000
+ 101110 | 0000010000000000000000000000000000000000000000000000000
+ 101111 | 0000100000000000000000000000000000000000000000000000000
+ 110000 | 0001000000000000000000000000000000000000000000000000000
+ 110001 | 0010000000000000000000000000000000000000000000000000000
+ 110101 | 0100000000000000000000000000000000000000000000000000000
+ 110110 | 1000000000000000000000000000000000000000000000000000000
+-------------------------------------------------------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <central_fsm0/bram_ctrl0/FSM_1> on signal <PS[1:22]> with one-hot encoding.
 ---------------------------------
@@ -1036,13 +1049,14 @@ Optimizing FSM <central_fsm0/uart_ctrl_0/uart_rx0/FSM_3> on signal <PS[1:4]> wit
  1010  | 1010
  1011  | 1011
 -------------------
-INFO:Xst:2261 - The FF/Latch <capture_sram_data> in Unit <CENTRAL_FSM> is equivalent to the following FF/Latch, which will be removed : <PS_FSM_FFd3> 
 
 Optimizing unit <TOP_MODULE> ...
 
 Optimizing unit <CENTRAL_FSM> ...
 
 Optimizing unit <BRAM_CTRL> ...
+
+Optimizing unit <COUNTER_CTRL> ...
 
 Optimizing unit <DUT_CTRL> ...
 
@@ -1125,10 +1139,12 @@ INFO:Xst:2261 - The FF/Latch <central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_co
    <central_fsm0/dut_ctrl0/ff_regs<94>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<95>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<96>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<97>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<98>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<99>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<100>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<101>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<102>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<103>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<104>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<105>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<106>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<107>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<108>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<109>/ff_reg0/cycle_counter_7>
    <central_fsm0/dut_ctrl0/ff_regs<110>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<111>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<112>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<113>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<114>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<115>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<116>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<117>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<118>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<119>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<120>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<121>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<122>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<123>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<124>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<125>/ff_reg0/cycle_counter_7>
    <central_fsm0/dut_ctrl0/ff_regs<126>/ff_reg0/cycle_counter_7> <central_fsm0/dut_ctrl0/ff_regs<127>/ff_reg0/cycle_counter_7>
+INFO:Xst:3203 - The FF/Latch <central_fsm0/bram_ctrl0/input_write_posB_0> in Unit <TOP_MODULE> is the opposite to the following FF/Latch, which will be removed : <central_fsm0/bram_ctrl0/input_write_posA_0> 
+INFO:Xst:3203 - The FF/Latch <central_fsm0/bram_ctrl0/input_read_posB_0> in Unit <TOP_MODULE> is the opposite to the following FF/Latch, which will be removed : <central_fsm0/bram_ctrl0/input_read_posA_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TOP_MODULE, actual ratio is 70.
+Found area constraint ratio of 100 (+ 5) on block TOP_MODULE, actual ratio is 60.
 FlipFlop central_fsm0/dut_ctrl0/template_regs<127>/Q has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/dut_ctrl0/template_regs<126>/Q has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/dut_ctrl0/template_regs<125>/Q has been replicated 1 time(s) to handle iob=true attribute.
@@ -1269,8 +1285,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2553
- Flip-Flops                                            : 2553
+# Registers                                            : 2555
+ Flip-Flops                                            : 2555
 
 =========================================================================
 
@@ -1293,25 +1309,25 @@ Top Level Output File Name         : TOP_MODULE.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4201
+# BELS                             : 3545
 #      GND                         : 1
-#      INV                         : 6
-#      LUT1                        : 25
-#      LUT2                        : 143
-#      LUT3                        : 839
-#      LUT4                        : 569
-#      LUT5                        : 512
-#      LUT6                        : 1732
-#      MUXCY                       : 53
+#      INV                         : 9
+#      LUT1                        : 32
+#      LUT2                        : 146
+#      LUT3                        : 843
+#      LUT4                        : 312
+#      LUT5                        : 389
+#      LUT6                        : 1454
+#      MUXCY                       : 46
 #      MUXF7                       : 260
 #      VCC                         : 1
-#      XORCY                       : 60
-# FlipFlops/Latches                : 2554
-#      FD                          : 10
-#      FDE                         : 39
-#      FDR                         : 477
-#      FDRE                        : 1762
+#      XORCY                       : 52
+# FlipFlops/Latches                : 2556
+#      FD                          : 18
+#      FDR                         : 609
+#      FDRE                        : 1652
 #      FDS                         : 265
+#      FDSE                        : 11
 #      ODDR2                       : 1
 # RAMS                             : 16
 #      RAMB16BWER                  : 16
@@ -1329,16 +1345,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2292  out of  18224    12%  
- Number of Slice LUTs:                 3826  out of   9112    41%  
-    Number used as Logic:              3826  out of   9112    41%  
+ Number of Slice Registers:            2294  out of  18224    12%  
+ Number of Slice LUTs:                 3185  out of   9112    34%  
+    Number used as Logic:              3185  out of   9112    34%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4466
-   Number with an unused Flip Flop:    2174  out of   4466    48%  
-   Number with an unused LUT:           640  out of   4466    14%  
-   Number of fully used LUT-FF pairs:  1652  out of   4466    36%  
-   Number of unique control sets:       159
+ Number of LUT Flip Flop pairs used:   3766
+   Number with an unused Flip Flop:    1472  out of   3766    39%  
+   Number with an unused LUT:           581  out of   3766    15%  
+   Number of fully used LUT-FF pairs:  1713  out of   3766    45%  
+   Number of unique control sets:        31
 
 IO Utilization: 
  Number of IOs:                         143
@@ -1371,7 +1387,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 2571  |
+CLK                                | BUFGP                  | 2573  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1382,9 +1398,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.310ns (Maximum Frequency: 158.480MHz)
-   Minimum input arrival time before clock: 7.154ns
-   Maximum output required time after clock: 5.298ns
+   Minimum period: 6.662ns (Maximum Frequency: 150.112MHz)
+   Minimum input arrival time before clock: 7.597ns
+   Maximum output required time after clock: 5.318ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1393,32 +1409,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.310ns (frequency: 158.480MHz)
-  Total number of paths / destination ports: 44260 / 7301
+  Clock period: 6.662ns (frequency: 150.112MHz)
+  Total number of paths / destination ports: 41048 / 6967
 -------------------------------------------------------------------------
-Delay:               6.310ns (Levels of Logic = 2)
-  Source:            central_fsm0/PS_FSM_FFd6 (FF)
-  Destination:       central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_9 (FF)
+Delay:               6.662ns (Levels of Logic = 5)
+  Source:            central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0 (FF)
+  Destination:       central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_7 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: central_fsm0/PS_FSM_FFd6 to central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_9
+  Data Path: central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0 to central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             59   0.447   1.607  central_fsm0/PS_FSM_FFd6 (central_fsm0/PS_FSM_FFd6)
-     LUT2:I1->O         2467   0.205   2.560  central_fsm0/rst1 (central_fsm0/rst)
-     LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o)
-     FDRE:R                    0.430          central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_0
+     FD:C->Q             394   0.447   2.184  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0)
+     LUT4:I2->O            1   0.203   0.808  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o2 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o2)
+     LUT5:I2->O            9   0.205   0.830  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o4 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o)
+     LUT6:I5->O            3   0.205   0.651  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT821 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT82)
+     LUT3:I2->O            2   0.205   0.617  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT831 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT83)
+     LUT6:I5->O            1   0.205   0.000  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT81 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/GND_10_o_GND_10_o_mux_4_OUT<7>)
+     FD:D                      0.102          central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_7
     ----------------------------------------
-    Total                      6.310ns (1.287ns logic, 5.023ns route)
-                                       (20.4% logic, 79.6% route)
+    Total                      6.662ns (1.572ns logic, 5.090ns route)
+                                       (23.6% logic, 76.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 2906 / 2860
+  Total number of paths / destination ports: 2837 / 2823
 -------------------------------------------------------------------------
-Offset:              7.154ns (Levels of Logic = 3)
+Offset:              7.597ns (Levels of Logic = 3)
   Source:            RST (PAD)
   Destination:       central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_9 (FF)
   Destination Clock: CLK rising
@@ -1427,19 +1446,19 @@ Offset:              7.154ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            54   1.222   1.678  RST_IBUF (RST_IBUF)
-     LUT2:I0->O         2467   0.203   2.560  central_fsm0/rst1 (central_fsm0/rst)
-     LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_294_o)
+     IBUF:I->O           248   1.222   2.170  RST_IBUF (RST_IBUF)
+     LUT2:I0->O         2263   0.203   2.511  central_fsm0/rst1 (central_fsm0/bram_ctrl0/Mcount_input_vectors_read_val)
+     LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_310_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_310_o)
      FDRE:R                    0.430          central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_0
     ----------------------------------------
-    Total                      7.154ns (2.060ns logic, 5.094ns route)
-                                       (28.8% logic, 71.2% route)
+    Total                      7.597ns (2.060ns logic, 5.537ns route)
+                                       (27.1% logic, 72.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 282 / 138
 -------------------------------------------------------------------------
-Offset:              5.298ns (Levels of Logic = 2)
+Offset:              5.318ns (Levels of Logic = 2)
   Source:            central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (FF)
   Destination:       STCP (PAD)
   Source Clock:      CLK rising
@@ -1448,12 +1467,12 @@ Offset:              5.298ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             22   0.447   1.498  central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2)
+     FDR:C->Q             23   0.447   1.518  central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2)
      LUT6:I0->O            1   0.203   0.579  central_fsm0/output_buffer_ctrl0/Mmux_STCP11 (STCP_OBUF)
      OBUF:I->O                 2.571          STCP_OBUF (STCP)
     ----------------------------------------
-    Total                      5.298ns (3.221ns logic, 2.077ns route)
-                                       (60.8% logic, 39.2% route)
+    Total                      5.318ns (3.221ns logic, 2.097ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 
@@ -1465,20 +1484,20 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.310|         |         |         |
+CLK            |    6.662|         |    1.097|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 28.00 secs
-Total CPU time to Xst completion: 27.71 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 35.14 secs
  
 --> 
 
-Total memory usage is 308780 kilobytes
+Total memory usage is 338220 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
-Number of infos    :   10 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

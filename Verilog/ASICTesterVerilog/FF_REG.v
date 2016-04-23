@@ -43,6 +43,9 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 			if (EN) begin
 				cycle_counter <= cycle_counter + 7'd1;
 			end
+			else begin
+				cycle_counter <= 7'd1;
+			end
 		end
 	end
 	

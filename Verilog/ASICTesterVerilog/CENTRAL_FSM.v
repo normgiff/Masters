@@ -47,7 +47,7 @@ module CENTRAL_FSM(CLK, RST,
 	
 	// Present-state logic.
 	always@(posedge CLK) begin
-		if (rst) begin
+		if (RST) begin
 			PS <= IDLE;
 		end
 		else begin
@@ -81,7 +81,7 @@ module CENTRAL_FSM(CLK, RST,
 			
 			if (perform_test) begin
 			
-				if (cycle_length_1_counter == cycle_length_1) begin
+				if (cycle_length_1_counter == (cycle_length_1 - 1)) begin
 					cycle_length_1_counter <= 8'b0;
 					end_of_test_cycle <= 1'b1;
 				end
@@ -101,7 +101,7 @@ module CENTRAL_FSM(CLK, RST,
 							turn_on_sram <= 1'b0;
 						end
 						
-						cycle_length_1 - 8'd1: begin
+						cycle_length_1 - 8'd2: begin
 							// Go to the next counter address right at the end of a test cycle.
 							// Also, transfer the new signals.
 							next_address <= 1'b1;
@@ -380,6 +380,12 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			LOAD_INPUT_VECTOR: begin
+				NS = TRANSFER_INPUT_VECTOR;
+			end
+			
+			TRANSFER_INPUT_VECTOR: begin
+				// Must transfer the input vector before we load
+				// the FF registers
 				if (perform_test) begin
 					NS = CHECK_INPUT_VECTOR;
 				end
@@ -440,10 +446,10 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			TRANSFER_VECTORS: begin
-				NS = APPLY_INPUTS;
+				NS = CHECK_FOR_MORE_INPUT_VECTORS;
 			end
 			
-			APPLY_INPUTS: begin
+			CHECK_FOR_MORE_INPUT_VECTORS: begin
 				if (more_to_read) begin
 					NS = READ_INPUT_VECTOR_1;				
 				end
@@ -452,21 +458,22 @@ module CENTRAL_FSM(CLK, RST,
 						NS = TESTS_COMPLETED;
 					end
 					else begin
-						NS = APPLY_INPUTS;
+						NS = CHECK_FOR_MORE_INPUT_VECTORS;
 					end
 				end
 			end
 			
 			CHECK_INPUT_VECTOR: begin
-				if (template_change) begin
+				if (template_change && end_of_test_cycle) begin
 					// Halt real-time testing, load the new configuration bits.
-					// The new input vector has already been loaded.
+					// The new input vector has already been loaded and transferred.
 					NS = READ_TEMPLATE_VECTOR_1;
 				end
 				else begin
-					// Transfer the new input vector once the test cycle is complete.
-					if (transfer_new_signals) begin
-						NS = APPLY_INPUTS;
+					// Transfer the new signal bits to the FF registers
+					// once the test cycle is complete.
+					if (!template_change && transfer_new_signals) begin
+						NS = TRANSFER_VECTORS;
 					end
 					else begin
 						NS = CHECK_INPUT_VECTOR;
@@ -494,12 +501,16 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			LOAD_SRAM_DATA_3: begin
+				NS = LOAD_SRAM_DATA_4;
+			end
+			
+			LOAD_SRAM_DATA_4: begin
 				// Wait for the SRAM data to be loaded.
 				if (output_buffer_ctrl_ready) begin
 					NS = TRANSMIT_SRAM_DATA;
 				end
 				else begin
-					NS = LOAD_SRAM_DATA_3; 
+					NS = LOAD_SRAM_DATA_4; 
 				end
 			end
 			
@@ -650,7 +661,8 @@ module CENTRAL_FSM(CLK, RST,
 	
 	BRAM_CTRL bram_ctrl0(
 								.CLK(CLK), 
-								.RST(rst), 
+								.RST(RST), 
+								.RESET_READ_COUNTER(soft_reset),
 								.INPUT_WRITE(input_write), 
 								.TEMPLATE_WRITE(template_write), 
 								.FF_WRITE(ff_write), 
@@ -695,7 +707,7 @@ module CENTRAL_FSM(CLK, RST,
 				end
 				
 				default: begin
-					if (next_address) begin
+					if (next_address && more_to_read) begin
 						advance_counter <= 1'b1;
 					end
 				end
@@ -718,8 +730,10 @@ module CENTRAL_FSM(CLK, RST,
 	wire [127:0] bus128;
 	reg sig_load;
 	reg sig_transfer;
-	reg ff_load;
-	reg ff_transfer;
+	reg ff_load_ff;
+	reg ff_transfer_ff;
+	reg ff_load_sig;
+	reg ff_transfer_sig;
 	reg template_load;
 	reg template_transfer;
 	reg cycle_load;
@@ -733,7 +747,7 @@ module CENTRAL_FSM(CLK, RST,
 	
 	// Logic to store cycle configuration parameters.
 	always@(posedge CLK) begin
-		if (rst) begin
+		if (RST) begin
 			leading_edge_1 <= 7'b0;
 			trailing_edge_1 <= 7'b0;
 			cycle_length_1 <= 8'b0;
@@ -751,11 +765,11 @@ module CENTRAL_FSM(CLK, RST,
 		if (rst) begin
 			perform_test <= 1'b0;
 		end
-		else if (PS == APPLY_INPUTS) begin
+		else if (PS == TRANSFER_VECTORS) begin // should be TRANSFER_VECTORS
 			perform_test <= 1'b1;
 		end
 		else if (PS == CHECK_INPUT_VECTOR) begin
-			if (template_change) begin
+			if (template_change && end_of_test_cycle) begin
 				perform_test <= 1'b0;
 			end
 		end
@@ -764,8 +778,10 @@ module CENTRAL_FSM(CLK, RST,
 	always@(*) begin
 		sig_load = 1'b0;
 		sig_transfer = 1'b0;
-		ff_load = 1'b0;
-		ff_transfer = 1'b0;
+		ff_load_ff = 1'b0;
+		ff_transfer_ff = 1'b0;
+		ff_load_sig = 1'b0;
+		ff_transfer_sig = 1'b0;
 		template_load = 1'b0;
 		template_transfer = 1'b0;
 		cycle_load = 1'b0;
@@ -785,14 +801,27 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			LOAD_FF_VECTOR: begin
-				ff_load = 1'b1;
+				ff_load_ff = 1'b1;
+				ff_load_sig = 1'b1;
+			end
+			
+			CHECK_INPUT_VECTOR: begin
+				// Ready the FF registers, 
+				// whether or not we halt real-time testing.
+				if (NS != CHECK_INPUT_VECTOR) begin
+					ff_load_sig = 1'b1;
+				end
+			end
+			
+			TRANSFER_INPUT_VECTOR: begin
+				sig_transfer = 1'b1;
 			end
 			
 			TRANSFER_VECTORS: begin
-				sig_transfer = 1'b1;
 				template_transfer = 1'b1;
 				cycle_transfer = 1'b1;
-				ff_transfer = 1'b1;
+				ff_transfer_ff = 1'b1;
+				ff_transfer_sig = 1'b1;
 			end
 			
 		endcase
@@ -805,8 +834,10 @@ module CENTRAL_FSM(CLK, RST,
 							 .BUS128(bus128), 
 							 .SIG_LOAD(sig_load), 
 							 .SIG_TRANSFER(sig_transfer), 
-							 .FF_LOAD(ff_load), 
-							 .FF_TRANSFER(ff_transfer), 
+							 .FF_LOAD_FF(ff_load_ff), 
+							 .FF_TRANSFER_FF(ff_transfer_ff), 
+							 .FF_LOAD_SIG(ff_load_sig), 
+							 .FF_TRANSFER_SIG(ff_transfer_sig), 
 							 .TEMPLATE_LOAD(template_load), 
 							 .TEMPLATE_TRANSFER(template_transfer),
 							 .CYCLE_LOAD(cycle_load), 
@@ -894,6 +925,14 @@ module CENTRAL_FSM(CLK, RST,
 					// Set to read mode.
 					we_bar_in <= 1'b1;
 				end
+				
+				TRANSMIT_SRAM_DATA: begin
+					// We can turn off the SRAM blocks now, as
+					// the data has been captured.
+					oe_bar_in <= 1'b1;
+					cs_bar_in <= 1'b1;
+					we_bar_in <= 1'b0;
+				end	
 
 				default: begin
 					if (perform_test) begin
@@ -1101,6 +1140,8 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			TRANSMIT_SRAM_DATA: begin
+				rxdata_retrieved = 1'b1;
+			
 				txdata = sram_data;
 				txcapture = 1'b1;
 			end
@@ -1115,11 +1156,17 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			UART_CAPTURE_UNKNOWN_CODE: begin
+				// Clear the read buffer.
+				rxdata_retrieved = 1'b1;
+			
 				txdata = {120'b0, UNKNOWN_CODE};
 				txcapture = 1'b1;
 			end
 			
 			UART_CAPTURE_NO_TESTS: begin
+				// Clear the read buffer.
+				rxdata_retrieved = 1'b1;
+			
 				txdata = {120'b0, NO_INPUT_VECTORS};
 				txcapture = 1'b1;
 			end

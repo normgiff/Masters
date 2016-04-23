@@ -31,7 +31,7 @@
  *                        Reading again will cause the first input vector to be read.
  * 
  */
-module BRAM_CTRL(CLK, RST, 
+module BRAM_CTRL(CLK, RST, RESET_READ_COUNTER,
 					  INPUT_WRITE, TEMPLATE_WRITE, FF_WRITE, TC_WRITE,
 					  WRITE_DATA,
 					  TEMPLATE_READ, TEMPLATE_BITS, INPUT_READ, FF_READ, TC_READ,
@@ -43,6 +43,7 @@ module BRAM_CTRL(CLK, RST,
 	
 	input CLK;
 	input RST;
+	input RESET_READ_COUNTER;
 	
 	input INPUT_WRITE;
 	input TEMPLATE_WRITE;
@@ -233,6 +234,9 @@ module BRAM_CTRL(CLK, RST,
 			input_vectors_written <= 8'd0;
 			input_vectors_read <= 8'd0;
 		end
+		else if (RESET_READ_COUNTER) begin
+			input_vectors_read <= 8'd0;
+		end
 		else begin
 			if (PS == INPUT_WRITE_2) begin
 				input_vectors_written <= input_vectors_written + 8'd1;
@@ -244,14 +248,15 @@ module BRAM_CTRL(CLK, RST,
 			end
 			
 			if (input_vectors_read == input_vectors_written) begin
-				input_vectors_read <= 8'd0;
+				 // Saturate the read count.
+				input_vectors_read <= input_vectors_read;
 			end
 		end
 	end
 	
 	// Logic to update read and write addresses for input vectors.
 	always@(posedge CLK) begin
-		if (RST) begin
+		if (RST || RESET_READ_COUNTER) begin
 			input_write_posA <= INPUT_START_ADDR_A;
 			input_read_posA <= INPUT_START_ADDR_A;
 			input_write_posB <= INPUT_START_ADDR_B;
@@ -631,7 +636,7 @@ module BRAM_CTRL(CLK, RST,
 			curr_temp <= 3'd0;
 		end
 		else if (PS == INPUT_READ_2) begin
-			curr_temp <= READ_DATA[127:126];
+			curr_temp <= dout[63:62];
 		end
 	end
 	
@@ -639,11 +644,12 @@ module BRAM_CTRL(CLK, RST,
 	always@(posedge CLK) begin
 		if (RST) begin
 			prev_temp <= RESET_TEMPLATE; 
+			TEMPLATE_CHANGE <= 1'b0;
 		end
 		else if (PS == CHECK_TEMPLATE) begin
+			prev_temp <= curr_temp;
 			if (prev_temp[2] == 1'b1 || prev_temp != curr_temp) begin
 				TEMPLATE_CHANGE <= 1'b1;
-				prev_temp <= curr_temp;
 			end
 			else begin
 				TEMPLATE_CHANGE <= 1'b0;

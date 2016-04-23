@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/TOP_MODULE_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TOP_MODULE_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="52" />
+   <wvobject fp_name="/TOP_MODULE_TB/SIGNALS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SIGNALS[127:0]</obj_property>
+      <obj_property name="ObjectShortName">SIGNALS[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/PS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PS[5:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/NS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NS[5:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/read_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bus128" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bus128[127:0]</obj_property>
+      <obj_property name="ObjectShortName">bus128[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/write_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bram_ctrl0/TEMPLATE_CHANGE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TEMPLATE_CHANGE</obj_property>
+      <obj_property name="ObjectShortName">TEMPLATE_CHANGE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bram_ctrl0/input_vectors_written" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_vectors_written[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_vectors_written[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bram_ctrl0/input_vectors_read" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_vectors_read[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_vectors_read[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bram_ctrl0/MORE_TO_READ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MORE_TO_READ</obj_property>
+      <obj_property name="ObjectShortName">MORE_TO_READ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bram_ctrl0/prev_temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">prev_temp[2:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_temp[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/bram_ctrl0/curr_temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">curr_temp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_temp[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/cycle_length_1_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cycle_length_1_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_length_1_counter[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/next_address" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">next_address</obj_property>
+      <obj_property name="ObjectShortName">next_address</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/turn_on_sram" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">turn_on_sram</obj_property>
+      <obj_property name="ObjectShortName">turn_on_sram</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/transfer_new_signals" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">transfer_new_signals</obj_property>
+      <obj_property name="ObjectShortName">transfer_new_signals</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/end_of_test_cycle" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">end_of_test_cycle</obj_property>
+      <obj_property name="ObjectShortName">end_of_test_cycle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/perform_test" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">perform_test</obj_property>
+      <obj_property name="ObjectShortName">perform_test</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/leading_edge_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leading_edge_1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">leading_edge_1[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/trailing_edge_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">trailing_edge_1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">trailing_edge_1[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/cycle_length_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cycle_length_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_length_1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/leading_edge_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leading_edge_2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">leading_edge_2[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\signal_regs[1] /RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\signal_regs[1] /LOAD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LOAD</obj_property>
+      <obj_property name="ObjectShortName">LOAD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\signal_regs[1] /TRANSFER" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TRANSFER</obj_property>
+      <obj_property name="ObjectShortName">TRANSFER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\signal_regs[1] /D" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D</obj_property>
+      <obj_property name="ObjectShortName">D</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\signal_regs[1] /Q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\signal_regs[1] /internal_q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">internal_q</obj_property>
+      <obj_property name="ObjectShortName">internal_q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /EN_FF_LOGIC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EN_FF_LOGIC</obj_property>
+      <obj_property name="ObjectShortName">EN_FF_LOGIC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /FF" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FF</obj_property>
+      <obj_property name="ObjectShortName">FF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /D" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D</obj_property>
+      <obj_property name="ObjectShortName">D</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /TEST_CYCLE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TEST_CYCLE</obj_property>
+      <obj_property name="ObjectShortName">TEST_CYCLE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /Q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /buffer_data" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">buffer_data</obj_property>
+      <obj_property name="ObjectShortName">buffer_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /buffer_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">buffer_out</obj_property>
+      <obj_property name="ObjectShortName">buffer_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_data" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ff_data</obj_property>
+      <obj_property name="ObjectShortName">ff_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ff_out</obj_property>
+      <obj_property name="ObjectShortName">ff_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/EN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EN</obj_property>
+      <obj_property name="ObjectShortName">EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/LEADING_EDGE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LEADING_EDGE[6:0]</obj_property>
+      <obj_property name="ObjectShortName">LEADING_EDGE[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/TRAILING_EDGE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">TRAILING_EDGE[6:0]</obj_property>
+      <obj_property name="ObjectShortName">TRAILING_EDGE[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/CYCLE_LENGTH" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CYCLE_LENGTH[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CYCLE_LENGTH[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/D" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D</obj_property>
+      <obj_property name="ObjectShortName">D</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/FF" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FF</obj_property>
+      <obj_property name="ObjectShortName">FF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/Q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/cycle_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cycle_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_counter[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/L_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">L_reg</obj_property>
+      <obj_property name="ObjectShortName">L_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/uut/central_fsm0/dut_ctrl0/\ff_regs[1] /ff_reg0/r0_val" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r0_val</obj_property>
+      <obj_property name="ObjectShortName">r0_val</obj_property>
+   </wvobject>
+</wave_config>
