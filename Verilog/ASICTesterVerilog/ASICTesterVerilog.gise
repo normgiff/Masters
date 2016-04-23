@@ -245,6 +245,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BRAM.v"/>
@@ -283,6 +284,7 @@
     <transform xil_pn:end_ts="1461118181" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2818766997540115252" xil_pn:start_ts="1461118181">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1461120173" xil_pn:in_ck="-657939433542968839" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1461120173">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -324,6 +326,7 @@
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="UART_CTRL_TB_beh.prj"/>
@@ -352,7 +355,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

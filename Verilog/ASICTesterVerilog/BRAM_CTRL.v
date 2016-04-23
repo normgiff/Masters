@@ -64,7 +64,7 @@ module BRAM_CTRL(CLK, RST,
 	output MORE_TO_READ;
 	
 	assign READY = (PS == IDLE);
-	assign MORE_TO_READ = (PS == IDLE) && (input_vectors_written == input_vectors_read);
+	assign MORE_TO_READ = (input_vectors_written != input_vectors_read);
 	
 	wire write_en = PS == INPUT_WRITE_1 || PS == INPUT_WRITE_2 || 
 						 PS == TEMPLATE_WRITE_1 || PS == TEMPLATE_WRITE_2 || 
