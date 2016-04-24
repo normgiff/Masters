@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: TOP_MODULE.prj
 
@@ -140,7 +140,7 @@ Parsing module <BRAM_CTRL>.
 Parsing verilog file "BRAM_CTRL_PARAMS.v" included at line 42.
 Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\CENTRAL_FSM.v" into library work
 Parsing module <CENTRAL_FSM>.
-Parsing verilog file "CENTRAL_FSM_PARAMS.v" included at line 43.
+Parsing verilog file "CENTRAL_FSM_PARAMS.v" included at line 57.
 Analyzing Verilog file "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TOP_MODULE.v" into library work
 Parsing module <TOP_MODULE>.
 
@@ -299,14 +299,14 @@ Synthesizing Unit <CENTRAL_FSM>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_6_OUT> created at line 84.
-    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_9_OUT> created at line 98.
-    Found 8-bit subtractor for signal <cycle_length_1[7]_GND_2_o_sub_10_OUT> created at line 104.
-    Found 8-bit adder for signal <cycle_length_1_counter[7]_GND_2_o_add_7_OUT> created at line 89.
-    Found 32-bit comparator equal for signal <GND_2_o_GND_2_o_equal_7_o> created at line 84
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_11_o> created at line 93
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_12_o> created at line 98
-    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_cycle_length_1[7]_equal_13_o> created at line 104
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_6_OUT> created at line 98.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_9_OUT> created at line 112.
+    Found 8-bit subtractor for signal <cycle_length_1[7]_GND_2_o_sub_10_OUT> created at line 118.
+    Found 8-bit adder for signal <cycle_length_1_counter[7]_GND_2_o_add_7_OUT> created at line 103.
+    Found 32-bit comparator equal for signal <GND_2_o_GND_2_o_equal_7_o> created at line 98
+    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_11_o> created at line 107
+    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_GND_2_o_equal_12_o> created at line 112
+    Found 8-bit comparator equal for signal <cycle_length_1_counter[7]_cycle_length_1[7]_equal_13_o> created at line 118
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  51 D-type flip-flop(s).
@@ -545,12 +545,9 @@ Unit <BRAM> synthesized.
 Synthesizing Unit <COUNTER_CTRL>.
     Related source file is "C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\COUNTER_CTRL.v".
     Found 1-bit register for signal <COUNTER_RST>.
-    Found 1-bit register for signal <counter_pulse_width>.
     Found 1-bit register for signal <counter_clock_oddr2>.
-    Found 1-bit adder for signal <counter_pulse_width_PWR_7_o_add_2_OUT<0>> created at line 47.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   3 D-type flip-flop(s).
+	inferred   2 D-type flip-flop(s).
 Unit <COUNTER_CTRL> synthesized.
 
 Synthesizing Unit <DUT_CTRL>.
@@ -769,16 +766,15 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  8192x32-bit dual-port RAM                             : 1
-# Adders/Subtractors                                   : 273
- 1-bit adder                                           : 1
+# Adders/Subtractors                                   : 272
  10-bit adder                                          : 2
  6-bit adder                                           : 1
  7-bit adder                                           : 6
  8-bit adder                                           : 132
  8-bit subtractor                                      : 130
  9-bit subtractor                                      : 1
-# Registers                                            : 1835
- 1-bit register                                        : 1681
+# Registers                                            : 1834
+ 1-bit register                                        : 1680
  10-bit register                                       : 2
  128-bit register                                      : 4
  2-bit register                                        : 2
@@ -855,10 +851,6 @@ Synthesizing (advanced) Unit <CENTRAL_FSM>.
 The following registers are absorbed into counter <cycle_length_1_counter>: 1 register on signal <cycle_length_1_counter>.
 Unit <CENTRAL_FSM> synthesized (advanced).
 
-Synthesizing (advanced) Unit <COUNTER_CTRL>.
-The following registers are absorbed into counter <counter_pulse_width>: 1 register on signal <counter_pulse_width>.
-Unit <COUNTER_CTRL> synthesized (advanced).
-
 Synthesizing (advanced) Unit <OUTPUT_BUFFER_CTRL>.
 The following registers are absorbed into counter <propagation_delay_counter>: 1 register on signal <propagation_delay_counter>.
 The following registers are absorbed into counter <serial_counter>: 1 register on signal <serial_counter>.
@@ -884,8 +876,7 @@ Macro Statistics
  8-bit adder                                           : 128
  8-bit subtractor                                      : 130
  9-bit subtractor                                      : 1
-# Counters                                             : 14
- 1-bit up counter                                      : 1
+# Counters                                             : 13
  10-bit up counter                                     : 2
  6-bit up counter                                      : 1
  7-bit up counter                                      : 6
@@ -1274,8 +1265,8 @@ FlipFlop central_fsm0/dut_ctrl0/template_regs<2>/Q has been replicated 1 time(s)
 FlipFlop central_fsm0/dut_ctrl0/template_regs<1>/Q has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/dut_ctrl0/template_regs<0>/Q has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/oe_bar_in has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop central_fsm0/cs_bar_in has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop central_fsm0/we_bar_in has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/cs_bar_in has been replicated 4 time(s) to handle iob=true attribute.
+FlipFlop central_fsm0/we_bar_in has been replicated 4 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/counter_ctrl0/COUNTER_RST has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop central_fsm0/vt_en has been replicated 1 time(s) to handle iob=true attribute.
 
@@ -1285,8 +1276,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2555
- Flip-Flops                                            : 2555
+# Registers                                            : 2560
+ Flip-Flops                                            : 2560
 
 =========================================================================
 
@@ -1309,34 +1300,34 @@ Top Level Output File Name         : TOP_MODULE.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3545
+# BELS                             : 3544
 #      GND                         : 1
 #      INV                         : 9
 #      LUT1                        : 32
-#      LUT2                        : 146
-#      LUT3                        : 843
-#      LUT4                        : 312
+#      LUT2                        : 145
+#      LUT3                        : 844
+#      LUT4                        : 311
 #      LUT5                        : 389
 #      LUT6                        : 1454
 #      MUXCY                       : 46
 #      MUXF7                       : 260
 #      VCC                         : 1
 #      XORCY                       : 52
-# FlipFlops/Latches                : 2556
+# FlipFlops/Latches                : 2564
 #      FD                          : 18
-#      FDR                         : 609
+#      FDR                         : 611
 #      FDRE                        : 1652
-#      FDS                         : 265
+#      FDS                         : 268
 #      FDSE                        : 11
-#      ODDR2                       : 1
+#      ODDR2                       : 4
 # RAMS                             : 16
 #      RAMB16BWER                  : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 142
+# IO Buffers                       : 151
 #      IBUF                        : 3
 #      IOBUF                       : 128
-#      OBUF                        : 11
+#      OBUF                        : 20
 
 Device utilization summary:
 ---------------------------
@@ -1345,21 +1336,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2294  out of  18224    12%  
- Number of Slice LUTs:                 3185  out of   9112    34%  
-    Number used as Logic:              3185  out of   9112    34%  
+ Number of Slice Registers:            2296  out of  18224    12%  
+ Number of Slice LUTs:                 3184  out of   9112    34%  
+    Number used as Logic:              3184  out of   9112    34%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3766
-   Number with an unused Flip Flop:    1472  out of   3766    39%  
-   Number with an unused LUT:           581  out of   3766    15%  
-   Number of fully used LUT-FF pairs:  1713  out of   3766    45%  
+ Number of LUT Flip Flop pairs used:   3768
+   Number with an unused Flip Flop:    1472  out of   3768    39%  
+   Number with an unused LUT:           584  out of   3768    15%  
+   Number of fully used LUT-FF pairs:  1712  out of   3768    45%  
    Number of unique control sets:        31
 
 IO Utilization: 
- Number of IOs:                         143
- Number of bonded IOBs:                 143  out of    232    61%  
-    IOB Flip Flops/Latches:             262
+ Number of IOs:                         152
+ Number of bonded IOBs:                 152  out of    232    65%  
+    IOB Flip Flops/Latches:             268
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               16  out of     32    50%  
@@ -1387,7 +1378,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 2573  |
+CLK                                | BUFGP                  | 2584  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1399,7 +1390,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 6.662ns (Maximum Frequency: 150.112MHz)
-   Minimum input arrival time before clock: 7.597ns
+   Minimum input arrival time before clock: 7.596ns
    Maximum output required time after clock: 5.318ns
    Maximum combinational path delay: No path found
 
@@ -1410,7 +1401,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 6.662ns (frequency: 150.112MHz)
-  Total number of paths / destination ports: 41048 / 6967
+  Total number of paths / destination ports: 41105 / 6983
 -------------------------------------------------------------------------
 Delay:               6.662ns (Levels of Logic = 5)
   Source:            central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0 (FF)
@@ -1423,8 +1414,8 @@ Delay:               6.662ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q             394   0.447   2.184  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/cycle_counter_0)
-     LUT4:I2->O            1   0.203   0.808  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o2 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o2)
-     LUT5:I2->O            9   0.205   0.830  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o4 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_159_o)
+     LUT4:I2->O            1   0.203   0.808  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_158_o2 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_158_o2)
+     LUT5:I2->O            9   0.205   0.830  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_158_o4 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/RST_cycle_counter[7]_OR_158_o)
      LUT6:I5->O            3   0.205   0.651  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT821 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT82)
      LUT3:I2->O            2   0.205   0.617  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT831 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT83)
      LUT6:I5->O            1   0.205   0.000  central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/Mmux_GND_10_o_GND_10_o_mux_4_OUT81 (central_fsm0/dut_ctrl0/ff_regs<0>/ff_reg0/GND_10_o_GND_10_o_mux_4_OUT<7>)
@@ -1435,9 +1426,9 @@ Delay:               6.662ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 2837 / 2823
+  Total number of paths / destination ports: 2842 / 2828
 -------------------------------------------------------------------------
-Offset:              7.597ns (Levels of Logic = 3)
+Offset:              7.596ns (Levels of Logic = 3)
   Source:            RST (PAD)
   Destination:       central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_9 (FF)
   Destination Clock: CLK rising
@@ -1447,16 +1438,16 @@ Offset:              7.597ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           248   1.222   2.170  RST_IBUF (RST_IBUF)
-     LUT2:I0->O         2263   0.203   2.511  central_fsm0/rst1 (central_fsm0/bram_ctrl0/Mcount_input_vectors_read_val)
-     LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_310_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_310_o)
+     LUT2:I0->O         2262   0.203   2.510  central_fsm0/rst1 (central_fsm0/bram_ctrl0/Mcount_input_vectors_read_val)
+     LUT6:I5->O           10   0.205   0.856  central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_316_o1 (central_fsm0/uart_ctrl_0/uart_tx0/RST_reset_count_OR_316_o)
      FDRE:R                    0.430          central_fsm0/uart_ctrl_0/uart_tx0/clock_counter_0
     ----------------------------------------
-    Total                      7.597ns (2.060ns logic, 5.537ns route)
+    Total                      7.596ns (2.060ns logic, 5.536ns route)
                                        (27.1% logic, 72.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 282 / 138
+  Total number of paths / destination ports: 288 / 144
 -------------------------------------------------------------------------
 Offset:              5.318ns (Levels of Logic = 2)
   Source:            central_fsm0/output_buffer_ctrl0/PS_FSM_FFd2 (FF)
@@ -1484,18 +1475,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.662|         |    1.097|         |
+CLK            |    6.662|         |    1.276|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 35.14 secs
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.96 secs
  
 --> 
 
-Total memory usage is 338220 kilobytes
+Total memory usage is 340268 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

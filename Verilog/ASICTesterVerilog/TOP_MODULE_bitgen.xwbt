@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TOP_MODULE.ncd
+OUTFILE=C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog\TOP_MODULE.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\dkhoury\OneDrive\Documents\SourceTree-Masters\Verilog\ASICTesterVerilog
+LICENSE=WebPack
+USER_INFO=210721438_0_0_800

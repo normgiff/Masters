@@ -21,13 +21,19 @@
  * 	COUNTER_CLK
  * 	COUNTER_RST
  */
-module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER, COUNTER_CLK, COUNTER_RST);
+module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER, 
+						  COUNTER_CLK_1, COUNTER_CLK_2, COUNTER_CLK_3, COUNTER_CLK_4, 
+						  COUNTER_RST);
 	input CLK;
 	input RST;
 	input ADVANCE_COUNTER;
 	input RESET_COUNTER;
 	
-	output COUNTER_CLK;
+	output COUNTER_CLK_1;
+	output COUNTER_CLK_2;
+	output COUNTER_CLK_3;
+	output COUNTER_CLK_4;
+	
 	output reg COUNTER_RST; 
 	reg counter_clock_oddr2;	
 	
@@ -57,8 +63,56 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER, COUNTER_CLK, COUNT
 		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
 		.INIT(1'b1), // Sets initial state of the Q output to 1'b0 or 1'b1
 		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
-		) ODDR2_inst (
-		.Q(COUNTER_CLK), // 1-bit DDR output data
+		) ODDR2_inst1 (
+		.Q(COUNTER_CLK_1), // 1-bit DDR output data
+		.C0(CLK), // 1-bit clock input
+		.C1(~CLK), // 1-bit clock input
+		.CE(1'b1), // 1-bit clock enable input
+		.D0(counter_clock_oddr2), // 1-bit data input (associated with C0)
+		.D1(counter_clock_oddr2), // 1-bit data input (associated with C1)
+		.R(1'b0), // 1-bit reset input
+		.S(1'b0) // 1-bit set input
+		);
+		
+	// Might help with glitches, but probably not necessary.
+	ODDR2 #(
+		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+		.INIT(1'b1), // Sets initial state of the Q output to 1'b0 or 1'b1
+		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
+		) ODDR2_inst2 (
+		.Q(COUNTER_CLK_2), // 1-bit DDR output data
+		.C0(CLK), // 1-bit clock input
+		.C1(~CLK), // 1-bit clock input
+		.CE(1'b1), // 1-bit clock enable input
+		.D0(counter_clock_oddr2), // 1-bit data input (associated with C0)
+		.D1(counter_clock_oddr2), // 1-bit data input (associated with C1)
+		.R(1'b0), // 1-bit reset input
+		.S(1'b0) // 1-bit set input
+		);
+		
+	// Might help with glitches, but probably not necessary.
+	ODDR2 #(
+		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+		.INIT(1'b1), // Sets initial state of the Q output to 1'b0 or 1'b1
+		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
+		) ODDR2_inst3 (
+		.Q(COUNTER_CLK_3), // 1-bit DDR output data
+		.C0(CLK), // 1-bit clock input
+		.C1(~CLK), // 1-bit clock input
+		.CE(1'b1), // 1-bit clock enable input
+		.D0(counter_clock_oddr2), // 1-bit data input (associated with C0)
+		.D1(counter_clock_oddr2), // 1-bit data input (associated with C1)
+		.R(1'b0), // 1-bit reset input
+		.S(1'b0) // 1-bit set input
+		);
+		
+	// Might help with glitches, but probably not necessary.
+	ODDR2 #(
+		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+		.INIT(1'b1), // Sets initial state of the Q output to 1'b0 or 1'b1
+		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
+		) ODDR2_inst4 (
+		.Q(COUNTER_CLK_4), // 1-bit DDR output data
 		.C0(CLK), // 1-bit clock input
 		.C1(~CLK), // 1-bit clock input
 		.CE(1'b1), // 1-bit clock enable input

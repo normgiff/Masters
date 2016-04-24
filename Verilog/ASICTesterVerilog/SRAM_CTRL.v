@@ -21,17 +21,40 @@
  *    we always want to read the full SRAM word.
  * 2) The SRAM chips should only accept writes when applying input vectors.
  */
-module SRAM_CTRL(OE_BAR_IN, CS_BAR_IN, WE_BAR_IN, OE_BAR, CS_BAR, WE_BAR);
+module SRAM_CTRL(OE_BAR_IN, CS_BAR_IN, WE_BAR_IN, 
+					  OE_BAR, 
+					  CS_BAR_1, WE_BAR_1,
+					  CS_BAR_2, WE_BAR_2,
+					  CS_BAR_3, WE_BAR_3,
+					  CS_BAR_4, WE_BAR_4);
+					  
 	input OE_BAR_IN;
 	input CS_BAR_IN;
 	input WE_BAR_IN;
 	
 	output OE_BAR;
-	output CS_BAR;
-	output WE_BAR;
+	
+	output CS_BAR_1;
+	output WE_BAR_1;
+	output CS_BAR_2;
+	output WE_BAR_2;
+	output CS_BAR_3;
+	output WE_BAR_3;
+	output CS_BAR_4;
+	output WE_BAR_4;
 	
 	assign OE_BAR = OE_BAR_IN;
-	assign CS_BAR = CS_BAR_IN;
-	assign WE_BAR = WE_BAR_IN;
+	
+	assign CS_BAR_1 = CS_BAR_IN;
+	assign WE_BAR_1 = WE_BAR_IN;
+
+	assign CS_BAR_2 = CS_BAR_IN;
+	assign WE_BAR_2 = WE_BAR_IN;
+
+	assign CS_BAR_3 = CS_BAR_IN;
+	assign WE_BAR_3 = WE_BAR_IN;
+
+	assign CS_BAR_4 = CS_BAR_IN;
+	assign WE_BAR_4 = WE_BAR_IN;
 
 endmodule

@@ -3,8 +3,13 @@
 // Central finite state machine (FSM).
 module CENTRAL_FSM(CLK, RST, 
                    RX, TX,
-                   OE_BAR, CS_BAR, WE_BAR, 
-                   COUNTER_CLK, COUNTER_RST, 
+                   OE_BAR, 
+						 CS_BAR_1, WE_BAR_1,
+						 CS_BAR_2, WE_BAR_2,
+						 CS_BAR_3, WE_BAR_3,
+						 CS_BAR_4, WE_BAR_4, 
+                   COUNTER_CLK_1, COUNTER_CLK_2, COUNTER_CLK_3, COUNTER_CLK_4, 
+						 COUNTER_RST, 
                    MR_BAR, PL_BAR, STCP, SHCP, Q,
                    VT_EN,
 						 SIGNALS);
@@ -19,11 +24,20 @@ module CENTRAL_FSM(CLK, RST,
 	
 	// SRAM
 	output OE_BAR;
-	output CS_BAR;
-	output WE_BAR;
+	output CS_BAR_1;
+	output WE_BAR_1;
+	output CS_BAR_2;
+	output WE_BAR_2;
+	output CS_BAR_3;
+	output WE_BAR_3;
+	output CS_BAR_4;
+	output WE_BAR_4;
 	
 	// Counter
-	output COUNTER_CLK;
+	output COUNTER_CLK_1;
+	output COUNTER_CLK_2;
+	output COUNTER_CLK_3;
+	output COUNTER_CLK_4;
 	output COUNTER_RST;
 	
 	// Output buffers (parallel->serial shift registers)
@@ -721,7 +735,10 @@ module CENTRAL_FSM(CLK, RST,
 										.RST(rst), 
 										.ADVANCE_COUNTER(advance_counter), 
 										.RESET_COUNTER(reset_counter), 
-										.COUNTER_CLK(COUNTER_CLK), 
+										.COUNTER_CLK_1(COUNTER_CLK_1), 
+										.COUNTER_CLK_2(COUNTER_CLK_2), 
+										.COUNTER_CLK_3(COUNTER_CLK_3), 
+										.COUNTER_CLK_4(COUNTER_CLK_4), 
 										.COUNTER_RST(COUNTER_RST)
 										);
 										
@@ -955,8 +972,14 @@ module CENTRAL_FSM(CLK, RST,
 								 .CS_BAR_IN(cs_bar_in), 
 								 .WE_BAR_IN(we_bar_in), 
 								 .OE_BAR(OE_BAR), 
-								 .CS_BAR(CS_BAR), 
-								 .WE_BAR(WE_BAR)
+								 .CS_BAR_1(CS_BAR_1), 
+								 .WE_BAR_1(WE_BAR_1),
+								 .CS_BAR_2(CS_BAR_2), 
+								 .WE_BAR_2(WE_BAR_2),
+								 .CS_BAR_3(CS_BAR_3), 
+								 .WE_BAR_3(WE_BAR_3),
+								 .CS_BAR_4(CS_BAR_4), 
+								 .WE_BAR_4(WE_BAR_4)
 								 );
 
 	// UART controller
