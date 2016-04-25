@@ -7,7 +7,7 @@ run
 -p xc6slx16-3-csg324
 -top TOP_MODULE
 -opt_mode Area
--opt_level 2
+-opt_level 1
 -power NO
 -iuc NO
 -keep_hierarchy No

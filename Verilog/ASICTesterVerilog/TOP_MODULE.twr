@@ -37,9 +37,9 @@ Setup/Hold to clock CLK
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-Q           |    3.117(R)|      SLOW  |    0.239(R)|      SLOW  |CLK_BUFGP         |   0.000|
-RST         |    7.424(R)|      SLOW  |   -0.883(R)|      FAST  |CLK_BUFGP         |   0.000|
-RX          |    5.683(R)|      SLOW  |   -1.217(R)|      FAST  |CLK_BUFGP         |   0.000|
+Q           |    3.867(R)|      SLOW  |   -0.296(R)|      SLOW  |CLK_BUFGP         |   0.000|
+RST         |    9.640(R)|      SLOW  |    0.407(R)|      SLOW  |CLK_BUFGP         |   0.000|
+RX          |    6.063(R)|      SLOW  |   -1.213(R)|      FAST  |CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -47,158 +47,152 @@ Clock CLK to Pad
              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 -------------+-----------------+------------+-----------------+------------+------------------+--------+
-COUNTER_CLK_1|         6.360(R)|      SLOW  |         3.083(R)|      FAST  |CLK_BUFGP         |   0.000|
-             |         6.340(F)|      SLOW  |         3.089(F)|      FAST  |CLK_BUFGP         |   0.000|
-COUNTER_CLK_2|         6.442(R)|      SLOW  |         3.165(R)|      FAST  |CLK_BUFGP         |   0.000|
-             |         6.422(F)|      SLOW  |         3.171(F)|      FAST  |CLK_BUFGP         |   0.000|
-COUNTER_CLK_3|         6.476(R)|      SLOW  |         3.199(R)|      FAST  |CLK_BUFGP         |   0.000|
-             |         6.456(F)|      SLOW  |         3.205(F)|      FAST  |CLK_BUFGP         |   0.000|
-COUNTER_CLK_4|         6.484(R)|      SLOW  |         3.207(R)|      FAST  |CLK_BUFGP         |   0.000|
-             |         6.464(F)|      SLOW  |         3.213(F)|      FAST  |CLK_BUFGP         |   0.000|
-COUNTER_RST  |         6.446(R)|      SLOW  |         2.986(R)|      FAST  |CLK_BUFGP         |   0.000|
-CS_BAR_1     |         6.567(R)|      SLOW  |         3.107(R)|      FAST  |CLK_BUFGP         |   0.000|
-CS_BAR_2     |         6.477(R)|      SLOW  |         3.017(R)|      FAST  |CLK_BUFGP         |   0.000|
-CS_BAR_3     |         6.562(R)|      SLOW  |         3.102(R)|      FAST  |CLK_BUFGP         |   0.000|
-CS_BAR_4     |         6.446(R)|      SLOW  |         2.986(R)|      FAST  |CLK_BUFGP         |   0.000|
-MR_BAR       |         8.962(R)|      SLOW  |         4.304(R)|      FAST  |CLK_BUFGP         |   0.000|
-OE_BAR       |         6.505(R)|      SLOW  |         3.045(R)|      FAST  |CLK_BUFGP         |   0.000|
-PL_BAR       |         9.356(R)|      SLOW  |         4.881(R)|      FAST  |CLK_BUFGP         |   0.000|
-SHCP         |         8.235(R)|      SLOW  |         3.827(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<0>   |         7.235(R)|      SLOW  |         3.629(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<1>   |         7.177(R)|      SLOW  |         3.571(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<2>   |         7.185(R)|      SLOW  |         3.579(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<3>   |         7.210(R)|      SLOW  |         3.604(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<4>   |         7.194(R)|      SLOW  |         3.588(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<5>   |         7.160(R)|      SLOW  |         3.554(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<6>   |         7.189(R)|      SLOW  |         3.583(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<7>   |         7.142(R)|      SLOW  |         3.536(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<8>   |         7.153(R)|      SLOW  |         3.547(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<9>   |         7.137(R)|      SLOW  |         3.531(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<10>  |         7.159(R)|      SLOW  |         3.553(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<11>  |         7.181(R)|      SLOW  |         3.575(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<12>  |         7.188(R)|      SLOW  |         3.582(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<13>  |         7.190(R)|      SLOW  |         3.584(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<14>  |         7.240(R)|      SLOW  |         3.634(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<15>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<16>  |         7.106(R)|      SLOW  |         3.500(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<17>  |         7.104(R)|      SLOW  |         3.498(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<18>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<19>  |         7.107(R)|      SLOW  |         3.501(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<20>  |         7.159(R)|      SLOW  |         3.553(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<21>  |         7.181(R)|      SLOW  |         3.575(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<22>  |         7.188(R)|      SLOW  |         3.582(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<23>  |         7.190(R)|      SLOW  |         3.584(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<24>  |         7.240(R)|      SLOW  |         3.634(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<25>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<26>  |         7.106(R)|      SLOW  |         3.500(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<27>  |         7.104(R)|      SLOW  |         3.498(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<28>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<29>  |         7.107(R)|      SLOW  |         3.501(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<30>  |         7.235(R)|      SLOW  |         3.629(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<31>  |         7.177(R)|      SLOW  |         3.571(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<32>  |         7.185(R)|      SLOW  |         3.579(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<33>  |         7.210(R)|      SLOW  |         3.604(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<34>  |         7.194(R)|      SLOW  |         3.588(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<35>  |         7.160(R)|      SLOW  |         3.554(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<36>  |         7.189(R)|      SLOW  |         3.583(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<37>  |         7.142(R)|      SLOW  |         3.536(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<38>  |         7.153(R)|      SLOW  |         3.547(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<39>  |         7.137(R)|      SLOW  |         3.531(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<40>  |         7.210(R)|      SLOW  |         3.604(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<41>  |         7.203(R)|      SLOW  |         3.597(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<42>  |         7.187(R)|      SLOW  |         3.581(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<43>  |         7.139(R)|      SLOW  |         3.533(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<44>  |         7.144(R)|      SLOW  |         3.538(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<45>  |         7.152(R)|      SLOW  |         3.546(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<46>  |         7.173(R)|      SLOW  |         3.567(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<47>  |         7.224(R)|      SLOW  |         3.618(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<48>  |         7.227(R)|      SLOW  |         3.621(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<49>  |         7.235(R)|      SLOW  |         3.629(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<50>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<51>  |         7.101(R)|      SLOW  |         3.495(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<52>  |         7.104(R)|      SLOW  |         3.498(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<53>  |         7.110(R)|      SLOW  |         3.504(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<54>  |         7.101(R)|      SLOW  |         3.495(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<55>  |         7.109(R)|      SLOW  |         3.503(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<56>  |         7.239(R)|      SLOW  |         3.633(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<57>  |         7.232(R)|      SLOW  |         3.626(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<58>  |         7.227(R)|      SLOW  |         3.621(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<59>  |         7.165(R)|      SLOW  |         3.559(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<60>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<61>  |         7.101(R)|      SLOW  |         3.495(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<62>  |         7.104(R)|      SLOW  |         3.498(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<63>  |         7.110(R)|      SLOW  |         3.504(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<64>  |         7.101(R)|      SLOW  |         3.495(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<65>  |         7.109(R)|      SLOW  |         3.503(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<66>  |         7.239(R)|      SLOW  |         3.633(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<67>  |         7.232(R)|      SLOW  |         3.626(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<68>  |         7.227(R)|      SLOW  |         3.621(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<69>  |         7.165(R)|      SLOW  |         3.559(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<70>  |         7.210(R)|      SLOW  |         3.604(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<71>  |         7.203(R)|      SLOW  |         3.597(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<72>  |         7.187(R)|      SLOW  |         3.581(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<73>  |         7.139(R)|      SLOW  |         3.533(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<74>  |         7.144(R)|      SLOW  |         3.538(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<75>  |         7.152(R)|      SLOW  |         3.546(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<76>  |         7.173(R)|      SLOW  |         3.567(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<77>  |         7.224(R)|      SLOW  |         3.618(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<78>  |         7.227(R)|      SLOW  |         3.621(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<79>  |         7.235(R)|      SLOW  |         3.629(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<80>  |         7.109(R)|      SLOW  |         3.503(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<81>  |         7.111(R)|      SLOW  |         3.505(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<82>  |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<83>  |         7.238(R)|      SLOW  |         3.632(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<84>  |         7.230(R)|      SLOW  |         3.624(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<85>  |         7.159(R)|      SLOW  |         3.553(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<86>  |         7.215(R)|      SLOW  |         3.609(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<87>  |         7.209(R)|      SLOW  |         3.603(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<88>  |         7.136(R)|      SLOW  |         3.530(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<89>  |         7.188(R)|      SLOW  |         3.582(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<90>  |         7.158(R)|      SLOW  |         3.552(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<91>  |         7.201(R)|      SLOW  |         3.595(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<92>  |         7.172(R)|      SLOW  |         3.566(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<93>  |         7.184(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<94>  |         7.176(R)|      SLOW  |         3.570(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<95>  |         7.184(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<96>  |         7.184(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<97>  |         7.176(R)|      SLOW  |         3.570(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<98>  |         7.184(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<99>  |         7.172(R)|      SLOW  |         3.566(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<100> |         7.201(R)|      SLOW  |         3.595(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<101> |         7.158(R)|      SLOW  |         3.552(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<102> |         7.109(R)|      SLOW  |         3.503(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<103> |         7.111(R)|      SLOW  |         3.505(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<104> |         7.099(R)|      SLOW  |         3.493(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<105> |         7.238(R)|      SLOW  |         3.632(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<106> |         7.230(R)|      SLOW  |         3.624(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<107> |         7.159(R)|      SLOW  |         3.553(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<108> |         7.215(R)|      SLOW  |         3.609(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<109> |         7.209(R)|      SLOW  |         3.603(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<110> |         7.136(R)|      SLOW  |         3.530(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<111> |         7.188(R)|      SLOW  |         3.582(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<112> |         7.165(R)|      SLOW  |         3.559(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<113> |         7.227(R)|      SLOW  |         3.621(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<114> |         7.237(R)|      SLOW  |         3.631(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<115> |         7.104(R)|      SLOW  |         3.498(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<116> |         7.110(R)|      SLOW  |         3.504(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<117> |         7.106(R)|      SLOW  |         3.500(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<118> |         7.110(R)|      SLOW  |         3.504(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<119> |         7.106(R)|      SLOW  |         3.500(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<120> |         7.109(R)|      SLOW  |         3.503(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<121> |         7.104(R)|      SLOW  |         3.498(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<122> |         7.191(R)|      SLOW  |         3.585(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<123> |         7.201(R)|      SLOW  |         3.595(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<124> |         7.137(R)|      SLOW  |         3.531(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<125> |         7.142(R)|      SLOW  |         3.536(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<126> |         7.102(R)|      SLOW  |         3.496(R)|      FAST  |CLK_BUFGP         |   0.000|
-SIGNALS<127> |         7.100(R)|      SLOW  |         3.494(R)|      FAST  |CLK_BUFGP         |   0.000|
-STCP         |         8.652(R)|      SLOW  |         4.000(R)|      FAST  |CLK_BUFGP         |   0.000|
-TX           |         6.532(R)|      SLOW  |         3.072(R)|      FAST  |CLK_BUFGP         |   0.000|
-VT_EN        |         6.449(R)|      SLOW  |         2.989(R)|      FAST  |CLK_BUFGP         |   0.000|
-WE_BAR_1     |         6.444(R)|      SLOW  |         2.984(R)|      FAST  |CLK_BUFGP         |   0.000|
-WE_BAR_2     |         6.482(R)|      SLOW  |         3.022(R)|      FAST  |CLK_BUFGP         |   0.000|
-WE_BAR_3     |         6.548(R)|      SLOW  |         3.088(R)|      FAST  |CLK_BUFGP         |   0.000|
-WE_BAR_4     |         6.450(R)|      SLOW  |         2.990(R)|      FAST  |CLK_BUFGP         |   0.000|
+COUNTER_CLK_1|         7.190(R)|      SLOW  |         3.687(R)|      FAST  |CLK_BUFGP         |   0.000|
+COUNTER_CLK_2|         7.273(R)|      SLOW  |         3.770(R)|      FAST  |CLK_BUFGP         |   0.000|
+COUNTER_CLK_3|         7.305(R)|      SLOW  |         3.802(R)|      FAST  |CLK_BUFGP         |   0.000|
+COUNTER_CLK_4|         7.313(R)|      SLOW  |         3.810(R)|      FAST  |CLK_BUFGP         |   0.000|
+COUNTER_RST  |         7.186(R)|      SLOW  |         3.683(R)|      FAST  |CLK_BUFGP         |   0.000|
+CS_BAR_1     |         7.306(R)|      SLOW  |         3.803(R)|      FAST  |CLK_BUFGP         |   0.000|
+CS_BAR_2     |         7.218(R)|      SLOW  |         3.715(R)|      FAST  |CLK_BUFGP         |   0.000|
+CS_BAR_3     |         7.302(R)|      SLOW  |         3.799(R)|      FAST  |CLK_BUFGP         |   0.000|
+CS_BAR_4     |         7.186(R)|      SLOW  |         3.683(R)|      FAST  |CLK_BUFGP         |   0.000|
+MR_BAR       |        10.834(R)|      SLOW  |         5.375(R)|      FAST  |CLK_BUFGP         |   0.000|
+OE_BAR       |         7.244(R)|      SLOW  |         3.741(R)|      FAST  |CLK_BUFGP         |   0.000|
+PL_BAR       |        11.202(R)|      SLOW  |         6.209(R)|      FAST  |CLK_BUFGP         |   0.000|
+SHCP         |        10.160(R)|      SLOW  |         4.878(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<0>   |         7.315(R)|      SLOW  |         3.704(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<1>   |         7.257(R)|      SLOW  |         3.646(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<2>   |         7.265(R)|      SLOW  |         3.654(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<3>   |         7.290(R)|      SLOW  |         3.679(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<4>   |         7.275(R)|      SLOW  |         3.664(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<5>   |         7.240(R)|      SLOW  |         3.629(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<6>   |         7.269(R)|      SLOW  |         3.658(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<7>   |         7.222(R)|      SLOW  |         3.611(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<8>   |         7.233(R)|      SLOW  |         3.622(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<9>   |         7.217(R)|      SLOW  |         3.606(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<10>  |         7.239(R)|      SLOW  |         3.628(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<11>  |         7.263(R)|      SLOW  |         3.652(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<12>  |         7.270(R)|      SLOW  |         3.659(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<13>  |         7.271(R)|      SLOW  |         3.660(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<14>  |         7.321(R)|      SLOW  |         3.710(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<15>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<16>  |         7.187(R)|      SLOW  |         3.576(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<17>  |         7.184(R)|      SLOW  |         3.573(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<18>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<19>  |         7.187(R)|      SLOW  |         3.576(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<20>  |         7.239(R)|      SLOW  |         3.628(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<21>  |         7.263(R)|      SLOW  |         3.652(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<22>  |         7.270(R)|      SLOW  |         3.659(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<23>  |         7.271(R)|      SLOW  |         3.660(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<24>  |         7.321(R)|      SLOW  |         3.710(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<25>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<26>  |         7.187(R)|      SLOW  |         3.576(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<27>  |         7.184(R)|      SLOW  |         3.573(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<28>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<29>  |         7.187(R)|      SLOW  |         3.576(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<30>  |         7.315(R)|      SLOW  |         3.704(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<31>  |         7.257(R)|      SLOW  |         3.646(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<32>  |         7.265(R)|      SLOW  |         3.654(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<33>  |         7.290(R)|      SLOW  |         3.679(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<34>  |         7.275(R)|      SLOW  |         3.664(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<35>  |         7.240(R)|      SLOW  |         3.629(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<36>  |         7.269(R)|      SLOW  |         3.658(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<37>  |         7.222(R)|      SLOW  |         3.611(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<38>  |         7.233(R)|      SLOW  |         3.622(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<39>  |         7.217(R)|      SLOW  |         3.606(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<40>  |         7.290(R)|      SLOW  |         3.679(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<41>  |         7.283(R)|      SLOW  |         3.672(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<42>  |         7.267(R)|      SLOW  |         3.656(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<43>  |         7.218(R)|      SLOW  |         3.607(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<44>  |         7.224(R)|      SLOW  |         3.613(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<45>  |         7.233(R)|      SLOW  |         3.622(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<46>  |         7.254(R)|      SLOW  |         3.643(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<47>  |         7.304(R)|      SLOW  |         3.693(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<48>  |         7.308(R)|      SLOW  |         3.697(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<49>  |         7.315(R)|      SLOW  |         3.704(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<50>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<51>  |         7.181(R)|      SLOW  |         3.570(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<52>  |         7.184(R)|      SLOW  |         3.573(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<53>  |         7.190(R)|      SLOW  |         3.579(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<54>  |         7.181(R)|      SLOW  |         3.570(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<55>  |         7.189(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<56>  |         7.320(R)|      SLOW  |         3.709(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<57>  |         7.313(R)|      SLOW  |         3.702(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<58>  |         7.308(R)|      SLOW  |         3.697(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<59>  |         7.246(R)|      SLOW  |         3.635(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<60>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<61>  |         7.181(R)|      SLOW  |         3.570(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<62>  |         7.184(R)|      SLOW  |         3.573(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<63>  |         7.190(R)|      SLOW  |         3.579(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<64>  |         7.181(R)|      SLOW  |         3.570(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<65>  |         7.189(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<66>  |         7.320(R)|      SLOW  |         3.709(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<67>  |         7.313(R)|      SLOW  |         3.702(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<68>  |         7.308(R)|      SLOW  |         3.697(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<69>  |         7.246(R)|      SLOW  |         3.635(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<70>  |         7.290(R)|      SLOW  |         3.679(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<71>  |         7.283(R)|      SLOW  |         3.672(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<72>  |         7.267(R)|      SLOW  |         3.656(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<73>  |         7.218(R)|      SLOW  |         3.607(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<74>  |         7.224(R)|      SLOW  |         3.613(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<75>  |         7.233(R)|      SLOW  |         3.622(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<76>  |         7.254(R)|      SLOW  |         3.643(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<77>  |         7.304(R)|      SLOW  |         3.693(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<78>  |         7.308(R)|      SLOW  |         3.697(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<79>  |         7.315(R)|      SLOW  |         3.704(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<80>  |         7.189(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<81>  |         7.191(R)|      SLOW  |         3.580(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<82>  |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<83>  |         7.319(R)|      SLOW  |         3.708(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<84>  |         7.310(R)|      SLOW  |         3.699(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<85>  |         7.238(R)|      SLOW  |         3.627(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<86>  |         7.295(R)|      SLOW  |         3.684(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<87>  |         7.288(R)|      SLOW  |         3.677(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<88>  |         7.215(R)|      SLOW  |         3.604(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<89>  |         7.268(R)|      SLOW  |         3.657(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<90>  |         7.239(R)|      SLOW  |         3.628(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<91>  |         7.282(R)|      SLOW  |         3.671(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<92>  |         7.252(R)|      SLOW  |         3.641(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<93>  |         7.264(R)|      SLOW  |         3.653(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<94>  |         7.255(R)|      SLOW  |         3.644(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<95>  |         7.263(R)|      SLOW  |         3.652(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<96>  |         7.263(R)|      SLOW  |         3.652(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<97>  |         7.255(R)|      SLOW  |         3.644(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<98>  |         7.264(R)|      SLOW  |         3.653(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<99>  |         7.252(R)|      SLOW  |         3.641(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<100> |         7.282(R)|      SLOW  |         3.671(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<101> |         7.239(R)|      SLOW  |         3.628(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<102> |         7.189(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<103> |         7.191(R)|      SLOW  |         3.580(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<104> |         7.179(R)|      SLOW  |         3.568(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<105> |         7.319(R)|      SLOW  |         3.708(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<106> |         7.310(R)|      SLOW  |         3.699(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<107> |         7.238(R)|      SLOW  |         3.627(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<108> |         7.295(R)|      SLOW  |         3.684(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<109> |         7.288(R)|      SLOW  |         3.677(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<110> |         7.215(R)|      SLOW  |         3.604(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<111> |         7.268(R)|      SLOW  |         3.657(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<112> |         7.244(R)|      SLOW  |         3.633(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<113> |         7.306(R)|      SLOW  |         3.695(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<114> |         7.317(R)|      SLOW  |         3.706(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<115> |         7.184(R)|      SLOW  |         3.573(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<116> |         7.190(R)|      SLOW  |         3.579(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<117> |         7.186(R)|      SLOW  |         3.575(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<118> |         7.190(R)|      SLOW  |         3.579(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<119> |         7.186(R)|      SLOW  |         3.575(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<120> |         7.189(R)|      SLOW  |         3.578(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<121> |         7.184(R)|      SLOW  |         3.573(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<122> |         7.271(R)|      SLOW  |         3.660(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<123> |         7.280(R)|      SLOW  |         3.669(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<124> |         7.218(R)|      SLOW  |         3.607(R)|      FAST  |CLK_BUFGP         |   0.000|
+SIGNALS<125> |         7.223(R)|      SLOW  |         3.612(R)|      FAST  |CLK_BUFGP         |   0.000|
+STCP         |        10.376(R)|      SLOW  |         5.003(R)|      FAST  |CLK_BUFGP         |   0.000|
+TX           |         7.273(R)|      SLOW  |         3.770(R)|      FAST  |CLK_BUFGP         |   0.000|
+VT_EN        |         7.189(R)|      SLOW  |         3.686(R)|      FAST  |CLK_BUFGP         |   0.000|
+WE_BAR_1     |         7.184(R)|      SLOW  |         3.681(R)|      FAST  |CLK_BUFGP         |   0.000|
+WE_BAR_2     |         7.223(R)|      SLOW  |         3.720(R)|      FAST  |CLK_BUFGP         |   0.000|
+WE_BAR_3     |         7.289(R)|      SLOW  |         3.786(R)|      FAST  |CLK_BUFGP         |   0.000|
+WE_BAR_4     |         7.190(R)|      SLOW  |         3.687(R)|      FAST  |CLK_BUFGP         |   0.000|
 -------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -206,18 +200,25 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    7.709|         |    3.012|         |
+CLK            |    7.103|         |         |         |
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+RST            |ERROR          |    8.517|
+---------------+---------------+---------+
 
-Analysis completed Sat Apr 23 22:04:51 2016 
+
+Analysis completed Sun Apr 24 21:22:18 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 287 MB
+Peak Memory Usage: 285 MB
 
 
 

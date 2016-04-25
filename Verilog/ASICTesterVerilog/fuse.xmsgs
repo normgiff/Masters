@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM_CTRL_TB.v" Line 26: Port <arg fmt="%s" index="1">MORE_TO_READ</arg> is not connected to this instance
+</msg>
+
 </messages>
 

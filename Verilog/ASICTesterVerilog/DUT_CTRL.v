@@ -12,7 +12,7 @@
  *    SIG_BUS_OUT:  128-bit signal vector (output of FPGA).
  * 
  */
-module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128,
+module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 					 SIG_LOAD, SIG_TRANSFER, 
 					 FF_LOAD_FF, FF_TRANSFER_FF,
 					 FF_LOAD_SIG, FF_TRANSFER_SIG,
@@ -24,7 +24,7 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128,
 	input CLK;
 	input RST;
 	input PERFORM_TEST;
-	input [127:0] BUS128;
+	input [125:0] BUS126;
 	
 	input SIG_LOAD;
 	input SIG_TRANSFER;
@@ -46,37 +46,37 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS128,
 	input TEMPLATE_LOAD;
 	input TEMPLATE_TRANSFER;
 	
-	output [127:0] OUTPUT_SIGNALS;
+	output [125:0] OUTPUT_SIGNALS;
 	
-	wire [127:0] sig_outputs;
-	wire [127:0] ff_outputs;
-	wire [127:0] template_outputs;
-	wire [127:0] cycle_outputs;
+	wire [125:0] sig_outputs;
+	wire [125:0] ff_outputs;
+	wire [125:0] template_outputs;
+	wire [125:0] cycle_outputs;
 	
 	// Signal registers
-	DUTSIG_DB_REG signal_regs[127:0](.CLK(CLK), .RST(RST), .LOAD(SIG_LOAD), 
-												.TRANSFER(SIG_TRANSFER), .D(BUS128), 
+	DUTSIG_DB_REG signal_regs[125:0](.CLK(CLK), .RST(RST), .LOAD(SIG_LOAD), 
+												.TRANSFER(SIG_TRANSFER), .D(BUS126), 
 												.Q(sig_outputs));
 	
 	// FF registers
-	FF_DB_REG ff_regs[127:0](.CLK(CLK), .RST(RST), .EN_FF_LOGIC(PERFORM_TEST), 
-									  .LOAD_FF(FF_LOAD_FF), .TRANSFER_FF(FF_TRANSFER_FF), .FF(BUS128), 
+	FF_DB_REG ff_regs[125:0](.CLK(CLK), .RST(RST), .EN_FF_LOGIC(PERFORM_TEST), 
+									  .LOAD_FF(FF_LOAD_FF), .TRANSFER_FF(FF_TRANSFER_FF), .FF(BUS126), 
 									  .LOAD_SIG(FF_LOAD_SIG), .TRANSFER_SIG(FF_TRANSFER_SIG), 
 									  .LEADING_EDGE_1(LEADING_EDGE_1), .TRAILING_EDGE_1(TRAILING_EDGE_1), 
 									  .CYCLE_LENGTH_1(CYCLE_LENGTH_1), .LEADING_EDGE_2(LEADING_EDGE_2), 
 									  .TEST_CYCLE(cycle_outputs), .D(sig_outputs), .Q(ff_outputs));
 											
 	// Template registers
-	TEMPLATE_DB_REG template_regs[127:0](.CLK(CLK), .RST(RST), .LOAD(TEMPLATE_LOAD),
-													 .TRANSFER(TEMPLATE_TRANSFER), .D(BUS128), 
+	TEMPLATE_DB_REG template_regs[125:0](.CLK(CLK), .RST(RST), .LOAD(TEMPLATE_LOAD),
+													 .TRANSFER(TEMPLATE_TRANSFER), .D(BUS126), 
 													 .Q(template_outputs));
 													 
 	// Signal registers
-	CYCLE_DB_REG cycle_regs[127:0](.CLK(CLK), .RST(RST), .LOAD(CYCLE_LOAD), 
-											 .TRANSFER(CYCLE_TRANSFER), .D(BUS128), 
+	CYCLE_DB_REG cycle_regs[125:0](.CLK(CLK), .RST(RST), .LOAD(CYCLE_LOAD), 
+											 .TRANSFER(CYCLE_TRANSFER), .D(BUS126), 
 											 .Q(cycle_outputs));
 			
 	// Tristate registers
-	TRIREG triregs[127:0](.I(ff_outputs), .O(OUTPUT_SIGNALS), .EN_BAR(template_outputs));
+	TRIREG triregs[125:0](.I(ff_outputs), .O(OUTPUT_SIGNALS), .EN_BAR(template_outputs));
 												
 endmodule

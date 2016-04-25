@@ -15,6 +15,9 @@ module TRIREG(I, O, EN_BAR);
 	input EN_BAR;
 	output O;
 	
+	assign O = EN_BAR ? 1'bz : I;
+	
+	/*
 	IOBUF #(
 			.DRIVE(24),
 			.IOSTANDARD("DEFAULT"),
@@ -25,5 +28,6 @@ module TRIREG(I, O, EN_BAR);
 			.I(I),
 			.T(EN_BAR)
 	);
+	*/
 
 endmodule

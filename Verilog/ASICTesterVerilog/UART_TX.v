@@ -16,7 +16,7 @@
  * 	TX
  *    SENT
  */
-module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
+module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
 	input CLK;
 	input RST;
 	
@@ -27,12 +27,14 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 
 	output reg TX;
 	output reg SENT;
+	output ERROR;
+	
+	assign ERROR = RST;
 
 	parameter BAUD_RATE = 115200;
 	
 	// Subtract 1 to account for switching states.
 	parameter PERIOD = 867 - 1;
-	// parameter HALF_PERIOD = 433 - 1;
 	
 	parameter IDLE = 0;
 	parameter STARTBIT = 1;
@@ -46,6 +48,7 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 	parameter BIT7 = 9;
 	parameter STOPBIT = 10;
 	parameter IDLE_SENT = 11;
+	parameter ERROR_STATE = 12;
 	
 	reg [3:0] PS;
 	reg [3:0] NS;
@@ -279,9 +282,14 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE);
 				end
 			end
 			
+			ERROR_STATE: begin
+				// For debugging purposes.
+				NS = ERROR_STATE;
+			end
+			
 			default: begin
 				// We should never get here.
-				NS = IDLE;
+				NS = ERROR_STATE;
 			end
 		endcase
 	end

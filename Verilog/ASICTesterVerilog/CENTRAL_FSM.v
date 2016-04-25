@@ -12,6 +12,7 @@ module CENTRAL_FSM(CLK, RST,
 						 COUNTER_RST, 
                    MR_BAR, PL_BAR, STCP, SHCP, Q,
                    VT_EN,
+						 ERROR,
 						 SIGNALS);
 
 	// global clock and reset
@@ -21,6 +22,7 @@ module CENTRAL_FSM(CLK, RST,
 	// UART
 	input RX;
 	output TX;
+	output ERROR;
 	
 	// SRAM
 	output OE_BAR;
@@ -51,7 +53,7 @@ module CENTRAL_FSM(CLK, RST,
 	output VT_EN;
 	
 	// Signals to DUT
-	output [127:0] SIGNALS;
+	output [125:0] SIGNALS;
 	
 	// States and UART codes
 	`include "CENTRAL_FSM_PARAMS.v"
@@ -519,12 +521,16 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			LOAD_SRAM_DATA_4: begin
+				NS = LOAD_SRAM_DATA_5;
+			end
+			
+			LOAD_SRAM_DATA_5: begin
 				// Wait for the SRAM data to be loaded.
 				if (output_buffer_ctrl_ready) begin
 					NS = TRANSMIT_SRAM_DATA;
 				end
 				else begin
-					NS = LOAD_SRAM_DATA_4; 
+					NS = LOAD_SRAM_DATA_5; 
 				end
 			end
 			
@@ -744,7 +750,7 @@ module CENTRAL_FSM(CLK, RST,
 										
 	// DUT controller
 	reg perform_test;
-	wire [127:0] bus128;
+	wire [125:0] bus126;
 	reg sig_load;
 	reg sig_transfer;
 	reg ff_load_ff;
@@ -760,7 +766,7 @@ module CENTRAL_FSM(CLK, RST,
 	reg [7:0] cycle_length_1;
 	reg [6:0] leading_edge_2;
 	
-	assign bus128 = read_data;
+	assign bus126 = read_data[125:0];
 	
 	// Logic to store cycle configuration parameters.
 	always@(posedge CLK) begin
@@ -848,7 +854,7 @@ module CENTRAL_FSM(CLK, RST,
 							 .CLK(CLK), 
 							 .RST(rst), 
 							 .PERFORM_TEST(perform_test), 
-							 .BUS128(bus128), 
+							 .BUS126(bus126), 
 							 .SIG_LOAD(sig_load), 
 							 .SIG_TRANSFER(sig_transfer), 
 							 .FF_LOAD_FF(ff_load_ff), 
@@ -893,7 +899,7 @@ module CENTRAL_FSM(CLK, RST,
 		
 	OUTPUT_BUFFER_CTRL output_buffer_ctrl0(
 													   .CLK(CLK), 
-														.RST(rst), 
+														.RST(RST), 
 														.CLEAR_BUFFER(clear_buffer), 
 														.CAPTURE_SRAM_DATA(capture_sram_data), 
 														.READY(output_buffer_ctrl_ready), 
@@ -1209,7 +1215,7 @@ module CENTRAL_FSM(CLK, RST,
 	
 	UART_CTRL uart_ctrl_0(
 								 .CLK(CLK), 
-								 .RST(rst), 
+								 .RST(RST), 
 								 .RX(RX), 
 								 .RXDATA_READY(rxdata_ready), 
 								 .RXDATA_RETRIEVED(rxdata_retrieved), 
@@ -1219,7 +1225,8 @@ module CENTRAL_FSM(CLK, RST,
 								 .TXCAPTURE(txcapture), 
 								 .TXTRANSMIT(txtransmit), 
 								 .TXSENT(txsent), 
-								 .TXACK(txack)
+								 .TXACK(txack),
+								 .ERROR(ERROR)
 								 );
 	
 

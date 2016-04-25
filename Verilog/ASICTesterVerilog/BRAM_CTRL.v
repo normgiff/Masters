@@ -67,7 +67,8 @@ module BRAM_CTRL(CLK, RST, RESET_READ_COUNTER,
 	
 	wire write_en = PS == INPUT_WRITE_1 || PS == INPUT_WRITE_2 || 
 						 PS == TEMPLATE_WRITE_1 || PS == TEMPLATE_WRITE_2 || 
-						 PS == FF_WRITE_1 || PS == FF_WRITE_2;						 
+						 PS == FF_WRITE_1 || PS == FF_WRITE_2 || 
+						 PS == TC_WRITE_1 || PS == TC_WRITE_2;
 
 	reg [63:0] din;
 	wire [63:0] dout;
@@ -256,10 +257,14 @@ module BRAM_CTRL(CLK, RST, RESET_READ_COUNTER,
 	
 	// Logic to update read and write addresses for input vectors.
 	always@(posedge CLK) begin
-		if (RST || RESET_READ_COUNTER) begin
+		if (RST) begin
 			input_write_posA <= INPUT_START_ADDR_A;
-			input_read_posA <= INPUT_START_ADDR_A;
 			input_write_posB <= INPUT_START_ADDR_B;
+			input_read_posA <= INPUT_START_ADDR_A;
+			input_read_posB <= INPUT_START_ADDR_B;
+		end
+		else if (RESET_READ_COUNTER) begin
+			input_read_posA <= INPUT_START_ADDR_A;
 			input_read_posB <= INPUT_START_ADDR_B;
 		end
 		else begin
@@ -505,7 +510,7 @@ module BRAM_CTRL(CLK, RST, RESET_READ_COUNTER,
 						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR << 1);
 					end
 					2'b11: begin
-							addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
+						addr_a = TC_0_ADDR_A0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
 						addr_b = TC_0_ADDR_B0 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
 					end
 				endcase
@@ -526,8 +531,6 @@ module BRAM_CTRL(CLK, RST, RESET_READ_COUNTER,
 						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR << 1);
 					end
 					2'b11: begin
-						// Left-shifting by 2 is equivalent to multiplying by four.
-						// Left-shifting by 2 and subtracting is equivalent to multiplying by three.
 						addr_a = TC_0_ADDR_A1 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
 						addr_b = TC_0_ADDR_B1 + (TC_INCR_FACTOR << 2) - TC_INCR_FACTOR;
 					end

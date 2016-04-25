@@ -12,6 +12,7 @@ module TOP_MODULE(CLK, RST,
 						COUNTER_RST, 
 						MR_BAR, PL_BAR, STCP, SHCP, Q,
 						VT_EN,
+						ERROR,
 						SIGNALS);
 
 	input CLK;
@@ -20,6 +21,7 @@ module TOP_MODULE(CLK, RST,
 	// UART
 	input RX;
 	output TX;
+	output ERROR;
 	
 	// SRAM
 	output OE_BAR;
@@ -50,7 +52,7 @@ module TOP_MODULE(CLK, RST,
 	output VT_EN;
 	
 	// DUT signals
-	output [127:0] SIGNALS;
+	output [125:0] SIGNALS;
 	
 	CENTRAL_FSM central_fsm0(CLK, RST, 
 									 RX, TX,
@@ -63,6 +65,7 @@ module TOP_MODULE(CLK, RST,
 									 COUNTER_RST, 
 									 MR_BAR, PL_BAR, STCP, SHCP, Q,
 									 VT_EN,
+									 ERROR,
 									 SIGNALS);
 
 endmodule

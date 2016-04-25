@@ -56,10 +56,10 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 		if (RST) begin
 			r0_val <= 1'b0;
 		end
-		else if (cycle_counter == LEADING_EDGE) begin
+		else if (cycle_counter == LEADING_EDGE - 1) begin
 			r0_val <= D;
 		end
-		else if (cycle_counter == TRAILING_EDGE) begin
+		else if (cycle_counter == TRAILING_EDGE - 1) begin
 			r0_val <= 1'b0;
 		end
 	end

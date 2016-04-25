@@ -35,9 +35,12 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER,
 	output COUNTER_CLK_4;
 	
 	output reg COUNTER_RST; 
-	reg counter_clock_oddr2;	
+	reg counter_clock_oddr2;
 	
-	// Used to ensure the width of the counter is 10 nanoseconds.
+	assign COUNTER_CLK_1 = counter_clock_oddr2;
+	assign COUNTER_CLK_2 = counter_clock_oddr2;
+	assign COUNTER_CLK_3 = counter_clock_oddr2;
+	assign COUNTER_CLK_4 = counter_clock_oddr2;
 	
 	always@(posedge CLK) begin
 		if (RST) begin
@@ -58,7 +61,9 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER,
 		end
 	end
 	
+	/*
 	// Might help with glitches, but probably not necessary.
+	// Actually, they appear to cause IO problems...
 	ODDR2 #(
 		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
 		.INIT(1'b1), // Sets initial state of the Q output to 1'b0 or 1'b1
@@ -121,5 +126,7 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER,
 		.R(1'b0), // 1-bit reset input
 		.S(1'b0) // 1-bit set input
 		);
+		
+	*/
 
 endmodule
