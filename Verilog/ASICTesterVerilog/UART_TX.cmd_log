@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/UART_TX.xst" -ofn "C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/UART_TX.syr" 

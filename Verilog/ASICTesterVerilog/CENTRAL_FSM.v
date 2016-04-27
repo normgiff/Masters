@@ -111,9 +111,11 @@ module CENTRAL_FSM(CLK, RST,
 							turn_on_sram <= 1'b1;
 						end
 						
-						trailing_edge_1 - 8'd1: begin
+						trailing_edge_1 - 8'd3: begin
 							// As soon as we hit the trailing edge, turn off the SRAM blocks
 							// by raising CS_BAR.
+							// The voltage translator has a delay of about 20 nanoseconds, so 
+							// three cycles before the trailing edge is best.
 							turn_on_sram <= 1'b0;
 						end
 						
@@ -183,7 +185,7 @@ module CENTRAL_FSM(CLK, RST,
 					end
 					
 					SEND_BACK_DATA: begin
-						NS = LOAD_SRAM_DATA_1;
+						NS = LOAD_SRAM_DATA_0;
 					end
 					
 					default: begin
@@ -504,11 +506,12 @@ module CENTRAL_FSM(CLK, RST,
 				// Then, clear the UART read buffer and transmit an acknowledgement.
 				NS = UART_CAPTURE_ACK;
 			end
-			
+
+			LOAD_SRAM_DATA_0: begin
+				NS = LOAD_SRAM_DATA_1;
+			end
+
 			LOAD_SRAM_DATA_1: begin
-				// TODO: Send the next output vector back to BBB.
-				// NOTE: BBB must invoke this command as many times as needed.
-				// Therefore, the BBB has to keep track of the total number of input vectors.
 				NS = LOAD_SRAM_DATA_2;
 			end
 			
@@ -727,7 +730,7 @@ module CENTRAL_FSM(CLK, RST,
 				end
 				
 				default: begin
-					if (next_address && more_to_read) begin
+					if (next_address) begin
 						advance_counter <= 1'b1;
 					end
 				end
@@ -769,12 +772,13 @@ module CENTRAL_FSM(CLK, RST,
 	assign bus126 = read_data[125:0];
 	
 	// Logic to store cycle configuration parameters.
+	// Some default values provided.
 	always@(posedge CLK) begin
 		if (RST) begin
-			leading_edge_1 <= 7'b0;
-			trailing_edge_1 <= 7'b0;
-			cycle_length_1 <= 8'b0;
-			leading_edge_2 <= 7'b0;
+			leading_edge_1 <= 7'd6;
+			trailing_edge_1 <= 7'd14;
+			cycle_length_1 <= 8'd30;
+			leading_edge_2 <= 7'd8;
 		end
 		else if (PS == STORE_CYCLE_CONFIG_DATA) begin
 			leading_edge_1 <= rxdata[14:8];
@@ -917,26 +921,35 @@ module CENTRAL_FSM(CLK, RST,
 	reg we_bar_in;
 	
 	always@(posedge CLK) begin
-		if (RST || PS == IDLE) begin
-			oe_bar_in <= 1'b1;
-			cs_bar_in <= 1'b1;
+		if (RST) begin
+			oe_bar_in <= 1'b1; // Outputs should be disabled by default.
+			cs_bar_in <= 1'b1; // Leave off by default.
 			we_bar_in <= 1'b0; // Write-mode by default is better to prevent multiple-driver issues.
 		end
 		else begin		
 			case (PS)
+				IDLE: begin
+					we_bar_in <= 1'b0;
+				end
+			
 				RESET_HARDWARE_PRETEST: begin
-					// Turn on the SRAM blocks.
-					oe_bar_in <= 1'b0;
+					// Disable outputs so we can write to them.
+					// Set to write mode, but keep the device off.
+					oe_bar_in <= 1'b1;
+					cs_bar_in <= 1'b1;
+					we_bar_in <= 1'b0;
 				end
 				
 				TESTS_COMPLETED: begin
 					// Turn off the SRAM blocks.
 					oe_bar_in <= 1'b1;
+					cs_bar_in <= 1'b1;
+					we_bar_in <= 1'b0;
 				end
 				
 				LOAD_SRAM_DATA_1: begin
-					// Turn on the SRAM blocks.
-					oe_bar_in <= 1'b0;
+					// Enable reading mode.
+					we_bar_in <= 1'b1;
 				end
 				
 				LOAD_SRAM_DATA_2: begin
@@ -945,23 +958,28 @@ module CENTRAL_FSM(CLK, RST,
 				end
 				
 				LOAD_SRAM_DATA_3: begin
-					// Set to read mode.
-					we_bar_in <= 1'b1;
+					// Outputs in driving state.
+					oe_bar_in <= 1'b0;
 				end
+				
+				LOAD_SRAM_DATA_4: begin
+					// Do nothing.
+				end
+				
+				LOAD_SRAM_DATA_5: begin
+					// Nothing.
+				end
+				
 				
 				TRANSMIT_SRAM_DATA: begin
 					// We can turn off the SRAM blocks now, as
 					// the data has been captured.
+					// Turn off write in the next cycle, to avoid glitches.
 					oe_bar_in <= 1'b1;
 					cs_bar_in <= 1'b1;
-					we_bar_in <= 1'b0;
 				end	
 
 				default: begin
-					if (perform_test) begin
-						// OK to keep WE low the entire time that we perform a test, I think...
-						we_bar_in <= 1'b0;
-					end
 					if (turn_on_sram) begin
 						cs_bar_in <= 1'b0;
 					end	
@@ -1234,11 +1252,24 @@ module CENTRAL_FSM(CLK, RST,
 	reg vt_en;
 	
 	always@(posedge CLK) begin
-		if (rst) begin
-			vt_en <= 1'b0;
+		if (RST) begin
+			// The voltage translators output odd values when placed in three-state.
+			// We will leave them on unless we are reading from SRAM.
+			vt_en <= 1'b1;
 		end
 		else begin
 			case (PS) 
+				IDLE: begin
+					if (we_bar_in == 1'b0) begin // Safety measure
+						vt_en <= 1'b1;
+					end
+				end
+				
+				LOAD_SRAM_DATA_0: begin
+					// Turn off the voltage translators before we enable the SRAMs for read mode.
+					vt_en <= 1'b0;
+				end
+				
 				RESET_HARDWARE_PRETEST: begin
 					vt_en <= 1'b1;
 				end

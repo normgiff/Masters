@@ -44,16 +44,16 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 	parameter RETRIEVE_DATA = 3;
 	
 	// These output buffers are (intentionally) very slow.
-	// The datasheet suggests that at 3.3V, 400 nanoseconds should be a safe waiting time.
+	// The datasheet suggests that at 3.3V, 1000 nanoseconds should be a safe waiting time.
 	reg [7:0] serial_counter;
-	reg [5:0] propagation_delay_counter;
+	reg [6:0] propagation_delay_counter;
 	
 	reg enable_delay_counter;
 	reg reset_delay_counter;
 	reg enable_serial_counter;
 	reg reset_serial_counter;
 
-	parameter MAX_DELAY = 40;
+	parameter MAX_DELAY = 100;
 	parameter SERIAL_LIMIT = 128;
 	
 	reg [1:0] PS;
@@ -65,14 +65,14 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 	always@(posedge CLK) begin
 		if (RST) begin
 			serial_counter <= 7'd0;
-			propagation_delay_counter <= 6'd0;
+			propagation_delay_counter <= 7'd0;
 		end
 		else begin
 			if (enable_delay_counter) begin
-				propagation_delay_counter <= propagation_delay_counter + 6'd1;
+				propagation_delay_counter <= propagation_delay_counter + 7'd1;
 			end
 			else if (reset_delay_counter) begin
-				propagation_delay_counter <= 6'd0; 
+				propagation_delay_counter <= 7'd0; 
 			end
 			if (enable_serial_counter) begin
 				serial_counter <= serial_counter + 7'd1;
@@ -138,12 +138,25 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 		endcase
 	end
 	
+	reg shcp_internal; // Double-buffered to avoid glitches.
+	reg stcp_internal;
+	always@(posedge CLK) begin
+		if (RST) begin
+			SHCP <= 1'b0;
+			STCP <= 1'b0;
+		end
+		else begin
+			SHCP <= shcp_internal;
+			STCP <= stcp_internal;
+		end
+	end
+	
 	// Combinational logic.
 	always@(*) begin
 		MR_BAR = 1'b1;
 		PL_BAR = 1'b1;
-		SHCP = 1'b0;
-		STCP = 1'b0;
+		shcp_internal = 1'b0;
+		stcp_internal = 1'b0;
 		READY = 1'b0;
 
 		enable_serial_counter = 1'b0;
@@ -178,11 +191,11 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 			LATCH_DATA: begin
 				if (propagation_delay_counter < (MAX_DELAY >> 1)) begin
 					PL_BAR = 1'b0;
-					STCP = 1'b0;
+					stcp_internal = 1'b0;
 				end
 				else begin
 					PL_BAR = 1'b0;
-					STCP = 1'b1;
+					stcp_internal = 1'b1;
 				end
 			
 				if (propagation_delay_counter == MAX_DELAY) begin
@@ -194,15 +207,17 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 			end
 			
 			RETRIEVE_DATA: begin
-				if (propagation_delay_counter < (MAX_DELAY >> 1)) begin
-					SHCP = 1'b0;
+				if (propagation_delay_counter == 0) begin
+					enable_serial_counter = 1'b1;
+				end
+				else if (propagation_delay_counter < (MAX_DELAY >> 1)) begin
+					shcp_internal = 1'b0;
 				end
 				else begin
-					SHCP = 1'b1;
+					shcp_internal = 1'b1;
 				end
 			
 				if (propagation_delay_counter == MAX_DELAY) begin
-					enable_serial_counter = 1'b1;
 					reset_delay_counter = 1'b1;
 				end
 				else begin
@@ -219,10 +234,10 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 	// Clocks in serial data.
 	always@(posedge CLK) begin
 		if (RST) begin
-			SRAM_DATA <= 128'd0;
+			SRAM_DATA <= 127'd0;
 		end
 		else if (enable_serial_counter) begin
-			SRAM_DATA[serial_counter] <= Q;
+			SRAM_DATA[8'd127 - serial_counter] <= Q;
 		end
 	end
 	

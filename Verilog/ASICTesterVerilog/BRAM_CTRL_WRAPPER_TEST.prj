@@ -1,3 +1,0 @@
-verilog work "BRAM.v"
-verilog work "BRAM_CTRL.v"
-verilog work "BRAM_CTRL_WRAPPER_TEST.v"
