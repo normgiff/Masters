@@ -15,8 +15,8 @@
 % BEGIN DOCUMENT
 % -------------------------------------------------------------------------------------
 \begin{document}
-\title{LV600 Users Manual}
-\author{\textbf{Alfred Norman Gifford IV} \\ \textbf{Daniel Khoury} \\ University of Utah}
+\title{LV600 User's Manual}
+\author{Authors: \\ \textbf{Alfred Norman Gifford IV} \\ \textbf{Daniel Khoury} \\ \\ Project Advisor: \\ Ken Stevens \\ \\ University of Utah}
 \maketitle
 \pagestyle{empty}
 
@@ -29,16 +29,60 @@
 % -------------------------------------------------------------------------------------
 % INTRODUCTION
 % -------------------------------------------------------------------------------------
-\section{Introduction}
-This is the instruction manual for the LV600. The LV600 is a ASIC tester for the VLSI testing class. It is intended to replace the LV500 and the Verigy testers. Although these testers are good quality they are somewhat old and have begun to fail. For this purpose the university needs another tester for students to use
+\section{Introduction and Motivation}
+At the University of Utah, students enrolled in Digital VLSI Design (CS/ECE 5710/6710) work in teams to design an integrated circuit (IC) for their final project and have the option of letting MOSIS, an IC foundry, fabricate their chip. After fabrication, as per MOSIS's rules, students are required to test their chips and report their results back to MOSIS. 
+
+At least one student from any team that chooses to fabricate their chip must enroll in CS/ECE 6712, which teaches students how to test their chips using a device called an application-specific integrated circuit (ASIC) tester to test their fabricated chip. Presently, the University of Utah has two ASIC testers: a Verigy 93000 and a Tektronix LV500. As of 04/30/2016, both machines are in troubled states. The Verigy 93000 is no longer operational due to a hard disk drive failure. The LV500 has many failed sectors, so the system as a whole may prove unreliable when testing a chip. 
+
+Simply purchasing a new ASIC tester is easier said than done. ASIC testers are extremely expensive machines (millions to billions of dollars) --  partly because of a niche market, but mainly because they are incredibly difficult systems to engineer and construct. 
+
+Our project, which we term the LV600, is an ASIC tester based largely upon the LV500. The project's intention is to provide an ASIC tester that is good enough for most student-designed ASIC chips. This document serves as both the final report for our project and the user's manual for the system that we ultimately provide to the University. 
+
+We also include ideas for how to build upon our project, and we strongly encourage students to consider building an ASIC tester for their senior project if they have any interest in such machines. The project provides so many learning experiences -- it's conceptually simple, but the devil lies in the details. 
+
 \newpage
 
 % -------------------------------------------------------------------------------------
 % DAEMONS
 % -------------------------------------------------------------------------------------
-\section{Overview}
-Silly daemons
+\section{Case Study: An Overview of the LV500}
+All ASIC testers build upon the same simple idea: 
+\begin{enumerate}
+\item The user specifies what outputs to expect from their chip in response to what inputs.
+\item The system applies the user-specified inputs to the device under test (DUT) and later samples the outputs of the DUT.
+\item The machine reports how the sampled outputs compare to the outputs expected by the user.
+\end{enumerate}
+
+In this section, we provide an abstracted overview of how the Tektronix LV500 implements the above steps. Although we are not familiar with the implementation of other ASIC testers, like the Verigy 93000, we believe the understanding the LV500's implementation serves as a strong starting point of ideas. 
+
+\textbf{NOTE}: More detailed information about the LV500's physical implementation can be found \href{https://view.officeapps.live.com/op/view.aspx?src=http://www.ece.utah.edu/~kstevens/6712/tester.ppt}{here}. We chose to abstract away  some of the details in these slides that we deemed irrelevant for this section.
+
+\subsection{Step 1: User Specifications}
+The LV500 
+
 \newpage
+
+% -------------------------------------------------------------------------------------
+% SENIOR PROJECT (FALL 2014) OVERVIEW
+% -------------------------------------------------------------------------------------
+\section{Senior Project (Fall 2014) Overview}
+
+\newpage
+
+% -------------------------------------------------------------------------------------
+% LV600: INITIAL PLANNING
+% -------------------------------------------------------------------------------------
+\section{LV600: Initial Planning}
+
+\newpage
+
+% -------------------------------------------------------------------------------------
+% LV600: Project Overview
+% -------------------------------------------------------------------------------------
+\section{LV600: Project Overview}
+
+\newpage
+
 % -------------------------------------------------------------------------------------
 % REFERENCES
 % -------------------------------------------------------------------------------------
