@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction and Motivation}{2}{section.0.1}
+\contentsline {section}{\numberline {2}Overview of ASIC Testers}{3}{section.0.2}
+\contentsline {subsection}{\numberline {2.1}Step 1: User Specifications}{3}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {2.2}Step 2: Testing}{3}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {2.3}Step 3: Reporting Results}{3}{subsection.0.2.3}
+\contentsline {section}{\numberline {3}Senior Project: Overview}{4}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}Project Architecture}{4}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}What Worked}{4}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {3.3}Areas of Improvement}{4}{subsection.0.3.3}
+\contentsline {section}{\numberline {4}Master's Project: Design Decisions}{5}{section.0.4}
+\contentsline {subsection}{\numberline {4.1}BeagleBone Black Web Server}{5}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {4.2}Numato Saturn FPGA Development Board}{5}{subsection.0.4.2}
+\contentsline {subsection}{\numberline {4.3}Real-Time Testing}{5}{subsection.0.4.3}
+\contentsline {subsection}{\numberline {4.4}Timing Characteristics}{5}{subsection.0.4.4}
+\contentsline {section}{\numberline {5}Master's Project: Implementation}{6}{section.0.5}
+\contentsline {subsection}{\numberline {5.1}BeagleBone Black Web Server and C Code}{6}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {5.2}Verilog for Numato Saturn FPGA Development Board}{6}{subsection.0.5.2}
+\contentsline {subsection}{\numberline {5.3}PCB Boards}{6}{subsection.0.5.3}
+\contentsline {section}{\numberline {6}Master's Project: Overview}{7}{section.0.6}
+\contentsline {subsection}{\numberline {6.1}What Worked}{7}{subsection.0.6.1}
+\contentsline {subsection}{\numberline {6.2}Difficulties Encountered}{7}{subsection.0.6.2}
+\contentsline {subsection}{\numberline {6.3}Shortcomings and Areas of Improvement}{7}{subsection.0.6.3}
+\contentsline {section}{\numberline {7}Using Our System}{8}{section.0.7}
+\contentsline {section}{\numberline {8}Advice for Future Work}{9}{section.0.8}
+\contentsline {section}{\numberline {9}Special Thanks}{10}{section.0.9}
+\contentsline {section}{\numberline {10}Contact Information}{11}{section.0.10}
+\contentsline {section}{\numberline {11}References}{12}{section.0.11}
