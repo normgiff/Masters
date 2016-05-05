@@ -8,7 +8,7 @@ All ASIC testers build upon the same simple interface:
 
 Below, we dissect and analyze these three steps both abstractly and via the LV500's implementation. Throughout this section, we define some terminology borrowed from the LV500. 
 
-\subsection{Specifying Input Vectors and Output Vectors}
+\subsection{Input and Output Bit Vectors}
 Terminology: 
 \begin{itemize}
 \item \textbf{Input vector}: An ordered list of 0s and 1s that correspond to some ordering of a subset of the DUT's input pins. 
@@ -20,7 +20,7 @@ As ASIC testers are generally not designed with any specific DUT in mind, much m
 \subsubsection{Pin Locations}
 Any ASIC tester will define "pin locations" that are associated with some kind of socket used to connect a DUT to the tester. Obviously, mapping pins on a DUT to pin locations on an ASIC tester varies per tester. The key idea to keep in mind is that the user does not have to inform the tester of every input and output signal on the DUT. Only the pins on the DUT that the user wishes to test must be mapped to the tester's pin locations. Depending on the tester, any unspecified DUT pins may be left floating or pulled high/low with a resistor.
 
-\subsubsection{Inputs and Outputs}
+\subsubsection{Pin Directions}
 \begin{flushleft}
 Terminology: 
 \begin{itemize}
