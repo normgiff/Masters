@@ -1,1 +1,51 @@
 \section{Bill of Materials}
+
+To reconstruct our system costs about \textbf{\$660.51}. Parts that end with * mean that shipping charges are included in the price per unit. Unit prices do not include bulk discounts.
+
+% This list isn't going to change so I'm just computing the numbers off-hand. Also there are better ways to specify the column widths but meh.
+
+\begin{flushleft}
+\textbf{PCBs and Development Boards:}
+\end{flushleft}
+\begin{center}
+    \begin{tabular}{| p{0.213\textwidth} | p{0.142\textwidth} | p{0.142\textwidth} | p{0.142\textwidth} | p{0.071\textwidth} | p{0.142\textwidth} |}
+    \hline
+    Part & Desc. & Supplier & Unit \$ & Amt & Total \$ \\ \hline
+    2-Layer PCB* & Comm. Board & Advanced Circuits & 52.80 & 1 & 52.80 \\ \hline
+    4-Layer PCB* & Numato Shield, DUT Board & Advanced Circuits & 85.80 & 2 & 171.00 \\ \hline
+    BeagleBone Black Rev C* & Web Server & SparkFun & 60.30 & 1 & 60.30 \\ \hline
+    Saturn V9* & Spartan-6 FPGA Development Board & Numato & 91.96 & 1 & 91.96 \\ \hline
+    \end{tabular}
+\end{center}
+\textbf{Total cost of PCBs and Development Boards: \$376.06}
+
+\pagebreak
+
+\begin{flushleft}
+\textbf{PCB Components:}
+
+Note: We estimate shipping costs as 10 percent of the total cost of all these parts.
+\end{flushleft}
+\begin{center}
+    \begin{tabular}{| p{0.213\textwidth} | p{0.142\textwidth} | p{0.142\textwidth} | p{0.142\textwidth} | p{0.071\textwidth} | p{0.142\textwidth} |}
+    \hline
+    Part & Desc. & Supplier & Unit \$ & Amt & Total \$ \\ \hline
+    200-6313-9UN-1900 & ZIF Socket & Digikey & 44.25 & 1 & 44.25 \\ \hline
+    74HC597PW & Output Buffer & Digikey & 0.512 & 16 & 8.19 \\ \hline
+    74VHC4040FT & Counter & Digikey & 0.54 & 4 & 2.16 \\ \hline
+    AD5293 & Digital Pot & Digikey & 6.31 & 2 & 12.62 \\ \hline
+    IDT71V016SA & SRAM & Digikey & 2.71 & 1 & 21.68 \\ \hline
+    MAX3004 & Low-to-High Level Shifter & Digikey & 3.012 & 16 & 48.19 \\ \hline
+    MAX3012 & High-to-Low Level Shifter & Digikey & 3.012 & 16 & 48.19 \\ \hline
+    LM317KTTR & Adjustable Voltage Regulator & Digikey & 0.93 & 2 & 1.86 \\ \hline
+    LM321MFX & Op. Amps & Digikey & 0.573 & 1 & 2.92 \\ \hline
+    PJ-002AH-SMT-TR & Barrel Jack Connectors & Digikey & 1.89 & 2 & 3.78 \\ \hline
+    2x20 Headers & Extra-Tall, Female, SMT & Adafruit & 2.95 & 20 & 59.00 \\ \hline
+    Miscellaneous & 0603, Headers, Wall Warts, etc. & Adafruit, Amazon, Digikey & N/A & N/A & Roughly 50.00 \\ \hline
+    \end{tabular}
+\end{center}
+\begin{flushleft}
+\textbf{Total cost (with estimated shipping): \$284.45}
+\end{flushleft}
+
+\newpage
