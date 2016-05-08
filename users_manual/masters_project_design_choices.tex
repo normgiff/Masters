@@ -35,13 +35,45 @@ We spent Fall 2015 brainstorming ideas to implement the above goals. We proposed
 \subsubsection{User Interface}
 TODO: Norm
 
-\subsubsection{Schmooing and Variable Voltages}
-TODO: Daniel (mention equilibrium tracing too)
+\subsubsection{Timing and Voltage Schmooing}
+Time schmooing, i.e. modulating the test cycle configuration (delay, width, length) between tests, naturally requires equilibrium tracing. We planned to manually route any PCBs we would design to minimize the difference in trace lengths.
+
+Figure \ref{fig:power_schematic} is a schematic that we designed for voltage schmooing. Much of the schematic is based upon the variable voltage regulator LM317's datasheet. As the LM317 uses a reference voltage of 1.25V, we added a -1.25V bias created by an op-amp buffer (bottom-left of schematic) to set the reference voltage to 0V. We learned of this trick from  \href{http://electronics.stackexchange.com/questions/186760/why-do-linear-voltage-regulators-have-minimum-output-voltage-0-v}{this} StackExchange post. 
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{power_schematic.png}
+\caption{Power schematic for voltage schmooing.}
+\label{fig:power_schematic}
+\end{figure}
+
+We simulated this schematic in PSpice and prototyped the schematic using a trimpot for the variable resistor. Figure \ref{fig:power_results} shows that the output voltage, much to our liking, responds linearly to a change in the resistance of the variable resistor.
+
+There is an important tradeoff worth mentioning with this schematic. A higher variable resistor allows for more granularity in the output voltage. However, there is a small but fixed current that travels through the variable resistor; a larger variable resistor creates a larger error term in the output voltage. Refer to the LM317's datasheet online for more information.
+
+For the variable resistor, we researched digital potentiometers and found that the AD5293, with 10-bit resolution at 20 kOhms, should serve well for the project.
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{power_results.png}
+\caption{PSpice simulation results for power circuitry.}
+\label{fig:power_results}
+\end{figure}
 
 \subsubsection{Real-Time Testing}
-TODO: Norm, Daniel
+Devising a plan for real-time testing was easily the most challenging issue we faced. With our senior project, handling one input and output vector at a time was convenient because we only needed one set of double-buffered registers for all of the vectors associated with a test cycle. As such, we had to determine where the input vectors and output vectors should actually be stored.
+
+Ultimately, we proposed the scheme in Figure \ref{fig:real_time_testing}. The basic idea was to store output vectors into external SRAM chips, and then later fetch the SRAM contents using some sort of parallel-to-serial shift register. Not shown in the image, we chose to store the input vectors in the Spartan-6 FPGA's block RAM (which allow for fast reads).
+
+The key idea is that during test execution -- the only moment in which timing is important as far as the DUT goes -- the system only concerns itself with fetching and applying input vectors. 
+
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{real_time_testing.png}
+\caption{Real-time testing scheme. Input vectors are stored in the FPGA's block RAM; output vectors are stored in separate SRAM chips.}
+\label{fig:real_time_testing}
+\end{figure}
 
 \subsubsection{Versatility}
-TODO: Daniel, Norm (mention Modular Design)
+Though we had no specific proposals at the end of Fall 2015, we hoped to bring legacy to our project and make it upgradeable and adequate for students to use for at least a few years.
+
+Ultimately, some of the ways we encompassed versatility in our project design is the use of multiple PCBs and the BeagleBone Black web server, which is easy to develop on.
 
 \newpage

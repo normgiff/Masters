@@ -11,6 +11,7 @@ In our senior project, we were able to support 11x11, 12x12, and 13x13 MOSIS pac
 
 \subsection{BeagleBone Black Web Server and C Code}
 TODO: Norm (web server code), Daniel (C code)
+
 \subsection{Verilog for Numato Saturn}
 For a detailed understanding of the Verilog coded onto the Numato Saturn, we advise readers to study to the well-commented Verilog code on our repository. In this section, we provide a synopsis of the Verilog design.
 
@@ -160,7 +161,7 @@ Regarding hardware signals:
 \end{figure}
 
 \subsection{PCB Boards}
-Figure \ref{fig:three_pcbs} shows the three PCBs that we designed for this project. We detail each PCB in this section. (TODO) 
+Figure \ref{fig:three_pcbs} shows the three PCBs that we designed for this project. Figure \ref{fig:final_schematic} shows how the three PCBs interact with each other. Figure \ref{fig:final_schematic_per_pin} shows the schematic that we implemented for every input/output vector bit; note that the implementation spans all three PCBs.
 
 \begin{figure}
 \includegraphics[width=1.0\textwidth]{three_pcbs.jpg}
@@ -168,6 +169,55 @@ Figure \ref{fig:three_pcbs} shows the three PCBs that we designed for this proje
 \label{fig:three_pcbs}
 \end{figure}
 
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{final_schematic_per_pin.png}
+\caption{Schematic implemented (across all three boards) for input/output vector bits.}
+\label{fig:final_schematic_per_pin}
+\end{figure}
 
-TODO: Norm, Daniel
+\begin{figure}
+\includegraphics[width=1.0\textwidth]{final_schematic.png}
+\caption{How the three PCBs serve each other.}
+\label{fig:final_schematic}
+\end{figure}
+
+It is important to note that Figure \ref{fig:final_schematic_per_pin}, in the top-right of the image, shows a bridge effectively between the FPGA and DUT. There is one hard problem to answer when designing any ASIC tester: what do we do if the user accidentally designates an output of the DUT as an input? 
+
+Fuses are one option, but they're bulky and can take several seconds before breaking. We investigated the use of resettable fuses, which are essentially resistors whose resistance increases exponentially in response to increases in thermal energy, but they merely taper off the current rather than physically break the connection. We decided that our best option of handling shorts is to allow users to bridge connections between the FPGA and DUT with a 1 Ohm resistor, rated at 0.125 Watts. These resistors should burn quickly in case of a short and are easily replaceable, though we are unsure if this mechanism can prevent damage to both the DUT and the surrounding circuitry in the case of a short.
+
+\subsubsection{Numato Shield}
+This four-layer board simply routes all 150 I/O pins from the Numato board to four headers. 
+
+By manually routing the board, we were able to achieve equilibrium tracing; all traces are within 200 mils of each other. Routing took approximately two weeks. Of the three PCBs that we designed, only this board features equilibrium tracing. The other two boards (especially the DUT Board) were too dense to allow for equilibrium tracing.
+
+\subsubsection{DUT Board}
+This four-layer board houses the following components: 
+\begin{itemize}
+\item A 13x13 ZIF socket (top of the board) to house the DUT.
+\item Eight headers (top) used to bridge connections between the DUT and signals from the FPGA board. Note that bridges are performed by using a 1 Ohm resistor to tie both pins in a row of the header. The innermost pin goes to the DUT, the outermost pin to the FPGA. Also note that power and ground must be manually connected via jumper wires from the Communication Board.
+\item Four headers (bottom of board) to connect to the Communication Board (see below).
+\item Eight SRAM ICs (top), four counter ICs (bottom), 16 high-to-low (logic high value of DUT to 3.3V) level shifter ICs (top), and 16 parallel-to-serial shift register ICs (bottom). 
+\end{itemize}
+
+Routing this board proved to be extremely difficult. Initially, Altium's autorouter failed to route a good chunk of the connections after three hours. With strategic component placement, we were able to get the autorouter to route all but one connection after 100 minutes. 
+
+It is worth noting that because of the large number of counters and SRAM blocks, we became concerned that the load seen by an FPGA pin driving, for instance, all of the SRAM WE pins may be large enough to cause problems. As such, we use separate FPGA pins for the CS and WE signals of each SRAM block, as well as the clock of each counter, to help reduce the load seen by these pins.
+
+\subsubsection{Communication Board}
+Conceptually, this two-layer board is relatively simple. However, it's proven to be our most problematic board. 
+
+From the perspective of the board in Figure \ref{fig:three_pcbs}, the left of the board serves as a shield for our BeagleBone Black. For versatility, we pinned out all of the unused BeagleBone Black pins onto headers (extreme left of board). 
+
+The middle section of the board houses our power circuitry for variable high and low voltages. We initially opted for four separate power connections (12V, 5V, 3.3V, and a backup high voltage in case the power circuitry failed) out of concern that the current draw from a single voltage supply may cause loading effects. 
+
+The right of the board simply connects signals from the Numato shield to the DUT board, with low-to-high level shifters (3.3V to the logic high value for the DUT) used for any input vector bits. 
+
+Routing the board was somewhat tedious; Altium's autorouter required about 40 minutes, and we had to route a few signals manually. We've had two bigger problems with this board, however: 
+\begin{enumerate}
+	\item The first time we fabricated the board, we saw smoke after soldering the power circuitry components and connecting 3.3V to the system. We later found that 3.3V was shorted to GND. Altium did not show a short between the two signals, so although we did not probe the board before soldering our components, we believe a manufacturing error caused the short. (An aside: Our BeagleBone Black was connected to the PCB at the time, and the short appeared to have somehow erased some of the data on the BeagleBone Black. As of now, we restored the data onto the BeagleBone Black and it appears to work fine.) 
+	\item The second time we sent the board for fabrication, we ordered two versions: one with power and ground planes, and one without. In the case of another power-to-ground short, our hope was that we could find the short on the board that lacked power planes. Fortunately, both boards arrived free of any power-to-ground shorts. Unfortunately, we still saw smoke. We came to realize that we mistakenly reversed the power and ground connections on the barrel jack connectors that we used, but reversing those connections with pigtail connectors failed to fix the problem.
+\end{enumerate}
+
+Before we leave, we plan to scrutinize the board for any issues that we may have missed. We also plan to reduce the number of barrel jack connectors needed by using regulators to create 3.3V and 5V (a backup logic high value compatible with VLSI chips designed using the 0.6 micron process).
+
 \newpage
