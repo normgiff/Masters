@@ -33,14 +33,25 @@ We spent Fall 2015 brainstorming ideas to implement the above goals. We proposed
 \end{figure}
 
 \subsubsection{User Interface}
-TODO: Norm
+One of the biggest problems with out senior was how so cumbersome  it was to set up and use. First off the user needed to use a Windows computer and have the executable on there computer. Then the user needed to program the FPGA, and make sure all of the jumper wires where in the right place. With our masters project we wanted to give it more of a "plug and play" interface to it. With this in mind we decided to use a web browser to interface with the testing system. The best way to do this was to use the Baaglebone Black.
+
+The reason the Beaglebone Black works so well is that it can host a small web server. This allows the whole system to be controlled from a web browser. More on how this is possible in another section. At this point the user has only one option to configure tests to send to the test system. This is by filling out e web form found at the website, \url{http://line-norm-gifford.cs.utah.edu:8080}. 
+
+\begin{figure}[!h]
+\includegraphics[width=1.0\textwidth]{web_site.png}
+\caption{Web form to Configure Tests}
+\label{fig:web_form}
+\end{figure}
+
+Figure \ref{fig:web_form} shows the layout for the web form. For a better view click on the address above. The layout of this form is pretty simple. Notice the buttons on the buttons on the bottom. These buttons are used to add all of the needed signals for the chip being tested to the templates. Also there is a button to add test vectors an their corresponding result vector .
+
 
 \subsubsection{Timing and Voltage Schmooing}
 Time schmooing, i.e. modulating the test cycle configuration (delay, width, length) between tests, naturally requires equilibrium tracing. We planned to manually route any PCBs we would design to minimize the difference in trace lengths.
 
 Figure \ref{fig:power_schematic} is a schematic that we designed for voltage schmooing. Much of the schematic is based upon the variable voltage regulator LM317's datasheet. As the LM317 uses a reference voltage of 1.25V, we added a -1.25V bias created by an op-amp buffer (bottom-left of schematic) to set the reference voltage to 0V. We learned of this trick from  \href{http://electronics.stackexchange.com/questions/186760/why-do-linear-voltage-regulators-have-minimum-output-voltage-0-v}{this} StackExchange post. 
 
-\begin{figure}
+\begin{figure}[!h]
 \includegraphics[width=1.0\textwidth]{power_schematic.png}
 \caption{Power schematic for voltage schmooing.}
 \label{fig:power_schematic}
