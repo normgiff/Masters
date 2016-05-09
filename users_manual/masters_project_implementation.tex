@@ -10,7 +10,12 @@ In our senior project, we were able to support 11x11, 12x12, and 13x13 MOSIS pac
 \end{figure}
 
 \subsection{BeagleBone Black Web Server and C Code}
-TODO: Norm (web server code), Daniel (C code)
+The code that controls the system has two main parts; the for the web server for the ser interface and the c code called by the server code that runs the whole system. The web server code consists of three main tools. HTML is used to display the both the initial form for test configuration and to display the results of the tests. JQUERY is used to give the user the ability to dynamically add and remove signals and test vectors. Then PHP is used to take the information from the form and runs the c code. 
+
+What makes this possible is the PHP function \href{http://php.net/manual/en/function.exec.php}{exec()}. As its perimeters it takes in a string consisting of the command needing to run a c program. The return values are a vector of any print statements in the c code and the actual return value of the c program. The string need to look like a shell command. The return of the vector is really handy because the c code can print HTML lines and then PHP can print out these statements line by line in order to use in the web browser.
+
+One task that was a little tricky was to take the arrays from the web form and appropriately give it to the c program. This was done by using JSON encoding. This encoding takes the array from PHP and changes it into a string. This string contains all of the values from the form separated by commas with a square bracket at the beginning of the string and a square bracket the end. The c code will then parse this string back into an array that can be used for creating the tests.
+
 
 \subsection{Verilog for Numato Saturn}
 For a detailed understanding of the Verilog coded onto the Numato Saturn, we advise readers to study to the well-commented Verilog code on our repository. In this section, we provide a synopsis of the Verilog design.
