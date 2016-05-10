@@ -1,3 +1,23 @@
 \section{Advice for Future Work}
-TODO: Norm, Daniel
+
+\subsection{More Advanced FPGA}
+Although the Spartan-6 FPGA served its purpose, our tester would be far more powerful if a Xilinx 7-series FPGA is used in place. Reasons: 
+\begin{itemize}
+	\item Unlike the Xilinx 6-series FPGAs, the 7-series FPGAs are designed to handle large clock speeds. A faster internal clock allows for more granularity when configuring test cycles. According to Xilinx ISE, we cannot clock our Verilog design faster than about 150 MHz (we left the internal clock speed at 100 MHz as a safety measure). 
+	\item There are likely 7-series FPGAs that offer more block RAM than the 6-series FPGAs. Although our system supports up to four templates and 244 input vectors - likely enough for most student-designed chips - having room for more templates and input vectors certainly wouldn't hurt.
+\end{itemize}
+
+As of this writing, the 7-series FPGA boards are generally very expensive (on the order of thousands of dollars), with the exception of the Artix-7 FPGA. It is also worth noting that Xilinx recommends (and in some cases requires) Vivado over ISE for programming 7-series FPGAs.
+
+\subsection{Equilibrium Tracing}
+Equilibrium tracing on all of the PCBs is ideal for accurate timing information of the chip. Equilibrium tracing may be possible if more than 3 PCBs are designed, though the costs of manufacturing add up quickly.
+
+\subsection{BeagleBone Black Development}
+Our ideas for expanding upon the BeagleBone Black include: 
+\begin{itemize}
+	\item Storing test configurations and test results in a \textbf{database}, e.g. with mySQL. We included a microSD card in the BeagleBone Black to help facilitate this expansion.
+	\item Requiring users to set up usernames and passwords, and requiring a login to perform a test. This constraint allows users to more easily find their stored test configurations and results, and also helps ensure that only student runs a test at a time.
+	\item Using some library to generate schmooing plots.
+\end{itemize}
+
 \newpage

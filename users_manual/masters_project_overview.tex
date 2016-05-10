@@ -1,11 +1,45 @@
 \section{Master's Project: Analysis}
 
 \subsection{Demo Video}
+Although we did not have a working Communication Board at the time of our presentation, we were still able to demo our system. The video of our demo is available \href{https://www.youtube.com/watch?v=Cojl8VEp_cA&feature=youtu.be}{here}. Note that the DUT used is a MOSIS-fabricated chip containing several simple combinational and sequnetial circuits.
 
 \subsection{What Worked}
+Our demo video proves that the core ideas behind our project are sound: by making use of a Spartan-6 FPGA's block RAM and external circuitry to store output vectors, real-time testing, as well as a decent level of granularity when configuring test cycles, is feasible. 
+
+We are particularly proud of our choice to use a BeagleBone Black for user interfacing. Using a web form to configure the tester is far more straightforward than using the .msa file template supported by the LV500. The BeagleBone Black also provides plenty of memory for storing test configurations and results.
 
 \subsection{Areas of Improvement}
+Please refer to Section 8 (Advice for Future Work).
 
 \subsection{Difficulties Encountered}
+
+\subsubsection{Solder Mistakes}
+When we first received the DUT Board, Daniel accidentally soldered an SRAM chip upside-down. All of our attempts to remove the SRAM chip failed. Out of concern that we may have damaged the board while trying to remove the chip, we decided to scrap the board and order a new one.
+
+\subsubsection{Communication Board}
+The Communication Board, as mentioned early, has proven to be our most challenging board to get right. Power modulation can be tricky!
+
+\subsubsection{Fitting the Verilog}
+Initially, we planned to support four force-formats provided by the LV500: R0, R1, DNRZ L, and DNRZ T. When we first synthesized our Verilog, we found that our design required about 110 percent of the available slice LUTs on the board. 
+
+After reducing the number of available force-formats to just R0 (useful for clock signals) and DRNZ L, our design only required 70 percent of the available slice LUTs, but it required about 115 percent of the available area due to routing.
+
+We initially planned to support two completely separate test cycle configurations. To reduce the area required, we modified our design to allow one test cycle configuration, but two different leading edges (delays). After this change, we were able to fit our design into the FPGA board. Our design currently uses about 40 percent of the available slice LUTs and about 60 percent of the available area. 
+
+Lesson learned: the amount of slice LUTs on the Spartan-6 FPGA - a little over 9000 - is not that many!
+
+\subsubsection{Glitches in FPGA Outputs}
+The output signals of the FPGA used to clock the counters are sometimes glitchy, causing the counter to increment more than intended. Having a latch driving these outputs does not appear to fix the problem. We will experiment with using the FPGA delay lines to clean the glitches; if that doesn't work, we may try using small external capacitors to clean the glitches.
+
+\subsection{Before We Leave}
+As of this writing, Daniel and Norm will both be in Utah before May 28. Before we leave, we plan to do the following:
+\begin{itemize}
+\item Fix the Communication Board.
+\item Write the code that parses the web form and programs the digital potentiometers and the FPGA accordingly.
+\item Design housing for the three PCBs.
+\item Attempt to fix the glitches in the counter clock signals.
+\item Organize and clean up our repository.
+\item Update this document accordingly.
+\end{itemize}
 
 \newpage
