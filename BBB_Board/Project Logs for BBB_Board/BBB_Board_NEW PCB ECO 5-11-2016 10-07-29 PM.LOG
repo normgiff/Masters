@@ -1,0 +1,66 @@
+Removed Pin From Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_1_U_VT_WRP1-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP1-2
+Removed Pin From Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_1_U_VT_WRP2-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP2-2
+Removed Pin From Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_1_U_VT_WRP3-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP3-2
+Removed Pin From Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_1_U_VT_WRP7-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP7-2
+Removed Pin From Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_1_U_VT_WRP8-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_1_U_VT_WRP8-2
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP1-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP1-2
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP2-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP2-2
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP5-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP5-2
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP6-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP6-2
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP7-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP7-2
+Removed Pin From Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_3_U_VT_WRP8-1
+Removed Pin From Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_3_U_VT_WRP8-2
+Added Component: Designator=0.1uF_0_U_VT_WRP1(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP5(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_0_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP2(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP3(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP4(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP6(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP7(0.1uF_0603)
+Added Component: Designator=0.1uF_4_U_VT_WRP8(0.1uF_0603)
+Added Pin To Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_0_U_VT_WRP1-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP1-2
+Added Pin To Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_0_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP2-2
+Added Pin To Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_0_U_VT_WRP5-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP5-2
+Added Pin To Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_0_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP6-2
+Added Pin To Net: NetName=3V3_W_U_Power_Control1 Pin=0.1uF_0_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_0_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP2-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP2-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP3-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP3-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP4-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP4-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP6-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP6-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP7-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP7-2
+Added Pin To Net: NetName=GLOBAL_HIGH_POWER Pin=0.1uF_4_U_VT_WRP8-1
+Added Pin To Net: NetName=GLOBAL_LOW_POWER Pin=0.1uF_4_U_VT_WRP8-2
+Added Member To Class: ClassName=U_VT_WRP1 Member=Component 0.1uF_0_U_VT_WRP1 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_0_U_VT_WRP2 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP5 Member=Component 0.1uF_0_U_VT_WRP5 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_0_U_VT_WRP6 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component 0.1uF_0_U_VT_WRP7 (0.1uF_0) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP2 Member=Component 0.1uF_4_U_VT_WRP2 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP3 Member=Component 0.1uF_4_U_VT_WRP3 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP4 Member=Component 0.1uF_4_U_VT_WRP4 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP6 Member=Component 0.1uF_4_U_VT_WRP6 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP7 Member=Component 0.1uF_4_U_VT_WRP7 (0.1uF_4) 0.1uF_0603
+Added Member To Class: ClassName=U_VT_WRP8 Member=Component 0.1uF_4_U_VT_WRP8 (0.1uF_4) 0.1uF_0603
