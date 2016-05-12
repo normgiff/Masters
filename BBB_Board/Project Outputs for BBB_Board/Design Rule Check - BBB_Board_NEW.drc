@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : X:\Masters\BBB_Board\BBB_Board_NEW.PcbDoc
-Date     : 5/11/2016
-Time     : 11:11:22 PM
+Date     : 5/12/2016
+Time     : 12:53:24 PM
 
 Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
    Violation between Silk To Silk Clearance Constraint: (7.67mil < 10mil) Between Text "GND" (4530mil,273mil) on Top Overlay And Track (4250mil,350mil)(4550mil,350mil) on Top Overlay Silk Text to Silk Clearance [7.67mil]
