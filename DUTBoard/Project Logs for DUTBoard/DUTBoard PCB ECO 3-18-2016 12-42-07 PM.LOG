@@ -1,8 +1,0 @@
-Removed Member From Class: ClassName=U_OB_WRP6 Member=OB9
-Removed Member From Class: ClassName=U_TOP_HEADER_WRP3 Member=TH3
-Removed Member From Class: ClassName=U_VT_WRP13 Member=V13
-Removed Member From Class: ClassName=U_VT_WRP14 Member=V14
-Added Pin To Net: NetName=INTERNAL26_U_COMBINED_HEADER_WRP1 Pin=BH1-30
-Added Pin To Net: NetName=INTERNAL26_U_COMBINED_HEADER_WRP2 Pin=BH2-30
-Added Pin To Net: NetName=INTERNAL26_U_COMBINED_HEADER_WRP3 Pin=BH3-30
-Added Pin To Net: NetName=INTERNAL26_U_COMBINED_HEADER_WRP4 Pin=BH4-30
