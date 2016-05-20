@@ -23,7 +23,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#add_sig_temp1").click(function(){
         $("#signals1").append("<li>Signal Name: <input type='text' name='signals1[]'>"
-			      + " Signal Location: <select name='sig_loc1[]'>"
+			      + " Signal Location: <select name='sig_1oc1[]'>"
 			      + "<option value='A1'>A1</option>"
 			      + "<option value='A2'>A2</option>"
 			      + "<option value='A3'>A3</option>"
@@ -220,7 +220,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#add_sig_temp2").click(function(){
         $("#signals2").append("<li>Signal Name: <input type='text' name='signals2[]'>"
-			      + " Signal Location: <select name='sig_loc2[]'>"
+			      + " Signal Location: <select name='sig_1oc2[]'>"
 			      + "<option value='A1'>A1</option>"
 			      + "<option value='A2'>A2</option>"
 			      + "<option value='A3'>A3</option>"

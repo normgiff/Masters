@@ -124,6 +124,7 @@
        {
 	  echo("<br>");
           echo("<b>Template 1</b> contains no signals.<br>");
+	  $temp1_sig_num = 0;
        }
 
        if($_POST['signals2'][0] != "")
@@ -165,6 +166,7 @@
        {
 	  echo("<br>");
           echo("<b>Template 2</b> contains no signals.<br>");
+	  $temp2_sig_num = 0;
        }
 
        if($_POST['signals3'][0] != "")
@@ -205,6 +207,7 @@
        else {
 	  echo("<br>");
           echo("<b>Template 3</b> contains no signals.<br>");
+	  $temp3_sig_num = 0;
        }
 
        if($_POST['signals4'][0] != "")
@@ -246,9 +249,10 @@
        {
 	  echo("<br>");
           echo("<b>Template 4</b> contains no signals.<br>");
+	  $temp4_sig_num = 0;
        }
 
-       exec("./a.out {$signals_1} {$temp1_sig_num}", $output, $rv);
+       exec("./a.out {$temp1_sig_num} {$signals_1} {$sig_loc_1} {$ff_1} {$IO_1} {$test_cycle_1} {$temp2_sig_num} {$signals_2} {$sig_loc_2} {$ff_2} {$IO_2} {$test_cycle_2} {$temp3_sig_num} {$signals_3} {$sig_loc_3} {$ff_3} {$IO_3} {$test_cycle_3} {$temp4_sig_num} {$signals_4} {$sig_loc_4} {$ff_4} {$IO_4} {$test_cycle_4}", $output, $rv);
 
        if($rv != 0)
        {
