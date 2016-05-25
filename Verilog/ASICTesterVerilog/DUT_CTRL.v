@@ -1,16 +1,10 @@
 `timescale 1ns / 1ps
 
 /*
- * Module: DUT_CTRL
- * Function: A wrapper around all DUT logic.
- * Inputs: 
- *    CLK
- *    RST
- *    SIG_LOAD:     Load signals into signal pre-output buffer.
- *    SIG_TRANSFER: Load signals into signal output buffer.
- *    SIG_BUS_IN:   128-bit signal vector.
- *    SIG_BUS_OUT:  128-bit signal vector (output of FPGA).
+ * Module:          DUT_CTRL
+ * Function:        A wrapper around all DUT logic.
  * 
+ * Please see individual modules for more informatoin.
  */
 module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 					 SIG_LOAD, SIG_TRANSFER, 
@@ -18,7 +12,7 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 					 FF_LOAD_SIG, FF_TRANSFER_SIG,
 					 TEMPLATE_LOAD, TEMPLATE_TRANSFER,
 					 CYCLE_LOAD, CYCLE_TRANSFER,
-					 LEADING_EDGE_1, TRAILING_EDGE_1, CYCLE_LENGTH_1, LEADING_EDGE_2,
+					 LEADING_EDGE_1, LEADING_EDGE_2, TRAILING_EDGE, CYCLE_LENGTH,
 					 OUTPUT_SIGNALS
 					 );
 	input CLK;
@@ -36,9 +30,9 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 	input FF_TRANSFER_SIG;
 	
 	input [6:0] LEADING_EDGE_1;
-	input [6:0] TRAILING_EDGE_1;
-	input [7:0] CYCLE_LENGTH_1;
 	input [6:0] LEADING_EDGE_2;
+	input [6:0] TRAILING_EDGE;
+	input [7:0] CYCLE_LENGTH;
 	
 	input CYCLE_LOAD;
 	input CYCLE_TRANSFER;
@@ -53,30 +47,30 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 	wire [125:0] template_outputs;
 	wire [125:0] cycle_outputs;
 	
-	// Signal registers
+	// Signal registers.
 	DUTSIG_DB_REG signal_regs[125:0](.CLK(CLK), .RST(RST), .LOAD(SIG_LOAD), 
 												.TRANSFER(SIG_TRANSFER), .D(BUS126), 
 												.Q(sig_outputs));
 	
-	// FF registers
+	// FF registers.
 	FF_DB_REG ff_regs[125:0](.CLK(CLK), .RST(RST), .EN_FF_LOGIC(PERFORM_TEST), 
 									  .LOAD_FF(FF_LOAD_FF), .TRANSFER_FF(FF_TRANSFER_FF), .FF(BUS126), 
 									  .LOAD_SIG(FF_LOAD_SIG), .TRANSFER_SIG(FF_TRANSFER_SIG), 
-									  .LEADING_EDGE_1(LEADING_EDGE_1), .TRAILING_EDGE_1(TRAILING_EDGE_1), 
-									  .CYCLE_LENGTH_1(CYCLE_LENGTH_1), .LEADING_EDGE_2(LEADING_EDGE_2), 
+									  .LEADING_EDGE_1(LEADING_EDGE_1), .LEADING_EDGE_2(LEADING_EDGE_2), 
+									  .TRAILING_EDGE_1(TRAILING_EDGE), .CYCLE_LENGTH_1(CYCLE_LENGTH), 
 									  .TEST_CYCLE(cycle_outputs), .D(sig_outputs), .Q(ff_outputs));
 											
-	// Template registers
+	// Template registers.
 	TEMPLATE_DB_REG template_regs[125:0](.CLK(CLK), .RST(RST), .LOAD(TEMPLATE_LOAD),
 													 .TRANSFER(TEMPLATE_TRANSFER), .D(BUS126), 
 													 .Q(template_outputs));
 													 
-	// Signal registers
+	// Signal registers.
 	CYCLE_DB_REG cycle_regs[125:0](.CLK(CLK), .RST(RST), .LOAD(CYCLE_LOAD), 
 											 .TRANSFER(CYCLE_TRANSFER), .D(BUS126), 
 											 .Q(cycle_outputs));
 			
-	// Tristate registers
+	// Tristate registers.
 	TRIREG triregs[125:0](.I(ff_outputs), .O(OUTPUT_SIGNALS), .EN_BAR(template_outputs));
 												
 endmodule

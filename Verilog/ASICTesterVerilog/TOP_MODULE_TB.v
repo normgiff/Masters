@@ -11,9 +11,18 @@ module TOP_MODULE_TB;
 	// Outputs
 	wire TX;
 	wire OE_BAR;
-	wire CS_BAR;
-	wire WE_BAR;
-	wire COUNTER_CLK;
+	wire CS_BAR_1;
+	wire CS_BAR_2;
+	wire CS_BAR_3;
+	wire CS_BAR_4;
+	wire WE_BAR_1;
+	wire WE_BAR_2;
+	wire WE_BAR_3;
+	wire WE_BAR_4;
+	wire COUNTER_CLK_1;
+	wire COUNTER_CLK_2;
+	wire COUNTER_CLK_3;
+	wire COUNTER_CLK_4;
 	wire COUNTER_RST;
 	wire MR_BAR;
 	wire PL_BAR;
@@ -29,9 +38,18 @@ module TOP_MODULE_TB;
 		.RX(RX), 
 		.TX(TX), 
 		.OE_BAR(OE_BAR), 
-		.CS_BAR(CS_BAR), 
-		.WE_BAR(WE_BAR), 
-		.COUNTER_CLK(COUNTER_CLK), 
+		.CS_BAR_1(CS_BAR_1), 
+		.CS_BAR_2(CS_BAR_2), 
+		.CS_BAR_3(CS_BAR_3), 
+		.CS_BAR_4(CS_BAR_4), 
+		.WE_BAR_1(WE_BAR_1), 
+		.WE_BAR_2(WE_BAR_2), 
+		.WE_BAR_3(WE_BAR_3), 
+		.WE_BAR_4(WE_BAR_4), 
+		.COUNTER_CLK_1(COUNTER_CLK_1), 
+		.COUNTER_CLK_2(COUNTER_CLK_2), 
+		.COUNTER_CLK_3(COUNTER_CLK_3), 
+		.COUNTER_CLK_4(COUNTER_CLK_4), 
 		.COUNTER_RST(COUNTER_RST), 
 		.MR_BAR(MR_BAR), 
 		.PL_BAR(PL_BAR), 

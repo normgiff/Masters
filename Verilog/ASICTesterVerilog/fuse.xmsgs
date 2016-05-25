@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM_CTRL_TB.v" Line 26: Port <arg fmt="%s" index="1">MORE_TO_READ</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/TOP_MODULE_TB.v" Line 60: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">SIGNALS</arg>&gt;. Formal port size is <arg fmt="%d" index="2">126</arg>-bit while actual signal size is <arg fmt="%d" index="1">128</arg>-bit.
 </msg>
 
 </messages>

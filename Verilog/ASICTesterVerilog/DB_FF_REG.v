@@ -1,25 +1,31 @@
 `timescale 1ns / 1ps
 
 /*
- * Module:      DB_FF_REG
- * Function:    A FF_REG that is preceded by a register.
+ * Module:            DB_FF_REG
+ * Function:          A FF_REG that is preceded by a register.
  * 
  * Inputs: 
  *    CLK
  *    RST
- *    EN_FF_LOGIC: 
- * 	CYCLE: 	    Low-to-high transition denotes leading edge
- * 				    High-to-low transition denotes trailing edge
- *    LOAD:        Loads D into the buffer.
- *    TRANSFER:    Transfers the buffer data to the FF register.
- *  	FF: 		    0 == R0 		(return to zero on trailing edge)
- * 				    1 == DNRZ_L	(force signal value on leading edge)
+ *    EN_FF_LOGIC:    Active-high enable for counting cycles (see FF_REG.v).
+ *    LOAD_FF:        Loads the FF value into a buffer in this module.
+ *    TRANSFER_FF:    "Activates" the buffered FF value.
+ *    FF: 		       0 == R0 		(see FF_REG.v)
+ * 				       1 == DNRZ_L	(see FF_REG.v)
+ *    LOAD_SIG:       Loads the signal value D into a buffer in this module.
+ *    TRANSFER_SIG:   "Activates" the buffered signal value.
  * 	D
+ *    LEADING_EDGE_1:  One possible leading edge value, determined by TEST_CYCLE.
+ *    LEADING_EDGE_2:  One possible leading edge value, determined by TEST_CYCLE.
+ *    TRAILING_EDGE_1: Trailing edge value. (Number of clock cycles to count before 
+ *                     trailing edge occurs.)
+ *    CYCLE_LENGTH_1:  Number of clock cycles comprising a single test cycle.
+ *    TEST_CYCLE:      Determines whether to use LEADING_EDGE_1 or LEADING_EDGE_2.
  * Outputs:
  * 	Q
  */ 
 module FF_DB_REG(CLK, RST, EN_FF_LOGIC, LOAD_FF, TRANSFER_FF, FF, 
-					  D, LOAD_SIG, TRANSFER_SIG,  
+					  LOAD_SIG, TRANSFER_SIG, D,
 					  LEADING_EDGE_1, TRAILING_EDGE_1, CYCLE_LENGTH_1, LEADING_EDGE_2, 
 					  TEST_CYCLE, Q);
 	input CLK;

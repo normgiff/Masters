@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-17T18:41:38</DateModified>
+  <DateModified>2016-05-24T22:58:21</DateModified>
   <ModuleName>TOP_MODULE</ModuleName>
-  <SummaryTimeStamp>2016-04-24T16:12:24</SummaryTimeStamp>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <ImplementationReportsDirectory>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog\</ImplementationReportsDirectory>
-  <DateInitialized>2016-04-22T21:51:50</DateInitialized>
+  <DateInitialized>2016-05-24T22:08:38</DateInitialized>
   <SavedFilePath>C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/iseconfig/TOP_MODULE.xreport</SavedFilePath>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
@@ -22,7 +22,7 @@
    <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="TOP_MODULE_map.xrpt" label="IOB Properties" />
    <view inputState="Translated" program="map" contextTags="FPGA_ONLY" hidden="true" type="Control_Sets" file="TOP_MODULE_map.xrpt" label="Control Set Information" />
    <view inputState="Translated" program="map" locator="MAP_MODULE_HIERARCHY" contextTags="FPGA_ONLY" type="Module_Utilization" file="TOP_MODULE_map.xrpt" label="Module Level Utilization" />
-   <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="TOP_MODULE.ptwx" showConstraints="0" label="Timing Constraints" translator="ptwxToTableXML.xslt" />
+   <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="TOP_MODULE.ptwx" label="Timing Constraints" translator="ptwxToTableXML.xslt" />
    <view inputState="Mapped" program="par" locator="PAR_PINOUT_BY_PIN_NUMBER" contextTags="FPGA_ONLY" type="PinoutData" file="TOP_MODULE_par.xrpt" label="Pinout Report" />
    <view inputState="Mapped" program="par" locator="PAR_CLOCK_TABLE" contextTags="FPGA_ONLY" type="ClocksData" file="TOP_MODULE_par.xrpt" label="Clock Report" />
    <view inputState="Mapped" program="par" contextTags="FPGA_ONLY,EDK_OFF" type="Timing_Analyzer" file="TOP_MODULE.twx" label="Static Timing" />

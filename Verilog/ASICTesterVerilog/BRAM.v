@@ -25,9 +25,6 @@
 module BRAM(CLK, EN_A, EN_B, WE_A, WE_B, DIN_A, DIN_B, ADDR_A, ADDR_B, DOUT_A, DOUT_B);
 	// Reading four adjacent memory addresses will output a full 128-bit vector.
 	// With dual-port read, two read cycles are needed to obtain a full 128-bit vector.
-	// To maximize block RAM space, the FPGA will fetch one output bit vector at a time and send
-	// it to the BeagleBone Black. (Slow but oh well.)
-	// Assuming a maximum of 196 template vectors, maximum number of input bit vectors is 4000.
 	parameter RAM_WIDTH = 32; 
 	parameter RAM_ADDR_BITS = 13;
 
@@ -45,17 +42,17 @@ module BRAM(CLK, EN_A, EN_B, WE_A, WE_B, DIN_A, DIN_B, ADDR_A, ADDR_B, DOUT_A, D
 
 	reg [RAM_WIDTH-1:0] the_memory_core [(2**RAM_ADDR_BITS)-1:0];
 	
-	// Initialize memory.
-	 initial begin
+	// Initialize memory (zero it out).
+	initial begin
 		$readmemb("zeroes.list", the_memory_core);
-	 end
+	end
 
 	always @(posedge CLK)
 	begin
 		if (EN_A == 1'b1) begin
 			if (WE_A == 1'b1) begin
 				the_memory_core[ADDR_A] <= DIN_A;
-				// In write-first mode, the din is also passed on to dout
+				// In write-first mode, the din is also passed on to dout.
 				DOUT_A <= DIN_A;
 			end
 			else
@@ -64,7 +61,7 @@ module BRAM(CLK, EN_A, EN_B, WE_A, WE_B, DIN_A, DIN_B, ADDR_A, ADDR_B, DOUT_A, D
 		if (EN_B == 1'b1) begin
 			if (WE_B == 1'b1) begin
 				the_memory_core[ADDR_B] <= DIN_B;
-				// In write-first mode, the din is also passed on to dout
+				// In write-first mode, the din is also passed on to dout.
 				DOUT_B <= DIN_B;
 			end
 			else

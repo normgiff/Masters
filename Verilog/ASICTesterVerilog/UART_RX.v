@@ -1,18 +1,29 @@
 `timescale 1ns / 1ps
 
 /* 
- * Module: UART_RX
- * Function: Serial communication with BeagleBone Black (rev C).
- *           Baud rate is fixed at 115,200. (Bits are held for 8.68 microseconds on the wire.)
- *           WARNING: This module assumes that bytes are always transferred in groups of 16!
+ * Module:            UART_RX
+ * Function:          Serial communication with BeagleBone Black (rev C).
+ *                    Baud rate is fixed at 115,200. 
+ *                    (A bit is held for 8.68 microseconds on the wire.)
+ *                    NOTE: This module assumes that bytes are always transferred in groups of 16.
+ *  
  * Inputs: 
  * 	CLK (100 MHz)
  * 	RST
- *    DATA_READY   
- *    DATA_RETRIEVED
- *    DATA 
+ *    RX
+ *    DATA_RETRIEVED: When high, clears the UART read buffer to allow more data to be stored.
+ *                    Should be raised in response to a high DATA_READY.
+ *    
+ * Outputs: 
+ * 	DATA_READY:     When high, data has been received on the UART lines.
+ *    DATA:           128 bits stored in the UART read buffer.
+ * 
+ * Using this controller: 
+ * 1) When data has been received on the line, DATA_READY will be 1.
+ * 2) Retrieve the DATA from the line, then raise DATA_RETRIEVED for one clock cycle.
+ * 3) Go to step 1.
  */
-module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
+module UART_RX(CLK, RST, RX, DATA_RETRIEVED, DATA_READY, DATA);
 	input CLK;
 	input RST;
 	
@@ -25,8 +36,8 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 	parameter BAUD_RATE = 115200;
 	
 	// Subtract 1 to account for switching states.
-	parameter PERIOD = 867 - 1;
-	parameter HALF_PERIOD = 433 - 1;
+	parameter PERIOD = 867 - 1;      // The amount of time a bit is held on the wire.
+	parameter HALF_PERIOD = 433 - 1; // Used to sample bits halfway through its life.
 	
 	parameter IDLE_NODATA = 0;
 	parameter STARTBIT = 1;
@@ -43,13 +54,27 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 	
 	// We expect 16 bytes over the line, so 128 bits.
 	reg [6:0] bit_count;
+	
+	reg [9:0] clock_counter; // Counter used to sample bits at the appropriate time.
+	reg count;               // Used to increment clock_counter.
+	reg reset_count;         // Resets the counter used to sample bits.
+	reg sample;              // When high, sample the bit on the wire.
+	
 	reg [3:0] PS;
 	reg [3:0] NS;
 	
-	reg [9:0] clock_counter;
-	reg count;
-	reg reset_count;
-	reg sample;
+	// Counter used to determine when to sample a bit on the wire.
+	always@(posedge CLK) begin
+		if (RST || reset_count) begin
+			clock_counter <= 10'd0;
+		end
+		else if (count) begin
+			clock_counter <= clock_counter + 10'd1;
+		end
+		else begin
+			clock_counter <= clock_counter;
+		end
+	end
 	
 	// Used to sample bits.
 	always@(posedge CLK) begin
@@ -88,19 +113,6 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 		end
 	end
 	
-	// Clock used for counting.
-	always@(posedge CLK) begin
-		if (RST || reset_count) begin
-			clock_counter <= 10'd0;
-		end
-		else if (count) begin
-			clock_counter <= clock_counter + 10'd1;
-		end
-		else begin
-			clock_counter <= clock_counter;
-		end
-	end
-	
 	// Present-state logic.
 	always@(posedge CLK) begin
 		if (RST) begin
@@ -125,7 +137,7 @@ module UART_RX(CLK, RST, RX, DATA_READY, DATA_RETRIEVED, DATA);
 			end
 			
 			// STARTBIT: Count halfway through the start bit. If we see 0 at any point,
-			// we assume a spurious pulse on the line. Otherwise, we began accumulating bits.
+			// we assume a spurious pulse on the line. Otherwise, we begin accumulating bits.
 			STARTBIT: begin
 				if (clock_counter == HALF_PERIOD) begin
 					NS = BIT0;

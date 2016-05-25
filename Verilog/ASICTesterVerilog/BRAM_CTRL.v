@@ -1,10 +1,11 @@
 `timescale 1ns / 1ps
 
 /*
- * Module: BRAM_CTRL
- * Function: A wrapper around the BRAM. 
- * 			 Reads/writes an input vector (126 bits) and the corresponding template (2 bits). 
- * 			 Two clock cycles are needed to complete a read or write request.
+ * Module:                BRAM_CTRL
+ * Function:              A wrapper around the BRAM. 
+ * 			              Reads/writes an input vector (126 bits) and the corresponding 
+ *                        template (2 bits). 
+ * 			              Two clock cycles are needed to complete a read or write request.
  * 			 
  * Inputs: 
  * 	CLK

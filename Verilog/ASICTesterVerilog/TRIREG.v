@@ -6,7 +6,7 @@
  * 
  * Inputs: 
  *    I
- *	   EN
+ *	   EN_BAR    (active-low enable)
  * Outputs:
  * 	O
  */ 
@@ -17,17 +17,4 @@ module TRIREG(I, O, EN_BAR);
 	
 	assign O = EN_BAR ? 1'bz : I;
 	
-	/*
-	IOBUF #(
-			.DRIVE(24),
-			.IOSTANDARD("DEFAULT"),
-			.SLEW("FAST") // Change to SLOW if we experience severe bouncing on the output line
-	) IOBUF_inst (
-			.O(),   // Unconnected since DUT outputs should not enter the FPGA
-			.IO(O), // Just output
-			.I(I),
-			.T(EN_BAR)
-	);
-	*/
-
 endmodule

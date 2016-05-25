@@ -2,13 +2,13 @@
 
 /*
  * Module:      CYCLE_DB_REG
- * Function:    A cycle register that is preceded by a register.
+ * Function:    A double-buffered register for cycle values.
  * 
  * Inputs: 
  *    CLK
  *    RST
- *    LOAD:     Loads D into the buffer.
- *    TRANSFER: Transfers the buffer data to the "actual" cycle register.
+ *    LOAD:     Loads D into the buffer register.
+ *    TRANSFER: Transfers the buffer data to the output register.
  * 	D
  * Outputs:
  * 	Q

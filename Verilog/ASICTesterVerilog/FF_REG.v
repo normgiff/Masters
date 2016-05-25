@@ -1,15 +1,17 @@
 `timescale 1ns / 1ps
 
 /*
- * Module:     FF_REG
- * Function:   A register that behaves according to the inputted force-format (FF) encoding.
+ * Module:           FF_REG
+ * Function:         A register that behaves according to the inputted force-format (FF) encoding.
  * 
  * Inputs: 
- * 	CYCLE: 	Low-to-high transition denotes leading edge
- * 				High-to-low transition denotes trailing edge
+ *    EN:            Active-high enable for counting cycles (leading edge, trailing edge).
+ * 	LEADING_EDGE:  Number of CLK cycles to count until leading edge.
+ *    TRAILING_EDGE: Number of CLK cycles to count until trailing edge.
+ *    CYCLE_LENGTH:  Number of CLK cycles in a single test cycle.
  * 	D		
- *  	FF: 		0 == R0 		(return to zero on trailing edge)
- * 				1 == DNRZ_L	(force signal value on leading edge)
+ *  	FF: 		      0 == R0 		(force signal value on leading edge, return to zero on trailing edge)
+ * 				      1 == DNRZ_L	(force signal value on leading edge)
  * Outputs:
  * 	Q
  */ 

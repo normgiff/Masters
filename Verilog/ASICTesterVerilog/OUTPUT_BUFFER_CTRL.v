@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 /*
- * Module: OUTPUT_BUFFER_CTRL 
- * Function: Controller for parallel-to-serial shift registers (output buffers).
- *           Datasheet: http://www.nxp.com/documents/data_sheet/74HC_HCT597.pdf
+ * Module:               OUTPUT_BUFFER_CTRL 
+ * Function:             Controller for parallel-to-serial shift registers (output buffers).
+ *                       Datasheet: http://www.nxp.com/documents/data_sheet/74HC_HCT597.pdf
  *
  * Inputs: 
  *    CLK
@@ -22,6 +22,9 @@
  *    SCHP:              Shift-register clock.
  *    STCP:              Storage (parallel) register clock.
  * 
+ * Using this controller: 
+ * 1) Raise CAPTURE_SRAM_DATA for one clock cycle to latch and retrieve SRAM data.
+ * 2) When READY is high, SRAM_DATA is ready to retrieve. 
  */
 module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA, 
 								  READY, SRAM_DATA, Q, MR_BAR, PL_BAR, SHCP, STCP);
@@ -43,7 +46,8 @@ module OUTPUT_BUFFER_CTRL(CLK, RST, CLEAR_BUFFER, CAPTURE_SRAM_DATA,
 	parameter LATCH_DATA = 2;
 	parameter RETRIEVE_DATA = 3;
 	
-	// These output buffers are (intentionally) very slow.
+	// These output buffers are (intentionally) very slow, to ensure that daisy-chaining
+	// the buffers does not cause timing issues.
 	// The datasheet suggests that at 3.3V, 1000 nanoseconds should be a safe waiting time.
 	reg [7:0] serial_counter;
 	reg [6:0] propagation_delay_counter;

@@ -1,6 +1,11 @@
 `timescale 1ns / 1ps
 
-// Central finite state machine (FSM).
+// Module: Central finite state machine (FSM).
+// Function: Main logic controller.
+// 
+// This module is very complicated (roughly 60 states).
+// We recommend reading through the modules instantiated by this module
+// and then studying the comments in this file. 
 module CENTRAL_FSM(CLK, RST, 
                    RX, TX,
                    OE_BAR, 
@@ -12,19 +17,18 @@ module CENTRAL_FSM(CLK, RST,
 						 COUNTER_RST, 
                    MR_BAR, PL_BAR, STCP, SHCP, Q,
                    VT_EN,
-						 ERROR,
 						 SIGNALS);
 
-	// global clock and reset
+	// Global clock (100 MHz) and reset.
 	input CLK;
 	input RST;
 	
-	// UART
+	// UART.
 	input RX;
 	output TX;
-	output ERROR;
 	
-	// SRAM
+	// SRAM.
+	// Signals are duplicated for load-balancing.
 	output OE_BAR;
 	output CS_BAR_1;
 	output WE_BAR_1;
@@ -35,27 +39,28 @@ module CENTRAL_FSM(CLK, RST,
 	output CS_BAR_4;
 	output WE_BAR_4;
 	
-	// Counter
+	// Counter.
+	// Signals are duplicated for load-balancing.
 	output COUNTER_CLK_1;
 	output COUNTER_CLK_2;
 	output COUNTER_CLK_3;
 	output COUNTER_CLK_4;
 	output COUNTER_RST;
 	
-	// Output buffers (parallel->serial shift registers)
+	// Output buffers (parallel->serial shift registers).
 	output MR_BAR;
 	output PL_BAR;
 	output STCP;
 	output SHCP;
 	input Q;
 	
-	// Voltage translators
+	// Voltage translators.
 	output VT_EN;
 	
-	// Signals to DUT
+	// Signals to DUT.
 	output [125:0] SIGNALS;
 	
-	// States and UART codes
+	// States and UART codes.
 	`include "CENTRAL_FSM_PARAMS.v"
 
 	reg [5:0] PS;
@@ -71,20 +76,30 @@ module CENTRAL_FSM(CLK, RST,
 		end
 	end
 	
-	// Soft-reset applied after tests are completed.
+	// Soft reset applied after tests are completed.
 	wire soft_reset = (PS == TESTS_COMPLETED);
 	
+	// Note that RST is used in some areas instead of rst.
 	assign rst = soft_reset || RST;
 	
-	// Counter used to change hardware during a test.
-	reg [7:0] cycle_length_1_counter;
+	// Counter used to change hardware (SRAM, counters) during a test cycle.
+	reg [7:0] cycle_length_counter;
+	
+	// When high, increment the counter ICs.
 	reg next_address;
+	
+	// When high, enable write-mode for SRAM.
 	reg turn_on_sram;
+	
+	// When high, transfer the new signals for the DUT.
 	reg transfer_new_signals;
+	
+	// When high, the test cycle is completed.
 	reg end_of_test_cycle;
+	
 	always@(posedge CLK) begin
 		if (rst) begin
-			cycle_length_1_counter <= 8'b0;
+			cycle_length_counter <= 8'b0;
 			next_address <= 1'b0;
 			turn_on_sram <= 1'b0;
 			transfer_new_signals <= 1'b0;
@@ -95,31 +110,30 @@ module CENTRAL_FSM(CLK, RST,
 			transfer_new_signals <= 1'b0;
 			end_of_test_cycle <= 1'b0;
 			
-			if (perform_test) begin
-			
-				if (cycle_length_1_counter == (cycle_length_1 - 1)) begin
-					cycle_length_1_counter <= 8'b0;
+			if (perform_test) begin		
+				if (cycle_length_counter == (cycle_length - 1)) begin
+					// End of test cycle.
+					cycle_length_counter <= 8'd0;
 					end_of_test_cycle <= 1'b1;
 				end
 				else begin
-					cycle_length_1_counter <= cycle_length_1_counter + 8'd1;
-					
-					case (cycle_length_1_counter)
-					
-						leading_edge_1: begin
+					cycle_length_counter <= cycle_length_counter + 8'd1;
+					case (cycle_length_counter)
+						leading_edge_1 - 2: begin
 							// Turn on SRAM as soon as we start applying inputs.
 							turn_on_sram <= 1'b1;
 						end
 						
-						trailing_edge_1 - 8'd3: begin
+						trailing_edge - 8'd3: begin
 							// As soon as we hit the trailing edge, turn off the SRAM blocks
 							// by raising CS_BAR.
-							// The voltage translator has a delay of about 20 nanoseconds, so 
-							// three cycles before the trailing edge is best.
+							// It looks like the voltage translators have a delay of 
+							// about 20 nanoseconds, so we turn off SRAM three cycles before 
+							// the trailing edge.
 							turn_on_sram <= 1'b0;
 						end
 						
-						cycle_length_1 - 8'd2: begin
+						cycle_length - 8'd2: begin
 							// Go to the next counter address right at the end of a test cycle.
 							// Also, transfer the new signals.
 							next_address <= 1'b1;
@@ -132,16 +146,15 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			else begin
 				// Reset the counter if we need to halt a test, or if testing is complete.
-				cycle_length_1_counter <= 8'd0;
+				cycle_length_counter <= 8'd0;
 			end
 		end
 	end
 	
 	// Next-state logic.
 	always@(*) begin
-
 		NS = IDLE;
-
+		
 		case (PS)			
 			IDLE: begin
 				if (rxdata_ready) begin
@@ -154,7 +167,9 @@ module CENTRAL_FSM(CLK, RST,
 			
 			DECODE_UART_CODE: begin
 				case (rxdata[7:0])
-				
+					// Analyze the received UART code. See UART_CTRL.v for more information
+					// on the BBB-FPGA protocol.
+					
 					TEMPLATE_HDR: begin
 						NS = PREPARE_FOR_TEMPLATE_VECTOR_1;
 					end
@@ -196,9 +211,9 @@ module CENTRAL_FSM(CLK, RST,
 				endcase
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing template vector
-			/////////////////////////////////////
+			//////////////////////////////////////////
+			// Reading and storing template vector. //
+			//////////////////////////////////////////
 			
 			PREPARE_FOR_TEMPLATE_VECTOR_1: begin
 				NS = PREPARE_FOR_TEMPLATE_VECTOR_2;
@@ -239,9 +254,9 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing input vector
-			/////////////////////////////////////
+			///////////////////////////////////////
+			// Reading and storing input vector. //
+			///////////////////////////////////////
 			
 			PREPARE_FOR_INPUT_VECTOR_1: begin
 				NS = PREPARE_FOR_INPUT_VECTOR_2;
@@ -282,9 +297,9 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing cycle vector
-			/////////////////////////////////////
+			///////////////////////////////////////
+			// Reading and storing cycle vector. //
+			///////////////////////////////////////
 			
 			PREPARE_FOR_CYCLE_VECTOR_1: begin
 				NS = PREPARE_FOR_CYCLE_VECTOR_2;
@@ -325,9 +340,9 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing force-format vector
-			/////////////////////////////////////
+			//////////////////////////////////////////////
+			// Reading and storing force-format vector. //
+			//////////////////////////////////////////////
 			
 			PREPARE_FOR_FF_VECTOR_1: begin
 				NS = PREPARE_FOR_FF_VECTOR_2;
@@ -368,17 +383,17 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Cycle configuration data
-			/////////////////////////////////////
+			///////////////////////////////
+			// Cycle configuration data. //
+			///////////////////////////////
 			
 			STORE_CYCLE_CONFIG_DATA: begin
 				NS = UART_CAPTURE_ACK;
 			end
 			
-			/////////////////////////////////////
-			// Performing tests
-			/////////////////////////////////////
+			///////////////////////
+			// Performing tests. //
+			///////////////////////
 			
 			RESET_HARDWARE_PRETEST: begin
 				NS = READ_INPUT_VECTOR_1;
@@ -403,11 +418,13 @@ module CENTRAL_FSM(CLK, RST,
 			
 			TRANSFER_INPUT_VECTOR: begin
 				// Must transfer the input vector before we load
-				// the FF registers
+				// the FF registers.
 				if (perform_test) begin
 					NS = CHECK_INPUT_VECTOR;
 				end
 				else begin
+					// We haven't begun testing yet. Load all other vectors 
+					// associated with the input vector's template.
 					NS = READ_TEMPLATE_VECTOR_1;
 				end
 			end
@@ -542,7 +559,7 @@ module CENTRAL_FSM(CLK, RST,
 			end
 					
 			/////////////////////////////////////
-			// General UART code transmission
+			// General UART code transmission. //
 			/////////////////////////////////////
 			
 			UART_CAPTURE_ACK: begin
@@ -574,11 +591,11 @@ module CENTRAL_FSM(CLK, RST,
 	
 	end
 	
-	////////////////////////////////////////////////////////////////
-	// Modules and associated logic
-	////////////////////////////////////////////////////////////////
+	///////////////////////////////////
+	// Modules and associated logic. //
+	///////////////////////////////////
 	
-	// Block RAM controller
+	// Block RAM controller.
 	reg input_write;
 	reg template_write;
 	reg ff_write;
@@ -593,6 +610,8 @@ module CENTRAL_FSM(CLK, RST,
 	wire template_change;
 	wire bram_ctrl_ready;
 	wire more_to_read;
+	
+	// Used to determine if we need to switch templates.
 	reg [1:0] current_template_bits;
 	
 	always@(posedge CLK) begin
@@ -611,7 +630,6 @@ module CENTRAL_FSM(CLK, RST,
 	end
 	
 	always@(*) begin
-	
 		template_write = 1'b0;
 		input_write = 1'b0;
 		ff_write = 1'b0;
@@ -702,7 +720,7 @@ module CENTRAL_FSM(CLK, RST,
 								.MORE_TO_READ(more_to_read)
 								);								
 	
-	// Counter controller
+	// Counter controller.
 	reg advance_counter;
 	reg reset_counter;
 	
@@ -751,7 +769,7 @@ module CENTRAL_FSM(CLK, RST,
 										.COUNTER_RST(COUNTER_RST)
 										);
 										
-	// DUT controller
+	// DUT controller.
 	reg perform_test;
 	wire [125:0] bus126;
 	reg sig_load;
@@ -765,9 +783,9 @@ module CENTRAL_FSM(CLK, RST,
 	reg cycle_load;
 	reg cycle_transfer;
 	reg [6:0] leading_edge_1;
-	reg [6:0] trailing_edge_1;
-	reg [7:0] cycle_length_1;
 	reg [6:0] leading_edge_2;
+	reg [6:0] trailing_edge;
+	reg [7:0] cycle_length;
 	
 	assign bus126 = read_data[125:0];
 	
@@ -775,16 +793,17 @@ module CENTRAL_FSM(CLK, RST,
 	// Some default values provided.
 	always@(posedge CLK) begin
 		if (RST) begin
-			leading_edge_1 <= 7'd6;
-			trailing_edge_1 <= 7'd14;
-			cycle_length_1 <= 8'd30;
-			leading_edge_2 <= 7'd8;
+			leading_edge_1 <= 7'd10;
+			leading_edge_1 <= 7'd10;
+			leading_edge_2 <= 7'd12;
+			trailing_edge <= 7'd20;
+			cycle_length <= 8'd30;
 		end
 		else if (PS == STORE_CYCLE_CONFIG_DATA) begin
 			leading_edge_1 <= rxdata[14:8];
 			leading_edge_2 <= rxdata[22:16];
-			trailing_edge_1 <= rxdata[30:24];
-			cycle_length_1 <= rxdata[39:32];
+			trailing_edge <= rxdata[30:24];
+			cycle_length <= rxdata[39:32];
 		end
 	end
 	
@@ -792,7 +811,7 @@ module CENTRAL_FSM(CLK, RST,
 		if (rst) begin
 			perform_test <= 1'b0;
 		end
-		else if (PS == TRANSFER_VECTORS) begin // should be TRANSFER_VECTORS
+		else if (PS == TRANSFER_VECTORS) begin
 			perform_test <= 1'b1;
 		end
 		else if (PS == CHECK_INPUT_VECTOR) begin
@@ -869,14 +888,14 @@ module CENTRAL_FSM(CLK, RST,
 							 .TEMPLATE_TRANSFER(template_transfer),
 							 .CYCLE_LOAD(cycle_load), 
 							 .CYCLE_TRANSFER(cycle_transfer),
-							 .LEADING_EDGE_1(leading_edge_1), 
-							 .TRAILING_EDGE_1(trailing_edge_1), 
-							 .CYCLE_LENGTH_1(cycle_length_1),
+							 .LEADING_EDGE_1(leading_edge_1),
 							 .LEADING_EDGE_2(leading_edge_2), 
+							 .TRAILING_EDGE(trailing_edge), 
+							 .CYCLE_LENGTH(cycle_length), 
 							 .OUTPUT_SIGNALS(SIGNALS)
 							 );
 							 
-	// Output buffer controller
+	// Output buffer controller.
 	reg clear_buffer;
 	reg capture_sram_data;
 	wire output_buffer_ctrl_ready;
@@ -915,7 +934,7 @@ module CENTRAL_FSM(CLK, RST,
 														.STCP(STCP)
 														);
 														
-	// SRAM controller
+	// SRAM controller.
 	reg oe_bar_in;
 	reg cs_bar_in;
 	reg we_bar_in;
@@ -929,13 +948,16 @@ module CENTRAL_FSM(CLK, RST,
 		else begin		
 			case (PS)
 				IDLE: begin
+					// Write-mode by default is better to prevent multiple-driver issues.
+					oe_bar_in <= 1'b1;
+					cs_bar_in <= 1'b1;
 					we_bar_in <= 1'b0;
 				end
 			
 				RESET_HARDWARE_PRETEST: begin
 					// Disable outputs so we can write to them.
-					// Set to write mode, but keep the device off.
-					oe_bar_in <= 1'b1;
+					// Set to write mode, but keep the device off (via CS).
+					oe_bar_in <= 1'b0;
 					cs_bar_in <= 1'b1;
 					we_bar_in <= 1'b0;
 				end
@@ -992,6 +1014,8 @@ module CENTRAL_FSM(CLK, RST,
 	end
 	
 	SRAM_CTRL sram_ctrl_0(
+								 .CLK(CLK),
+								 .RST(RST),
 								 .OE_BAR_IN(oe_bar_in), 
 								 .CS_BAR_IN(cs_bar_in), 
 								 .WE_BAR_IN(we_bar_in), 
@@ -1006,7 +1030,7 @@ module CENTRAL_FSM(CLK, RST,
 								 .WE_BAR_4(WE_BAR_4)
 								 );
 
-	// UART controller
+	// UART controller.
 	wire rxdata_ready;
 	reg rxdata_retrieved;
 	wire [127:0] rxdata;
@@ -1024,10 +1048,9 @@ module CENTRAL_FSM(CLK, RST,
 		txdata = 128'd0;
 		
 		case (PS)
-		
-			/////////////////////////////////////
-			// Reading and storing template vector
-			/////////////////////////////////////
+			//////////////////////////////////////////
+			// Reading and storing template vector. //
+			//////////////////////////////////////////
 			
 			PREPARE_FOR_TEMPLATE_VECTOR_1: begin
 				// Clear the UART read buffer.
@@ -1061,9 +1084,9 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing input vector
-			/////////////////////////////////////
+			///////////////////////////////////////
+			// Reading and storing input vector. //
+			///////////////////////////////////////
 			
 			PREPARE_FOR_INPUT_VECTOR_1: begin
 				// Clear the UART read buffer.
@@ -1097,9 +1120,9 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing cycle vector
-			/////////////////////////////////////
+			///////////////////////////////////////
+			// Reading and storing cycle vector. //
+			///////////////////////////////////////
 			
 			PREPARE_FOR_CYCLE_VECTOR_1: begin
 				// Clear the UART read buffer.
@@ -1133,9 +1156,9 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Reading and storing force-format vector
-			/////////////////////////////////////
+			//////////////////////////////////////////////
+			// Reading and storing force-format vector. //
+			//////////////////////////////////////////////
 			
 			PREPARE_FOR_FF_VECTOR_1: begin
 				// Clear the UART read buffer.
@@ -1169,18 +1192,18 @@ module CENTRAL_FSM(CLK, RST,
 				end
 			end
 			
-			/////////////////////////////////////
-			// Cycle configuration data
-			/////////////////////////////////////
+			///////////////////////////////
+			// Cycle configuration data. //
+			///////////////////////////////
 			
 			STORE_CYCLE_CONFIG_DATA: begin
 				// Clear the UART read buffer.
 				rxdata_retrieved = 1'b1;
 			end
 			
-			/////////////////////////////////////
-			// Test completion and data retrieval
-			/////////////////////////////////////
+			/////////////////////////////////////////
+			// Test completion and data retrieval. //
+			/////////////////////////////////////////
 			
 			TESTS_COMPLETED: begin
 				rxdata_retrieved = 1'b1;
@@ -1194,7 +1217,7 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			
 			/////////////////////////////////////
-			// General UART code transmission
+			// General UART code transmission. //
 			/////////////////////////////////////
 			
 			UART_CAPTURE_ACK: begin
@@ -1243,17 +1266,16 @@ module CENTRAL_FSM(CLK, RST,
 								 .TXCAPTURE(txcapture), 
 								 .TXTRANSMIT(txtransmit), 
 								 .TXSENT(txsent), 
-								 .TXACK(txack),
-								 .ERROR(ERROR)
+								 .TXACK(txack)
 								 );
 	
 
-	// Voltage translator controller
+	// Voltage translator controller.
 	reg vt_en;
 	
 	always@(posedge CLK) begin
 		if (RST) begin
-			// The voltage translators output odd values when placed in three-state.
+			// The voltage translators output non-digital when placed in three-state.
 			// We will leave them on unless we are reading from SRAM.
 			vt_en <= 1'b1;
 		end
@@ -1280,8 +1302,9 @@ module CENTRAL_FSM(CLK, RST,
 	// The voltage translators are always enabled except when
 	// reading from the SRAM blocks, in which case they must be
 	// disabled to prevent multiple-driver issues.
-	
 	VOLTAGE_TRANSLATOR_CTRL voltage_translator_ctrl(
+																	.CLK(CLK),
+																	.RST(RST),
 																	.EN_IN(vt_en), 
 																	.EN(VT_EN)
 																	);

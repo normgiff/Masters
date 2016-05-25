@@ -1,6 +1,11 @@
 `timescale 1ns / 1ps
 
-// Top Verilog module.
+///////////////////////////////
+///// Top Verilog Module //////
+///////////////////////////////
+//// Author: Daniel Khoury ////
+///////////////////////////////
+
 module TOP_MODULE(CLK, RST, 
 						RX, TX,
 						OE_BAR, 
@@ -12,18 +17,17 @@ module TOP_MODULE(CLK, RST,
 						COUNTER_RST, 
 						MR_BAR, PL_BAR, STCP, SHCP, Q,
 						VT_EN,
-						ERROR,
 						SIGNALS);
 
+	// Global clock (100 MHz) and reset.
 	input CLK;
 	input RST;
 	
-	// UART
+	// UART.
 	input RX;
 	output TX;
-	output ERROR;
 	
-	// SRAM
+	// SRAM.
 	output OE_BAR;
 	output CS_BAR_1;
 	output WE_BAR_1;
@@ -34,24 +38,24 @@ module TOP_MODULE(CLK, RST,
 	output CS_BAR_4;
 	output WE_BAR_4;
 	
-	// Counter
+	// Counter.
 	output COUNTER_CLK_1;
 	output COUNTER_CLK_2;
 	output COUNTER_CLK_3;
 	output COUNTER_CLK_4;
 	output COUNTER_RST;
 	
-	// Output buffers (parallel->serial shift registers)
+	// Output buffers (parallel->serial shift registers).
 	output MR_BAR;
 	output PL_BAR;
 	output STCP;
 	output SHCP;
 	input Q;
 	
-	// Voltage translators
+	// Voltage translators.
 	output VT_EN;
 	
-	// DUT signals
+	// DUT signals.
 	output [125:0] SIGNALS;
 	
 	CENTRAL_FSM central_fsm0(CLK, RST, 
@@ -65,7 +69,6 @@ module TOP_MODULE(CLK, RST,
 									 COUNTER_RST, 
 									 MR_BAR, PL_BAR, STCP, SHCP, Q,
 									 VT_EN,
-									 ERROR,
 									 SIGNALS);
 
 endmodule

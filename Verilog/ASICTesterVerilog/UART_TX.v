@@ -1,22 +1,37 @@
 `timescale 1ns / 1ps
 
 /* 
- * Module: UART_RX
- * Function: Serial communication with BeagleBone Black (rev C).
- *           Baud rate is fixed at 115,200. (Bits are held for 8.68 microseconds on the wire.)
- *           WARNING: This module assumes that bytes are always transferred in groups of 16!
+ * Module:         UART_RX
+ * Function:       Serial communication with BeagleBone Black (rev C).
+ *                 Baud rate is fixed at 115,200. 
+ *                 (Bits are held for 8.68 microseconds on the wire.)
+ *                 NOTE: This module assumes that bytes are always transferred in groups of 16.
+ * 
  * Inputs: 
- * 	CLK (100 MHz)
+ * 	CLK          (100 MHz)
  * 	RST
- *    DATA
- *    CAPTURE
- *    TRANSMIT
+ *    DATA:        128-bit data to be sent.
+ *    CAPTURE:     Instructs this controller to store the 128-bit data to be transferred.
+ *    TRANSMIT:    Instructs this controller to transmit the 128-bit data stored.
+ *    ACKNOWLEDGE: Enables this controller to prepare for another data transfer.
+ *                 Should be raised in response to a high SENT.
  * 
  * Outputs: 
  * 	TX
- *    SENT
+ *    SENT:        Informs the user that this controller has completed a 16-byte transfer.
+ * 
+ * Using this controller: 
+ * 1) Ready the DATA bus.
+ * 2) Raise the CAPTURE signal for one clock cycle 
+ *    to have the controller latch onto the signals on the DATA bus.
+ * 3) Raise the TRANSMIT signal for one clock cycle to have the controller transmit the 
+ *    stored data.
+ * 4) Wait until the SENT signal is high. When SENT is low, the controller is still 
+ *    transferring data.
+ * 5) Raise ACKNOWLEDGE for one clock cycle to ready the controller for a new transfer.
+ * 6) Go to step 1.
  */
-module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
+module UART_TX(CLK, RST, DATA, CAPTURE, TRANSMIT, ACKNOWLEDGE, TX, SENT);
 	input CLK;
 	input RST;
 	
@@ -27,14 +42,11 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
 
 	output reg TX;
 	output reg SENT;
-	output ERROR;
-	
-	assign ERROR = RST;
 
 	parameter BAUD_RATE = 115200;
 	
-	// Subtract 1 to account for switching states.
-	parameter PERIOD = 867 - 1;
+	parameter PERIOD = 867 - 1; // Amount of time for each bit on the wire.
+	                            // Subtract 1 to account for switching states.
 	
 	parameter IDLE = 0;
 	parameter STARTBIT = 1;
@@ -48,20 +60,29 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
 	parameter BIT7 = 9;
 	parameter STOPBIT = 10;
 	parameter IDLE_SENT = 11;
-	parameter ERROR_STATE = 12;
 	
 	reg [3:0] PS;
 	reg [3:0] NS;
 	
-	// We transmit 16 bytes over the line, so 128 bits.
-	reg [6:0] bit_count;
+	reg [6:0] bit_count;     // Number of bits sent at any given time.
+	reg [127:0] data_buffer; // We transmit 16 bytes over the line, so 128 bits.
 	
-	reg [127:0] data_buffer;
-	reg [9:0] clock_counter;
-	reg count;
-	reg reset_count;
+	reg [9:0] clock_counter; // Used to count the amount of time to apply a signal value
+	                         // on the TX bus.
+	reg count;               // Used to raise clock_counter.
+	reg reset_count;         // Used to reset clock_counter.
 	
-	// Used to transmit bits.
+	// Present-state logic.
+	always@(posedge CLK) begin
+		if (RST) begin
+			PS <= IDLE;
+		end
+		else begin
+			PS <= NS;
+		end
+	end
+	
+	// TX assignment.
 	always@(posedge CLK) begin
 		if (RST) begin
 			TX <= 1'b1;
@@ -130,7 +151,7 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
 		end
 	end
 	
-	// Clock used for counting.
+	// Counter for the amount of time to hold bits on the wire.
 	always@(posedge CLK) begin
 		if (RST || reset_count) begin
 			clock_counter <= 10'd0;
@@ -143,27 +164,17 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
 		end
 	end
 	
-	// Used to capture data.
+	// Used to CAPTURE data.
 	always@(posedge CLK) begin
 		if (RST) begin
 			data_buffer <= 127'd0;
 		end
 		else begin
-			if ((PS == IDLE || PS == IDLE_SENT) && CAPTURE) begin
+			if ((PS == IDLE) && CAPTURE) begin
 				data_buffer <= DATA;
 			end
 		end
 	end	
-	
-	// Present-state logic.
-	always@(posedge CLK) begin
-		if (RST) begin
-			PS <= IDLE;
-		end
-		else begin
-			PS <= NS;
-		end
-	end
 	
 	// Next-state logic.
 	always@(*) begin
@@ -282,14 +293,9 @@ module UART_TX(CLK, RST, TX, DATA, CAPTURE, TRANSMIT, SENT, ACKNOWLEDGE, ERROR);
 				end
 			end
 			
-			ERROR_STATE: begin
-				// For debugging purposes.
-				NS = ERROR_STATE;
-			end
-			
 			default: begin
-				// We should never get here.
-				NS = ERROR_STATE;
+				// Should never get here.
+				NS = IDLE;
 			end
 		endcase
 	end
