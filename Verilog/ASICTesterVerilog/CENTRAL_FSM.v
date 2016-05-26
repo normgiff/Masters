@@ -83,7 +83,7 @@ module CENTRAL_FSM(CLK, RST,
 	assign rst = soft_reset || RST;
 	
 	// Counter used to change hardware (SRAM, counters) during a test cycle.
-	reg [7:0] cycle_length_counter;
+	reg [9:0] cycle_length_counter;
 	
 	// When high, increment the counter ICs.
 	reg next_address;
@@ -99,7 +99,7 @@ module CENTRAL_FSM(CLK, RST,
 	
 	always@(posedge CLK) begin
 		if (rst) begin
-			cycle_length_counter <= 8'b0;
+			cycle_length_counter <= 10'd0;
 			next_address <= 1'b0;
 			turn_on_sram <= 1'b0;
 			transfer_new_signals <= 1'b0;
@@ -113,18 +113,18 @@ module CENTRAL_FSM(CLK, RST,
 			if (perform_test) begin		
 				if (cycle_length_counter == (cycle_length - 1)) begin
 					// End of test cycle.
-					cycle_length_counter <= 8'd0;
+					cycle_length_counter <= 10'd0;
 					end_of_test_cycle <= 1'b1;
 				end
 				else begin
-					cycle_length_counter <= cycle_length_counter + 8'd1;
+					cycle_length_counter <= cycle_length_counter + 10'd1;
 					case (cycle_length_counter)
-						leading_edge_1 - 2: begin
+						leading_edge_1 - 10'd3: begin
 							// Turn on SRAM as soon as we start applying inputs.
 							turn_on_sram <= 1'b1;
 						end
 						
-						trailing_edge - 8'd3: begin
+						trailing_edge - 10'd3: begin
 							// As soon as we hit the trailing edge, turn off the SRAM blocks
 							// by raising CS_BAR.
 							// It looks like the voltage translators have a delay of 
@@ -133,9 +133,11 @@ module CENTRAL_FSM(CLK, RST,
 							turn_on_sram <= 1'b0;
 						end
 						
-						cycle_length - 8'd2: begin
+						cycle_length - 10'd2: begin
 							// Go to the next counter address right at the end of a test cycle.
 							// Also, transfer the new signals.
+							// NOTE: The counter may increment after the last test cycle is complete.
+							//       Not a big deal.
 							next_address <= 1'b1;
 							transfer_new_signals <= 1'b1;
 						end						
@@ -146,7 +148,7 @@ module CENTRAL_FSM(CLK, RST,
 			end
 			else begin
 				// Reset the counter if we need to halt a test, or if testing is complete.
-				cycle_length_counter <= 8'd0;
+				cycle_length_counter <= 10'd0;
 			end
 		end
 	end
@@ -396,7 +398,12 @@ module CENTRAL_FSM(CLK, RST,
 			///////////////////////
 			
 			RESET_HARDWARE_PRETEST: begin
-				NS = READ_INPUT_VECTOR_1;
+				if (counter_busy) begin
+					NS = RESET_HARDWARE_PRETEST;
+				end
+				else begin
+					NS = READ_INPUT_VECTOR_1;
+				end
 			end
 			
 			READ_INPUT_VECTOR_1: begin
@@ -723,6 +730,7 @@ module CENTRAL_FSM(CLK, RST,
 	// Counter controller.
 	reg advance_counter;
 	reg reset_counter;
+	wire counter_busy;
 	
 	always@(posedge CLK) begin
 		if (rst) begin
@@ -766,7 +774,8 @@ module CENTRAL_FSM(CLK, RST,
 										.COUNTER_CLK_2(COUNTER_CLK_2), 
 										.COUNTER_CLK_3(COUNTER_CLK_3), 
 										.COUNTER_CLK_4(COUNTER_CLK_4), 
-										.COUNTER_RST(COUNTER_RST)
+										.COUNTER_RST(COUNTER_RST),
+										.BUSY(counter_busy)
 										);
 										
 	// DUT controller.
@@ -782,10 +791,10 @@ module CENTRAL_FSM(CLK, RST,
 	reg template_transfer;
 	reg cycle_load;
 	reg cycle_transfer;
-	reg [6:0] leading_edge_1;
-	reg [6:0] leading_edge_2;
-	reg [6:0] trailing_edge;
-	reg [7:0] cycle_length;
+	reg [9:0] leading_edge_1;
+	reg [9:0] leading_edge_2;
+	reg [9:0] trailing_edge;
+	reg [9:0] cycle_length;
 	
 	assign bus126 = read_data[125:0];
 	
@@ -793,17 +802,16 @@ module CENTRAL_FSM(CLK, RST,
 	// Some default values provided.
 	always@(posedge CLK) begin
 		if (RST) begin
-			leading_edge_1 <= 7'd10;
-			leading_edge_1 <= 7'd10;
-			leading_edge_2 <= 7'd12;
-			trailing_edge <= 7'd20;
-			cycle_length <= 8'd30;
+			leading_edge_1 <= 10'd600;
+			leading_edge_2 <= 10'd650;
+			trailing_edge <= 10'd900;
+			cycle_length <= 10'd1000;
 		end
 		else if (PS == STORE_CYCLE_CONFIG_DATA) begin
-			leading_edge_1 <= rxdata[14:8];
-			leading_edge_2 <= rxdata[22:16];
-			trailing_edge <= rxdata[30:24];
-			cycle_length <= rxdata[39:32];
+			leading_edge_1 <= rxdata[17:8];
+			leading_edge_2 <= rxdata[33:24];
+			trailing_edge <= rxdata[49:40];
+			cycle_length <= rxdata[65:56];
 		end
 	end
 	

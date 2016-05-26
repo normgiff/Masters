@@ -29,7 +29,7 @@ module TOP_MODULE_TB;
 	wire STCP;
 	wire SHCP;
 	wire VT_EN;
-	wire [127:0] SIGNALS;
+	wire [125:0] SIGNALS;
 
 	// Instantiate the Unit Under Test (UUT)
 	TOP_MODULE uut (
@@ -73,50 +73,6 @@ module TOP_MODULE_TB;
 		RST = 0;
 		#100;
 		
-		/////////////////////////////////////////
-		// Load cycle configuration data.
-		/////////////////////////////////////////
-		
-		// Transmit an input header.
-		for (i = 0; i < 160; i = i + 1) begin
-			if ((i % 10) == 0) begin
-				RX = 0;
-			end
-			else if (i > 0 && i < 9) begin
-				if (i == 3) RX = 1;
-				else RX = 0;
-			end
-			else if (i > 10 && i < 19) begin
-				if (i == 14) RX = 1;
-				else RX = 0;
-			end
-			else if (i > 20 && i < 29) begin
-				if (i == 24) RX = 1;
-				else if (i == 21) RX = 1;
-				else RX = 0;
-			end
-			else if (i > 30 && i < 39) begin
-				if (i == 34) RX = 1;
-				else if (i == 32) RX = 1;
-				else RX = 0;
-			end
-			else if (i > 40 && i < 49) begin
-				if (i <= 44) RX = 1;
-				else RX = 0;
-			end
-			else if ((i & 32'h00000009) == 32'h00000009) begin // Last digit of i is 9.
-				RX = 1;
-			end
-			else begin
-				RX = 1;
-			end
-			#8680;
-		end
-		RX = 1;
-		
-		// Wait 2 milliseconds for an acknowledgement.
-		#2000000;
-        
 		/////////////////////////////////////////
 		// Load three input vectors.
 		// The first two have the same template, 
@@ -166,7 +122,7 @@ module TOP_MODULE_TB;
 		// Wait 2 milliseconds before proceeding.
 		#2000000;
 		
-				// Transmit an input header.
+		// Transmit an input header.
 		for (i = 0; i < 160; i = i + 1) begin
 			if ((i % 10) == 0) begin
 				RX = 0;
@@ -272,8 +228,8 @@ module TOP_MODULE_TB;
 		end
 		RX = 1;
 		
-		// Wait 2 milliseconds.
-		#2000000;
+		// Wait 4 milliseconds.
+		#4000000;
 		
 		// Perform the test again. What happens?
 		for (i = 0; i < 160; i = i + 1) begin
@@ -295,8 +251,8 @@ module TOP_MODULE_TB;
 		end
 		RX = 1;
 		
-		// Wait 2 milliseconds.
-		#2000000;
+		// Wait 4 milliseconds.
+		#4000000;
 		
 		// Request data.
 		for (i = 0; i < 160; i = i + 1) begin

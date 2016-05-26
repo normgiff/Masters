@@ -18,12 +18,14 @@
  *                     for as long as necessary for the counter IC.
  *
  * Outputs: 
- * 	COUNTER_CLK (four identical outputs)
+ * 	COUNTER_CLK      (four identical outputs)
  * 	COUNTER_RST
+ *    BUSY:            When high, advancing or resetting the counter is not yet complete.
  */
 module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER, 
 						  COUNTER_CLK_1, COUNTER_CLK_2, COUNTER_CLK_3, COUNTER_CLK_4, 
-						  COUNTER_RST);
+						  COUNTER_RST, 
+						  BUSY);
 	input CLK;
 	input RST;
 	input ADVANCE_COUNTER;
@@ -36,12 +38,18 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER,
 	
 	output reg COUNTER_RST; 
 	
-	// Used for 40 nanosecond pulse.
-	reg [1:0] delay;
+	output reg BUSY;
+	
+	// Apparently, we need a minimum 1 microsecond pulse
+	// for the voltage to fully swing between low and high, due
+	// to the large load on the FPGA signals...
+	// Used for 1 microsecond pulse.
+	reg [6:0] delay;
 	
 	always@(posedge CLK) begin
 		if (RST) begin
-			delay <= 1'b0;
+			delay <= 7'd0;
+			BUSY <= 1'b0;
 			COUNTER_RST <= 1'b0;
 			COUNTER_CLK_1 <= 1'b1;
 			COUNTER_CLK_2 <= 1'b1;
@@ -49,15 +57,21 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER,
 			COUNTER_CLK_4 <= 1'b1;
 		end
 		else begin		
-			if (delay == 2'd0) begin
+			if (delay == 7'd0) begin
 				COUNTER_CLK_1 <= 1'b1;
 				COUNTER_CLK_2 <= 1'b1;
 				COUNTER_CLK_3 <= 1'b1;
 				COUNTER_CLK_4 <= 1'b1;
 				COUNTER_RST <= 1'b0;
+				BUSY <= 1'b0;
 			end
 			else begin
-				delay <= delay + 2'd1;
+				if (delay == 7'd100) begin
+					delay <= 7'd0;
+				end
+				else begin
+					delay <= delay + 7'd1;
+				end
 			end
 			
 			if (ADVANCE_COUNTER) begin			
@@ -65,11 +79,13 @@ module COUNTER_CTRL(CLK, RST, ADVANCE_COUNTER, RESET_COUNTER,
 				COUNTER_CLK_2 <= 1'b0;
 				COUNTER_CLK_3 <= 1'b0;
 				COUNTER_CLK_4 <= 1'b0;
-				delay <= delay + 2'd1;
+				delay <= delay + 7'd1;
+				BUSY <= 1'b1;
 			end
 			else if (RESET_COUNTER) begin
 				COUNTER_RST <= 1'b1;
-				delay <= delay + 2'd1;
+				delay <= delay + 7'd1;
+				BUSY <= 1'b1;
 			end
 		end
 	end

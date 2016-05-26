@@ -13,9 +13,7 @@
          <ClosedNode>/DB_FF_REG C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|DB_FF_REG.v</ClosedNode>
          <ClosedNode>/DUT_CTRL C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|DUT_CTRL.v</ClosedNode>
          <ClosedNode>/FF_DB_REG C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|DB_FF_REG.v</ClosedNode>
-         <ClosedNode>/TOP_MODULE C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE.v/central_fsm0 - CENTRAL_FSM</ClosedNode>
          <ClosedNode>/TOP_MODULE C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE.v/central_fsm0 - CENTRAL_FSM/bram_ctrl0 - BRAM_CTRL</ClosedNode>
-         <ClosedNode>/TOP_MODULE C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE.v/central_fsm0 - CENTRAL_FSM/dut_ctrl0 - DUT_CTRL</ClosedNode>
          <ClosedNode>/TOP_MODULE C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE.v/central_fsm0 - CENTRAL_FSM/uart_ctrl_0 - UART_CTRL</ClosedNode>
          <ClosedNode>/UART_CTRL C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|UART_CTRL.v</ClosedNode>
       </ClosedNodes>
@@ -24,7 +22,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a8000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a80000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002d1000000020000000000000000000000000200000064ffffffff000000810000000300000002000002d10000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>TOP_MODULE (C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/TOP_MODULE.v)</CurrentItem>
    </ItemView>
@@ -34,13 +32,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000177000000010000000100000000000000000000000064ffffffff000000810000000000000001000001770000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -80,13 +78,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem>Synthesize - XST</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000177000000010000000100000000000000000000000064ffffffff000000810000000000000001000001770000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000160000000010000000100000000000000000000000064ffffffff000000810000000000000001000001600000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -102,6 +100,8 @@
          <ClosedNode>/FF_REG_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|FF_REG_TB.v</ClosedNode>
          <ClosedNode>/OUTPUT_BUFFER_CTRL_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|OUTPUT_BUFFER_CTRL_TB.v</ClosedNode>
          <ClosedNode>/TOP_MODULE C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE.v</ClosedNode>
+         <ClosedNode>/TOP_MODULE_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE_TB.v</ClosedNode>
+         <ClosedNode>/TOP_MODULE_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE_TB.v/uut - TOP_MODULE</ClosedNode>
          <ClosedNode>/TOP_MODULE_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE_TB.v/uut - TOP_MODULE/central_fsm0 - CENTRAL_FSM/bram_ctrl0 - BRAM_CTRL</ClosedNode>
          <ClosedNode>/TOP_MODULE_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE_TB.v/uut - TOP_MODULE/central_fsm0 - CENTRAL_FSM/dut_ctrl0 - DUT_CTRL</ClosedNode>
          <ClosedNode>/TOP_MODULE_TB C:|Users|dkhoury|OneDrive|Documents|SourceTree-Masters|Verilog|ASICTesterVerilog|TOP_MODULE_TB.v/uut - TOP_MODULE/central_fsm0 - CENTRAL_FSM/uart_ctrl_0 - UART_CTRL</ClosedNode>
@@ -113,9 +113,9 @@
       <SelectedItems>
          <SelectedItem>TOP_MODULE_TB (C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/TOP_MODULE_TB.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002e5000000020000000000000000000000000200000064ffffffff000000810000000300000002000002e50000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d3000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d30000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>TOP_MODULE_TB (C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/TOP_MODULE_TB.v)</CurrentItem>
    </ItemView>
@@ -125,26 +125,26 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000177000000010000000100000000000000000000000064ffffffff000000810000000000000001000001770000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000177000000010000000100000000000000000000000064ffffffff000000810000000000000001000001770000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000171000000010000000100000000000000000000000064ffffffff000000810000000000000001000001710000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000db000000c501000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -153,12 +153,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000177000000010000000100000000000000000000000064ffffffff000000810000000000000001000001770000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>

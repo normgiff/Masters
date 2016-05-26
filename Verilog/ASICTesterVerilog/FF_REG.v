@@ -21,9 +21,9 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 	input RST;
 	input EN;
 	
-	input [6:0] LEADING_EDGE;
-	input [6:0] TRAILING_EDGE;
-	input [7:0] CYCLE_LENGTH;
+	input [9:0] LEADING_EDGE;
+	input [9:0] TRAILING_EDGE;
+	input [9:0] CYCLE_LENGTH;
 	input D;
 	input FF;
 	
@@ -32,21 +32,21 @@ module FF_REG(CLK, RST, EN, LEADING_EDGE, TRAILING_EDGE, CYCLE_LENGTH, D, FF, Q)
 	parameter R0 =     1'b0;
 	parameter DNRZ_L = 1'b1;
 	
-	reg [7:0] cycle_counter;
+	reg [9:0] cycle_counter;
 	
 	reg L_reg;
 	
 	// Register to count.
 	always@(posedge CLK) begin
 		if (RST || cycle_counter == CYCLE_LENGTH) begin
-			cycle_counter <= 7'd1;
+			cycle_counter <= 10'd1;
 		end
 		else begin
 			if (EN) begin
-				cycle_counter <= cycle_counter + 7'd1;
+				cycle_counter <= cycle_counter + 10'd1;
 			end
 			else begin
-				cycle_counter <= 7'd1;
+				cycle_counter <= 10'd1;
 			end
 		end
 	end

@@ -29,10 +29,10 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 	input FF_LOAD_SIG;
 	input FF_TRANSFER_SIG;
 	
-	input [6:0] LEADING_EDGE_1;
-	input [6:0] LEADING_EDGE_2;
-	input [6:0] TRAILING_EDGE;
-	input [7:0] CYCLE_LENGTH;
+	input [9:0] LEADING_EDGE_1;
+	input [9:0] LEADING_EDGE_2;
+	input [9:0] TRAILING_EDGE;
+	input [9:0] CYCLE_LENGTH;
 	
 	input CYCLE_LOAD;
 	input CYCLE_TRANSFER;
@@ -57,7 +57,7 @@ module DUT_CTRL(CLK, RST, PERFORM_TEST, BUS126,
 									  .LOAD_FF(FF_LOAD_FF), .TRANSFER_FF(FF_TRANSFER_FF), .FF(BUS126), 
 									  .LOAD_SIG(FF_LOAD_SIG), .TRANSFER_SIG(FF_TRANSFER_SIG), 
 									  .LEADING_EDGE_1(LEADING_EDGE_1), .LEADING_EDGE_2(LEADING_EDGE_2), 
-									  .TRAILING_EDGE_1(TRAILING_EDGE), .CYCLE_LENGTH_1(CYCLE_LENGTH), 
+									  .TRAILING_EDGE(TRAILING_EDGE), .CYCLE_LENGTH(CYCLE_LENGTH), 
 									  .TEST_CYCLE(cycle_outputs), .D(sig_outputs), .Q(ff_outputs));
 											
 	// Template registers.
