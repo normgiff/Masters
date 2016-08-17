@@ -14,10 +14,10 @@ module CENTRAL_FSM(CLK, RST,
 						 CS_BAR_3, WE_BAR_3,
 						 CS_BAR_4, WE_BAR_4, 
                    COUNTER_CLK_1, COUNTER_CLK_2, COUNTER_CLK_3, COUNTER_CLK_4, 
-						 COUNTER_RST, 
+				       COUNTER_RST, 
                    MR_BAR, PL_BAR, STCP, SHCP, Q,
                    VT_EN,
-						 SIGNALS);
+				       SIGNALS);
 
 	// Global clock (100 MHz) and reset.
 	input CLK;

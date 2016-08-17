@@ -10,7 +10,7 @@
  * Inputs: 
  * 	CLK
  * 	RST
- *		INPUT_WRITE:        128-bit write {2 template bits, 126 input vector bits} 		
+ *	   INPUT_WRITE:        128-bit write {2 template bits, 126 input vector bits} 		
  * 	TEMPLATE_WRITE: 	  128-bit write {2 template bits, 126 template-config bits}	
  * 	FF_WRITE: 		 	  128-bit write {2 template bits, 63 sets of 2-bit FF configs}
  *    TC_WRITE:           128-bit write {2 template bits, 126 cycle-config bits}
@@ -22,12 +22,12 @@
  * 	READ_DATA_1: 		  128-bit read output (for FF_READ only).
  * 	TEMPLATE_READ:      128-bit read {2 template bits, 126 template-config bits}
  * 	TEMPLATE_BITS:      When performing a TEMPLATE_READ or FF_READ, two template bits 
- * 							  must be provided naturally.
- * 	INPUT_READ:         128-bit read {2 template bits, 126 input vector bits}
- * 	FF_READ:            128-bit read {2 template bits, 64 sets of 2-bit FF configs}
+ * 						     must be provided naturally.
+ *    INPUT_READ:         128-bit read {2 template bits, 126 input vector bits}
+ *    FF_READ:            128-bit read {2 template bits, 64 sets of 2-bit FF configs}
  *    TC_READ:            128-bit read {2 template bits, 126 cycle-config bits}
- *		TEMPLATE_CHANGE: 	  Indicates if the read template is different from the last read template.
- * 	READY: 		        Read/write operation is not in progress.
+ *    TEMPLATE_CHANGE: 	  Indicates if the read template is different from the last read template.
+ *    READY: 		        Read/write operation is not in progress.
  *    MORE_TO_READ:       Always 1 unless this controller has finished reading the last input vector.
  *                        Reading again will cause the first input vector to be read.
  * 

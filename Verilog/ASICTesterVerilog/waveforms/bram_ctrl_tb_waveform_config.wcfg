@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/BRAM_CTRL_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="BRAM_CTRL_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/BRAM_CTRL_TB/INPUT_READ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INPUT_READ</obj_property>
+      <obj_property name="ObjectShortName">INPUT_READ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/TEMPLATE_READ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TEMPLATE_READ</obj_property>
+      <obj_property name="ObjectShortName">TEMPLATE_READ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/FF_READ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FF_READ</obj_property>
+      <obj_property name="ObjectShortName">FF_READ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/TC_READ" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TC_READ</obj_property>
+      <obj_property name="ObjectShortName">TC_READ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/READ_DATA_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">READ_DATA_0[127:0]</obj_property>
+      <obj_property name="ObjectShortName">READ_DATA_0[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/READ_DATA_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">READ_DATA_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">READ_DATA_1[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/uut/input_read_posA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_read_posA[6:0]</obj_property>
+      <obj_property name="ObjectShortName">input_read_posA[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/uut/input_read_posB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_read_posB[6:0]</obj_property>
+      <obj_property name="ObjectShortName">input_read_posB[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/TEMPLATE_BITS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">TEMPLATE_BITS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TEMPLATE_BITS[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/INPUT_WRITE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INPUT_WRITE</obj_property>
+      <obj_property name="ObjectShortName">INPUT_WRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/TEMPLATE_WRITE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TEMPLATE_WRITE</obj_property>
+      <obj_property name="ObjectShortName">TEMPLATE_WRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/FF_WRITE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FF_WRITE</obj_property>
+      <obj_property name="ObjectShortName">FF_WRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/TC_WRITE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TC_WRITE</obj_property>
+      <obj_property name="ObjectShortName">TC_WRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/uut/input_write_posA" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">input_write_posA[6:0]</obj_property>
+      <obj_property name="ObjectShortName">input_write_posA[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">input_write_posA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/uut/input_write_posB" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">input_write_posB[6:0]</obj_property>
+      <obj_property name="ObjectShortName">input_write_posB[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">input_write_posA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/WRITE_DATA_0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WRITE_DATA_0[127:0]</obj_property>
+      <obj_property name="ObjectShortName">WRITE_DATA_0[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/WRITE_DATA_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WRITE_DATA_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">WRITE_DATA_1[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/TEMPLATE_CHANGE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TEMPLATE_CHANGE</obj_property>
+      <obj_property name="ObjectShortName">TEMPLATE_CHANGE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/READY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/uut/addr_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_a[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_a[12:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/BRAM_CTRL_TB/uut/addr_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_b[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_b[12:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

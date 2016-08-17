@@ -1,0 +1,29 @@
+Command line:
+   RECONF_PULSE_GEN_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59387
+
+Sun Nov 15 21:56:43 2015
+
+
+ Elaboration Time: 0.0312 sec
+
+ Current Memory Usage: 825.201 Meg
+
+ Total Signals          : 20
+ Total Nets             : 40
+ Total Signal Drivers   : 7
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 164
+Total Line Count : 87
+
+ Total Simulation Time: 0.0936 sec
+
+ Current Memory Usage: 825.201 Meg
+
+Sun Nov 15 21:56:50 2015
+

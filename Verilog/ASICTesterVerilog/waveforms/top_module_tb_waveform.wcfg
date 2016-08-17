@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/TOP_MODULE_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TOP_MODULE_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/TOP_MODULE_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/RX" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RX</obj_property>
+      <obj_property name="ObjectShortName">RX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/TX" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TX</obj_property>
+      <obj_property name="ObjectShortName">TX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/SIGNALS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SIGNALS[127:0]</obj_property>
+      <obj_property name="ObjectShortName">SIGNALS[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/OE_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OE_BAR</obj_property>
+      <obj_property name="ObjectShortName">OE_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/CS_BAR_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CS_BAR_1</obj_property>
+      <obj_property name="ObjectShortName">CS_BAR_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/WE_BAR_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WE_BAR_1</obj_property>
+      <obj_property name="ObjectShortName">WE_BAR_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/COUNTER_CLK_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">COUNTER_CLK_1</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_CLK_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/COUNTER_RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">COUNTER_RST</obj_property>
+      <obj_property name="ObjectShortName">COUNTER_RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/MR_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MR_BAR</obj_property>
+      <obj_property name="ObjectShortName">MR_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/PL_BAR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PL_BAR</obj_property>
+      <obj_property name="ObjectShortName">PL_BAR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/STCP" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">STCP</obj_property>
+      <obj_property name="ObjectShortName">STCP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/SHCP" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SHCP</obj_property>
+      <obj_property name="ObjectShortName">SHCP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/Q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TOP_MODULE_TB/VT_EN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">VT_EN</obj_property>
+      <obj_property name="ObjectShortName">VT_EN</obj_property>
+   </wvobject>
+</wave_config>

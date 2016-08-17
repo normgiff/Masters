@@ -1,0 +1,190 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Nov 04 18:56:50 2015
+# Process ID: 5796
+# Log file: C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -35 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/pa.fromHdl.tcl
+# create_project -name NewReconfClockGen -dir "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/planAhead_run_1" -part xc7a100tcsg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "CLOCK_GEN.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {SYNCHRONIZER.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RECONF_PULSE_GEN.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ODDR_WRAPPER.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ipcore_dir/CLK_MULTIPLIER.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {CLOCK_MUX.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {CLOCK_GEN.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top CLOCK_GEN $srcset
+# add_files [list {CLOCK_GEN.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc7a100tcsg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/SYNCHRONIZER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/RECONF_PULSE_GEN.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ODDR_WRAPPER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ipcore_dir/CLK_MULTIPLIER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_MUX.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.v" into library work
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf]
+Finished Parsing UCF File [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFGMUX => BUFGCTRL (inverted pins: CE0): 1 instances
+  IBUFG => IBUF: 1 instances
+
+Phase 0 | Netlist Checksum: 5470c84a
+open_rtl_design: Time (s): elapsed = 00:00:26 . Memory (MB): peak = 785.160 ; gain = 345.129
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS33 [get_ports [list CLK]]
+set_property iostandard LVCMOS33 [get_ports [list INIT]]
+set_property iostandard LVCMOS33 [get_ports [list OUT]]
+set_property iostandard LVCMOS33 [get_ports [list RST]]
+set_property iostandard LVCMOS33 [get_ports [list {LOW_LEVEL_LIMIT[6]} {LOW_LEVEL_LIMIT[5]} {LOW_LEVEL_LIMIT[4]} {LOW_LEVEL_LIMIT[3]} {LOW_LEVEL_LIMIT[2]} {LOW_LEVEL_LIMIT[1]} {LOW_LEVEL_LIMIT[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {HIGH_LEVEL_LIMIT[6]} {HIGH_LEVEL_LIMIT[5]} {HIGH_LEVEL_LIMIT[4]} {HIGH_LEVEL_LIMIT[3]} {HIGH_LEVEL_LIMIT[2]} {HIGH_LEVEL_LIMIT[1]} {HIGH_LEVEL_LIMIT[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {DELAY_LIMIT[6]} {DELAY_LIMIT[5]} {DELAY_LIMIT[4]} {DELAY_LIMIT[3]} {DELAY_LIMIT[2]} {DELAY_LIMIT[1]} {DELAY_LIMIT[0]}]]
+startgroup
+set_property package_pin E3 [get_ports CLK]
+endgroup
+startgroup
+set_property package_pin V10 [get_ports INIT]
+endgroup
+set_property package_pin "" [get_ports [list  OUT]]
+startgroup
+set_property package_pin E16 [get_ports RST]
+endgroup
+set_property package_pin "" [get_ports [list  {DELAY_LIMIT[6]}]]
+set_property package_pin "" [get_ports [list  {HIGH_LEVEL_LIMIT[5]}]]
+startgroup
+set_property package_pin P4 [get_ports {HIGH_LEVEL_LIMIT[6]}]
+endgroup
+set_property package_pin "" [get_ports [list  {HIGH_LEVEL_LIMIT[4]}]]
+startgroup
+set_property package_pin P3 [get_ports {HIGH_LEVEL_LIMIT[5]}]
+endgroup
+startgroup
+set_property package_pin R3 [get_ports {HIGH_LEVEL_LIMIT[4]}]
+endgroup
+startgroup
+set_property package_pin T1 [get_ports {HIGH_LEVEL_LIMIT[3]}]
+endgroup
+startgroup
+set_property package_pin T3 [get_ports {HIGH_LEVEL_LIMIT[2]}]
+endgroup
+startgroup
+set_property package_pin U2 [get_ports {HIGH_LEVEL_LIMIT[1]}]
+endgroup
+startgroup
+set_property package_pin V2 [get_ports {HIGH_LEVEL_LIMIT[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {LOW_LEVEL_LIMIT[6]}]]
+startgroup
+set_property package_pin V9 [get_ports {LOW_LEVEL_LIMIT[0]}]
+endgroup
+startgroup
+set_property package_pin U9 [get_ports {LOW_LEVEL_LIMIT[0]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {LOW_LEVEL_LIMIT[1]}]
+endgroup
+set_property package_pin "" [get_ports [list  {LOW_LEVEL_LIMIT[3]}]]
+startgroup
+set_property package_pin R7 [get_ports {LOW_LEVEL_LIMIT[2]}]
+endgroup
+startgroup
+set_property package_pin R6 [get_ports {LOW_LEVEL_LIMIT[3]}]
+endgroup
+startgroup
+set_property package_pin R5 [get_ports {LOW_LEVEL_LIMIT[4]}]
+endgroup
+startgroup
+set_property package_pin V7 [get_ports {LOW_LEVEL_LIMIT[5]}]
+endgroup
+startgroup
+set_property package_pin V6 [get_ports {LOW_LEVEL_LIMIT[6]}]
+endgroup
+startgroup
+set_property package_pin V6 [get_ports {LOW_LEVEL_LIMIT[6]}]
+endgroup
+startgroup
+set_property package_pin V6 [get_ports {LOW_LEVEL_LIMIT[6]}]
+endgroup
+set_property package_pin "" [get_ports [list  {DELAY_LIMIT[6]}]]
+set_property pulltype PULLUP [get_ports [list {DELAY_LIMIT[6]}]]
+set_property pulltype NONE [get_ports [list {DELAY_LIMIT[6]}]]
+save_constraints
+refresh_design
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/SYNCHRONIZER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/RECONF_PULSE_GEN.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ODDR_WRAPPER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ipcore_dir/CLK_MULTIPLIER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_MUX.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.v" into library work
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Parsing UCF File [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DELAY_LIMIT[6]' [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:22]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DELAY_LIMIT[5]' [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:23]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DELAY_LIMIT[4]' [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:24]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DELAY_LIMIT[3]' [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:25]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DELAY_LIMIT[2]' [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:26]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DELAY_LIMIT[1]' [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:27]
+INFO: [Constraints 18-98] IO constraint IOSTANDARD with a setting of LVCMOS33 for net DELAY_LIMIT[0] will not be propagated through the buffer. The constraint should be associated with the net that is connected to the top level port. [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf:28]
+Finished Parsing UCF File [C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+refresh_design: Time (s): elapsed = 00:00:06 . Memory (MB): peak = 864.367 ; gain = 0.000
+startgroup
+set_property package_pin E16 [get_ports RST]
+endgroup
+set_property package_pin "" [get_ports [list  OUT]]
+set_property slew FAST [get_ports [list OUT]]
+set_property drive 16 [get_ports [list OUT]]
+save_constraints
+startgroup
+set_property package_pin B13 [get_ports OUT]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen\planAhead_pid5796.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Nov 04 19:41:38 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -8,18 +8,18 @@
  * 
  * Inputs: 
  * 	CLK
- * 	EN_A: 	Enables port A for access.
- * 	EN_B:		Enables port B for access.
- *  	WE_A: 	Enables port A for write access.
- * 	WE_B: 	Enables port B for write access.
- * 	DIN_A: 	Data to be written (port A).
- *		DIN_B: 	Data to be written (port B).
- * 	ADDR_A: 	Location of data to be read from or written to (port A).
- * 	ADDR_B: 	Location of data to be read from or written to (port B).
+ * 	EN_A: 		Enables port A for access.
+ * 	EN_B:		   Enables port B for access.
+ *    WE_A: 		Enables port A for write access.
+ * 	WE_B: 		Enables port B for write access.
+ * 	DIN_A: 		Data to be written (port A).
+ *	   DIN_B: 		Data to be written (port B).
+ * 	ADDR_A: 	   Location of data to be read from or written to (port A).
+ * 	ADDR_B: 	   Location of data to be read from or written to (port B).
  *
  * Outputs:
- * 	DOUT_A: 	Register that outputs the last word read from or written to (port A).
- *		DOUT_B: 	Register that outputs the last word read from or written to (port B).
+ *    DOUT_A: 	   Register that outputs the last word read from or written to (port A).
+ *	   DOUT_B: 	   Register that outputs the last word read from or written to (port B).
  */ 
  
 module BRAM(CLK, EN_A, EN_B, WE_A, WE_B, DIN_A, DIN_B, ADDR_A, ADDR_B, DOUT_A, DOUT_B);

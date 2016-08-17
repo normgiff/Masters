@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/dkhoury/OneDrive/Documents/SourceTree-Masters/Verilog/ASICTesterVerilog/UART_CTRL_TB_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="UART_CTRL_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/UART_CTRL_TB/RXDATA_READY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RXDATA_READY</obj_property>
+      <obj_property name="ObjectShortName">RXDATA_READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/RXDATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RXDATA[127:0]</obj_property>
+      <obj_property name="ObjectShortName">RXDATA[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/TX" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TX</obj_property>
+      <obj_property name="ObjectShortName">TX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/TXSENT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TXSENT</obj_property>
+      <obj_property name="ObjectShortName">TXSENT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/RX" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RX</obj_property>
+      <obj_property name="ObjectShortName">RX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/RXDATA_RETRIEVED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RXDATA_RETRIEVED</obj_property>
+      <obj_property name="ObjectShortName">RXDATA_RETRIEVED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/TXDATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">TXDATA[127:0]</obj_property>
+      <obj_property name="ObjectShortName">TXDATA[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/TXCAPTURE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TXCAPTURE</obj_property>
+      <obj_property name="ObjectShortName">TXCAPTURE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/TXTRANSMIT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TXTRANSMIT</obj_property>
+      <obj_property name="ObjectShortName">TXTRANSMIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/TXACK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TXACK</obj_property>
+      <obj_property name="ObjectShortName">TXACK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/bit_count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bit_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_count[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/SENT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SENT</obj_property>
+      <obj_property name="ObjectShortName">SENT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/PS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/NS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/clock_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">clock_counter[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/count" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/reset_count" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_count</obj_property>
+      <obj_property name="ObjectShortName">reset_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/IDLE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IDLE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/STARTBIT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">STARTBIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STARTBIT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT0[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT3[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT4[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT5[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT6[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/BIT7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT7[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/STOPBIT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">STOPBIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STOPBIT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_CTRL_TB/uut/uart_tx0/IDLE_SENT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IDLE_SENT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE_SENT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,38 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN_TB_isim_beh.exe" -prj "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN_TB_beh.prj" "work.CLOCK_GEN_TB" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/SYNCHRONIZER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/RECONF_PULSE_GEN.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ODDR_WRAPPER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/ipcore_dir/CLK_MULTIPLIER.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_MUX.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN.v" into library work
+Analyzing Verilog file "C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN_TB.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP(CLK_FEEDBACK="2X")
+Compiling module BUFG
+Compiling module CLK_MULTIPLIER
+Compiling module SYNCHRONIZER
+Compiling module RECONF_PULSE_GEN
+Compiling module BUFGMUX(CLK_SEL_TYPE="ASYNC")
+Compiling module CLOCK_MUX
+Compiling module ODDR2_default
+Compiling module ODDR_WRAPPER
+Compiling module CLOCK_GEN
+Compiling module CLOCK_GEN_TB
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 17 Verilog Units
+Built simulation executable C:/Users/dkhoury/Desktop/SourceTree-Masters/explorations/clocking/NewReconfClockGen/CLOCK_GEN_TB_isim_beh.exe
+Fuse Memory Usage: 32388 KB
+Fuse CPU Usage: 389 ms
