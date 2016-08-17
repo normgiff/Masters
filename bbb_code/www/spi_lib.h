@@ -26,6 +26,8 @@
 #define BYTES_PER_SPI_TRANSFER 2
 
 //////////////////////////////////////////////
+
+//////////////////////////////////////////////
 // AD5293 GPIO Connections
 //////////////////////////////////////////////
 
@@ -41,6 +43,8 @@ FILE *rdy0Handle = NULL;
 FILE *rdy1Handle = NULL;
 
 char getOrSetValue[4], GPIOString[4], GPIOValue[64], GPIODirection[64];
+
+//////////////////////////////////////////////
 
 //////////////////////////////////////////////
 // SPI Data Structures and Parameters
@@ -67,6 +71,8 @@ typedef enum device_names { device1_0, device2_0 } device;
 // File descriptors for SPI ports.
 int spi10_fd;
 int spi20_fd;
+
+//////////////////////////////////////////////
 
 //////////////////////////////////////////////
 // SPI Functions
@@ -341,30 +347,12 @@ int clean_write_buffer(device d) {
   return 1;
 }
 
-void print_rx_buf(device d) {
-  int i;
-
-  if (d == device1_0) {
-    for (i = 0; i < BYTES_PER_SPI_TRANSFER; i++) {
-      printf("[device 1] rx byte %d: %d\n", i, rx_10[i]);
-    }
-  }
-  else if (d == device2_0) {
-    for (i = 0; i < BYTES_PER_SPI_TRANSFER; i++) {
-      printf("[device 2] rx byte %d: %d\n", i, rx_20[i]);
-    }
-  }
-  else {
-    printf("Invalid device specified!\n");
-  }
-}
-
 int transfer_and_receive(device d) {
   // Before we transfer, make sure the RDY pin is low!
   int pin_val;
   if (d == device1_0) {
     sprintf(GPIOValue, "/sys/class/gpio/gpio%d/value", rdy0_pin);
-    printf("Device 1: Waiting for RDY to go high.\n");
+    printf("Waiting for RDY to go high.\n");
 
     do {
       if ((rdy0Handle = fopen(GPIOValue, "rb+")) == NULL){
@@ -379,7 +367,7 @@ int transfer_and_receive(device d) {
   }
   else if (d == device2_0) {
     sprintf(GPIOValue, "/sys/class/gpio/gpio%d/value", rdy1_pin);
-    printf("Device 2: Waiting for RDY to go high.\n");
+    printf("Waiting for RDY to go high.\n");
     do {
       if ((rdy1Handle = fopen(GPIOValue, "rb+")) == NULL){
 	printf("Unable to open value handle\n");
@@ -394,13 +382,7 @@ int transfer_and_receive(device d) {
     return -1;
   }
   
-  if (d == device1_0) {
-    printf("Device 1: RDY is high now.\n");
-  }
-  else {
-    printf("Device 2: RDY is high now.\n");
-  }
-
+  printf("RDY is high now.\n");
   int ret;
 
   if (d == device1_0) {
@@ -421,9 +403,6 @@ int transfer_and_receive(device d) {
     // Unknown device.
     return -1;
   }
-
-  printf("Transmission successful.\n");
-  return ret;
 }
 
 // Populates write buffer with a specified command.
@@ -431,7 +410,6 @@ int transfer_and_receive(device d) {
 int ready_command(device d, int command, int databits) {
   uint8_t upper_byte;
   uint8_t lower_byte;
-
   switch (command) {
   case NOP : 
     // Zero-out the buffer.
